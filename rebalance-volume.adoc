@@ -1,0 +1,33 @@
+---
+sidebar: sidebar 
+permalink: rebalance-volume.html 
+keywords: rebalance capacity, volume capacity, redistribute capacity 
+summary: 'Rééquilibrer la capacité d"un volume pour éviter les déséquilibres qui se développent au fil du temps.' 
+---
+= Rééquilibrage de la capacité d'un volume
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Rééquilibrer la capacité d'un volume pour éviter les déséquilibres qui se développent au fil du temps.
+
+.Description de la tâche
+Le rééquilibrage d'un volume redistribue la capacité lorsque les déséquilibres se développent suite à l'ajout de nouveaux fichiers et à la croissance des fichiers. Une fois que vous avez démarré l'opération de rééquilibrage manuellement, nous sélectionnons les fichiers et les déplaçons automatiquement et sans interruption.
+
+
+NOTE: Le rééquilibrage d'un volume n'est pris en charge que pour les volumes FlexGroup.
+
+.Avant de commencer
+Pour rééquilibrer un volume, vous devez link:manage-links.html["associer un lien"]. Si vous n'avez pas de lien existant, link:create-link.html["créer un lien"]. Pour associer un lien dans le système de fichiers, cliquez sur *lien associé* sous *Nom du compte*. Une fois le lien associé, revenez à cette opération.
+
+.Étapes
+. Connectez-vous à la console Workload Factory.
+. Dans *stockage*, sélectionnez *aller à l'inventaire de stockage*.
+. Dans l'onglet *FSX pour ONTAP*, sélectionnez le menu à trois points du système de fichiers contenant le volume à rééquilibrer, puis sélectionnez *gérer*.
+. Dans la présentation du système de fichiers, sélectionnez l'onglet *volumes*.
+. Dans l'onglet volumes, sélectionnez le menu à trois points du volume à rééquilibrer.
+. Sélectionnez *actions avancées*, puis *Volume rééquilibré*.
+. Dans la boîte de dialogue Rebalance volume, sélectionnez *Rebalance*.
+

@@ -1,0 +1,107 @@
+---
+sidebar: sidebar 
+permalink: known-limitations.html 
+keywords: limitations, fsx, ontap 
+summary: Les limitations connues identifient les plateformes, les périphériques ou les fonctions qui ne sont pas pris en charge par cette version du produit, ou qui ne fonctionnent pas correctement avec elle. Examinez attentivement ces limites. 
+---
+= Limites connues
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Les limitations connues identifient les plates-formes, les périphériques ou les fonctions qui ne sont pas pris en charge par cette version du produit dans Workload Factory ou qui ne fonctionnent pas correctement avec celui-ci. Examinez attentivement ces limites.
+
+
+
+== Modes de fonctionnement
+
+Le mode _Read_ n'est pas disponible actuellement.
+
+
+
+== Lien
+
+Un lien est nécessaire pour effectuer certaines opérations, telles que la réplication dans l'interface utilisateur de Workload Factory.
+
+
+
+== Efficacité du stockage
+
+L'efficacité du stockage ne peut pas être désactivée ou activée après la création du volume.
+
+
+
+== Capacité de débit prise en charge par région
+
+
+
+=== Déploiements scale-up
+
+Les régions suivantes prennent en charge une capacité de débit maximale de 4 Gbit/s pour les déploiements à évolutivité verticale : région des ÉTATS-UNIS de l'est (Ohio), région de l'est (Virginie-Occidentale), région de l'Oregon (États-Unis) et Europe (Irlande).
+
+
+
+== Déploiements scale-out
+
+Les régions suivantes prennent en charge une capacité de débit maximale de 3 et 6 Gbit/s pour les déploiements en mode scale-out : ÉTATS-UNIS de l'est (Virginie), États-Unis de l'est (Ohio), États-Unis de l'Ouest (Oregon), Europe (Irlande) et Asie-Pacifique (Sydney).
+
+
+
+== Gestion de la capacité
+
+* La fonction de croissance automatique du volume n'est pas prise en charge pour le protocole iSCSI.
+* Lorsque la fonction de gestion automatique de la capacité est en cours d'exécution, l'augmentation manuelle de la capacité n'est pas autorisée.
+* La désactivation de la fonction de gestion automatique de la capacité n'est possible qu'avec les mêmes autorisations que celles utilisées pour l'activer.
+
+
+
+
+== Machines virtuelles de stockage
+
+Le nombre de VM de stockage est limité par référence. La création de machines virtuelles de stockage au-delà de cette limite n'est pas prise en charge dans Workload Factory.^1^
+
+Pour connaître le nombre maximal de SVM par système de fichiers, reportez-vous à la section link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/managing-svms.html#max-svms["Gestion de FSX pour les machines virtuelles de stockage ONTAP"^] dans la documentation AWS.
+
+
+
+== Prise en charge du protocole iSCSI
+
+* Le protocole iSCSI n'est pris en charge que pour les déploiements à évolutivité verticale. ^1^
+* Le protocole iSCSI n'est disponible que pour les volumes FlexGroup. ^1^
+* Une seule LUN peut être configurée par volume.
+
+
+
+
+== Prise en charge par région
+
+* La région du Canada-Ouest (Calgary) n'est actuellement pas soutenue.
+
+
+
+
+== Protection des données
+
+* Les snapshots ne peuvent pas être supprimés.
+* Seule la réplication entre les systèmes de fichiers FSX pour ONTAP est prise en charge.
+* Lorsque vous répliquez un système de fichiers, tous les volumes du système de fichiers utilisent la même règle de réplication.
+* Seul le dernier snapshot est disponible pour la restauration.
+
+
+
+
+== Calculateur d'économies de stockage
+
+Le calculateur d'économies de stockage ne calcule pas les économies pour les configurations suivantes :
+
+* FSX pour serveur de fichiers Windows : type de stockage HDD
+* EBS (Elastic Block Store) : types de volume st1, sc1 et standard
+* Système de fichiers élastique (EFS) : mode de débit maximal
+
+
+Remarque :
+
+. S'applique à Amazon FSX pour NetApp ONTAP
+

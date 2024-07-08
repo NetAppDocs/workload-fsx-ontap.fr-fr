@@ -1,0 +1,37 @@
+---
+sidebar: sidebar 
+permalink: change-snapshot-policy.html 
+keywords: snapshot policy, snapshot schedule, modify snapshot policy, edit snapshot policy, change snapshot policy 
+summary: 'Mettez à jour la règle de snapshot d"un volume à tout moment.' 
+---
+= Modifier la règle de snapshot d'un volume
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Mettez à jour la règle de snapshot d'un volume à tout moment.
+
+.Description de la tâche
+Cette opération met à jour la fréquence des instantanés pris pour un volume ou désactive les instantanés automatiques.
+
+.Avant de commencer
+Un lien est nécessaire pour afficher les politiques de snapshots existantes. Pour associer un lien, cliquez sur *lien associé* sous *Nom du compte*. Revenez ensuite à cette opération.
+
+.Étapes
+. Connectez-vous à la console Workload Factory.
+. Dans stockage, sélectionnez *accéder à l'inventaire de stockage*.
+. Sélectionnez l'onglet *volumes*.
+. Dans l'onglet *volumes*, sélectionnez le menu à trois points du volume pour lequel modifier la règle de snapshot.
+. Sélectionnez *actions de protection des données*, *instantanés*, puis *gérer les stratégies de snapshot*.
+. Sur la page gestion des règles Snapshot, sélectionnez *Modifier une stratégie de snapshot existante*.
+. Dans le champ *Nom de la stratégie de snapshot*, sélectionnez une stratégie de snapshot différente pour ce volume.
++
+Pour désactiver les instantanés automatiques, sélectionnez `none`.
+
++
+Si aucune autre stratégie de snapshot n'existe, link:create-snapshot-policy.html["créer une règle de snapshot pour ce volume"].
+
+. Cliquez sur *appliquer*.
+

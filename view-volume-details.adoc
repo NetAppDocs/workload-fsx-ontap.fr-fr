@@ -1,0 +1,32 @@
+---
+sidebar: sidebar 
+permalink: view-volume-details.html 
+keywords: volume details, volume information 
+summary: 'Affichez les détails sur les volumes, la distribution, la consommation, l"accès et la protection.' 
+---
+= Afficher les détails du volume
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Affichez les détails sur les volumes, la distribution, la consommation, l'accès et la protection.
+
+Les détails du volume apparaissent uniquement après la création d'un volume dans un système de fichiers.
+
+.Étapes
+. Connectez-vous à la console Workload Factory.
+. Dans stockage, sélectionnez *accéder à l'inventaire de stockage*.
+. Dans l'onglet volumes, sélectionnez le menu à trois points correspondant au volume que vous souhaitez modifier.
+. Sélectionnez *actions de base* puis *Afficher les détails du volume*.
+. Dans *Détails du volume*, sélectionnez les onglets pour afficher les détails de volume suivants :
++
+.. *Détails généraux* : inclut le nom du volume, l'UUID du volume, l'ID du volume, l'heure de création, l'état, type de volume (lecture-écriture/protection des données (RW/DP) ou lecture seule), nom de règle Snapshot, machine virtuelle de stockage (SVM) hébergeant et balises
+.. *Distribution* : inclut les agrégats d'hébergement, le style de volume (FlexGroup ou FlexVol), les composants (FlexGroup uniquement) et le ratio de rééquilibrage (FlexGroup uniquement - haut, moyen ou bas).
+.. *Consommation* : inclut la taille, le SSD utilisé, le pool de capacité utilisé, le paramètre de croissance automatique, la taille de croissance maximale, paramètre d'efficacité du stockage, espace de compression économisé, espace de déduplication économisé, règle de tiering et jours de refroidissement.
+.. *Accès* : inclut le chemin de jonction, le style de sécurité, la stratégie d'exportation et la version NFS pour NFS, et Active Directory, le nom du partage CIFS, les utilisateurs ou groupes, et les autorisations pour SMB/CIFS, ainsi que les IQN du groupe initiateur et de l'hôte pour iSCSI.
+.. *Protection* : inclut le snapshot local, le nom de la stratégie de snapshot, la réplication à distance et la sauvegarde FSX pour ONTAP.
+
+
+

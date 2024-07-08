@@ -1,0 +1,35 @@
+---
+sidebar: sidebar 
+permalink: create-volume-from-snapshot.html 
+keywords: create volume from snapshot, new volume 
+summary: 'Créez un snapshot manuel d"un volume FSX pour ONTAP. Les snapshots sont des versions instantanées du contenu de votre volume.' 
+---
+= Créez un volume FSX pour ONTAP à partir d'un snapshot
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Créez un volume FSX pour ONTAP à partir d'une copie Snapshot pour activer la restauration à un point dans le temps.
+
+.Description de la tâche
+Une copie Snapshot est une image en lecture seule d'un volume FSX pour ONTAP prise à un point dans le temps. La création d'un volume à partir d'un snapshot effectue une copie d'un volume entier en quelques secondes, quelle que soit la taille du volume. La copie nouvellement créée représente un nouveau volume.
+
+.Avant de commencer
+Avant de créer un volume à partir d'un snapshot, tenez compte des limitations suivantes :
+
+* Modifications des modèles d'autorisation : si vous utilisez cette opération pour changer le type de protocole NAS (Network-Attached Storage), il peut également changer le modèle d'autorisation fourni par le style de sécurité. Vous pouvez rencontrer des problèmes d'autorisation d'accès aux fichiers, que vous ne pouvez corriger manuellement qu'avec l'accès administrateur à l'aide du paramètre Outils client NAS pour les autorisations.
+* Augmentation de la consommation de volume : après avoir créé un volume à partir d'un snapshot, vous disposez de deux volumes indépendants qui consomment de la capacité du système de fichiers hôte.
+
+
+.Étapes
+. Connectez-vous à la console Workload Factory.
+. Dans stockage, sélectionnez *accéder à l'inventaire de stockage*.
+. Dans l'onglet *FSX pour ONTAP*, cliquez sur le menu à trois points du système de fichiers avec l'instantané de volume, puis sélectionnez *gérer*.
+. Dans la présentation du système de fichiers, sélectionnez l'onglet *volumes*.
+. Dans l'onglet volumes, cliquez sur le menu à trois points du volume dont vous souhaitez créer un volume.
+. Sélectionnez *actions de protection des données*, *instantanés*, puis *Créer un volume à partir d'un instantané*.
+. Dans la boîte de dialogue Créer un volume à partir d'un snapshot, entrez le nom du snapshot.
+. Cliquez sur *Créer*.
+

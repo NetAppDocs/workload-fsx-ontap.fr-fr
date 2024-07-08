@@ -1,0 +1,33 @@
+---
+sidebar: sidebar 
+permalink: delete-volume.html 
+keywords: delete volume, volume deletion 
+summary: Vous pouvez à tout moment supprimer un volume de votre système de fichiers FSX pour ONTAP. Cette opération est irréversible. 
+---
+= Supprimer un volume
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Vous pouvez à tout moment supprimer un volume de votre système de fichiers FSX pour ONTAP. Cette opération est irréversible.
+
+.Avant de commencer
+Avant de supprimer un volume, tenez compte des points suivants :
+
+* Snapshots locaux : tous les snapshots associés à ce système de fichiers FSX pour ONTAP seront définitivement supprimés.
+* FSX pour ONTAP : les copies de sauvegarde FSX pour ONTAP resteront et vous pouvez les utiliser.
+* Relations de réplication : nous vous recommandons link:delete-replication.html["supprimez toutes les relations de réplication existantes"] pour ce volume avant de supprimer le volume afin qu'aucune relation rompue ne soit conservée.
+
+
+.Étapes
+. Connectez-vous à la console Workload Factory.
+. Dans stockage, sélectionnez *accéder à l'inventaire de stockage*.
+. Dans l'onglet *FSX pour ONTAP*, sélectionnez le menu à trois points du système de fichiers avec le volume à supprimer, puis sélectionnez *gérer*.
+. Dans la présentation du système de fichiers, sélectionnez l'onglet *volumes*.
+. Dans l'onglet volumes, sélectionnez le menu à trois points du volume à supprimer.
+. Sélectionnez *actions de base* puis *Supprimer volume*.
+. Dans la boîte de dialogue Delete volume, tapez « delete » pour supprimer le volume.
+. Cliquez sur *Supprimer*.
+

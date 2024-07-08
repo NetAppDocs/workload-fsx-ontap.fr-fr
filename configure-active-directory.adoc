@@ -1,0 +1,53 @@
+---
+sidebar: sidebar 
+permalink: configure-active-directory.html 
+keywords: configure AD, configure active directory, update ad, edit active directory 
+summary:  
+---
+= Configurer et mettre à jour Active Directory pour une VM de stockage
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Configurez et mettez à jour Active Directory pour une VM de stockage dans un système de fichiers FSX pour ONTAP.
+
+.Description de la tâche
+Les mêmes étapes s'appliquent à la configuration et à la mise à jour d'Active Directory pour une machine virtuelle de stockage.
+
+.Étapes
+. Connectez-vous à la console Workload Factory.
+. Dans stockage, sélectionnez *accéder à l'inventaire de stockage*.
+. Dans l'onglet *FSX pour ONTAP*, sélectionnez le menu à trois points du système de fichiers avec la machine virtuelle de stockage à mettre à jour, puis sélectionnez *gérer*.
+. Dans la présentation du système de fichiers, sélectionnez l'onglet *Storage VMS*.
+. Dans l'onglet Storage VMs, sélectionnez le menu Three DOTS de la VM de stockage pour laquelle configurer Active Directory.
+. Sélectionnez *gérer la configuration AD*.
+. Sur la page gérer la configuration AD, fournissez les informations suivantes :
++
+.. *Domaine Active Directory à rejoindre* : entrez le nom de domaine complet (FQDN) de votre Active Directory.
+.. *Adresses IP DNS* : saisissez jusqu'à trois adresses IP séparées par des virgules.
+.. *Nom NetBIOS du serveur SMB* : entrez le nom NetBIOS du serveur SMB de l'objet ordinateur Active Directory à créer pour votre machine virtuelle de stockage. Ceci est le nom de ce SVM dans Active Directory.
+.. *Nom d'utilisateur* : saisissez le nom d'utilisateur du compte de service dans votre Active Directory existant.
++
+N'incluez pas de préfixe ou de suffixe de domaine. Pour `EXAMPLE\ADMIN`, utilisez `ADMIN`.
+
+.. *Mot de passe* : saisissez le mot de passe du compte de service.
+.. *Unité d'organisation (ou)* : entrez l'unité d'organisation.
++
+L'UO est le nom de chemin distinctif de l'unité organisationnelle à laquelle vous souhaitez joindre votre système de fichiers.
+
+.. *Groupe d'administrateurs délégués* : si vous le souhaitez, entrez le groupe d'administrateurs de systèmes de fichiers délégués.
++
+Le groupe administrateurs supprimés est le nom du groupe dans votre Active Directory qui peut administrer votre système de fichiers.
+
++
+Si vous utilisez AWS Managed Microsoft AD, vous devez spécifier un groupe, par exemple les administrateurs FSX délégués d'AWS, les administrateurs délégués d'AWS ou un groupe personnalisé avec des autorisations déléguées à l'UO.
+
++
+Si vous vous joignez à un AD autogéré, utilisez le nom du groupe dans votre AD. Le groupe par défaut est `Domain Admins`.
+
+
+
+. Cliquez sur *appliquer*.
+

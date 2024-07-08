@@ -1,0 +1,22 @@
+---
+sidebar: sidebar 
+permalink: whats-new.html 
+keywords: 'what"s new, features, new, release notes, enhancements, fixes, new features, workload factory, amazon fsx' 
+summary: 'Découvrez les nouveautés d"Amazon FSX pour NetApp ONTAP.' 
+---
+= Quoi de neuf
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Découvrez les nouveautés d'Amazon FSX pour NetApp ONTAP.
+
+
+
+== 7 juillet
+
+Amazon FSX pour NetApp ONTAP est désormais disponible dans BlueXP Workload Factory.
+
+link:learn-fsx-ontap.html["Découvrez BlueXP Workload Factory pour Amazon FSX pour NetApp ONTAP"].

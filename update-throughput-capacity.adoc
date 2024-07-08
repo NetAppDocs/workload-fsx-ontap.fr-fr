@@ -1,0 +1,25 @@
+---
+sidebar: sidebar 
+permalink: update-throughput-capacity.html 
+keywords: update throughput, change throughput, throughput capacity 
+summary: 'Mettez à jour la capacité de débit d"un système de fichiers FSX pour ONTAP en fonction des besoins.' 
+---
+= Mettre à jour la capacité de débit d'un système de fichiers
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Mettez à jour la capacité de débit d'un système de fichiers FSX pour ONTAP en fonction des besoins.
+
+Pour connaître les limites de capacité de débit, reportez-vous à link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/limits.html["Quotas"^] dans la documentation AWS FSX pour NetApp ONTAP.
+
+.Étapes
+. Connectez-vous à la console Workload Factory.
+. Dans stockage, cliquez sur *aller à stock de stockage*.
+. Dans l'onglet *FSX pour ONTAP*, cliquez sur le menu à trois points du système de fichiers pour mettre à jour la capacité de débit pour, puis sélectionnez *gérer*.
+. Sous informations, cliquez sur l'icône en forme de crayon en regard de *capacité de débit*. L'icône en forme de crayon apparaît à côté de la flèche de la liste déroulante lorsque la souris survole la ligne *capacité de débit*.
+. Dans la boîte de dialogue capacité de débit, sélectionnez la capacité de débit dont vous avez besoin.
+. Cliquez sur *appliquer*.
+

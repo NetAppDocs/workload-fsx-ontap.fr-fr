@@ -1,0 +1,38 @@
+---
+sidebar: sidebar 
+permalink: create-storage-vm.html 
+keywords: create storage VM, create svm 
+summary: 'Vous pouvez créer une machine virtuelle de stockage FSX pour ONTAP (SVM) pour fournir des services de données et de stockage à vos workloads dans Workload Factory.' 
+---
+= Créez une VM de stockage pour un système de fichiers FSX pour ONTAP
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Créez une VM de stockage (SVM) pour un système de fichiers FSX pour ONTAP afin d'accéder virtuellement aux services de données et de stockage pour vos workloads dans Workload Factory.
+
+.Description de la tâche
+Les machines virtuelles de stockage sont des serveurs de fichiers isolés que vous pouvez utiliser pour accéder aux données de chaque charge de travail dans Workload Factory Storage. Chaque SVM dispose de ses propres identifiants d'administration et terminaux pour l'administration et l'accès aux données.
+
+Avec les SVM, lorsque vous accédez aux données dans FSX for ONTAP, vos clients et vos postes de travail montent un volume, un partage CIFS/SMB ou une LUN iSCSI hébergée par un SVM à l'aide du terminal du SVM (adresse IP).
+
+.Avant de commencer
+Vérifiez le nombre de machines virtuelles de stockage prises en charge par système de fichiers. Pour connaître le nombre maximal de SVM par système de fichiers, reportez-vous à la section link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/managing-svms.html#max-svms["Gestion de FSX pour les machines virtuelles de stockage ONTAP"^] dans la documentation AWS.
+
+.Étapes
+. Connectez-vous à la console Workload Factory.
+. Dans stockage, sélectionnez *accéder à l'inventaire de stockage*.
+. Dans l'onglet FSX pour ONTAP, cliquez sur le menu des trois points du système de fichiers pour créer une machine virtuelle de stockage pour et sélectionnez *gérer*.
+. Dans la présentation du système de fichiers, sélectionnez *Créer une machine virtuelle de stockage*.
+. Sur la page Storage VM, sous Storage VM configuration, fournissez les éléments suivants :
++
+.. *Nom* : entrez un nom pour la machine virtuelle de stockage.
+.. *Informations d'identification de la machine virtuelle de stockage* : saisissez un mot de passe pour l'utilisateur de cette machine virtuelle de stockage `vsadmin` ou utilisez les informations d'identification de l'utilisateur du système de fichiers `fsxadmin` .
+.. *Style de sécurité du volume racine* : sélectionnez le style de sécurité du volume racine en fonction du type de clients qui accèdent à vos données : UNIX (clients Linux), NTFS (clients Windows) ou Mixed.
+.. *Tags*: Vous pouvez éventuellement ajouter jusqu'à 50 tags.
+
+
+. Cliquez sur *Créer*.
+

@@ -1,0 +1,28 @@
+---
+sidebar: sidebar 
+permalink: edit-svm-tags.html 
+keywords: edit storage vm tags, vm tags, svm tags 
+summary: Ajoutez, mettez à jour ou supprimez à tout moment les balises de VM de stockage pour une VM de stockage. 
+---
+= Modifier les balises des VM de stockage
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Les balises peuvent vous aider à classer vos ressources. Vous pouvez à tout moment ajouter, modifier et supprimer des balises pour une VM de stockage.
+
+.Étapes
+. Connectez-vous à la console Workload Factory.
+. Dans stockage, sélectionnez *accéder à l'inventaire de stockage*.
+. Dans l'onglet *FSX pour ONTAP*, sélectionnez le menu à trois points du système de fichiers avec la machine virtuelle de stockage à mettre à jour, puis sélectionnez *gérer*.
+. Dans la présentation du système de fichiers, sélectionnez l'onglet *Storage VMS*.
+. Dans l'onglet Storage VM, sélectionnez le menu Three DOTS de la VM de stockage pour lequel modifier les balises.
+. Sélectionnez *Modifier les balises de VM de stockage*.
+. Sur la page Modifier les balises de VM de stockage, ajoutez, modifiez ou supprimez des balises.
++
+Le nombre maximum de balises pouvant être appliquées à une VM de stockage est de 50.
+
+. Cliquez sur *appliquer*.
+

@@ -1,0 +1,34 @@
+---
+sidebar: sidebar 
+permalink: restore-volume-from-snapshot.html 
+keywords: restore volume, snapshot 
+summary: 'Restaurez un volume FSX pour ONTAP à partir d"un snapshot lorsque le volume contient des fichiers supprimés ou corrompus.' 
+---
+= Restaurer un volume à partir d'un snapshot
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Restaurez un volume FSX pour ONTAP à partir d'un snapshot lorsque le volume contient des fichiers supprimés ou corrompus.
+
+.Description de la tâche
+Cette opération restaure les données d'un snapshot vers un nouveau volume.
+
+.Avant de commencer
+Vous ne pouvez restaurer un volume à partir d'un snapshot que si vous disposez d'une copie snapshot du volume.
+
+Assurez-vous de disposer de suffisamment de capacité pour effectuer cette opération.
+
+.Étapes
+. Connectez-vous à la console Workload Factory.
+. Dans *stockage*, sélectionnez *aller à l'inventaire de stockage*.
+. Dans l'onglet *FSX pour ONTAP*, cliquez sur le menu à trois points du système de fichiers avec le volume, puis sélectionnez *gérer*.
+. Dans la présentation du système de fichiers, sélectionnez l'onglet *volumes*.
+. Dans l'onglet *volumes*, sélectionnez le menu à trois points du volume à restaurer à partir d'un instantané.
+. Sélectionnez *actions de protection des données*, *instantanés*, puis *Restaurer le volume à partir d'un instantané*.
+. Dans la boîte de dialogue Restaurer le volume à partir d'un instantané, dans le champ *Nom de l'instantané*, sélectionnez l'instantané à restaurer dans le menu déroulant.
+. Dans le champ *nom du volume restauré*, entrez un nom unique pour le volume à restaurer.
+. Cliquez sur *Restaurer*.
+

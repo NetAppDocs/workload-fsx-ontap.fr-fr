@@ -1,0 +1,19 @@
+---
+sidebar: sidebar 
+permalink: security-reference.html 
+keywords: security, data protection, IAM, file system access control, vpc 
+summary:  
+---
+= Sécurité pour FSX for ONTAP
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+La documentation sur Amazon FSX pour NetApp ONTAP fournit pour vous les rubriques de sécurité suivantes.
+
+* link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/data-protection.html["Protection des données dans Amazon FSX pour NetApp ONTAP"^]
+* link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/security-iam.html["Gestion des identités et des accès pour Amazon FSX pour NetApp ONTAP"^]
+* link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/limit-access-security-groups.html["Contrôle d'accès au système de fichiers avec Amazon VPC"^] Dans la documentation Amazon FSX pour NetApp ONTAP
+

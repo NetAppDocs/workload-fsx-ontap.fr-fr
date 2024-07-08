@@ -1,0 +1,148 @@
+---
+sidebar: sidebar 
+permalink: create-volume.html 
+keywords: create volume, FSx for ONTAP volume 
+summary: Une fois que vous avez configuré votre système de fichiers FSX pour ONTAP, vous pouvez créer des volumes FSX pour ONTAP. 
+---
+= Créez un volume FSX pour ONTAP
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Une fois que vous avez configuré votre système de fichiers FSX pour ONTAP, vous pouvez créer des volumes FSX pour ONTAP.
+
+.Description de la tâche
+Les volumes FSX pour ONTAP sont des ressources virtuelles utilisées pour regrouper les données, déterminer leur mode de stockage et déterminer le type d'accès à vos données. Les volumes ne consomment pas de capacité de stockage du système de fichiers. Les données stockées dans un volume se concentrent principalement sur le stockage SSD. Selon la règle de hiérarchisation du volume, les données peuvent également consommer le stockage du pool de capacité. Vous définissez la taille d'un volume lors de sa création, et vous pouvez en modifier la taille ultérieurement.
+
+Vous pouvez utiliser les protocoles suivants pour vos volumes :
+
+* CIFS : protocole de stockage de fichiers pour les systèmes d'exploitation Windows
+* NFS : protocole de stockage de fichiers pour les systèmes d'exploitation Unix
+* ISCSI : protocole de stockage en mode bloc
+
+
+.Avant de commencer
+Avant de créer un volume, vérifiez les conditions préalables suivantes :
+
+* Vous devez disposer d'un système de fichiers FSX pour ONTAP dans Workload Factory.
+* Vous devez disposer d'une VM de stockage.
+* Pour l'accès au protocole, procédez comme suit :
++
+** Pour configurer l'accès au volume, vous devez link:manage-links.html["associer un lien"]. Si vous n'avez pas de lien existant, link:create-link.html["créer un lien"]. Pour associer un lien dans le système de fichiers, cliquez sur *lien associé* sous *Nom du compte*. Une fois le lien associé, revenez à cette opération.
+** Vous devez configurer l'accès au protocole que vous sélectionnez, soit CIFS, NFS, soit iSCSI.
+
+
+
+
+.Étapes
+. Connectez-vous à la console Workload Factory.
+. Dans stockage, sélectionnez *accéder à l'inventaire de stockage*.
+. Dans l'onglet *FSX pour ONTAP*, sélectionnez le menu à trois points du système de fichiers dans lequel vous souhaitez créer un volume, puis sélectionnez *gérer*.
+. Dans l'onglet *vue d'ensemble*, cliquez sur *Créer un volume*.
+. Sur la page Créer un volume, sous Détails généraux, fournissez les détails suivants :
++
+.. *Nom du volume* : entrez un nom pour le volume.
+.. *Nom de la VM de stockage* : vous pouvez éventuellement entrer un nom de VM de stockage.
+.. *Volume style* : sélectionnez *FlexVol* ou *FlexGroup* volume.
++
+Le style de volume FlexVol est sélectionné par défaut.
+
++
+La taille du volume FlexGroup dépend du nombre de composants. 100 Gio est requis par composant.
+
+.. *Taille du volume* : entrez la taille du volume et l'unité.
++
+Vous pouvez également activer la croissance automatique du volume. Cette option est disponible lorsque vous sélectionnez *File Access* comme type d'accès au volume.
+
+.. *Tags*: Vous pouvez éventuellement ajouter jusqu'à 50 tags.
+
+
+. Sous accès (uniquement pour les systèmes de fichiers avec des liens associés), fournissez les détails suivants :
++
+.. *Type d'accès* : sélectionnez *accès au fichier* ou *accès au bloc*. Les champs supplémentaires permettant de configurer l'accès au volume varient en fonction de votre sélection.
++
+*** *Accès aux fichiers* : permet à plusieurs utilisateurs et périphériques autorisés d'accéder au volume à l'aide des protocoles SMB/CIFS, NFS ou Dual (SMB/NFS).
++
+Renseignez les champs suivants pour configurer l'accès aux fichiers du volume.
+
++
+.... *Politique d'exportation NFS* : fournissez les détails suivants pour fournir un accès NFS :
++
+..... *Contrôle d'accès* : sélectionnez une *règle d'export personnalisée*, une *règle d'export existante* ou un *pas d'accès au volume* dans le menu déroulant.
+..... *Nom de la politique d'exportation* :
++
+Si vous avez sélectionné une export policy personnalisée, sélectionnez un nom de policy existante dans le menu déroulant.
+
++
+Si vous avez sélectionné une export-policy existante, entrez un nouveau nom de policy.
+
+..... *Ajouter une règle de stratégie d'exportation* : pour une règle d'export personnalisée, vous pouvez ajouter des règles de stratégie d'exportation à la règle.
+
+
+.... *Partage CIFS* : entrez le nom du partage CIFS pour fournir un accès SMB.
+
+
+*** *Accès en bloc* : permet aux hôtes exécutant des applications métier critiques d'accéder au volume à l'aide du protocole iSCSI.
++
+Renseignez les champs suivants pour configurer l'accès en bloc au volume.
+
++
+.... *Configuration iSCSI* : fournissez les détails suivants pour configurer iSCSI pour l'accès en bloc au volume.
++
+..... Sélectionnez *Créer un nouveau groupe initiateur* ou *mapper un groupe initiateur existant*.
+..... Sélectionnez *système d'exploitation hôte* dans le menu déroulant.
+..... Entrez un *nom de groupe initiateur* pour un nouveau groupe initiateur.
+..... Sous initiateurs hôtes, ajoutez un ou plusieurs initiateurs hôtes iSCSI qualifiés (IQN).
+
+
+
+
+
+
+
+
+. Sous efficacité et protection, fournissez les détails suivants :
++
+.. *Efficacité du stockage* : désactivez ou activez l'efficacité du stockage.
++
+L'efficacité du stockage est obtenue grâce aux fonctionnalités de déduplication et de compression de ONTAP. La déduplication permet d'éliminer les blocs de données dupliqués. La compression des données compresse les blocs de données afin de réduire la quantité d'espace de stockage physique nécessaire.
+
+.. *Politique d'instantanés* : sélectionnez la stratégie d'instantanés pour spécifier la fréquence et la rétention des instantanés.
++
+Voici les règles par défaut d'AWS. Pour les règles de snapshot personnalisées, vous devez associer un lien.
+
++
+`default`:: Cette règle crée automatiquement des snapshots selon le planning suivant, avec les plus anciennes copies supprimées pour faire de la place pour les nouvelles copies :
++
+--
+*** Six snapshots par heure au maximum ont pris cinq minutes au-delà de l'heure.
+*** Un maximum de deux clichés quotidiens pris du lundi au samedi à 10 minutes après minuit.
+*** Un maximum de deux instantanés hebdomadaires pris chaque dimanche à 15 minutes après minuit.
++
+
+NOTE: Les heures des snapshots sont basées sur le fuseau horaire du système de fichiers, qui est par défaut UTC (temps universel coordonné). Pour plus d'informations sur la modification du fuseau horaire, reportez-vous à la section link:https://library.netapp.com/ecmdocs/ECMP1155684/html/GUID-E26E4C94-DF74-4E31-A6E8-1D2D2287A9A1.html["Affichage et réglage du fuseau horaire du système"^] de la documentation du support NetApp.
+
+
+
+--
+`default-1weekly`:: Cette règle fonctionne de la même manière que la `default` règle, sauf qu'elle ne conserve qu'un seul snapshot de la planification hebdomadaire.
+`none`:: Cette règle ne prend pas de snapshots. Vous pouvez affecter cette règle aux volumes pour empêcher la création automatique de snapshots.
+
+
+.. *Règle de hiérarchisation* : sélectionnez la règle de hiérarchisation pour les données stockées dans le volume.
++
+Auto est la règle de hiérarchisation par défaut lors de la création d'un volume à l'aide de l'interface utilisateur de Workload Factory FSX for ONTAP. Pour plus d'informations sur les règles de Tiering de volume, reportez-vous à la section link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/volume-storage-capacity.html#data-tiering-policy["Capacité de stockage du volume"^] dans la documentation d'AWS FSX pour NetApp ONTAP.
+
+
+
+. Dans la configuration avancée, fournissez les informations suivantes :
++
+.. *Junction path* : entrez l'emplacement dans l'espace de nom de la machine virtuelle de stockage où le volume est monté. Le chemin de jonction par défaut est `/<volume-name>`.
+.. *Aggregates list* : uniquement pour les volumes FlexGroup. Ajout ou suppression d'agrégats Le nombre minimal d'agrégats est de un.
+.. *Nombre de composants* : uniquement pour les volumes FlexGroup. Entrez le nombre de composants par agrégat. 100 Gio est requis par composant.
+
+
+. Cliquez sur *Créer*.
+

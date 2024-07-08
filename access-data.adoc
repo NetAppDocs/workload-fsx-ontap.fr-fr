@@ -1,0 +1,33 @@
+---
+sidebar: sidebar 
+permalink: access-data.html 
+keywords: access data, mount clients, on-premises 
+summary: Vous pouvez accéder à vos systèmes de fichiers FSX pour ONTAP à partir des environnements sur site en montant des volumes pour les clients NAS et en montant des LUN iSCSI pour les clients SAN. 
+---
+= Accès à vos données
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Vous pouvez accéder à vos systèmes de fichiers FSX pour ONTAP à partir des environnements sur site en montant des volumes pour les clients NAS et en montant des LUN iSCSI pour les clients SAN.
+
+link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/supported-fsx-clients.html["Accès aux données"^] Dans la documentation d'Amazon FSX pour NetApp ONTAP, vous trouverez des rubriques sur l'accès aux données à des fins de référence.
+
+
+
+== Se connecter aux clients NAS
+
+* link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/attach-linux-client.html["Montez un volume sur des clients Linux"^]
+* link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/attach-windows-client.html["Montez un volume sur des clients Windows"^]
+* link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/attach-mac-client.html["Montez un volume sur des clients MacOS"^]
+
+
+
+
+== Se connecter aux clients SAN
+
+* link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/mount-iscsi-luns-linux.html["Montez une LUN iSCSI sur des clients Linux"^]
+* link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/mount-iscsi-windows.html["Montez une LUN iSCSI sur des clients Windows"^]
+

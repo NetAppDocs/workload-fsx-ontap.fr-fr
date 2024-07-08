@@ -1,0 +1,26 @@
+---
+sidebar: sidebar 
+permalink: stop-replication.html 
+keywords: stop replication, break replication 
+summary: Arrête une relation de réplication entre les volumes source et cible. 
+---
+= Arrête une relation de réplication
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Lorsque vous arrêtez une réplication, la réplication planifiée est mise à jour du volume source vers le volume cible. Le volume cible passe de la lecture seule à la lecture-écriture.
+
+.Étapes
+. Connectez-vous à la console Workload Factory.
+. Dans stockage, sélectionnez *accéder à l'inventaire de stockage*.
+. Dans l'onglet *FSX pour ONTAP*, cliquez sur le menu à trois points du système de fichiers à mettre à jour, puis sélectionnez *gérer*.
+. Dans la présentation du système de fichiers, sélectionnez l'onglet *relations de réplication*.
+. Dans l'onglet Replication relations, cliquez sur le menu des trois points de la relation de réplication à arrêter.
+. Sélectionnez *Pause*.
+. Dans la boîte de dialogue interrompre la réplication, sélectionnez *rompre*.
+
+
+L'état de réplication du volume passe à *Broken*. Le volume cible devient inscriptible.

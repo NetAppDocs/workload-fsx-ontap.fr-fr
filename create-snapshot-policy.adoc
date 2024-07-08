@@ -1,0 +1,62 @@
+---
+sidebar: sidebar 
+permalink: create-snapshot-policy.html 
+keywords: create 
+summary: Créez une règle Snapshot pour les volumes FSX pour ONTAP. Une règle de snapshots définit la façon dont le système crée des snapshots pour un volume. 
+---
+= Créez une règle Snapshot pour les volumes FSX pour ONTAP
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Créez une règle Snapshot personnalisée pour les volumes FSX pour ONTAP. Une règle de snapshots définit la façon dont le système crée des snapshots pour un volume.
+
+.Description de la tâche
+Vous pouvez créer une règle de snapshot personnalisée différente de celle des trois règles de snapshot intégrées pour FSX for ONTAP :
+
+* `default`
+* `default-1weekly`
+* `none`
+
+
+Par défaut, chaque volume est associé à la règle de snapshot du système de fichiers `default` . Il est recommandé d'utiliser cette règle pour la plupart des workloads.
+
+La personnalisation d'une stratégie vous permet de spécifier quand créer des snapshots, combien de copies conserver et comment les nommer.
+
+.Avant de commencer
+* Avant d'utiliser des snapshots, tenez compte des points suivants :
++
+** Pour la plupart des jeux de données, une capacité supplémentaire de 20 % suffit pour conserver les snapshots pendant quatre semaines. À mesure que les données vieillissent, leur utilisation pour les restaurations devient moins probable.
+** Le remplacement de toutes les données d'un snapshot consomme une capacité de volume importante, ce qui est important dans la capacité du volume de provisionnement.
+
+
+* Pour créer une stratégie de snapshot personnalisée, vous devez link:manage-links.html["associer un lien"]. Si vous n'avez pas de lien existant, link:create-link.html["créer un lien"]. Pour associer un lien dans le système de fichiers, cliquez sur *lien associé* sous *Nom du compte*. Une fois le lien associé, revenez à cette opération.
+
+
+.Étapes
+. Connectez-vous à la console Workload Factory.
+. Dans *stockage*, sélectionnez *aller à l'inventaire de stockage*.
+. Dans l'onglet *FSX pour ONTAP*, cliquez sur le menu à trois points du système de fichiers avec le volume, puis sélectionnez *gérer*.
+. Dans la présentation du système de fichiers, sélectionnez l'onglet *volumes*.
+. Dans l'onglet *volumes*, sélectionnez le menu à trois points du volume à protéger avec les instantanés planifiés.
+. Sélectionnez *actions de protection des données*, *instantanés*, puis *gérer les stratégies de snapshot*.
+. Sur la page gestion des règles Snapshot, sélectionnez *Créer une nouvelle stratégie d'instantanés*.
+. Dans le champ *Nom de la stratégie de snapshot*, entrez un nom pour la stratégie de snapshot.
+. Facultatif : dans le champ *Description*, entrez une description de la stratégie de snapshot.
+. Sous *Agenda*, sélectionnez quand créer des instantanés. Par exemple, toutes les minutes ou toutes les heures.
++
+Vous pouvez sélectionner plusieurs fréquences.
+
+. Sous *nombre d'exemplaires*, entrez le nombre d'exemplaires à conserver.
++
+Le nombre maximal de copies est de 1,023.
+
+. Facultatif : sous *Naming convention*, entrez un *préfixe* pour la stratégie.
+. *Étiquette de conservation* est automatiquement renseignée.
++
+Cette étiquette fait référence à SnapMirror, ou étiquette de réplication, utilisé pour sélectionner uniquement les snapshots spécifiés pour la réplication du système de fichiers source vers le système de fichiers cible.
+
+. Cliquez sur *appliquer*.
+

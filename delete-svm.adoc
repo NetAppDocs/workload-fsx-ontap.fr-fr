@@ -1,0 +1,32 @@
+---
+sidebar: sidebar 
+permalink: delete-svm.html 
+keywords: delete storage vm, delete svm, remove svm 
+summary: 'Supprimez une machine virtuelle de stockage (SVM) dont vous n"avez plus besoin dans une configuration de système de fichiers FSX pour ONTAP.' 
+---
+= Supprimer une machine virtuelle de stockage
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Supprimez une machine virtuelle de stockage (SVM) dont vous n'avez plus besoin dans une configuration de système de fichiers FSX pour ONTAP.
+
+.Avant de commencer
+Vérifiez les points suivants avant de supprimer une machine virtuelle de stockage :
+
+* S'assurer qu'aucune application n'accède aux données du SVM.
+* Supprimer tous les volumes non root attachés au SVM.
+
+
+.Étapes
+. Connectez-vous à la console Workload Factory.
+. Dans stockage, sélectionnez *accéder à l'inventaire de stockage*.
+. Dans l'onglet *FSX pour ONTAP*, cliquez sur le menu à trois points du système de fichiers à mettre à jour, puis sélectionnez *gérer*.
+. Dans la présentation du système de fichiers, sélectionnez l'onglet *Storage VMS*.
+. Dans l'onglet Storage VMs, sélectionnez le menu Three DOTS de la VM de stockage pour laquelle configurer Active Directory.
+. Sélectionnez *Supprimer la VM de stockage*.
+. Dans la boîte de dialogue Supprimer la VM de stockage, tapez « delete » pour supprimer la VM de stockage.
+. Cliquez sur *Supprimer*.
+

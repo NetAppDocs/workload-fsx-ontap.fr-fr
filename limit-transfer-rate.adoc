@@ -1,0 +1,36 @@
+---
+sidebar: sidebar 
+permalink: limit-transfer-rate.html 
+keywords: limit max transfer rate, limit transfer rate 
+summary: 'Limitez le taux de transfert maximal d"une relation de réplication. Un taux de transfert illimité peut avoir un impact négatif sur les performances d"autres applications et de votre réseau.' 
+---
+= Limitez le taux de transfert maximal d'une relation de réplication
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Limitez le taux de transfert maximal d'une relation de réplication. Un taux de transfert illimité peut avoir un impact négatif sur les performances d'autres applications et de votre réseau.
+
+.Description de la tâche
+La limitation du taux de transfert maximal est facultative, mais recommandée. Sans limite, les performances du réseau et des applications peuvent diminuer.
+
+Nous recommandons également un taux de transfert illimité pour les systèmes de fichiers FSX pour ONTAP pour les workloads stratégiques, par exemple ceux utilisés principalement pour la reprise d'activité.
+
+.Avant de commencer
+Tenez compte de la quantité de bande passante à allouer à la réplication.
+
+.Étapes
+. Connectez-vous à la console Workload Factory.
+. Dans stockage, sélectionnez *accéder à l'inventaire de stockage*.
+. Dans l'onglet *FSX pour ONTAP*, cliquez sur le menu à trois points du système de fichiers à mettre à jour, puis sélectionnez *gérer*.
+. Dans la présentation du système de fichiers, sélectionnez l'onglet *relations de réplication*.
+. Dans l'onglet Replication relations (relations de réplication), cliquez sur le menu Three DOTS (trois points) de la relation de réplication pour limiter le taux de transfert maximal de.
+. Sélectionnez *Modifier le taux de transfert max*.
+. Dans la boîte de dialogue Modifier le taux de transfert maximal, sélectionnez *limité* et entrez la limite de transfert maximale en Mo/s.
++
+Vous pouvez également sélectionner *Illimité*.
+
+. Cliquez sur *appliquer*.
+

@@ -1,0 +1,28 @@
+---
+sidebar: sidebar 
+permalink: edit-volume-tags.html 
+keywords: volume tags, edit volume tags, edit tags 
+summary: Les balises peuvent vous aider à classer vos ressources. Vous pouvez ajouter, modifier et supprimer des balises de volume à tout moment pour les volumes FSX for ONTAP. 
+---
+= Modifier les balises de volume
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Les balises peuvent vous aider à classer vos ressources. Vous pouvez ajouter, modifier et supprimer des balises de volume à tout moment pour les volumes FSX for ONTAP.
+
+.Étapes
+. Connectez-vous à la console Workload Factory.
+. Dans stockage, sélectionnez *accéder à l'inventaire de stockage*.
+. Dans l'onglet *FSX pour ONTAP*, sélectionnez le menu à trois points du système de fichiers avec le volume à mettre à jour, puis sélectionnez *gérer*.
+. Dans la présentation du système de fichiers, sélectionnez l'onglet *volumes*.
+. Dans l'onglet volumes, cliquez sur le menu à trois points du volume pour lequel modifier les balises.
+. Sélectionnez *actions de base* puis *Modifier les balises de volume*.
+. Sur la page Modifier les balises de volume, ajoutez, modifiez ou supprimez des balises.
++
+Le nombre maximum de balises que vous pouvez appliquer à un volume est de 50.
+
+. Cliquez sur *appliquer*.
+

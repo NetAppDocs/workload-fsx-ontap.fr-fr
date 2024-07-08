@@ -1,0 +1,33 @@
+---
+sidebar: sidebar 
+permalink: clone-volume.html 
+keywords: clone volume 
+summary: 'Cloner un volume pour créer un volume en lecture-écriture du volume d"origine à des fins de test.' 
+---
+= Clonez un volume
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Cloner un volume pour créer un volume en lecture-écriture du volume d'origine à des fins de test.
+
+Le clone reflète l'état actuel et instantané des données. Vous pouvez aussi utiliser des clones pour donner aux utilisateurs un accès aux données sans leur donner accès aux données de production.
+
+.Description de la tâche
+Le clonage de volumes n'est pris en charge que pour les volumes FlexClone.
+
+Lorsqu'un volume est cloné, un volume inscriptible est créé avec des références aux snapshots à partir du volume parent. La création de clones s'effectue en quelques secondes. Les données clonées ne résident pas sur le clone de volume, mais résident plutôt sur le volume parent. Toutes les nouvelles données écrites sur le volume après la création du clone résident sur le clone.
+
+Pour qu'un volume cloné contienne toutes les données du volume parent et toutes les nouvelles données ajoutées au clone après sa création, vous devez link:split-cloned-volume.html["séparer le clone"] utiliser le volume parent. En outre, vous ne pouvez pas supprimer un volume parent s'il possède un clone. Un clone doit être divisé pour qu'un volume parent puisse être supprimé.
+
+.Étapes
+. Connectez-vous à la console Workload Factory.
+. Dans stockage, sélectionnez *accéder à l'inventaire de stockage*.
+. Sélectionnez l'onglet *volumes*.
+. Dans l'onglet volumes, sélectionnez le menu des trois points du volume à cloner.
+. Sélectionnez *actions de protection des données*, puis *Clone volume*.
+. Dans la boîte de dialogue Cloner le volume, entrez le nom du clone de volume.
+. Cliquez sur *Clone*.
+

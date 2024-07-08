@@ -1,0 +1,32 @@
+---
+sidebar: sidebar 
+permalink: restore-from-backup.html 
+keywords: restore backup, new volume, volume restoration, backup 
+summary: 'Restaurez un volume à partir d"une sauvegarde sur n"importe quel système de fichiers FSX pour ONTAP de votre compte AWS.' 
+---
+= Restaurer un volume à partir d'une sauvegarde
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Restaurez un volume à partir d'une sauvegarde sur n'importe quel système de fichiers FSX pour ONTAP de votre compte AWS.
+
+.Étapes
+. Connectez-vous à la console Workload Factory.
+. Dans stockage, sélectionnez *accéder à l'inventaire de stockage*.
+. Dans l'onglet *FSX pour ONTAP*, cliquez sur le menu à trois points du système de fichiers avec le volume, puis sélectionnez *gérer*.
+. Dans la présentation du système de fichiers, sélectionnez l'onglet *volumes*.
+. Dans l'onglet *volumes*, cliquez sur le menu à trois points du volume à restaurer à partir d'une sauvegarde.
+. Sélectionnez *actions de protection des données*, *FSX pour sauvegarde ONTAP*, puis *Restaurer à partir d'une sauvegarde*.
+. Dans la boîte de dialogue Restaurer à partir d'une sauvegarde, indiquez les éléments suivants :
++
+.. *Système de fichiers cible* : sélectionnez le système de fichiers cible dans le menu déroulant.
+.. *VM de stockage cible* : sélectionnez la VM de stockage cible dans le menu déroulant.
+.. *Nom de la sauvegarde* : sélectionnez le nom de la sauvegarde dans le menu déroulant.
+.. *Nom du volume restauré* : entrez le nom du volume restauré.
+
+
+. Cliquez sur *Restaurer*.
+

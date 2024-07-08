@@ -1,0 +1,64 @@
+---
+sidebar: sidebar 
+permalink: replicate-svm-to-file-system.html 
+keywords:  
+summary: 'La réplication d"une machine virtuelle de stockage vers un autre système de fichiers FSX for ONTAP offre une couche de protection d"accès aux données en cas de perte de données.' 
+---
+= Réplication d'une VM de stockage vers un autre système de fichiers FSX pour ONTAP
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+La réplication d'une machine virtuelle de stockage vers un autre système de fichiers FSX for ONTAP offre une couche de protection d'accès aux données en cas de perte de données. Cette opération réplique tous les volumes d'une VM de stockage vers un autre système de fichiers FSX pour ONTAP.
+
+.Avant de commencer
+Pour répliquer une machine virtuelle de stockage vers un autre système de fichiers FSX for ONTAP, vous devez link:manage-links.html["associer un lien"]. Si vous n'avez pas de lien existant, link:create-link.html["créer un lien"]. Pour associer un lien dans le système de fichiers, cliquez sur *lien associé* sous *Nom du compte*. Une fois le lien associé, revenez à cette opération.
+
+.Étapes
+. Connectez-vous à la console Workload Factory.
+. Dans stockage, sélectionnez *accéder à l'inventaire de stockage*.
+. Dans l'onglet *FSX pour ONTAP*, sélectionnez le menu à trois points du système de fichiers avec la machine virtuelle de stockage à répliquer, puis sélectionnez *gérer*.
+. Dans la présentation du système de fichiers, sélectionnez l'onglet *Storage VMS*.
+. Dans l'onglet Storage VM, sélectionnez le menu Three DOTS de la machine virtuelle de stockage pour laquelle répliquer un SVM.
+. Sélectionnez *répliquer VM de stockage*.
+. Sur la page Créer une réplication, sous cible de réplication, fournissez les informations suivantes :
++
+.. *FSX pour système de fichiers ONTAP* : sélectionnez les informations d'identification, la région et le nom du système de fichiers FSX pour ONTAP pour le système de fichiers cible FSX pour ONTAP.
+.. *Nom de la VM de stockage* : sélectionnez la VM de stockage dans le menu déroulant.
+.. *Nom du volume* : le nom du volume cible est généré automatiquement au format suivant `{OriginalVolumeName}_copy`.
+.. *Règle de hiérarchisation* : sélectionnez la règle de hiérarchisation pour les données stockées dans le volume cible.
++
+_Auto_ est la règle de hiérarchisation par défaut lors de la création d'un volume à l'aide de l'interface utilisateur de Workload Factory FSX for ONTAP. Pour plus d'informations sur les règles de Tiering de volume, reportez-vous à la section link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/volume-storage-capacity.html#data-tiering-policy["Capacité de stockage du volume"^]dans la documentation d'AWS FSX pour NetApp ONTAP.
+
+.. *Taux de transfert max.* : sélectionnez *Limited* et entrez la limite de transfert max. En Mo/s. Vous pouvez également sélectionner *Illimité*.
++
+Sans limite, les performances du réseau et des applications peuvent diminuer. Nous recommandons également un taux de transfert illimité pour les systèmes de fichiers FSX pour ONTAP pour les workloads stratégiques, par exemple ceux utilisés principalement pour la reprise d'activité.
+
+
+
+. Sous Paramètres de réplication, fournissez les informations suivantes :
++
+.. *Intervalle de réplication* : sélectionnez la fréquence à laquelle les instantanés sont transférés du volume source vers le volume cible.
+.. *Conservation à long terme* : éventuellement, activez les instantanés pour la conservation à long terme.
++
+Si vous activez la conservation à long terme, sélectionnez une règle existante ou créez une nouvelle règle pour définir les snapshots à répliquer et le nombre à conserver.
+
++
+... Pour *Choisissez une stratégie existante*, sélectionnez une stratégie existante dans le menu déroulant.
+... Pour *Créer une nouvelle police*, fournissez les éléments suivants :
++
+.... *Nom de la stratégie* : entrez un nom de stratégie.
+.... *Stratégies Snapshot* : dans le tableau, sélectionnez la fréquence de la règle de snapshot et le nombre de copies à conserver. Vous pouvez sélectionner plusieurs règles de snapshot.
+
+
+
+
+
+
+. Cliquez sur *Créer*.
+
+
+.Résultat
+Tous les volumes de la VM de stockage sont répliqués sur le système de fichiers cible.

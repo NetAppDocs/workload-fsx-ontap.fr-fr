@@ -1,0 +1,42 @@
+---
+sidebar: sidebar 
+permalink: enable-snapshots-long-term.html 
+keywords: snapshot long-term retention, enable long-term retention 
+summary: Modifiez la planification de réplication du volume source dans une relation de réplication. 
+---
+= Activez et modifiez les snapshots pour une conservation à long terme
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+L'activation des snapshots pour la conservation à long terme vous permet de répliquer des snapshots spécifiques pour la reprise d'activité à long terme.
+
+La conservation à long terme permet aux services de l'entreprise de continuer de fonctionner même en cas de défaillance complète d'un site, ce qui permet aux applications de basculer en toute transparence grâce à une copie secondaire.
+
+Les mêmes étapes s'appliquent à l'activation et à la modification de snapshots pour une conservation à long terme.
+
+.Étapes
+. Connectez-vous à la console Workload Factory.
+. Dans stockage, sélectionnez *accéder à l'inventaire de stockage*.
+. Dans l'onglet *FSX pour ONTAP*, cliquez sur le menu à trois points du système de fichiers à mettre à jour, puis sélectionnez *gérer*.
+. Dans la présentation du système de fichiers, sélectionnez l'onglet *relations de réplication*.
+. Dans l'onglet Replication relations, cliquez sur le menu des trois points de la planification des relations de réplication à modifier.
+. Sélectionnez *Modifier la rétention à long terme*.
+. Dans la boîte de dialogue Modifier la rétention à long terme, activez ou désactivez les instantanés pour la conservation à long terme.
+. Si vous choisissez de désactiver les instantanés pour la conservation à long terme, cliquez sur *appliquer* pour terminer cette opération.
+. Si vous choisissez d'activer les snapshots pour la conservation à long terme, choisissez entre sélectionner une règle existante ou créer une nouvelle règle.
++
+.. Pour une stratégie existante, sélectionnez une stratégie existante dans le menu déroulant.
+.. Pour créer une nouvelle règle, procédez comme suit :
++
+... *Nom de la stratégie* : entrez un nom de stratégie.
+... *Stratégies Snapshot* : sélectionnez une ou plusieurs stratégies de snapshot.
+... *Copies à conserver* : entrez le nombre de copies snapshot à conserver sur le système de fichiers cible.
+
+
+
+
+. Cliquez sur *appliquer*.
+
