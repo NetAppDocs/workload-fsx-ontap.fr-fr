@@ -35,7 +35,7 @@ Avant de fractionner un volume cloné, tenez compte des points suivants :
 
 
 .Étapes
-. Connectez-vous à la console Workload Factory.
+. Connectez-vous au link:https://console.workloads.netapp.com/["Console Workload Factory"^]
 . Dans stockage, sélectionnez *accéder à l'inventaire de stockage*.
 . Sélectionnez l'onglet *volumes*.
 . Dans l'onglet volumes, sélectionnez le menu à trois points du volume avec le volume cloné à diviser.

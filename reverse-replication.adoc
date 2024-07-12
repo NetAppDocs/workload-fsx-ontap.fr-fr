@@ -25,7 +25,7 @@ NOTE: Toutes les données écrites sur le volume source d'origine entre la derni
 Assurez-vous de connaître les rôles actuels et futurs de vos volumes source et cible car les modifications du nouveau volume cible sont remplacées par le nouveau volume source. Une mauvaise utilisation peut entraîner des pertes de données imprévues.
 
 .Étapes
-. Connectez-vous à la console Workload Factory.
+. Connectez-vous au link:https://console.workloads.netapp.com/["Console Workload Factory"^]
 . Dans stockage, sélectionnez *accéder à l'inventaire de stockage*.
 . Dans l'onglet *FSX pour ONTAP*, cliquez sur le menu à trois points du système de fichiers à mettre à jour, puis sélectionnez *gérer*.
 . Dans la présentation du système de fichiers, sélectionnez l'onglet *relations de réplication*.

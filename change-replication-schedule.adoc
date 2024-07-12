@@ -16,7 +16,7 @@ Modifiez la planification de réplication du volume source dans une relation de 
 Indiquez la fréquence de transfert des snapshots du volume source vers le volume répliqué pour répondre aux objectifs de point de récupération (RPO) requis.
 
 .Étapes
-. Connectez-vous à la console Workload Factory.
+. Connectez-vous au link:https://console.workloads.netapp.com/["Console Workload Factory"^]
 . Dans stockage, sélectionnez *accéder à l'inventaire de stockage*.
 . Dans l'onglet *FSX pour ONTAP*, cliquez sur le menu à trois points du système de fichiers à mettre à jour, puis sélectionnez *gérer*.
 . Dans la présentation du système de fichiers, sélectionnez l'onglet *relations de réplication*.

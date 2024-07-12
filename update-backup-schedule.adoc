@@ -14,7 +14,7 @@ summary: Mettez à jour le planning de sauvegarde de FSX for ONTAP si nécessair
 Mettez à jour le planning de sauvegarde de FSX for ONTAP si nécessaire.
 
 .Étapes
-. Connectez-vous à la console Workload Factory.
+. Connectez-vous au link:https://console.workloads.netapp.com/["Console Workload Factory"^]
 . Dans stockage, cliquez sur *aller à stock de stockage*.
 . Dans l'onglet *FSX pour ONTAP*, cliquez sur le menu à trois points du système de fichiers pour mettre à jour le planning de sauvegarde, puis sélectionnez *gérer*.
 . Sous informations, cliquez sur l'icône en forme de crayon en regard de *FSX pour la sauvegarde ONTAP*. L'icône en forme de crayon apparaît à côté de la flèche déroulante lorsque la souris survole la ligne *FSX pour sauvegarde ONTAP*.

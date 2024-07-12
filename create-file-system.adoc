@@ -36,7 +36,7 @@ Vous pouvez créer un système de fichiers FSX for ONTAP à l'aide de _création
 La création rapide vous permet d'utiliser une configuration recommandée conforme aux meilleures pratiques. Vous pouvez modifier la plupart des paramètres après avoir créé un système de fichiers FSX pour ONTAP.
 
 .Étapes
-. Connectez-vous à la console Workload Factory.
+. Connectez-vous au link:https://console.workloads.netapp.com/["Console Workload Factory"^]
 . Dans stockage, sélectionnez *Créer FSX pour ONTAP*.
 . Sur la page Créer FSX pour ONTAP, sélectionnez *création rapide*.
 +

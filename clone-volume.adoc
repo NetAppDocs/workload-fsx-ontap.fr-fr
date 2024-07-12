@@ -23,7 +23,7 @@ Lorsqu'un volume est cloné, un volume inscriptible est créé avec des référe
 Pour qu'un volume cloné contienne toutes les données du volume parent et toutes les nouvelles données ajoutées au clone après sa création, vous devez link:split-cloned-volume.html["séparer le clone"] utiliser le volume parent. En outre, vous ne pouvez pas supprimer un volume parent s'il possède un clone. Un clone doit être divisé pour qu'un volume parent puisse être supprimé.
 
 .Étapes
-. Connectez-vous à la console Workload Factory.
+. Connectez-vous au link:https://console.workloads.netapp.com/["Console Workload Factory"^]
 . Dans stockage, sélectionnez *accéder à l'inventaire de stockage*.
 . Sélectionnez l'onglet *volumes*.
 . Dans l'onglet volumes, sélectionnez le menu des trois points du volume à cloner.

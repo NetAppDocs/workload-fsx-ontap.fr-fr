@@ -37,7 +37,7 @@ Avant de créer un volume, vérifiez les conditions préalables suivantes :
 
 
 .Étapes
-. Connectez-vous à la console Workload Factory.
+. Connectez-vous au link:https://console.workloads.netapp.com/["Console Workload Factory"^]
 . Dans stockage, sélectionnez *accéder à l'inventaire de stockage*.
 . Dans l'onglet *FSX pour ONTAP*, sélectionnez le menu à trois points du système de fichiers dans lequel vous souhaitez créer un volume, puis sélectionnez *gérer*.
 . Dans l'onglet *vue d'ensemble*, cliquez sur *Créer un volume*.

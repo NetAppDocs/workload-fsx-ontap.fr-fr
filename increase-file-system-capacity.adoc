@@ -18,7 +18,7 @@ Autrement, link:enable-auto-capacity-management.html["activez la fonction de ges
 .Description de la tâche
 L'augmentation de la capacité du système de fichiers a un impact sur les IOPS de votre système de fichiers FSX pour ONTAP.
 
-Lorsque vous utilisez automatiquement link:provision-iops.html["Provisionner les IOPS"] un système de fichiers, les IOPS augmentent de 3 000 IOPS toutes les 1 Gio de capacité SSD. Par exemple, si vous provisionnez une capacité SSD de 100 Tio (102,400 Gio), le nombre d'IOPS augmentera de 300 Tio (307,200 Gio).
+Lorsque vous utilisez automatiquement link:provision-iops.html["Provisionner les IOPS"] un système de fichiers, les IOPS augmentent de 3 000 IOPS toutes les 1 Gio de capacité SSD.
 
 Lorsque vous link:provision-iops.html["Provisionner les IOPS"] augmentez manuellement la capacité du système de fichiers, vous devrez peut-être augmenter l'allocation des IOPS.
 

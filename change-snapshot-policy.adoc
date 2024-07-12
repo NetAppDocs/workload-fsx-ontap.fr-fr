@@ -20,7 +20,7 @@ Cette opération met à jour la fréquence des instantanés pris pour un volume 
 Un lien est nécessaire pour afficher les politiques de snapshots existantes. Pour associer un lien, cliquez sur *lien associé* sous *Nom du compte*. Revenez ensuite à cette opération.
 
 .Étapes
-. Connectez-vous à la console Workload Factory.
+. Connectez-vous au link:https://console.workloads.netapp.com/["Console Workload Factory"^]
 . Dans stockage, sélectionnez *accéder à l'inventaire de stockage*.
 . Sélectionnez l'onglet *volumes*.
 . Dans l'onglet *volumes*, sélectionnez le menu à trois points du volume pour lequel modifier la règle de snapshot.

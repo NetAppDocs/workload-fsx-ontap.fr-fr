@@ -17,7 +17,7 @@ Configurez et mettez à jour Active Directory pour une VM de stockage dans un sy
 Les mêmes étapes s'appliquent à la configuration et à la mise à jour d'Active Directory pour une machine virtuelle de stockage.
 
 .Étapes
-. Connectez-vous à la console Workload Factory.
+. Connectez-vous au link:https://console.workloads.netapp.com/["Console Workload Factory"^]
 . Dans stockage, sélectionnez *accéder à l'inventaire de stockage*.
 . Dans l'onglet *FSX pour ONTAP*, sélectionnez le menu à trois points du système de fichiers avec la machine virtuelle de stockage à mettre à jour, puis sélectionnez *gérer*.
 . Dans la présentation du système de fichiers, sélectionnez l'onglet *Storage VMS*.

@@ -22,7 +22,7 @@ NOTE: La croissance automatique du volume n'est pas prise en charge pour les vol
 Pour activer la croissance automatique du volume, vous devez link:manage-links.html["associer un lien"]. Si vous n'avez pas de lien existant, link:create-link.html["créer un lien"]. Pour associer un lien dans le système de fichiers, cliquez sur *lien associé* sous *Nom du compte*. Une fois le lien associé, revenez à cette opération.
 
 .Étapes
-. Connectez-vous à la console Workload Factory.
+. Connectez-vous au link:https://console.workloads.netapp.com/["Console Workload Factory"^]
 . Dans stockage, sélectionnez *accéder à l'inventaire de stockage*.
 . Dans l'onglet FSX pour ONTAP, sélectionnez le menu à trois points du système de fichiers avec le volume à mettre à jour, puis sélectionnez *gérer*.
 . Dans la présentation du système de fichiers, sélectionnez l'onglet *volumes*.

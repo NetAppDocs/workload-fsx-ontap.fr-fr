@@ -22,7 +22,7 @@ link:links-overview.html["En savoir plus sur les liens"] ou link:create-link.htm
 Vous pouvez afficher les liens actuellement associés à votre compte.
 
 .Étapes
-. Connectez-vous à la console Workload Factory.
+. Connectez-vous au link:https://console.workloads.netapp.com/["Console Workload Factory"^]
 . Dans stockage, sélectionnez *accéder à l'inventaire de stockage*.
 . Dans le menu compte, sélectionnez *Liens*.
 +
@@ -43,7 +43,7 @@ image:screenshot-view-link-details.png["Écrans affichant les systèmes de fichi
 Une fois que vous avez créé un lien, vous pouvez l'associer à vos systèmes de fichiers FSX pour ONTAP. Chaque système de fichiers ne peut être associé qu'à un seul lien dans un seul compte NetApp, mais un lien peut être associé à de nombreux systèmes de fichiers.
 
 .Étapes
-. Connectez-vous à la console Workload Factory.
+. Connectez-vous au link:https://console.workloads.netapp.com/["Console Workload Factory"^]
 . Dans stockage, sélectionnez *accéder à l'inventaire de stockage*.
 . Dans l'onglet *FSX pour ONTAP*, sélectionnez le menu à trois points du système de fichiers auquel associer un lien, puis sélectionnez *gérer*.
 . Dans la présentation du système de fichiers, sélectionnez *lien associé*.
@@ -71,7 +71,7 @@ Vous pouvez supprimer un lien que vous n'utilisez plus dans votre environnement.
 Notez que le lien n'est supprimé que de Workload Factory, mais pas de votre environnement AWS. Vous devez supprimer la fonction Lambda de votre compte AWS après avoir supprimé le lien dans Workload Factory.
 
 .Étapes
-. Connectez-vous à la console Workload Factory.
+. Connectez-vous au link:https://console.workloads.netapp.com/["Console Workload Factory"^]
 . Dans stockage, sélectionnez *accéder à l'inventaire de stockage*.
 . Dans le menu compte, sélectionnez *Liens*.
 . Sur la page Liens, sélectionnez le bouton menu et sélectionnez *Supprimer*.

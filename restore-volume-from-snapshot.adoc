@@ -22,7 +22,7 @@ Vous ne pouvez restaurer un volume à partir d'un snapshot que si vous disposez 
 Assurez-vous de disposer de suffisamment de capacité pour effectuer cette opération.
 
 .Étapes
-. Connectez-vous à la console Workload Factory.
+. Connectez-vous au link:https://console.workloads.netapp.com/["Console Workload Factory"^]
 . Dans *stockage*, sélectionnez *aller à l'inventaire de stockage*.
 . Dans l'onglet *FSX pour ONTAP*, cliquez sur le menu à trois points du système de fichiers avec le volume, puis sélectionnez *gérer*.
 . Dans la présentation du système de fichiers, sélectionnez l'onglet *volumes*.

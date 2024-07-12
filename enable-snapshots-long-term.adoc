@@ -18,7 +18,7 @@ La conservation à long terme permet aux services de l'entreprise de continuer d
 Les mêmes étapes s'appliquent à l'activation et à la modification de snapshots pour une conservation à long terme.
 
 .Étapes
-. Connectez-vous à la console Workload Factory.
+. Connectez-vous au link:https://console.workloads.netapp.com/["Console Workload Factory"^]
 . Dans stockage, sélectionnez *accéder à l'inventaire de stockage*.
 . Dans l'onglet *FSX pour ONTAP*, cliquez sur le menu à trois points du système de fichiers à mettre à jour, puis sélectionnez *gérer*.
 . Dans la présentation du système de fichiers, sélectionnez l'onglet *relations de réplication*.

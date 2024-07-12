@@ -14,7 +14,7 @@ summary: Ajoutez, mettez à jour ou supprimez à tout moment les balises de VM d
 Les balises peuvent vous aider à classer vos ressources. Vous pouvez à tout moment ajouter, modifier et supprimer des balises pour une VM de stockage.
 
 .Étapes
-. Connectez-vous à la console Workload Factory.
+. Connectez-vous au link:https://console.workloads.netapp.com/["Console Workload Factory"^]
 . Dans stockage, sélectionnez *accéder à l'inventaire de stockage*.
 . Dans l'onglet *FSX pour ONTAP*, sélectionnez le menu à trois points du système de fichiers avec la machine virtuelle de stockage à mettre à jour, puis sélectionnez *gérer*.
 . Dans la présentation du système de fichiers, sélectionnez l'onglet *Storage VMS*.

@@ -50,7 +50,7 @@ Suivez les étapes sous l'onglet correspondant à votre sélection de stockage.
 .Amazon Elastic Block Store (EBS)
 --
 .Étapes
-. Connectez-vous à la console Workload Factory.
+. Connectez-vous au link:https://console.workloads.netapp.com/["Console Workload Factory"^]
 . Dans Storage, sélectionnez *Explore Economies* puis *Amazon Elastic Block Store (EBS)*.
 . Dans le calculateur d'économies de stockage, fournissez les informations suivantes :
 +
@@ -71,7 +71,7 @@ Suivez les étapes sous l'onglet correspondant à votre sélection de stockage.
 .Amazon FSX pour serveur de fichiers Windows
 --
 .Étapes
-. Connectez-vous à la console Workload Factory.
+. Connectez-vous au link:https://console.workloads.netapp.com/["Console Workload Factory"^]
 . Dans stockage, sélectionnez *Explorer les économies* puis *Amazon FSX pour Windows File Server*.
 . Dans le calculateur d'économies de stockage, fournissez les informations suivantes :
 +
@@ -93,7 +93,7 @@ Suivez les étapes sous l'onglet correspondant à votre sélection de stockage.
 .Amazon Elastic File System (EFS)
 --
 .Étapes
-. Connectez-vous à la console Workload Factory.
+. Connectez-vous au link:https://console.workloads.netapp.com/["Console Workload Factory"^]
 . Dans Storage, sélectionnez *Explore Economies* puis *Amazon Elastic File System (EFS)*.
 . Dans le calculateur d'économies de stockage, fournissez les informations suivantes :
 +

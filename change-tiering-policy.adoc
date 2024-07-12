@@ -38,7 +38,7 @@ Avant de modifier la règle de hiérarchisation, vérifiez les quatre règles de
 Notez que certaines règles de hiérarchisation ont une période de refroidissement minimale qui définit la durée, ou _journées de refroidissement_, pendant laquelle les données utilisateur d'un volume doivent rester inactives pour que les données soient considérées comme inactives et déplacées vers le niveau de stockage du pool de capacité. La période de refroidissement commence lorsque les données sont écrites sur le disque.
 
 .Étapes
-. Connectez-vous à la console Workload Factory.
+. Connectez-vous au link:https://console.workloads.netapp.com/["Console Workload Factory"^]
 . Dans stockage, sélectionnez *accéder à l'inventaire de stockage*.
 . Dans l'onglet *FSX pour ONTAP*, sélectionnez le menu à trois points du système de fichiers avec le volume à mettre à jour, puis sélectionnez *gérer*.
 . Dans la présentation du système de fichiers, sélectionnez l'onglet *volumes*.
