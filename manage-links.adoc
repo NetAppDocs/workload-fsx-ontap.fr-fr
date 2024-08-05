@@ -31,7 +31,7 @@ image:screenshot-links-button.png["Une capture d'écran montrant comment ouvrir 
 . S'il existe des liens, la page de présentation fournit les informations nécessaires.
 . Pour afficher les systèmes de fichiers FSX for ONTAP associés à un lien, sélectionnez le bouton *Afficher* dans la section Ressources associées.
 +
-image:screenshot-view-link-details.png["Écrans affichant les systèmes de fichiers FSX pour ONTAP qui utilisent un lien spécifique."]
+image:screenshot-view-link-details.png["Capture d'écran montrant les systèmes de fichiers FSX pour ONTAP qui utilisent un lien spécifique."]
 
 . Si vous avez besoin du nom de ressource Amazon (ARN) pour le lien, vous pouvez sélectionner l'icône _copy_ en regard du champ ARN.
 

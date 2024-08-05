@@ -21,6 +21,15 @@ Avec les SVM, lorsque vous accédez aux données dans FSX for ONTAP, vos clients
 .Avant de commencer
 Vérifiez le nombre de machines virtuelles de stockage prises en charge par système de fichiers. Pour connaître le nombre maximal de SVM par système de fichiers, reportez-vous à la section link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/managing-svms.html#max-svms["Gestion de FSX pour les machines virtuelles de stockage ONTAP"^] dans la documentation AWS.
 
+
+
+== Créez une machine virtuelle de stockage
+
+Vous pouvez créer une machine virtuelle de stockage à partir de la console Workload Factory. Vous pouvez également utiliser les outils suivants disponibles dans la Codebox : API REST, CloudFormation et Terraform. link:https://docs.netapp.com/us-en/workload-setup-admin/use-codebox.html#how-to-use-codebox["Découvrez comment utiliser Codebox pour l'automatisation"^].
+
+
+NOTE: Lorsque vous utilisez Terraform à partir de Codebox, le code que vous copiez ou téléchargez se cache `fsxadmin` et `vsadmin` passe. Vous devrez saisir à nouveau les mots de passe lorsque vous exécuterez le code.
+
 .Étapes
 . Connectez-vous au link:https://console.workloads.netapp.com/["Console Workload Factory"^]
 . Dans stockage, sélectionnez *accéder à l'inventaire de stockage*.

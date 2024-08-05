@@ -27,7 +27,10 @@ Avant de créer votre système de fichiers FSX pour ONTAP, vous aurez besoin des
 
 == Créez un système de fichiers FSX pour ONTAP
 
-Vous pouvez créer un système de fichiers FSX for ONTAP à l'aide de _création rapide_ ou de _création avancée_.
+Vous pouvez créer un système de fichiers FSX for ONTAP à l'aide de _création rapide_ ou de _création avancée_. Vous pouvez également utiliser les outils suivants disponibles dans la Codebox : API REST, CloudFormation et Terraform. link:https://docs.netapp.com/us-en/workload-setup-admin/use-codebox.html#how-to-use-codebox["Découvrez comment utiliser Codebox pour l'automatisation"^].
+
+
+NOTE: Lorsque vous utilisez Terraform à partir de Codebox, le code que vous copiez ou téléchargez se cache `fsxadmin` et `vsadmin` passe. Vous devrez saisir à nouveau les mots de passe lorsque vous exécuterez le code.
 
 [role="tabbed-block"]
 ====
@@ -106,7 +109,7 @@ Si vous avez créé le système de fichiers, vous pouvez maintenant afficher le 
 La création avancée vous permet de définir toutes les options de configuration, y compris la disponibilité, la sécurité, les sauvegardes et la maintenance.
 
 .Étapes
-. Accédez à la console Workload Factory.
+. Connectez-vous au link:https://console.workloads.netapp.com/["Console Workload Factory"^]
 . Dans stockage, sélectionnez *Créer FSX pour ONTAP*.
 . Sur la page Créer FSX pour ONTAP, sélectionnez *création avancée*.
 +

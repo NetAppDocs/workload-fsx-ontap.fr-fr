@@ -30,6 +30,10 @@ La réplication crée une copie secondaire de vos données sur un autre système
 
 Vous pouvez choisir de créer à la fois des volumes répliqués sur un autre système de fichiers FSX pour ONTAP et des fichiers de sauvegarde dans le cloud. Ou vous pouvez simplement créer des volumes répliqués ou des fichiers de sauvegarde. C'est votre choix.
 
+Le diagramme suivant présente une représentation visuelle de la protection des données pour le stockage FSX for ONTAP à l'aide de snapshots, de la réplication dans l'ensemble des régions et de la sauvegarde dans le stockage objet.
+
+image:diagram-fsx-data-protection.png["La capture d'écran montre la protection des données pour le stockage FSX pour ONTAP à l'aide de snapshots, la réplication dans l'ensemble des régions et la sauvegarde dans le stockage objet."]
+
 
 
 == Bonnes pratiques de protection des données de vos workloads

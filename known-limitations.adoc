@@ -15,12 +15,6 @@ Les limitations connues identifient les plates-formes, les périphériques ou le
 
 
 
-== Modes de fonctionnement
-
-Le mode _Read_ n'est pas disponible actuellement.
-
-
-
 == Lien
 
 Un lien est nécessaire pour effectuer certaines opérations, telles que la réplication dans l'interface utilisateur de Workload Factory.
