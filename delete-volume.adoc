@@ -28,6 +28,15 @@ Avant de supprimer un volume, tenez compte des points suivants :
 . Dans la présentation du système de fichiers, sélectionnez l'onglet *volumes*.
 . Dans l'onglet volumes, sélectionnez le menu à trois points du volume à supprimer.
 . Sélectionnez *actions de base* puis *Supprimer volume*.
-. Dans la boîte de dialogue Delete volume, tapez « delete » pour supprimer le volume.
-. Cliquez sur *Supprimer*.
+. Dans la boîte de dialogue Supprimer un volume, procédez comme suit :
++
+.. Si vous le souhaitez, cliquez sur *Sauvegarder le volume* pour sauvegarder le volume avant de le supprimer.
++
+La sauvegarde restera dans le système de fichiers jusqu'à ce que vous la supprimiez manuellement.
+
+.. Cliquez sur *Continuer*.
+.. Tapez « delete » pour supprimer le volume.
+.. Cliquez sur *Supprimer*.
+
+
 
