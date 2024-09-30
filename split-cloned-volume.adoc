@@ -11,7 +11,7 @@ summary: Séparez un volume FlexVol clone de son volume parent pour en faire un 
 
 
 [role="lead"]
-Séparez un volume FlexVol clone de son volume parent pour en faire un volume FlexVol en lecture-écriture standard.
+Séparer une FlexVol volume clonée de son volume parent pour faire du clone une FlexVol volume de lecture-écriture standard.
 
 Les données sont accessibles sur le clone et sur le parent lors du fractionnement. Le processus de fractionnement ne met à jour que les métadonnées et requiert un nombre d'E/S minimal. Aucun bloc de données n'est copié.
 
