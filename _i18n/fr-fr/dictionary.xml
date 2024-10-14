@@ -647,7 +647,6 @@
   <block id="b1c8cb58e124bead4ca2e09fa1c20c9b" category="paragraph">Pour connaître le nombre maximal de SVM par système de fichiers, reportez-vous à la section <block ref="17ef0d7491a925205e8443311f7ef122" category="inline-link-macro-rx"></block> dans la documentation AWS.</block>
   <block id="3a448e496404b548627a97fc00da8e23" category="section-title">Prise en charge du protocole iSCSI</block>
   <block id="33060a985f3ea357dedca3b638c9dedc" category="list-text">Le protocole iSCSI n'est pris en charge que pour les déploiements à évolutivité verticale. ^1^</block>
-  <block id="37ea650652be756727cc05f929ac982b" category="list-text">Le protocole iSCSI n'est disponible que pour les volumes FlexGroup. ^1^</block>
   <block id="53c858a11ae23c19aee107fb913f096a" category="list-text">Une seule LUN peut être configurée par volume.</block>
   <block id="044dbc650d6316ed90f739b69dfff7ee" category="section-title">Prise en charge par région</block>
   <block id="1bf3a4f06c8408a2ff436e0b847ca3a3" category="list-text">La région du Canada-Ouest (Calgary) n'est actuellement pas soutenue.</block>
@@ -1157,4 +1156,5 @@
   <block id="80cda6d0b485a6d7ad08bec0e4e1e512" category="list-text">Connectez-vous à la console Workload Factory.</block>
   <block id="c7f0e7c4e7e9f76582f27e34058deaa6" category="paragraph">Séparer une FlexVol volume clonée de son volume parent pour faire du clone une FlexVol volume de lecture-écriture standard.</block>
   <block id="26e6f4cc71039ce95ddbb0acdad6891d" category="section-title">29 septembre 2024</block>
+  <block id="50fa5062b83d0f575448ba449245fa17" category="list-text">Le protocole iSCSI n'est disponible que pour les volumes FlexVol. ^1^</block>
 </blocks>

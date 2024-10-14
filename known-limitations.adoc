@@ -63,7 +63,7 @@ Pour connaître le nombre maximal de SVM par système de fichiers, reportez-vous
 == Prise en charge du protocole iSCSI
 
 * Le protocole iSCSI n'est pris en charge que pour les déploiements à évolutivité verticale. ^1^
-* Le protocole iSCSI n'est disponible que pour les volumes FlexGroup. ^1^
+* Le protocole iSCSI n'est disponible que pour les volumes FlexVol. ^1^
 * Une seule LUN peut être configurée par volume.
 
 
