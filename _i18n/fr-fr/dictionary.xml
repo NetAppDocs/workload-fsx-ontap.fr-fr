@@ -438,8 +438,6 @@
   <block id="c4037415f2f0cfbaf2d8633bef548eca" category="paragraph">Avant de supprimer un volume, tenez compte des points suivants :</block>
   <block id="7ba3b681b508a24c70a973831af6f1ad" category="list-text">Snapshots locaux : tous les snapshots associés à ce système de fichiers FSX pour ONTAP seront définitivement supprimés.</block>
   <block id="4d07a6e16a1c8ad6e621cc84eb969e7e" category="list-text">FSX pour ONTAP : les copies de sauvegarde FSX pour ONTAP resteront et vous pouvez les utiliser.</block>
-  <block id="257f4990e0b233436c87d843d19bde86" category="inline-link-macro">supprimez toutes les relations de réplication existantes</block>
-  <block id="dc3d3cc2dd8fe8ca34129b7367abba17" category="list-text">Relations de réplication : nous vous recommandons <block ref="507a7d95f37121fd7920ef201528352a" category="inline-link-macro-rx"></block> pour ce volume avant de supprimer le volume afin qu'aucune relation rompue ne soit conservée.</block>
   <block id="524193967bbe3f8da7683435e0a28ea4" category="list-text">Dans l'onglet *FSX pour ONTAP*, sélectionnez le menu à trois points du système de fichiers avec le volume à supprimer, puis sélectionnez *gérer*.</block>
   <block id="b0498e030069e9d348b276238c375c45" category="list-text">Dans l'onglet volumes, sélectionnez le menu à trois points du volume à supprimer.</block>
   <block id="c54ab0793e326deff351b944ad70d29c" category="list-text">Sélectionnez *actions de base* puis *Supprimer volume*.</block>
@@ -1157,4 +1155,6 @@
   <block id="c7f0e7c4e7e9f76582f27e34058deaa6" category="paragraph">Séparer une FlexVol volume clonée de son volume parent pour faire du clone une FlexVol volume de lecture-écriture standard.</block>
   <block id="26e6f4cc71039ce95ddbb0acdad6891d" category="section-title">29 septembre 2024</block>
   <block id="50fa5062b83d0f575448ba449245fa17" category="list-text">Le protocole iSCSI n'est disponible que pour les volumes FlexVol. ^1^</block>
+  <block id="e6816f159adf84ca7c085ce0702311af" category="inline-link-macro">supprimez toutes les relations de réplication existantes</block>
+  <block id="da13b22f351bd4b981038bd55ca5d3ab" category="list-text">Relations de réplication : vous devez <block ref="fa9c4758a74309c74eff4644a0675063" category="inline-link-macro-rx"></block> pour ce volume avant de supprimer le volume afin qu'aucune relation rompue ne soit conservée.</block>
 </blocks>

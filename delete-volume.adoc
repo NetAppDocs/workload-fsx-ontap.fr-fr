@@ -16,9 +16,9 @@ Vous pouvez à tout moment supprimer un volume de votre système de fichiers FSX
 .Avant de commencer
 Avant de supprimer un volume, tenez compte des points suivants :
 
+* Relations de réplication : vous devez link:delete-replication.html["supprimez toutes les relations de réplication existantes"] pour ce volume avant de supprimer le volume afin qu'aucune relation rompue ne soit conservée.
 * Snapshots locaux : tous les snapshots associés à ce système de fichiers FSX pour ONTAP seront définitivement supprimés.
 * FSX pour ONTAP : les copies de sauvegarde FSX pour ONTAP resteront et vous pouvez les utiliser.
-* Relations de réplication : nous vous recommandons link:delete-replication.html["supprimez toutes les relations de réplication existantes"] pour ce volume avant de supprimer le volume afin qu'aucune relation rompue ne soit conservée.
 
 
 .Étapes
