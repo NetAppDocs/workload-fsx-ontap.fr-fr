@@ -808,7 +808,6 @@
   <block id="aada29daee1d64ed0fe907043855cb7e" category="inline-image-macro">Deux</block>
   <block id="27c19be9febabd1e2fb82d7a39784f2d" category="paragraph-title"><block ref="54f425ce8d89f4ed6b8a546561af5d60" category="inline-image-macro-rx" type="image"></block> Ajoutez des informations d'identification et des autorisations</block>
   <block id="ba8b072b83c1e6db56e40bf48ddb0871" category="inline-link-macro">modes de fonctionnement</block>
-  <block id="f7598943d19e0d869abf49ffa1bf32a4" category="paragraph">Choisissez entre _Basic_ et _automate_ <block ref="a1a436caedec06006ef5b76c82a83b04" category="inline-link-macro-rx"></block></block>
   <block id="fad2f7a49be756f98f3e7a34ef811e09" category="paragraph">Si vous choisissez d'utiliser le mode _Basic_, vous n'avez pas besoin d'aller plus loin. Vous pouvez commencer à utiliser Workload Factory pour FSX for ONTAP pour copier des exemples de code partiellement terminés.</block>
   <block id="ce8e7e98b5597e78e8fd7d6bc94729cb" category="inline-link-macro">ajoutez manuellement des informations d'identification à un compte</block>
   <block id="ca8a2087e5557e317599344687a57391" category="inline-image-macro">Trois</block>
@@ -1052,7 +1051,6 @@
   <block id="d527a24e3cd3e2df59c9ec57fb8383de" category="inline-image-macro">Capture d'écran montrant les systèmes de fichiers FSX pour ONTAP qui utilisent un lien spécifique.</block>
   <block id="8153258b50418b6ebcd06d64da06a5bc" category="paragraph"><block ref="8153258b50418b6ebcd06d64da06a5bc" category="inline-image-macro-rx" type="image"></block></block>
   <block id="8d0a9b10b0feb1fbeb54874e4db30c45" category="paragraph"><block ref="8d0a9b10b0feb1fbeb54874e4db30c45" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="6b6bb5bfce611b62621235836da5c8a9" category="paragraph">Si vous utilisez le mode _automatisation_, vous devrez <block ref="bb44378f07a38aa36833bde05fae1b5d" category="inline-link-macro-rx"></block> sélectionner les fonctionnalités de charge de travail, telles que les bases de données et l'IA, et créer des stratégies IAM pour vous assurer que vous disposez des autorisations adéquates pour fonctionner en _automatisation_ mode.</block>
   <block id="e5a41f95a3cb9b200664e28fdab1a637" category="inline-image-macro">Capture d'écran du menu des trois points dans l'onglet de présentation d'un système de fichiers.</block>
   <block id="b32bfe90ed6acc2544026bb974e2ffc9" category="paragraph"><block ref="b32bfe90ed6acc2544026bb974e2ffc9" category="inline-image-macro-rx" type="image"></block></block>
   <block id="efa42d5c66cb9948f402ee559611e12d" category="section-title">Prise en charge de Terraform</block>
@@ -1157,4 +1155,6 @@
   <block id="50fa5062b83d0f575448ba449245fa17" category="list-text">Le protocole iSCSI n'est disponible que pour les volumes FlexVol. ^1^</block>
   <block id="e6816f159adf84ca7c085ce0702311af" category="inline-link-macro">supprimez toutes les relations de réplication existantes</block>
   <block id="da13b22f351bd4b981038bd55ca5d3ab" category="list-text">Relations de réplication : vous devez <block ref="fa9c4758a74309c74eff4644a0675063" category="inline-link-macro-rx"></block> pour ce volume avant de supprimer le volume afin qu'aucune relation rompue ne soit conservée.</block>
+  <block id="f14fbd72eb1c8ba39f23e290779d3ac7" category="paragraph">Choisissez entre _Basic_, _read_ et _automate_ <block ref="a1a436caedec06006ef5b76c82a83b04" category="inline-link-macro-rx"></block></block>
+  <block id="9b0784be448bb1dc8f08485434f9a91a" category="paragraph">Si vous utilisez le mode _READ_ ou _automate_, vous devrez <block ref="bb44378f07a38aa36833bde05fae1b5d" category="inline-link-macro-rx"></block> sélectionner les fonctionnalités de charge de travail, telles que les bases de données et l'IA, et créer les stratégies IAM pour vous assurer que vous disposez des autorisations appropriées pour fonctionner en mode _READ_ ou _automate_.</block>
 </blocks>
