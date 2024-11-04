@@ -123,8 +123,8 @@ Suivez les étapes sous l'onglet correspondant à votre sélection de stockage.
 .Étapes
 . Connectez-vous au link:https://console.workloads.netapp.com/["Console Workload Factory"^]
 . Dans stockage, sélectionnez *accéder à l'inventaire de stockage*.
-. Dans l'inventaire du stockage, sélectionnez l'onglet *Elastic Block Store (EBS)*.
-. Sélectionnez la ou les instances à comparer avec FSX pour ONTAP et cliquez sur *Explorer les économies*.
+. Dans l'inventaire du stockage, sélectionnez l'onglet *Explorer les économies*.
+. Dans l'onglet *Elastic Block Store (EBS)*, sélectionnez la ou les instances à comparer avec FSX for ONTAP et cliquez sur *Explorer les économies*.
 . Le calculateur d'économies de stockage s'affiche. Les caractéristiques suivantes du système de stockage sont pré-remplies en fonction des instances sélectionnées :
 +
 .. *Cas d'utilisation* : le cas d'utilisation de votre configuration. Vous pouvez modifier le cas d'utilisation si nécessaire.
@@ -142,7 +142,8 @@ Suivez les étapes sous l'onglet correspondant à votre sélection de stockage.
 .Étapes
 . Connectez-vous au link:https://console.workloads.netapp.com/["Console Workload Factory"^]
 . Dans stockage, sélectionnez *accéder à l'inventaire de stockage*.
-. Dans l'inventaire du stockage, sélectionnez l'onglet *FSX pour Windows File Server*.
+. Dans l'inventaire du stockage, sélectionnez l'onglet *Explorer les économies*.
+. Sélectionnez l'onglet *FSX pour Windows File Server*.
 . Sélectionnez la ou les instances à comparer avec FSX pour ONTAP et cliquez sur *Explorer les économies*.
 . Le calculateur d'économies de stockage s'affiche. Les caractéristiques suivantes du système de stockage sont pré-remplies en fonction du type de déploiement de l'instance(s) sélectionnée(s) :
 +
@@ -161,7 +162,8 @@ Suivez les étapes sous l'onglet correspondant à votre sélection de stockage.
 .Étapes
 . Connectez-vous au link:https://console.workloads.netapp.com/["Console Workload Factory"^]
 . Dans stockage, sélectionnez *accéder à l'inventaire de stockage*.
-. Dans l'inventaire de stockage, sélectionnez l'onglet *Elastic File System (EFS)*.
+. Dans l'inventaire du stockage, sélectionnez l'onglet *Explorer les économies*.
+. Sélectionnez l'onglet *Elastic File System (EFS)*.
 . Sélectionnez la ou les instances à comparer avec FSX pour ONTAP et cliquez sur *Explorer les économies*.
 . Le calculateur d'économies de stockage s'affiche. Les caractéristiques suivantes du système de stockage sont pré-remplies en fonction des instances sélectionnées :
 +
