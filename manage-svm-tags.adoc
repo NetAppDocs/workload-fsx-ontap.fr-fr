@@ -1,0 +1,28 @@
+---
+sidebar: sidebar 
+permalink: manage-svm-tags.html 
+keywords: edit storage vm tags, vm tags, svm tags 
+summary: Ajoutez, mettez à jour ou supprimez à tout moment les balises de VM de stockage pour une VM de stockage. 
+---
+= Gérez les balises des machines virtuelles de stockage dans l'usine de workloads BlueXP 
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Les balises peuvent vous aider à classer vos ressources. Vous pouvez à tout moment ajouter, modifier et supprimer des balises pour une VM de stockage dans l'usine de workloads BlueXP .
+
+.Étapes
+. Connectez-vous à l'aide de l'un des link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].
+. Dans stockage, sélectionnez *accéder à l'inventaire de stockage*.
+. Dans l'onglet *FSX pour ONTAP*, sélectionnez le menu à trois points du système de fichiers avec la VM de stockage à mettre à jour, puis sélectionnez *gérer*.
+. Dans la présentation du système de fichiers, sélectionnez l'onglet *Storage VMS*.
+. Dans l'onglet Storage VM, sélectionnez le menu à trois points de la VM de stockage pour lequel modifier les balises.
+. Sélectionnez *Modifier les balises de VM de stockage*.
+. Sur la page Modifier les balises de VM de stockage, ajoutez, modifiez ou supprimez des balises.
++
+Le nombre maximum de balises pouvant être appliquées à une VM de stockage est de 50.
+
+. Sélectionnez *appliquer*.
+

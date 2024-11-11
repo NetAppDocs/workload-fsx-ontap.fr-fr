@@ -11,23 +11,23 @@ summary: Provisionnez automatiquement ou manuellement les IOPS SSD pour un syst�
 
 
 [role="lead"]
-Provisionnez automatiquement ou manuellement les IOPS SSD pour un système de fichiers FSX for ONTAP.
+Provisionnez ou provisionnez automatiquement ou manuellement des IOPS SSD pour un système de fichiers FSX pour ONTAP en usine de workloads BlueXP .
 
 .Description de la tâche
 Vous pouvez activer le provisionnement automatique d'IOPS SSD pour un système de fichiers FSX ou provisionner manuellement les IOPS.
 
 Les IOPS provisionnées automatiquement sont calculées sous la forme de 3 IOPS par Gio.
 
-Si vous provisionnez manuellement les IOPS, vous devrez peut-être augmenter les IOPS avant de pouvoir link:increase-file-system-capacity.html["augmenter la capacité du système de fichiers"].
+Si vous provisionnez manuellement les IOPS, vous devrez peut-être augmenter les IOPS avant link:increase-file-system-capacity.html["augmentation de la capacité du système de fichiers"].
 
-Pour connaître les limites d'IOPS, reportez-vous à link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/limits.html["Quotas"^] la documentation d'AWS FSX pour NetApp ONTAP.
+Pour plus d'informations sur les limites d'IOPS, reportez-vous à la section link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/limits.html["Quotas"^] dans la documentation AWS FSX pour NetApp ONTAP.
 
 .Étapes
-. Connectez-vous à la console Workload Factory.
-. Dans stockage, cliquez sur *aller à stock de stockage*.
-. Dans l'onglet *FSX pour ONTAP*, cliquez sur le menu à trois points du système de fichiers pour provisionner les IOPS, puis sélectionnez *gérer*.
-. Sous informations, cliquez sur l'icône en forme de crayon en regard de *allocation d'IOPS*. L'icône en forme de crayon apparaît à côté de la flèche déroulante lorsque la souris survole la ligne *allocation d'IOPS*.
+. Connectez-vous à l'aide de l'un des link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].
+. Dans stockage, sélectionnez *aller à stock de stockage*.
+. Dans l'onglet *FSX pour ONTAP*, sélectionnez le menu à trois points du système de fichiers pour lequel provisionner les E/S par seconde, puis sélectionnez *gérer*.
+. Sous informations, sélectionnez l'icône en forme de crayon qui apparaît à côté de la flèche déroulante lorsque la souris passe sur la ligne *allocation d'IOPS*.
 . Dans la boîte de dialogue IOPS provisionnées, sélectionnez *automatique* ou *utilisateur provisionné*.
-. Si vous sélectionnez *User Provisioned*, entrez la valeur *IOPS*.
-. Cliquez sur *appliquer*.
+. Si vous sélectionnez *utilisateur provisionné*, entrez la valeur *IOPS* souhaitée.
+. Sélectionnez *appliquer*.
 

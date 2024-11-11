@@ -11,17 +11,17 @@ summary: 'La réplication d"une machine virtuelle de stockage vers un autre syst
 
 
 [role="lead"]
-La réplication d'une machine virtuelle de stockage vers un autre système de fichiers FSX for ONTAP offre une couche de protection d'accès aux données en cas de perte de données. Cette opération réplique tous les volumes d'une VM de stockage vers un autre système de fichiers FSX pour ONTAP.
+La réplication d'une machine virtuelle de stockage vers un autre système de fichiers FSX for ONTAP dans l'usine de workloads BlueXP  offre une couche de protection d'accès aux données en cas de perte de données. Cette opération réplique tous les volumes d'une VM de stockage vers un autre système de fichiers FSX pour ONTAP.
 
 .Avant de commencer
-Pour répliquer une machine virtuelle de stockage vers un autre système de fichiers FSX for ONTAP, vous devez link:manage-links.html["associer un lien"]. Si vous n'avez pas de lien existant, link:create-link.html["créer un lien"]. Pour associer un lien dans le système de fichiers, cliquez sur *lien associé* sous *Nom du compte*. Une fois le lien associé, revenez à cette opération.
+Pour répliquer une machine virtuelle de stockage vers un autre système de fichiers FSX for ONTAP, vous devez link:manage-links.html["associer un lien"]. Si vous n'avez pas de lien existant, link:create-link.html["créer un lien"]. Pour associer un lien dans le système de fichiers, sélectionnez *lien associé* sous *Nom du compte*. Une fois le lien associé, revenez à cette opération.
 
 .Étapes
-. Connectez-vous au link:https://console.workloads.netapp.com/["Console Workload Factory"^]
+. Connectez-vous à l'aide de l'un des link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].
 . Dans stockage, sélectionnez *accéder à l'inventaire de stockage*.
 . Dans l'onglet *FSX pour ONTAP*, sélectionnez le menu à trois points du système de fichiers avec la machine virtuelle de stockage à répliquer, puis sélectionnez *gérer*.
 . Dans la présentation du système de fichiers, sélectionnez l'onglet *Storage VMS*.
-. Dans l'onglet Storage VM, sélectionnez le menu Three DOTS de la machine virtuelle de stockage pour laquelle répliquer un SVM.
+. Depuis l'onglet Storage VM, sélectionner le menu à trois points de la VM de stockage pour laquelle répliquer un SVM.
 . Sélectionnez *répliquer VM de stockage*.
 . Sur la page Créer une réplication, sous cible de réplication, fournissez les informations suivantes :
 +
@@ -30,7 +30,7 @@ Pour répliquer une machine virtuelle de stockage vers un autre système de fich
 .. *Nom du volume* : le nom du volume cible est généré automatiquement au format suivant `{OriginalVolumeName}_copy`.
 .. *Règle de hiérarchisation* : sélectionnez la règle de hiérarchisation pour les données stockées dans le volume cible.
 +
-_Auto_ est la règle de hiérarchisation par défaut lors de la création d'un volume à l'aide de l'interface utilisateur de Workload Factory FSX for ONTAP. Pour plus d'informations sur les règles de Tiering de volume, reportez-vous à la section link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/volume-storage-capacity.html#data-tiering-policy["Capacité de stockage du volume"^]dans la documentation d'AWS FSX pour NetApp ONTAP.
+_Auto_ est la règle de hiérarchisation par défaut lors de la création d'un volume à l'aide de l'interface utilisateur FSX for ONTAP de l'usine de workloads. Pour plus d'informations sur les règles de Tiering de volume, reportez-vous à la section link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/volume-storage-capacity.html#data-tiering-policy["Capacité de stockage du volume"^]dans la documentation d'AWS FSX pour NetApp ONTAP.
 
 .. *Taux de transfert max.* : sélectionnez *Limited* et entrez la limite de transfert max. En Mo/s. Vous pouvez également sélectionner *Illimité*.
 +
@@ -57,7 +57,7 @@ Si vous activez la conservation à long terme, sélectionnez une règle existant
 
 
 
-. Cliquez sur *Créer*.
+. Sélectionnez *Créer*.
 
 
 .Résultat

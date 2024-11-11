@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: create-storage-vm.html 
 keywords: create storage VM, create svm 
-summary: 'Vous pouvez créer une machine virtuelle de stockage FSX pour ONTAP (SVM) pour fournir des services de données et de stockage à vos workloads dans Workload Factory.' 
+summary: 'Vous pouvez créer une machine virtuelle de stockage FSX pour ONTAP (SVM) pour fournir le stockage et les services de données à vos workloads dans l"usine de workloads BlueXP .' 
 ---
 = Créez une VM de stockage pour un système de fichiers FSX pour ONTAP
 :allow-uri-read: 
@@ -11,10 +11,10 @@ summary: 'Vous pouvez créer une machine virtuelle de stockage FSX pour ONTAP (S
 
 
 [role="lead"]
-Créez une VM de stockage (SVM) pour un système de fichiers FSX pour ONTAP afin d'accéder virtuellement aux services de données et de stockage pour vos workloads dans Workload Factory.
+Créez une VM de stockage (SVM) pour un système de fichiers FSX pour ONTAP afin d'accéder virtuellement aux services de stockage et de données pour vos workloads dans l'usine de workloads BlueXP .
 
 .Description de la tâche
-Les machines virtuelles de stockage sont des serveurs de fichiers isolés que vous pouvez utiliser pour accéder aux données de chaque charge de travail dans Workload Factory Storage. Chaque SVM dispose de ses propres identifiants d'administration et terminaux pour l'administration et l'accès aux données.
+Les machines virtuelles de stockage sont des serveurs de fichiers isolés que vous pouvez utiliser pour accéder aux données à partir de chaque charge de travail du Storage d'usine. Chaque SVM dispose de ses propres identifiants d'administration et terminaux pour l'administration et l'accès aux données.
 
 Avec les SVM, lorsque vous accédez aux données dans FSX for ONTAP, vos clients et vos postes de travail montent un volume, un partage CIFS/SMB ou une LUN iSCSI hébergée par un SVM à l'aide du terminal du SVM (adresse IP).
 
@@ -25,15 +25,15 @@ Vérifiez le nombre de machines virtuelles de stockage prises en charge par syst
 
 == Créez une machine virtuelle de stockage
 
-Vous pouvez créer une machine virtuelle de stockage à partir de la console Workload Factory. Vous pouvez également utiliser les outils suivants disponibles dans la Codebox : API REST, CloudFormation et Terraform. link:https://docs.netapp.com/us-en/workload-setup-admin/use-codebox.html#how-to-use-codebox["Découvrez comment utiliser Codebox pour l'automatisation"^].
+Vous pouvez créer une VM de stockage à partir de la console d'usine des workloads. Vous pouvez également utiliser les outils suivants disponibles dans la Codebox : API REST, CloudFormation et Terraform. link:https://docs.netapp.com/us-en/workload-setup-admin/use-codebox.html#how-to-use-codebox["Découvrez comment utiliser Codebox pour l'automatisation"^].
 
 
 NOTE: Lorsque vous utilisez Terraform à partir de Codebox, le code que vous copiez ou téléchargez se cache `fsxadmin` et `vsadmin` passe. Vous devrez saisir à nouveau les mots de passe lorsque vous exécuterez le code.
 
 .Étapes
-. Connectez-vous au link:https://console.workloads.netapp.com/["Console Workload Factory"^]
+. Connectez-vous à l'aide de l'un des link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].
 . Dans stockage, sélectionnez *accéder à l'inventaire de stockage*.
-. Dans l'onglet FSX pour ONTAP, cliquez sur le menu des trois points du système de fichiers pour créer une machine virtuelle de stockage pour et sélectionnez *gérer*.
+. Dans l'onglet FSX pour ONTAP, sélectionnez le menu à trois points du système de fichiers pour créer une VM de stockage et sélectionnez *gérer*.
 . Dans la présentation du système de fichiers, sélectionnez *Créer une machine virtuelle de stockage*.
 . Sur la page Storage VM, sous Storage VM configuration, fournissez les éléments suivants :
 +
@@ -43,5 +43,5 @@ NOTE: Lorsque vous utilisez Terraform à partir de Codebox, le code que vous cop
 .. *Tags*: Vous pouvez éventuellement ajouter jusqu'à 50 tags.
 
 
-. Cliquez sur *Créer*.
+. Sélectionnez *Créer*.
 

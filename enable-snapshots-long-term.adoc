@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: enable-snapshots-long-term.html 
 keywords: snapshot long-term retention, enable long-term retention 
-summary: Modifiez la planification de réplication du volume source dans une relation de réplication. 
+summary: 'Activez les snapshots pour la conservation à long terme, ce qui vous permet de répliquer des snapshots spécifiques pour la reprise d"activité à long terme.' 
 ---
 = Activez et modifiez les snapshots pour une conservation à long terme
 :allow-uri-read: 
@@ -11,24 +11,24 @@ summary: Modifiez la planification de réplication du volume source dans une rel
 
 
 [role="lead"]
-L'activation des snapshots pour la conservation à long terme vous permet de répliquer des snapshots spécifiques pour la reprise d'activité à long terme.
+En usine de workloads BlueXP , vous pouvez activer les snapshots pour la conservation à long terme, ce qui vous permet de répliquer des snapshots spécifiques pour une reprise d'activité à long terme.
 
-La conservation à long terme permet aux services de l'entreprise de continuer de fonctionner même en cas de défaillance complète d'un site, ce qui permet aux applications de basculer en toute transparence grâce à une copie secondaire.
+La conservation à long terme permet aux services de l'entreprise de continuer à fonctionner même en cas de défaillance de l'ensemble du site, avec prise en charge du basculement transparent des applications via une copie secondaire.
 
 Les mêmes étapes s'appliquent à l'activation et à la modification de snapshots pour une conservation à long terme.
 
 .Étapes
-. Connectez-vous au link:https://console.workloads.netapp.com/["Console Workload Factory"^]
+. Connectez-vous à l'aide de l'un des link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].
 . Dans stockage, sélectionnez *accéder à l'inventaire de stockage*.
-. Dans l'onglet *FSX pour ONTAP*, cliquez sur le menu à trois points du système de fichiers à mettre à jour, puis sélectionnez *gérer*.
+. Dans l'onglet *FSX pour ONTAP*, sélectionnez le menu à trois points du système de fichiers à mettre à jour, puis sélectionnez *gérer*.
 . Dans la présentation du système de fichiers, sélectionnez l'onglet *relations de réplication*.
-. Dans l'onglet Replication relations, cliquez sur le menu des trois points de la planification des relations de réplication à modifier.
+. Dans l'onglet relations de réplication, sélectionnez le menu à trois points de la planification des relations de réplication à modifier.
 . Sélectionnez *Modifier la rétention à long terme*.
 . Dans la boîte de dialogue Modifier la rétention à long terme, activez ou désactivez les instantanés pour la conservation à long terme.
-. Si vous choisissez de désactiver les instantanés pour la conservation à long terme, cliquez sur *appliquer* pour terminer cette opération.
+. Si vous choisissez de désactiver les instantanés pour la conservation à long terme, sélectionnez *appliquer* pour terminer cette opération.
 . Si vous choisissez d'activer les snapshots pour la conservation à long terme, choisissez entre sélectionner une règle existante ou créer une nouvelle règle.
 +
-.. Pour une stratégie existante, sélectionnez une stratégie existante dans le menu déroulant.
+.. Pour utiliser une stratégie existante, sélectionnez-la dans le menu déroulant.
 .. Pour créer une nouvelle règle, procédez comme suit :
 +
 ... *Nom de la stratégie* : entrez un nom de stratégie.
@@ -38,5 +38,5 @@ Les mêmes étapes s'appliquent à l'activation et à la modification de snapsho
 
 
 
-. Cliquez sur *appliquer*.
+. Sélectionnez *appliquer*.
 

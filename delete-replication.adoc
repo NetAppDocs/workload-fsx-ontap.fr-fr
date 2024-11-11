@@ -2,25 +2,25 @@
 sidebar: sidebar 
 permalink: delete-replication.html 
 keywords: delete replication 
-summary: Supprimez une relation de réplication si nécessaire. 
+summary: Supprimez si nécessaire une relation de réplication en usine de workloads BlueXP . 
 ---
-= Supprimer une relation de réplication
+= Supprimez une relation de réplication dans l'usine de workloads BlueXP 
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-Lorsque vous supprimez une relation de réplication, elle supprime la relation de réplication entre le volume source et le volume cible. Une fois la relation de réplication supprimée, les deux volumes continuent d'exister indépendamment des données actuelles qu'ils contiennent.
+Supprimez une relation de réplication dans l'usine de workloads BlueXP . Lorsque vous supprimez une relation de réplication, elle supprime la relation de réplication entre le volume source et le volume cible. Une fois la relation de réplication supprimée, les deux volumes continuent d'exister indépendamment des données actuelles qu'ils contiennent.
 
 Lorsque vous supprimez une relation de réplication, FSX for ONTAP supprime également les snapshots de réplication courants des volumes source et cible.
 
 .Étapes
-. Connectez-vous au link:https://console.workloads.netapp.com/["Console Workload Factory"^]
+. Connectez-vous à l'aide de l'un des link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].
 . Dans stockage, sélectionnez *accéder à l'inventaire de stockage*.
-. Dans l'onglet *FSX pour ONTAP*, cliquez sur le menu à trois points du système de fichiers à mettre à jour, puis sélectionnez *gérer*.
+. Dans l'onglet *FSX pour ONTAP*, sélectionnez le menu à trois points du système de fichiers à mettre à jour, puis sélectionnez *gérer*.
 . Dans la présentation du système de fichiers, sélectionnez l'onglet *relations de réplication*.
-. Dans l'onglet Replication relations, cliquez sur le menu des trois points de la relation de réplication à supprimer.
+. Dans l'onglet relations de réplication, sélectionnez le menu à trois points de la relation de réplication à supprimer.
 . Sélectionnez *Supprimer*.
-. Dans la boîte de dialogue Supprimer la relation, cliquez sur *Supprimer*.
+. Dans la boîte de dialogue Supprimer la relation, sélectionnez *Supprimer*.
 

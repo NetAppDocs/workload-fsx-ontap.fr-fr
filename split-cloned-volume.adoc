@@ -4,14 +4,14 @@ permalink: split-cloned-volume.html
 keywords: split clone volume, FlexVol volume 
 summary: Séparez un volume FlexVol clone de son volume parent pour en faire un volume FlexVol en lecture-écriture standard. 
 ---
-= Diviser un volume cloné
+= Diviser un volume cloné en usine de charges de travail BlueXP 
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-Séparer une FlexVol volume clonée de son volume parent pour faire du clone une FlexVol volume de lecture-écriture standard.
+Séparer une FlexVol volume clonée de son volume parent pour faire du clone une FlexVol volume de lecture/écriture standard dans l'usine de charges de travail BlueXP .
 
 Les données sont accessibles sur le clone et sur le parent lors du fractionnement. Le processus de fractionnement ne met à jour que les métadonnées et requiert un nombre d'E/S minimal. Aucun bloc de données n'est copié.
 
@@ -28,18 +28,20 @@ L'opération de fractionnement du clone implique les opérations suivantes :
 .Avant de commencer
 Avant de fractionner un volume cloné, tenez compte des points suivants :
 
-* Pour fractionner un volume cloné, vous devez link:manage-links.html["associer un lien"]. Si vous n'avez pas de lien existant, link:create-link.html["créer un lien"]. Pour associer un lien dans le système de fichiers, cliquez sur *lien associé* sous *Nom du compte*. Une fois le lien associé, revenez à cette opération.
+* Pour fractionner un volume cloné, vous devez link:manage-links.html["associer un lien"]. Si vous n'avez pas de lien existant, link:create-link.html["créer un lien"]. Pour associer un lien dans le système de fichiers, sélectionnez *lien associé* sous *Nom du compte*. Une fois le lien associé, revenez à cette opération.
 * Vous devez être un administrateur de cluster.
 * Le volume FlexClone doit être en ligne au début de l'opération de fractionnement.
 * Le volume parent doit être en ligne pour que le fractionnement réussisse.
 
 
 .Étapes
-. Connectez-vous au link:https://console.workloads.netapp.com/["Console Workload Factory"^]
+. Connectez-vous à l'aide de l'un des link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].
 . Dans stockage, sélectionnez *accéder à l'inventaire de stockage*.
-. Dans l'onglet *FSX pour ONTAP*, sélectionnez le menu à trois points du système de fichiers FSX pour ONTAP qui contient le volume cloné à diviser, puis sélectionnez *gérer*.
-. Dans l'onglet vue d'ensemble du système de fichiers, sélectionnez l'onglet *volumes*.
+. Sélectionnez l'onglet *volumes*.
 . Dans l'onglet volumes, sélectionnez le menu à trois points du volume avec le volume cloné à diviser.
 . Sélectionnez *actions de protection des données*, puis *diviser le volume cloné*.
-. Dans la boîte de dialogue diviser le volume, cliquez sur *Supprimer*.
+. Dans la boîte de dialogue diviser le volume, sélectionnez *Supprimer*.
 
+
+.Résultat
+Le clone de volume est divisé et apparaît dans l'onglet volumes.

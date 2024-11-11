@@ -4,14 +4,14 @@ permalink: initialize-replication.html
 keywords: initialize replication, begin replication, start replication 
 summary: Initialiser une relation de réplication entre les volumes source et cible 
 ---
-= Initialiser une relation de réplication
+= Initialiser une relation de réplication en usine de workloads BlueXP 
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-Initialiser une relation de réplication entre les volumes source et cible
+Initialiser une relation de réplication entre les volumes source et cible en usine de workloads BlueXP 
 
 .Description de la tâche
 L'initialisation effectue un transfert _baseline_ : elle crée un instantané du volume source, puis transfère le snapshot et tous les blocs de données qu'il référence au volume cible.
@@ -20,11 +20,11 @@ L'initialisation effectue un transfert _baseline_ : elle crée un instantané du
 Tenez compte du moment où vous choisissez de terminer cette opération. L'initialisation peut prendre beaucoup de temps. Vous pouvez exécuter le transfert de base en dehors des heures creuses.
 
 .Étapes
-. Connectez-vous au link:https://console.workloads.netapp.com/["Console Workload Factory"^]
+. Connectez-vous à l'aide de l'un des link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].
 . Dans stockage, sélectionnez *accéder à l'inventaire de stockage*.
-. Dans l'onglet *FSX pour ONTAP*, cliquez sur le menu à trois points du système de fichiers à mettre à jour, puis sélectionnez *gérer*.
+. Dans l'onglet *FSX pour ONTAP*, sélectionnez le menu à trois points du système de fichiers à mettre à jour, puis sélectionnez *gérer*.
 . Dans la présentation du système de fichiers, sélectionnez l'onglet *relations de réplication*.
-. Dans l'onglet Replication relations (relations de réplication), cliquez sur le menu des trois points de la relation de réplication à initialiser.
+. Dans l'onglet Replication relations, sélectionnez le menu à trois points de la relation de réplication à initialiser.
 . Sélectionnez *initialiser*.
-. Dans la boîte de dialogue Initialize relationship, cliquez sur *Initialize*.
+. Dans la boîte de dialogue Initialize relationship, sélectionnez *Initialize*.
 

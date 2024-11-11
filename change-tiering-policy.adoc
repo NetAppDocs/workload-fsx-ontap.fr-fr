@@ -2,16 +2,16 @@
 sidebar: sidebar 
 permalink: change-tiering-policy.html 
 keywords:  
-summary: Modifiez la règle de hiérarchisation pour réallouer les données du niveau de stockage principal hautes performances au niveau de stockage du pool de capacité secondaire. 
+summary: Modifiez la règle de hiérarchisation en usine des charges de travail BlueXP  pour réallouer les données du Tier de stockage principal hautes performances au Tier de stockage du pool de capacité secondaire. 
 ---
-= Modification de la règle de Tiering d'un volume
+= Modifiez la règle de Tiering d'un volume en usine de workloads BlueXP 
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-Modifiez la règle de hiérarchisation pour réallouer automatiquement les données du niveau de stockage principal hautes performances au niveau de stockage du pool de capacité secondaire.
+En usine de charges de travail BlueXP , vous pouvez modifier la règle de hiérarchisation afin de réallouer automatiquement les données du niveau de stockage principal hautes performances au niveau de stockage du pool de capacité secondaire.
 
 .Description de la tâche
 Vous pouvez modifier la règle de hiérarchisation d'un volume à tout moment. La règle de hiérarchisation est définie par volume.
@@ -38,11 +38,11 @@ Avant de modifier la règle de hiérarchisation, vérifiez les quatre règles de
 Notez que certaines règles de hiérarchisation ont une période de refroidissement minimale qui définit la durée, ou _journées de refroidissement_, pendant laquelle les données utilisateur d'un volume doivent rester inactives pour que les données soient considérées comme inactives et déplacées vers le niveau de stockage du pool de capacité. La période de refroidissement commence lorsque les données sont écrites sur le disque.
 
 .Étapes
-. Connectez-vous au link:https://console.workloads.netapp.com/["Console Workload Factory"^]
+. Connectez-vous à l'aide de l'un des link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].
 . Dans stockage, sélectionnez *accéder à l'inventaire de stockage*.
 . Dans l'onglet *FSX pour ONTAP*, sélectionnez le menu à trois points du système de fichiers avec le volume à mettre à jour, puis sélectionnez *gérer*.
 . Dans la présentation du système de fichiers, sélectionnez l'onglet *volumes*.
-. Dans l'onglet volumes, cliquez sur le menu des trois points du volume pour modifier la règle de Tiering pour.
+. Dans l'onglet volumes, sélectionnez le menu à trois points du volume pour lequel modifier la règle de Tiering.
 . Sélectionnez *actions avancées*, puis *Modifier la stratégie de hiérarchisation*.
 . Sur la page Modifier la règle de hiérarchisation, sélectionnez l'une des règles de hiérarchisation suivantes :
 +
@@ -52,5 +52,5 @@ Notez que certaines règles de hiérarchisation ont une période de refroidissem
 ** *Tous*
 
 
-. Cliquez sur *appliquer*.
+. Sélectionnez *appliquer*.
 

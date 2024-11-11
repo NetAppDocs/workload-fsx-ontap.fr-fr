@@ -2,16 +2,16 @@
 sidebar: sidebar 
 permalink: clone-volume.html 
 keywords: clone volume, clone, clone data 
-summary: 'Cloner un volume pour créer un volume en lecture-écriture du volume d"origine à des fins de test.' 
+summary: 'Clonez un volume dans l"usine de charges de travail BlueXP  pour créer un volume en lecture/écriture du volume d"origine à des fins de test.' 
 ---
-= Clonez un volume
+= Clonez un volume en usine de charges de travail BlueXP 
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-Cloner un volume pour créer un volume en lecture-écriture du volume d'origine à des fins de test.
+Clonez un volume dans l'usine de charges de travail BlueXP  pour créer un volume en lecture/écriture du volume d'origine à des fins de test.
 
 Le clone reflète l'état actuel et instantané des données. Vous pouvez aussi utiliser des clones pour donner aux utilisateurs un accès aux données sans leur donner accès aux données de production.
 
@@ -23,12 +23,12 @@ Lorsqu'un volume est cloné, un volume inscriptible est créé avec des référe
 Pour qu'un volume cloné contienne toutes les données du volume parent et toutes les nouvelles données ajoutées au clone après sa création, vous devez link:split-cloned-volume.html["séparer le clone"] utiliser le volume parent. En outre, vous ne pouvez pas supprimer un volume parent s'il possède un clone. Un clone doit être divisé pour qu'un volume parent puisse être supprimé.
 
 .Étapes
-. Connectez-vous au link:https://console.workloads.netapp.com/["Console Workload Factory"^]
+. Connectez-vous à l'aide de l'un des link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].
 . Dans stockage, sélectionnez *accéder à l'inventaire de stockage*.
 . Dans l'onglet *FSX pour ONTAP*, sélectionnez le menu à trois points du système de fichiers FSX pour ONTAP qui contient le volume à cloner, puis sélectionnez *gérer*.
 . Dans l'onglet vue d'ensemble du système de fichiers, sélectionnez l'onglet *volumes*.
-. Dans l'onglet volumes, sélectionnez le menu des trois points du volume à cloner.
+. Dans l'onglet volumes, sélectionnez le menu à trois points du volume à cloner.
 . Sélectionnez *actions de protection des données*, puis *Clone volume*.
 . Dans la boîte de dialogue Cloner le volume, entrez le nom du clone de volume.
-. Cliquez sur *Clone*.
+. Sélectionnez *Clone*.
 

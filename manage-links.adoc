@@ -2,16 +2,16 @@
 sidebar: sidebar 
 permalink: manage-links.html 
 keywords: links, accounts, lambda, creating, associating, disassociating, deleting, editing 
-summary: Vous pouvez créer et gérer des liens pour fournir une relation de confiance et une connectivité entre un compte Workload Factory et un ou plusieurs systèmes de fichiers FSX for ONTAP. Vous pouvez ainsi contrôler et gérer certaines fonctionnalités directement à partir du système de fichiers ONTAP qui ne sont pas disponibles via les API AWS FSX pour ONTAP. 
+summary: 'Vous pouvez afficher les liens associés à votre compte, associer un lien et supprimer un lien dans l"usine de charges de travail BlueXP .' 
 ---
-= Gérer les liens
+= Gérer les liens d'usine des charges de travail BlueXP 
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-Gérez les liens que vous avez associés à votre compte Workload Factory.
+Gérez les liens associés à votre compte d'usine de charge de travail BlueXP .
 
 link:links-overview.html["En savoir plus sur les liens"] ou link:create-link.html["créer un lien"].
 
@@ -22,11 +22,10 @@ link:links-overview.html["En savoir plus sur les liens"] ou link:create-link.htm
 Vous pouvez afficher les liens actuellement associés à votre compte.
 
 .Étapes
-. Connectez-vous au link:https://console.workloads.netapp.com/["Console Workload Factory"^]
-. Dans stockage, sélectionnez *accéder à l'inventaire de stockage*.
-. Dans le menu compte, sélectionnez *Liens*.
+. Connectez-vous à l'aide de l'un des link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].
+. Sur la page d'accueil, sélectionnez *Liens* dans le menu.
 +
-image:screenshot-links-button.png["Une capture d'écran montrant comment ouvrir la page de liens."]
+image:screenshot-menu-links.png["Une capture d'écran montrant comment ouvrir la page de liens."]
 
 . S'il existe des liens, la page de présentation fournit les informations nécessaires.
 . Pour afficher les systèmes de fichiers FSX for ONTAP associés à un lien, sélectionnez le bouton *Afficher* dans la section Ressources associées.
@@ -43,7 +42,7 @@ image:screenshot-view-link-details.png["Capture d'écran montrant les systèmes 
 Une fois que vous avez créé un lien, vous pouvez l'associer à vos systèmes de fichiers FSX pour ONTAP. Chaque système de fichiers ne peut être associé qu'à un seul lien dans un seul compte NetApp, mais un lien peut être associé à de nombreux systèmes de fichiers.
 
 .Étapes
-. Connectez-vous au link:https://console.workloads.netapp.com/["Console Workload Factory"^]
+. Connectez-vous à l'aide de l'un des link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].
 . Dans stockage, sélectionnez *accéder à l'inventaire de stockage*.
 . Dans l'onglet *FSX pour ONTAP*, sélectionnez le menu à trois points du système de fichiers auquel associer un lien, puis sélectionnez *gérer*.
 . Dans la présentation du système de fichiers, sélectionnez *lien associé*.
@@ -57,7 +56,7 @@ Le lien est associé au système de fichiers FSX pour ONTAP et vous pouvez effec
 
 == Modifier un lien
 
-Vous ne pouvez pas modifier un lien à partir de l'interface Workload Factory. Si vous devez modifier un lien, vous devez en créer un nouveau, puis l'associer à votre système de fichiers.
+Vous ne pouvez pas modifier un lien à partir de l'interface d'usine de la charge de travail. Si vous devez modifier un lien, vous devez en créer un nouveau, puis l'associer à votre système de fichiers.
 
 
 NOTE: Vous pouvez modifier la configuration réseau Lambda (par exemple, VPC, les sous-réseaux et les groupes de sécurité) à l'aide de la console AWS. Les modifications sont ensuite reflétées dans l'interface de gestion des liens. Cependant, ces modifications peuvent entraîner des problèmes de connectivité entre Lambda et ONTAP, et ne sont pas recommandées.
@@ -68,15 +67,17 @@ NOTE: Vous pouvez modifier la configuration réseau Lambda (par exemple, VPC, le
 
 Vous pouvez supprimer un lien que vous n'utilisez plus dans votre environnement. Tout système de fichiers FSX pour ONTAP ou toute autre ressource qui utilisait le lien ne pourra pas utiliser certaines fonctionnalités après la suppression du lien.
 
-Notez que le lien n'est supprimé que de Workload Factory, mais pas de votre environnement AWS. Vous devez supprimer la fonction Lambda de votre compte AWS après avoir supprimé le lien dans Workload Factory.
+Notez que le lien n'est supprimé que de Workload Factory, mais pas de votre environnement AWS. Vous devez supprimer la fonction Lambda de votre compte AWS après avoir supprimé le lien en usine de la charge de travail.
 
 .Étapes
-. Connectez-vous au link:https://console.workloads.netapp.com/["Console Workload Factory"^]
-. Dans stockage, sélectionnez *accéder à l'inventaire de stockage*.
-. Dans le menu compte, sélectionnez *Liens*.
+. Connectez-vous à l'aide de l'un des link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].
+. Sur la page d'accueil, sélectionnez *Liens* dans le menu.
++
+image:screenshot-menu-links.png["Une capture d'écran montrant comment ouvrir la page de liens."]
+
 . Sur la page Liens, sélectionnez le bouton menu et sélectionnez *Supprimer*.
 +
-image:screenshot-remove-link.png["Une capture d'écran montrant comment supprimer un lien de Workload Factory."]
+image:screenshot-remove-link.png["Une capture d'écran montrant comment supprimer un lien de l'usine de la charge de travail."]
 
 . Si vous êtes sûr, sélectionnez de nouveau *Supprimer*.
 

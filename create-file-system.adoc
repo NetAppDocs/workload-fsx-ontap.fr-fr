@@ -1,17 +1,17 @@
 ---
 sidebar: sidebar 
 permalink: create-file-system.html 
-keywords: create, FSx file system, ONTAP file system, Workload Factory, storage 
-summary: Avec Workload Factory, vous pouvez créer un système de fichiers FSX pour ONTAP pour ajouter et gérer des volumes et des services de données supplémentaires. 
+keywords: create, FSx file system, ONTAP file system, workload factory, storage 
+summary: 'En utilisant l"usine de workloads BlueXP , vous pouvez créer un système de fichiers FSX pour ONTAP afin d"ajouter et de gérer des volumes et des services de données supplémentaires.' 
 ---
-= Créez un système de fichiers FSX pour ONTAP
+= Créez un système de fichiers FSX pour ONTAP en usine de workloads BlueXP 
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-Avec Workload Factory, vous pouvez créer un système de fichiers FSX pour ONTAP pour ajouter et gérer des volumes et des services de données supplémentaires.
+En utilisant l'usine de workloads BlueXP , vous pouvez créer un système de fichiers FSX pour ONTAP afin d'ajouter et de gérer des volumes et des services de données supplémentaires.
 
 .Description de la tâche
 Une VM de stockage est créée lors de la création d'un système de fichiers.
@@ -39,7 +39,7 @@ NOTE: Lorsque vous utilisez Terraform à partir de Codebox, le code que vous cop
 La création rapide vous permet d'utiliser une configuration recommandée conforme aux meilleures pratiques. Vous pouvez modifier la plupart des paramètres après avoir créé un système de fichiers FSX pour ONTAP.
 
 .Étapes
-. Connectez-vous au link:https://console.workloads.netapp.com/["Console Workload Factory"^]
+. Connectez-vous à l'aide de l'un des link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].
 . Dans stockage, sélectionnez *Créer FSX pour ONTAP*.
 . Sur la page Créer FSX pour ONTAP, sélectionnez *création rapide*.
 +
@@ -47,7 +47,7 @@ Vous pouvez également charger une configuration enregistrée.
 
 . Sous Configuration générale du système de fichiers, fournissez les informations suivantes :
 +
-.. *Informations d'identification AWS* : sélectionnez cette option pour ajouter des informations d'identification AWS dans Workload Factory ou continuer sans informations d'identification.
+.. *Informations d'identification AWS* : sélectionnez cette option pour ajouter des informations d'identification AWS en usine de la charge de travail ou continuer sans informations d'identification.
 .. *Nom du système de fichiers* : entrez un nom pour le système de fichiers.
 .. *Topologie de déploiement* : sélectionnez une topologie de déploiement.
 +
@@ -109,7 +109,7 @@ Si vous avez créé le système de fichiers, vous pouvez maintenant afficher le 
 La création avancée vous permet de définir toutes les options de configuration, y compris la disponibilité, la sécurité, les sauvegardes et la maintenance.
 
 .Étapes
-. Connectez-vous au link:https://console.workloads.netapp.com/["Console Workload Factory"^]
+. Connectez-vous à l'aide de l'un des link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].
 . Dans stockage, sélectionnez *Créer FSX pour ONTAP*.
 . Sur la page Créer FSX pour ONTAP, sélectionnez *création avancée*.
 +
@@ -117,7 +117,7 @@ Vous pouvez également charger une configuration enregistrée.
 
 . Sous Configuration générale du système de fichiers, fournissez les informations suivantes :
 +
-.. *Informations d'identification AWS* : sélectionnez cette option pour ajouter des informations d'identification AWS dans Workload Factory ou continuer sans informations d'identification.
+.. *Informations d'identification AWS* : sélectionnez cette option pour ajouter des informations d'identification AWS en usine de la charge de travail ou continuer sans informations d'identification.
 .. *Nom du système de fichiers* : entrez un nom pour le système de fichiers.
 .. *Topologie de déploiement* : sélectionnez une topologie de déploiement.
 +

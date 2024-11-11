@@ -2,38 +2,38 @@
 sidebar: sidebar 
 permalink: quick-start.html 
 keywords: Amazon FSx for NetApp ONTAP, fsx, netapp, quick, get started, install, deploy, setup, launch, requirements, prerequisites, credentials, permissions, policy 
-summary: Vous pouvez commencer à utiliser FSX pour ONTAP en quelques étapes seulement. 
+summary: Vous pouvez commencer à utiliser FSX pour ONTAP en usine de workloads BlueXP  en quelques étapes seulement. 
 ---
-= Démarrage rapide de Workload Factory pour Amazon FSX for NetApp ONTAP
+= Démarrage rapide d'Amazon FSX pour NetApp ONTAP dans l'usine de workloads BlueXP 
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-Avec Workload Factory pour Amazon FSX pour NetApp ONTAP, vous pouvez commencer immédiatement en _Basic_ mode.
+Avec Amazon FSX for NetApp ONTAP dans l'usine de workloads BlueXP , vous pouvez commencer immédiatement en _Basic_ mode.
 
-Si vous souhaitez utiliser Workload Factory pour créer un système de fichiers, gérer des ressources, etc., vous pouvez commencer en quelques étapes. Pour commencer, vous devez disposer d'un compte AWS.
+Si vous souhaitez utiliser l'usine de workloads pour créer un système de fichiers, gérer des ressources, etc., vous pouvez commencer en quelques étapes. Pour commencer, vous avez besoin d'un compte AWS et de vos identifiants.
 
 Procédez comme suit pour commencer.
 
-.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["Une seule"] Connectez-vous à Workload Factory
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["Une seule"] Connectez-vous à l'usine de la charge de travail
 [role="quick-margin-para"]
-Vous aurez besoin de link:https://docs.netapp.com/us-en/workload-setup-admin/sign-up-saas.html["Configurez un compte avec Workload Factory"^] et link:https://console.workloads.netapp.com["connectez-vous"^]
+Vous aurez besoin de link:https://docs.netapp.com/us-en/workload-setup-admin/sign-up-saas.html["configurez un compte avec une usine de charges de travail"^] et link:https://console.workloads.netapp.com["connectez-vous"^]
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["Deux"] Ajoutez des informations d'identification et des autorisations
 [role="quick-margin-para"]
 Choisissez entre _Basic_, _read_ et _automate_ link:https://docs.netapp.com/us-en/workload-setup-admin/operational-modes.html["modes de fonctionnement"^]
 
 [role="quick-margin-para"]
-Si vous choisissez d'utiliser le mode _Basic_, vous n'avez pas besoin d'aller plus loin. Vous pouvez commencer à utiliser Workload Factory pour FSX for ONTAP pour copier des exemples de code partiellement terminés.
+Si vous choisissez d'utiliser le mode _Basic_, vous n'avez pas besoin d'aller plus loin. Vous pouvez commencer à utiliser l'usine de workloads pour FSX for ONTAP afin de copier des exemples de code partiellement remplis.
 
 [role="quick-margin-para"]
 Si vous utilisez le mode _READ_ ou _automate_, vous devrez link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["ajoutez manuellement des informations d'identification à un compte"^] sélectionner les fonctionnalités de charge de travail, telles que les bases de données et l'IA, et créer les stratégies IAM pour vous assurer que vous disposez des autorisations appropriées pour fonctionner en mode _READ_ ou _automate_.
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["Trois"] Créez un système de fichiers
 [role="quick-margin-para"]
-Vous allez créer un système de fichiers FSX pour commencer à gérer votre stockage et les ressources FSX pour ONTAP dans Workload Factory. Dans le link:https://console.workloads.netapp.com["Console Workload Factory"^], dans stockage, cliquez sur *Créer un système de fichiers*. link:create-file-system.html["Découvrez comment créer un système de fichiers"].
+Créez un système de fichiers FSX pour commencer à gérer votre stockage et vos ressources FSX pour ONTAP en usine de workloads. Dans le link:https://console.workloads.netapp.com["console d'usine de charge de travail"^], dans stockage, sélectionnez *Créer un système de fichiers*. link:create-file-system.html["Découvrez comment créer un système de fichiers"].
 
 [role="quick-margin-para"]
 Vous pouvez également utiliser le calculateur d'économies de stockage pour comparer les coûts de vos environnements de stockage Amazon Elastic Block Store, Elastic File System et FSX pour serveur de fichiers Windows à ceux de FSX pour ONTAP. link:explore-savings.html["Découvrez les économies réalisées grâce au calculateur d'économies de stockage."]

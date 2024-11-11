@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: change-replication-schedule.html 
 keywords: change replication schedule, update replication schedule, edit replication schedule 
-summary: Modifiez la planification de réplication du volume source dans une relation de réplication. 
+summary: Modifiez la planification de réplication du volume source dans une relation de réplication en usine de workloads BlueXP . 
 ---
 = Modifier la planification de réplication d'un volume source
 :allow-uri-read: 
@@ -11,16 +11,16 @@ summary: Modifiez la planification de réplication du volume source dans une rel
 
 
 [role="lead"]
-Modifiez la planification de réplication du volume source dans une relation de réplication.
+Modifiez la planification de réplication du volume source dans une relation de réplication en usine de workloads BlueXP .
 
 Indiquez la fréquence de transfert des snapshots du volume source vers le volume répliqué pour répondre aux objectifs de point de récupération (RPO) requis.
 
 .Étapes
-. Connectez-vous au link:https://console.workloads.netapp.com/["Console Workload Factory"^]
+. Connectez-vous à l'aide de l'un des link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].
 . Dans stockage, sélectionnez *accéder à l'inventaire de stockage*.
-. Dans l'onglet *FSX pour ONTAP*, cliquez sur le menu à trois points du système de fichiers à mettre à jour, puis sélectionnez *gérer*.
+. Dans l'onglet *FSX pour ONTAP*, sélectionnez le menu à trois points du système de fichiers à mettre à jour, puis sélectionnez *gérer*.
 . Dans la présentation du système de fichiers, sélectionnez l'onglet *relations de réplication*.
-. Dans l'onglet Replication relations, cliquez sur le menu des trois points de la planification des relations de réplication à modifier.
+. Dans l'onglet relations de réplication, sélectionnez le menu à trois points de la planification des relations de réplication à modifier.
 . Sélectionnez *Modifier l'intervalle de réplication*.
 . Dans la boîte de dialogue Modifier l'intervalle de réplication, sélectionnez la fréquence du transfert d'instantané à partir du volume source. Vous pouvez choisir entre les fréquences suivantes :
 +
@@ -31,5 +31,5 @@ Indiquez la fréquence de transfert des snapshots du volume source vers le volum
 ** Hebdomadaire
 
 
-. Cliquez sur *appliquer*.
+. Sélectionnez *appliquer*.
 

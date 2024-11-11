@@ -11,14 +11,14 @@ summary: Mettez à jour manuellement à tout moment les données de snapshot tra
 
 
 [role="lead"]
-Une relation de réplication dispose d'un planning de réplication défini, mais vous pouvez mettre à jour manuellement les données d'instantané transférées entre les volumes source et cible si nécessaire.
+Une relation de réplication dispose d'un planning de réplication défini, mais vous pouvez à tout moment mettre à jour manuellement les données d'instantané transférées entre les volumes source et cible dans l'usine de workloads BlueXP .
 
 .Étapes
-. Connectez-vous au link:https://console.workloads.netapp.com/["Console Workload Factory"^]
+. Connectez-vous à l'aide de l'un des link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].
 . Dans stockage, sélectionnez *accéder à l'inventaire de stockage*.
-. Dans l'onglet *FSX pour ONTAP*, cliquez sur le menu à trois points du système de fichiers à mettre à jour, puis sélectionnez *gérer*.
+. Dans l'onglet *FSX pour ONTAP*, sélectionnez le menu à trois points du système de fichiers à mettre à jour, puis sélectionnez *gérer*.
 . Dans la présentation du système de fichiers, sélectionnez l'onglet *relations de réplication*.
-. Dans l'onglet Replication relations, cliquez sur le menu des trois points de la relation de réplication à mettre à jour.
+. Dans l'onglet relations de réplication, sélectionnez le menu à trois points de la relation de réplication à mettre à jour.
 . Sélectionnez *mettre à jour maintenant*.
-. Dans la boîte de dialogue mise à jour, cliquez sur *mettre à jour maintenant*.
+. Dans la boîte de dialogue mise à jour, sélectionnez *mettre à jour maintenant*.
 

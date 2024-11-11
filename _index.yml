@@ -1,9 +1,10 @@
 ---
 indexpage:
-  title: Documentation Amazon FSX pour NetApp ONTAP
+  title: Documentation sur l'usine des workloads Amazon FSX pour NetApp ONTAP pour
+    BlueXP 
   lead: Amazon FSX pour NetApp ONTAP étend les fonctionnalités de ONTAP à un service
     géré AWS natif pour offrir une expérience de cloud hybride cohérente. Cette documentation
-    explique comment gérer FSX pour ONTAP à l'aide de BlueXP Workload Factory.
+    explique comment gérer FSX pour ONTAP à l'aide de l'usine de workloads BlueXP .
   tiles:
   - title: Commencez
     links:

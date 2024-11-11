@@ -2,18 +2,18 @@
 sidebar: sidebar 
 permalink: links-overview.html 
 keywords: links, accounts, lambda 
-summary: Un lien Workload Factory crée une relation de confiance et une connectivité entre un compte Workload Factory et un ou plusieurs systèmes de fichiers FSX for ONTAP. Vous pouvez ainsi contrôler et gérer certaines fonctionnalités du système de fichiers directement à partir des API REST ONTAP qui ne sont pas disponibles via les API Amazon FSX pour ONTAP. 
+summary: 'Un lien Factory de workload crée une relation de confiance et une connectivité entre un compte d"usine de workloads et un ou plusieurs systèmes de fichiers FSX pour ONTAP.' 
 ---
-= Cliquez ici pour en savoir plus sur les liens Workload Factory
+= En savoir plus sur les liens d'usine des charges de travail BlueXP 
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-Un lien Workload Factory crée une relation de confiance et une connectivité entre un compte Workload Factory et un ou plusieurs systèmes de fichiers FSX for ONTAP. Vous pouvez ainsi surveiller et gérer certaines fonctionnalités du système de fichiers directement à partir des appels de l'API REST ONTAP qui ne sont pas disponibles via l'API Amazon FSX pour ONTAP.
+Un lien Factory de workloads BlueXP  crée une relation de confiance et une connectivité entre un compte d'usine de workloads et un ou plusieurs systèmes de fichiers FSX pour ONTAP. Vous pouvez ainsi surveiller et gérer certaines fonctionnalités du système de fichiers directement à partir des appels de l'API REST ONTAP qui ne sont pas disponibles via l'API Amazon FSX pour ONTAP.
 
-Vous n'avez pas besoin d'un lien pour commencer à utiliser Workload Factory, mais dans certains cas, vous devrez créer un lien pour déverrouiller toutes les fonctionnalités de Workload Factory et de charge de travail.
+Vous n'avez pas besoin d'un lien pour vous lancer dans l'usine des charges de travail, mais dans certains cas, vous devrez créer un lien pour déverrouiller toutes les fonctionnalités d'usine des charges de travail et les fonctionnalités des charges de travail.
 
 
 
@@ -23,13 +23,13 @@ Les liens utilisent AWS Lambda. Lambda exécute le code en réponse aux événem
 
 Après avoir créé un lien, vous pouvez l'associer à un ou plusieurs systèmes de fichiers FSX pour ONTAP. Chaque système de fichiers ne peut être associé qu'à un seul lien dans le même compte NetApp. Si vous avez plusieurs comptes NetApp, un seul système de fichiers peut être associé à des liens supplémentaires sous différents comptes NetApp.
 
-Vous créez des liens à partir des pages du système de fichiers FSX pour ONTAP dans Workload Factory. link:create-link.html["Découvrez comment créer des liens"] pour plus d'informations.
+Vous créez des liens à partir des pages du système de fichiers FSX pour ONTAP en usine de workloads. link:create-link.html["Découvrez comment créer des liens"] pour plus d'informations.
 
 
 
 == Coûts
 
-Chaque transaction effectuée par Lambda entraîne des frais. Lambda agissant comme proxy entre les deux systèmes, Lambda envoie une requête à l'API REST de ONTAP sur un système de fichiers et renvoie la réponse à Workload Factory.
+Chaque transaction effectuée par Lambda entraîne des frais. La Lambda agissant en tant que proxy entre les deux systèmes, ce qui indique que la réponse est envoyée à l'usine de la charge de travail via Lambda d'envoyer une requête à l'API REST de ONTAP sur un système de fichiers et inversement.
 
 link:https://aws.amazon.com/lambda/pricing/["Découvrez les coûts liés à l'utilisation d'AWS Lambda"^]
 
@@ -37,7 +37,7 @@ link:https://aws.amazon.com/lambda/pricing/["Découvrez les coûts liés à l'ut
 
 == Lorsqu'un lien est requis
 
-Workload Factory nécessite un lien pour afficher certaines informations et effectuer certaines tâches. Si vous tentez d'effectuer une opération qui nécessite un lien et que vous n'avez pas associé de lien au système de fichiers FSX pour ONTAP, un message vous indique que l'opération nécessite un lien. Vous pouvez ajouter un nouveau lien ou associer le système de fichiers FSX pour ONTAP à un lien existant à ce moment-là afin de pouvoir exécuter l'opération.
+L'usine de charge de travail requiert un lien pour afficher certaines informations et effectuer certaines tâches. Si vous tentez d'effectuer une opération qui nécessite un lien et que vous n'avez pas associé de lien au système de fichiers FSX pour ONTAP, un message vous indique que l'opération nécessite un lien. Vous pouvez ajouter un nouveau lien ou associer le système de fichiers FSX pour ONTAP à un lien existant à ce moment-là afin de pouvoir exécuter l'opération.
 
 Les fonctions qui nécessitent un lien sont les suivantes :
 

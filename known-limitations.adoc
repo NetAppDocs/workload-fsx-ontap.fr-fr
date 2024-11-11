@@ -2,22 +2,22 @@
 sidebar: sidebar 
 permalink: known-limitations.html 
 keywords: limitations, fsx, ontap 
-summary: Les limitations connues identifient les plateformes, les périphériques ou les fonctions qui ne sont pas pris en charge par cette version du produit, ou qui ne fonctionnent pas correctement avec elle. Examinez attentivement ces limites. 
+summary: Les limitations connues identifient les plateformes, les périphériques ou les fonctions qui ne sont pas pris en charge par cette version du produit, ou qui ne fonctionnent pas correctement avec elle. 
 ---
-= Limites connues
+= Limitations connues d'Amazon FSX pour NetApp ONTAP
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-Les limitations connues identifient les plates-formes, les périphériques ou les fonctions qui ne sont pas pris en charge par cette version du produit dans Workload Factory ou qui ne fonctionnent pas correctement avec celui-ci. Examinez attentivement ces limites.
+Les limitations connues identifient les plateformes, les périphériques ou les fonctions qui ne sont pas pris en charge par cette version du produit, ou qui ne fonctionnent pas correctement avec elle. Examinez attentivement ces limites.
 
 
 
 == Lien
 
-Un lien est nécessaire pour effectuer certaines opérations, telles que la réplication dans l'interface utilisateur de Workload Factory.
+Une liaison est nécessaire pour effectuer certaines opérations, telles que la réplication dans l'interface utilisateur d'usine de la charge de travail.
 
 
 
@@ -54,7 +54,7 @@ Les régions suivantes prennent en charge une capacité de débit maximale de 3 
 
 == Machines virtuelles de stockage
 
-Le nombre de VM de stockage est limité par référence. La création de machines virtuelles de stockage au-delà de cette limite n'est pas prise en charge dans Workload Factory.^1^
+Le nombre de VM de stockage est limité par référence. La création de machines virtuelles de stockage au-delà de cette limite n'est pas prise en charge par l'usine de la charge de travail.^1^
 
 Pour connaître le nombre maximal de SVM par système de fichiers, reportez-vous à la section link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/managing-svms.html#max-svms["Gestion de FSX pour les machines virtuelles de stockage ONTAP"^] dans la documentation AWS.
 
@@ -94,6 +94,12 @@ Le calculateur d'économies de stockage ne calcule pas les économies pour les c
 * EBS (Elastic Block Store) : types de volume st1, sc1 et standard
 * Système de fichiers élastique (EFS) : mode de débit maximal
 
+
+
+
+== System Manager
+
+System Manager ne prend pas en charge les liens pour la connectivité ONTAP avec FSX.
 
 Remarque :
 

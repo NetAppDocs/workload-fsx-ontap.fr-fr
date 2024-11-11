@@ -2,27 +2,27 @@
 sidebar: sidebar 
 permalink: change-snapshot-policy.html 
 keywords: snapshot policy, snapshot schedule, modify snapshot policy, edit snapshot policy, change snapshot policy 
-summary: 'Mettez à jour la règle de snapshot d"un volume à tout moment.' 
+summary: 'Mettez à jour à tout moment la règle Snapshot d"un volume en usine de workloads BlueXP .' 
 ---
-= Modifier la règle de snapshot d'un volume
+= Modifiez la règle de snapshot d'un volume en usine de workloads BlueXP 
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-Permet de mettre à jour la fréquence des instantanés pris pour un volume ou de désactiver les instantanés automatiques à tout moment.
+Met à jour la fréquence des snapshots pris pour un volume ou désactive les snapshots automatiques à tout moment dans l'usine de charges de travail BlueXP .
 
 .Avant de commencer
-Un lien est nécessaire pour afficher les politiques de snapshots existantes. Pour associer un lien, cliquez sur *lien associé* sous *Nom du compte*. Revenez ensuite à cette opération.
+Pour afficher les règles de snapshot existantes, vous devez associer un lien. Pour associer un lien, sélectionnez *lien associé* sous *Nom du compte*. Revenez ensuite à cette opération.
 
 .Étapes
-. Connectez-vous au link:https://console.workloads.netapp.com/["Console Workload Factory"^]
+. Connectez-vous à l'aide de l'un des link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].
 . Dans stockage, sélectionnez *accéder à l'inventaire de stockage*.
 . Dans l'onglet *FSX pour ONTAP*, sélectionnez le menu à trois points du système de fichiers FSX pour ONTAP qui contient le volume avec la stratégie de snapshot à mettre à jour, puis sélectionnez *gérer*.
 . Dans l'onglet vue d'ensemble du système de fichiers, sélectionnez l'onglet *volumes*.
 . Sélectionnez l'onglet *volumes*.
-. Dans l'onglet *volumes*, sélectionnez le menu à trois points du volume pour lequel modifier la règle de snapshot.
+. Dans l'onglet *volumes*, sélectionnez le menu à trois points du volume pour lequel vous souhaitez modifier la stratégie de snapshot.
 . Sélectionnez *actions de protection des données*, *instantanés*, puis *gérer les stratégies de snapshot*.
 . Sur la page gestion des règles Snapshot, sélectionnez *Modifier une stratégie de snapshot existante*.
 . Dans le champ *Nom de la stratégie de snapshot*, sélectionnez une stratégie de snapshot différente pour ce volume.
@@ -32,5 +32,5 @@ Pour désactiver les instantanés automatiques, sélectionnez `none`.
 +
 Si aucune autre stratégie de snapshot n'existe, link:create-snapshot-policy.html["créer une règle de snapshot pour ce volume"].
 
-. Cliquez sur *appliquer*.
+. Sélectionnez *appliquer* pour enregistrer les modifications.
 

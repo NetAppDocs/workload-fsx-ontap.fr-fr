@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: limit-transfer-rate.html 
 keywords: limit max transfer rate, limit transfer rate 
-summary: 'Limitez le taux de transfert maximal d"une relation de réplication. Un taux de transfert illimité peut avoir un impact négatif sur les performances d"autres applications et de votre réseau.' 
+summary: 'Limitez le taux de transfert maximal d"une relation de réplication en usine de workloads BlueXP .' 
 ---
 = Limitez le taux de transfert maximal d'une relation de réplication
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: 'Limitez le taux de transfert maximal d"une relation de réplication. U
 
 
 [role="lead"]
-Limitez le taux de transfert maximal d'une relation de réplication. Un taux de transfert illimité peut avoir un impact négatif sur les performances d'autres applications et de votre réseau.
+Limitez le taux de transfert maximal d'une relation de réplication en usine de workloads BlueXP . Un taux de transfert illimité peut avoir un impact négatif sur les performances d'autres applications et de votre réseau.
 
 .Description de la tâche
 La limitation du taux de transfert maximal est facultative, mais recommandée. Sans limite, les performances du réseau et des applications peuvent diminuer.
@@ -22,15 +22,15 @@ Nous recommandons également un taux de transfert illimité pour les systèmes d
 Tenez compte de la quantité de bande passante à allouer à la réplication.
 
 .Étapes
-. Connectez-vous au link:https://console.workloads.netapp.com/["Console Workload Factory"^]
+. Connectez-vous à l'aide de l'un des link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].
 . Dans stockage, sélectionnez *accéder à l'inventaire de stockage*.
-. Dans l'onglet *FSX pour ONTAP*, cliquez sur le menu à trois points du système de fichiers à mettre à jour, puis sélectionnez *gérer*.
+. Dans l'onglet *FSX pour ONTAP*, sélectionnez le menu à trois points du système de fichiers à mettre à jour, puis sélectionnez *gérer*.
 . Dans la présentation du système de fichiers, sélectionnez l'onglet *relations de réplication*.
-. Dans l'onglet Replication relations (relations de réplication), cliquez sur le menu Three DOTS (trois points) de la relation de réplication pour limiter le taux de transfert maximal de.
+. Dans l'onglet relations de réplication, sélectionnez le menu à trois points de la relation de réplication pour limiter le taux de transfert maximal pour.
 . Sélectionnez *Modifier le taux de transfert max*.
 . Dans la boîte de dialogue Modifier le taux de transfert maximal, sélectionnez *limité* et entrez la limite de transfert maximale en Mo/s.
 +
 Vous pouvez également sélectionner *Illimité*.
 
-. Cliquez sur *appliquer*.
+. Sélectionnez *appliquer*.
 

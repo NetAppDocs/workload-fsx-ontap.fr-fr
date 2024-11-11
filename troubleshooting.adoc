@@ -4,7 +4,7 @@ permalink: troubleshooting.html
 keywords: troubleshooting, troubleshoot, help, issues 
 summary: 'La documentation d"Amazon FSX pour NetApp ONTAP contient des rubriques de dépannage pour votre référence.' 
 ---
-= Dépannage de FSX pour ONTAP
+= Dépannage de FSX pour ONTAP en usine de workloads BlueXP 
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/

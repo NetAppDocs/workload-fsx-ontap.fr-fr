@@ -1,0 +1,30 @@
+---
+sidebar: sidebar 
+permalink: manage-backup-schedule.html 
+keywords: backup schedule, backup policy, update backups, update backup schedule, FSx for ONTAP backup 
+summary: 'Gérez le planning de sauvegarde d"un système de fichiers FSX pour ONTAP en usine de workloads BlueXP  si nécessaire.' 
+---
+= Gérez le planning de sauvegarde d'un système de fichiers FSX pour ONTAP
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Gérez le planning de sauvegarde d'un système de fichiers FSX pour ONTAP en usine de workloads BlueXP .
+
+.Étapes
+. Connectez-vous à l'aide de l'un des link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].
+. Dans stockage, sélectionnez *aller à stock de stockage*.
+. Dans l'onglet *FSX pour ONTAP*, sélectionnez le menu à trois points du système de fichiers pour mettre à jour le planning de sauvegarde, puis sélectionnez *gérer*.
+. Sous informations, sélectionnez l'icône en forme de crayon en regard de *FSX pour la sauvegarde ONTAP*. L'icône en forme de crayon apparaît à côté de la flèche déroulante lorsque la souris survole la ligne *FSX pour sauvegarde ONTAP*.
+. Dans la boîte de dialogue *FSX for ONTAP backup*, indiquez les éléments suivants :
++
+.. *Sauvegardes automatiques quotidiennes* : activez ou désactivez la fonction. Si vous désactivez la fonction, sélectionnez *appliquer*. Si vous activez la fonction, procédez comme suit.
+.. *Période de conservation automatique des sauvegardes* : entrez le nombre de jours de conservation des sauvegardes automatiques.
+.. *Fenêtre de sauvegarde automatique quotidienne* : sélectionnez *pas de préférence* (une heure de début de sauvegarde quotidienne est sélectionnée pour vous) ou *sélectionnez l'heure de début pour les sauvegardes quotidiennes* et spécifiez une heure de début.
+.. *Fenêtre de maintenance hebdomadaire* : sélectionnez *pas de préférence* (une heure de début de la fenêtre de maintenance hebdomadaire est sélectionnée pour vous) ou *sélectionnez l'heure de début de la fenêtre de maintenance hebdomadaire de 30 minutes* et spécifiez une heure de début.
+
+
+. Sélectionnez *appliquer*.
+

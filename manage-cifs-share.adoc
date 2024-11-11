@@ -1,27 +1,27 @@
 ---
 sidebar: sidebar 
-permalink: change-cifs-share.html 
+permalink: manage-cifs-share.html 
 keywords: cifs, CIFS, cifs share, change cifs share, update cifs share, modify cifs share 
-summary: 'Modifiez le partage CIFS d"un volume qui utilise le type de protocole SMB/CIFS.' 
+summary: 'Modifiez le partage CIFS d"un volume en usine de workloads BlueXP  qui utilise le type de protocole SMB/CIFS.' 
 ---
-= Modifier le partage CIFS d'un volume
+= Gérer le partage CIFS d'un volume en usine de charges de travail BlueXP 
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-La modification du partage CIFS d'un volume implique de déterminer les utilisateurs et les groupes auxquels accorder l'accès et le type d'accès à leur donner.
+La gestion du partage CIFS d'un volume dans l'usine de charges de travail BlueXP  implique de déterminer les utilisateurs et les groupes auxquels accorder l'accès et le type d'accès qui leur est donné.
 
 .Avant de commencer
 Déterminez les utilisateurs ou les groupes auxquels accorder l'accès et le type d'accès à leur donner.
 
 .Étapes
-. Connectez-vous au link:https://console.workloads.netapp.com/["Console Workload Factory"^]
+. Connectez-vous à l'aide de l'un des link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].
 . Dans stockage, sélectionnez *accéder à l'inventaire de stockage*.
 . Dans l'onglet *FSX pour ONTAP*, sélectionnez le menu à trois points du système de fichiers avec le volume à mettre à jour, puis sélectionnez *gérer*.
 . Dans la présentation du système de fichiers, sélectionnez l'onglet *volumes*.
-. Dans l'onglet volumes, cliquez sur le menu des trois points du volume pour modifier le partage SMB de.
+. Dans l'onglet volumes, sélectionnez le menu à trois points du volume pour lequel modifier le partage SMB.
 . Sélectionnez *actions avancées*, puis *Modifier le partage CIFS*.
 . Sur la page Modifier le partage CIFS, indiquez les informations suivantes :
 +
@@ -29,5 +29,5 @@ Déterminez les utilisateurs ou les groupes auxquels accorder l'accès et le typ
 .. *Autorisations* : sélectionnez *contrôle complet*, *lecture/écriture*, *lecture* ou *pas d'accès*.
 
 
-. Cliquez sur *appliquer*.
+. Sélectionnez *appliquer*.
 

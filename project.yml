@@ -86,16 +86,16 @@ sidebar:
         url: "/edit-volume-autogrow.html"
       - title: Augmentez la capacité du volume
         url: "/increase-volume-capacity.html"
-      - title: Modifier les balises de volume
-        url: "/edit-volume-tags.html"
+      - title: Gérer les balises de volume
+        url: "/manage-volume-tags.html"
       - title: Rééquilibrage de la capacité d'un volume
         url: "/rebalance-volume.html"
       - title: Modifiez la stratégie de hiérarchisation
         url: "/change-tiering-policy.html"
-      - title: Modifiez la règle d'export NFS
-        url: "/change-nfs-export-policy.html"
-      - title: Modifier le partage CIFS
-        url: "/change-cifs-share.html"
+      - title: Gestion de la export NFS policy
+        url: "/manage-nfs-export-policy.html"
+      - title: Gérer le partage CIFS
+        url: "/manage-cifs-share.html"
       - title: Diviser un volume cloné
         url: split-cloned-volume.html
       - title: Supprimer un volume
@@ -116,8 +116,8 @@ sidebar:
         url: "/replicate-svm-to-file-system.html"
       - title: Configurer et mettre à jour Active Directory pour une VM de stockage
         url: "/configure-active-directory.html"
-      - title: Modifier les balises des VM de stockage
-        url: "/edit-svm-tags.html"
+      - title: Gestion des balises des VM de stockage
+        url: "/manage-svm-tags.html"
       - title: Réinitialiser le mot de passe de la VM de stockage
         url: reset-svm-password.html
       - title: Supprimer une machine virtuelle de stockage
@@ -126,8 +126,8 @@ sidebar:
       entries:
       - title: Modifier la règle de snapshot d'un volume
         url: change-snapshot-policy.html
-      - title: Mettez à jour le calendrier de sauvegarde de FSX pour ONTAP
-        url: "/update-backup-schedule.html"
+      - title: Gérez la planification des sauvegardes FSX pour ONTAP
+        url: "/manage-backup-schedule.html"
       - title: Activez et modifiez les snapshots pour une conservation à long terme
         url: "/enable-snapshots-long-term.html"
       - title: Inverser une relation de réplication
@@ -165,5 +165,5 @@ sidebar:
   - title: Mentions légales
     url: "/legal-notices.html"
 product-family:
-  name: BlueXP Workload Factory for AWS
+  name: BlueXP workload factory
   repo: workload-family

@@ -2,16 +2,16 @@
 sidebar: sidebar 
 permalink: create-link.html 
 keywords: links, add, add links, add link, create link 
-summary: Vous pouvez créer et gérer des liens pour fournir une relation de confiance et une connectivité entre un compte Workload Factory et un ou plusieurs systèmes de fichiers FSX for ONTAP. 
+summary: 'Vous pouvez créer et gérer des liens pour fournir une relation de confiance et une connectivité entre un compte d"usine de workloads BlueXP  et un ou plusieurs systèmes de fichiers FSX pour ONTAP.' 
 ---
-= Créer un lien
+= Créez un lien dans l'usine de charges de travail BlueXP 
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-Vous pouvez créer et gérer des liens pour fournir une relation de confiance et une connectivité entre un compte Workload Factory et un ou plusieurs systèmes de fichiers FSX for ONTAP. Vous pouvez ainsi contrôler et gérer certaines fonctionnalités directement à partir du système de fichiers FSX pour ONTAP qui ne sont pas disponibles via l'API AWS FSX pour ONTAP.
+Vous pouvez créer et gérer des liens pour fournir une relation de confiance et une connectivité entre un compte d'usine de workloads et un ou plusieurs systèmes de fichiers FSX pour ONTAP dans l'usine de workloads BlueXP . Vous pouvez ainsi contrôler et gérer certaines fonctionnalités directement à partir du système de fichiers FSX pour ONTAP qui ne sont pas disponibles via l'API AWS FSX pour ONTAP.
 
 link:links-overview.html["En savoir plus sur les liens"].
 
@@ -24,7 +24,7 @@ Pour créer le lien, vous devez lancer une pile AWS CloudFormation dans votre co
 
 Vous avez deux options pour créer des liens - automatiquement ou manuellement.
 
-* Automatiquement : crée un lien avec enregistrement automatique via Workload Factory. Un lien créé automatiquement nécessite des jetons pour l'automatisation de Workload Factory et le code CloudFormation est de courte durée. Il ne peut être utilisé que pendant 6 heures maximum.
+* Automatiquement : crée un lien avec l'enregistrement automatique via l'usine de charge de travail. Un lien créé automatiquement nécessite des jetons pour l'automatisation de l'usine des charges de travail et le code CloudFormation est de courte durée. Il ne peut être utilisé que pendant 6 heures maximum.
 * Manuellement : crée un lien avec l'enregistrement manuel. Le code CloudFormation persiste et vous laisse plus de temps pour effectuer l'opération. Cette fonctionnalité est particulièrement utile lorsque vous travaillez avec des équipes différentes, telles que Security et DevOps, qui peuvent d'abord avoir besoin d'accorder les autorisations nécessaires pour créer des liens.
 
 
@@ -75,10 +75,10 @@ Vous avez deux options pour créer des liens - automatiquement ou manuellement.
 ====
 .Créer automatiquement
 --
-Utilisez CloudFormation pour créer et enregistrer automatiquement le lien dans Workload Factory.
+Utilisez CloudFormation pour créer et enregistrer automatiquement le lien dans l'usine de la charge de travail.
 
 .Étapes
-. Connectez-vous au link:https://console.workloads.netapp.com/["Console Workload Factory"^]
+. Connectez-vous à l'aide de l'un des link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].
 . Dans stockage, sélectionnez *accéder à l'inventaire de stockage*.
 . Dans l'onglet *FSX pour ONTAP*, sélectionnez le menu à trois points du système de fichiers auquel associer un lien, puis sélectionnez *gérer*.
 . Dans la présentation du système de fichiers, sélectionnez *lien associé*.
@@ -92,14 +92,14 @@ Le compte AWS et les informations supplémentaires relatives au compte, à l'emp
 
 
 
-. Cliquez sur *Créer*.
+. Sélectionnez *Créer*.
 +
 La boîte de dialogue rediriger vers CloudFormation s'affiche et explique comment créer le lien à partir du service AWS CloudFormation.
 
 . Sélectionnez *Continuer* pour ouvrir la console de gestion AWS, puis connectez-vous au compte AWS de ce système de fichiers FSX pour ONTAP.
 . Sur la page pile de création rapide, sous fonctionnalités, sélectionnez *Je reconnais que AWS CloudFormation peut créer des ressources IAM*.
 +
-Notez que trois autorisations sont accordées à Lambda lorsque vous lancez le modèle CloudFormation. Workload Factory utilise ces autorisations lors de l'utilisation de liens.
+Notez que trois autorisations sont accordées à Lambda lorsque vous lancez le modèle CloudFormation. L'usine de workloads utilise ces autorisations lors de l'utilisation de liens.
 
 +
 [source, json]
@@ -108,51 +108,34 @@ Notez que trois autorisations sont accordées à Lambda lorsque vous lancez le m
 "lambda:GetFunction",
 "lambda:UpdateFunctionCode"
 ----
-. Sélectionnez *Créer pile*, puis *Continuer*.
+. Sélectionnez *Créer pile*, puis sélectionnez *Continuer*.
 +
 Vous pouvez contrôler l'état de création du lien à partir de la page événements. Cela ne devrait pas prendre plus de 5 minutes.
 
-. Revenez à l'interface Workload Factory et vous verrez que le lien est associé au système de fichiers FSX pour ONTAP.
+. Revenez à l'interface d'usine des workloads et vous verrez que le lien est associé au système de fichiers FSX pour ONTAP.
 
 
 --
 .Créer manuellement
 --
-Avec cette option, vous extrayez l'ARN du lien depuis AWS CloudFormation et vous le signalez ici. Workload Factory enregistre manuellement le lien pour vous.
+Avec cette option, vous extrayez l'ARN du lien depuis AWS CloudFormation et vous le signalez ici. L'usine de charge de travail enregistre manuellement le lien pour vous.
 
 .Étapes
-. Connectez-vous au link:https://console.workloads.netapp.com/["Console Workload Factory"^]
-. Dans stockage, sélectionnez *accéder à l'inventaire de stockage*.
-. Dans l'onglet *FSX pour ONTAP*, sélectionnez le menu à trois points du système de fichiers auquel associer un lien, puis sélectionnez *gérer*.
-. Dans la présentation du système de fichiers, sélectionnez *lien associé*.
-. Dans la boîte de dialogue associer un lien, sélectionnez *Créer un nouveau lien* et sélectionnez *Continuer*.
-. Sur la page Créer un lien, indiquez les informations suivantes :
-+
-.. *Nom du lien* : saisissez le nom que vous souhaitez utiliser pour ce lien. Le nom doit être unique dans votre compte.
-.. *Tags*: Facultatif, ajoutez les balises que vous voulez associer à ce lien pour pouvoir catégoriser plus facilement vos ressources. Par exemple, vous pouvez ajouter une balise qui identifie ce lien comme étant utilisé par FSX pour les systèmes de fichiers ONTAP.
-.. *Enregistrement de lien* : cliquez sur la flèche déroulante pour développer les instructions d'enregistrement du lien du service AWS CloudFormation. Suivez les instructions.
-+
-Notez que trois autorisations sont accordées à Lambda lorsque vous lancez le modèle CloudFormation. Workload Factory utilise ces autorisations lors de l'utilisation de liens.
+Connectez-vous à l'aide de l'un des link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^]. . Dans stockage, sélectionnez *accéder à l'inventaire de stockage*. . Dans l'onglet *FSX pour ONTAP*, sélectionnez le menu à trois points du système de fichiers auquel associer un lien, puis sélectionnez *gérer*. . Dans la présentation du système de fichiers, sélectionnez *lien associé*. . Dans la boîte de dialogue associer un lien, sélectionnez *Créer un nouveau lien* et sélectionnez *Continuer*. . Sur la page Créer un lien, indiquez les informations suivantes : .. *Nom du lien* : saisissez le nom que vous souhaitez utiliser pour ce lien. Le nom doit être unique dans votre compte. .. *Tags*: Facultatif, ajoutez les balises que vous voulez associer à ce lien pour pouvoir catégoriser plus facilement vos ressources. Par exemple, vous pouvez ajouter une balise qui identifie ce lien comme étant utilisé par FSX pour les systèmes de fichiers ONTAP. .. *Enregistrement de lien* : sélectionnez sur la flèche déroulante pour développer les instructions d'enregistrement du lien à partir du service AWS CloudFormation. Suivez les instructions.
+
++ Notez que trois autorisations sont accordées à Lambda lorsque vous lancez le modèle CloudFormation. L'usine de workloads utilise ces autorisations lors de l'utilisation de liens.
 
 +
+
 [source, json]
 ----
 "lambda:InvokeFunction",
 "lambda:GetFunction",
 "lambda:UpdateFunctionCode"
 ----
-+
-Une fois la pile créée, collez l'ARN Lambda dans la zone de texte.
++ une fois la pile créée, collez l'ARN Lambda dans la zone de texte. .. Le compte AWS et les informations supplémentaires relatives au compte, à l'emplacement et au groupe de sécurité sont récupérés automatiquement en fonction du système de fichiers FSX pour ONTAP. . Sélectionnez *Créer*.
 
-.. Le compte AWS et les informations supplémentaires relatives au compte, à l'emplacement et au groupe de sécurité sont récupérés automatiquement en fonction du système de fichiers FSX pour ONTAP.
-
-
-. Cliquez sur *Créer*.
-+
-Vous pouvez contrôler l'état de création du lien à partir de la page événements. Cela ne devrait pas prendre plus de 5 minutes.
-
-. Revenez à l'interface Workload Factory et vous verrez que le lien est associé au système de fichiers FSX pour ONTAP.
-
++ vous pouvez contrôler l'état de création de lien à partir de la page Evénements. Cela ne devrait pas prendre plus de 5 minutes. . Revenez à l'interface d'usine des workloads et vous verrez que le lien est associé au système de fichiers FSX pour ONTAP.
 
 --
 ====

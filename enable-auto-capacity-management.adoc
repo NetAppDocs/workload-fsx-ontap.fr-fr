@@ -2,16 +2,16 @@
 sidebar: sidebar 
 permalink: enable-auto-capacity-management.html 
 keywords: auto capacity, automatic capacity management, file system capacity 
-summary: 'L"activation de cette fonctionnalité permet à Workload Factory d"ajouter automatiquement du stockage incrémentiel à un système de fichiers FSX pour ONTAP en fonction de l"évolution des besoins en capacité au fil du temps.' 
+summary: 'L"activation de cette fonctionnalité permet à l"usine de workloads d"ajouter automatiquement du stockage incrémentiel à un système de fichiers FSX pour ONTAP en fonction de l"évolution des besoins en capacité.' 
 ---
-= Activez la gestion automatique de la capacité pour un système de fichiers
+= Activez la gestion automatique de la capacité pour un système de fichiers FSX for ONTAP
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-L'activation de cette fonctionnalité permet à Workload Factory d'ajouter automatiquement du stockage incrémentiel à un système de fichiers FSX pour ONTAP en fonction de l'évolution des besoins en capacité au fil du temps.
+L'activation de cette fonctionnalité permet à l'usine de workloads BlueXP  d'ajouter automatiquement du stockage incrémentiel à un système de fichiers FSX pour ONTAP en fonction de l'évolution des besoins en capacité.
 
 .Description de la tâche
 Un seul compte peut gérer cette fonction.
@@ -19,18 +19,18 @@ Un seul compte peut gérer cette fonction.
 La capacité de stockage SSD maximale pour tous les systèmes de fichiers FSX for ONTAP est de 524,288 Gio. Pour demander une augmentation de quota, reportez-vous link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/limits.html["Quotas"^] à dans la documentation AWS FSX pour NetApp ONTAP.
 
 .Avant de commencer
-Pour effectuer cette tâche, vous devez disposer d'informations d'identification avec les autorisations _automate_ dans Workload Factory.
+Vous devez disposer d'informations d'identification avec des autorisations _automate_ dans l'usine de la charge de travail pour effectuer cette tâche.
 
 .Étapes
-. Connectez-vous à la console Workload Factory.
+. Connectez-vous à l'aide de l'un des link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].
 . Dans stockage, sélectionnez *aller à stock de stockage*.
-. Dans l'onglet *FSX pour ONTAP*, cliquez sur le menu à trois points du système de fichiers pour activer la gestion automatique de la capacité pour.
+. Dans l'onglet *FSX pour ONTAP*, sélectionnez le menu à trois points du système de fichiers pour activer la gestion automatique de la capacité pour.
 . Sélectionnez *gérer*.
-. Sous informations, cliquez sur l'icône en forme de crayon en regard de *gestion automatique de la capacité*. L'icône en forme de crayon apparaît à côté de la flèche de la liste déroulante lorsque la souris survole la ligne *gestion automatique de la capacité*.
+. Sous informations, sélectionnez l'icône en forme de crayon en regard de *gestion automatique de la capacité*. L'icône en forme de crayon apparaît à côté de la flèche de la liste déroulante lorsque la souris survole la ligne *gestion automatique de la capacité*.
 . Dans la boîte de dialogue *gestion automatique de la capacité*, indiquez les éléments suivants :
 +
 .. *Informations d'identification* : sélectionnez les informations d'identification avec les autorisations _automate_ dans le menu déroulant.
-.. Cliquez sur le bouton Activer pour *Activer la gestion automatique de la capacité*.
+.. Sélectionnez le bouton Activer pour *Activer la gestion automatique de la capacité*.
 +
 Vous pouvez également désactiver la fonction. Si vous devez augmenter la capacité du système de fichiers, vous devez d'abord désactiver la gestion automatique de la capacité.
 
@@ -38,5 +38,5 @@ Vous pouvez également désactiver la fonction. Si vous devez augmenter la capac
 .. *Incréments d'augmentation de capacité* : entrez le pourcentage pour augmenter la capacité progressivement.
 
 
-. Cliquez sur *appliquer*.
+. Sélectionnez *appliquer*.
 
