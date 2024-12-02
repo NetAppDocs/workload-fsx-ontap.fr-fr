@@ -1,0 +1,159 @@
+---
+sidebar: sidebar 
+permalink: use-onprem-data.html 
+keywords: use, detect, replicate, remove, on-premises, ONTAP cluster, on-premises cluster, ONTAP 
+summary: 'Découvrez et répliquez les données ONTAP sur site dans l"usine de workloads BlueXP  pour les utiliser dans les bases de connaissances d"IA.' 
+---
+= Utilisation des données du cluster ONTAP sur site dans l'usine de workloads BlueXP 
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Découvrez et répliquez les données ONTAP sur site dans l'usine de workloads BlueXP  pour les utiliser dans les bases de connaissances d'IA.
+
+.Description de la tâche
+Pour utiliser les données d'un cluster ONTAP sur site, vous devez d'abord détecter le cluster ONTAP sur site. Après avoir détecté un cluster ONTAP sur site, vous pouvez utiliser les données pour l'un des cas d'utilisation suivants.
+
+Cas d'utilisation:: Notez que le principal cas d'utilisation de la charge de travail GenAI fait l'objet de cette série de tâches.
++
+--
+* *Charge de travail GenAI* : réplique les données de volume ONTAP sur site vers un système de fichiers FSX pour ONTAP afin que les données puissent être utilisées à link:https://docs.netapp.com/us-en/workload-genai/create-knowledgebase.html["Enrichir les bases de connaissances sur l'IA"^].
+* *Sauvegarde et migration vers le cloud* : les données de volume ONTAP sur site répliquées vers un système de fichiers FSX pour ONTAP peuvent être utilisées comme sauvegarde dans le cloud.
+* *Tiering des données* : après la réplication, les données des volumes ONTAP sur site rarement consultées peuvent être hiérarchisées du niveau de stockage SSD vers le niveau de stockage du pool de capacité.
+
+
+--
+
+
+
+
+== Découvrez un cluster ONTAP sur site
+
+Découvrez un cluster ONTAP sur site dans une usine de workloads BlueXP  pour répliquer les données dans un système de fichiers Amazon FSX pour NetApp ONTAP.
+
+.Avant de commencer
+Assurez-vous d'avoir les éléments suivants avant de commencer :
+
+* Un système de fichiers FSX pour ONTAP pour la réplication.
+* Lien connecté à associer au cluster sur site détecté. Si vous n'avez pas de lien, vous aurez besoin de link:create-link.html["créez-en un"].
+* Informations d'identification d'utilisateur ONTAP avec autorisations requises.
+* ONTAP sur site version 9.8 et ultérieure.
+* Connectivité comme indiqué dans le schéma suivant.
++
+image:screenshot-on-prem-connectivity.png["Capture d'écran montrant comment connecter un cluster ONTAP sur site pour le chemin de gestion et le chemin d'accès aux données vers Amazon Web Services Cloud"]
+
+
+
+.Étapes
+. Connectez-vous à l'aide de l'un des link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].
+. Dans stockage, sélectionnez *accéder à l'inventaire de stockage*.
+. Sélectionnez l'onglet *On-prest ONTAP*.
+. Sélectionnez *découvrir*.
+. Passez en revue les conditions préalables et sélectionnez *Suivant*.
+. Sur la page découvrir ONTAP sur site, fournissez les informations suivantes sous *Configuration du cluster* :
++
+.. *Lien* : sélectionnez un lien. La liaison sera associée au cluster sur site afin de créer une connectivité entre le cluster et l'usine de charges de travail.
++
+Si vous n'avez pas créé de lien, suivez les instructions, puis revenez à cette opération et sélectionnez le lien.
+
+.. *Adresse IP du cluster* : indiquez l'adresse IP du cluster ONTAP sur site à répliquer.
+.. *Informations d'identification ONTAP* : entrez les informations d'identification ONTAP pour le cluster ONTAP sur site. Assurez-vous que l'utilisateur dispose des autorisations requises.
+
+
+. Sélectionnez *découvrir* pour démarrer le processus de découverte.
+
+
+.Résultat
+Le cluster ONTAP sur site est découvert et apparaît maintenant dans l'onglet *On-prest ONTAP*.
+
+Vous pouvez maintenant afficher les données de votre cluster ONTAP sur site et <<Répliquez les données de volume à partir d'un cluster ONTAP sur site,Répliquez les données dans un système de fichiers FSX pour ONTAP>>de .
+
+
+
+== Répliquez les données de volume à partir d'un cluster ONTAP sur site
+
+Répliquez les données de volume d'un cluster ONTAP sur site vers un système de fichiers FSX pour ONTAP. Une fois répliquées, les données peuvent être utilisées pour enrichir les bases de connaissances d'IA.
+
+.Avant de commencer
+* Vous devez détecter un cluster ONTAP sur site pour répliquer les données de volume.
+* Vous devez disposer d'un système de fichiers FSX pour ONTAP disponible pour être la cible de la réplication.
+* Le cluster ONTAP sur site et le système de fichiers FSX pour ONTAP que vous utilisez pour la relation de réplication doivent avoir un lien associé. Si l'un des clusters On-prem et FSX for ONTAP, ou les deux, link:create-link.html["commencez par créer un lien"]ne disposent pas de liens existants, . link:manage-links.html["associer un lien"]Dans les systèmes de fichiers, sélectionnez *associer lien* sous *Nom du compte*. Une fois que la liaison est associée dans le cluster ONTAP sur site et dans le système de fichiers FSX pour ONTAP, revenez à cette opération.
+
+
+.Étapes
+. Connectez-vous à l'aide de l'un des link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].
+. Dans stockage, sélectionnez *accéder à l'inventaire de stockage*.
+. Sélectionnez l'onglet *On-prest ONTAP*.
+. Pour rechercher des volumes par VM de stockage, vous pouvez *sélectionner VM de stockage* dans la liste déroulante.
+. Sélectionnez un ou plusieurs volumes à répliquer, puis sélectionnez *répliquer*.
+. Sur la page Créer une réplication, sous cible de réplication, fournissez les informations suivantes :
++
+.. *FSX pour système de fichiers ONTAP* : sélectionnez les informations d'identification, la région et le nom du système de fichiers FSX pour ONTAP pour le système de fichiers cible FSX pour ONTAP.
+.. *Nom de la VM de stockage* : sélectionnez la VM de stockage dans le menu déroulant.
+.. *Nom du volume* : le nom du volume cible est généré automatiquement au format suivant `{OriginalVolumeName}_copy`. Vous pouvez utiliser le nom du volume généré automatiquement ou entrer un autre nom de volume.
+.. *Données de hiérarchisation* : sélectionnez la règle de hiérarchisation pour les données stockées dans le volume cible.
++
+*** *Auto* : règle de hiérarchisation par défaut lors de la création d'un volume à l'aide de l'interface utilisateur FSX for ONTAP de l'usine de workloads. Transfère toutes les données inactives, y compris les données utilisateur et les snapshots, vers le niveau de stockage du pool de capacité pendant une période spécifique.
+*** *Snapshot uniquement* : hiérarchise uniquement les données de snapshot sur le niveau de stockage du pool de capacité.
+*** *None* : conserve toutes les données de votre volume sur le niveau de stockage primaire.
+*** *Tout* : marque toutes les données utilisateur et les données d'instantané comme inactives et les stocke dans le niveau de stockage du pool de capacité.
++
+Notez que certaines règles de hiérarchisation ont une période de refroidissement minimale qui définit la durée, ou _journées de refroidissement_, pendant laquelle les données utilisateur d'un volume doivent rester inactives pour que les données soient considérées comme inactives et déplacées vers le niveau de stockage du pool de capacité. La période de refroidissement commence lorsque les données sont écrites sur le disque.
+
++
+Pour plus d'informations sur les règles de Tiering de volume, reportez-vous à la section link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/volume-storage-capacity.html#data-tiering-policy["Capacité de stockage du volume"^]dans la documentation d'AWS FSX pour NetApp ONTAP.
+
+
+
+.. *Taux de transfert max.* : sélectionnez *Limited* et entrez la limite de transfert max. En Mio/s. Vous pouvez également sélectionner *Illimité*.
++
+Sans limite, les performances du réseau et des applications peuvent diminuer. Nous recommandons également un taux de transfert illimité pour les systèmes de fichiers FSX pour ONTAP pour les workloads stratégiques, par exemple ceux utilisés principalement pour la reprise d'activité.
+
+
+
+. Sous Paramètres de réplication, fournissez les informations suivantes :
++
+.. *Intervalle de réplication* : sélectionnez la fréquence à laquelle les instantanés sont transférés du volume source vers le volume cible.
+.. *Conservation à long terme* : éventuellement, activez les instantanés pour la conservation à long terme.
++
+Si vous activez la conservation à long terme, sélectionnez une règle existante ou créez une nouvelle règle pour définir les snapshots à répliquer et le nombre à conserver.
+
++
+*** Pour une stratégie existante, sélectionnez *Choisissez une stratégie existante*, puis sélectionnez la stratégie existante dans le menu déroulant.
+*** Pour une nouvelle stratégie, sélectionnez *Créer une nouvelle stratégie* et fournissez les informations suivantes :
++
+**** *Nom de la stratégie* : entrez un nom de stratégie.
+**** *Stratégies Snapshot* : dans le tableau, sélectionnez la fréquence de la règle de snapshot et le nombre de copies à conserver. Vous pouvez sélectionner plusieurs règles de snapshot.
+
+
+
+
+
+
+. Sélectionnez *Créer*.
+
+
+.Résultat
+La relation de réplication apparaît dans l'onglet *relations de réplication* du système de fichiers cible FSX pour ONTAP.
+
+
+
+== Supprimez un cluster ONTAP sur site de l'usine de workloads BlueXP 
+
+Si nécessaire, supprimez un cluster ONTAP sur site de l'usine de workloads BlueXP .
+
+.Avant de commencer
+Vous devez link:delete-replication.html["supprimez toutes les relations de réplication existantes"] gérer tous les volumes du cluster ONTAP sur site avant de supprimer le cluster de sorte qu'aucune relation interrompue ne soit conservée.
+
+.Étapes
+. Connectez-vous à l'aide de l'un des link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].
+. Dans stockage, sélectionnez *accéder à l'inventaire de stockage*.
+. Sélectionnez l'onglet *On-prest ONTAP*.
+. Sélectionnez le cluster ONTAP sur site à supprimer.
+. Sélectionnez le menu à trois points et sélectionnez *Supprimer de Workload Factory*.
+
+
+.Résultat
+Le cluster ONTAP sur site a été supprimé de l'usine des workloads BlueXP .

@@ -81,10 +81,15 @@ Si vous avez sélectionné une export-policy existante, entrez un nouveau nom de
 ..... *Ajouter une règle de stratégie d'exportation* : pour une règle d'export personnalisée, vous pouvez ajouter des règles de stratégie d'exportation à la règle.
 
 
-.... *Partage CIFS* : entrez le nom du partage CIFS pour fournir un accès SMB.
+.... *Partage CIFS* : fournissez les informations suivantes :
++
+..... *Nom* : entrez le nom du partage CIFS pour fournir un accès SMB.
+..... *Autorisations* : sélectionnez contrôle total, lecture/écriture, lecture ou aucun accès, puis entrez les utilisateurs ou les groupes séparés par un point-virgule ( ; ). Les utilisateurs ou les groupes sont sensibles à la casse et le domaine de l'utilisateur doit être inclus au format « domaine\nom d'utilisateur ».
 
 
-*** *Accès en bloc* : permet aux hôtes exécutant des applications métier critiques d'accéder au volume à l'aide du protocole iSCSI.
+
+
+*** *Accès en bloc* : permet aux hôtes exécutant des applications métier critiques d'accéder au volume à l'aide du protocole iSCSI. L'accès aux blocs n'est disponible que lorsque le déploiement scale-out du système de fichiers compte 6 paires HA ou moins.
 +
 Renseignez les champs suivants pour configurer l'accès en bloc au volume.
 

@@ -15,15 +15,9 @@ Les limitations connues identifient les plateformes, les périphériques ou les 
 
 
 
-== Lien
+== Lien requis pour les opérations ONTAP avancées
 
 Une liaison est nécessaire pour effectuer certaines opérations, telles que la réplication dans l'interface utilisateur d'usine de la charge de travail.
-
-
-
-== Efficacité du stockage
-
-L'efficacité du stockage ne peut pas être désactivée ou activée après la création du volume.
 
 
 
@@ -37,7 +31,7 @@ Les régions suivantes prennent en charge une capacité de débit maximale de 4 
 
 
 
-== Déploiements scale-out
+=== Déploiements scale-out
 
 Les régions suivantes prennent en charge une capacité de débit maximale de 3 et 6 Gbit/s pour les déploiements en mode scale-out : ÉTATS-UNIS de l'est (Virginie), États-Unis de l'est (Ohio), États-Unis de l'Ouest (Oregon), Europe (Irlande) et Asie-Pacifique (Sydney).
 
@@ -62,7 +56,6 @@ Pour connaître le nombre maximal de SVM par système de fichiers, reportez-vous
 
 == Prise en charge du protocole iSCSI
 
-* Le protocole iSCSI n'est pris en charge que pour les déploiements à évolutivité verticale. ^1^
 * Le protocole iSCSI n'est disponible que pour les volumes FlexVol. ^1^
 * Une seule LUN peut être configurée par volume.
 

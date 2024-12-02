@@ -1,0 +1,32 @@
+---
+sidebar: sidebar 
+permalink: update-storage-efficiency.html 
+keywords: storage efficiency change, update storage efficiency 
+summary: 'En usine de charges de travail BlueXP , vous pouvez mettre à jour le paramètre d"efficacité du stockage après la création du volume.' 
+---
+= Mettre à jour le paramètre d'efficacité du stockage d'un volume
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+En usine de charges de travail BlueXP , vous pouvez mettre à jour le paramètre d'efficacité du stockage après la création du volume.
+
+.Description de la tâche
+La fonctionnalité d'efficacité du stockage inclut des fonctionnalités de déduplication, de compression et de compaction des données pour un gain d'espace optimal sur un système FlexVol volume. La déduplication permet d'éliminer les blocs de données dupliqués. La compression des données compresse les blocs de données afin de réduire la quantité d'espace de stockage physique nécessaire. Efficacité du stockage accrue grâce à la compaction des données qui stocke plus de données dans moins d'espace.
+
+Si vous avez choisi de ne pas activer l'efficacité du stockage lors de la création d'un volume, vous pouvez activer à tout moment le paramètre d'économies potentielles en termes d'espace et de coûts.
+
+Que vous activiez ou désactiviez l'efficacité du stockage, les volumes utilisent le provisionnement fin.
+
+.Étapes
+. Connectez-vous à l'aide de l'un des link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].
+. Dans stockage, sélectionnez *accéder à l'inventaire de stockage*.
+. Dans l'onglet *FSX pour ONTAP*, sélectionnez le menu à trois points du système de fichiers avec le volume à mettre à jour, puis sélectionnez *gérer*.
+. Dans la présentation du système de fichiers, sélectionnez l'onglet *volumes*.
+. Dans l'onglet volumes, sélectionnez le menu à trois points du volume pour lequel modifier la règle de Tiering.
+. Sélectionnez *actions avancées*, puis *définir l'efficacité du stockage*.
+. Choisissez d'activer ou de désactiver l'efficacité du stockage du volume.
+. Sélectionnez *appliquer* pour enregistrer la modification.
+

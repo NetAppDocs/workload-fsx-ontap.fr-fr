@@ -62,11 +62,11 @@ Sans limite, les performances du réseau et des applications peuvent diminuer. N
 Si vous activez la conservation à long terme, sélectionnez une règle existante ou créez une nouvelle règle pour définir les snapshots à répliquer et le nombre à conserver.
 
 +
-... Pour *Choisissez une stratégie existante*, sélectionnez une stratégie existante dans le menu déroulant.
-... Pour *Créer une nouvelle police*, fournissez les éléments suivants :
+*** Pour *Choisissez une stratégie existante*, sélectionnez une stratégie existante dans le menu déroulant.
+*** Pour *Créer une nouvelle police*, fournissez les éléments suivants :
 +
-.... *Nom de la stratégie* : entrez un nom de stratégie.
-.... *Stratégies Snapshot* : dans le tableau, sélectionnez la fréquence de la règle de snapshot et le nombre de copies à conserver. Vous pouvez sélectionner plusieurs règles de snapshot.
+**** *Nom de la stratégie* : entrez un nom de stratégie.
+**** *Stratégies Snapshot* : dans le tableau, sélectionnez la fréquence de la règle de snapshot et le nombre de copies à conserver. Vous pouvez sélectionner plusieurs règles de snapshot.
 
 
 
@@ -93,7 +93,7 @@ Si vous activez la conservation à long terme, sélectionnez une règle existant
 +
 _Auto_ est la règle de hiérarchisation par défaut lors de la création d'un volume à l'aide de l'interface utilisateur FSX for ONTAP de l'usine de workloads. Pour plus d'informations sur les règles de Tiering de volume, reportez-vous à la section link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/volume-storage-capacity.html#data-tiering-policy["Capacité de stockage du volume"^]dans la documentation d'AWS FSX pour NetApp ONTAP.
 
-.. *Taux de transfert max.* : sélectionnez *Limited* et entrez la limite de transfert max. En Mo/s. Vous pouvez également sélectionner *Illimité*.
+.. *Taux de transfert max.* : sélectionnez *Limited* et entrez la limite de transfert max. En Mio/s. Vous pouvez également sélectionner *Illimité*.
 +
 Sans limite, les performances du réseau et des applications peuvent diminuer. Nous recommandons également un taux de transfert illimité pour les systèmes de fichiers FSX pour ONTAP pour les workloads stratégiques, par exemple ceux utilisés principalement pour la reprise d'activité.
 
@@ -107,11 +107,11 @@ Sans limite, les performances du réseau et des applications peuvent diminuer. N
 Si vous activez la conservation à long terme, sélectionnez une règle existante ou créez une nouvelle règle pour définir les snapshots à répliquer et le nombre à conserver.
 
 +
-... Pour *Choisissez une stratégie existante*, sélectionnez une stratégie existante dans le menu déroulant.
-... Pour *Créer une nouvelle police*, fournissez les éléments suivants :
+*** Pour *Choisissez une stratégie existante*, sélectionnez une stratégie existante dans le menu déroulant.
+*** Pour *Créer une nouvelle police*, fournissez les éléments suivants :
 +
-.... *Nom de la stratégie* : entrez un nom de stratégie.
-.... *Stratégies Snapshot* : dans le tableau, sélectionnez la fréquence de la règle de snapshot et le nombre de copies à conserver. Vous pouvez sélectionner plusieurs règles de snapshot.
+**** *Nom de la stratégie* : entrez un nom de stratégie.
+**** *Stratégies Snapshot* : dans le tableau, sélectionnez la fréquence de la règle de snapshot et le nombre de copies à conserver. Vous pouvez sélectionner plusieurs règles de snapshot.
 
 
 
@@ -124,4 +124,4 @@ Si vous activez la conservation à long terme, sélectionnez une règle existant
 --
 ====
 .Résultat
-La relation de réplication apparaît dans l'onglet *relations de réplication*.
+La relation de réplication apparaît dans l'onglet *relations de réplication* du système de fichiers cible FSX pour ONTAP.

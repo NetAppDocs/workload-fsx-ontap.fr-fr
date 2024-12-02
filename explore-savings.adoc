@@ -27,6 +27,8 @@ Explorer les économies via la personnalisation : vous fournissez les paramètre
 
 Découvrez les économies réalisées pour les environnements de stockage détectés : l'usine de workloads est liée à vos environnements de stockage AWS existants et extrait les détails du calculateur pour une comparaison automatique. Vous devrez accorder des autorisations d'automatisation pour utiliser le mode automatique. Vous pouvez modifier le cas d'utilisation, mais tous les autres détails sont automatiquement déterminés dans le calcul.
 
+En outre, vous pouvez link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Ajoutez des identifiants AWS"^]améliorer la précision de l'analyse de la calculatrice. Sélectionnez *calculer les économies en fonction des ressources existantes*. Vous serez redirigé vers la page Ajouter des informations d'identification. Après avoir ajouté des informations d'identification, sélectionnez les ressources existantes à comparer avec FSX pour ONTAP, puis sélectionnez *Explorer les économies*.
+
 
 
 == Explorer les économies via la personnalisation
@@ -100,7 +102,12 @@ Suivez les étapes sous l'onglet correspondant à votre sélection de stockage.
 ====
 Après avoir fourni des détails sur la configuration de votre système de stockage, consultez les calculs et les recommandations fournis sur la page.
 
-De plus, faites défiler jusqu'au bas de la page jusqu'à *Exporter PDF* ou *Afficher les calculs*.
+De plus, faites défiler jusqu'au bas de la page pour afficher le rapport en sélectionnant l'une des options suivantes :
+
+* *Exporter PDF*
+* *Envoyer par courriel*
+* *Afficher les calculs*
+
 
 Pour passer à FSX pour ONTAP, suivez les instructions à <<Déployez FSX pour les systèmes de fichiers ONTAP,Déployez FSX pour les systèmes de fichiers ONTAP>>.
 
@@ -179,7 +186,12 @@ Suivez les étapes sous l'onglet correspondant à votre sélection de stockage.
 ====
 Après avoir fourni des détails sur la configuration de votre système de stockage, consultez les calculs et les recommandations fournis sur la page.
 
-De plus, faites défiler jusqu'au bas de la page jusqu'à *Exporter PDF* ou *Afficher les calculs*.
+De plus, faites défiler jusqu'au bas de la page pour afficher le rapport en sélectionnant l'une des options suivantes :
+
+* *Exporter PDF*
+* *Envoyer par courriel*
+* *Afficher les calculs*
+
 
 
 

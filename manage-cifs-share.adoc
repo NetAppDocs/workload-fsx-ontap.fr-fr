@@ -25,9 +25,16 @@ Déterminez les utilisateurs ou les groupes auxquels accorder l'accès et le typ
 . Sélectionnez *actions avancées*, puis *Modifier le partage CIFS*.
 . Sur la page Modifier le partage CIFS, indiquez les informations suivantes :
 +
-.. *Utilisateurs ou groupes* : entrez des utilisateurs et des groupes valides. Séparez chaque entrée par un point-virgule «; ».
-.. *Autorisations* : sélectionnez *contrôle complet*, *lecture/écriture*, *lecture* ou *pas d'accès*.
+.. *Nom* : entrez le nom du partage CIFS.
+.. *Autorisations* : sélectionnez contrôle total, lecture/écriture, lecture ou aucun accès, puis entrez les utilisateurs ou les groupes séparés par un point-virgule ( ; ). Les utilisateurs ou les groupes sont sensibles à la casse et le domaine de l'utilisateur doit être inclus au format « domaine\nom d'utilisateur ».
 
 
-. Sélectionnez *appliquer*.
+. Sélectionnez appliquer.
++
+Les modifications peuvent entraîner la perte de l'accès des utilisateurs ou des groupes actuels au partage CIFS.
 
+. Sélectionnez *Continuer* pour enregistrer les modifications.
+
+
+.Résultat
+Les modifications apportées au partage CIFS sont appliquées.

@@ -59,6 +59,9 @@ Vous pouvez également charger une configuration enregistrée.
 +
 *** Pour les déploiements scale-up, une seule paire haute disponibilité est disponible.
 *** Pour les déploiements scale-out, vous pouvez avoir entre deux et douze paires haute disponibilité.
++
+Pour provisionner des volumes en mode bloc iSCSI sur le système de fichiers, ne sélectionnez pas plus de 6 paires HA.
+
 
 
 .. *Type de déploiement* : sélectionnez un type de déploiement.
@@ -129,6 +132,9 @@ Vous pouvez également charger une configuration enregistrée.
 +
 *** Pour les déploiements scale-up, une seule paire haute disponibilité est disponible.
 *** Pour les déploiements scale-out, vous pouvez avoir entre deux et douze paires haute disponibilité.
++
+Pour provisionner des volumes en mode bloc iSCSI sur le système de fichiers, ne sélectionnez pas plus de 6 paires HA.
+
 
 
 .. *Type de déploiement* : sélectionnez un type de déploiement.

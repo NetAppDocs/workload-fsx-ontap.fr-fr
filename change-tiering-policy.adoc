@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: change-tiering-policy.html 
-keywords:  
+keywords: tiering policy, change tier, change tiers, tier policy update 
 summary: Modifiez la règle de hiérarchisation en usine des charges de travail BlueXP  pour réallouer les données du Tier de stockage principal hautes performances au Tier de stockage du pool de capacité secondaire. 
 ---
 = Modifiez la règle de Tiering d'un volume en usine de workloads BlueXP 
