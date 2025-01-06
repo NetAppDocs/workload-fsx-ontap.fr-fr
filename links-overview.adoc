@@ -41,13 +41,16 @@ L'usine de charge de travail requiert un lien pour afficher certaines informatio
 
 Les fonctions qui nécessitent un lien sont les suivantes :
 
-* Affiche la version de ONTAP installée sur un système de fichiers FSX pour ONTAP
-* Gérer les volumes iSCSI sur le système
-* Activer et désactiver la fonction de croissance automatique pour les volumes
+* Affichage de la version de ONTAP installée sur un système de fichiers FSX pour ONTAP
+* Gestion des volumes iSCSI sur un système de fichiers FSX pour ONTAP
+* Fonctionnalité de croissance automatique des volumes
 * Création et gestion de règles de snapshots
-* Configurez les relations de réplication et répliquez les volumes entre les systèmes de fichiers
-* Configurez les relations de sauvegarde et sauvegardez les données de volume dans le stockage cloud
-* Cloner des volumes dans un système de fichiers
-* Affichage des metrics supplémentaires directement à partir de ONTAP (les metrics par défaut sont collectées par Amazon CloudWatch)
+* Configuration des relations de réplication
+* Réplication de volume entre les systèmes de fichiers FSX pour ONTAP
+* Configuration de la relation de sauvegarde
+* Sauvegardes de données de volume dans le stockage cloud
+* Clones de volumes dans un système de fichiers FSX pour ONTAP
+* Affichage des metrics supplémentaires directement depuis ONTAP (les metrics par défaut sont collectées par Amazon CloudWatch)
 * Gestion des règles d'exportation NFS
+* Gestion des partages CIFS
 

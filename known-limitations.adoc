@@ -27,7 +27,7 @@ Une liaison est nécessaire pour effectuer certaines opérations, telles que la 
 
 === Déploiements scale-up
 
-Les régions suivantes prennent en charge une capacité de débit maximale de 4 Gbit/s pour les déploiements à évolutivité verticale : région des ÉTATS-UNIS de l'est (Ohio), région de l'est (Virginie-Occidentale), région de l'Oregon (États-Unis) et Europe (Irlande).
+Les configurations à évolutivité verticale sont prises en charge jusqu'à 2 Gbit/s dans toutes les régions. Les régions suivantes prennent en charge une capacité de débit maximale de 4 Gbit/s pour les déploiements à évolutivité verticale : région des ÉTATS-UNIS de l'est (Ohio), région de l'est (Virginie-Occidentale), région de l'Oregon (États-Unis) et Europe (Irlande).
 
 
 
@@ -62,19 +62,11 @@ Pour connaître le nombre maximal de SVM par système de fichiers, reportez-vous
 
 
 
-== Prise en charge par région
-
-* La région du Canada-Ouest (Calgary) n'est actuellement pas soutenue.
-
-
-
-
 == Protection des données
 
 * Les snapshots ne peuvent pas être supprimés.
-* Seule la réplication entre les systèmes de fichiers FSX pour ONTAP est prise en charge.
 * Lorsque vous répliquez un système de fichiers, tous les volumes du système de fichiers utilisent la même règle de réplication.
-* Seul le dernier snapshot est disponible pour la restauration.
+* Pour les relations de réplication avec conservation à long terme, seul le dernier snapshot est disponible pour la restauration.
 
 
 

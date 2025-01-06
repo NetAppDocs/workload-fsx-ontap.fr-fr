@@ -29,7 +29,7 @@ Obtenez le point de montage d'un volume pour monter un partage sur un partage CI
 . Dans l'onglet *FSX pour ONTAP*, sélectionnez le menu à trois points du système de fichiers avec le volume, puis sélectionnez *gérer*.
 . Dans la présentation du système de fichiers, sélectionnez l'onglet *volumes*.
 . Dans l'onglet volumes, sélectionnez le menu à trois points du volume, puis *actions de base*, puis *commande Afficher montage*.
-. Dans la boîte de dialogue de commande Monter, sélectionnez *Copier* pour copier la commande. Vous entrez la commande copiée dans votre terminal.
+. Dans la boîte de dialogue de commande Mount, sélectionnez *Copy* pour copier la commande pour le point de montage NFS ou le partage CIFS. Vous entrez la commande copiée dans votre terminal.
 . Sélectionnez *Fermer*.
 
 
