@@ -36,10 +36,27 @@ La personnalisation d'une stratégie vous permet de spécifier quand créer des 
 
 
 .Étapes
-Connectez-vous à l'aide de l'un des link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^]. . Dans *stockage*, sélectionnez *aller à l'inventaire de stockage*. . Dans l'onglet *FSX pour ONTAP*, sélectionnez le menu à trois points du système de fichiers avec le volume, puis sélectionnez *gérer*. . Dans la présentation du système de fichiers, sélectionnez l'onglet *volumes*. . Dans l'onglet *volumes*, sélectionnez le menu à trois points du volume à protéger avec les instantanés planifiés. . Sélectionnez *actions de protection des données*, *instantanés*, puis *gérer les stratégies de snapshot*. . Sur la page gestion des règles Snapshot, sélectionnez *Créer une nouvelle stratégie d'instantanés*. . Dans le champ *Nom de la stratégie de snapshot*, entrez un nom pour la stratégie de snapshot. . Facultatif : dans le champ *Description*, entrez une description de la stratégie de snapshot. . Sous *Agenda*, sélectionnez quand créer des instantanés. Par exemple, toutes les minutes ou toutes les heures.
+. Connectez-vous à l'aide de l'un des link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].
+. Dans *stockage*, sélectionnez *aller à l'inventaire de stockage*.
+. Dans l'onglet *FSX pour ONTAP*, sélectionnez le menu à trois points du système de fichiers avec le volume, puis sélectionnez *gérer*.
+. Dans la présentation du système de fichiers, sélectionnez l'onglet *volumes*.
+. Dans l'onglet *volumes*, sélectionnez le menu à trois points du volume à protéger avec les instantanés planifiés.
+. Sélectionnez *actions de protection des données*, *instantanés*, puis *gérer les stratégies de snapshot*.
+. Sur la page gestion des règles Snapshot, sélectionnez *Créer une nouvelle stratégie d'instantanés*.
+. Dans le champ *Nom de la stratégie de snapshot*, entrez un nom pour la stratégie de snapshot.
+. Facultatif : dans le champ *Description*, entrez une description de la stratégie de snapshot.
+. Sous *Agenda*, sélectionnez quand créer des instantanés. Par exemple, toutes les minutes ou toutes les heures.
++
+Vous pouvez sélectionner plusieurs fréquences.
 
-+ vous pouvez sélectionner plusieurs fréquences. . Sous *nombre d'exemplaires*, entrez le nombre d'exemplaires à conserver.
+. Sous *nombre d'exemplaires*, entrez le nombre d'exemplaires à conserver.
++
+Le nombre maximal de copies est de 1,023.
 
-+ le nombre maximum de copies est de 1,023. . Facultatif : sous *Naming convention*, entrez un *préfixe* pour la stratégie. . *Étiquette de conservation* est automatiquement renseignée.
+. Facultatif : sous *Naming convention*, entrez un *préfixe* pour la stratégie.
+. *Étiquette de conservation* est automatiquement renseignée.
++
+Cette étiquette fait référence à SnapMirror, ou étiquette de réplication, utilisé pour sélectionner uniquement les snapshots spécifiés pour la réplication du système de fichiers source vers le système de fichiers cible.
 
-+ ce libellé fait référence au SnapMirror, ou libellé de réplication, utilisé pour sélectionner uniquement les snapshots spécifiés pour la réplication du système de fichiers source vers le système de fichiers cible. . Sélectionnez *appliquer*.
+. Sélectionnez *appliquer*.
+
