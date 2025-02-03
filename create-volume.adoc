@@ -36,11 +36,19 @@ Avant de créer un volume, vérifiez les conditions préalables suivantes :
 
 
 
+
+
+== Créer un volume
+
+Vous pouvez créer un volume à l'aide des outils suivants disponibles dans la Codebox : API REST, CloudFormation et Terraform. link:https://docs.netapp.com/us-en/workload-setup-admin/use-codebox.html#how-to-use-codebox["Découvrez comment utiliser Codebox pour l'automatisation"^].
+
+
+NOTE: Lorsque vous utilisez Terraform à partir de Codebox, le code que vous copiez ou téléchargez se cache `fsxadmin` et `vsadmin` passe. Vous devrez saisir à nouveau les mots de passe lorsque vous exécuterez le code.
+
 .Étapes
 . Connectez-vous à l'aide de l'un des link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].
 . Dans stockage, sélectionnez *accéder à l'inventaire de stockage*.
-. Dans l'onglet *FSX pour ONTAP*, sélectionnez le menu à trois points du système de fichiers dans lequel vous souhaitez créer un volume, puis sélectionnez *gérer*.
-. Dans l'onglet *vue d'ensemble*, sélectionnez *Créer un volume*.
+. Dans l'onglet *FSX pour ONTAP*, sélectionnez le menu à trois points du système de fichiers dans lequel vous souhaitez créer un volume, puis sélectionnez *Créer un volume*.
 . Sur la page Créer un volume, sous Détails généraux, fournissez les détails suivants :
 +
 .. *Nom du volume* : entrez un nom pour le volume.
@@ -113,6 +121,58 @@ Renseignez les champs suivants pour configurer l'accès en bloc au volume.
 .. *Efficacité du stockage* : désactivez ou activez l'efficacité du stockage.
 +
 L'efficacité du stockage est obtenue grâce aux fonctionnalités de déduplication et de compression de ONTAP. La déduplication permet d'éliminer les blocs de données dupliqués. La compression des données compresse les blocs de données afin de réduire la quantité d'espace de stockage physique nécessaire.
+
+.. *Fichiers immuables* : cette fonction, également appelée SnapLock, est désactivée par défaut. L'activation des fichiers immuables empêche la suppression ou l'écrasement des données pendant une période donnée. L'activation de cette fonction n'est possible qu'au cours de la création du volume. Une fois activée, cette fonction ne peut pas être désactivée. Il s'agit d'une fonctionnalité premium de FSX pour ONTAP qui implique des frais supplémentaires. Pour plus d'informations, reportez-vous link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/how-snaplock-works.html["Fonctionnement de SnapLock"^] à dans la documentation d'Amazon FSX pour NetApp ONTAP.
++
+L'activation de la fonctionnalité de fichiers immuables valide de manière permanente les fichiers de ce volume dans un état WORM immuable (Write-once-read-many).
+
++
+Modes de rétention:: Vous pouvez choisir entre deux modes de rétention : _Enterprise_ ou _Compliance_.
++
+--
+*** En mode _Enterprise_, un fichier immuable, ou SnapLock, l'administrateur peut supprimer un fichier pendant sa période de conservation.
+*** En mode _Compliance_, un fichier WORM ne peut pas être supprimé avant l'expiration de sa période de conservation. De même, le volume immuable ne peut pas être supprimé tant que les périodes de conservation de tous les fichiers du volume n'ont pas expiré.
+
+
+--
+Durée de conservation:: La période de conservation comporte deux paramètres : _politique de rétention_ et _périodes de rétention_. La _politique de conservation_ définit la durée de conservation des fichiers dans un état WORM immuable. Vous pouvez spécifier votre propre stratégie de conservation ou utiliser la stratégie de conservation par défaut (non spécifiée), qui est de 30 ans. Les _périodes de rétention minimale et maximale_ définissent la plage de temps autorisée pour le verrouillage des fichiers.
++
+--
+REMARQUE:: Même après expiration de la période de conservation, vous ne pouvez pas modifier un fichier WORM. Vous pouvez uniquement la supprimer ou définir une nouvelle période de conservation pour réactiver la protection WORM.
+
+
+--
+Validation automatique:: Vous aurez la possibilité d'activer la fonction de validation automatique. La fonction autocommit valide un fichier à l'état WORM sur un volume SnapLock si le fichier n'a pas été modifié pendant la période de validation automatique. La fonction de validation automatique est désactivée par défaut. Les fichiers que vous souhaitez effectuer une validation automatique doivent résider sur un volume SnapLock.
+Mode d'ajout de volumes:: Vous ne pouvez pas modifier les données existantes dans un fichier protégé WORM. Cependant, les fichiers immuables vous permettent de conserver la protection des données existantes à l'aide de fichiers WORM. Par exemple, vous pouvez générer des fichiers journaux ou préserver les données de diffusion audio ou vidéo tout en les écrivant de façon incrémentielle. link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/worm-state.html#worm-state-append["En savoir plus sur le mode d'ajout de volumes"^] Dans la documentation Amazon FSX pour NetApp ONTAP.
++
+--
+.Étapes pour les fichiers immuables
+... Sélectionnez pour activer *les fichiers immuables alimentés par SnapLock*.
+... Cliquez sur la case pour accepter et continuer.
+... Cliquez sur *Activer*.
+... *Mode rétention* : sélectionnez le mode *entreprise* ou *conformité*.
+... *Période de conservation* :
++
+**** Sélectionnez la règle de rétention des médias :
++
+***** *Non spécifié* : définit la stratégie de rétention sur 30 ans.
+***** *Spécifiez la période* : saisissez le nombre de secondes, de minutes, d'heures, de jours, de mois ou d'années pour définir votre propre stratégie de conservation.
+
+
+**** Sélectionnez les périodes de conservation minimale et maximale :
++
+***** *Minimum* : saisissez le nombre de secondes, de minutes, d'heures, de jours, de mois ou d'années pour définir la période de rétention minimale.
+***** *Maximum* : saisissez le nombre de secondes, de minutes, d'heures, de jours, de mois ou d'années pour définir la période de rétention maximale.
+
+
+
+
+... *Autocommit* : désactive ou active la validation automatique. Si vous activez la validation automatique, définissez la période de validation automatique.
+... *Mode d'ajout de volume* : désactiver ou activer. Vous permet d'ajouter du nouveau contenu aux fichiers WORM.
+
+
+--
+
 
 .. *Politique d'instantanés* : sélectionnez la stratégie d'instantanés pour spécifier la fréquence et la rétention des instantanés.
 +

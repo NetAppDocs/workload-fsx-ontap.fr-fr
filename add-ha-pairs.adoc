@@ -1,0 +1,53 @@
+---
+sidebar: sidebar 
+permalink: add-ha-pairs.html 
+keywords: add high-availability pairs, add HA pairs, add HA pair, add high-availability pair, scale out, file system, fsx for ontap 
+summary: Ajoutez des paires haute disponibilité à un système de fichiers en usine de workloads BlueXP  pour faire évoluer horizontalement le système de fichiers. 
+---
+= Ajoutez des paires haute disponibilité à un système de fichiers d'usine de workloads BlueXP 
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Ajoutez des paires haute disponibilité pour faire évoluer horizontalement un système de fichiers FSX pour ONTAP de deuxième génération dans l'usine de workloads BlueXP  afin d'améliorer les performances et la capacité. Cette extension améliore l'évolutivité des performances et la flexibilité par rapport aux systèmes de fichiers de première génération.
+
+.Description de la tâche
+Les nouvelles paires haute disponibilité sont ajoutées avec la même référence et la même capacité par paire haute disponibilité.
+
+L'ajout de paires haute disponibilité n'est pas pris en charge dans les cas suivants :
+
+* Déploiements HA multi-AZ ou FSX pour systèmes de fichiers ONTAP de première génération
+* FSX pour les systèmes de fichiers ONTAP avec plus de 5 VM de stockage
+* FSX pour les systèmes de fichiers ONTAP avec des LUN iSCSI
+* Configurations ayant une capacité SSD maximale ou proche du maximum ou ayant atteint les limites d'allocation d'E/S.
+
+
+Tenez compte des points suivants concernant l'ajout de paires haute disponibilité :
+
+* Suppression d'une paire HAUTE DISPONIBILITÉ : les paires HAUTE DISPONIBILITÉ ne peuvent pas être supprimées une fois ajoutées au système de fichiers.
+* Temps de fonctionnement et limites : l'ajout de paires haute disponibilité peut prendre environ 30 minutes. Envisagez d'ajouter des paires haute disponibilité lors d'une fenêtre de maintenance ou lors de périodes d'activité réduite. De plus, l'ajout de paires haute disponibilité limite d'autres opérations, telles que l'ajout de paires haute disponibilité, le provisionnement des IOPS, la hausse de la capacité SSD et la mise à jour de la capacité de débit.
+* Allocation des E/S : l'allocation automatique des E/S dépend de la capacité de stockage totale. Multiplié par le nombre de paires haute disponibilité ajoutées, l'allocation d'E/S configurée par l'utilisateur.
+* Cache NVMe : lors de l'ajout de paires haute disponibilité, le cache NVME est activé par défaut. Nous vous recommandons de désactiver le cache NVMe pour les charges de travail lourdes.
+* Nombre de paires haute disponibilité : nous vous recommandons d'étendre votre système de fichiers à un nombre pair de paires haute disponibilité pour une distribution équilibrée des données entre les paires haute disponibilité.
+* Création de LUN : la création de LUN est possible sur un système de fichiers AZ unique de deuxième génération uniquement si les LUN n'existent pas déjà sur le système de fichiers lors de l'ajout de paires HA. La création de LUN n'est prise en charge que sur un système de fichiers comptant 6 paires HA ou moins.
+
+
+.Avant de commencer
+Avant d'ajouter des paires haute disponibilité à un système de fichiers, procédez comme suit :
+
+* Supprimez toutes les LUN iSCSI pour faire évoluer horizontalement le système de fichiers.
+* Assurez-vous que le système de fichiers ne possède pas plus de 5 machines virtuelles de stockage.
+
+
+.Étapes
+. Connectez-vous à l'aide de l'un des link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].
+. Dans stockage, sélectionnez *accéder à l'inventaire de stockage*.
+. Dans l'onglet *FSX pour ONTAP*, sous *information*, sélectionnez l'icône en forme de crayon en regard de *paires HA*.
+. Dans la boîte de dialogue *Ajouter des paires HA*, sélectionnez le nombre de paires HA à ajouter au système de fichiers.
+. Sélectionnez *Add* pour confirmer l'ajout des paires HA.
+
+
+.Résultat
+L'usine de workloads lance le processus d'ajout des paires haute disponibilité au système de fichiers. Le système de fichiers n'est pas disponible pour d'autres opérations, telles que la création de volumes, tant que les paires haute disponibilité ne sont pas ajoutées. Vous pouvez surveiller la progression de l'opération dans l'onglet *Tracker*.

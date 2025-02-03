@@ -1,0 +1,99 @@
+---
+sidebar: sidebar 
+permalink: monitor-operations.html 
+keywords: monitor databases, monitor jobs, track database jobs 
+summary: 'Suivez FSX pour ONTAP, les informations d"identification et les opérations de liaison et surveillez l"avancement des tâches avec le système de suivi de l"usine de workloads BlueXP  pour le stockage.' 
+---
+= Surveillez les opérations de stockage avec l'outil de suivi en usine de charges de travail BlueXP 
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Surveillez et suivez l'exécution de FSX for ONTAP, les informations d'identification et les opérations de liaison, et surveillez la progression des tâches avec le système de suivi en usine de workloads BlueXP .
+
+.Description de la tâche
+Workload Factory fournit le système de suivi, une fonction de surveillance, qui vous permet de surveiller et de suivre la progression et l'état de FSX for ONTAP, les informations d'identification et les opérations de liaison, d'examiner les détails des tâches d'opération et des sous-tâches, de diagnostiquer les problèmes ou défaillances, de modifier les paramètres pour les opérations ayant échoué et de réessayer les opérations ayant échoué. Vous pouvez filtrer les travaux par type et par état, rechercher des travaux à l'aide de la fonction de recherche et télécharger la table des travaux.
+
+Le Tracker prend en charge jusqu'à trois niveaux de surveillance en fonction du fonctionnement. Chaque tâche, telle que le déploiement du système de fichiers, affiche la description de la tâche, l'état, l'heure de début, la durée de la tâche, l'utilisateur, la région, la ressource proxy, l'ID de la tâche et toutes les sous-tâches associées.
+
+Niveaux de tâche de suivi avec des exemples::
++
+--
+* Niveau 1 (travail parent) : assure le suivi du déploiement d'un système de fichiers.
+* Niveau 2 (sous-travail) : assure le suivi des sous-travaux liés au déploiement du système de fichiers.
+* Niveau 3 (tâche) : liste la séquence des actions entreprises sur chaque ressource.
+
+
+--
+État de l'opération:: L'état d'opération dans le Tracker est le suivant : _in Progress_, _Success_ et _failed_.
++
+--
+Fréquence de fonctionnement:: La fréquence des opérations est basée sur le type de travail et le planning de travail.
+
+
+--
+Conservation des événements:: Les événements sont conservés dans l'interface utilisateur pendant 30 jours.
+
+
+
+
+== Suivez et surveillez les opérations
+
+Suivi et surveillance des opérations dans BlueXP  avec Tracker.
+
+.Étapes
+. Connectez-vous à l'aide de l'un des link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].
+. Dans stockage, sélectionnez *aller à stock de stockage*.
+. Dans l'inventaire de stockage, sélectionnez le menu des paramètres du compte, puis sélectionnez *Tracker*.
++
+image:screenshot-menu-tracker-option.png["Capture d'écran du menu des paramètres du compte avec l'option Tracker mise en surbrillance."]
+
+. Dans l'onglet Tracker, utilisez les filtres ou la recherche pour affiner les résultats du travail. Vous pouvez également télécharger un rapport de travaux.
+
+
+
+
+== Afficher une demande d'API
+
+Affichez la demande API dans la zone de code pour une tâche dans Tracker.
+
+.Étapes
+. Dans Tracker, sélectionnez une tâche.
+. Sélectionnez le menu à trois points, puis sélectionnez *Afficher demande API*.
+
+
+
+
+== Réessayez une opération ayant échoué
+
+Réessayez une opération ayant échoué dans le Tracker. Vous pouvez également copier le message d'erreur d'une opération ayant échoué.
+
+
+NOTE: Seul x nombre de tentatives sont autorisées pour une opération ayant échoué.
+
+.Étapes
+. Dans Tracker, sélectionnez une opération ayant échoué.
+. Sélectionnez le menu à trois points, puis sélectionnez *Réessayer*.
+
+
+.Résultat
+L'opération est lancée à nouveau.
+
+
+
+== Modifiez et réessayez une opération ayant échoué
+
+Modifiez les paramètres de l'opération ayant échoué et relancez l'opération en dehors du Tracker.
+
+.Étapes
+. Dans Tracker, sélectionnez une opération ayant échoué.
+. Sélectionnez le menu à trois points, puis sélectionnez *Modifier et réessayer*.
++
+Vous êtes redirigé vers la page d'opération où vous pouvez modifier les paramètres et réessayer l'opération.
+
+
+
+.Résultat
+L'opération est lancée à nouveau. Accédez à Tracker pour afficher l'état de l'opération.

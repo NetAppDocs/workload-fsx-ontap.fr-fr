@@ -21,6 +21,14 @@ Une liaison est nécessaire pour effectuer certaines opérations, telles que la 
 
 
 
+== Limites de l'ajout de paires haute disponibilité
+
+* Cette opération peut prendre environ 30 minutes.
+* L'ajout de paires haute disponibilité limite les opérations suivantes : ajout de paires haute disponibilité, provisionnement des IOPS, augmentation de la capacité SSD et mise à jour de la capacité de débit.
+
+
+
+
 == Capacité de débit prise en charge par région
 
 
