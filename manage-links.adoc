@@ -11,7 +11,7 @@ summary: 'Vous pouvez afficher les liens associés à votre compte, associer un 
 
 
 [role="lead"]
-Gérez les liens associés à votre compte d'usine de charge de travail BlueXP .
+Gérez les liens associés à votre compte d'usine de charge de travail BlueXP . Vous pouvez afficher les liens associés à un système de fichiers FSX pour ONTAP, associer un lien à un système de fichiers FSX pour ONTAP, modifier un lien et supprimer un lien.
 
 link:links-overview.html["En savoir plus sur les liens"] ou link:create-link.html["créer un lien"].
 

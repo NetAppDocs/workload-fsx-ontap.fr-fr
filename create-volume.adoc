@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: create-volume.html 
 keywords: create volume, FSx for ONTAP volume 
-summary: Après avoir configuré votre système de fichiers FSX pour ONTAP en usine de workloads BlueXP , vous pouvez créer des volumes FSX pour ONTAP. 
+summary: Après avoir configuré votre système de fichiers FSX pour ONTAP, créez les volumes FSX pour ONTAP en usine de workloads BlueXP . 
 ---
 = Créez un volume FSX pour ONTAP en usine de workloads BlueXP 
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: Après avoir configuré votre système de fichiers FSX pour ONTAP en us
 
 
 [role="lead"]
-Une fois que vous avez configuré votre système de fichiers FSX pour ONTAP, vous pouvez créer des volumes FSX pour ONTAP en usine de workloads BlueXP .
+Après avoir configuré votre système de fichiers FSX pour ONTAP, créez les volumes FSX pour ONTAP en usine de workloads BlueXP .
 
 .Description de la tâche
 Les volumes FSX pour ONTAP sont des ressources virtuelles utilisées pour regrouper les données, déterminer leur mode de stockage et déterminer le type d'accès à vos données. Les volumes ne consomment pas de capacité de stockage du système de fichiers. Les données stockées dans un volume se concentrent principalement sur le stockage SSD. Selon la règle de hiérarchisation du volume, les données peuvent également consommer le stockage du pool de capacité. Vous définissez la taille d'un volume lors de sa création, et vous pouvez en modifier la taille ultérieurement.
