@@ -60,13 +60,13 @@ Vous pouvez également charger une configuration enregistrée.
 *** Pour les déploiements scale-up, une seule paire haute disponibilité est disponible.
 *** Pour les déploiements scale-out, vous pouvez avoir entre deux et douze paires haute disponibilité.
 +
-Pour provisionner des volumes en mode bloc iSCSI sur le système de fichiers, ne sélectionnez pas plus de 6 paires HA.
+Pour provisionner des volumes en mode bloc iSCSI sur le système de fichiers, ne sélectionnez pas plus de six paires HA.
 
 
 
 .. *Type de déploiement* : sélectionnez un type de déploiement.
 +
-*** Déploiement dans une seule zone de disponibilité : assure la disponibilité grâce à la surveillance des défaillances matérielles et au remplacement automatique des composants d'infrastructure en cas de défaillance. Assure une durabilité élevée en répliquant automatiquement les données dans une zone de disponibilité afin de les protéger contre les défaillances de composants.
+*** Déploiement dans une zone de disponibilité unique (zone de disponibilité unique) : assure la disponibilité en surveillant les défaillances matérielles et en remplaçant automatiquement les composants d'infrastructure en cas de défaillance. Assure une durabilité élevée en répliquant automatiquement les données dans une zone de disponibilité afin de les protéger contre les défaillances de composants.
 *** Déploiement dans plusieurs zones de disponibilité (plusieurs zones de disponibilité) : assure la disponibilité continue des données même en cas d'indisponibilité d'une zone de disponibilité. Les systèmes de fichiers multi-AZ prennent en charge toutes les fonctionnalités de disponibilité et de durabilité des systèmes de fichiers Single-AZ. Un système de fichiers multi-AZ est conçu pour les workloads de production stratégiques qui requièrent une haute disponibilité pour les données de fichiers ONTAP partagées et du stockage avec réplication intégrée dans les zones de disponibilité.
 
 
@@ -139,7 +139,7 @@ Pour provisionner des volumes en mode bloc iSCSI sur le système de fichiers, ne
 
 .. *Type de déploiement* : sélectionnez un type de déploiement.
 +
-*** Déploiement dans une seule zone de disponibilité : assure la disponibilité grâce à la surveillance des défaillances matérielles et au remplacement automatique des composants d'infrastructure en cas de défaillance. Assure une durabilité élevée en répliquant automatiquement les données dans une zone de disponibilité afin de les protéger contre les défaillances de composants.
+*** Déploiement dans une zone de disponibilité unique (zone de disponibilité unique) : assure la disponibilité en surveillant les défaillances matérielles et en remplaçant automatiquement les composants d'infrastructure en cas de défaillance. Assure une durabilité élevée en répliquant automatiquement les données dans une zone de disponibilité afin de les protéger contre les défaillances de composants.
 *** Déploiement dans plusieurs zones de disponibilité (plusieurs zones de disponibilité) : assure la disponibilité continue des données même en cas d'indisponibilité d'une zone de disponibilité. Les systèmes de fichiers multi-AZ prennent en charge toutes les fonctionnalités de disponibilité et de durabilité des systèmes de fichiers Single-AZ. Un système de fichiers multi-AZ est conçu pour les workloads de production stratégiques qui requièrent une haute disponibilité pour les données de fichiers ONTAP partagées et du stockage avec réplication intégrée dans les zones de disponibilité.
 
 

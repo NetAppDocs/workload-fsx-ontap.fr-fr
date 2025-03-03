@@ -2,22 +2,58 @@
 sidebar: sidebar 
 permalink: rebalance-volume.html 
 keywords: rebalance capacity, volume capacity, redistribute capacity 
-summary: 'Rééquilibrer la capacité d"un volume pour éviter les déséquilibres qui se développent au fil du temps.' 
+summary: 'Contrôler et rééquilibrer la capacité d"un volume pour éviter les déséquilibres qui se développent au fil du temps.' 
 ---
-= Rééquilibrez la capacité d'un volume en usine de charges de travail BlueXP 
+= Contrôler et rééquilibrer la capacité d'un volume
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-Rééquilibrez la capacité d'un volume en usine de charges de travail BlueXP  afin d'éviter les déséquilibres qui se développent au fil du temps.
+Vérifiez l'équilibre entre la capacité du volume FlexGroup et rééquilibrez la capacité du volume pour répartir les fichiers de manière homogène entre tous les composants de sorte que tous les nœuds participent à la charge de travail d'un seul volume Flex Group.
 
 .Description de la tâche
+La capacité des volumes FlexGroup est répartie sur plusieurs composants dans un système de fichiers scale-out FSX pour ONTAP avec au moins deux paires haute disponibilité. Chaque composant est un conteneur qui détermine la taille maximale d'un fichier. FSX pour ONTAP répartit les fichiers entre tous les composants de manière homogène, de sorte que tous les nœuds participent à la charge de travail d'un seul volume FlexGroup.
+
+Lorsque les composants ne sont pas répartis de manière homogène entre tous les nœuds, les performances du volume FlexGroup diminuent.
+
+La vérification du solde de la capacité du volume FlexGroup comprend l'évaluation de la disposition actuelle des composants. Lorsque vous rééquilibrez la capacité du volume, l'usine de charges de travail BlueXP  conçoit une nouvelle disposition constituante avec un nombre pair de composants afin de répartir les données de manière homogène entre toutes les paires haute disponibilité. Le service exécute le plan de rééquilibrage qui, à son tour, améliore les opérations de lecture et d'écriture.
+
 Le rééquilibrage d'un volume redistribue la capacité lorsque les déséquilibres se développent suite à l'ajout de nouveaux fichiers et à la croissance des fichiers. Une fois que vous avez démarré l'opération de rééquilibrage manuellement, nous sélectionnons les fichiers et les déplaçons automatiquement et sans interruption.
 
 
 NOTE: Le rééquilibrage d'un volume n'est pris en charge que pour les volumes FlexGroup.
+
+
+
+== Vérifiez la balance d'un volume FlexGroup
+
+Vérifier la balance d'un volume FlexGroup actif.
+
+.Avant de commencer
+* L'équilibrage des volumes FlexGroup est uniquement disponible pour les systèmes de fichiers FSX pour ONTAP qui utilisent un déploiement scale-out avec au moins deux paires haute disponibilité.
+* Le style de volume doit être un volume FlexGroup.
+* Pour vérifier la balance d'un volume FlexGroup, vous devez link:manage-links.html["associer un lien"]. Si vous n'avez pas de lien existant, link:create-link.html["créer un lien"]. Pour associer un lien dans le système de fichiers, sélectionnez *lien associé* sous *Nom du compte*. Une fois le lien associé, revenez à cette opération.
+
+
+.Étapes
+. Connectez-vous à l'aide de l'un des link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].
+. Dans *stockage*, sélectionnez *aller à l'inventaire de stockage*.
+. Dans l'onglet *FSX pour ONTAP*, sélectionnez le menu à trois points du système de fichiers contenant le volume à rééquilibrer, puis sélectionnez *gérer*.
+. Dans la présentation du système de fichiers, sélectionnez l'onglet *volumes*.
+. Dans l'onglet volumes, sélectionnez *vérifier l'équilibre FlexGroup* en haut de la table.
+. Dans la fenêtre FlexGroup Balance, vérifiez l'état de l'équilibre de tous les volumes FlexGroup dans le système de fichiers FSX pour ONTAP.
++
+Lorsqu'un volume FlexGroup est déséquilibré, considérez <<Rééquilibrez un volume FlexGroup,le rééquilibrage>>.
+
+
+
+
+
+== Rééquilibrez un volume FlexGroup
+
+<<Vérifiez la balance d'un volume FlexGroup,Vérifiez la balance d'un volume FlexGroup>> avant de rééquilibrer les volumes.
 
 .Avant de commencer
 Pour rééquilibrer un volume, vous devez link:manage-links.html["associer un lien"]. Si vous n'avez pas de lien existant, link:create-link.html["créer un lien"]. Pour associer un lien dans le système de fichiers, sélectionnez *lien associé* sous *Nom du compte*. Une fois le lien associé, revenez à cette opération.
@@ -31,3 +67,6 @@ Pour rééquilibrer un volume, vous devez link:manage-links.html["associer un li
 . Sélectionnez *actions avancées*, puis *Volume rééquilibré*.
 . Dans la boîte de dialogue Rebalance volume, sélectionnez *Rebalance*.
 
+
+.Résultat
+La capacité du volume FlexGroup est rééquilibre.

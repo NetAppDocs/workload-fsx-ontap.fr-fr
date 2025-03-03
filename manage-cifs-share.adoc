@@ -62,7 +62,7 @@ Procédez comme suit pour modifier les paramètres de partage CIFS d'un volume.
 . Sur la page gérer le partage CIFS, placez le curseur de la souris sur un partage CIFS et sélectionnez l'icône représentant un crayon pour effectuer des modifications.
 . Modifiez les autorisations d'accès CIFS, ou les utilisateurs ou groupes auxquels vous souhaitez accorder des autorisations.
 +
-Les modifications peuvent entraîner la perte de l'accès des utilisateurs ou des groupes actuels au partage CIFS.
+Des modifications peuvent entraîner la perte de l'accès des utilisateurs ou des groupes actuels au partage CIFS.
 
 . Sélectionnez *appliquer* pour enregistrer les modifications.
 

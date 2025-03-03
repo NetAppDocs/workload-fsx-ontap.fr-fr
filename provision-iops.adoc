@@ -16,7 +16,7 @@ Provisionnez ou provisionnez automatiquement ou manuellement des IOPS SSD pour u
 .Description de la tâche
 Vous pouvez activer le provisionnement automatique d'IOPS SSD pour un système de fichiers FSX ou provisionner manuellement les IOPS.
 
-Les IOPS provisionnées automatiquement sont calculées sous la forme de 3 IOPS par Gio.
+Les IOPS provisionnées automatiquement sont calculées sous la forme de trois IOPS par Gio.
 
 Si vous provisionnez manuellement les IOPS, vous devrez peut-être augmenter les IOPS avant link:increase-file-system-capacity.html["augmentation de la capacité du système de fichiers"].
 

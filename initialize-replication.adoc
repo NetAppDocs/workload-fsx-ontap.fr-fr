@@ -11,7 +11,7 @@ summary: Initialiser une relation de réplication entre les volumes source et ci
 
 
 [role="lead"]
-Initialiser une relation de réplication entre les volumes source et cible en usine de workloads BlueXP 
+Initialiser une relation de réplication entre les volumes source et cible pour transférer le snapshot et tous les blocs de données dans l'usine de workloads BlueXP 
 
 .Description de la tâche
 L'initialisation effectue un transfert _baseline_ : elle crée un instantané du volume source, puis transfère le snapshot et tous les blocs de données qu'il référence au volume cible.

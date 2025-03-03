@@ -2,16 +2,16 @@
 sidebar: sidebar 
 permalink: create-snapshot-policy.html 
 keywords: create 
-summary: Créez une règle Snapshot pour les volumes FSX pour ONTAP en usine de workloads BlueXP . Une règle de snapshots définit la façon dont le système crée des snapshots pour un volume. 
+summary: 'Créez une règle Snapshot personnalisée pour une machine virtuelle de stockage dans l"usine de workloads BlueXP .' 
 ---
-= Créez une règle Snapshot pour les volumes FSX pour ONTAP
+= Créez une règle Snapshot pour les machines virtuelles de stockage en usine de workloads BlueXP 
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-Créez une règle Snapshot personnalisée pour les volumes FSX pour ONTAP en usine de workloads BlueXP . Une règle de snapshots définit la façon dont le système crée des snapshots pour un volume.
+Créez une règle Snapshot personnalisée pour les machines virtuelles de stockage en usine de workloads BlueXP . Une règle Snapshot définit la façon dont le système crée des snapshots pour une machine virtuelle de stockage. Vous pouvez créer une règle Snapshot pour une machine virtuelle de stockage dans un système de fichiers FSX pour ONTAP. Vous pouvez également partager cette règle entre plusieurs machines virtuelles de stockage.
 
 .Description de la tâche
 Vous pouvez créer une règle de snapshot personnalisée différente de celle des trois règles de snapshot intégrées pour FSX for ONTAP :
@@ -39,13 +39,12 @@ La personnalisation d'une stratégie vous permet de spécifier quand créer des 
 . Connectez-vous à l'aide de l'un des link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].
 . Dans *stockage*, sélectionnez *aller à l'inventaire de stockage*.
 . Dans l'onglet *FSX pour ONTAP*, sélectionnez le menu à trois points du système de fichiers avec le volume, puis sélectionnez *gérer*.
-. Dans la présentation du système de fichiers, sélectionnez l'onglet *volumes*.
-. Dans l'onglet *volumes*, sélectionnez le menu à trois points du volume à protéger avec les instantanés planifiés.
-. Sélectionnez *actions de protection des données*, *instantanés*, puis *gérer les stratégies de snapshot*.
-. Sur la page gestion des règles Snapshot, sélectionnez *Créer une nouvelle stratégie d'instantanés*.
+. Dans la présentation du système de fichiers, sélectionnez l'onglet *Storage VMS*.
+. Dans l'onglet *Storage VMS*, sélectionnez le menu à trois points du volume à protéger avec les snapshots planifiés, puis cliquez sur *Advanced actions*, puis sur *Manage snapshot policies*.
+. Sur la page gestion des règles Snapshot, sélectionnez *Créer une stratégie d'instantanés*.
 . Dans le champ *Nom de la stratégie de snapshot*, entrez un nom pour la stratégie de snapshot.
-. Facultatif : dans le champ *Description*, entrez une description de la stratégie de snapshot.
-. Sous *Agenda*, sélectionnez quand créer des instantanés. Par exemple, toutes les minutes ou toutes les heures.
+. Si vous le souhaitez, entrez une description de la règle de snapshot.
+. Sous *Programme de stratégie et copies*, sélectionnez quand créer des instantanés. Par exemple, toutes les minutes ou toutes les heures.
 +
 Vous pouvez sélectionner plusieurs fréquences.
 
@@ -56,7 +55,15 @@ Le nombre maximal de copies est de 1,023.
 . Facultatif : sous *Naming convention*, entrez un *préfixe* pour la stratégie.
 . *Étiquette de conservation* est automatiquement renseignée.
 +
-Cette étiquette fait référence à SnapMirror, ou étiquette de réplication, utilisé pour sélectionner uniquement les snapshots spécifiés pour la réplication du système de fichiers source vers le système de fichiers cible.
+Ce libellé fait référence à l'étiquette SnapMirror, ou de réplication utilisée pour sélectionner uniquement les snapshots spécifiés pour la réplication du système de fichiers source vers le système de fichiers cible.
 
-. Sélectionnez *appliquer*.
+. Facultatif : activez *instantanés immuables* pour tous les horaires dont vous avez besoin, définissez la *période de conservation* pour chaque horaire et acceptez l'instruction pour continuer.
++
+L'activation de snapshots immuables verrouille tous les snapshots dans cette politique de snapshots pour empêcher leur suppression pendant la période de conservation.
 
+. *Partager sur les machines virtuelles de stockage* : activé par défaut. Lorsqu'elle est activée, la règle de snapshot est partagée entre toutes les machines virtuelles de stockage du système de fichiers. Désactivez cette option pour créer une stratégie de snapshots pour une seule machine virtuelle de stockage.
+. Sélectionnez *Créer*.
+
+
+.Résultat
+La politique Snapshot est créée.

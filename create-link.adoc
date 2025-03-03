@@ -24,7 +24,7 @@ Pour créer le lien, vous devez lancer une pile AWS CloudFormation dans votre co
 
 Vous avez deux options pour créer des liens - automatiquement ou manuellement.
 
-* Automatiquement : crée un lien avec l'enregistrement automatique via l'usine de charge de travail. Un lien créé automatiquement nécessite des jetons pour l'automatisation de l'usine des charges de travail et le code CloudFormation est de courte durée. Il ne peut être utilisé que pendant 6 heures maximum.
+* Automatiquement : crée un lien avec l'enregistrement automatique via l'usine de charge de travail. Un lien créé automatiquement nécessite des jetons pour l'automatisation de l'usine des charges de travail et le code CloudFormation est de courte durée. Il ne peut être utilisé que pendant six heures.
 * Manuellement : crée un lien avec l'enregistrement manuel. Le code CloudFormation persiste et vous laisse plus de temps pour effectuer l'opération. Cette fonctionnalité est particulièrement utile lorsque vous travaillez avec des équipes différentes, telles que Security et DevOps, qui peuvent d'abord avoir besoin d'accorder les autorisations nécessaires pour créer des liens.
 
 

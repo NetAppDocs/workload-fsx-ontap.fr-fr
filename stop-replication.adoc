@@ -11,7 +11,7 @@ summary: Arrête une relation de réplication entre les volumes source et cible 
 
 
 [role="lead"]
-Arrêtez une relation de réplication dans l'usine de workloads BlueXP . Lorsque vous arrêtez une relation de réplication, la réplication planifiée est mise à jour du volume source vers le volume cible. Le volume cible passe de la lecture seule à la lecture-écriture.
+Arrêtez une relation de réplication dans l'usine de workloads BlueXP . Lorsque vous arrêtez une relation de réplication, la réplication planifiée est mise à jour du volume source vers le volume cible. Le volume cible passe de lecture seule à lecture/écriture.
 
 .Étapes
 . Connectez-vous à l'aide de l'un des link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].

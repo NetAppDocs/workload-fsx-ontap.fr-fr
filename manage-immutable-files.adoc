@@ -1,0 +1,45 @@
+---
+sidebar: sidebar 
+permalink: manage-immutable-files.html 
+keywords: enable immutable files, disable immutable files, lock files, unlock files 
+summary: Vous pouvez mettre à jour certains paramètres de fichiers immuables lorsque la fonctionnalité est activée. 
+---
+= Gérez les fichiers immuables pour un volume d'une usine de workloads BlueXP 
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Vous pouvez mettre à jour certains paramètres de fichiers immuables pour un volume lorsque cette fonctionnalité est activée, tels que la règle et les périodes de conservation, la période de validation automatique et le mode d'ajout de volume.
+
+Notez que l'activation des fichiers immuables n'est possible que pendant link:create-volume.html["création du volume"].
+
+.Étapes
+. Connectez-vous à l'aide de l'un des link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].
+. Dans stockage, sélectionnez *accéder à l'inventaire de stockage*.
+. Sélectionnez l'onglet *volumes*.
+. Dans l'onglet volumes, sélectionnez le menu des trois points du volume à cloner.
+. Sélectionnez *actions de protection des données*, puis *gérer les fichiers immuables*.
+. Sur la page gérer les fichiers immuables, vous pouvez mettre à jour les éléments suivants :
++
+** *Période de conservation* : sélectionnez *non spécifié* ou *spécifiez la période*.
++
+*** *Non spécifié* : la période minimale par défaut est "0" ans et la période maximale par défaut est "30 ans".
+*** *Specify Period* : option permettant de définir la stratégie de rétention, les périodes minimale et maximale, la fonction autocommit et la fonction de mode d'ajout de volume. Fournissez les informations suivantes :
++
+**** *Politique de conservation* : cette période doit être supérieure ou égale à la période de conservation minimale et inférieure ou égale à la période de conservation maximale.
+**** *Périodes minimum et maximum* : définissez les périodes minimum et maximum pour valider les fichiers de ce volume dans un état WORM immuable.
+
+
+
+
+** *Autocommit* : permet d'activer ou de désactiver la fonction pour valider automatiquement les fichiers en mode WORM qui n'ont pas été modifiés pendant la période d'autovalidation.
+** *Mode d'ajout de volume* : permet d'activer ou de désactiver la fonction. L'activation du mode d'ajout de volumes vous permet d'ajouter du contenu aux fichiers WORM.
+
+
+. Cliquez sur *appliquer*.
+
+
+.Résultat
+Les mises à jour s'appliquent désormais au volume.

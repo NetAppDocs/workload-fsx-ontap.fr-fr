@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: split-cloned-volume.html 
 keywords: split clone volume, FlexVol volume 
-summary: Séparez un volume FlexVol clone de son volume parent pour en faire un volume FlexVol en lecture-écriture standard. 
+summary: Séparez une FlexVol volume de clone de son volume parent pour en faire une FlexVol volume de lecture/écriture standard. 
 ---
 = Diviser un volume cloné en usine de charges de travail BlueXP 
 :allow-uri-read: 

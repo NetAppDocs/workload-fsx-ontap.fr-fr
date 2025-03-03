@@ -29,7 +29,7 @@ Vous créez des liens à partir des pages du système de fichiers FSX pour ONTAP
 
 == Coûts
 
-Chaque transaction effectuée par Lambda entraîne des frais. La Lambda agissant en tant que proxy entre les deux systèmes, ce qui indique que la réponse est envoyée à l'usine de la charge de travail via Lambda d'envoyer une requête à l'API REST de ONTAP sur un système de fichiers et inversement.
+Chaque transaction effectuée par Lambda entraîne des frais. La Lambda agit comme proxy entre les deux systèmes. Par conséquent, l'envoi d'une requête à l'API REST ONTAP sur un système de fichiers et la transmission de la réponse à l'usine de la charge de travail font l'objet d'un frais.
 
 link:https://aws.amazon.com/lambda/pricing/["Découvrez les coûts liés à l'utilisation d'AWS Lambda"^]
 

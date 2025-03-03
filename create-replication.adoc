@@ -18,7 +18,7 @@ La réplication est une couche supplémentaire de protection des données, essen
 
 Cette opération crée une relation de réplication pour un ou tous les volumes source dans un système de fichiers FSX pour ONTAP.
 
-Les volumes répliqués dans le système de fichiers cible suivent le format de dénomination : `{OriginalVolumeName}_copy`.
+Les volumes répliqués dans le système de fichiers cible sont des volumes de protection des données (DP) et suivent le format de nommage suivant : `{OriginalVolumeName}_copy`.
 
 .Avant de commencer
 Assurez-vous de respecter les conditions préalables suivantes avant de commencer.
@@ -33,18 +33,20 @@ Procédez comme suit pour répliquer un seul volume ou répliquer tous les volum
 ====
 .Répliquez un seul volume
 --
+Vous pouvez répliquer un volume source (lecture/écriture) ou un volume de protection des données (DP). Vous ne pouvez pas créer de seconde réplique d'un volume DP.
+
 .Étapes
 . Connectez-vous à l'aide de l'un des link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].
 . Dans stockage, sélectionnez *accéder à l'inventaire de stockage*.
 . Dans l'onglet *FSX pour ONTAP*, sélectionnez le menu à trois points du système de fichiers contenant le volume à répliquer, puis sélectionnez *répliquer les données de volume*.
-. Sur la page Créer une réplication, sous cible de réplication, fournissez les informations suivantes :
+. Sur la page de données répliquées, sous cible de réplication, indiquez les informations suivantes :
 +
 .. *FSX pour système de fichiers ONTAP* : sélectionnez les informations d'identification, la région et le nom du système de fichiers FSX pour ONTAP pour le système de fichiers cible FSX pour ONTAP.
 .. *Nom de la VM de stockage* : sélectionnez la VM de stockage dans le menu déroulant.
 .. *Nom du volume* : le nom du volume cible est généré automatiquement au format suivant `{OriginalVolumeName}_copy`. Vous pouvez utiliser le nom du volume généré automatiquement ou entrer un autre nom de volume.
 .. *Règle de hiérarchisation* : sélectionnez la règle de hiérarchisation pour les données stockées dans le volume cible.
 +
-_Auto_ est la règle de hiérarchisation par défaut lors de la création d'un volume à l'aide de l'interface utilisateur FSX for ONTAP de l'usine de workloads. Pour plus d'informations sur les règles de Tiering de volume, reportez-vous à la section link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/volume-storage-capacity.html#data-tiering-policy["Capacité de stockage du volume"^]dans la documentation d'AWS FSX pour NetApp ONTAP.
+_Auto_ est la règle de hiérarchisation par défaut lors de la création d'un volume à l'aide de l'interface utilisateur FSX for ONTAP de l'usine de workloads. Pour plus d'informations sur les règles de Tiering de volume, reportez-vous à la section link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/volume-storage-capacity.html#data-tiering-policy["Capacité de stockage du volume"^] dans la documentation d'AWS FSX pour NetApp ONTAP.
 
 .. *Taux de transfert max.* : sélectionnez *Limited* et entrez la limite de transfert max. En Mo/s. Vous pouvez également sélectionner *Illimité*.
 +
@@ -60,10 +62,16 @@ Sans limite, les performances du réseau et des applications peuvent diminuer. N
 Si vous activez la conservation à long terme, sélectionnez une règle existante ou créez une nouvelle règle pour définir les snapshots à répliquer et le nombre à conserver.
 
 +
-*** Pour *Choisissez une stratégie existante*, sélectionnez une stratégie existante dans le menu déroulant.
-*** Pour *Créer une nouvelle police*, fournissez les éléments suivants :
+*** *Choisissez une stratégie existante* : sélectionnez une stratégie existante dans le menu déroulant.
+*** *Créer une nouvelle politique* : fournir ce qui suit :
 +
 **** *Nom de la stratégie* : entrez un nom de stratégie.
+**** Facultatif : activez les snapshots immuables.
++
+***** Sélectionnez *Activer les instantanés immuables* pour empêcher la suppression des instantanés pris dans cette stratégie pendant la période de conservation.
+***** Définissez la *période de conservation* en nombre d'heures, de jours, de mois ou d'années.
+
+
 **** *Stratégies Snapshot* : dans le tableau, sélectionnez la fréquence de la règle de snapshot et le nombre de copies à conserver. Vous pouvez sélectionner plusieurs règles de snapshot.
 
 
@@ -77,12 +85,17 @@ Si vous activez la conservation à long terme, sélectionnez une règle existant
 --
 .Répliquez tous les volumes d'un système de fichiers
 --
+Vous pouvez répliquer tous les volumes source (lecture/écriture) et de protection des données (DP) d'un système de fichiers.
+
+
+NOTE: La réplication d'un volume de protection des données est prise en charge une fois.
+
 .Étapes
 . Connectez-vous à l'aide de l'un des link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].
 . Dans stockage, sélectionnez *accéder à l'inventaire de stockage*.
 . Dans l'onglet FSX pour ONTAP, sélectionnez le menu à trois points du système de fichiers avec les volumes, puis sélectionnez *gérer*.
-. Dans la présentation du système de fichiers, sélectionnez *Créer la réplication*.
-. Sur la page Créer une réplication, sous cible de réplication, fournissez les informations suivantes :
+. Dans la présentation du système de fichiers, sélectionnez *répliquer les données*.
+. Sur la page de données répliquées, sous cible de réplication, indiquez les informations suivantes :
 +
 .. *FSX pour système de fichiers ONTAP* : sélectionnez les informations d'identification, la région et le nom du système de fichiers FSX pour ONTAP pour le système de fichiers cible FSX pour ONTAP.
 .. *Nom de la VM de stockage* : sélectionnez la VM de stockage dans le menu déroulant.
@@ -105,8 +118,8 @@ Sans limite, les performances du réseau et des applications peuvent diminuer. N
 Si vous activez la conservation à long terme, sélectionnez une règle existante ou créez une nouvelle règle pour définir les snapshots à répliquer et le nombre à conserver.
 
 +
-*** Pour *Choisissez une stratégie existante*, sélectionnez une stratégie existante dans le menu déroulant.
-*** Pour *Créer une nouvelle police*, fournissez les éléments suivants :
+*** *Choisissez une stratégie existante* : sélectionnez une stratégie existante dans le menu déroulant.
+*** *Créer une nouvelle politique* : fournir ce qui suit :
 +
 **** *Nom de la stratégie* : entrez un nom de stratégie.
 **** *Stratégies Snapshot* : dans le tableau, sélectionnez la fréquence de la règle de snapshot et le nombre de copies à conserver. Vous pouvez sélectionner plusieurs règles de snapshot.
@@ -116,7 +129,7 @@ Si vous activez la conservation à long terme, sélectionnez une règle existant
 
 
 
-. Sélectionnez *Créer*.
+. Sélectionnez *répliquer*.
 
 
 --

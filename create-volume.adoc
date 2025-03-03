@@ -16,7 +16,7 @@ Après avoir configuré votre système de fichiers FSX pour ONTAP, créez les vo
 .Description de la tâche
 Les volumes FSX pour ONTAP sont des ressources virtuelles utilisées pour regrouper les données, déterminer leur mode de stockage et déterminer le type d'accès à vos données. Les volumes ne consomment pas de capacité de stockage du système de fichiers. Les données stockées dans un volume se concentrent principalement sur le stockage SSD. Selon la règle de hiérarchisation du volume, les données peuvent également consommer le stockage du pool de capacité. Vous définissez la taille d'un volume lors de sa création, et vous pouvez en modifier la taille ultérieurement.
 
-Vous pouvez utiliser les protocoles suivants pour vos volumes :
+Vos volumes peuvent utiliser les protocoles suivants :
 
 * CIFS : protocole de stockage de fichiers pour les systèmes d'exploitation Windows
 * NFS : protocole de stockage de fichiers pour les systèmes d'exploitation Unix
@@ -97,7 +97,7 @@ Si vous avez sélectionné une export-policy existante, entrez un nouveau nom de
 
 
 
-*** *Accès en bloc* : permet aux hôtes exécutant des applications métier critiques d'accéder au volume à l'aide du protocole iSCSI. L'accès aux blocs n'est disponible que lorsque le déploiement scale-out du système de fichiers compte 6 paires HA ou moins.
+*** *Accès en bloc* : permet aux hôtes exécutant des applications métier critiques d'accéder au volume à l'aide du protocole iSCSI. L'accès aux blocs n'est disponible que lorsque le déploiement scale-out du système de fichiers compte six paires haute disponibilité ou moins.
 +
 Renseignez les champs suivants pour configurer l'accès en bloc au volume.
 
@@ -122,7 +122,7 @@ Renseignez les champs suivants pour configurer l'accès en bloc au volume.
 +
 L'efficacité du stockage est obtenue grâce aux fonctionnalités de déduplication et de compression de ONTAP. La déduplication permet d'éliminer les blocs de données dupliqués. La compression des données compresse les blocs de données afin de réduire la quantité d'espace de stockage physique nécessaire.
 
-.. *Fichiers immuables* : cette fonction, également appelée SnapLock, est désactivée par défaut. L'activation des fichiers immuables empêche la suppression ou l'écrasement des données pendant une période donnée. L'activation de cette fonction n'est possible qu'au cours de la création du volume. Une fois activée, cette fonction ne peut pas être désactivée. Il s'agit d'une fonctionnalité premium de FSX pour ONTAP qui implique des frais supplémentaires. Pour plus d'informations, reportez-vous link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/how-snaplock-works.html["Fonctionnement de SnapLock"^] à dans la documentation d'Amazon FSX pour NetApp ONTAP.
+.. *Fichiers immuables* : cette fonction, également appelée SnapLock, est désactivée par défaut. L'activation des fichiers immuables empêche la suppression ou l'écrasement des données pendant une période donnée. L'activation de cette fonction n'est possible qu'au cours de la création du volume. Une fois la fonction activée, elle ne peut pas être désactivée. Il s'agit d'une fonctionnalité premium de FSX pour ONTAP qui implique des frais supplémentaires. Pour plus d'informations, reportez-vous link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/how-snaplock-works.html["Fonctionnement de SnapLock"^] à dans la documentation d'Amazon FSX pour NetApp ONTAP.
 +
 L'activation de la fonctionnalité de fichiers immuables valide de manière permanente les fichiers de ce volume dans un état WORM immuable (Write-once-read-many).
 
@@ -148,8 +148,8 @@ Mode d'ajout de volumes:: Vous ne pouvez pas modifier les données existantes da
 --
 .Étapes pour les fichiers immuables
 ... Sélectionnez pour activer *les fichiers immuables alimentés par SnapLock*.
-... Cliquez sur la case pour accepter et continuer.
-... Cliquez sur *Activer*.
+... Cochez la case pour accepter et continuer.
+... Sélectionnez *Activer*.
 ... *Mode rétention* : sélectionnez le mode *entreprise* ou *conformité*.
 ... *Période de conservation* :
 +

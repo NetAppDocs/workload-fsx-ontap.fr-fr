@@ -29,7 +29,7 @@ Choisissez entre _Basic_, _read_ et _automate_ link:https://docs.netapp.com/us-e
 Si vous choisissez d'utiliser le mode _Basic_, vous n'avez pas besoin d'aller plus loin. Vous pouvez commencer à utiliser l'usine de workloads pour FSX for ONTAP afin de copier des exemples de code partiellement remplis.
 
 [role="quick-margin-para"]
-Si vous utilisez le mode _READ_ ou _automate_, vous devrez link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["ajoutez manuellement des informations d'identification à un compte"^] sélectionner les fonctionnalités de charge de travail, telles que les bases de données et l'IA, et créer les stratégies IAM pour vous assurer que vous disposez des autorisations appropriées pour fonctionner en mode _READ_ ou _automate_.
+Si vous utilisez le mode _READ_ ou _automate_, vous devrez link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["ajoutez manuellement des informations d'identification à un compte"^]sélectionner les fonctionnalités de charge de travail, telles que les bases de données et l'IA, et créer les stratégies IAM pour vous assurer que vous disposez des autorisations appropriées pour fonctionner en mode _READ_ ou _automate_.
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["Trois"] Créez un système de fichiers
 [role="quick-margin-para"]
