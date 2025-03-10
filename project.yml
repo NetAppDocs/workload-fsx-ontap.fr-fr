@@ -153,8 +153,6 @@ sidebar:
         - title: Mise à jour manuelle des données de snapshot dans une relation de
             réplication
           url: "/update-snapshot-replication.html"
-        - title: Réplication d'un volume de protection des données
-          url: "/cascade-replication.html"
         - title: Mettre en pause et reprendre une relation de réplication
           url: "/pause-resume-replication.html"
         - title: Arrête une relation de réplication
