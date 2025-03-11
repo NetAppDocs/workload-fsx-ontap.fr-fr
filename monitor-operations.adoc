@@ -21,9 +21,8 @@ Le Tracker prend en charge jusqu'à trois niveaux de surveillance en fonction du
 Niveaux de tâche de suivi avec des exemples::
 +
 --
-* Niveau 1 (travail parent) : assure le suivi du déploiement d'un système de fichiers.
-* Niveau 2 (sous-travail) : assure le suivi des sous-travaux liés au déploiement du système de fichiers.
-* Niveau 3 (tâche) : liste la séquence des actions entreprises sur chaque ressource.
+* Niveau 1 (tâche) : assure le suivi du déploiement du système de fichiers.
+* Niveau 2 (sous-tâche) : effectue le suivi des sous-tâches liées au déploiement du système de fichiers.
 
 
 --
