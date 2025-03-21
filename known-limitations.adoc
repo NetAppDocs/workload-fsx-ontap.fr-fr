@@ -75,6 +75,18 @@ Pour connaître le nombre maximal de SVM par système de fichiers, reportez-vous
 * Les snapshots ne peuvent pas être supprimés.
 * Lorsque vous répliquez un système de fichiers, tous les volumes du système de fichiers utilisent la même règle de réplication.
 * Pour les relations de réplication avec conservation à long terme, seul le dernier snapshot est disponible pour la restauration.
+* Les fonctionnalités suivantes ne sont pas prises en charge avec des snapshots immuables :
++
+** Groupes de cohérence
+** FabricPool
+** Volumes FlexCache
+** Bande SMtape
+** Synchronisation active SnapMirror
+** Règles de stratégie SnapMirror utilisant le paramètre -schedule
+** SnapMirror synchrone
+** Mobilité des données des SVM (utilisé pour la migration ou le déplacement d'un SVM d'un cluster source vers un cluster destination)
+
+
 
 
 

@@ -26,6 +26,7 @@ Par défaut, chaque volume est associé à la règle de snapshot du système de 
 La personnalisation d'une stratégie vous permet de spécifier quand créer des snapshots, combien de copies conserver et comment les nommer.
 
 .Avant de commencer
+* Une fois la règle de snapshot créée, son association avec la ou les VM de stockage ne peut pas être modifiée, mais vous pouvez toujours ajouter ou supprimer la règle des volumes.
 * Avant d'utiliser des snapshots, tenez compte des points suivants :
 +
 ** Pour la plupart des jeux de données, une capacité supplémentaire de 20 % suffit pour conserver les snapshots pendant quatre semaines. À mesure que les données vieillissent, leur utilisation pour les restaurations devient moins probable.
