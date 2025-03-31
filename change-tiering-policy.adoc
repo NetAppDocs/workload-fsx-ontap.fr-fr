@@ -27,12 +27,12 @@ FSX pour ONTAP comporte deux niveaux pour le stockage des données de volume :
 Pour plus d'informations sur les tiers de stockage, reportez-vous à la section link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/managing-storage-capacity.html#storage-tiers["Gestion de la capacité de stockage"^] dans la documentation AWS pour FSX pour NetApp ONTAP.
 
 .Avant de commencer
-Avant de modifier la règle de hiérarchisation, vérifiez les quatre règles de hiérarchisation disponibles.
+Vérifiez les règles de hiérarchisation disponibles avant de les modifier.
 
-* *Auto* : hiérarchise toutes les données inactives qui incluent les données utilisateur et les snapshots sur le niveau de stockage du pool de capacité pour une période spécifique.
-* *Snapshot uniquement* : hiérarchise uniquement les données de snapshot sur le niveau de stockage du pool de capacité.
-* *None* : conserve toutes les données de votre volume sur le niveau de stockage primaire.
-* *Tout* : marque toutes les données utilisateur et les données d'instantané comme inactives et les stocke dans le niveau de stockage du pool de capacité.
+* *Balanced (Auto)* : règle de hiérarchisation par défaut lors de la création d'un volume à l'aide de l'interface utilisateur. Conserve les données fréquemment utilisées dans le Tier de stockage SSD et transfère les données rarement utilisées et les snapshots vers le niveau de stockage du pool de capacité une fois la période de refroidissement terminée. Recommandé pour les charges de travail principales générales.
+* *Optimisé pour les coûts (tous)* : hiérarchise tous les snapshots et les données vers le niveau de stockage du pool de capacité. Recommandé pour les cibles secondaires.
+* *Optimisation des performances (snapshots uniquement)* : Tiering des données snapshot uniquement sur le niveau de stockage du pool de capacité. Recommandé pour les charges de travail à faible latence telles que les bases de données stratégiques.
+* *None* : conserve les données de volume dans le niveau de stockage SSD, ce qui les empêche de les déplacer vers le niveau de stockage du pool de capacité.
 
 
 Notez que certaines règles de hiérarchisation ont une période de refroidissement minimale qui définit la durée, ou _journées de refroidissement_, pendant laquelle les données utilisateur d'un volume doivent rester inactives pour que les données soient considérées comme inactives et déplacées vers le niveau de stockage du pool de capacité. La période de refroidissement commence lorsque les données sont écrites sur le disque.
@@ -44,12 +44,12 @@ Notez que certaines règles de hiérarchisation ont une période de refroidissem
 . Dans la présentation du système de fichiers, sélectionnez l'onglet *volumes*.
 . Dans l'onglet volumes, sélectionnez le menu à trois points du volume pour lequel modifier la règle de Tiering.
 . Sélectionnez *actions avancées*, puis *Modifier la stratégie de hiérarchisation*.
-. Sur la page Modifier la règle de hiérarchisation, sélectionnez l'une des règles de hiérarchisation suivantes :
+. Sur la page Modifier la règle de hiérarchisation, sélectionnez pour copier la règle de hiérarchisation du volume source ou sélectionnez l'une des règles de hiérarchisation suivantes :
 +
-** *Auto* : saisissez le nombre de jours de refroidissement.
-** *Instantané seulement* : saisissez le nombre de jours de refroidissement.
+** *Équilibré (Auto)* : saisissez le nombre de jours de refroidissement.
+** *Coûts optimisés (tous)*
+** *Optimisé pour les performances (instantanés uniquement)* : saisissez le nombre de jours de refroidissement.
 ** *Aucun*
-** *Tous*
 
 
 . Sélectionnez *appliquer*.

@@ -38,8 +38,9 @@ Pour vous assurer que les inodes de volume augmentent avec la capacité de stock
 +
 Vous pouvez également désactiver la fonction. Si vous devez augmenter la capacité du système de fichiers, vous devez d'abord désactiver la gestion automatique de la capacité.
 
-.. *Seuil de capacité* : entrez la taille maximale du système de fichiers FSX pour ONTAP.
-.. *Incréments d'augmentation de capacité* : entrez le pourcentage pour augmenter la capacité progressivement.
+.. *Augmentation du seuil* : entrez la taille maximale du système de fichiers FSX pour ONTAP.
+.. *Augmentation incrémentale* : entrez le pourcentage pour augmenter la capacité progressivement.
+.. Facultatif : activez la gestion automatique des inodes pour vous assurer que la capacité des fichiers par volume augmente en augmentant le nombre d'inodes (fichiers) jusqu'à la limite autorisée.
 
 
 . Sélectionnez *appliquer*.

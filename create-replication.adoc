@@ -44,9 +44,25 @@ Vous pouvez répliquer un volume source (lecture/écriture) ou un volume de prot
 .. *FSX pour système de fichiers ONTAP* : sélectionnez les informations d'identification, la région et le nom du système de fichiers FSX pour ONTAP pour le système de fichiers cible FSX pour ONTAP.
 .. *Nom de la VM de stockage* : sélectionnez la VM de stockage dans le menu déroulant.
 .. *Nom du volume* : le nom du volume cible est généré automatiquement au format suivant `{OriginalVolumeName}_copy`. Vous pouvez utiliser le nom du volume généré automatiquement ou entrer un autre nom de volume.
-.. *Règle de hiérarchisation* : sélectionnez la règle de hiérarchisation pour les données stockées dans le volume cible.
+.. *Cas d'utilisation* : sélectionnez l'un des cas d'utilisation suivants pour la réplication. Selon le cas d'utilisation sélectionné, l'usine de charge de travail remplit le formulaire avec les valeurs recommandées conformément aux meilleures pratiques. Vous pouvez accepter les valeurs recommandées ou apporter des modifications au fur et à mesure que vous remplissez le formulaire.
 +
-_Auto_ est la règle de hiérarchisation par défaut lors de la création d'un volume à l'aide de l'interface utilisateur FSX for ONTAP de l'usine de workloads. Pour plus d'informations sur les règles de Tiering de volume, reportez-vous à la section link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/volume-storage-capacity.html#data-tiering-policy["Capacité de stockage du volume"^] dans la documentation d'AWS FSX pour NetApp ONTAP.
+*** Migration : transfère vos données vers le système de fichiers cible FSX pour ONTAP
+*** Reprise après incident à chaud : assure une haute disponibilité et une reprise après incident rapide pour les workloads stratégiques
+*** Reprise après incident des données inactives ou d'archivage :
++
+**** Reprise d'activité à froid : utilise des objectifs de délai de restauration (RTO) et des objets de point de restauration (RPO) plus longs pour réduire les coûts
+**** Archive : réplique les données pour un stockage et une conformité à long terme
+
+
+*** Autre
+
+
+.. *Règle de hiérarchisation* : sélectionnez la règle de hiérarchisation pour les données stockées dans le volume cible. La règle de Tiering est définie par défaut sur la règle de hiérarchisation recommandée pour le cas d'utilisation que vous avez sélectionné.
++
+_Balanced (Auto)_ est la règle de hiérarchisation par défaut lors de la création d'un volume à l'aide de la console d'usine de la charge de travail. Pour plus d'informations sur les règles de Tiering de volume, reportez-vous à la section link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/volume-storage-capacity.html#data-tiering-policy["Capacité de stockage du volume"^] dans la documentation d'AWS FSX pour NetApp ONTAP. Notez que Workload Factory utilise des noms basés sur des cas d'utilisation dans la console d'usine de workloads pour les règles de Tiering et inclut les noms des règles de Tiering FSX pour ONTAP entre parenthèses.
+
++
+Si vous avez sélectionné l'utilisation de la migration, Workload Factory sélectionne automatiquement la règle de Tiering du volume source vers le volume cible. Vous pouvez désélectionner cette option pour copier la règle de hiérarchisation et sélectionner une règle de hiérarchisation qui s'applique au volume sélectionné pour la réplication.
 
 .. *Taux de transfert max.* : sélectionnez *Limited* et entrez la limite de transfert max. En Mo/s. Vous pouvez également sélectionner *Illimité*.
 +
@@ -100,9 +116,25 @@ NOTE: La réplication d'un volume de protection des données est prise en charge
 .. *FSX pour système de fichiers ONTAP* : sélectionnez les informations d'identification, la région et le nom du système de fichiers FSX pour ONTAP pour le système de fichiers cible FSX pour ONTAP.
 .. *Nom de la VM de stockage* : sélectionnez la VM de stockage dans le menu déroulant.
 .. *Nom du volume* : le nom du volume cible est généré automatiquement au format suivant `{OriginalVolumeName}_copy`.
-.. *Règle de hiérarchisation* : sélectionnez la règle de hiérarchisation pour les données stockées dans le volume cible.
+.. *Cas d'utilisation* : sélectionnez l'un des cas d'utilisation suivants pour la réplication. Selon le cas d'utilisation sélectionné, l'usine de charge de travail remplit le formulaire avec les valeurs recommandées conformément aux meilleures pratiques. Vous pouvez accepter les valeurs recommandées ou apporter des modifications au fur et à mesure que vous remplissez le formulaire.
 +
-_Auto_ est la règle de hiérarchisation par défaut lors de la création d'un volume à l'aide de l'interface utilisateur FSX for ONTAP de l'usine de workloads. Pour plus d'informations sur les règles de Tiering de volume, reportez-vous à la section link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/volume-storage-capacity.html#data-tiering-policy["Capacité de stockage du volume"^]dans la documentation d'AWS FSX pour NetApp ONTAP.
+*** Migration : transfère vos données vers le système de fichiers cible FSX pour ONTAP
+*** Reprise après incident à chaud : assure une haute disponibilité et une reprise après incident rapide pour les workloads stratégiques
+*** Reprise après incident des données inactives ou d'archivage :
++
+**** Reprise d'activité à froid : utilise des objectifs de délai de restauration (RTO) et des objets de point de restauration (RPO) plus longs pour réduire les coûts
+**** Archive : réplique les données pour un stockage et une conformité à long terme
+
+
+*** Autre
+
+
+.. *Règle de hiérarchisation* : sélectionnez la règle de hiérarchisation pour les données stockées dans le volume cible. La règle de Tiering est définie par défaut sur la règle de hiérarchisation recommandée pour le cas d'utilisation que vous avez sélectionné.
++
+_Balanced (Auto)_ est la règle de hiérarchisation par défaut lors de la création d'un volume à l'aide de la console d'usine de la charge de travail. Pour plus d'informations sur les règles de Tiering de volume, reportez-vous à la section link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/volume-storage-capacity.html#data-tiering-policy["Capacité de stockage du volume"^] dans la documentation d'AWS FSX pour NetApp ONTAP. Notez que Workload Factory utilise des noms basés sur des cas d'utilisation dans la console d'usine de workloads pour les règles de Tiering et inclut les noms des règles de Tiering FSX pour ONTAP entre parenthèses.
+
++
+Si vous avez sélectionné le cas d'utilisation de la migration, Workload Factory sélectionne automatiquement la règle de Tiering des volumes source vers les volumes cible du système de fichiers. Vous pouvez désélectionner cette option pour copier la règle de hiérarchisation et sélectionner une règle de hiérarchisation qui s'applique aux volumes du système de fichiers cible pour la réplication.
 
 .. *Taux de transfert max.* : sélectionnez *Limited* et entrez la limite de transfert max. En Mio/s. Vous pouvez également sélectionner *Illimité*.
 +
