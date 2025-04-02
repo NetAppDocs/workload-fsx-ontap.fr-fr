@@ -94,7 +94,6 @@
   <block id="c90eb480f69fa94333471c53a08ebfb9" category="list-text">Sélectionnez *actions de protection des données*, *FSX pour sauvegarde ONTAP*, puis *sauvegarde manuelle*.</block>
   <block id="efb6cdeb8b2e5095e65f43be813e1f3d" category="list-text">Dans la boîte de dialogue sauvegarde manuelle, entrez un nom pour la sauvegarde.</block>
   <block id="2fdd0cbe402a8ae2149e0cdf4e1d9b9c" category="doc">Créez un système de fichiers FSX pour ONTAP</block>
-  <block id="1633ddc656802ead23bcb179d8c7fcad" category="paragraph">Une VM de stockage est créée lors de la création d'un système de fichiers.</block>
   <block id="d0e7f7527c3a0ceae557c9f12bb1d5e7" category="paragraph">Avant de créer votre système de fichiers FSX pour ONTAP, vous aurez besoin des éléments suivants :</block>
   <block id="bf2ef084e923ce6ebc4b57db27892de8" category="inline-link-macro">Découvrez comment accorder des autorisations à un compte AWS</block>
   <block id="aba4a700f63e9801b4211989fc2b559f" category="list-text">La région et les informations VPC pour lesquelles vous allez créer l'instance FSX pour ONTAP.</block>
@@ -1615,4 +1614,59 @@
   <block id="83b9d06ffc256e2f2bbc40862d118517" category="list-text">*Augmentation incrémentale* : entrez le pourcentage pour augmenter la capacité progressivement.</block>
   <block id="67cfcc957e64e9b21fe6f9036930ba34" category="list-text">Facultatif : activez la gestion automatique des inodes pour vous assurer que la capacité des fichiers par volume augmente en augmentant le nombre d'inodes (fichiers) jusqu'à la limite autorisée.</block>
   <block id="db54384248c75c5896f34bcb0879b66c" category="section-title">30 mars 2025</block>
+  <block id="4992f7a0d7d6ee4776bb87ff9118642c" category="section-title">Détails du groupe de sécurité pour la création du système de fichiers</block>
+  <block id="b7cc50bb665bb63168fb8d2e9eebaedc" category="paragraph">Un groupe de sécurité est créé dans le cadre du processus de création du système de fichiers FSX pour ONTAP. Les détails des groupes de sécurité, notamment les protocoles, les ports et les rôles, sont désormais disponibles.</block>
+  <block id="c01337184cb4ac9f93392756fbda21b2" category="paragraph">Une VM de stockage et un groupe de sécurité sont créés dans le cadre de la création du système de fichiers.</block>
+  <block id="4f1bd0ace83aba374b7ff69066a53c58" category="inline-xref">détails du groupe de sécurité</block>
+  <block id="e41bac724f43b475f854e3aa1664b8de" category="paragraph">Pour un nouveau groupe de sécurité, reportez-vous à  la section <block ref="592b894db662c6a6a8229aea3f9a37fa" category="inline-xref-macro-rx"></block> pour obtenir une description des protocoles, ports et rôles du groupe de sécurité.</block>
+  <block id="a9113545432d09ba8c980e33a353098c" category="section-title">Détails du groupe de sécurité</block>
+  <block id="b75818945df7ef497c1bc036f0755e80" category="paragraph">Le tableau suivant fournit des détails sur les groupes de sécurité, notamment les protocoles, les ports et les rôles.</block>
+  <block id="888a77f5ac0748b6c8001822417df8b6" category="cell">Protocole</block>
+  <block id="60aaf44d4b562252c04db7f98497e9aa" category="cell">Port</block>
+  <block id="bbbabdbe1b262f75d99d62880b953be1" category="cell">Rôle</block>
+  <block id="765553e6c7ac8592c389acb9878a050a" category="cell">SSH</block>
+  <block id="b6d767d2f8ed5d21a44b0e5886680cb9" category="cell">22</block>
+  <block id="68e68bb8029eb3e7ed079fea7b679d99" category="paragraph">Accès SSH à l'adresse IP du LIF de gestion de cluster ou d'un LIF de gestion de nœud</block>
+  <block id="b136ef5f6a01d816991fe3cf7a6ac763" category="cell">TCP</block>
+  <block id="f033ab37c30201f73f142449d037028d" category="cell">80</block>
+  <block id="fca3da53e0b9248c897fe36ae278304b" category="paragraph">Accès à la page Web de l'adresse IP du LIF de cluster management</block>
+  <block id="8962b8350728e2f6eb9cbbb07ca70d86" category="cell">TCP/UDP</block>
+  <block id="698d51a19d8a121ce581499d7b701668" category="cell">111</block>
+  <block id="42309a274997c44da61b489d9df7edc8" category="paragraph">Appel de procédure à distance pour NFS</block>
+  <block id="7f1de29e6da19d22b51c68001e7e0e54" category="cell">135</block>
+  <block id="4a6fc78f32cc0bb0470474e87efa7921" category="paragraph">Appel de procédure à distance pour CIFS</block>
+  <block id="f5ef036b4d8b630721e51fe23489fbc9" category="cell">UDP</block>
+  <block id="3988c7f88ebcb58c6ce932b957b6f332" category="cell">137</block>
+  <block id="27565dd036f8d2af75026159f4a268d9" category="paragraph">Résolution de nom NetBIOS pour CIFS</block>
+  <block id="e00da03b685a0dd18fb6a08af0923de0" category="cell">139</block>
+  <block id="f578101933ae5aa506411a00b33b06ec" category="paragraph">Session de service NetBIOS pour CIFS</block>
+  <block id="13f3cf8c531952d72e5847c4183e6910" category="cell">443</block>
+  <block id="9a5cd41d624e3fa2b53ce5d176a286ee" category="paragraph">Accès à l'API REST de ONTAP à l'adresse IP de la LIF de cluster management ou d'une LIF de SVM management</block>
+  <block id="67f7fb873eaf29526a11a9b7ac33bfac" category="cell">445</block>
+  <block id="100c97ce556d60c86e5d8b424c3ed3ad" category="paragraph">Microsoft SMB/CIFS sur TCP avec encadrement NetBIOS</block>
+  <block id="6a10bbd480e4c5573d8f3af73ae0454b" category="cell">635</block>
+  <block id="718b3fb251c2987c99ce9d2d23eb38b6" category="paragraph">Montage NFS</block>
+  <block id="b056eb1587586b71e2da9acfe4fbd19e" category="cell">749</block>
+  <block id="87b3695bfd6f672e2c7c4da7ca2b46a8" category="paragraph">Kerberos</block>
+  <block id="06b1338ba02add2b5d2da67663b19ebe" category="cell">2049</block>
+  <block id="02c69a3a7485c8d2f899c2eb58f8be50" category="paragraph">Démon du serveur NFS</block>
+  <block id="d54ce9de9df77c579775a7b6b1a4bdc0" category="cell">3260</block>
+  <block id="decc72453fd5881c6144ead65577abe0" category="paragraph">Accès iSCSI via le LIF de données iSCSI</block>
+  <block id="ee0e95249268b86ff2053bef214bfeda" category="cell">4045</block>
+  <block id="3efa34cc491e9e34264231984db1c224" category="paragraph">Démon de verrouillage NFS</block>
+  <block id="354ac345fd8c6d7ef634d9a8e3d47b83" category="cell">4046</block>
+  <block id="6e1768e34172523fffe5e878d95f0f1a" category="paragraph">Surveillance de l'état du réseau pour NFS</block>
+  <block id="89a4779d3836ea432f7ea074e522a17e" category="cell">4049</block>
+  <block id="1e1381cbb01d72cf7be1c2036ab5e8ea" category="paragraph">Protocole de quota NFS</block>
+  <block id="b7a782741f667201b54880c925faec4b" category="cell">10000</block>
+  <block id="b093682e25d4e8962a08631ae7ae99fc" category="paragraph">Protocole de gestion des données réseau (NDMP) et communication NetApp SnapMirror intercluster</block>
+  <block id="bf03faf089665754a8af5dce381a42ca" category="cell">11104</block>
+  <block id="67e1ed40020a35348b4319bca17e25fa" category="paragraph">Gestion de la communication NetApp SnapMirror intercluster</block>
+  <block id="f0f07e680de407b0f12abf15bd520097" category="cell">11105</block>
+  <block id="d03bcbb93f8e29ffb08772b43b55d234" category="paragraph">Transfert de données SnapMirror à l'aide de LIF intercluster</block>
+  <block id="ff86b94aeb68e2de5387c9dbf865b3b9" category="cell">161-162</block>
+  <block id="a0efde43ffba66184a5c31319245ffda" category="paragraph">Protocole SNMP (simple Network Management Protocol)</block>
+  <block id="d4b4ed7579a4f9267cc7dff8a948018e" category="cell">Tous les protocoles ICMP</block>
+  <block id="b1c94ca2fbc3e78fc30069c8d0f01680" category="cell">Tout</block>
+  <block id="fbabb5b35538d91f91e0e1d4f56ff5a4" category="paragraph">Envoi d'une requête ping à l'instance</block>
 </blocks>

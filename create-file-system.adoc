@@ -14,7 +14,7 @@ summary: 'En utilisant l"usine de workloads BlueXP , vous pouvez créer un syst
 En utilisant l'usine de workloads BlueXP , vous pouvez créer un système de fichiers FSX pour ONTAP afin d'ajouter et de gérer des volumes et des services de données supplémentaires.
 
 .Description de la tâche
-Une VM de stockage est créée lors de la création d'un système de fichiers.
+Une VM de stockage et un groupe de sécurité sont créés dans le cadre de la création du système de fichiers.
 
 .Avant de commencer
 Avant de créer votre système de fichiers FSX pour ONTAP, vous aurez besoin des éléments suivants :
@@ -150,6 +150,9 @@ Pour provisionner des volumes en mode bloc iSCSI sur le système de fichiers, ne
 +
 .. *Région et VPC* : sélectionnez la région et VPC pour le système de fichiers.
 .. *Groupe de sécurité* : créez ou utilisez un groupe de sécurité existant.
++
+Pour un nouveau groupe de sécurité, reportez-vous à  la section <<Détails du groupe de sécurité,détails du groupe de sécurité>> pour obtenir une description des protocoles, ports et rôles du groupe de sécurité.
+
 .. *Zones de disponibilité* : sélectionnez les zones de disponibilité et les sous-réseaux.
 +
 *** Pour le nœud de configuration de cluster 1 : sélectionnez une zone de disponibilité et un sous-réseau.
@@ -207,6 +210,119 @@ Si vous vous joignez à un AD autogéré, utilisez le nom du groupe dans votre A
 Si vous avez créé le système de fichiers, vous pouvez maintenant afficher le système de fichiers FSX pour ONTAP dans la page *Inventaire*.
 
 --
+====
+
+
+== Détails du groupe de sécurité
+
+Le tableau suivant fournit des détails sur les groupes de sécurité, notamment les protocoles, les ports et les rôles.
+
+[]
+====
+[cols="2,2,4a"]
+|===
+| Protocole | Port | Rôle 
+
+
+| SSH | 22  a| 
+Accès SSH à l'adresse IP du LIF de gestion de cluster ou d'un LIF de gestion de nœud
+
+
+
+| TCP | 80  a| 
+Accès à la page Web de l'adresse IP du LIF de cluster management
+
+
+
+| TCP/UDP | 111  a| 
+Appel de procédure à distance pour NFS
+
+
+
+| TCP/UDP | 135  a| 
+Appel de procédure à distance pour CIFS
+
+
+
+| UDP | 137  a| 
+Résolution de nom NetBIOS pour CIFS
+
+
+
+| TCP/UDP | 139  a| 
+Session de service NetBIOS pour CIFS
+
+
+
+| TCP | 443  a| 
+Accès à l'API REST de ONTAP à l'adresse IP de la LIF de cluster management ou d'une LIF de SVM management
+
+
+
+| TCP | 445  a| 
+Microsoft SMB/CIFS sur TCP avec encadrement NetBIOS
+
+
+
+| TCP/UDP | 635  a| 
+Montage NFS
+
+
+
+| TCP | 749  a| 
+Kerberos
+
+
+
+| TCP/UDP | 2049  a| 
+Démon du serveur NFS
+
+
+
+| TCP | 3260  a| 
+Accès iSCSI via le LIF de données iSCSI
+
+
+
+| TCP/UDP | 4045  a| 
+Démon de verrouillage NFS
+
+
+
+| TCP/UDP | 4046  a| 
+Surveillance de l'état du réseau pour NFS
+
+
+
+| UDP | 4049  a| 
+Protocole de quota NFS
+
+
+
+| TCP | 10000  a| 
+Protocole de gestion des données réseau (NDMP) et communication NetApp SnapMirror intercluster
+
+
+
+| TCP | 11104  a| 
+Gestion de la communication NetApp SnapMirror intercluster
+
+
+
+| TCP | 11105  a| 
+Transfert de données SnapMirror à l'aide de LIF intercluster
+
+
+
+| TCP/UDP | 161-162  a| 
+Protocole SNMP (simple Network Management Protocol)
+
+
+
+| Tous les protocoles ICMP | Tout  a| 
+Envoi d'une requête ping à l'instance
+
+|===
 ====
 .Et la suite
 Avec un système de fichiers dans votre inventaire de stockage, vous pouvez link:create-volume.html["créer des volumes"], gérer votre système de fichiers FSX pour ONTAP et le configurer link:data-protection-overview.html["protection des données"] pour vos ressources.
