@@ -55,6 +55,17 @@ Vous pouvez répliquer un volume source (lecture/écriture) ou un volume de prot
 
 
 *** Autre
++
+En outre, la sélection du cas d'utilisation détermine la règle de réplication ou la règle SnapMirror (ONTAP). Les termes utilisés pour décrire les règles de réplication proviennent de link:https://docs.netapp.com/us-en/ontap/data-protection/default-protection-policies-concept.html["Documentation sur ONTAP 9"^].
+
++
+**** Pour la migration et les autres, la règle de réplication est appelée _MirrorAllsnapshots_. _MirrorAllsnapshots_ est une règle asynchrone pour la mise en miroir de tous les snapshots et du dernier système de fichiers actif.
+**** Pour la reprise après incident à chaud, à froid ou d'archivage, la stratégie de réplication est appelée _MirrorAndVault_. _MirrorAndVault_ est une règle asynchrone et de coffre-fort pour la mise en miroir du dernier système de fichiers actif et des snapshots quotidiens et hebdomadaires.
++
+Pour tous les cas d'utilisation, si vous activez les snapshots pour la conservation à long terme, la règle de réplication par défaut est _MirrorAndVault_.
+
+
+
 
 
 .. *Règle de hiérarchisation* : sélectionnez la règle de hiérarchisation pour les données stockées dans le volume cible. La règle de Tiering est définie par défaut sur la règle de hiérarchisation recommandée pour le cas d'utilisation que vous avez sélectionné.
@@ -127,6 +138,17 @@ NOTE: La réplication d'un volume de protection des données est prise en charge
 
 
 *** Autre
++
+En outre, la sélection du cas d'utilisation détermine la règle de réplication ou la règle SnapMirror (ONTAP). Les termes utilisés pour décrire les règles de réplication proviennent de link:https://docs.netapp.com/us-en/ontap/data-protection/default-protection-policies-concept.html["Documentation sur ONTAP 9"^].
+
++
+**** Pour la migration et les autres, la règle de réplication est appelée _MirrorAllsnapshots_. _MirrorAllsnapshots_ est une règle asynchrone pour la mise en miroir de tous les snapshots et du dernier système de fichiers actif.
+**** Pour la reprise après incident à chaud, à froid ou d'archivage, la stratégie de réplication est appelée _MirrorAndVault_. _MirrorAndVault_ est une règle asynchrone et de coffre-fort pour la mise en miroir du dernier système de fichiers actif et des snapshots quotidiens et hebdomadaires.
++
+Pour tous les cas d'utilisation, si vous activez les snapshots pour la conservation à long terme, la règle de réplication par défaut est _MirrorAndVault_.
+
+
+
 
 
 .. *Règle de hiérarchisation* : sélectionnez la règle de hiérarchisation pour les données stockées dans le volume cible. La règle de Tiering est définie par défaut sur la règle de hiérarchisation recommandée pour le cas d'utilisation que vous avez sélectionné.
