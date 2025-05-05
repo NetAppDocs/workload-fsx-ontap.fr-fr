@@ -1,49 +1,39 @@
 ---
 sidebar: sidebar 
-permalink: create-replication.html 
-keywords: replication, replicate 
-summary: 'Créez une relation de réplication pour un système de fichiers FSX pour ONTAP afin d"éviter la perte de données en cas d"incident imprévu.' 
+permalink: cascade-replication.html 
+keywords: replicate, cascade, cascade replication, cascade deployment, data protection, volume replication, replicate data protection volume 
+summary: Répliquez des volumes de protection des données, ou faites en cascade la réplication des données de volume, pour étendre la protection des données aux systèmes tertiaires ou pour migrer vos données. 
 ---
-= Créez une relation de réplication dans une usine de workloads BlueXP 
+= Répliquez les volumes de protection des données dans l'usine de workloads BlueXP
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-Créez une relation de réplication pour un système de fichiers FSX for ONTAP en usine de workloads BlueXP  afin d'éviter toute perte de données en cas d'incident imprévu.
+Répliquez des volumes de protection des données, ou faites en cascade la réplication des données de volume, pour étendre la protection des données aux systèmes tertiaires ou pour migrer vos données.
 
 .Description de la tâche
-La réplication est une couche supplémentaire de protection des données, essentielle au cas où la région où vos données résident subit un incident. La perte de données peut être évitée en cas d'utilisation de la réplication interrégionale.
+L'usine de charge de travail BlueXP  prend en charge la réplication des volumes de protection des données, également appelés _déploiements en cascade_. Un déploiement _cascade_ se compose d'une chaîne de relations dans laquelle un volume source est mis en miroir sur un volume secondaire (premier saut), et le volume secondaire est mis en miroir sur un volume tertiaire (deuxième saut). Si le volume secondaire n'est plus disponible, vous pouvez synchroniser la relation entre les volumes primaire et tertiaire sans effectuer de nouveau transfert de base.
 
-Cette opération crée une relation de réplication pour un ou tous les volumes source dans un système de fichiers FSX pour ONTAP.
+Cette fonctionnalité est prise en charge par FSX pour les systèmes de fichiers ONTAP avec ONTAP version 9.6 et supérieure. Reportez-vous à la link:https://docs.netapp.com/us-en/ontap/data-protection/compatible-ontap-versions-snapmirror-concept.html#snapmirror-disaster-recovery-relationships["Documentation ONTAP pour les versions ONTAP compatibles"^].
 
-Les volumes répliqués dans le système de fichiers cible sont des volumes de protection des données (DP) et suivent le format de nommage suivant : `{OriginalVolumeName}_copy`.
+En savoir plus sur link:https://docs.netapp.com/us-en/ontap/data-protection/supported-deployment-config-concept.html#how-cascade-deployments-work["fonctionnement des déploiements en cascade"^].
 
 .Avant de commencer
-Assurez-vous de respecter les conditions préalables suivantes avant de commencer.
+Avant de commencer, tenez compte des points suivants :
 
-* Vous devez disposer de deux systèmes de fichiers disponibles dans votre inventaire de stockage pour créer une relation de réplication.
-* Les deux systèmes de fichiers que vous utilisez pour la relation de réplication doivent avoir un lien associé. Si les systèmes de fichiers n'ont pas de liens existants, link:create-link.html["commencez par créer un lien"]. link:manage-links.html["associer un lien"]Dans les systèmes de fichiers, sélectionnez *associer lien* sous *Nom du compte*. Une fois le lien associé dans les deux systèmes de fichiers, revenez à cette opération.
+* Notez que la resynchronisation des volumes faisant partie d'une configuration en cascade peut prendre plus de temps.
+* Si le volume source de la relation est un volume de protection des données et qu'il est la cible d'une autre relation, l'inversion de la relation de réplication n'est pas prise en charge.
+* Une réplique d'un volume de protection des données (ou un deuxième saut) est prise en charge. Il n'est pas recommandé de créer une seconde réplique d'un volume de protection des données (ou un troisième saut).
 
-
-Procédez comme suit pour répliquer des volumes sélectionnés ou répliquer tous les volumes d'un système de fichiers.
-
-Vous pouvez répliquer un volume source (lecture/écriture) ou un volume de protection des données (DP). La réplication en cascade est prise en charge, mais pas un troisième saut. En savoir plus sur link:https://review.docs.netapp.com/us-en/workload-fsx-ontap_cascade-replication/cascade-replication.html["réplication en cascade"^].
 
 .Étapes
 . Connectez-vous à l'aide de l'un des link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].
 . Dans stockage, sélectionnez *accéder à l'inventaire de stockage*.
 . Dans l'onglet *FSX pour ONTAP*, sélectionnez le menu à trois points du système de fichiers contenant le ou les volumes à répliquer, puis sélectionnez *gérer*.
-. Répliquer tous les volumes d'un système de fichiers ou répliquer les volumes sélectionnés.
-+
-** Pour répliquer tous les volumes d'un système de fichiers : dans la vue d'ensemble du système de fichiers, sélectionnez *répliquer les données*.
-** Pour répliquer des volumes sélectionnés : dans l'aperçu du système de fichiers, sélectionnez l'onglet *volumes*.
-+
-Dans le tableau volumes, sélectionnez un ou plusieurs volumes, puis sélectionnez *replicate data*.
-
-
-
+. Dans la présentation du système de fichiers, sélectionnez l'onglet *volumes*.
+. Dans le tableau volumes, sélectionnez un ou plusieurs volumes de protection de données (volumes DP/répliqués), puis sélectionnez *replicate data*.
 . Sur la page de données répliquées, sous cible de réplication, indiquez les informations suivantes :
 +
 .. *FSX pour système de fichiers ONTAP* : sélectionnez les informations d'identification, la région et le nom du système de fichiers FSX pour ONTAP pour le système de fichiers cible FSX pour ONTAP.
@@ -60,17 +50,6 @@ Dans le tableau volumes, sélectionnez un ou plusieurs volumes, puis sélectionn
 
 
 *** Autre
-+
-En outre, la sélection du cas d'utilisation détermine la règle de réplication ou la règle SnapMirror (ONTAP). Les termes utilisés pour décrire les règles de réplication proviennent de link:https://docs.netapp.com/us-en/ontap/data-protection/default-protection-policies-concept.html["Documentation sur ONTAP 9"^].
-
-+
-**** Pour la migration et les autres, la règle de réplication est appelée _MirrorAllsnapshots_. _MirrorAllsnapshots_ est une règle asynchrone pour la mise en miroir de tous les snapshots et du dernier système de fichiers actif.
-**** Pour la reprise après incident à chaud, à froid ou d'archivage, la stratégie de réplication est appelée _MirrorAndVault_. _MirrorAndVault_ est une règle asynchrone et de coffre-fort pour la mise en miroir du dernier système de fichiers actif et des snapshots quotidiens et hebdomadaires.
-+
-Pour tous les cas d'utilisation, si vous activez les snapshots pour la conservation à long terme, la règle de réplication par défaut est _MirrorAndVault_.
-
-
-
 
 
 .. *Règle de hiérarchisation* : sélectionnez la règle de hiérarchisation pour les données stockées dans le volume cible. La règle de Tiering est définie par défaut sur la règle de hiérarchisation recommandée pour le cas d'utilisation que vous avez sélectionné.
@@ -119,4 +98,4 @@ NOTE: Les étiquettes de source et de cible correspondantes sont requises pour l
 
 
 .Résultat
-La relation de réplication apparaît dans l'onglet *relations de réplication* du système de fichiers cible FSX pour ONTAP.
+Le ou les volumes répliqués se répliquent et apparaissent dans l'onglet *Replication relations* du système de fichiers cible FSX pour ONTAP.

@@ -25,6 +25,8 @@ Après avoir créé un lien, vous pouvez l'associer à un ou plusieurs systèmes
 
 Vous créez des liens à partir des pages du système de fichiers FSX pour ONTAP en usine de workloads. link:create-link.html["Découvrez comment créer des liens"] pour plus d'informations.
 
+Vous pouvez utiliser des liens authentiques à l'aide d'informations d'identification stockées dans le service d'informations d'identification d'usine de la charge de travail ou avec vos informations d'identification stockées dans AWS secrets Manager. L'usine de charges de travail ne prend pas en charge le changement de modes d'authentification.
+
 
 
 == Coûts

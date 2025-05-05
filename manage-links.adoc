@@ -37,29 +37,58 @@ image:screenshot-view-link-details.png["Capture d'écran montrant les systèmes 
 
 
 
-== Associer un lien à un système de fichiers FSX pour ONTAP
-
-Une fois que vous avez créé un lien, vous pouvez l'associer à vos systèmes de fichiers FSX pour ONTAP. Chaque système de fichiers ne peut être associé qu'à un seul lien dans un seul compte NetApp, mais un lien peut être associé à de nombreux systèmes de fichiers.
-
-.Étapes
-. Connectez-vous à l'aide de l'un des link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].
-. Dans stockage, sélectionnez *accéder à l'inventaire de stockage*.
-. Dans l'onglet *FSX pour ONTAP*, sélectionnez le menu à trois points du système de fichiers auquel associer un lien, puis sélectionnez *gérer*.
-. Dans la présentation du système de fichiers, sélectionnez *lien associé*.
-. Sur la page de lien associer, sélectionnez *associer un lien existant*, sélectionnez le lien et sélectionnez *appliquer*.
-
-
-.Résultat
-Le lien est associé au système de fichiers FSX pour ONTAP et vous pouvez effectuer des opérations ONTAP avancées.
-
-
-
 == Modifier un lien
 
 Vous ne pouvez pas modifier un lien à partir de l'interface d'usine de la charge de travail. Si vous devez modifier un lien, vous devez en créer un nouveau, puis l'associer à votre système de fichiers.
 
 
 NOTE: Vous pouvez modifier la configuration réseau Lambda (par exemple, VPC, les sous-réseaux et les groupes de sécurité) à l'aide de la console AWS. Les modifications sont ensuite reflétées dans l'interface de gestion des liens. Cependant, ces modifications peuvent entraîner des problèmes de connectivité entre Lambda et ONTAP, et ne sont pas recommandées.
+
+
+
+== Authentifier un lien
+
+Pour connecter le lien à un système de fichiers FSX for ONTAP, entrez un mot de passe d'utilisateur administratif pour les informations d'identification d'usine de workloads ou un ARN secret AWS secrets Manager.
+
+AWS secrets Manager n'est pas pris en charge lors de l'utilisation d'un connecteur.
+
+
+NOTE: Une seule méthode d'authentification est prise en charge par liaison. Par exemple, si vous sélectionnez l'authentification de lien avec AWS secrets Manager, vous ne pourrez pas modifier la méthode d'authentification ultérieurement.
+
+.Étapes
+. Connectez-vous à l'aide de l'un des link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].
+. Dans stockage, sélectionnez *accéder à l'inventaire de stockage*.
+. Dans l'onglet *FSX pour ONTAP*, sélectionnez le menu à trois points du système de fichiers auquel associer un lien, puis sélectionnez *gérer*.
+. Dans la présentation du système de fichiers, sélectionnez *authentifier le lien*.
+. Dans la page de lien authentifier, sélectionnez un mode d'authentification :
++
+** Workload Factory : saisissez le mot de passe deux fois.
+** AWS secrets Manager : entrez le secret ARN.
+
+
+. Sélectionnez *appliquer*.
+
+
+.Résultat
+Le lien est authentifié et vous pouvez effectuer des opérations ONTAP avancées
+
+
+
+== Mettez à jour le mot de passe pour l'authentification de la liaison
+
+Lorsque le mot de passe d'administration n'est pas valide, mettez à jour le mot de passe pour connecter le lien au système de fichiers FSX pour ONTAP.
+
+.Étapes
+. Connectez-vous à l'aide de l'un des link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].
+. Dans stockage, sélectionnez *accéder à l'inventaire de stockage*.
+. Dans l'onglet *FSX pour ONTAP*, sélectionnez le menu à trois points du système de fichiers auquel associer un lien, puis sélectionnez *gérer*.
+. Dans la présentation du système de fichiers, sélectionnez *mettre à jour le mot de passe*.
+. Dans la page de lien authentifier, saisissez le nouveau mot de passe deux fois.
+. Sélectionnez *appliquer*.
+
+
+.Résultat
+Le mot de passe est mis à jour et le lien est maintenant connecté au système de fichiers FSX pour ONTAP.
 
 
 

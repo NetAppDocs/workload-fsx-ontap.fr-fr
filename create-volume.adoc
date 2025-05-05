@@ -95,6 +95,7 @@ Si vous avez sélectionné une export-policy existante, entrez un nouveau nom de
 ..... *Autorisations* : sélectionnez contrôle total, lecture/écriture, lecture ou aucun accès, puis entrez les utilisateurs ou les groupes séparés par un point-virgule ( ; ). Les utilisateurs ou les groupes sont sensibles à la casse et le domaine de l'utilisateur doit être inclus au format « domaine\nom d'utilisateur ».
 
 
+.... *Security style* : pour les volumes à double protocole, sélectionnez le style de sécurité UNIX ou NTFS. UNIX est le style de sécurité par défaut pour les volumes à double protocole. Pour obtenir des conseils détaillés sur le mappage des utilisateurs dans ce contexte, reportez-vous à l'article du blog AWS link:https://aws.amazon.com/blogs/storage/enabling-multiprotocol-workloads-with-amazon-fsx-for-netapp-ontap["Prise en charge de workloads multiprotocoles avec Amazon FSX pour NetApp ONTAP"^].
 
 
 *** *Accès en bloc* : permet aux hôtes exécutant des applications métier critiques d'accéder au volume à l'aide du protocole iSCSI. L'accès aux blocs n'est disponible que lorsque le déploiement scale-out du système de fichiers compte six paires haute disponibilité ou moins.

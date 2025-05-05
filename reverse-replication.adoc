@@ -13,6 +13,12 @@ summary: Inversez une relation de réplication de sorte que le volume cible devi
 [role="lead"]
 Inversez une relation de réplication en usine de workloads BlueXP  afin que le volume cible devienne le volume source.
 
+Les opérations inversées sont prises en charge pour les éléments suivants :
+
+* Deux systèmes de fichiers FSX pour ONTAP
+* Un système de fichiers FSX pour ONTAP et un cluster ONTAP sur site
+
+
 Après avoir arrêté la réplication et modifié le volume cible, vous pouvez répliquer ces modifications sur le volume source. Ce processus est courant dans un scénario de reprise d'activité dans lequel vous travaillez sur le volume cible pendant un certain temps et souhaitez changer de rôle pour les volumes.
 
 .Description de la tâche

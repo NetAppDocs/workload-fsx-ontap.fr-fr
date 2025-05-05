@@ -13,6 +13,8 @@ summary: 'Restaurez un volume à partir d"une sauvegarde sur n"importe quel syst
 [role="lead"]
 En usine de workloads BlueXP , vous pouvez restaurer un volume à partir d'une sauvegarde vers n'importe quel système de fichiers FSX pour ONTAP de votre compte AWS.
 
+L'usine de workloads détermine si vous disposez de suffisamment de capacité pour la restauration et peut ajouter automatiquement de la capacité de Tier de stockage SSD si ce n'est pas le cas.
+
 .Étapes
 . Connectez-vous à l'aide de l'un des link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].
 . Dans stockage, sélectionnez *accéder à l'inventaire de stockage*.
@@ -26,6 +28,15 @@ En usine de workloads BlueXP , vous pouvez restaurer un volume à partir d'une 
 .. *VM de stockage cible* : sélectionnez la VM de stockage cible dans le menu déroulant.
 .. *Nom de la sauvegarde* : sélectionnez le nom de la sauvegarde dans le menu déroulant.
 .. *Nom du volume restauré* : entrez le nom du volume restauré.
+
+
+. Vérifiez la capacité du système de fichiers pour l'opération de restauration.
++
+Lorsque la capacité du système de fichiers est limitée, les situations suivantes peuvent se produire :
+
++
+** La restauration peut pousser la capacité utilisée au-delà du seuil spécifié. Vous pouvez terminer l'opération de restauration. Envisagez link:increase-file-system-capacity.html["Ajout manuel de capacité de hiérarchisation du stockage SSD"]d'ajouter automatiquement de la capacité SSD au niveau de stockage en usine des charges de travail ou sélectionnez-la.
+** La restauration nécessite une capacité SSD supplémentaire. Vous devez sélectionner pour l'usine de workloads pour ajouter automatiquement de la capacité de niveau de stockage SSD pour continuer.
 
 
 . Sélectionnez *Restaurer*.

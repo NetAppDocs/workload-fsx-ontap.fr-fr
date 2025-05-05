@@ -1,0 +1,54 @@
+---
+sidebar: sidebar 
+permalink: configuration-analysis.html 
+keywords: configuration issues, issues, improve, analyze, storage configuration, Amazon FSx for NetApp ONTAP, FSx for ONTAP, recommendation, recommendations 
+summary: 'La fabrique de workloads BlueXP  analyse régulièrement les configurations du système de fichiers Amazon FSX pour NetApp ONTAP pour déterminer s"il y a des problèmes.' 
+---
+= Analyse de la configuration des systèmes de fichiers FSX pour ONTAP
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+La fabrique de workloads BlueXP  analyse régulièrement les configurations du système de fichiers Amazon FSX pour NetApp ONTAP pour déterminer s'il y a des problèmes. Lorsque des problèmes sont détectés, l'usine de workloads vous montre ce que sont les problèmes et décrit les éléments à modifier pour assurer le stockage de votre système de fichiers avec les meilleures pratiques.
+
+Les fonctionnalités principales comprennent :
+
+* Analyse quotidienne de la configuration
+* Validations automatiques des meilleures pratiques
+* Observabilité proactive
+* Des analyses à l'action
+* Framework Advisor bien conçu d'AWS
+
+
+
+
+== État bien conçu
+
+Dans la console d'usine des workloads au niveau du système de fichiers, un état bien conçu est indiqué pour tous les systèmes de fichiers FSX pour ONTAP. Les États bien conçus sont classés comme « problèmes », « non analysés » ou « bien conçus ». La sélection de l'état bien conçu vous redirige vers l'onglet d'état bien conçu du système de fichiers, où vous pouvez trouver le score bien conçu, les catégories de configuration, toutes les configurations du système de fichiers.
+
+Score bien conçu:: Le score inclut toutes les configurations actuellement analysées et apparaît sous forme de pourcentage. Un score de 25 % signifie que 25 % des configurations de système de fichiers sont bien conçues.
+Catégories de configuration:: Les configurations de système de fichiers sont organisées par catégories, en accord avec les cinq piliers du framework Well-Architected AWS.
++
+--
+* _Reliability_ : garantit que les charges de travail exécutent correctement et de manière cohérente les fonctions prévues, même en cas de perturbations. Un exemple de configuration est FSX pour les sauvegardes ONTAP.
+* _Sécurité_ : met l'accent sur la protection des données, des systèmes et des ressources au moyen d'évaluations des risques et de stratégies d'atténuation.
+* _Excellence opérationnelle_ : met l'accent sur la fourniture de l'architecture et de la valeur métier les plus optimales.
+* _Optimisation des coûts_ : vise à générer de la valeur commerciale tout en réduisant les coûts.
+* _Efficacité des performances_ : se concentre sur l'utilisation efficace des ressources pour répondre aux exigences du système et pour maintenir des performances optimales au fur et à mesure de l'évolution de la demande.
+
+
+--
+
+
+
+
+== Exigences d'analyse
+
+Pour une analyse complète du système de fichiers, vous devez associer un lien. La connectivité de liaison permet à l'usine de workloads d'analyser toutes les configurations de systèmes de fichiers, telles que la protection des données et les performances.
+
+link:create-link.html["Découvrez comment créer un lien."]
+
+.Et la suite
+link:improve-configurations.html["Améliorez les configurations pour les déploiements FSX pour ONTAP"]

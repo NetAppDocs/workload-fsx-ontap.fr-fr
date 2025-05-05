@@ -22,13 +22,16 @@ La protection des données de vos workloads vous permet d'assurer la reprise apr
 .Snapshots
 Un snapshot crée une image en lecture seule et instantanée d'un volume au sein du volume source en tant que copie Snapshot. Vous pouvez utiliser la copie Snapshot pour restaurer des fichiers individuels ou pour restaurer l'intégralité du contenu d'un volume. Les snapshots constituent la base de toutes les méthodes de sauvegarde. La copie Snapshot créée sur votre volume permet de maintenir le volume répliqué et le fichier de sauvegarde synchronisés avec les modifications apportées au volume source.
 
-.Sauvegardes
-Vous pouvez créer des sauvegardes de vos données dans le cloud à des fins de protection et de conservation à long terme. Si nécessaire, vous pouvez restaurer un volume, un dossier ou des fichiers individuels de la sauvegarde vers le même système de fichiers de travail, ou un système différent.
+.Protection autonome contre les ransomwares
+La protection anti-ransomware autonome (ARP) utilise l'analyse des workloads dans des environnements NAS (NFS/SMB) pour détecter et avertir en cas d'activité anormale qui pourrait être une attaque par ransomware. Lorsqu'une attaque est suspectée, ARP crée également de nouveaux snapshots immuables en plus de la protection existante fournie par les snapshots programmés.
 
 .La réplication
 La réplication crée une copie secondaire de vos données sur un autre système de fichiers FSX pour ONTAP et met continuellement à jour les données secondaires. Vous disposez de données actualisées et accessibles dès que vous en avez besoin, par exemple pour la reprise d'activité.
 
 Vous pouvez choisir de créer à la fois des volumes répliqués sur un autre système de fichiers FSX pour ONTAP et des fichiers de sauvegarde dans le cloud. Ou vous pouvez simplement créer des volumes répliqués ou des fichiers de sauvegarde. C'est votre choix.
+
+.Sauvegardes
+Vous pouvez créer des sauvegardes de vos données dans le cloud à des fins de protection et de conservation à long terme. Si nécessaire, vous pouvez restaurer un volume, un dossier ou des fichiers individuels de la sauvegarde vers le même système de fichiers de travail, ou un système différent.
 
 Le diagramme suivant présente une représentation visuelle de la protection des données pour le stockage FSX for ONTAP à l'aide de snapshots, de la réplication dans l'ensemble des régions et de la sauvegarde dans le stockage objet.
 
@@ -62,6 +65,12 @@ La réplication de volume crée une copie des dernières données d'un volume, y
 
 
 
+== Protégez les données de vos workloads avec la protection anti-ransomware autonome
+
+ARP agit comme une couche supplémentaire importante de défense si un logiciel antivirus ne parvient pas à détecter une intrusion. La définition d'une règle ARP l'active pour toutes les machines virtuelles de stockage et tous les volumes existants et nouvellement créés. Une fois activé, le protocole ARP détecte et protège tous les volumes et les machines virtuelles de stockage. Si une extension de fichier est marquée comme anormale, vous devez évaluer l'alerte.
+
+
+
 == Recommandations pour la protection des données de vos workloads
 
 Réfléchissez aux recommandations suivantes pour protéger les données de vos workloads.
@@ -69,4 +78,6 @@ Réfléchissez aux recommandations suivantes pour protéger les données de vos 
 * Utiliser des sauvegardes de volume en conjonction avec des snapshots : l'utilisation conjointe des deux fonctionnalités permet de restaurer vos fichiers à partir de snapshots et d'effectuer des restaurations complètes en cas de perte de volume à l'aide de sauvegardes.
 * Définissez une stratégie de sauvegarde de volume : assurez-vous que la stratégie de sauvegarde répond aux exigences de votre entreprise en termes d'âge et de fréquence des sauvegardes. Nous vous recommandons de conserver au moins deux sauvegardes quotidiennes pour chaque volume.
 * Définir un planning de snapshots : les snapshots plus anciens sont moins susceptibles d'être utilisés pour restaurer des données. Nous vous recommandons de définir une planification de snapshot qui prend en compte la diminution du retour sur investissement lié à la conservation d'anciens snapshots par rapport au coût lié à une capacité de snapshots supplémentaire.
+* Surveillez vos volumes pour être conscient de toute attaque potentielle par ransomware.
+* Activez des règles ARP pour vos VM et volumes de stockage afin d'ajouter une couche de protection supplémentaire afin de protéger vos données contre les attaques par ransomware.
 

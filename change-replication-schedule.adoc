@@ -15,6 +15,8 @@ Modifiez la planification de réplication du volume source dans une relation de 
 
 Indiquez la fréquence de transfert des snapshots du volume source vers le volume répliqué pour répondre aux objectifs de point de récupération (RPO) requis.
 
+Lorsqu'un cluster ONTAP sur site est la cible de la relation de réplication, la modification de la planification de réplication n'est pas prise en charge.
+
 .Étapes
 . Connectez-vous à l'aide de l'un des link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].
 . Dans stockage, sélectionnez *accéder à l'inventaire de stockage*.

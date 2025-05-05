@@ -77,7 +77,10 @@ Pour provisionner des volumes en mode bloc iSCSI sur le système de fichiers, ne
 . Sous *Détails du système de fichiers*, fournissez les informations suivantes :
 +
 .. *Capacité de stockage SSD* : entrez la capacité de stockage et sélectionnez l'unité de capacité de stockage.
-.. *Informations d'identification ONTAP* : saisissez votre nom d'utilisateur et votre mot de passe ONTAP.
+.. *Informations d'identification ONTAP* : facultatives. Entrez votre nom d'utilisateur et votre mot de passe ONTAP. Le mot de passe peut être défini maintenant ou ultérieurement.
++
+Si l'utilisateur que vous indiquez n'est pas l'utilisateur fsxadmin, et que vous devez ensuite réinitialiser le mot de passe fsxadmin, vous pourrez le faire à partir de la console AWS.
+
 .. *SMB/CIFS setup*: Facultatif. Si vous prévoyez d'utiliser le protocole SMB/CIFS pour accéder aux volumes, vous devez configurer Active Directory pour la machine virtuelle de stockage lors de la création du système de fichiers. Fournissez les détails suivants pour la VM de stockage créée pour ce système de fichiers.
 +
 ... *Domaine Active Directory à rejoindre* : entrez le nom de domaine complet (FQDN) pour Active Directory.
@@ -169,8 +172,11 @@ Pour un nouveau groupe de sécurité, reportez-vous à  la section <<Détails du
 .. *Capacité de stockage SSD* : entrez la capacité de stockage et sélectionnez l'unité de capacité de stockage.
 .. *IOPS approvisionnées* : sélectionnez *automatique* ou *utilisateur-provisionné*.
 .. *Capacité de débit par paire haute disponibilité* : sélectionnez la capacité de débit par paire haute disponibilité.
-.. *Informations d'identification ONTAP* : saisissez votre nom d'utilisateur et votre mot de passe ONTAP.
-.. *Informations d'identification de la VM de stockage* : entrez votre nom d'utilisateur. Le mot de passe peut être spécifique à ce système de fichiers ou vous utilisez le même mot de passe que celui saisi pour les informations d'identification ONTAP.
+.. *Informations d'identification ONTAP* : facultatives. Entrez votre nom d'utilisateur et votre mot de passe ONTAP. Le mot de passe peut être défini maintenant ou ultérieurement.
++
+Si l'utilisateur que vous indiquez n'est pas l'utilisateur fsxadmin, et que vous devez ensuite réinitialiser le mot de passe fsxadmin, vous pourrez le faire à partir de la console AWS.
+
+.. *Informations d'identification de la VM de stockage* : facultatif. Entrez votre nom d'utilisateur. Le mot de passe peut être spécifique à ce système de fichiers ou vous pouvez utiliser le même mot de passe que celui saisi pour les informations d'identification ONTAP. Le mot de passe peut être défini maintenant ou ultérieurement.
 .. *SMB/CIFS setup*: Facultatif. Si vous prévoyez d'utiliser le protocole SMB/CIFS pour accéder aux volumes, vous devez configurer Active Directory pour la machine virtuelle de stockage lors de la création du système de fichiers. Fournissez les détails suivants pour la VM de stockage créée pour ce système de fichiers.
 +
 ... *Domaine Active Directory à rejoindre* : entrez le nom de domaine complet (FQDN) pour Active Directory.

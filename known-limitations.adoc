@@ -106,6 +106,12 @@ Le calculateur d'économies de stockage ne calcule pas les économies pour les c
 
 System Manager ne prend pas en charge les liens pour la connectivité ONTAP avec FSX.
 
+
+
+== Prise en charge d'AWS secrets Manager
+
+AWS secrets Manager n'est pas pris en charge lors de l'utilisation d'un connecteur.
+
 Remarque :
 
 . S'applique à Amazon FSX pour NetApp ONTAP
