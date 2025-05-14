@@ -20,10 +20,10 @@ Lorsque les composants ne sont pas répartis de manière homogène entre tous le
 
 La vérification du solde de la capacité du volume FlexGroup comprend l'évaluation de la disposition actuelle des composants. Lorsque vous rééquilibrez la capacité du volume, l'usine de charges de travail BlueXP  conçoit une nouvelle disposition constituante avec un nombre pair de composants afin de répartir les données de manière homogène entre toutes les paires haute disponibilité. Le service exécute le plan de rééquilibrage qui, à son tour, améliore les opérations de lecture et d'écriture.
 
-Le rééquilibrage d'un volume redistribue la capacité lorsque les déséquilibres se développent suite à l'ajout de nouveaux fichiers et à la croissance des fichiers. Une fois que vous avez démarré l'opération de rééquilibrage manuellement, nous sélectionnons les fichiers et les déplaçons automatiquement et sans interruption.
+Le rééquilibrage d'un volume redistribue la capacité lorsque les déséquilibres se développent suite à l'ajout de nouveaux fichiers et à la croissance des fichiers. Une fois que vous avez démarré l'opération de rééquilibrage manuellement, nous sélectionnons les fichiers et les déplaçons automatiquement et sans interruption. Les opérations de transfert de volumes consomment des ressources du système de fichiers.
 
 
-NOTE: Le rééquilibrage d'un volume n'est pris en charge que pour les volumes FlexGroup.
+NOTE: Le rééquilibrage est pris en charge uniquement pour les volumes FlexGroup, mais pas pour les volumes FlexGroup iSCSI ou NVMe.
 
 
 
@@ -53,20 +53,44 @@ Lorsqu'un volume FlexGroup est déséquilibré, considérez <<Rééquilibrez un 
 
 == Rééquilibrez un volume FlexGroup
 
-<<Vérifiez la balance d'un volume FlexGroup,Vérifiez la balance d'un volume FlexGroup>> avant de rééquilibrer les volumes.
+Rééquilibrer un ou plusieurs volumes non équilibrés. Les données sont reréparties entre les volumes de membres pour rééquilibrer le volume FlexGroup. Selon la disposition de distribution des données que vous préférez, l'opération de rééquilibrage peut ajouter des volumes de membres FlexGroup et augmenter la taille des volumes provisionnés.
+
+
+NOTE: Une administrateur d'usine de workloads peut arrêter le rééquilibrage pendant l'opération.
 
 .Avant de commencer
-Pour rééquilibrer un volume, vous devez link:manage-links.html["associer un lien"]. Si vous n'avez pas de lien existant, link:create-link.html["créer un lien"]. Pour associer un lien dans le système de fichiers, sélectionnez *lien associé* sous *Nom du compte*. Une fois le lien associé, revenez à cette opération.
+* <<Vérifiez la balance d'un volume FlexGroup,Vérifiez la balance d'un volume FlexGroup>> avant de rééquilibrer les volumes.
+* Pour rééquilibrer un volume, vous devez link:manage-links.html["associer un lien"]. Si vous n'avez pas de lien existant, link:create-link.html["créer un lien"]. Pour associer un lien dans le système de fichiers, sélectionnez *lien associé* sous *Nom du compte*. Une fois le lien associé, revenez à cette opération.
+* Notez que les snapshots existants sur les volumes que vous rééquilibrez deviennent partiels et ne peuvent pas être utilisés pour restaurer les données de volume, mais les nouveaux snapshots pris après le rééquilibrage peuvent être utilisés pour restaurer les données de volume.
+
 
 .Étapes
 . Connectez-vous à l'aide de l'un des link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].
 . Dans *stockage*, sélectionnez *aller à l'inventaire de stockage*.
 . Dans l'onglet *FSX pour ONTAP*, sélectionnez le menu à trois points du système de fichiers contenant le volume à rééquilibrer, puis sélectionnez *gérer*.
 . Dans la présentation du système de fichiers, sélectionnez l'onglet *volumes*.
-. Dans l'onglet volumes, sélectionnez le menu à trois points du volume à rééquilibrer.
-. Sélectionnez *actions avancées*, puis *Volume rééquilibré*.
-. Dans la boîte de dialogue Rebalance volume, sélectionnez *Rebalance*.
+. Dans l'onglet volumes, sélectionnez *vérifier l'équilibre FlexGroup* en haut de la table.
+. Dans la fenêtre solde FlexGroup, sélectionnez *rééquilibrer* pour rééquilibrer un ou plusieurs volumes non équilibrés.
+. Dans l'assistant de rééquilibrage, sélectionnez la disposition de distribution de données que vous préférez.
++
+** *Optimisé pour les performances* (recommandé) : augmente le nombre de volumes de membres FlexGroup et la taille provisionnée du volume. Respecte les bonnes pratiques NetApp.
+** *Restricted* : prend en charge les volumes dans une relation de réplication. Le nombre de volumes membres FlexGroup et la taille des volumes provisionnés restent inchangés. Sélectionné par défaut si tous les volumes sélectionnés participent à une relation de réplication.
+** *Manuel* : sélectionnez le nombre souhaité de volumes membres FlexGroup par paire HA. Selon votre sélection, le nombre de volumes de membres FlexGroup et la taille provisionnée du volume peuvent augmenter.
+
+
+. *Régulation*: Facultatif. Désactivé par défaut. Activez la restriction pour limiter la bande passante de déplacement d'un volume sur votre système de fichiers et pour ralentir le trafic de réplication du volume sortant.
++
+Entrez la valeur de l'accélérateur en MB/s.
+
+. Sélectionnez une vue de comparaison de mise en page, puis sélectionnez *Suivant*.
++
+** Comparaison de la disposition des volumes
+** Comparaison des infrastructures FSX pour ONTAP
+
+
+. Vous pouvez également télécharger la liste des déplacements de volumes avant le rééquilibrage.
+. Sélectionnez *rééquilibrer*.
 
 
 .Résultat
-La capacité du volume FlexGroup est rééquilibre.
+Selon le nombre de volumes de membres FlexGroup ajoutés à FlexGroup, une opération de déplacement de membre du volume FlexGroup a lieu à la fois. Une fois l'opération terminée, le système de fichiers est réduit à la valeur d'origine.
