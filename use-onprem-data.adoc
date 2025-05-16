@@ -19,7 +19,7 @@ Pour utiliser les données d'un cluster ONTAP sur site, vous devez d'abord déte
 Cas d'utilisation:: Notez que le principal cas d'utilisation de la charge de travail GenAI fait l'objet de cette série de tâches.
 +
 --
-* *Charge de travail GenAI* : réplique les données de volume ONTAP sur site vers un système de fichiers FSX pour ONTAP afin que les données puissent être utilisées à link:https://docs.netapp.com/us-en/workload-genai/create-knowledgebase.html["Enrichir les bases de connaissances sur l'IA"^].
+* *Charge de travail GenAI* : réplique les données de volume ONTAP sur site vers un système de fichiers FSX pour ONTAP afin que les données puissent être utilisées à link:https://docs.netapp.com/us-en/workload-genai/knowledge-base/create-knowledgebase.html["Enrichir les bases de connaissances sur l'IA"^].
 * *Sauvegarde et migration vers le cloud* : les données de volume ONTAP sur site répliquées vers un système de fichiers FSX pour ONTAP peuvent être utilisées comme sauvegarde dans le cloud.
 * *Tiering des données* : après la réplication, les données des volumes ONTAP sur site rarement consultées peuvent être hiérarchisées du niveau de stockage SSD vers le niveau de stockage du pool de capacité.
 

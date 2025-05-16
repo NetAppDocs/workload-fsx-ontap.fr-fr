@@ -51,4 +51,4 @@ Pour une analyse complète du système de fichiers, vous devez associer un lien.
 link:create-link.html["Découvrez comment créer un lien."]
 
 .Et la suite
-link:improve-configurations.html["Améliorez les configurations pour les déploiements FSX pour ONTAP"]
+link:improve-configurations.html["Implémenter des configurations de système de fichiers bien architecturées"]
