@@ -219,7 +219,6 @@
   <block id="749bb7d7b85b238efdd51a2af6612da7" category="list-text">Sélectionnez *actions de protection des données*, *instantanés*, puis *Créer un volume à partir d'un instantané*.</block>
   <block id="7703989c08fa05b728e233f271b4650e" category="list-text">Dans la boîte de dialogue Créer un volume à partir d'un snapshot, entrez le nom du snapshot.</block>
   <block id="25b72c08a4a289e6b89fc38db06792a9" category="doc">Créez un volume FSX pour ONTAP</block>
-  <block id="afd1f136e7e58574d1730a6b37234e12" category="paragraph">Les volumes FSX pour ONTAP sont des ressources virtuelles utilisées pour regrouper les données, déterminer leur mode de stockage et déterminer le type d'accès à vos données. Les volumes ne consomment pas de capacité de stockage du système de fichiers. Les données stockées dans un volume se concentrent principalement sur le stockage SSD. Selon la règle de hiérarchisation du volume, les données peuvent également consommer le stockage du pool de capacité. Vous définissez la taille d'un volume lors de sa création, et vous pouvez en modifier la taille ultérieurement.</block>
   <block id="80f199570ae102e9c62f81fcbfd159eb" category="list-text">CIFS : protocole de stockage de fichiers pour les systèmes d'exploitation Windows</block>
   <block id="8a1e5168feb60a6391f96310159dca9a" category="list-text">NFS : protocole de stockage de fichiers pour les systèmes d'exploitation Unix</block>
   <block id="ec38854bd667a882fa1d0b62579b5079" category="list-text">ISCSI : protocole de stockage en mode bloc</block>
@@ -252,7 +251,6 @@
   <block id="d7452a3655b7342c92f5b56d0b8526ed" category="list-text">Entrez un *nom de groupe initiateur* pour un nouveau groupe initiateur.</block>
   <block id="9b990db2de543eb2fd38454ae899ab11" category="list-text">Sous initiateurs hôtes, ajoutez un ou plusieurs initiateurs hôtes iSCSI qualifiés (IQN).</block>
   <block id="8cc48e7c3f902d1b7dd7d0ecb40ade52" category="list-text">Sous efficacité et protection, fournissez les détails suivants :</block>
-  <block id="693c76b9e50b1968a91a20939d11fb98" category="list-text">*Efficacité du stockage* : désactivez ou activez l'efficacité du stockage.</block>
   <block id="4f16f68a6d9522c0d097a900978f6f0d" category="paragraph">L'efficacité du stockage est obtenue grâce aux fonctionnalités de déduplication et de compression de ONTAP. La déduplication permet d'éliminer les blocs de données dupliqués. La compression des données compresse les blocs de données afin de réduire la quantité d'espace de stockage physique nécessaire.</block>
   <block id="f03207e238654d36cb2c88950bf22d84" category="list-text">*Politique d'instantanés* : sélectionnez la stratégie d'instantanés pour spécifier la fréquence et la rétention des instantanés.</block>
   <block id="84e947d0a820262a46013852b1928efd" category="paragraph">Voici les règles par défaut d'AWS. Pour les règles de snapshot personnalisées, vous devez associer un lien.</block>
@@ -318,8 +316,6 @@
   <block id="edd5da19d30912fca4670982f9aef531" category="inline-link-macro">augmentez la capacité du volume</block>
   <block id="f9e4840a1cf1ddb5632e031e0334acb9" category="paragraph">Vous pouvez éventuellement augmenter manuellement la capacité d'un volume à tout moment à l'aide de la <block ref="11462b2e1fd0bd94e3dc25fc7f04c4ba" category="inline-link-macro-rx"></block>.</block>
   <block id="2332ee8494d2f8246a961c95630281a2" category="admonition">La croissance automatique du volume n'est pas prise en charge pour les volumes iSCSI.</block>
-  <block id="91bdace9adb8211a77783be051ae3e78" category="list-text">Sélectionnez *actions de base*, puis *Modifier croissance automatique du volume*.</block>
-  <block id="e334870bb4631c235cfca40400daae69" category="list-text">Dans la boîte de dialogue Modifier la croissance automatique, activez la croissance automatique du volume.</block>
   <block id="3d7b2807e22b58e985dfcb21a31b176e" category="summary">Les balises peuvent vous aider à classer vos ressources. Vous pouvez ajouter, modifier et supprimer des balises de volume à tout moment pour les volumes FSX for ONTAP.</block>
   <block id="c966edae1d484c4f3e557d47709e08a1" category="list-text">Sélectionnez *actions de base* puis *Modifier les balises de volume*.</block>
   <block id="9724e2d67a8b8dacb5f774fbf0309b44" category="list-text">Sur la page Modifier les balises de volume, ajoutez, modifiez ou supprimez des balises.</block>
@@ -449,7 +445,6 @@
   <block id="488044172f20eab904aecc2827c019b4" category="section-title">Capacité de débit prise en charge par région</block>
   <block id="0a27e957ebaf89bce02c66c147da7966" category="section-title">Déploiements scale-up</block>
   <block id="2e8bf528a9bc28508b7cf3ffef710f1c" category="section-title">Déploiements scale-out</block>
-  <block id="3e14c6b63ec31128bf81a140eecbaeb0" category="paragraph">Les régions suivantes prennent en charge une capacité de débit maximale de 3 et 6 Gbit/s pour les déploiements en mode scale-out : ÉTATS-UNIS de l'est (Virginie), États-Unis de l'est (Ohio), États-Unis de l'Ouest (Oregon), Europe (Irlande) et Asie-Pacifique (Sydney).</block>
   <block id="1d19e21de0f93b11f5ceb8b535a3afc2" category="section-title">Gestion de la capacité</block>
   <block id="80f7abc9fbb9a7fcbc94b93ffe8883fa" category="list-text">La fonction de croissance automatique du volume n'est pas prise en charge pour le protocole iSCSI.</block>
   <block id="a4f157471406b244df3c4e7727b860ce" category="list-text">Lorsque la fonction de gestion automatique de la capacité est en cours d'exécution, l'augmentation manuelle de la capacité n'est pas autorisée.</block>
@@ -870,7 +865,6 @@
   <block id="55a23b72fe4aee5e2f0024c790d7eaba" category="paragraph">Créez un volume FSX pour ONTAP à partir d'une copie Snapshot dans l'usine de workloads BlueXP  pour activer la restauration à un point dans le temps.</block>
   <block id="8d34a33f34659b0ea11833ac0b8fac52" category="list-text">Dans l'onglet *FSX pour ONTAP*, sélectionnez le menu à trois points du système de fichiers avec l'instantané de volume, puis sélectionnez *gérer*.</block>
   <block id="3ce528a1818baf0bbf2f6b362b1f7d58" category="list-text">Dans l'onglet volumes, sélectionnez le menu à trois points du volume contenant l'instantané dont vous souhaitez créer un volume.</block>
-  <block id="3f069fcb238357ca598d1a4d611a62de" category="doc">Créez un volume FSX pour ONTAP en usine de workloads BlueXP </block>
   <block id="d5d682292e122fa36db263f49a714cc7" category="list-text">En usine de workloads, vous devez disposer d'un système de fichiers FSX pour ONTAP.</block>
   <block id="72ce63a6bef6ec13ef74a7eab0012469" category="summary">FSX pour ONTAP prend en charge les copies Snapshot, les sauvegardes de volume et la réplication de volume en usine de workloads BlueXP .</block>
   <block id="96a5899d90dd9b81319f168f67bcb5ae" category="summary">Pour supprimer un système de fichiers en usine de workloads BlueXP , vous devez d'abord supprimer tous les volumes, machines virtuelles de stockage ou relations de réplication associés au système de fichiers.</block>
@@ -889,14 +883,10 @@
   <block id="21ffc1d60d910e1796100ec0f0e054bf" category="list-text">Dans l'onglet volumes, sélectionnez le menu à trois points du volume à supprimer.</block>
   <block id="ad1d6a18c0d830b44dfe2e6a96d2807d" category="list-text">Si vous le souhaitez, sélectionnez *Sauvegarder le volume* pour sauvegarder le volume avant de le supprimer.</block>
   <block id="136dc09835924029e4299fa28f17233d" category="list-text">Sélectionnez *Continuer*.</block>
-  <block id="f7f2169256b833e4b912b12eeb380c4e" category="summary">Activez la croissance automatique du volume pour permettre à l'usine de workloads BlueXP  de gérer la capacité du volume pour vous. Vous pouvez le désactiver à tout moment.</block>
-  <block id="5d6c153f1e4ed3eaf701b67f0de4cee6" category="doc">Activez la croissance automatique du volume en usine de la charge de travail BlueXP </block>
   <block id="442b64cea00e2efaa2cb2cb89dba4ab3" category="list-text">Dans l'onglet FSX pour ONTAP, sélectionnez le menu à trois points du système de fichiers avec le volume à mettre à jour, puis sélectionnez *gérer*.</block>
   <block id="a0b96ee62d98191f36ed547bccb7babd" category="list-text">Dans l'onglet volumes, sélectionnez le menu à trois points du volume à modifier.</block>
   <block id="a4fc5c253ce09fe4825f0474ddb3368c" category="summary">L'activation de cette fonctionnalité permet à l'usine de workloads d'ajouter automatiquement du stockage incrémentiel à un système de fichiers FSX pour ONTAP en fonction de l'évolution des besoins en capacité.</block>
   <block id="bd0cd4a796621f54f57afed7ce044b14" category="doc">Activez la gestion automatique de la capacité pour un système de fichiers FSX for ONTAP</block>
-  <block id="86699015e319e1f0d9764f4cc8296e22" category="paragraph">L'activation de cette fonctionnalité permet à l'usine de workloads BlueXP  d'ajouter automatiquement du stockage incrémentiel à un système de fichiers FSX pour ONTAP en fonction de l'évolution des besoins en capacité.</block>
-  <block id="dfee49f6e7d939f9d77bcc58a66381b0" category="paragraph">Vous devez disposer d'informations d'identification avec des autorisations _automate_ dans l'usine de la charge de travail pour effectuer cette tâche.</block>
   <block id="d473b237e9c91fd6e196904b26b4c56c" category="list-text">Dans l'onglet *FSX pour ONTAP*, sélectionnez le menu à trois points du système de fichiers pour activer la gestion automatique de la capacité pour.</block>
   <block id="37315e43d6c90fe6798b7397bf15ebae" category="list-text">Sous informations, sélectionnez l'icône en forme de crayon en regard de *gestion automatique de la capacité*. L'icône en forme de crayon apparaît à côté de la flèche de la liste déroulante lorsque la souris survole la ligne *gestion automatique de la capacité*.</block>
   <block id="c5c6c97593c886ac31454d1f10313b78" category="list-text">Sélectionnez le bouton Activer pour *Activer la gestion automatique de la capacité*.</block>
@@ -930,7 +920,6 @@
   <block id="0e42938784ca54b8dc455284578841f0" category="list-text">Dans la boîte de dialogue Initialize relationship, sélectionnez *Initialize*.</block>
   <block id="478b776fc28a60e8545a858eb7ca9a3e" category="summary">Les limitations connues identifient les plateformes, les périphériques ou les fonctions qui ne sont pas pris en charge par cette version du produit, ou qui ne fonctionnent pas correctement avec elle.</block>
   <block id="bd2e4cb8c94783198db1a525a87ae34a" category="doc">Limitations connues d'Amazon FSX pour NetApp ONTAP</block>
-  <block id="ebb8834ddc064318ec8eb05605b0880f" category="paragraph">Une liaison est nécessaire pour effectuer certaines opérations, telles que la réplication dans l'interface utilisateur d'usine de la charge de travail.</block>
   <block id="aa75e9d89ef77ba0164dfacff4eadc7c" category="paragraph">Le nombre de VM de stockage est limité par référence. La création de machines virtuelles de stockage au-delà de cette limite n'est pas prise en charge par l'usine de la charge de travail.^1^</block>
   <block id="26ed02718973e705cd69ee6e109400e0" category="section-title">System Manager</block>
   <block id="9ee31cf2622a4d1606ccae84e2ba0742" category="paragraph">System Manager ne prend pas en charge les liens pour la connectivité ONTAP avec FSX.</block>
@@ -1084,7 +1073,6 @@
   <block id="037fbb0239239f2168489bba99e09b67" category="list-text">*Exporter PDF*</block>
   <block id="10acfa1cd5e4b3b5f4da60bba2257672" category="list-text">*Envoyer par courriel*</block>
   <block id="3902a76bb589f831b404ce1ec9865654" category="list-text">*Afficher les calculs*</block>
-  <block id="01887ff057face34cde00a98753d7347" category="section-title">Lien requis pour les opérations ONTAP avancées</block>
   <block id="428b0b39be2352757edeb5f9f12a7bdd" category="inline-link">Usine de workloads BlueXP</block>
   <block id="7cf449620aa459bc5c449db69b07e507" category="paragraph"><block ref="7cf449620aa459bc5c449db69b07e507" category="inline-link-rx"></block></block>
   <block id="a32b59044667570495820281f09cfa10" category="list-text">*Nom* : entrez le nom du partage CIFS.</block>
@@ -1319,7 +1307,6 @@
   <block id="49814788ce382c87a117a40e54ae858b" category="paragraph">L'opération est lancée à nouveau. Accédez à Tracker pour afficher l'état de l'opération.</block>
   <block id="986aee2caba870111e5ce3c5571c82de" category="section-title">02 février 2025</block>
   <block id="2e0c4c64c2671f5575eb184e577dcdae" category="sidebar">Surveiller les opérations avec Tracker</block>
-  <block id="b1fe1919850819316de56e436737f1d9" category="summary">Après avoir configuré votre système de fichiers FSX pour ONTAP, créez les volumes FSX pour ONTAP en usine de workloads BlueXP .</block>
   <block id="62e770531a6a6f3e80ca57b3b83bb3db" category="doc">Types de protection des données dans BlueXP  Workload Factory</block>
   <block id="9da70164a8dd044e50707cfb202de218" category="paragraph">FSX pour ONTAP prend en charge les copies Snapshot, les sauvegardes et la réplication pour la protection des données. Nous vous recommandons d'utiliser une combinaison de types de protection des données pour vous préparer à l'inévitable et protéger vos données.</block>
   <block id="fa7cdd584b5bc6a975df18dc4ebe5895" category="paragraph">BlueXP  Workload Factory inclut un calculateur d'économies de stockage afin de comparer les environnements de stockage Amazon à FSX pour ONTAP. Vous pouvez explorer les économies avec ou sans fournir vos identifiants AWS et personnaliser les paramètres de configuration de votre environnement de stockage. Lorsque vous fournissez les informations d'identification AWS, vous pouvez sélectionner une ou plusieurs instances d'Amazon Elastic Block Store, par exemple, et laisser les paramètres d'usine des workloads effectuer la comparaison automatiquement. Que ce soit manuellement ou automatiquement, le calculateur détermine le service de stockage qui offre le coût le plus bas pour vos besoins en stockage.</block>
@@ -1499,7 +1486,6 @@
   <block id="dde14eef9b53344c34a3e3e63830d29e" category="paragraph">Répliquez les données de volume d'un cluster ONTAP sur site vers un système de fichiers FSX pour ONTAP. Après la réplication, les données peuvent être utilisées pour enrichir les bases de connaissances d'IA.</block>
   <block id="b04f4fce1228aa8dc3f0ae05daa48cd7" category="list-text">*Auto* : règle de hiérarchisation par défaut lors de la création d'un volume à l'aide de l'interface utilisateur FSX for ONTAP de l'usine de workloads. Déplace toutes les données inactives qui incluent les données utilisateur et les snapshots vers le niveau de stockage du pool de capacité pendant une période spécifique.</block>
   <block id="8b02e3f5a15bae20358e2221cac45d83" category="list-text">*Détails généraux* : inclut le nom du volume, l'UUID du volume, l'ID du volume, l'heure de création, l'état, le type de volume (lecture/écriture/protection des données (RW/DP) ou en lecture seule), le nom de la politique Snapshot, la machine virtuelle de stockage (SVM) hôte et les balises</block>
-  <block id="2d5a4b914acb6c2f03d312067c73ce32" category="section-title">02 mars 2025</block>
   <block id="95712b1074d83e6727c42aa16be5af5a" category="paragraph"><block ref="95712b1074d83e6727c42aa16be5af5a" category="inline-link-macro-rx"></block></block>
   <block id="815e02f013485997d1d56438f0bf1505" category="paragraph"><block ref="815e02f013485997d1d56438f0bf1505" category="inline-link-macro-rx"></block></block>
   <block id="21a1f3fb63f8e2b67d072b29080f89f9" category="list-text">Niveau 1 (tâche) : assure le suivi du déploiement du système de fichiers.</block>
@@ -1787,7 +1773,6 @@
   <block id="9d0e9f5c0aa1e38cfaa8e64e155bc5a8" category="list-text">Seuil de capacité SSD</block>
   <block id="396928510e06818ef017921022cce2af" category="list-text">Tiering des données</block>
   <block id="aff279b636a9024db3b44375d88e80eb" category="list-text">Snapshots locaux planifiés</block>
-  <block id="70846b7105b6028169209033aae31a0c" category="list-text">FSX pour les sauvegardes ONTAP, et</block>
   <block id="887673b402c7bbc141e56321e277605f" category="list-text">Réplication des données à distance</block>
   <block id="2f5c8a4d7476b305dbc46e2886046e37" category="inline-link-macro">Découvrez comment octroyer des autorisations sur votre compte AWS</block>
   <block id="3d4d7dfea7b3c8e6611f1b6c46261c79" category="list-text">Vous devez disposer d'informations d'identification avec des autorisations en lecture seule ou en lecture/écriture. <block ref="2022cabf257ab03f558a69fe97667e91" category="inline-link-macro-rx"></block>.</block>
@@ -1802,7 +1787,6 @@
   <block id="fe5f70c74405942514095d724e090b64" category="paragraph">Lorsque *View and fix* est une option, sélectionnez les volumes affectés à corriger.</block>
   <block id="579feafb828551ab15b2e4f1aad57afc" category="list-text">Passez en revue le résumé et les actions qui apparaissent dans la boîte de dialogue pour savoir ce qui se passera si vous choisissez de résoudre le problème. Certaines opérations peuvent entraîner des temps d'indisponibilité d'instance ou des interruptions de service.</block>
   <block id="45b5dce37159255d07342e3102124571" category="list-text">Sélectionnez *Continuer* pour résoudre le problème de configuration.</block>
-  <block id="b24e2a5a00274660f4537c173554dd06" category="paragraph">Le processus de résolution du problème démarre. Sélectionnez l'onglet *surveillance des travaux* pour afficher l'état de l'opération.</block>
   <block id="20086b220eeb33caf74bd6e628cfcd8c" category="section-title">Prise en charge d'AWS secrets Manager</block>
   <block id="ffe2f2a5c6f5c2a7a4d95da829cd5cb4" category="paragraph">Un lien Factory de workloads BlueXP  crée une relation de confiance et une connectivité entre un compte d'usine de workloads et un ou plusieurs systèmes de fichiers FSX pour ONTAP. Vous pouvez ainsi surveiller et gérer certaines fonctionnalités du système de fichiers directement à partir des appels de l'API REST ONTAP qui ne sont pas disponibles via l'API Amazon FSX pour ONTAP.</block>
   <block id="8f30a77efbeaeec8415337994a976197" category="paragraph">Vous pouvez utiliser des liens authentiques à l'aide d'informations d'identification stockées dans le service d'informations d'identification d'usine de la charge de travail ou avec vos informations d'identification stockées dans AWS secrets Manager. L'usine de charges de travail ne prend pas en charge le changement de modes d'authentification.</block>
@@ -1902,7 +1886,47 @@
   <block id="e234d079cc2fccaeed8041a81e1e8122" category="list-text">*CLI CloudShell* : la fabrique de workloads inclut une interface de ligne de commande CloudShell pour gérer et exploiter les environnements AWS et NetApp entre les comptes à partir d'une seule interface de ligne de commande basée sur navigateur. Accédez à CloudShell à partir de la barre supérieure de la console d'usine de la charge de travail.</block>
   <block id="dfbf98e5a4263fb93c5b851bfc384ae3" category="list-text">*API REST* : utilisez les API REST d'usine pour déployer et gérer vos systèmes de fichiers FSX pour ONTAP et d'autres ressources AWS.</block>
   <block id="57f4ce64453b6cd8aa398c4f88d38c2e" category="list-text">*CloudFormation* : utilisez le code AWS CloudFormation pour effectuer les actions que vous avez définies dans la console d'usine de la charge de travail afin de modéliser, de provisionner et de gérer les ressources AWS et tierces à partir de la pile CloudFormation de votre compte AWS.</block>
-  <block id="06c2e2277da374dd2cc7b735a1d1e848" category="list-text">*Terraform BlueXP  Workload Factory Provider* : utilisez Terraform pour créer et gérer les flux de travail d'infrastructure générés dans la console d'usine de la charge de travail.</block>
   <block id="eaaaf380859de755a58a543fbffc3d8a" category="paragraph"><block ref="eaaaf380859de755a58a543fbffc3d8a" category="inline-link-macro-rx"></block></block>
   <block id="1418bddde60a7d4a1fbd71041ef29d36" category="list-text">*Charge de travail GenAI* : réplique les données de volume ONTAP sur site vers un système de fichiers FSX pour ONTAP afin que les données puissent être utilisées à <block ref="8b94b70e10f0f6c7944c9419ec9922bc" category="inline-link-macro-rx"></block>.</block>
+  <block id="7583f12b4559f6687c67d8588da1e2f7" category="doc">Amélioration de la croissance automatique du volume</block>
+  <block id="b57fe4f5ee65a0e01f61993297811ebf" category="paragraph">Vous pouvez désormais définir la taille de croissance automatique de vos volumes afin que la taille du volume puisse croître au-delà de la taille provisionnée pour les besoins de l'entreprise et les exigences des applications.</block>
+  <block id="9f1effd9ace68ca00fe9e9e3c024b362" category="inline-link-macro">Activer la croissance automatique de volumes</block>
+  <block id="0177289fb77b50bdfc34ab44aa432a21" category="paragraph"><block ref="0177289fb77b50bdfc34ab44aa432a21" category="inline-link-macro-rx"></block></block>
+  <block id="159687e1c95e32f1dcb6c9c1624ba327" category="section-title">Mise à jour de l'analyse bien architecturée</block>
+  <block id="8500b95246538dfef049532751c1e9f5" category="paragraph">Workload Factory analyse désormais vos systèmes de fichiers FSx for ONTAP afin de vérifier l'efficacité du stockage, notamment en termes de compactage, de compression et de déduplication des données. L'efficacité du stockage mesure l'efficacité avec laquelle les systèmes de fichiers utilisent l'espace disponible.</block>
+  <block id="26e5625f54c5c47a57293d23260101c7" category="inline-link-macro">Visualisez l'état d'efficacité du stockage bien conçu</block>
+  <block id="80378f8a6a0c86610258fa79cd78497b" category="paragraph"><block ref="80378f8a6a0c86610258fa79cd78497b" category="inline-link-macro-rx"></block></block>
+  <block id="e4b0d36f0e7c4f3745520d8f27ed510b" category="section-title">Améliorations du tableau de bord de stockage</block>
+  <block id="47586d678be72b51ea7ac193f83c19b2" category="paragraph">À partir d'aujourd'hui, lorsque vous ouvrez la charge de travail Stockage depuis la console Workload Factory, vous accédez au *Tableau de bord*. Ce nouveau tableau de bord offre une vue d'ensemble de vos systèmes FSx for ONTAP, incluant le nombre de systèmes de fichiers, la capacité totale des SSD, l'état de l'architecture, la protection des données et l'intégrité de la relation de réplication.</block>
+  <block id="74d3ed8321cbdac2928290eee4795cef" category="section-title">Améliorations de l'onglet Volumes</block>
+  <block id="0d25e8e0a888c31329b48ed4a33f98f6" category="paragraph">La charge de travail Stockage a apporté des améliorations à l'onglet « Volumes » d'un système de fichiers FSx for ONTAP dans la console Workload Factory. Ces améliorations incluent :</block>
+  <block id="90a8a55f34e9e967f8619ecc5b0ba92a" category="list-text">*Nouvelles cartes* : capacité SSD, pool de capacité et protection autonome contre les ransomwares (ARP)</block>
+  <block id="f80c9595c105a10d312aac80217ebb84" category="list-text">*Nouvelles colonnes* : Répartition de la capacité, Capacité SSD utilisée, Pool de capacité utilisée et Efficacité SSD</block>
+  <block id="92eacda944854c6bfa8676c60aaa4c96" category="section-title">Mise à jour de l'efficacité du stockage pour la création de volumes</block>
+  <block id="af1e7fa29b343a7d9bd55952a334e8c9" category="paragraph">Lors de la création d'un nouveau volume, les fonctions d'efficacité du stockage, notamment le compactage, la compression et la déduplication des données, sont activées par défaut.</block>
+  <block id="55321b0c9d5d13d71a60766806796f90" category="inline-link-macro">Créer un nouveau volume dans la fabrique de charges de travail</block>
+  <block id="9257e0b60b0f1cd3867c62713d3370aa" category="paragraph"><block ref="9257e0b60b0f1cd3867c62713d3370aa" category="inline-link-macro-rx"></block></block>
+  <block id="70fc7bb591b365ee183f47900503df43" category="paragraph">Les réplications sans rétention à long terme utilisent la stratégie _MirrorAllSnapshots_. L'activation de la rétention à long terme affecte la stratégie _MirrorAndVault_ à la réplication.</block>
+  <block id="2057c4b03e98bbdb86c44c6ec3eec31d" category="summary">Après avoir configuré votre système de fichiers FSx pour ONTAP, créez des volumes FSx pour ONTAP dans la fabrique de charges de travail.</block>
+  <block id="bb8606f4a66c1f0354653ba69a9e1256" category="doc">Créer un volume FSx pour ONTAP dans la fabrique de charges de travail</block>
+  <block id="60f5b412bf1c0bf652e02bf44be5dc6f" category="paragraph">Après avoir configuré votre système de fichiers FSx for ONTAP, créez des volumes FSx for ONTAP dans Workload Factory en tant que ressources virtuelles pour regrouper vos données.</block>
+  <block id="0456e4c2545668177705b8072e1b93ba" category="paragraph">Les volumes FSx for ONTAP regroupent les données virtuellement, déterminent la manière dont les données sont stockées et déterminent le type d'accès à vos données. Les volumes ne consomment pas de capacité de stockage du système de fichiers. Les données stockées dans un volume se concentrent principalement sur le stockage SSD. Selon la règle de hiérarchisation du volume, les données peuvent également consommer le stockage du pool de capacité. Vous définissez la taille d'un volume lors de sa création, et vous pouvez en modifier la taille ultérieurement.</block>
+  <block id="51d89d2baec646eb989c0ff4fd38d651" category="list-text">*Augmentation automatique du volume* : vous pouvez activer l'augmentation automatique du volume pour augmenter automatiquement sa capacité jusqu'à ce qu'il atteigne sa taille maximale. Cette fonctionnalité s'adapte à l'augmentation de la consommation de données et garantit un fonctionnement ininterrompu.</block>
+  <block id="746dd2fcf8e89b32c19195b26ac96dbf" category="paragraph">Spécifiez la taille et l'unité de croissance maximales du volume. La taille maximale ne peut pas être inférieure à la taille actuelle du volume.</block>
+  <block id="67e50725d2f9318432dc7449280446c3" category="list-text">*Efficacité de stockage* : activée par défaut. Sélectionnez pour désactiver cette fonctionnalité.</block>
+  <block id="b796f9c9a5e3021f08d8f0e74890007d" category="summary">Activez la croissance automatique du volume pour permettre à Workload Factory de gérer la capacité du volume pour vous. Vous pouvez le désactiver à tout moment.</block>
+  <block id="2753f972110374eb67c560eb5ff6266c" category="doc">Activer la croissance automatique du volume dans l'usine de charge de travail</block>
+  <block id="870bfc0407fd21936b0eda7ce98ea951" category="list-text">Sélectionnez *Actions de base*, puis *Définir l'augmentation automatique du volume*.</block>
+  <block id="6f11493010276b8e782926f7cd8ee493" category="list-text">Dans la boîte de dialogue « Définir la croissance automatique », activez la croissance automatique du volume pour augmenter automatiquement sa capacité jusqu'à atteindre sa taille maximale. Cette fonctionnalité s'adapte à l'augmentation de la consommation de données et garantit un fonctionnement ininterrompu.</block>
+  <block id="6fd69dde99b8a0114b3c69839bb5f201" category="paragraph">L'activation de la gestion automatique de la capacité permet à BlueXP Workload Factory d'ajouter automatiquement du stockage incrémentiel à un système de fichiers FSx for ONTAP en fonction de l'évolution des besoins en capacité. De plus, cette fonctionnalité élimine la nécessité de surveiller manuellement la capacité et limite le risque de lectures et d'écritures de données applicatives impactantes.</block>
+  <block id="a0ddf9e17030c7c21387932426a4defa" category="list-text">Vous devez disposer d'informations d'identification avec des autorisations de lecture/écriture dans Workload Factory pour effectuer cette tâche.</block>
+  <block id="2063734e5b01a934d73b02ba309a34e6" category="list-text">N'activez pas cette fonctionnalité pendant la migration des données, car AWS impose une période de refroidissement minimale de six heures entre chaque augmentation de capacité SSD. Cette restriction peut retarder les ajustements ; planifiez donc en conséquence.</block>
+  <block id="667bda9d5b08fe1666f3fe061ce424aa" category="list-text">FSx pour les sauvegardes ONTAP</block>
+  <block id="af20abc7154e9ee224c54b48b6ec7d63" category="list-text">Fonctionnalités d'efficacité du stockage</block>
+  <block id="8d5352cda3351c4fe9fe9f49933c852b" category="paragraph">Le processus de résolution du problème démarre. Sélectionnez le menu des paramètres du compte, puis sélectionnez *Tracker* pour afficher l'état de l'opération.</block>
+  <block id="4957b29fcffeec300ed417debafed722" category="paragraph">Les régions suivantes prennent en charge une capacité de débit maximale allant jusqu'à 6 Go/s pour les déploiements évolutifs : États-Unis Est (Virginie du Nord et Ohio), États-Unis Ouest (Californie du Nord et Oregon), Europe (Francfort, Irlande et Stockholm) et Asie-Pacifique (Singapour et Sydney).</block>
+  <block id="58107709be0f763204df69a361ef7fe0" category="list-text">Lorsque la gestion automatique de la capacité est activée, un lien est requis pour garantir que les inodes de volume augmentent avec la capacité de stockage.</block>
+  <block id="af06e2a95bd9706f705a4480e8f40846" category="list-text">*Terraform BlueXP  Workload Factory Provider* : utilisez Terraform pour créer et gérer les flux de travail d'infrastructure générés dans la console d'usine de la charge de travail.</block>
+  <block id="4aa37f4d9a391345e9a54c68333e2503" category="section-title">03 juin 2025</block>
+  <block id="3f704fe76e8b9e4bf51184f82c064656" category="paragraph"><block ref="03b2cfc949418819e16b1dc5fa3660ae" category="inline-link-macro-rx"></block> == 02 mars 2025</block>
 </blocks>

@@ -15,12 +15,6 @@ Les limitations connues identifient les plateformes, les périphériques ou les 
 
 
 
-== Lien requis pour les opérations ONTAP avancées
-
-Une liaison est nécessaire pour effectuer certaines opérations, telles que la réplication dans l'interface utilisateur d'usine de la charge de travail.
-
-
-
 == Limites de l'ajout de paires haute disponibilité
 
 * Cette opération peut prendre environ 30 minutes.
@@ -41,7 +35,7 @@ Les configurations à évolutivité verticale sont prises en charge jusqu'à 2 G
 
 === Déploiements scale-out
 
-Les régions suivantes prennent en charge une capacité de débit maximale de 3 et 6 Gbit/s pour les déploiements en mode scale-out : ÉTATS-UNIS de l'est (Virginie), États-Unis de l'est (Ohio), États-Unis de l'Ouest (Oregon), Europe (Irlande) et Asie-Pacifique (Sydney).
+Les régions suivantes prennent en charge une capacité de débit maximale allant jusqu'à 6 Go/s pour les déploiements évolutifs : États-Unis Est (Virginie du Nord et Ohio), États-Unis Ouest (Californie du Nord et Oregon), Europe (Francfort, Irlande et Stockholm) et Asie-Pacifique (Singapour et Sydney).
 
 
 
@@ -50,6 +44,7 @@ Les régions suivantes prennent en charge une capacité de débit maximale de 3 
 * La fonction de croissance automatique du volume n'est pas prise en charge pour le protocole iSCSI.
 * Lorsque la fonction de gestion automatique de la capacité est en cours d'exécution, l'augmentation manuelle de la capacité n'est pas autorisée.
 * La désactivation de la fonction de gestion automatique de la capacité n'est possible qu'avec les mêmes autorisations que celles utilisées pour l'activer.
+* Lorsque la gestion automatique de la capacité est activée, un lien est requis pour garantir que les inodes de volume augmentent avec la capacité de stockage.
 
 
 

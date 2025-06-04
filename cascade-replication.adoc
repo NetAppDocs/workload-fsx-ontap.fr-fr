@@ -70,6 +70,9 @@ Sans limite, les performances du réseau et des applications peuvent diminuer. N
 .. *Intervalle de réplication* : sélectionnez la fréquence à laquelle les instantanés sont transférés du volume source vers le volume cible.
 .. *Conservation à long terme* : éventuellement, activez les instantanés pour la conservation à long terme. La conservation à long terme permet aux services de l'entreprise de continuer de fonctionner même en cas de défaillance complète d'un site, ce qui permet aux applications de basculer en toute transparence grâce à une copie secondaire.
 +
+Les réplications sans rétention à long terme utilisent la stratégie _MirrorAllSnapshots_. L'activation de la rétention à long terme affecte la stratégie _MirrorAndVault_ à la réplication.
+
++
 Si vous activez la conservation à long terme, sélectionnez une règle existante ou créez une nouvelle règle pour définir les snapshots à répliquer et le nombre à conserver.
 
 +

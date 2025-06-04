@@ -24,8 +24,9 @@ Ce qui est analysé:: Workload Factory analyse l'état bien conçu des configura
 * Seuil de capacité SSD
 * Tiering des données
 * Snapshots locaux planifiés
-* FSX pour les sauvegardes ONTAP, et
+* FSx pour les sauvegardes ONTAP
 * Réplication des données à distance
+* Fonctionnalités d'efficacité du stockage
 
 
 --
@@ -57,4 +58,4 @@ Lorsque *View and fix* est une option, sélectionnez les volumes affectés à co
 
 
 .Résultat
-Le processus de résolution du problème démarre. Sélectionnez l'onglet *surveillance des travaux* pour afficher l'état de l'opération.
+Le processus de résolution du problème démarre. Sélectionnez le menu des paramètres du compte, puis sélectionnez *Tracker* pour afficher l'état de l'opération.

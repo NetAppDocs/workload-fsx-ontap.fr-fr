@@ -2,16 +2,16 @@
 sidebar: sidebar 
 permalink: edit-volume-autogrow.html 
 keywords: volume autogrow, increase volume capacity, enable autogrow 
-summary: 'Activez la croissance automatique du volume pour permettre à l"usine de workloads BlueXP  de gérer la capacité du volume pour vous. Vous pouvez le désactiver à tout moment.' 
+summary: Activez la croissance automatique du volume pour permettre à Workload Factory de gérer la capacité du volume pour vous. Vous pouvez le désactiver à tout moment. 
 ---
-= Activez la croissance automatique du volume en usine de la charge de travail BlueXP 
+= Activer la croissance automatique du volume dans l'usine de charge de travail
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-Activez la croissance automatique du volume pour permettre à l'usine de workloads BlueXP  de gérer la capacité du volume pour vous. Vous pouvez le désactiver à tout moment.
+Activez la croissance automatique du volume pour permettre à Workload Factory de gérer la capacité du volume pour vous. Vous pouvez le désactiver à tout moment.
 
 Vous pouvez éventuellement augmenter manuellement la capacité d'un volume à tout moment à l'aide de la link:increase-volume-capacity.html["augmentez la capacité du volume"].
 
@@ -27,7 +27,10 @@ Pour activer la croissance automatique du volume, vous devez link:manage-links.h
 . Dans l'onglet FSX pour ONTAP, sélectionnez le menu à trois points du système de fichiers avec le volume à mettre à jour, puis sélectionnez *gérer*.
 . Dans la présentation du système de fichiers, sélectionnez l'onglet *volumes*.
 . Dans l'onglet volumes, sélectionnez le menu à trois points du volume à modifier.
-. Sélectionnez *actions de base*, puis *Modifier croissance automatique du volume*.
-. Dans la boîte de dialogue Modifier la croissance automatique, activez la croissance automatique du volume.
+. Sélectionnez *Actions de base*, puis *Définir l'augmentation automatique du volume*.
+. Dans la boîte de dialogue « Définir la croissance automatique », activez la croissance automatique du volume pour augmenter automatiquement sa capacité jusqu'à atteindre sa taille maximale. Cette fonctionnalité s'adapte à l'augmentation de la consommation de données et garantit un fonctionnement ininterrompu.
++
+Spécifiez la taille et l'unité de croissance maximales du volume. La taille maximale ne peut pas être inférieure à la taille actuelle du volume.
+
 . Sélectionnez *appliquer*.
 
