@@ -39,7 +39,7 @@ Vous avez deux options pour créer des liens - automatiquement ou manuellement. 
 
 .Avant de commencer
 * Vous devez considérer l'option de création de lien que vous utiliserez.
-* En usine de workloads, vous devez disposer d'au moins un système de fichiers FSX pour ONTAP. Pour détecter ou créer des systèmes de fichiers FSX pour ONTAP, vous devez disposer d'un compte AWS avec des autorisations pour les instances FSX pour ONTAP et link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html#overview["ajoutez des informations d'identification à l'usine des charges de travail"^] des autorisations de gestion du stockage en lecture seule ou en lecture-écriture.
+* En usine de workloads, vous devez disposer d'au moins un système de fichiers FSX pour ONTAP. Pour découvrir ou créer des systèmes de fichiers FSx pour ONTAP, vous devez disposer d'un compte AWS avec des autorisations pour les instances FSx pour ONTAP et link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html#overview["ajoutez des informations d'identification à l'usine des charges de travail"^] avec des autorisations de _lecture seule_ ou de _lecture/écriture_ pour la gestion du stockage.
 * Lorsque vous ajoutez un lien à l'aide d'une pile CloudFormation, vous devez disposer des autorisations suivantes dans votre compte AWS :
 +
 [%collapsible]

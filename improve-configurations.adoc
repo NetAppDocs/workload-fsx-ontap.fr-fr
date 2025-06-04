@@ -33,7 +33,7 @@ Ce qui est analysé:: Workload Factory analyse l'état bien conçu des configura
 
 
 .Avant de commencer
-* Vous devez disposer d'informations d'identification avec des autorisations en lecture seule ou en lecture/écriture. link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Découvrez comment octroyer des autorisations sur votre compte AWS"^].
+* Vous devez disposer d'informations d'identification avec des autorisations de _lecture seule_ ou de _lecture/écriture_. link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Découvrez comment octroyer des autorisations sur votre compte AWS"^].
 * Vérifiez attentivement chaque recommandation avant de choisir de corriger un paramètre ou une configuration.
 
 

@@ -11,12 +11,12 @@ summary: Mettre en pause et reprendre une relation de réplication de sorte que 
 
 
 [role="lead"]
-Mettre en pause une relation de réplication pour arrêter les mises à jour de réplication planifiées du volume source vers le volume cible. Le volume cible passe de la lecture seule à la lecture-écriture. Les deux volumes continuent de partager le dernier snapshot de réplication en tant que nouvelle base pour une resynchronisation ultérieure.
+Mettre en pause une relation de réplication pour arrêter les mises à jour de réplication planifiées du volume source vers le volume cible. Le volume cible passe de lecture seule à lecture/écriture. Les deux volumes continuent de partager le dernier snapshot de réplication en tant que nouvelle base pour une resynchronisation ultérieure.
 
 .Description de la tâche
 En pause, la relation de réplication entre le volume source et le volume cible continue d'exister. Les transferts de données s'interrompe et les volumes deviennent indépendants. Pour réactiver le transfert des modifications du volume source vers le volume de destination, reprenez la réplication.
 
-Lorsque vous reprenez une réplication, toutes les modifications apportées au volume cible sont annulées et l'usine de la charge de travail BlueXP  réactive la réplication. Le volume cible passe de la lecture-écriture à la lecture seule et reçoit à nouveau les mises à jour du volume source à l'intervalle de réplication planifié. Lorsque vous reprenez une relation de réplication, le volume cible revient au dernier snapshot de réplication initial, à ce moment-là, le processus de réplication du volume recommence.
+Lorsque vous reprenez une réplication, toutes les modifications apportées au volume cible sont annulées et l'usine de la charge de travail BlueXP  réactive la réplication. Le volume cible passe de la lecture/écriture à la lecture seule et reçoit à nouveau les mises à jour du volume source à l'intervalle de réplication planifié. Lorsque vous reprenez une relation de réplication, le volume cible revient au dernier snapshot de réplication initial, à ce moment-là, le processus de réplication du volume recommence.
 
 .Avant de commencer
 Si vous interrompez un transfert en cours, le transfert n'est pas affecté et la relation devient « suspendue » jusqu'à ce que le transfert soit terminé. Si le transfert en cours est interrompu, il s'agit maintenant d'un transfert ultérieur et ne redémarrera pas.
