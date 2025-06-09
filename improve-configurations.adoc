@@ -27,6 +27,7 @@ Ce qui est analysé:: Workload Factory analyse l'état bien conçu des configura
 * FSx pour les sauvegardes ONTAP
 * Réplication des données à distance
 * Fonctionnalités d'efficacité du stockage
+* Gestion automatique de la capacité
 
 
 --
