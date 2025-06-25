@@ -2,18 +2,18 @@
 sidebar: sidebar 
 permalink: manage-links.html 
 keywords: links, accounts, lambda, creating, associating, disassociating, deleting, editing 
-summary: 'Vous pouvez afficher les liens associés à votre compte, associer un lien et supprimer un lien dans l"usine de charges de travail BlueXP .' 
+summary: 'Vous pouvez afficher les liens associés à votre compte, mettre à jour les mots de passe pour l"authentification des liens et supprimer un lien dans l"usine de charge de travail BlueXP.' 
 ---
-= Gérer les liens d'usine des charges de travail BlueXP 
+= Gérer les liens de l'usine de charge de travail
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-Gérez les liens associés à votre compte d'usine de charge de travail BlueXP . Vous pouvez afficher les liens associés à un système de fichiers FSX pour ONTAP, associer un lien à un système de fichiers FSX pour ONTAP, modifier un lien et supprimer un lien.
+Gérez les liens associés à votre compte Workload Factory. Vous pouvez afficher les liens associés à un système de fichiers FSx for ONTAP, fournir les mots de passe utilisés pour l'authentification des liens et supprimer des liens de la console Workload Factory.
 
-link:links-overview.html["En savoir plus sur les liens"] ou link:create-link.html["créer un lien"].
+link:links-overview.html["En savoir plus sur les liens"] ou link:create-link.html["créer et associer un lien"].
 
 
 

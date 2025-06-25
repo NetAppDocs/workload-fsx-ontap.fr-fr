@@ -16,7 +16,7 @@ La gestion du partage CIFS d'un volume dans l'usine de workloads BlueXP  inclut
 .Avant de commencer
 Avant de commencer, procédez comme suit :
 
-* Pour gérer les partages CIFS, vous devez link:manage-links.html["associer un lien"]. Si vous n'avez pas de lien existant, link:create-link.html["créer un lien"]. Pour associer un lien dans le système de fichiers, sélectionnez *lien associé* sous *Nom du compte*. Une fois le lien associé, revenez à cette opération.
+* Pour gérer les partages CIFS, vous devez associer un lien. link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["Apprenez à associer un lien existant ou à créer et associer un nouveau lien"]. Une fois le lien associé, revenez à cette opération.
 * Déterminez les utilisateurs ou les groupes auxquels accorder l'accès et le niveau d'autorisation à leur accorder.
 
 

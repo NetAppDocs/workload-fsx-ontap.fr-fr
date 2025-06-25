@@ -24,7 +24,7 @@ Les volumes répliqués dans le système de fichiers cible sont des volumes de p
 Assurez-vous de respecter les conditions préalables suivantes avant de commencer.
 
 * Vous devez disposer de deux systèmes de fichiers disponibles dans votre inventaire de stockage pour créer une relation de réplication.
-* Les deux systèmes de fichiers que vous utilisez pour la relation de réplication doivent avoir un lien associé. Si les systèmes de fichiers n'ont pas de liens existants, link:create-link.html["commencez par créer un lien"]. link:manage-links.html["associer un lien"]Dans les systèmes de fichiers, sélectionnez *associer lien* sous *Nom du compte*. Une fois le lien associé dans les deux systèmes de fichiers, revenez à cette opération.
+* Les deux systèmes de fichiers que vous utilisez pour la relation de réplication doivent avoir un lien associé. link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["Apprenez à associer un lien existant ou à créer et associer un nouveau lien"]. Une fois le lien associé, revenez à cette opération.
 
 
 Procédez comme suit pour répliquer des volumes sélectionnés ou répliquer tous les volumes d'un système de fichiers.

@@ -14,7 +14,7 @@ summary: 'La réplication d"une machine virtuelle de stockage vers un autre syst
 La réplication d'une machine virtuelle de stockage vers un autre système de fichiers FSX for ONTAP dans l'usine de workloads BlueXP  offre une couche de protection d'accès aux données en cas de perte de données. Cette opération réplique tous les volumes d'une VM de stockage vers un autre système de fichiers FSX pour ONTAP.
 
 .Avant de commencer
-Pour répliquer une machine virtuelle de stockage vers un autre système de fichiers FSX for ONTAP, vous devez link:manage-links.html["associer un lien"]. Si vous n'avez pas de lien existant, link:create-link.html["créer un lien"]. Pour associer un lien dans le système de fichiers, sélectionnez *lien associé* sous *Nom du compte*. Une fois le lien associé, revenez à cette opération.
+Pour répliquer une machine virtuelle de stockage vers un autre système de fichiers FSx for ONTAP, vous devez associer un lien. link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["Apprenez à associer un lien existant ou à créer et associer un nouveau lien"]. Une fois le lien associé, revenez à cette opération.
 
 .Étapes
 . Connectez-vous à l'aide de l'un des link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].

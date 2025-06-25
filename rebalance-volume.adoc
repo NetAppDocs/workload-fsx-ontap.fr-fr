@@ -34,7 +34,7 @@ Vérifier la balance d'un volume FlexGroup actif.
 .Avant de commencer
 * L'équilibrage des volumes FlexGroup est uniquement disponible pour les systèmes de fichiers FSX pour ONTAP qui utilisent un déploiement scale-out avec au moins deux paires haute disponibilité.
 * Le style de volume doit être un volume FlexGroup.
-* Pour vérifier la balance d'un volume FlexGroup, vous devez link:manage-links.html["associer un lien"]. Si vous n'avez pas de lien existant, link:create-link.html["créer un lien"]. Pour associer un lien dans le système de fichiers, sélectionnez *lien associé* sous *Nom du compte*. Une fois le lien associé, revenez à cette opération.
+* Pour vérifier le solde d'un volume FlexGroup, vous devez associer un lien. link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["Apprenez à associer un lien existant ou à créer et associer un nouveau lien"]. Une fois le lien associé, revenez à cette opération.
 
 
 .Étapes
@@ -60,7 +60,7 @@ NOTE: Une administrateur d'usine de workloads peut arrêter le rééquilibrage p
 
 .Avant de commencer
 * <<Vérifiez la balance d'un volume FlexGroup,Vérifiez la balance d'un volume FlexGroup>> avant de rééquilibrer les volumes.
-* Pour rééquilibrer un volume, vous devez link:manage-links.html["associer un lien"]. Si vous n'avez pas de lien existant, link:create-link.html["créer un lien"]. Pour associer un lien dans le système de fichiers, sélectionnez *lien associé* sous *Nom du compte*. Une fois le lien associé, revenez à cette opération.
+* Pour rééquilibrer un volume, il faut associer un lien. link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["Apprenez à associer un lien existant ou à créer et associer un nouveau lien"]. Une fois le lien associé, revenez à cette opération.
 * Notez que les snapshots existants sur les volumes que vous rééquilibrez deviennent partiels et ne peuvent pas être utilisés pour restaurer les données de volume, mais les nouveaux snapshots pris après le rééquilibrage peuvent être utilisés pour restaurer les données de volume.
 
 

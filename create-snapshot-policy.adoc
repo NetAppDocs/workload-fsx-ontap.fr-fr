@@ -33,7 +33,7 @@ La personnalisation d'une stratégie vous permet de spécifier quand créer des 
 ** Le remplacement de toutes les données d'un snapshot consomme une capacité de volume importante, ce qui est important dans la capacité du volume de provisionnement.
 
 
-* Pour créer une stratégie de snapshot personnalisée, vous devez link:manage-links.html["associer un lien"]. Si vous n'avez pas de lien existant, link:create-link.html["créer un lien"]. Pour associer un lien dans le système de fichiers, sélectionnez *lien associé* sous *Nom du compte*. Une fois le lien associé, revenez à cette opération.
+* Pour créer une politique de snapshot personnalisée, vous devez associer un lien. link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["Apprenez à associer un lien existant ou à créer et associer un nouveau lien"]. Une fois le lien associé, revenez à cette opération.
 
 
 .Étapes

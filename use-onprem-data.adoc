@@ -79,7 +79,7 @@ Répliquez les données de volume d'un cluster ONTAP sur site vers un système d
 .Avant de commencer
 * Vous devez détecter un cluster ONTAP sur site pour répliquer les données de volume.
 * Vous devez disposer d'un système de fichiers FSX pour ONTAP disponible pour être la cible de la réplication.
-* Le cluster ONTAP sur site et le système de fichiers FSX pour ONTAP que vous utilisez pour la relation de réplication doivent avoir un lien associé. Si l'un des clusters On-prem et FSX for ONTAP, ou les deux, link:create-link.html["commencez par créer un lien"]ne disposent pas de liens existants, . link:manage-links.html["associer un lien"]Dans les systèmes de fichiers, sélectionnez *associer lien* sous *Nom du compte*. Une fois que la liaison est associée dans le cluster ONTAP sur site et dans le système de fichiers FSX pour ONTAP, revenez à cette opération.
+* Le cluster ONTAP sur site et le système de fichiers FSX pour ONTAP que vous utilisez pour la relation de réplication doivent avoir un lien associé. link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["Apprenez à associer un lien existant ou à créer et associer un nouveau lien"]. Une fois le lien associé, revenez à cette opération.
 
 
 .Étapes

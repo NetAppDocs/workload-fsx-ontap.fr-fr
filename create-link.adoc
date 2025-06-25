@@ -40,6 +40,12 @@ Vous avez deux options pour créer des liens - automatiquement ou manuellement. 
 .Avant de commencer
 * Vous devez considérer l'option de création de lien que vous utiliserez.
 * En usine de workloads, vous devez disposer d'au moins un système de fichiers FSX pour ONTAP. Pour découvrir ou créer des systèmes de fichiers FSx pour ONTAP, vous devez disposer d'un compte AWS avec des autorisations pour les instances FSx pour ONTAP et link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html#overview["ajoutez des informations d'identification à l'usine des charges de travail"^] avec des autorisations de _lecture seule_ ou de _lecture/écriture_ pour la gestion du stockage.
+* Les ports suivants doivent être ouverts dans le groupe de sécurité associé au système de fichiers FSx for ONTAP pour la connectivité de liaison.
++
+** Pour la console de l'usine de charge de travail : port 443 (HTTPS)
+** Pour CloudShell : port 22 (SSH)
+
+
 * Lorsque vous ajoutez un lien à l'aide d'une pile CloudFormation, vous devez disposer des autorisations suivantes dans votre compte AWS :
 +
 [%collapsible]

@@ -24,7 +24,7 @@ La capacité de stockage SSD maximale pour tous les systèmes de fichiers FSX fo
 Avant de commencer, tenez compte des points suivants :
 
 * Vous devez disposer d'informations d'identification avec des autorisations de lecture/écriture dans Workload Factory pour effectuer cette tâche.
-* Pour vous assurer que les inodes de volume augmentent avec la capacité de stockage, vous devez link:manage-links.html["associer un lien"]. Si vous n'avez pas de lien existant, link:create-link.html["créer un lien"]. Pour associer un lien dans le système de fichiers, sélectionnez *lien associé* sous *Nom du compte*. Une fois le lien associé, revenez à cette opération.
+* Pour vous assurer que les inodes de volume augmentent avec la capacité de stockage, vous devez associer un lien. link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["Apprenez à associer un lien existant ou à créer et associer un nouveau lien"]. Une fois le lien associé, revenez à cette opération.
 * N'activez pas cette fonctionnalité pendant la migration des données, car AWS impose une période de refroidissement minimale de six heures entre chaque augmentation de capacité SSD. Cette restriction peut retarder les ajustements ; planifiez donc en conséquence.
 
 

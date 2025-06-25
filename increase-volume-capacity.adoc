@@ -19,7 +19,7 @@ Vous pouvez également link:edit-volume-autogrow.html["activez la fonction de cr
 Pour une LUN iSCSI, cette opération augmente la taille de la LUN hôte. Une fois la capacité augmentée, suivez la procédure fournie par votre système d'exploitation hôte pour découvrir la nouvelle taille de la LUN et développer le système de fichiers de la LUN.
 
 .Avant de commencer
-Pour augmenter la capacité du volume, vous devez link:manage-links.html["associer un lien"]. Si vous n'avez pas de lien existant, link:create-link.html["créer un lien"]. Pour associer un lien dans le système de fichiers, sélectionnez *lien associé* sous *Nom du compte*. Une fois le lien associé, revenez à cette opération.
+Pour augmenter la capacité du volume, vous devez associer un lien. link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["Apprenez à associer un lien existant ou à créer et associer un nouveau lien"]. Une fois le lien associé, revenez à cette opération.
 
 .Étapes
 . Connectez-vous à l'aide de l'un des link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].

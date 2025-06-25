@@ -28,8 +28,7 @@ L'opération de fractionnement du clone implique les opérations suivantes :
 .Avant de commencer
 Avant de fractionner un volume cloné, tenez compte des points suivants :
 
-* Pour fractionner un volume cloné, vous devez link:manage-links.html["associer un lien"]. Si vous n'avez pas de lien existant, link:create-link.html["créer un lien"]. Pour associer un lien dans le système de fichiers, sélectionnez *lien associé* sous *Nom du compte*. Une fois le lien associé, revenez à cette opération.
-* Vous devez être un administrateur de cluster.
+* Pour diviser un volume cloné, vous devez associer un lien. link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["Apprenez à associer un lien existant ou à créer et associer un nouveau lien"]. Une fois le lien associé, revenez à cette opération.
 * Le volume FlexClone doit être en ligne au début de l'opération de fractionnement.
 * Le volume parent doit être en ligne pour que le fractionnement réussisse.
 

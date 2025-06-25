@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: manage-snapshot-policy.html 
 keywords: manage snapshot policy, change snapshot policy, snapshot policies, snapshot schedule, update 
-summary: Gérez les règles Snapshot pour les volumes FSX pour ONTAP en usine de workloads BlueXP . Une règle de snapshots définit la façon dont le système crée des snapshots pour un volume. 
+summary: Gérez les stratégies de snapshot pour les volumes FSx for ONTAP dans Workload Factory. Une règle de snapshots définit la façon dont le système crée des snapshots pour un volume. 
 ---
 = Gérer les règles relatives aux snapshots
 :allow-uri-read: 
@@ -11,12 +11,12 @@ summary: Gérez les règles Snapshot pour les volumes FSX pour ONTAP en usine de
 
 
 [role="lead"]
-Gérez les règles Snapshot pour les volumes FSX pour ONTAP en usine de workloads BlueXP . Une règle de snapshots définit la façon dont le système crée des snapshots pour un volume.
+Gérez les stratégies de snapshot pour les volumes FSx for ONTAP dans Workload Factory. Une règle de snapshots définit la façon dont le système crée des snapshots pour un volume.
 
 .Description de la tâche
 Les opérations de gestion des snapshots, telles que l'attribution, la modification et la suppression de règles de snapshots pour les volumes d'un système de fichiers FSX pour ONTAP, sont gérées au niveau des machines virtuelles de stockage. Les règles Snapshot peuvent être partagées avec une seule VM de stockage ou avec toutes les VM de stockage.
 
-Certaines tâches de gestion vous obligent à link:manage-links.html["associer un lien"] utiliser le système de fichiers FSX pour ONTAP. Si vous n'avez pas de lien existant, link:create-link.html["créer un lien"].
+Certaines tâches de gestion nécessitent que vous associaisiez un lien au système de fichiers FSx for ONTAP. link:https://docs.netapp.com/us-en/workload-fsx-ontap/links-overview.html["En savoir plus sur les liens de l'usine de charge de travail"].
 
 Par défaut, chaque volume est associé à la règle de snapshot du système de fichiers `default` . Il est recommandé d'utiliser cette règle pour la plupart des workloads.
 
@@ -27,7 +27,7 @@ Par défaut, chaque volume est associé à la règle de snapshot du système de 
 Vous pouvez modifier le nom de la stratégie de snapshots, la planification et le nombre de copies à conserver, et activer ou désactiver les snapshots immuables. Il n'est pas possible d'activer ou de désactiver le partage de règles entre les machines virtuelles de stockage. Cette option n'est disponible que lors de la création de la règle de snapshots.
 
 .Avant de commencer
-Pour afficher les règles de snapshot existantes, vous devez associer un lien. Pour associer un lien, sélectionnez *lien associé* sous *Nom du compte*. Revenez ensuite à cette opération.
+Pour afficher les stratégies d’instantané existantes, vous devez associer un lien. link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["Apprenez à associer un lien existant ou à créer et associer un nouveau lien"]. Une fois le lien associé, revenez à cette opération.
 
 .Étapes
 . Connectez-vous à l'aide de l'un des link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].
@@ -50,7 +50,7 @@ La politique Snapshot est mise à jour.
 Verrouiller les snapshots pour les empêcher d'être supprimés pendant la période de conservation.
 
 .Avant de commencer
-Vous devez link:manage-links.html["associer un lien"]activer des snapshots immuables. Si vous n'avez pas de lien existant, link:create-link.html["créer un lien"]. Pour associer un lien dans le système de fichiers, sélectionnez *lien associé* sous *Nom du compte*. Une fois le lien associé, revenez à cette opération.
+Vous devez associer un lien pour activer les instantanés immuables. link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["Apprenez à associer un lien existant ou à créer et associer un nouveau lien"]. Une fois le lien associé, revenez à cette opération.
 
 .Étapes
 . Connectez-vous à l'aide de l'un des link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].
@@ -79,7 +79,7 @@ L'instantané du volume est maintenant verrouillé.
 Vous pouvez affecter une politique de snapshots à un seul volume pour créer des snapshots planifiés pour ce volume.
 
 .Avant de commencer
-Vous devez link:manage-links.html["associer un lien"]affecter une politique de snapshots. Si vous n'avez pas de lien existant, link:create-link.html["créer un lien"]. Pour associer un lien dans le système de fichiers, sélectionnez *lien associé* sous *Nom du compte*. Une fois le lien associé, revenez à cette opération.
+Vous devez associer un lien pour attribuer une politique de snapshot. link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["Apprenez à associer un lien existant ou à créer et associer un nouveau lien"]. Une fois le lien associé, revenez à cette opération.
 
 .Étapes
 . Connectez-vous à l'aide de l'un des link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].
@@ -105,7 +105,7 @@ La politique de snapshots est attribuée au volume.
 Supprimez une règle de snapshot d'un volume car vous ne souhaitez plus de snapshots du volume ou parce que vous souhaitez supprimer une règle de snapshot attribuée à plusieurs volumes. À <<Supprimer une règle de snapshot,supprimer une règle de snapshot>> qui est attribué plusieurs volumes, vous devez le supprimer manuellement de tous les volumes.
 
 .Avant de commencer
-Vous devez link:manage-links.html["associer un lien"]supprimer une règle de snapshot. Si vous n'avez pas de lien existant, link:create-link.html["créer un lien"]. Pour associer un lien dans le système de fichiers, sélectionnez *lien associé* sous *Nom du compte*. Une fois le lien associé, revenez à cette opération.
+Vous devez associer un lien pour supprimer une politique de snapshot. link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["Apprenez à associer un lien existant ou à créer et associer un nouveau lien"]. Une fois le lien associé, revenez à cette opération.
 
 .Étapes
 . Connectez-vous à l'aide de l'un des link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].

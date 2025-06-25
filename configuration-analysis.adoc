@@ -48,7 +48,7 @@ Catégories de configuration:: Les configurations de système de fichiers sont o
 
 Pour une analyse complète du système de fichiers, vous devez associer un lien. La connectivité de liaison permet à l'usine de workloads d'analyser toutes les configurations de systèmes de fichiers, telles que la protection des données et les performances.
 
-link:create-link.html["Découvrez comment créer un lien."]
+link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["Apprenez à associer un lien existant ou à créer et associer un nouveau lien"].
 
 .Et la suite
 link:improve-configurations.html["Implémenter des configurations de système de fichiers bien architecturées"]

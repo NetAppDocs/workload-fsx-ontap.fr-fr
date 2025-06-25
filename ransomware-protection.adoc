@@ -61,7 +61,7 @@ L'activation d'ARP pour un système de fichiers ajoute automatiquement la protec
 Après avoir activé ARP, si une attaque se produit et que vous identifiez que l'attaque est réelle, la fabrique de workloads BlueXP  configure automatiquement une stratégie de snapshot qui prend jusqu'à six snapshots toutes les quatre heures. Chaque snapshot est verrouillé pendant 2-5 jours.
 
 .Avant de commencer
-Pour activer ARP pour un système de fichiers, vous devez link:manage-links.html["associer un lien"]. Si vous n'avez pas de lien existant, link:create-link.html["créer un lien"]. Pour associer un lien dans le système de fichiers, sélectionnez *lien associé* sous *Nom du compte*. Une fois le lien associé, revenez à cette opération.
+Pour activer ARP pour un système de fichiers, vous devez associer un lien. link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["Apprenez à associer un lien existant ou à créer et associer un nouveau lien"]. Une fois le lien associé, revenez à cette opération.
 
 .Étapes
 . Connectez-vous à l'aide de l'un des link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].
