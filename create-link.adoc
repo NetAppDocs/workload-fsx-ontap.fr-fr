@@ -212,7 +212,7 @@ L'ARN secret doit inclure les paires de clés valides suivantes :
 
 +
 *** FilesytemID = FSX_filesystem_ID
-*** Utilisateur = FSX_user
+*** nom d'utilisateur = FSx_user
 *** mot de passe = mot_de_passe_utilisateur
 
 
@@ -248,7 +248,7 @@ Problème:: Le secret n'est pas dans le bon format.
 Le secret doit contenir les paires de clés valides suivantes :
 
 * FilesytemID = FSX_filesystem_ID
-* Utilisateur = FSX_user
+* nom d'utilisateur = FSx_user
 * mot de passe = mot_de_passe_utilisateur
 
 

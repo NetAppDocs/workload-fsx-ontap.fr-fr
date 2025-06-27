@@ -1694,7 +1694,6 @@
   <block id="b9000423f3d632810a4d8c3550eb4119" category="list-text">AWS secrets Manager : entrez le secret ARN.</block>
   <block id="0481a079b29497027474b2f22074dd5a" category="paragraph">L'ARN secret doit inclure les paires de clés valides suivantes :</block>
   <block id="91a73bc4f293d9fc4712c2770316ae08" category="list-text">FilesytemID = FSX_filesystem_ID</block>
-  <block id="508e0beab9fc0c907eb4adcaa7a736f7" category="list-text">Utilisateur = FSX_user</block>
   <block id="db1e2f706f83d7a3a9a03793db05422a" category="list-text">mot de passe = mot_de_passe_utilisateur</block>
   <block id="3179fc8078925ef0503270fd907af44c" category="paragraph">Le lien est associé au système de fichiers FSX pour ONTAP. Vous pouvez effectuer des opérations ONTAP avancées.</block>
   <block id="db9a0ca8d6bb6376ddaad7f254b049aa" category="section-title">Résolution des problèmes avec l'authentification de liens AWS secrets Manager</block>
@@ -1938,4 +1937,5 @@
   <block id="2ccb6b87f6c03ced811ff29d2a5f5ede" category="paragraph">Pour répliquer une machine virtuelle de stockage vers un autre système de fichiers FSx for ONTAP, vous devez associer un lien. <block ref="d247bd89ba7282a8d4fed90c00e6cb68" category="inline-link-macro-rx"></block>. Une fois le lien associé, revenez à cette opération.</block>
   <block id="99ae6104ba82455197d215357b50f2f1" category="list-text">Pour diviser un volume cloné, vous devez associer un lien. <block ref="d247bd89ba7282a8d4fed90c00e6cb68" category="inline-link-macro-rx"></block>. Une fois le lien associé, revenez à cette opération.</block>
   <block id="21bd8c562c1d6ae4caf8a36f6d06c516" category="list-text">Le cluster ONTAP sur site et le système de fichiers FSX pour ONTAP que vous utilisez pour la relation de réplication doivent avoir un lien associé. <block ref="d247bd89ba7282a8d4fed90c00e6cb68" category="inline-link-macro-rx"></block>. Une fois le lien associé, revenez à cette opération.</block>
+  <block id="316509fcb5a8d1b5e1280f3f64c594f2" category="list-text">nom d'utilisateur = FSx_user</block>
 </blocks>
