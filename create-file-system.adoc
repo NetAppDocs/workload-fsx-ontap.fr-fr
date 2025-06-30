@@ -38,6 +38,8 @@ NOTE: Lorsque vous utilisez Terraform à partir de Codebox, le code que vous cop
 --
 La création rapide vous permet d'utiliser une configuration recommandée conforme aux meilleures pratiques. Vous pouvez modifier la plupart des paramètres après avoir créé un système de fichiers FSX pour ONTAP.
 
+Les systèmes de fichiers FSx for ONTAP de deuxième génération constituent le type de déploiement par défaut. Le type de déploiement passe à la première génération lorsque la région ne prend pas en charge les systèmes de fichiers FSx for ONTAP de deuxième génération.
+
 .Étapes
 . Connectez-vous à l'aide de l'un des link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].
 . Dans stockage, sélectionnez *Créer FSX pour ONTAP*.
@@ -49,34 +51,30 @@ Vous pouvez également charger une configuration enregistrée.
 +
 .. *Informations d'identification AWS* : sélectionnez cette option pour ajouter des informations d'identification AWS en usine de la charge de travail ou continuer sans informations d'identification.
 .. *Nom du système de fichiers* : entrez un nom pour le système de fichiers.
-.. *Topologie de déploiement* : sélectionnez une topologie de déploiement.
-+
-*** Dans la topologie scale-up, un système de fichiers est utilisé pour la distribution des données et peut augmenter en taille pour répondre à la croissance des données.
-*** Dans la topologie scale-out, plusieurs systèmes de fichiers sont utilisés pour la distribution des données.
-
-
-.. *Paires HA* : entrez le nombre de paires HA.
-+
-*** Pour les déploiements scale-up, une seule paire haute disponibilité est disponible.
-*** Pour les déploiements scale-out, vous pouvez avoir entre deux et douze paires haute disponibilité.
-+
-Pour provisionner des volumes en mode bloc iSCSI sur le système de fichiers, ne sélectionnez pas plus de six paires HA.
-
-
-
+.. *Région et VPC* : sélectionnez la région et VPC pour le système de fichiers.
 .. *Type de déploiement* : sélectionnez un type de déploiement.
 +
 *** Déploiement dans une zone de disponibilité unique (zone de disponibilité unique) : assure la disponibilité en surveillant les défaillances matérielles et en remplaçant automatiquement les composants d'infrastructure en cas de défaillance. Assure une durabilité élevée en répliquant automatiquement les données dans une zone de disponibilité afin de les protéger contre les défaillances de composants.
-*** Déploiement dans plusieurs zones de disponibilité (plusieurs zones de disponibilité) : assure la disponibilité continue des données même en cas d'indisponibilité d'une zone de disponibilité. Les systèmes de fichiers multi-AZ prennent en charge toutes les fonctionnalités de disponibilité et de durabilité des systèmes de fichiers Single-AZ. Un système de fichiers multi-AZ est conçu pour les workloads de production stratégiques qui requièrent une haute disponibilité pour les données de fichiers ONTAP partagées et du stockage avec réplication intégrée dans les zones de disponibilité.
++
+Cette configuration est recommandée pour les charges de travail hautes performances ou lorsque les charges de travail commencent petites et évoluent progressivement jusqu'à 72 Go/s de débit et 2,4 millions d'IOPS.
+
+*** Déploiement dans plusieurs zones de disponibilité (plusieurs zones de disponibilité) : assure la disponibilité continue des données même en cas d'indisponibilité d'une zone de disponibilité. Un système de fichiers multi-AZ est conçu pour les workloads de production stratégiques qui requièrent une haute disponibilité pour les données de fichiers ONTAP partagées et du stockage avec réplication intégrée dans les zones de disponibilité.
++
+Cette configuration à paire HA unique est recommandée pour les charges de travail nécessitant jusqu'à 6 Go/s de débit ou 200 000 IOPS.
+
 
 
 .. *Tags*: Vous pouvez éventuellement ajouter jusqu'à 50 tags.
 
 
-. Sous *réseau et sécurité*, dans le champ *région et VPC*, sélectionnez la région et le VPC pour le système de fichiers.
 . Sous *Détails du système de fichiers*, fournissez les informations suivantes :
 +
 .. *Capacité de stockage SSD* : entrez la capacité de stockage et sélectionnez l'unité de capacité de stockage.
++
+*** Pour les déploiements de première génération, vous ne pouvez pas diminuer la capacité après la création du système de fichiers.
+*** Pour les déploiements de deuxième génération, vous pouvez augmenter la capacité après la création du système de fichiers.
+
+
 .. *Informations d'identification ONTAP* : facultatives. Entrez votre nom d'utilisateur et votre mot de passe ONTAP. Le mot de passe peut être défini maintenant ou ultérieurement.
 +
 Si l'utilisateur que vous indiquez n'est pas l'utilisateur fsxadmin, et que vous devez ensuite réinitialiser le mot de passe fsxadmin, vous pourrez le faire à partir de la console AWS.
@@ -125,53 +123,45 @@ Vous pouvez également charger une configuration enregistrée.
 +
 .. *Informations d'identification AWS* : sélectionnez cette option pour ajouter des informations d'identification AWS en usine de la charge de travail ou continuer sans informations d'identification.
 .. *Nom du système de fichiers* : entrez un nom pour le système de fichiers.
-.. *Topologie de déploiement* : sélectionnez une topologie de déploiement.
-+
-*** Dans la topologie scale-up, un système de fichiers est utilisé pour la distribution des données et peut augmenter en taille pour répondre à la croissance des données.
-*** Dans la topologie scale-out, plusieurs systèmes de fichiers sont utilisés pour la distribution des données.
-
-
-.. *Paires HA* : entrez le nombre de paires HA.
-+
-*** Pour les déploiements scale-up, une seule paire haute disponibilité est disponible.
-*** Pour les déploiements scale-out, vous pouvez avoir entre deux et douze paires haute disponibilité.
-+
-Pour provisionner des volumes en mode bloc iSCSI sur le système de fichiers, ne sélectionnez pas plus de 6 paires HA.
-
-
-
-.. *Type de déploiement* : sélectionnez un type de déploiement.
+.. *Région et VPC* : sélectionnez la région et VPC pour le système de fichiers.
+.. *Type de déploiement* : sélectionnez un type de déploiement et une génération de système de fichiers.
 +
 *** Déploiement dans une zone de disponibilité unique (zone de disponibilité unique) : assure la disponibilité en surveillant les défaillances matérielles et en remplaçant automatiquement les composants d'infrastructure en cas de défaillance. Assure une durabilité élevée en répliquant automatiquement les données dans une zone de disponibilité afin de les protéger contre les défaillances de composants.
-*** Déploiement dans plusieurs zones de disponibilité (plusieurs zones de disponibilité) : assure la disponibilité continue des données même en cas d'indisponibilité d'une zone de disponibilité. Les systèmes de fichiers multi-AZ prennent en charge toutes les fonctionnalités de disponibilité et de durabilité des systèmes de fichiers Single-AZ. Un système de fichiers multi-AZ est conçu pour les workloads de production stratégiques qui requièrent une haute disponibilité pour les données de fichiers ONTAP partagées et du stockage avec réplication intégrée dans les zones de disponibilité.
++
+*Génération du système de fichiers* : sélectionnez l'une des options suivantes : ** *Deuxième génération* : cette configuration est recommandée pour les charges de travail hautes performances ou lorsque les charges de travail démarrent à petite échelle et évoluent progressivement jusqu'à 72 Go/s de débit et 2,4 millions d'IOPS. ** *Première génération* : cette configuration est idéale pour les charges de travail qui nécessitent jusqu'à 4 Go/s ou 160 000 IOPS. Les systèmes de fichiers de première génération ne peuvent qu'augmenter la capacité.
+
++
++ La disponibilité du système de fichiers de deuxième génération dépend de la région sélectionnée. Si la région sélectionnée ne prend pas en charge les systèmes de fichiers FSx for ONTAP de deuxième génération, le type de déploiement bascule vers la première génération.
+
+*** Déploiement dans plusieurs zones de disponibilité (plusieurs zones de disponibilité) : assure la disponibilité continue des données même en cas d'indisponibilité d'une zone de disponibilité. Un système de fichiers multi-AZ est conçu pour les workloads de production stratégiques qui requièrent une haute disponibilité pour les données de fichiers ONTAP partagées et du stockage avec réplication intégrée dans les zones de disponibilité.
++
+**** *Deuxième génération* : Cette configuration à paire HA unique est recommandée pour les charges de travail nécessitant jusqu'à 6 Go/s de débit ou 200 000 IOPS. Dans un système de fichiers multi-AZ de deuxième génération, la capacité peut être augmentée ou diminuée pour répondre aux exigences de la charge de travail.
+**** *Première génération* : Cette configuration est idéale pour les charges de travail nécessitant jusqu'à 4 Go/s ou 160 000 IOPS. Les systèmes de fichiers de première génération ne peuvent qu'augmenter la capacité.
++
+La disponibilité du système de fichiers de deuxième génération dépend de la région sélectionnée. Si la région sélectionnée ne prend pas en charge les systèmes de fichiers FSx for ONTAP de deuxième génération, le type de déploiement bascule vers la première génération.
+
+
+
 
 
 .. *Tags*: Vous pouvez éventuellement ajouter jusqu'à 50 tags.
 
 
-. Sous réseau et sécurité, fournissez les éléments suivants :
-+
-.. *Région et VPC* : sélectionnez la région et VPC pour le système de fichiers.
-.. *Groupe de sécurité* : créez ou utilisez un groupe de sécurité existant.
-+
-Pour un nouveau groupe de sécurité, reportez-vous à  la section <<Détails du groupe de sécurité,détails du groupe de sécurité>> pour obtenir une description des protocoles, ports et rôles du groupe de sécurité.
-
-.. *Zones de disponibilité* : sélectionnez les zones de disponibilité et les sous-réseaux.
-+
-*** Pour le nœud de configuration de cluster 1 : sélectionnez une zone de disponibilité et un sous-réseau.
-*** Pour le nœud de configuration de cluster 2 : sélectionnez une zone de disponibilité et un sous-réseau.
-
-
-.. *Tables de routage VPC* : sélectionnez la table de routage VPC pour activer l'accès client aux volumes.
-.. *Plage d'adresses IP de point final* : sélectionnez *Plage d'adresses IP flottantes en dehors de votre VPC* ou *Entrez une plage d'adresses IP* et entrez une plage d'adresses IP.
-.. *Cryptage* : sélectionnez le nom de la clé de cryptage dans la liste déroulante.
-
-
 . Sous Détails du système de fichiers, fournissez les informations suivantes :
 +
 .. *Capacité de stockage SSD* : entrez la capacité de stockage et sélectionnez l'unité de capacité de stockage.
-.. *IOPS approvisionnées* : sélectionnez *automatique* ou *utilisateur-provisionné*.
-.. *Capacité de débit par paire haute disponibilité* : sélectionnez la capacité de débit par paire haute disponibilité.
++
+*** Pour les déploiements de première génération, vous ne pouvez pas diminuer la capacité après la création du système de fichiers.
+*** Pour les déploiements de deuxième génération, vous pouvez ajuster la capacité.
+
+
+.. *Capacité de débit par paire HA* : sélectionnez la capacité de débit par nombre de paires HA. Les systèmes de fichiers de première génération ne prennent en charge qu'une seule paire HA.
+.. *IOPS provisionnés* : sélectionnez l’une des options suivantes :
++
+*** *Automatique* : Pour automatique, pour chaque Gio créé, 3 IOPS sont ajoutés.
+*** *Provisionné par l'utilisateur* : pour le provisionnement par l'utilisateur, saisissez la valeur IOPS.
+
+
 .. *Informations d'identification ONTAP* : facultatives. Entrez votre nom d'utilisateur et votre mot de passe ONTAP. Le mot de passe peut être défini maintenant ou ultérieurement.
 +
 Si l'utilisateur que vous indiquez n'est pas l'utilisateur fsxadmin, et que vous devez ensuite réinitialiser le mot de passe fsxadmin, vous pourrez le faire à partir de la console AWS.
@@ -199,15 +189,32 @@ Si vous vous joignez à un AD autogéré, utilisez le nom du groupe dans votre A
 
 
 
+. Sous réseau et sécurité, fournissez les éléments suivants :
++
+.. *Groupe de sécurité* : créez ou utilisez un groupe de sécurité existant.
++
+Pour un nouveau groupe de sécurité, reportez-vous à  la section <<Détails du groupe de sécurité,détails du groupe de sécurité>> pour obtenir une description des protocoles, ports et rôles du groupe de sécurité.
+
+.. *Zones de disponibilité* : sélectionnez les zones de disponibilité et les sous-réseaux.
++
+*** Pour le nœud de configuration de cluster 1 : sélectionnez une zone de disponibilité et un sous-réseau.
+*** Pour le nœud de configuration de cluster 2 : sélectionnez une zone de disponibilité et un sous-réseau.
+
+
+.. *Tables de routage VPC* : sélectionnez la table de routage VPC pour activer l'accès client aux volumes.
+.. *Plage d'adresses IP de point final* : sélectionnez *Plage d'adresses IP flottantes en dehors de votre VPC* ou *Entrez une plage d'adresses IP* et entrez une plage d'adresses IP.
+.. *Cryptage* : sélectionnez le nom de la clé de cryptage dans la liste déroulante.
+
+
 . Sous sauvegarde et maintenance, fournissez les éléments suivants :
 +
 .. *FSX pour la sauvegarde ONTAP* : les sauvegardes automatiques quotidiennes sont activées par défaut. Désactivez-le si vous le souhaitez.
 +
 ... *Période de conservation automatique des sauvegardes* : entrez le nombre de jours de conservation des sauvegardes automatiques.
 ... *Fenêtre de sauvegarde automatique quotidienne* : sélectionnez *pas de préférence* (une heure de début de sauvegarde quotidienne est sélectionnée pour vous) ou *sélectionnez l'heure de début pour les sauvegardes quotidiennes* et spécifiez une heure de début.
-... *Fenêtre de maintenance hebdomadaire* : sélectionnez *pas de préférence* (une heure de début de la fenêtre de maintenance hebdomadaire est sélectionnée pour vous) ou *sélectionnez l'heure de début de la fenêtre de maintenance hebdomadaire de 30 minutes* et spécifiez une heure de début.
 
 
+.. *Fenêtre de maintenance hebdomadaire* : sélectionnez *pas de préférence* (une heure de début de la fenêtre de maintenance hebdomadaire est sélectionnée pour vous) ou *sélectionnez l'heure de début de la fenêtre de maintenance hebdomadaire de 30 minutes* et spécifiez une heure de début.
 
 
 . Enregistrez ou créez le système de fichiers.

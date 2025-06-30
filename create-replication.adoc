@@ -20,6 +20,8 @@ Cette opération crée une relation de réplication pour un ou tous les volumes 
 
 Les volumes répliqués dans le système de fichiers cible sont des volumes de protection des données (DP) et suivent le format de nommage suivant : `{OriginalVolumeName}_copy`.
 
+Lors de la réplication d'un volume source contenant des fichiers immuables, le volume cible et le système de fichiers sont verrouillés jusqu'à la fin de la période de rétention des fichiers immuables du volume source. La fonctionnalité de fichiers immuables est disponible lorsque vous link:create-volume.html["créer un volume"] pour un système de fichiers FSx pour ONTAP.
+
 .Avant de commencer
 Assurez-vous de respecter les conditions préalables suivantes avant de commencer.
 
@@ -47,7 +49,7 @@ Dans le tableau volumes, sélectionnez un ou plusieurs volumes, puis sélectionn
 . Sur la page de données répliquées, sous cible de réplication, indiquez les informations suivantes :
 +
 .. *FSX pour système de fichiers ONTAP* : sélectionnez les informations d'identification, la région et le nom du système de fichiers FSX pour ONTAP pour le système de fichiers cible FSX pour ONTAP.
-.. *Nom de la VM de stockage* : sélectionnez la VM de stockage dans le menu déroulant.
+.. *Nom de la VM de stockage* : sélectionnez la VM de stockage dans le menu déroulant. La machine virtuelle de stockage que vous sélectionnez est la cible de tous les volumes sélectionnés dans cette relation de réplication.
 .. *Nom du volume* : le nom du volume cible est généré automatiquement au format suivant `{OriginalVolumeName}_copy`. Vous pouvez utiliser le nom du volume généré automatiquement ou entrer un autre nom de volume.
 .. *Cas d'utilisation* : sélectionnez l'un des cas d'utilisation suivants pour la réplication. Selon le cas d'utilisation sélectionné, l'usine de charge de travail remplit le formulaire avec les valeurs recommandées conformément aux meilleures pratiques. Vous pouvez accepter les valeurs recommandées ou apporter des modifications au fur et à mesure que vous remplissez le formulaire.
 +
@@ -102,16 +104,13 @@ NOTE: Les étiquettes de source et de cible correspondantes sont requises pour l
 
 +
 *** *Choisissez une stratégie existante* : sélectionnez une stratégie existante dans le menu déroulant.
-*** *Créer une nouvelle politique* : fournir ce qui suit :
-+
-**** *Nom de la stratégie* : entrez un nom de stratégie.
-**** Facultatif : activez les snapshots immuables.
-+
-***** Sélectionnez *Activer les instantanés immuables* pour empêcher la suppression des instantanés pris dans cette stratégie pendant la période de conservation.
-***** Définissez la *période de conservation* en nombre d'heures, de jours, de mois ou d'années.
+*** *Créer une nouvelle politique* : saisissez un *nom de politique*.
 
 
-**** *Stratégies Snapshot* : dans le tableau, sélectionnez la fréquence de la règle de snapshot et le nombre de copies à conserver. Vous pouvez sélectionner plusieurs règles de snapshot.
+.. *Instantanés immuables* : Facultatif. Sélectionnez *Activer les instantanés immuables* pour empêcher la suppression des instantanés pris dans cette stratégie pendant la période de conservation.
++
+*** Définissez la *période de conservation* en nombre d'heures, de jours, de mois ou d'années.
+*** *Stratégies Snapshot* : dans le tableau, sélectionnez la fréquence de la règle de snapshot et le nombre de copies à conserver. Vous pouvez sélectionner plusieurs règles de snapshot.
 
 
 

@@ -1,0 +1,68 @@
+= 
+:allow-uri-read: 
+
+
+. *Nom de la VM de stockage* : sélectionnez la VM de stockage dans le menu déroulant. La machine virtuelle de stockage que vous sélectionnez est la cible de tous les volumes sélectionnés dans cette relation de réplication.
+. *Nom du volume* : le nom du volume cible est généré automatiquement au format suivant `{OriginalVolumeName}_copy`. Vous pouvez utiliser le nom du volume généré automatiquement ou entrer un autre nom de volume.
+. *Cas d'utilisation* : sélectionnez l'un des cas d'utilisation suivants pour la réplication. Selon le cas d'utilisation sélectionné, l'usine de charge de travail remplit le formulaire avec les valeurs recommandées conformément aux meilleures pratiques. Vous pouvez accepter les valeurs recommandées ou apporter des modifications au fur et à mesure que vous remplissez le formulaire.
++
+** Migration : transfère vos données vers le système de fichiers cible FSX pour ONTAP
+** Reprise après incident à chaud : assure une haute disponibilité et une reprise après incident rapide pour les workloads stratégiques
+** Reprise après incident des données inactives ou d'archivage :
++
+*** Reprise d'activité à froid : utilise des objectifs de délai de restauration (RTO) et des objets de point de restauration (RPO) plus longs pour réduire les coûts
+*** Archive : réplique les données pour un stockage et une conformité à long terme
+
+
+** Autre
++
+En outre, la sélection du cas d'utilisation détermine la règle de réplication ou la règle SnapMirror (ONTAP). Les termes utilisés pour décrire les règles de réplication proviennent de link:https://docs.netapp.com/us-en/ontap/data-protection/default-protection-policies-concept.html["Documentation sur ONTAP 9"^].
+
++
+*** Pour la migration et les autres, la règle de réplication est appelée _MirrorAllsnapshots_. _MirrorAllsnapshots_ est une règle asynchrone pour la mise en miroir de tous les snapshots et du dernier système de fichiers actif.
+*** Pour la reprise après incident à chaud, à froid ou d'archivage, la stratégie de réplication est appelée _MirrorAndVault_. _MirrorAndVault_ est une règle asynchrone et de coffre-fort pour la mise en miroir du dernier système de fichiers actif et des snapshots quotidiens et hebdomadaires.
++
+Pour tous les cas d'utilisation, si vous activez les snapshots pour la conservation à long terme, la règle de réplication par défaut est _MirrorAndVault_.
+
+
+
+
+
+. *Règle de hiérarchisation* : sélectionnez la règle de hiérarchisation pour les données stockées dans le volume cible. La règle de Tiering est définie par défaut sur la règle de hiérarchisation recommandée pour le cas d'utilisation que vous avez sélectionné.
++
+_Balanced (Auto)_ est la règle de hiérarchisation par défaut lors de la création d'un volume à l'aide de la console d'usine de la charge de travail. Pour plus d'informations sur les règles de Tiering de volume, reportez-vous à la section link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/volume-storage-capacity.html#data-tiering-policy["Capacité de stockage du volume"^] dans la documentation d'AWS FSX pour NetApp ONTAP. Notez que Workload Factory utilise des noms basés sur des cas d'utilisation dans la console d'usine de workloads pour les règles de Tiering et inclut les noms des règles de Tiering FSX pour ONTAP entre parenthèses.
+
++
+Si vous avez sélectionné l'utilisation de la migration, Workload Factory sélectionne automatiquement la règle de Tiering du volume source vers le volume cible. Vous pouvez désélectionner cette option pour copier la règle de hiérarchisation et sélectionner une règle de hiérarchisation qui s'applique au volume sélectionné pour la réplication.
+
+. *Taux de transfert max.* : sélectionnez *Limited* et entrez la limite de transfert max. En Mo/s. Vous pouvez également sélectionner *Illimité*.
++
+Sans limite, les performances du réseau et des applications peuvent diminuer. Nous recommandons également un taux de transfert illimité pour les systèmes de fichiers FSX pour ONTAP pour les workloads stratégiques, par exemple ceux utilisés principalement pour la reprise d'activité. . Sous Paramètres de réplication, fournissez les informations suivantes :
+
+. *Intervalle de réplication* : sélectionnez la fréquence à laquelle les instantanés sont transférés du volume source vers le volume cible.
+. *Conservation à long terme* : éventuellement, activez les instantanés pour la conservation à long terme. La conservation à long terme permet aux services de l'entreprise de continuer de fonctionner même en cas de défaillance complète d'un site, ce qui permet aux applications de basculer en toute transparence grâce à une copie secondaire.
++
+Les réplications sans rétention à long terme utilisent la stratégie _MirrorAllSnapshots_. L'activation de la rétention à long terme affecte la stratégie _MirrorAndVault_ à la réplication.
+
++
+Si vous activez la conservation à long terme, sélectionnez une règle existante ou créez une nouvelle règle pour définir les snapshots à répliquer et le nombre à conserver.
+
++
+
+NOTE: Les étiquettes de source et de cible correspondantes sont requises pour la conservation à long terme. Si vous le souhaitez, Workload Factory peut créer des étiquettes manquantes pour vous.
+
++
+** *Choisissez une stratégie existante* : sélectionnez une stratégie existante dans le menu déroulant.
+** *Créer une nouvelle politique* : saisissez un *nom de politique*.
+
+
+. *Instantanés immuables* : Facultatif. Sélectionnez *Activer les instantanés immuables* pour empêcher la suppression des instantanés pris dans cette stratégie pendant la période de conservation.
++
+** Définissez la *période de conservation* en nombre d'heures, de jours, de mois ou d'années.
+** *Stratégies Snapshot* : dans le tableau, sélectionnez la fréquence de la règle de snapshot et le nombre de copies à conserver. Vous pouvez sélectionner plusieurs règles de snapshot.
+
+
+
+
+. Sélectionnez *Créer*.
+

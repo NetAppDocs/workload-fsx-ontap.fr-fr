@@ -11,58 +11,115 @@ summary: 'Contrôler et rééquilibrer la capacité d"un volume pour éviter les
 
 
 [role="lead"]
-Vérifiez l'équilibre entre la capacité du volume FlexGroup et rééquilibrez la capacité du volume pour répartir les fichiers de manière homogène entre tous les composants de sorte que tous les nœuds participent à la charge de travail d'un seul volume Flex Group.
+Vérifiez l'équilibre de la capacité du volume FlexVol ou FlexGroup et rééquilibrez la capacité du volume pour répartir les fichiers uniformément sur tous les volumes FlexVol d'un nœud ou sur tous les composants afin que tous les nœuds participent à la charge de travail d'un seul volume FlexGroup.
 
 .Description de la tâche
-La capacité des volumes FlexGroup est répartie sur plusieurs composants dans un système de fichiers scale-out FSX pour ONTAP avec au moins deux paires haute disponibilité. Chaque composant est un conteneur qui détermine la taille maximale d'un fichier. FSX pour ONTAP répartit les fichiers entre tous les composants de manière homogène, de sorte que tous les nœuds participent à la charge de travail d'un seul volume FlexGroup.
+La capacité de rééquilibrage du volume est prise en charge pour les volumes FlexVol et les volumes FlexGroup. Le rééquilibrage d'un volume redistribue la capacité lorsque les déséquilibres se développent suite à l'ajout de nouveaux fichiers et à la croissance des fichiers. Une fois que vous avez démarré l'opération de rééquilibrage manuellement, nous sélectionnons les fichiers et les déplaçons automatiquement et sans interruption. Les opérations de transfert de volumes consomment des ressources du système de fichiers.
+
+Chaque type de volume et chaque opération de rééquilibrage diffèrent comme suit.
+
+Volumes FlexVol:: Les volumes FlexVol sont des conteneurs logiques offrant une flexibilité de gestion des données, permettant l'expansion, la contraction, le déplacement et la copie efficace. Ils sont compatibles avec les environnements NAS et SAN.
++
+--
+Un volume FlexVol peut être équilibré par rapport aux autres volumes FlexVol d'un même nœud d'un système de fichiers FSx for ONTAP. Si le système de fichiers ne comporte qu'un seul volume FlexVol, le rééquilibrage est impossible. Si le système de fichiers comporte plusieurs volumes FlexVol par nœud et qu'un seul volume FlexVol est sélectionné, le volume FlexVol est équilibré par rapport à tous les volumes FlexVol, mais seul le volume sélectionné est autorisé à se déplacer.
+
+--
+Volumes FlexGroup:: Les volumes FlexGroup, quant à eux, sont des conteneurs NAS évolutifs conçus pour des performances élevées et une répartition automatique de la charge. Ils sont constitués de plusieurs volumes membres (constituants) qui partagent le trafic de manière transparente. Les volumes FlexGroup offrent une capacité considérable, dépassant les limites de FlexVol, avec jusqu'à 60 Po de capacité et 400 milliards de fichiers. Ils simplifient la gestion grâce à un conteneur d'espace de noms unique.
++
+--
+La capacité est répartie sur un certain nombre de composants dans un système de fichiers FSx pour ONTAP évolutif avec deux paires haute disponibilité (HA) ou plus. Chaque composant est un conteneur qui détermine la taille maximale d'un fichier. FSX pour ONTAP répartit les fichiers entre tous les composants de manière homogène, de sorte que tous les nœuds participent à la charge de travail d'un seul volume FlexGroup.
 
 Lorsque les composants ne sont pas répartis de manière homogène entre tous les nœuds, les performances du volume FlexGroup diminuent.
 
 La vérification du solde de la capacité du volume FlexGroup comprend l'évaluation de la disposition actuelle des composants. Lorsque vous rééquilibrez la capacité du volume, l'usine de charges de travail BlueXP  conçoit une nouvelle disposition constituante avec un nombre pair de composants afin de répartir les données de manière homogène entre toutes les paires haute disponibilité. Le service exécute le plan de rééquilibrage qui, à son tour, améliore les opérations de lecture et d'écriture.
 
-Le rééquilibrage d'un volume redistribue la capacité lorsque les déséquilibres se développent suite à l'ajout de nouveaux fichiers et à la croissance des fichiers. Une fois que vous avez démarré l'opération de rééquilibrage manuellement, nous sélectionnons les fichiers et les déplaçons automatiquement et sans interruption. Les opérations de transfert de volumes consomment des ressources du système de fichiers.
-
-
-NOTE: Le rééquilibrage est pris en charge uniquement pour les volumes FlexGroup, mais pas pour les volumes FlexGroup iSCSI ou NVMe.
+--
 
 
 
-== Vérifiez la balance d'un volume FlexGroup
+NOTE: Le rééquilibrage n'est pas pris en charge pour les volumes SAN tels que iSCSI et NVMe.
 
-Vérifier la balance d'un volume FlexGroup actif.
+
+
+== Vérifiez l'équilibre de vos volumes
+
+Vérifiez l'équilibre des volumes FlexVol ou FlexGroup dans un système de fichiers FSx pour ONTAP.
 
 .Avant de commencer
 * L'équilibrage des volumes FlexGroup est uniquement disponible pour les systèmes de fichiers FSX pour ONTAP qui utilisent un déploiement scale-out avec au moins deux paires haute disponibilité.
-* Le style de volume doit être un volume FlexGroup.
-* Pour vérifier le solde d'un volume FlexGroup, vous devez associer un lien. link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["Apprenez à associer un lien existant ou à créer et associer un nouveau lien"]. Une fois le lien associé, revenez à cette opération.
+* Pour vérifier l'équilibre d'un volume, vous devez link:manage-links.html["associer un lien"] . Si vous n'avez pas de lien existant, link:create-link.html["créer un lien"]. Pour associer un lien dans le système de fichiers, sélectionnez *lien associé* sous *Nom du compte*. Une fois le lien associé, revenez à cette opération.
 
+
+.Étapes
+. Connectez-vous à l'aide de l'un des link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].
+. Dans *stockage*, sélectionnez *aller à l'inventaire de stockage*.
+. Dans l'onglet *FSx pour ONTAP*, sélectionnez le menu à trois points du système de fichiers contenant les volumes à rééquilibrer, puis sélectionnez *Gérer*.
+. Dans la présentation du système de fichiers, sélectionnez l'onglet *volumes*.
+. Dans l’onglet Volumes, sélectionnez *Vérifier le solde du volume* en haut du tableau.
+. Dans la fenêtre Solde du volume, vérifiez l’état du solde de :
++
+** Volumes FlexGroup
+** Volumes FlexVol
++
+Lorsqu'un volume est déséquilibré, pensez à <<Rebalance a volume,le rééquilibrage>> .
+
+
+
+
+
+
+
+== Rééquilibrer la capacité du volume
+
+Rééquilibrer un ou plusieurs volumes non équilibrés.
+
+
+NOTE: Un administrateur d'usine de charge de travail peut <<Arrêter une opération de rééquilibrage du volume,arrêter le rééquilibrage>> pendant l'opération.
+
+.Avant de commencer
+* <<Vérifiez l'équilibre de vos volumes,Vérifier l'équilibre d'un volume>> avant de rééquilibrer les volumes.
+* Pour rééquilibrer un volume, vous devez link:manage-links.html["associer un lien"]. Si vous n'avez pas de lien existant, link:create-link.html["créer un lien"]. Pour associer un lien dans le système de fichiers, sélectionnez *lien associé* sous *Nom du compte*. Une fois le lien associé, revenez à cette opération.
+* Notez que les snapshots existants sur les volumes que vous rééquilibrez deviennent partiels et ne peuvent pas être utilisés pour restaurer les données de volume, mais les nouveaux snapshots pris après le rééquilibrage peuvent être utilisés pour restaurer les données de volume.
+* Il est préférable de rééquilibrer les volumes FlexVol de manière globale afin d'équilibrer toutes les ressources. Les volumes désélectionnés ne participent pas activement à la procédure d'équilibrage.
+
+
+[role="tabbed-block"]
+====
+.Volume FlexVol
+--
+Un volume FlexVol peut être équilibré par rapport aux autres volumes FlexVol d'un même nœud d'un système de fichiers FSx for ONTAP. Lorsque le système de fichiers comporte plusieurs volumes FlexVol par nœud et qu'un seul volume FlexVol est sélectionné, ce volume FlexVol est équilibré par rapport à tous les volumes FlexVol, mais seul le volume sélectionné est autorisé à se déplacer.
 
 .Étapes
 . Connectez-vous à l'aide de l'un des link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].
 . Dans *stockage*, sélectionnez *aller à l'inventaire de stockage*.
 . Dans l'onglet *FSX pour ONTAP*, sélectionnez le menu à trois points du système de fichiers contenant le volume à rééquilibrer, puis sélectionnez *gérer*.
 . Dans la présentation du système de fichiers, sélectionnez l'onglet *volumes*.
-. Dans l'onglet volumes, sélectionnez *vérifier l'équilibre FlexGroup* en haut de la table.
-. Dans la fenêtre FlexGroup Balance, vérifiez l'état de l'équilibre de tous les volumes FlexGroup dans le système de fichiers FSX pour ONTAP.
+. Dans l’onglet Volumes, sélectionnez *Vérifier le solde du volume* en haut du tableau.
+. Dans la fenêtre Solde des volumes, sélectionnez éventuellement *Distribution des données* dans le résumé du solde FlexVol pour afficher la capacité utilisée par agrégat.
+. Sélectionnez *Rééquilibrer* pour rééquilibrer un ou plusieurs volumes déséquilibrés.
+. Dans l’assistant de rééquilibrage, suivez les étapes.
 +
-Lorsqu'un volume FlexGroup est déséquilibré, considérez <<Rééquilibrez un volume FlexGroup,le rééquilibrage>>.
+.. *Taux de transfert maximal* : Facultatif. Désactivé par défaut. Activez la restriction pour limiter la bande passante de déplacement d'un volume sur votre système de fichiers et pour ralentir le trafic de réplication du volume sortant.
++
+Entrez la valeur de l'accélérateur en MB/s.
+
++
+Sélectionnez *Suivant*.
+
+.. Passez en revue les dispositions actuelles et proposées de tous les volumes FlexVol, puis sélectionnez *Suivant*.
+.. Examinez attentivement ce qui va se passer et la note avant de commencer l’opération de rééquilibrage.
 
 
+. Sélectionnez *rééquilibrer*.
 
 
+.Résultat
+Le volume FlexVol est rééquilibré. Une fois l'opération terminée, le système de fichiers est réduit à la valeur d'origine.
 
-== Rééquilibrez un volume FlexGroup
-
-Rééquilibrer un ou plusieurs volumes non équilibrés. Les données sont reréparties entre les volumes de membres pour rééquilibrer le volume FlexGroup. Selon la disposition de distribution des données que vous préférez, l'opération de rééquilibrage peut ajouter des volumes de membres FlexGroup et augmenter la taille des volumes provisionnés.
-
-
-NOTE: Une administrateur d'usine de workloads peut arrêter le rééquilibrage pendant l'opération.
-
-.Avant de commencer
-* <<Vérifiez la balance d'un volume FlexGroup,Vérifiez la balance d'un volume FlexGroup>> avant de rééquilibrer les volumes.
-* Pour rééquilibrer un volume, il faut associer un lien. link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["Apprenez à associer un lien existant ou à créer et associer un nouveau lien"]. Une fois le lien associé, revenez à cette opération.
-* Notez que les snapshots existants sur les volumes que vous rééquilibrez deviennent partiels et ne peuvent pas être utilisés pour restaurer les données de volume, mais les nouveaux snapshots pris après le rééquilibrage peuvent être utilisés pour restaurer les données de volume.
-
+--
+.Volume FlexGroup
+--
+Les données sont reréparties entre les volumes de membres pour rééquilibrer le volume FlexGroup. En fonction de la disposition choisie, l’opération de rééquilibrage peut ajouter des volumes membres FlexGroup et augmenter la taille des volumes provisionnés.
 
 .Étapes
 . Connectez-vous à l'aide de l'un des link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].
@@ -93,4 +150,22 @@ Entrez la valeur de l'accélérateur en MB/s.
 
 
 .Résultat
-Selon le nombre de volumes de membres FlexGroup ajoutés à FlexGroup, une opération de déplacement de membre du volume FlexGroup a lieu à la fois. Une fois l'opération terminée, le système de fichiers est réduit à la valeur d'origine.
+Les volumes des membres FlexGroup sont déplacés un par un lors du rééquilibrage. Une fois l'opération terminée, le système de fichiers est réduit à la valeur d'origine.
+
+--
+====
+
+
+== Arrêter une opération de rééquilibrage du volume
+
+Arrêtez une opération de rééquilibrage à tout moment ; cela n'entraîne aucune perturbation. L'arrêt de l'opération annule les mouvements de volume actifs.
+
+Vous pouvez démarrer une autre opération de rééquilibrage ultérieurement.
+
+.Étapes
+. Après avoir commencé l'opération de rééquilibrage, à partir de la page Solde du volume, sélectionnez *Arrêter le rééquilibrage*.
+. Dans la boîte de dialogue Arrêter le rééquilibrage, sélectionnez *Arrêter*.
+
+
+.Résultat
+L'opération de rééquilibrage du volume s'arrête et les mouvements de volume actifs sont abandonnés.
