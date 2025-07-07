@@ -11,7 +11,7 @@ summary: 'En utilisant l"usine de workloads BlueXP , vous pouvez créer un syst
 
 
 [role="lead"]
-En utilisant l'usine de workloads BlueXP , vous pouvez créer un système de fichiers FSX pour ONTAP afin d'ajouter et de gérer des volumes et des services de données supplémentaires.
+À l'aide de l'usine de charge de travail BlueXP, vous pouvez créer des systèmes de fichiers FSx pour ONTAP de première et deuxième génération pour ajouter et gérer des volumes et des services de données supplémentaires.
 
 .Description de la tâche
 Une VM de stockage et un groupe de sécurité sont créés dans le cadre de la création du système de fichiers.
@@ -38,7 +38,7 @@ NOTE: Lorsque vous utilisez Terraform à partir de Codebox, le code que vous cop
 --
 La création rapide vous permet d'utiliser une configuration recommandée conforme aux meilleures pratiques. Vous pouvez modifier la plupart des paramètres après avoir créé un système de fichiers FSX pour ONTAP.
 
-Les systèmes de fichiers FSx for ONTAP de deuxième génération constituent le type de déploiement par défaut. Le type de déploiement passe à la première génération lorsque la région ne prend pas en charge les systèmes de fichiers FSx for ONTAP de deuxième génération.
+Les systèmes de fichiers FSx de deuxième génération pour ONTAP sont le type de déploiement par défaut pour une création rapide, sauf si la région sélectionnée ne prend pas en charge les systèmes de fichiers FSx de deuxième génération pour ONTAP.
 
 .Étapes
 . Connectez-vous à l'aide de l'un des link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].
@@ -124,22 +124,24 @@ Vous pouvez également charger une configuration enregistrée.
 .. *Informations d'identification AWS* : sélectionnez cette option pour ajouter des informations d'identification AWS en usine de la charge de travail ou continuer sans informations d'identification.
 .. *Nom du système de fichiers* : entrez un nom pour le système de fichiers.
 .. *Région et VPC* : sélectionnez la région et VPC pour le système de fichiers.
-.. *Type de déploiement* : sélectionnez un type de déploiement et une génération de système de fichiers.
+.. *Type de déploiement* : sélectionnez un type de déploiement et une génération de système de fichiers. La disponibilité d’un système de fichiers de deuxième génération dépend de la région sélectionnée. Si la région sélectionnée ne prend pas en charge les systèmes de fichiers FSx for ONTAP de deuxième génération, le type de déploiement bascule vers la première génération.
 +
 *** Déploiement dans une zone de disponibilité unique (zone de disponibilité unique) : assure la disponibilité en surveillant les défaillances matérielles et en remplaçant automatiquement les composants d'infrastructure en cas de défaillance. Assure une durabilité élevée en répliquant automatiquement les données dans une zone de disponibilité afin de les protéger contre les défaillances de composants.
 +
-*Génération du système de fichiers* : sélectionnez l'une des options suivantes : ** *Deuxième génération* : cette configuration est recommandée pour les charges de travail hautes performances ou lorsque les charges de travail démarrent à petite échelle et évoluent progressivement jusqu'à 72 Go/s de débit et 2,4 millions d'IOPS. ** *Première génération* : cette configuration est idéale pour les charges de travail qui nécessitent jusqu'à 4 Go/s ou 160 000 IOPS. Les systèmes de fichiers de première génération ne peuvent qu'augmenter la capacité.
+*Génération du système de fichiers* : Sélectionnez l'une des options suivantes :
 
 +
-+ La disponibilité du système de fichiers de deuxième génération dépend de la région sélectionnée. Si la région sélectionnée ne prend pas en charge les systèmes de fichiers FSx for ONTAP de deuxième génération, le type de déploiement bascule vers la première génération.
+**** *Deuxième génération* : cette configuration est recommandée pour les charges de travail hautes performances ou lorsque les charges de travail commencent petites et évoluent progressivement jusqu'à 72 Go/s de débit et 2,4 millions d'IOPS.
+**** *Première génération* : Cette configuration est idéale pour les charges de travail nécessitant jusqu'à 4 Go/s ou 160 000 IOPS. Les systèmes de fichiers de première génération ne peuvent qu'augmenter la capacité.
+
 
 *** Déploiement dans plusieurs zones de disponibilité (plusieurs zones de disponibilité) : assure la disponibilité continue des données même en cas d'indisponibilité d'une zone de disponibilité. Un système de fichiers multi-AZ est conçu pour les workloads de production stratégiques qui requièrent une haute disponibilité pour les données de fichiers ONTAP partagées et du stockage avec réplication intégrée dans les zones de disponibilité.
 +
+*Génération du système de fichiers* : Sélectionnez l'une des options suivantes :
+
++
 **** *Deuxième génération* : Cette configuration à paire HA unique est recommandée pour les charges de travail nécessitant jusqu'à 6 Go/s de débit ou 200 000 IOPS. Dans un système de fichiers multi-AZ de deuxième génération, la capacité peut être augmentée ou diminuée pour répondre aux exigences de la charge de travail.
 **** *Première génération* : Cette configuration est idéale pour les charges de travail nécessitant jusqu'à 4 Go/s ou 160 000 IOPS. Les systèmes de fichiers de première génération ne peuvent qu'augmenter la capacité.
-+
-La disponibilité du système de fichiers de deuxième génération dépend de la région sélectionnée. Si la région sélectionnée ne prend pas en charge les systèmes de fichiers FSx for ONTAP de deuxième génération, le type de déploiement bascule vers la première génération.
-
 
 
 

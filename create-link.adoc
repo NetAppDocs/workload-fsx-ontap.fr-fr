@@ -112,7 +112,7 @@ Vous pouvez créer des secrets en alignement avec les autorisations par défaut 
 
 .. *Autorisations de lien* : sélectionnez l'une des options suivantes pour les autorisations de lien :
 +
-*** *Automatique* : sélectionnez cette option pour que le code AWS CloudFormation ou Terraform crée automatiquement la politique d’autorisation Lambda et le rôle d’exécution.
+*** *Automatique* : sélectionnez cette option pour que le code AWS CloudFormation crée automatiquement la stratégie d’autorisation Lambda et le rôle d’exécution.
 *** *Fourni par l'utilisateur* : sélectionnez cette option pour attribuer un rôle d'exécution Lambda spécifié et ses politiques associées au lien Lambda. Les autorisations suivantes sont requises pour la politique d'autorisation Lambda .  `secretsmanager:GetSecretValue` l'autorisation n'est requise que si vous avez activé AWS Secrets Manager.
 +
 [source, json]
