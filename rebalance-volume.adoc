@@ -61,7 +61,7 @@ Vérifiez l'équilibre des volumes FlexVol ou FlexGroup dans un système de fich
 ** Volumes FlexGroup
 ** Volumes FlexVol
 +
-Lorsqu'un volume est déséquilibré, pensez à <<Rebalance a volume,le rééquilibrage>> .
+Lorsqu'un volume est déséquilibré, pensez à <<Rééquilibrer la capacité du volume,le rééquilibrage>> .
 
 
 

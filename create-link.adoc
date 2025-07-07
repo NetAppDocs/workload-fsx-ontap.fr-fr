@@ -34,7 +34,7 @@ L'association d'un nouveau lien inclut la création et l'association de liens.
 Vous disposez de deux options pour créer des liens dans ce flux de travail : automatiquement ou manuellement. Pour créer le lien, vous devez lancer une pile AWS CloudFormation dans votre compte AWS.
 
 * Automatiquement : crée un lien avec l'enregistrement automatique via l'usine de charge de travail. Un lien créé automatiquement nécessite des jetons pour l'automatisation de l'usine des charges de travail et le code CloudFormation est de courte durée. Il ne peut être utilisé que pendant six heures.
-* Manuellement : crée un lien avec inscription manuelle via CloudFormation ou Terraform depuis Codebox. Le code persiste, ce qui vous laisse plus de temps pour terminer l'opération. Cette fonctionnalité est particulièrement utile lorsque vous travaillez avec des équipes différentes, telles que Security et DevOps, qui peuvent d'abord avoir besoin d'accorder les autorisations nécessaires pour créer des liens.
+* Manuellement : crée un lien avec l'enregistrement manuel. Le code CloudFormation persiste et vous laisse plus de temps pour effectuer l'opération. Cette fonctionnalité est particulièrement utile lorsque vous travaillez avec des équipes différentes, telles que Security et DevOps, qui peuvent d'abord avoir besoin d'accorder les autorisations nécessaires pour créer des liens.
 
 
 .Avant de commencer
@@ -161,7 +161,7 @@ Vous pouvez contrôler l'état de création du lien à partir de la page événe
 --
 .Créer manuellement
 --
-Avec cette option, vous extrayez l'ARN du lien et le signalez ici. L'usine de charge de travail enregistre manuellement le lien pour vous. Vous pouvez créer un lien à l'aide de deux outils d'infrastructure en tant que code (IaC) de Codebox : CloudFormation ou Terraform.
+Avec cette option, vous extrayez l'ARN du lien depuis AWS CloudFormation et vous le signalez ici. L'usine de charge de travail enregistre manuellement le lien pour vous.
 
 .Étapes
 . Connectez-vous à l'aide de l'un des link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].
@@ -183,7 +183,7 @@ Vous pouvez créer des secrets en alignement avec les autorisations par défaut 
 
 .. *Autorisations de lien* : sélectionnez l'une des options suivantes pour les autorisations de lien :
 +
-*** *Automatique* : sélectionnez cette option pour que le code AWS CloudFormation ou Terraform crée automatiquement la politique d’autorisation Lambda et le rôle d’exécution.
+*** *Automatique* : sélectionnez cette option pour que le code AWS CloudFormation crée automatiquement la stratégie d’autorisation Lambda et le rôle d’exécution.
 *** *Fourni par l'utilisateur* : sélectionnez cette option pour attribuer un rôle d'exécution Lambda spécifié et ses politiques associées au lien Lambda. Les autorisations suivantes sont requises pour la politique d'autorisation Lambda .  `secretsmanager:GetSecretValue` l'autorisation n'est requise que si vous avez activé AWS Secrets Manager.
 +
 [source, json]
