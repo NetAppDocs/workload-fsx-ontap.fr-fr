@@ -63,6 +63,3 @@ NOTE: Les étiquettes de source et de cible correspondantes sont requises pour l
 
 
 
-
-. Sélectionnez *Créer*.
-
