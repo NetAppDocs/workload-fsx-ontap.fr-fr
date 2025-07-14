@@ -17,15 +17,27 @@ Vous n'avez pas besoin d'un lien pour vous lancer dans l'usine des charges de tr
 
 
 
+== Pourquoi les liens sont bénéfiques
+
+Les liens sont utiles car ils permettent à Workload Factory d'effectuer des opérations qui ne sont pas disponibles nativement via l'API Amazon FSx for ONTAP . Ils offrent des fonctionnalités et des automatisations ONTAP avancées, améliorant ainsi la gestion des systèmes de fichiers FSx for ONTAP .
+
+Voici quelques avantages de l’utilisation de liens :
+
+* Le lien permet à BlueXP d'envoyer des commandes ONTAP directement à votre système de fichiers FSx pour ONTAP , apportant des fonctionnalités ONTAP avancées au-delà de ce qu'AWS propose nativement.
+* Les liens exploitent AWS Lambda pour exécuter du code en réponse à des événements. Cette approche sans serveur supprime la dépendance d'une instance exécutée dans votre VPC.
+
+
+
+
 == Fonctionnement des liens
 
 Les liens utilisent AWS Lambda. Lambda exécute le code en réponse aux événements et gère automatiquement les ressources informatiques requises par ce code. Les liens que vous créez font partie de votre compte NetApp et sont associés à un compte AWS.
 
-Après avoir créé un lien, vous pouvez l'associer à un ou plusieurs systèmes de fichiers FSX pour ONTAP. Chaque système de fichiers ne peut être associé qu'à un seul lien dans le même compte NetApp. Si vous avez plusieurs comptes NetApp, un seul système de fichiers peut être associé à des liens supplémentaires sous différents comptes NetApp.
+Après avoir créé un lien, vous pouvez l'associer à un ou plusieurs systèmes de fichiers FSx for ONTAP . Chaque système de fichiers ne peut être associé qu'à un seul lien dans le même compte NetApp. Si vous avez plusieurs comptes NetApp, un seul système de fichiers peut être associé à des liens supplémentaires sous différents comptes NetApp.
 
-Vous créez des liens à partir des pages du système de fichiers FSX pour ONTAP en usine de workloads. link:create-link.html["Découvrez comment créer des liens"] pour plus d'informations.
+Vous créez et associez des liens à partir de la charge de travail de stockage dans la fabrique de charges de travail.
 
-Vous pouvez utiliser des liens authentiques à l'aide d'informations d'identification stockées dans le service d'informations d'identification d'usine de la charge de travail ou avec vos informations d'identification stockées dans AWS secrets Manager. L'usine de charges de travail ne prend pas en charge le changement de modes d'authentification.
+Vous pouvez authentifier les liens à l'aide des informations d'identification stockées dans le service d'informations d'identification de la fabrique de charges de travail ou avec vos informations d'identification stockées dans AWS Secrets Manager. L'usine de charges de travail ne prend pas en charge le changement de modes d'authentification.
 
 
 
@@ -39,20 +51,21 @@ link:https://aws.amazon.com/lambda/pricing/["Découvrez les coûts liés à l'ut
 
 == Lorsqu'un lien est requis
 
-L'usine de charge de travail requiert un lien pour afficher certaines informations et effectuer certaines tâches. Si vous tentez d'effectuer une opération qui nécessite un lien et que vous n'avez pas associé de lien au système de fichiers FSX pour ONTAP, un message vous indique que l'opération nécessite un lien. Vous pouvez ajouter un nouveau lien ou associer le système de fichiers FSX pour ONTAP à un lien existant à ce moment-là afin de pouvoir exécuter l'opération.
+L'usine de charge de travail requiert un lien pour afficher certaines informations et effectuer certaines tâches. Si vous tentez d'effectuer une opération qui nécessite un lien et que vous n'avez pas associé de lien au système de fichiers FSx for ONTAP , Workload Factory vous avertit que l'opération nécessite un lien.
 
 Les fonctions qui nécessitent un lien sont les suivantes :
 
-* Affichage de la version de ONTAP installée sur un système de fichiers FSX pour ONTAP
+* Statut bien architecturé des configurations du système de fichiers FSx pour ONTAP pour une maintenance proactive, une fiabilité et une optimisation des coûts et des performances
+* Protection autonome contre les ransomwares NetApp (ARP/AI)
+* Observabilité holistique améliorée des capacités sur les systèmes de fichiers FSx pour ONTAP
+* Réplication, gestion et surveillance des données de machines virtuelles de volume et de stockage
+* Partages SMB/CIFS et provisionnement et gestion des politiques d'exportation NFS
 * Gestion des volumes iSCSI sur un système de fichiers FSX pour ONTAP
-* Fonctionnalité de croissance automatique des volumes
-* Création et gestion de règles de snapshots
-* Configuration des relations de réplication
-* Réplication de volume entre les systèmes de fichiers FSX pour ONTAP
-* Configuration de la relation de sauvegarde
-* Sauvegardes de données de volume dans le stockage cloud
-* Clones de volumes dans un système de fichiers FSX pour ONTAP
-* Affichage des metrics supplémentaires directement depuis ONTAP (les metrics par défaut sont collectées par Amazon CloudWatch)
-* Gestion des règles d'exportation NFS
-* Gestion des partages CIFS
+* Création et gestion de politiques de snapshots pour un SLA de protection personnalisé
+* Améliorations de la gestion des inodes pour la gestion automatique de la capacité
+* Croissance automatique du volume pour une mise à l'échelle élastique
+* Création et gestion de clones, pour un clonage instantané et sur place des données
+* Affichage de métriques supplémentaires directement depuis ONTAP , telles que la version ONTAP
 
+
+Découvrez comment link:create-link.html["connecter un lien à un système de fichiers FSx pour ONTAP"].
