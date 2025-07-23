@@ -96,6 +96,23 @@ Si vous avez sélectionné une export-policy existante, entrez un nouveau nom de
 .... *Partage CIFS* : fournissez les informations suivantes :
 +
 ..... *Nom* : entrez le nom du partage CIFS pour fournir un accès SMB.
+..... *Chemin* : définissez le chemin en utilisant le nom de volume par défaut ou fournissez un partage vers un répertoire interne.
++
+Les entrées de chemin valides pour le nom du volume, par exemple « avocat », sont les suivantes :
+
++
+****** /avocat
+****** /avocat/dossier
+****** /avocat/dossier/sous-dossier
+****** /avocat/nom-de-fichier
++
+Les entrées de chemin valides pour le nom de partage, par exemple « Serveur », sont les suivantes :
+
+****** \\Serveur
+****** \\Serveur\Projets
+****** \\Serveur\Projets\Ressources partagées
+
+
 ..... *Autorisations* : sélectionnez contrôle total, lecture/écriture, lecture ou aucun accès, puis entrez les utilisateurs ou les groupes séparés par un point-virgule ( ; ). Les utilisateurs ou les groupes sont sensibles à la casse et le domaine de l'utilisateur doit être inclus au format « domaine\nom d'utilisateur ».
 
 
