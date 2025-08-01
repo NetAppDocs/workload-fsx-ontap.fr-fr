@@ -11,16 +11,16 @@ summary: 'Vous pouvez créer et gérer des liens pour fournir une relation de co
 
 
 [role="lead"]
-Pour effectuer des opérations de gestion ONTAP avancées, vous devez établir la connectivité entre votre compte d'usine de workloads et un ou plusieurs systèmes de fichiers FSX pour ONTAP. L'établissement de la connectivité inclut l'association de liaisons Lambda nouvelles et existantes et l'authentification des liaisons. L'association de liens vous permet de contrôler et de gérer certaines fonctionnalités directement à partir du système de fichiers FSX pour ONTAP qui ne sont pas disponibles via l'API AWS FSX pour ONTAP.
+Pour effectuer des opérations de gestion ONTAP avancées, configurez une connexion entre votre compte d'usine de charge de travail et un ou plusieurs systèmes de fichiers FSx pour ONTAP .  Cela implique d’associer des liens Lambda nouveaux et existants et d’authentifier les liens.  L'association de liens vous permet de surveiller et de gérer certaines fonctionnalités directement à partir du système de fichiers FSx for ONTAP qui ne sont pas disponibles via l'API Amazon FSx for ONTAP .
 
 link:links-overview.html["En savoir plus sur les liens"].
 
 .Description de la tâche
 La Lambda d'AWS est utilisé pour exécuter le code en réponse aux événements et gérer automatiquement les ressources de calcul requises par ce code. Les liens que vous créez font partie de votre compte NetApp et sont associés à un compte AWS.
 
-Vous pouvez créer un lien dans votre compte lors de la définition d'un système de fichiers FSX pour ONTAP. Ce lien sera utilisé pour ce système de fichiers et il peut être utilisé par d'autres systèmes de fichiers FSX pour ONTAP. Vous pouvez également associer ultérieurement un lien à un système de fichiers.
+Vous pouvez créer un lien dans votre compte lors de la définition d'un système de fichiers FSx pour ONTAP .  Le lien est utilisé pour ce système de fichiers et peut être utilisé pour d'autres systèmes de fichiers FSx pour ONTAP .  Vous pouvez également associer un lien pour un système de fichiers ultérieurement.
 
-Les liaisons nécessitent une authentification. Vous pouvez utiliser des liens authentiques à l'aide d'informations d'identification stockées dans le service d'informations d'identification d'usine de la charge de travail ou avec vos informations d'identification stockées dans AWS secrets Manager. Une seule méthode d'authentification est prise en charge par liaison. Par exemple, si vous sélectionnez l'authentification de lien avec AWS secrets Manager, vous ne pourrez pas modifier la méthode d'authentification ultérieurement.
+Les liens nécessitent une authentification.  Vous pouvez authentifier les liens à l'aide des informations d'identification stockées dans le service d'informations d'identification de la fabrique de charges de travail ou avec vos informations d'identification stockées dans AWS Secrets Manager.  Une seule méthode d’authentification est prise en charge par lien.  Par exemple, si vous sélectionnez l’authentification par lien avec AWS Secrets Manager, vous ne pourrez pas modifier la méthode d’authentification ultérieurement.
 
 
 NOTE: AWS secrets Manager n'est pas pris en charge lors de l'utilisation d'un connecteur.
@@ -33,7 +33,7 @@ L'association d'un nouveau lien inclut la création et l'association de liens.
 
 Vous disposez de deux options pour créer des liens dans ce flux de travail : automatiquement ou manuellement. Pour créer le lien, vous devez lancer une pile AWS CloudFormation dans votre compte AWS.
 
-* Automatiquement : crée un lien avec l'enregistrement automatique via l'usine de charge de travail. Un lien créé automatiquement nécessite des jetons pour l'automatisation de l'usine des charges de travail et le code CloudFormation est de courte durée. Il ne peut être utilisé que pendant six heures.
+* Automatiquement : crée un lien avec l'enregistrement automatique via l'usine de charge de travail.  Cela nécessite des jetons pour l'automatisation de l'usine de charge de travail et le code CloudFormation est de courte durée et utilisable jusqu'à six heures.
 * Manuellement : crée un lien avec l'enregistrement manuel. Le code CloudFormation persiste et vous laisse plus de temps pour effectuer l'opération. Cette fonctionnalité est particulièrement utile lorsque vous travaillez avec des équipes différentes, telles que Security et DevOps, qui peuvent d'abord avoir besoin d'accorder les autorisations nécessaires pour créer des liens.
 
 
@@ -102,7 +102,7 @@ Utilisez CloudFormation pour créer et enregistrer automatiquement le lien dans 
 .. *Nom du lien* : saisissez le nom que vous souhaitez utiliser pour ce lien. Le nom doit être unique dans votre compte.
 .. *AWS secrets Manager*: Facultatif. Permet à l'usine de workloads d'extraire les informations d'identification d'accès FSX pour ONTAP à partir de votre gestionnaire AWS secrets Manager.
 +
-La pile de déploiement de lien ajoute le regex de gestionnaire de secrets par défaut suivant à la stratégie d'autorisation Lambda : `arn:aws:secretsmanager:<link_deployment_region>:<link_deployment_account_id>:secret:FSxSecret*`.
+La pile de déploiement de liens ajoute automatiquement l'expression régulière ARN du gestionnaire de secrets par défaut suivante à la stratégie d'autorisation Lambda : `arn:aws:secretsmanager:<link_deployment_region>:<link_deployment_account_id>:secret:FSxSecret*` .
 
 +
 Vous pouvez créer des secrets en alignement avec les autorisations par défaut ou affecter vos autorisations personnalisées pour la stratégie de liens.
@@ -131,13 +131,13 @@ Saisissez l’ARN du rôle d’exécution Lambda dans la zone de texte.
 
 .. *Tags*: Facultatif, ajoutez les balises que vous voulez associer à ce lien pour pouvoir catégoriser plus facilement vos ressources. Par exemple, vous pouvez ajouter une balise qui identifie ce lien comme étant utilisé par FSX pour les systèmes de fichiers ONTAP.
 +
-Le compte AWS et les informations supplémentaires relatives au compte, à l'emplacement et au groupe de sécurité sont récupérés automatiquement en fonction du système de fichiers FSX pour ONTAP.
+Workload Factory récupère automatiquement le compte AWS, l'emplacement et le groupe de sécurité en fonction du système de fichiers FSx for ONTAP .
 
 
 
 . Sélectionnez *Créer*.
 +
-La boîte de dialogue rediriger vers CloudFormation s'affiche et explique comment créer le lien à partir du service AWS CloudFormation.
+La boîte de dialogue Redirection vers CloudFormation s'affiche et explique comment créer le lien à partir du service AWS CloudFormation.
 
 . Sélectionnez *Continuer* pour ouvrir la console de gestion AWS, puis connectez-vous au compte AWS de ce système de fichiers FSX pour ONTAP.
 . Sur la page pile de création rapide, sous fonctionnalités, sélectionnez *Je reconnais que AWS CloudFormation peut créer des ressources IAM*.
@@ -153,7 +153,7 @@ Notez que trois autorisations sont accordées à Lambda lorsque vous lancez le m
 ----
 . Sélectionnez *Créer pile*, puis sélectionnez *Continuer*.
 +
-Vous pouvez contrôler l'état de création du lien à partir de la page événements. Cela ne devrait pas prendre plus de 5 minutes.
+Vous pouvez surveiller l’état de création du lien sur la page Événements.  Cela ne devrait pas prendre plus de 5 minutes.
 
 . Revenez à l'interface d'usine des workloads et vous verrez que le lien est associé au système de fichiers FSX pour ONTAP.
 
@@ -173,7 +173,7 @@ Avec cette option, vous extrayez l'ARN du lien depuis AWS CloudFormation et vous
 .. *Nom du lien* : saisissez le nom que vous souhaitez utiliser pour ce lien. Le nom doit être unique dans votre compte.
 .. *AWS secrets Manager*: Facultatif. Permet à l'usine de workloads d'extraire les informations d'identification d'accès FSX pour ONTAP à partir de votre gestionnaire AWS secrets Manager.
 +
-La pile de déploiement de lien ajoute le regex de gestionnaire de secrets par défaut suivant à la stratégie d'autorisation Lambda : `arn:aws:secretsmanager:<link_deployment_region>:<link_deployment_account_id>:secret:FSxSecret*`.
+La pile de déploiement de liens ajoute automatiquement l'expression régulière ARN du gestionnaire de secrets par défaut suivante à la stratégie d'autorisation Lambda : `arn:aws:secretsmanager:<link_deployment_region>:<link_deployment_account_id>:secret:FSxSecret*` .
 
 +
 Vous pouvez créer des secrets en alignement avec les autorisations par défaut ou affecter vos autorisations personnalisées pour la stratégie de liens.
@@ -215,12 +215,12 @@ Notez que trois autorisations sont accordées à Lambda lorsque vous lancez le m
 +
 Une fois la pile créée, collez l'ARN Lambda dans la zone de texte.
 
-.. Le compte AWS et les informations supplémentaires relatives au compte, à l'emplacement et au groupe de sécurité sont récupérés automatiquement en fonction du système de fichiers FSX pour ONTAP.
+.. Workload Factory récupère automatiquement le compte AWS, l'emplacement et le groupe de sécurité en fonction du système de fichiers FSx for ONTAP .
 
 
 . Sélectionnez *Créer*.
 +
-Vous pouvez contrôler l'état de création du lien à partir de la page événements. Cela ne devrait pas prendre plus de 5 minutes.
+Vous pouvez surveiller l’état de création du lien sur la page Événements.  Cela ne devrait pas prendre plus de 5 minutes.
 
 . Revenez à l'interface d'usine des workloads et vous verrez que le lien est associé au système de fichiers FSX pour ONTAP.
 
@@ -228,7 +228,7 @@ Vous pouvez contrôler l'état de création du lien à partir de la page événe
 --
 ====
 .Résultat
-Le lien que vous avez créé est associé au système de fichiers FSX pour ONTAP. Vous pouvez effectuer des opérations ONTAP avancées.
+Workload Factory associe le lien au système de fichiers FSx pour ONTAP .  Vous pouvez effectuer des opérations ONTAP avancées.
 
 
 
@@ -246,12 +246,16 @@ Après avoir créé un lien, associez-le à un ou plusieurs systèmes de fichier
 ** Workload Factory : saisissez le mot de passe deux fois.
 ** AWS secrets Manager : entrez le secret ARN.
 +
-L'ARN secret doit inclure les paires de clés valides suivantes :
+Assurez-vous que l'ARN secret contient les paires de clés valides suivantes, bien que _filesystemID_ soit facultatif.
 
 +
-*** FilesytemID = FSX_filesystem_ID
-*** nom d'utilisateur = FSx_user
+*** filesystemID = FSx_filesystem_id (facultatif)
+*** utilisateur = FSx_user
 *** mot de passe = mot_de_passe_utilisateur
++
+
+NOTE: L'authentification avec AWS Secrets Manager nécessite un utilisateur, soit le _FSx_user_ que vous fournissez, soit un autre utilisateur créé sur le système de fichiers FSx for ONTAP .  L'utilisateur par défaut est `fsxadmin` si vous ne fournissez pas d'utilisateur.
+
 
 
 
