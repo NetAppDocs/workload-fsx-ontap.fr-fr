@@ -34,7 +34,7 @@ L'association d'un nouveau lien inclut la création et l'association de liens.
 Vous disposez de deux options pour créer des liens dans ce flux de travail : automatiquement ou manuellement. Pour créer le lien, vous devez lancer une pile AWS CloudFormation dans votre compte AWS.
 
 * Automatiquement : crée un lien avec l'enregistrement automatique via l'usine de charge de travail.  Cela nécessite des jetons pour l'automatisation de l'usine de charge de travail et le code CloudFormation est de courte durée et utilisable jusqu'à six heures.
-* Manuellement : crée un lien avec l'enregistrement manuel. Le code CloudFormation persiste et vous laisse plus de temps pour effectuer l'opération. Cette fonctionnalité est particulièrement utile lorsque vous travaillez avec des équipes différentes, telles que Security et DevOps, qui peuvent d'abord avoir besoin d'accorder les autorisations nécessaires pour créer des liens.
+* Manuellement : crée un lien avec une inscription manuelle à l'aide de CloudFormation ou de Terraform à partir de Codebox.  Le code persiste, vous donnant plus de temps pour terminer l'opération.  Cela est utile lorsque vous travaillez avec différentes équipes telles que la sécurité et DevOps qui peuvent d'abord avoir besoin d'accorder les autorisations nécessaires pour terminer la création du lien.
 
 
 .Avant de commencer
@@ -161,14 +161,14 @@ Vous pouvez surveiller l’état de création du lien sur la page Événements. 
 --
 .Créer manuellement
 --
-Avec cette option, vous extrayez l'ARN du lien depuis AWS CloudFormation et vous le signalez ici. L'usine de charge de travail enregistre manuellement le lien pour vous.
+Vous pouvez créer un lien à l'aide de deux outils Infrastructure-as-Code (IaC) de Codebox : CloudFormation ou Terraform.  Avec cette option, vous extrayez l'ARN du lien depuis AWS CloudFormation et le signalez ici.  Workload Factory enregistre manuellement le lien pour vous.
 
 .Étapes
 . Connectez-vous à l'aide de l'un des link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].
 . Dans stockage, sélectionnez *accéder à l'inventaire de stockage*.
 . Dans l'onglet *FSX pour ONTAP*, sélectionnez le menu à trois points du système de fichiers auquel associer un lien, puis sélectionnez *associer lien*.
 . Dans la boîte de dialogue associer un lien, sélectionnez *Créer un nouveau lien* et sélectionnez *Continuer*.
-. Sur la page Créer un lien, indiquez les informations suivantes :
+. Sur la page Créer un lien, sélectionnez CloudFormation ou Terraform dans la boîte de code, puis fournissez les éléments suivants :
 +
 .. *Nom du lien* : saisissez le nom que vous souhaitez utiliser pour ce lien. Le nom doit être unique dans votre compte.
 .. *AWS secrets Manager*: Facultatif. Permet à l'usine de workloads d'extraire les informations d'identification d'accès FSX pour ONTAP à partir de votre gestionnaire AWS secrets Manager.
@@ -201,7 +201,7 @@ Saisissez l’ARN du rôle d’exécution Lambda dans la zone de texte.
 
 
 .. *Tags*: Facultatif, ajoutez les balises que vous voulez associer à ce lien pour pouvoir catégoriser plus facilement vos ressources. Par exemple, vous pouvez ajouter une balise qui identifie ce lien comme étant utilisé par FSX pour les systèmes de fichiers ONTAP.
-.. *Enregistrement du lien* : sélectionnez la flèche déroulante pour développer les instructions sur la façon d'enregistrer le lien à partir du service AWS CloudFormation ou à l'aide de Terraform. Suivez les instructions.
+.. *Enregistrement du lien* : Sélectionnez CloudFormation ou Terraform pour obtenir les instructions sur la façon d'enregistrer le lien et suivez les instructions.
 +
 Notez que trois autorisations sont accordées à Lambda lorsque vous lancez le modèle CloudFormation. L'usine de workloads utilise ces autorisations lors de l'utilisation de liens.
 
