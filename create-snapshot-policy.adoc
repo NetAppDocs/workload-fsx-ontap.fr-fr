@@ -2,16 +2,16 @@
 sidebar: sidebar 
 permalink: create-snapshot-policy.html 
 keywords: create 
-summary: 'Créez une règle Snapshot personnalisée pour une machine virtuelle de stockage dans l"usine de workloads BlueXP .' 
+summary: Créez une stratégie de snapshot personnalisée pour une machine virtuelle de stockage dans Workload Factory. 
 ---
-= Créez une règle Snapshot pour les machines virtuelles de stockage en usine de workloads BlueXP 
+= Créer une politique de snapshot pour les machines virtuelles de stockage dans Workload Factory
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-Créez une règle Snapshot personnalisée pour les machines virtuelles de stockage en usine de workloads BlueXP . Une règle Snapshot définit la façon dont le système crée des snapshots pour une machine virtuelle de stockage. Vous pouvez créer une règle Snapshot pour une machine virtuelle de stockage dans un système de fichiers FSX pour ONTAP. Vous pouvez également partager cette règle entre plusieurs machines virtuelles de stockage.
+Créez une stratégie de snapshot personnalisée pour les machines virtuelles de stockage dans Workload Factory afin de gérer la création et la conservation des snapshots.  Une politique de snapshot définit la manière dont le système crée des snapshots pour une machine virtuelle de stockage.  Vous pouvez créer une stratégie de snapshot pour une machine virtuelle de stockage dans un système de fichiers FSx for ONTAP .  Vous pouvez également partager la politique sur plusieurs machines virtuelles de stockage.
 
 .Description de la tâche
 Vous pouvez créer une règle de snapshot personnalisée différente de celle des trois règles de snapshot intégrées pour FSX for ONTAP :
@@ -65,6 +65,3 @@ L'activation de snapshots immuables verrouille tous les snapshots dans cette pol
 . *Partager sur les machines virtuelles de stockage* : activé par défaut. Lorsqu'elle est activée, la règle de snapshot est partagée entre toutes les machines virtuelles de stockage du système de fichiers. Désactivez cette option pour créer une stratégie de snapshots pour une seule machine virtuelle de stockage.
 . Sélectionnez *Créer*.
 
-
-.Résultat
-La politique Snapshot est créée.

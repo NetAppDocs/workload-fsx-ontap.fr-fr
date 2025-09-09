@@ -53,7 +53,7 @@ sidebar:
       entries:
       - title: Présentation de la protection des données
         url: "/data-protection-overview.html"
-      - title: Gérer les snapshots
+      - title: Utiliser des instantanés
         entries:
         - title: Créer un snapshot
           url: "/create-snapshot.html"
@@ -61,15 +61,13 @@ sidebar:
           url: "/create-snapshot-policy.html"
         - title: Restaurer un volume à partir d'un snapshot
           url: "/restore-volume-from-snapshot.html"
-        - title: Créez un volume à partir d'un snapshot
-          url: "/create-volume-from-snapshot.html"
-      - title: Gérez les sauvegardes vers un stockage objet
+      - title: Utiliser des sauvegardes pour le stockage d'objets
         entries:
         - title: Créez une sauvegarde manuelle
           url: "/create-backup.html"
         - title: Restaurer un volume à partir d'une sauvegarde
           url: "/restore-from-backup.html"
-      - title: Gérer la réplication
+      - title: Utiliser la réplication
         entries:
         - title: Créer une relation de réplication
           url: "/create-replication.html"
@@ -145,6 +143,8 @@ sidebar:
           url: "/manage-snapshot-policy.html"
         - title: Activez et modifiez les snapshots pour une conservation à long terme
           url: "/enable-snapshots-long-term.html"
+        - title: Gérer les snapshots
+          url: "/manage-snapshots.html"
       - title: Sauvegardes
         entries:
         - title: Gérez la planification des sauvegardes FSX pour ONTAP

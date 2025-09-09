@@ -1,0 +1,103 @@
+---
+sidebar: sidebar 
+permalink: manage-snapshots.html 
+keywords: snapshot, snapshots, manage snapshots, edit snapshots, access snapshots, delete snapshots, remove snapshots 
+summary: 'Modifiez les paramètres des instantanés, activez l"accès aux répertoires et supprimez les instantanés pour gérer vos instantanés et la protection des données dans Workload Factory.' 
+---
+= Gérer les instantanés d'un volume FSx for ONTAP
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Modifiez les paramètres des instantanés, activez l'accès aux répertoires et supprimez les instantanés pour gérer vos instantanés et la protection des données dans Workload Factory.
+
+
+
+== Modifier un instantané
+
+Modifiez le nom, l’étiquette et la période de conservation d’un instantané.  Si l'instantané n'est pas déjà immuable, vous pouvez le rendre immuable.
+
+.Étapes
+. Connectez-vous à l'aide de l'un des link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].
+. Dans *stockage*, sélectionnez *aller à l'inventaire de stockage*.
+. Dans l'onglet *FSX pour ONTAP*, sélectionnez le menu à trois points du système de fichiers avec le volume, puis sélectionnez *gérer*.
+. Dans la présentation du système de fichiers, sélectionnez l'onglet *volumes*.
+. Dans l’onglet *Volumes*, sélectionnez le menu à trois points correspondant au volume contenant l’instantané à modifier.
+. Sélectionnez *Actions de protection des données* puis *Gérer les instantanés*.
+. Depuis la page Gérer les instantanés, sélectionnez le menu à trois points correspondant à l'instantané à modifier, puis sélectionnez *Modifier*.
+. Dans la boîte de dialogue Modifier un instantané, vous pouvez modifier les éléments suivants :
++
+.. Changer le nom.
+.. Changer l'étiquette.
+.. Modifier la période de conservation.
+.. Facultatif : *Rendre cet instantané immuable* pour empêcher sa suppression pendant la période de conservation.
++
+Si l'instantané est déjà immuable, vous ne pouvez pas modifier ce paramètre.
+
++
+Acceptez la déclaration concernant les snapshots immuables.
+
+
+
+. Sélectionnez *appliquer*.
+
+
+
+
+== Accéder à un instantané
+
+Activez l'accès au répertoire des instantanés pour donner aux utilisateurs la possibilité d'accéder aux instantanés de manière autonome.
+
+.Étapes
+. Connectez-vous à l'aide de l'un des link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].
+. Dans *stockage*, sélectionnez *aller à l'inventaire de stockage*.
+. Dans l'onglet *FSX pour ONTAP*, sélectionnez le menu à trois points du système de fichiers avec le volume, puis sélectionnez *gérer*.
+. Dans la présentation du système de fichiers, sélectionnez l'onglet *volumes*.
+. Dans l'onglet *Volumes*, sélectionnez le menu à trois points correspondant au volume auquel vous souhaitez accéder.
+. Sélectionnez *Actions de protection des données* puis *Gérer les instantanés*.
+. Depuis la page Gérer les instantanés, sélectionnez le menu à trois points pour l'instantané auquel accéder, puis sélectionnez *Accès*.
+. Dans la boîte de dialogue Accéder à l'instantané, sélectionnez *Activer l'accès au répertoire d'instantanés* pour accéder à cet instantané de volume et à tous les instantanés du volume.
++
+** Pour les volumes NFS : sélectionnez *Chemin d’accès NFS* pour afficher le chemin NFS de l’instantané.
+** Pour les volumes SMB/CIFS : sélectionnez *Chemin d’accès SMB* pour afficher le chemin SMB de l’instantané.
+
+
+. Copiez le chemin d'accès.
+. Sélectionnez *appliquer*.
+
+
+
+
+== Restaurer les données à partir d'un instantané
+
+Vous avez la possibilité de restaurer les données d’un instantané vers un volume existant ou vers un nouveau volume.
+
+link:https://review.docs.netapp.com/us-en/workload-fsx-ontap_snapshot-mgmt/restore-volume-from-snapshot.html["Restaurer un volume à partir d'un snapshot"]
+
+
+
+== Supprimer un instantané
+
+Supprimez un instantané pour libérer de l'espace.
+
+Les instantanés immuables ne peuvent pas être supprimés avant la fin de la période de conservation.
+
+.Étapes
+. Connectez-vous à l'aide de l'un des link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].
+. Dans *stockage*, sélectionnez *aller à l'inventaire de stockage*.
+. Dans l'onglet *FSX pour ONTAP*, sélectionnez le menu à trois points du système de fichiers avec le volume, puis sélectionnez *gérer*.
+. Dans la présentation du système de fichiers, sélectionnez l'onglet *volumes*.
+. Dans l’onglet *Volumes*, sélectionnez le menu à trois points correspondant au volume contenant l’instantané à supprimer.
+. Sélectionnez *Actions de protection des données* puis *Gérer les instantanés*.
+. Depuis la page Gérer les instantanés, sélectionnez le menu à trois points correspondant à l'instantané à supprimer, puis sélectionnez *Supprimer*.
+. Dans la boîte de dialogue Supprimer l'instantané, saisissez « supprimer ».
+. Sélectionnez *Supprimer* pour confirmer la suppression.
+
+
+.Informations connexes
+* link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-snapshot.html["Créer un snapshot"]
+* link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-snapshot-policy.html["Création d'une règle de snapshots"]
+* link:https://docs.netapp.com/us-en/workload-fsx-ontap/restore-volume-from-snapshot.html["Restaurer un volume à partir d'un snapshot"]
+

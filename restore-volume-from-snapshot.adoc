@@ -4,22 +4,27 @@ permalink: restore-volume-from-snapshot.html
 keywords: restore volume, snapshot 
 summary: 'Restaurez un volume FSX pour ONTAP à partir d"un snapshot lorsque le volume contient des fichiers supprimés ou corrompus.' 
 ---
-= Restaurez un volume à partir d'un snapshot en usine de charges de travail BlueXP 
+= Restaurer un volume à partir d'un instantané dans Workload Factory
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-En usine de workloads BlueXP , vous pouvez restaurer un volume FSX pour ONTAP à partir d'un snapshot lorsque le volume contient des fichiers supprimés ou corrompus.
+Dans Workload Factory, vous pouvez restaurer les données d'un snapshot vers un volume existant ou vers un nouveau volume.  L'opération de restauration permet une récupération à un instant T lorsqu'un volume contient des fichiers supprimés ou corrompus.
 
 .Description de la tâche
-Cette opération restaure les données d'un snapshot vers un nouveau volume.
+Vous avez la possibilité de restaurer les données d’un instantané vers un volume existant ou vers un nouveau volume.
+
+La création d'un nouveau volume à partir d'un instantané crée une copie d'un volume entier en quelques secondes, indépendamment de la taille du volume.  La copie nouvellement créée représente un nouveau volume.
 
 .Avant de commencer
-Vous ne pouvez restaurer un volume à partir d'un snapshot que si vous disposez d'une copie snapshot du volume.
+Avant de créer un volume à partir d'un snapshot, tenez compte des limitations suivantes :
 
-Assurez-vous de disposer de suffisamment de capacité pour effectuer cette opération.
+* Vous ne pouvez restaurer un volume à partir d'un snapshot que si vous disposez d'une copie snapshot du volume.
+* Modifications des modèles d'autorisation : si vous utilisez cette opération pour changer le type de protocole NAS (Network-Attached Storage), il peut également changer le modèle d'autorisation fourni par le style de sécurité. Vous pouvez rencontrer des problèmes d'autorisation d'accès aux fichiers, que vous ne pouvez corriger manuellement qu'avec l'accès administrateur à l'aide du paramètre Outils client NAS pour les autorisations.
+* Augmentation de la consommation de volume : après avoir créé un volume à partir d’un instantané, vous disposez de deux volumes indépendants, et tous deux consomment de la capacité du système de fichiers hôte.  Assurez-vous d’avoir suffisamment de capacité pour effectuer cette opération.
+
 
 .Étapes
 . Connectez-vous à l'aide de l'un des link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].
@@ -27,8 +32,19 @@ Assurez-vous de disposer de suffisamment de capacité pour effectuer cette opér
 . Dans l'onglet *FSX pour ONTAP*, sélectionnez le menu à trois points du système de fichiers avec le volume, puis sélectionnez *gérer*.
 . Dans la présentation du système de fichiers, sélectionnez l'onglet *volumes*.
 . Dans l'onglet *volumes*, sélectionnez le menu à trois points du volume à restaurer à partir d'un instantané.
-. Sélectionnez *actions de protection des données*, *instantanés*, puis *Restaurer le volume à partir d'un instantané*.
-. Dans la boîte de dialogue Restaurer le volume à partir d'un instantané, dans le champ *Nom de l'instantané*, sélectionnez l'instantané à restaurer dans le menu déroulant.
-. Dans le champ *nom du volume restauré*, entrez un nom unique pour le volume à restaurer.
+. Sélectionnez *Actions de protection des données* puis *Gérer les instantanés*.
+. Depuis la page Gérer les instantanés, sélectionnez le menu à trois points correspondant à l'instantané à restaurer, puis sélectionnez *Restaurer*.
+. Dans la boîte de dialogue Restaurer le volume à partir d’un instantané, sélectionnez l’une des options suivantes :
++
+** Basculez pour sélectionner *Restaurer en tant que nouveau volume*.
++
+Dans le champ *nom du volume restauré*, entrez un nom unique pour le volume à restaurer.
+
+** Restaurer les données d’un instantané sur un volume existant.  Cette opération supprime définitivement toutes les données qui ont été modifiées après l’heure de création de l’instantané.
++
+Acceptez la déclaration pour continuer.
+
+
+
 . Sélectionnez *Restaurer*.
 
