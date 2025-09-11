@@ -23,7 +23,6 @@ Avant de créer un volume à partir d'un snapshot, tenez compte des limitations 
 
 * Vous ne pouvez restaurer un volume à partir d'un snapshot que si vous disposez d'une copie snapshot du volume.
 * Modifications des modèles d'autorisation : si vous utilisez cette opération pour changer le type de protocole NAS (Network-Attached Storage), il peut également changer le modèle d'autorisation fourni par le style de sécurité. Vous pouvez rencontrer des problèmes d'autorisation d'accès aux fichiers, que vous ne pouvez corriger manuellement qu'avec l'accès administrateur à l'aide du paramètre Outils client NAS pour les autorisations.
-* Augmentation de la consommation de volume : après avoir créé un volume à partir d’un instantané, vous disposez de deux volumes indépendants, et tous deux consomment de la capacité du système de fichiers hôte.  Assurez-vous d’avoir suffisamment de capacité pour effectuer cette opération.
 
 
 .Étapes
