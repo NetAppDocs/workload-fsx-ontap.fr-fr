@@ -450,9 +450,7 @@
   <block id="a5a980f3518b6bdf573ccca8b4570aaa" category="list-text">*Codebox* : fournit aux développeurs un visualiseur de code pour les opérations FSX for ONTAP, des modèles de code pour la copie et le téléchargement, et un catalogue d'automatisation pour la réutilisation du code.</block>
   <block id="20b4f77bd00b4f63a49ec8e08f3bf6a6" category="section-title">Le coût</block>
   <block id="2f00f54e8e91e47bd247b06a51824fb0" category="inline-link-macro">Tarifs pour Amazon FSX for NetApp ONTAP</block>
-  <block id="8c4b25218155a1fdb972f4169855d04f" category="section-title">Régions prises en charge</block>
   <block id="d5b1044cbc510048a5dac270bde89ed5" category="inline-link">Affichez les régions Amazon prises en charge.</block>
-  <block id="ee9b3af8630059982f4d1dd2fd3834a3" category="paragraph"><block ref="ee9b3af8630059982f4d1dd2fd3834a3" category="inline-link-rx"></block></block>
   <block id="20c404f3ca0633629eee9b1b4ccd6737" category="section-title">Obtenir de l'aide</block>
   <block id="da444b283df699667b2316206972bdfe" category="paragraph">Amazon FSX pour NetApp ONTAP est une solution propriétaire AWS. Pour toute question ou tout problème de support technique associé à votre système de fichiers FSX for ONTAP, à votre infrastructure ou à toute solution utilisant ce service, utilisez le centre de support de votre console de gestion AWS pour ouvrir un dossier de support avec AWS. Sélectionnez le service “FSX pour ONTAP” et la catégorie appropriée. Fournissez les informations restantes nécessaires pour créer un dossier de demande de support AWS.</block>
   <block id="30d965eef5ba25c6b9998ae38270b43e" category="doc">Mentions légales</block>
@@ -2162,7 +2160,6 @@
   <block id="5555c9991f89f798392b8981015a49d6" category="doc">Restaurer un volume à partir d'un instantané dans Workload Factory</block>
   <block id="fedae93e45eef0cf99ae9d3e2dbff802" category="paragraph">Dans Workload Factory, vous pouvez restaurer les données d'un snapshot vers un volume existant ou vers un nouveau volume.  L'opération de restauration permet une récupération à un instant T lorsqu'un volume contient des fichiers supprimés ou corrompus.</block>
   <block id="d53b53fb3880fbcc2120f4ebdcb4b727" category="paragraph">La création d'un nouveau volume à partir d'un instantané crée une copie d'un volume entier en quelques secondes, indépendamment de la taille du volume.  La copie nouvellement créée représente un nouveau volume.</block>
-  <block id="22509908f6a972a65b5370b282ed646c" category="list-text">Augmentation de la consommation de volume : après avoir créé un volume à partir d’un instantané, vous disposez de deux volumes indépendants, et tous deux consomment de la capacité du système de fichiers hôte.  Assurez-vous d’avoir suffisamment de capacité pour effectuer cette opération.</block>
   <block id="8babf692a891c5060bb678dacf1bb2ad" category="list-text">Depuis la page Gérer les instantanés, sélectionnez le menu à trois points correspondant à l'instantané à restaurer, puis sélectionnez *Restaurer*.</block>
   <block id="0c5f6f3cf9344efbd61695ffdf90106f" category="list-text">Dans la boîte de dialogue Restaurer le volume à partir d’un instantané, sélectionnez l’une des options suivantes :</block>
   <block id="63421d2e7769a33701821702ab1b0be8" category="list-text">Basculez pour sélectionner *Restaurer en tant que nouveau volume*.</block>
@@ -2171,4 +2168,13 @@
   <block id="62486fa65fc31c383ace8989549632ad" category="sidebar">Utiliser des instantanés</block>
   <block id="b8d3d1ca4d4975c76eec10109e85c77f" category="sidebar">Utiliser des sauvegardes pour le stockage d'objets</block>
   <block id="fe355a62d144a6a42805c3eb5698310a" category="sidebar">Utiliser la réplication</block>
+  <block id="044dbc650d6316ed90f739b69dfff7ee" category="section-title">Soutien régional</block>
+  <block id="468469fded9ecf5cf0e132a6daa62d32" category="paragraph">Les régions AWS suivantes ne sont pas prises en charge :</block>
+  <block id="cc6dcf46ebcb08f1caa420526cc0ab18" category="list-text">régions de Chine</block>
+  <block id="1411debdb32e6b128ca27ec92a708cbd" category="list-text">Régions GovCloud (États-Unis)</block>
+  <block id="ecd96786b112acf6970d6aaf3be575ca" category="list-text">Nuage secret</block>
+  <block id="151ef168e17772f7a361db78a0c86552" category="list-text">Nuage top secret</block>
+  <block id="5948f3347ebc02ebc690227c059661e1" category="section-title">Régions</block>
+  <block id="dbd9df55416d4512d3fcb441aced88b3" category="paragraph">Workload Factory est pris en charge dans toutes les régions commerciales où FSx for ONTAP est pris en charge.<block ref="c26e1d6730022abf3c378cf0c0cad7af" category="inline-link-macro-rx"></block></block>
+  <block id="186585d175a4fff1722ac82a5520c584" category="paragraph">Les régions AWS suivantes ne sont pas prises en charge :</block>
 </blocks>

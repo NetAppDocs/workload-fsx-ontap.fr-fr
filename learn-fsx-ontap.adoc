@@ -70,9 +70,17 @@ AWS maintient votre compte FSX pour ONTAP, pas l'usine de workloads. Reportez-vo
 
 
 
-== Régions prises en charge
+== Régions
 
-https://aws.amazon.com/about-aws/global-infrastructure/regional-product-services/["Affichez les régions Amazon prises en charge."^]
+Workload Factory est pris en charge dans toutes les régions commerciales où FSx for ONTAP est pris en charge.link:https://aws.amazon.com/about-aws/global-infrastructure/regional-product-services/["Affichez les régions Amazon prises en charge."^]
+
+Les régions AWS suivantes ne sont pas prises en charge :
+
+* régions de Chine
+* Régions GovCloud (États-Unis)
+* Nuage secret
+* Nuage top secret
+
 
 
 
