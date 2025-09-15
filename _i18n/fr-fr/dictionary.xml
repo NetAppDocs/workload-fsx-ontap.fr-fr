@@ -2100,7 +2100,6 @@
   <block id="ad8f55b88a50703984e58a23e36e9026" category="inline-image-macro">Capture d'écran qui montre l'écran de gestion des instantanés.</block>
   <block id="404a59509c6a806310ecbd1d601e0ee6" category="paragraph"><block ref="404a59509c6a806310ecbd1d601e0ee6" category="inline-image-macro-rx" type="image"></block></block>
   <block id="52574bdc9ce79e7e568096fa39264d72" category="section-title">Diminution de la capacité de stockage SSD disponible</block>
-  <block id="0cc6e64eaa35165d8791def1903c483a" category="paragraph">Workload Factory prend en charge la réduction de la capacité du disque SSD (Solid State Drive) de vos systèmes de fichiers de première et deuxième génération.  Grâce à la capacité élastique du système de fichiers, vous pouvez ajuster dynamiquement la capacité de vos systèmes de fichiers pour répondre aux besoins de vos charges de travail.</block>
   <block id="298ae1d1e13ebe1f0f22936b7ea9ce33" category="inline-link-macro">Ajuster la capacité du système de fichiers</block>
   <block id="6b4be3b501bf6ae8984293c02d4d610b" category="paragraph"><block ref="6b4be3b501bf6ae8984293c02d4d610b" category="inline-link-macro-rx"></block></block>
   <block id="14fc4cc175abaf53d8e3d6a080ba96e8" category="summary">Créez une stratégie de snapshot personnalisée pour une machine virtuelle de stockage dans Workload Factory.</block>
@@ -2177,4 +2176,6 @@
   <block id="5948f3347ebc02ebc690227c059661e1" category="section-title">Régions</block>
   <block id="dbd9df55416d4512d3fcb441aced88b3" category="paragraph">Workload Factory est pris en charge dans toutes les régions commerciales où FSx for ONTAP est pris en charge.<block ref="c26e1d6730022abf3c378cf0c0cad7af" category="inline-link-macro-rx"></block></block>
   <block id="186585d175a4fff1722ac82a5520c584" category="paragraph">Les régions AWS suivantes ne sont pas prises en charge :</block>
+  <block id="edfbca9622799a953a48987a288fe283" category="paragraph">Workload Factory prend en charge la réduction de la capacité du disque SSD (Solid State Drive) de vos systèmes de fichiers de deuxième génération. Grâce à la capacité élastique du système de fichiers, vous pouvez ajuster dynamiquement la capacité de vos systèmes de fichiers pour répondre aux besoins de vos charges de travail.</block>
+  <block id="381c6da705f822c3139853781716a57a" category="admonition">La diminution de la capacité de stockage SSD n'est prise en charge que pour les systèmes de fichiers de deuxième génération.</block>
 </blocks>

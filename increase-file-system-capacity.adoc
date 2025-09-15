@@ -17,6 +17,9 @@ Augmentez la capacité de stockage SSD d'un système de fichiers FSx for ONTAP l
 
 Vous pouvez également link:enable-auto-capacity-management.html["activez la fonction de gestion automatique de la capacité"]gérer la capacité du système de fichiers en usine des workloads.
 
+
+NOTE: La diminution de la capacité de stockage SSD n'est prise en charge que pour les systèmes de fichiers de deuxième génération.
+
 .Description de la tâche
 Grâce à la capacité élastique du système de fichiers, vous pouvez ajuster dynamiquement la capacité de vos systèmes de fichiers pour répondre aux besoins de vos charges de travail.
 
