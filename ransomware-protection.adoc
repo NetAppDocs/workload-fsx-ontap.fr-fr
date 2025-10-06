@@ -33,7 +33,7 @@ La fonctionnalité ARP/AI se met automatiquement à jour en fonction de la versi
 Modes d'apprentissage et actifs:: ARP/AI fonctionne d'abord en _mode d'apprentissage_ puis passe automatiquement en _mode actif_.
 +
 --
-* *Mode d'apprentissage* : lorsque vous activez ARP/AI, il s'exécute en _mode d'apprentissage_.  En mode d'apprentissage, le système de fichiers FSx for ONTAP développe un profil d'alerte basé sur les domaines d'analyse : entropie, types d'extension de fichier et IOPS de fichier.  Une fois que le système de fichiers exécute ARP/AI en mode d'apprentissage pendant suffisamment de temps pour évaluer les caractéristiques de la charge de travail, Workload Factory passe automatiquement en mode actif d'ARP/AI et commence à protéger vos données.
+* *Mode d'apprentissage* : lorsque vous activez ARP/AI, il s'exécute en _mode d'apprentissage_. En mode d'apprentissage, le système de fichiers FSx for ONTAP développe un profil d'alerte basé sur les domaines d'analyse : entropie, types d'extension de fichier et IOPS de fichier. Une fois que le système de fichiers exécute ARP/AI en mode d'apprentissage pendant suffisamment de temps pour évaluer les caractéristiques de la charge de travail, Workload Factory passe automatiquement en mode actif d'ARP/AI et commence à protéger vos données.
 * *Mode actif* : une fois qu'ARP/AI passe en _mode actif_, FSx for ONTAP crée des instantanés ARP/AI pour protéger les données si une menace est détectée.
 +
 En mode actif, si une extension de fichier est marquée comme anormale, vous devez évaluer l'alerte. Vous pouvez agir sur l'alerte pour protéger vos données ou marquer l'alerte comme un faux positif. Le fait de marquer une alerte comme un faux positif met à jour le profil d'alerte. Par exemple, si l'alerte est déclenchée par une nouvelle extension de fichier et que vous marquez l'alerte comme un faux positif, vous ne recevrez pas d'alerte la prochaine fois que l'extension de fichier sera observée.
@@ -58,7 +58,7 @@ Configurations non prises en charge:: Les configurations suivantes ne prennent p
 
 L'activation d'ARP/AI pour un système de fichiers ajoute automatiquement une protection à tous les volumes NAS existants et NAS nouvellement créés (NFS/SMB).  Vous pouvez également activer ARP/AI pour des volumes individuels.
 
-Après avoir activé ARP/AI, si une attaque se produit et que vous identifiez que l'attaque est réelle, Workload Factory configure automatiquement une stratégie de snapshot qui prend jusqu'à six snapshots toutes les quatre heures.  Chaque instantané est verrouillé pendant 2 à 5 jours.
+Après avoir activé ARP/AI, si une attaque se produit et que vous identifiez que l’attaque est réelle, Workload Factory configure automatiquement une stratégie de snapshot qui prend jusqu’à six snapshots toutes les quatre heures. Chaque instantané est verrouillé pendant 2 à 5 jours.
 
 .Avant de commencer
 Pour activer ARP/AI pour un système de fichiers ou un volume, vous devez associer un lien. link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["Apprenez à associer un lien existant ou à créer et associer un nouveau lien"] .  Une fois le lien associé, revenez à cette opération.
@@ -69,8 +69,9 @@ Pour activer ARP/AI pour un système de fichiers ou un volume, vous devez associ
 --
 .Étapes
 . Connectez-vous à l'aide de l'un des link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].
-. Dans stockage, sélectionnez *aller à stock de stockage*.
-. Dans l'onglet *FSx pour ONTAP*, sélectionnez le menu à trois points du système de fichiers pour activer ARP/AI, puis sélectionnez *Gérer*.
+. Dans la mosaïque Stockage, sélectionnez *Accéder au stockage*.
+. Dans le menu Stockage, sélectionnez *FSx pour ONTAP*.
+. Depuis *FSx for ONTAP*, sélectionnez le menu d'actions du système de fichiers pour activer ARP/AI, puis sélectionnez *Gérer*.
 . Sous Informations, sélectionnez l’icône en forme de crayon à côté de *Protection autonome contre les ransomwares*.  L'icône en forme de crayon apparaît à côté de la flèche lorsque la souris survole la ligne *Protection autonome contre les ransomwares*.
 . À partir de la page NetApp Autonomous Ransomware Protection with AI (ARP/AI), procédez comme suit :
 +
@@ -89,9 +90,10 @@ Pour activer ARP/AI pour un système de fichiers ou un volume, vous devez associ
 --
 .Étapes
 . Connectez-vous à l'aide de l'un des link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].
-. Dans stockage, sélectionnez *aller à stock de stockage*.
-. Dans l'onglet *FSx pour ONTAP*, sélectionnez le menu à trois points du système de fichiers pour activer ARP/AI, puis sélectionnez *Gérer*.
-. Dans l'onglet Volumes, sélectionnez le menu à trois points du volume pour activer ARP/AI, puis *Actions de protection des données*, puis *Gérer ARP/AI*.
+. Dans la mosaïque Stockage, sélectionnez *Accéder au stockage*.
+. Dans le menu Stockage, sélectionnez *FSx pour ONTAP*.
+. Depuis *FSx for ONTAP*, sélectionnez le menu d'actions du système de fichiers pour activer ARP/AI, puis sélectionnez *Gérer*.
+. Dans l'onglet Volumes, sélectionnez le menu d'actions du volume pour activer ARP/AI, puis *Actions de protection des données*, puis *Gérer ARP/AI*.
 . Dans la boîte de dialogue Gérer ARP/AI, procédez comme suit :
 +
 .. Activer ou désactiver la fonctionnalité.
@@ -112,7 +114,9 @@ Déterminez si une attaque est une fausse alarme ou un incident lié à un ranso
 
 .Étapes
 . Connectez-vous à l'aide de l'un des link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].
-. Dans stockage, sélectionnez *aller à stock de stockage*.
+. Dans la mosaïque Stockage, sélectionnez *Accéder au stockage*.
+. Dans le menu Stockage, sélectionnez *FSx pour ONTAP*.
+. Depuis *FSx for ONTAP*, sélectionnez le système de fichiers pour lequel valider les attaques de ransomware.
 . Dans la présentation du système de fichiers, sélectionnez l'onglet *volumes*.
 . Sélectionnez *analyser les attaques* dans la mosaïque protection anti-ransomware autonome.
 . Téléchargez le rapport des événements d'attaque pour vérifier si des fichiers ou des dossiers ont été compromis, puis déterminez si une attaque s'est produite.
@@ -132,7 +136,9 @@ En connaissant les fichiers affectés et l'heure de l'attaque, il est possible d
 
 .Étapes
 . Connectez-vous à l'aide de l'un des link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].
-. Dans stockage, sélectionnez *aller à stock de stockage*.
+. Dans la mosaïque Stockage, sélectionnez *Accéder au stockage*.
+. Dans le menu Stockage, sélectionnez *FSx pour ONTAP*.
+. Depuis *FSx for ONTAP*, sélectionnez le système de fichiers pour lequel récupérer les données.
 . Dans la présentation du système de fichiers, sélectionnez l'onglet *volumes*.
 . Sélectionnez *analyser les attaques* dans la mosaïque protection anti-ransomware autonome.
 . Si une attaque s'est produite, sélectionnez *attaque réelle* pour le volume dans la table.

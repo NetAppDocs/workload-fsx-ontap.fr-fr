@@ -2,28 +2,28 @@
 sidebar: sidebar 
 permalink: links-overview.html 
 keywords: links, accounts, lambda 
-summary: 'Un lien Factory de workload crée une relation de confiance et une connectivité entre un compte d"usine de workloads et un ou plusieurs systèmes de fichiers FSX pour ONTAP.' 
+summary: Un lien Workload Factory crée une relation de confiance et une connectivité entre un compte Workload Factory et un ou plusieurs systèmes de fichiers FSx for ONTAP . 
 ---
-= En savoir plus sur les liens d'usine des charges de travail BlueXP 
+= En savoir plus sur les liens NetApp Workload Factory
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-Un lien Factory de workloads BlueXP  crée une relation de confiance et une connectivité entre un compte d'usine de workloads et un ou plusieurs systèmes de fichiers FSX pour ONTAP. Vous pouvez ainsi surveiller et gérer certaines fonctionnalités du système de fichiers directement à partir des appels de l'API REST ONTAP qui ne sont pas disponibles via l'API Amazon FSX pour ONTAP.
+Un lien NetApp Workload Factory crée une relation de confiance et une connectivité entre un compte Workload Factory et un ou plusieurs systèmes de fichiers FSx for ONTAP .  Cela vous permet de surveiller et de gérer certaines fonctionnalités du système de fichiers directement à partir des appels d'API REST ONTAP qui ne sont pas disponibles via l'API Amazon FSx for ONTAP .
 
-Vous n'avez pas besoin d'un lien pour vous lancer dans l'usine des charges de travail, mais dans certains cas, vous devrez créer un lien pour déverrouiller toutes les fonctionnalités d'usine des charges de travail et les fonctionnalités des charges de travail.
+Vous n’avez pas besoin d’un lien pour démarrer avec Workload Factory, mais dans certains cas, vous devrez créer un lien pour déverrouiller toutes les fonctionnalités et capacités de charge de travail de Workload Factory.
 
 
 
 == Pourquoi les liens sont bénéfiques
 
-Les liens sont utiles car ils permettent à Workload Factory d'effectuer des opérations qui ne sont pas disponibles nativement via l'API Amazon FSx for ONTAP . Ils offrent des fonctionnalités et des automatisations ONTAP avancées, améliorant ainsi la gestion des systèmes de fichiers FSx for ONTAP .
+Les liens sont utiles car ils permettent à Workload Factory d’effectuer des opérations qui ne sont pas disponibles nativement via l’API Amazon FSx for ONTAP .  Les liens permettent des fonctionnalités et des automatisations ONTAP avancées, qui améliorent la gestion des systèmes de fichiers FSx pour ONTAP .
 
 Voici quelques avantages de l’utilisation de liens :
 
-* Le lien permet à BlueXP d'envoyer des commandes ONTAP directement à votre système de fichiers FSx pour ONTAP , apportant des fonctionnalités ONTAP avancées au-delà de ce qu'AWS propose nativement.
+* Le lien permet à la console NetApp d'envoyer des commandes ONTAP directement à votre système de fichiers FSx for ONTAP , apportant des fonctionnalités ONTAP avancées au-delà de ce qu'AWS propose nativement.
 * Les liens exploitent AWS Lambda pour exécuter du code en réponse à des événements. Cette approche sans serveur supprime la dépendance d'une instance exécutée dans votre VPC.
 
 
@@ -35,15 +35,15 @@ Les liens utilisent AWS Lambda. Lambda exécute le code en réponse aux événem
 
 Après avoir créé un lien, vous pouvez l'associer à un ou plusieurs systèmes de fichiers FSx for ONTAP . Chaque système de fichiers ne peut être associé qu'à un seul lien dans le même compte NetApp. Si vous avez plusieurs comptes NetApp, un seul système de fichiers peut être associé à des liens supplémentaires sous différents comptes NetApp.
 
-Vous créez et associez des liens à partir de la charge de travail de stockage dans la fabrique de charges de travail.
+Vous créez et associez des liens à partir de la charge de travail de stockage dans Workload Factory.
 
-Vous pouvez authentifier les liens à l'aide des informations d'identification stockées dans le service d'informations d'identification de la fabrique de charges de travail ou avec vos informations d'identification stockées dans AWS Secrets Manager. L'usine de charges de travail ne prend pas en charge le changement de modes d'authentification.
+Vous pouvez authentifier les liens à l'aide des informations d'identification stockées dans le service d'informations d'identification Workload Factory ou avec vos informations d'identification stockées dans AWS Secrets Manager.  Workload Factory ne prend pas en charge la modification des modes d'authentification.
 
 
 
 == Coûts
 
-Chaque transaction effectuée par Lambda entraîne des frais. La Lambda agit comme proxy entre les deux systèmes. Par conséquent, l'envoi d'une requête à l'API REST ONTAP sur un système de fichiers et la transmission de la réponse à l'usine de la charge de travail font l'objet d'un frais.
+Chaque transaction effectuée par Lambda entraîne des frais.  Étant donné que Lambda agit comme un proxy entre les deux systèmes, des frais sont facturés lorsque Lambda envoie une demande à l'API REST ONTAP sur un système de fichiers et lorsqu'il renvoie la réponse à Workload Factory.
 
 link:https://aws.amazon.com/lambda/pricing/["Découvrez les coûts liés à l'utilisation d'AWS Lambda"^]
 
@@ -51,7 +51,7 @@ link:https://aws.amazon.com/lambda/pricing/["Découvrez les coûts liés à l'ut
 
 == Lorsqu'un lien est requis
 
-L'usine de charge de travail requiert un lien pour afficher certaines informations et effectuer certaines tâches. Si vous tentez d'effectuer une opération qui nécessite un lien et que vous n'avez pas associé de lien au système de fichiers FSx for ONTAP , Workload Factory vous avertit que l'opération nécessite un lien.
+Workload Factory nécessite un lien pour afficher certaines informations et effectuer certaines tâches.  Si vous tentez d'effectuer une opération qui nécessite un lien et que vous n'avez pas associé de lien au système de fichiers FSx for ONTAP , Workload Factory vous avertit que l'opération nécessite un lien.
 
 Les fonctions qui nécessitent un lien sont les suivantes :
 

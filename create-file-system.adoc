@@ -1,17 +1,17 @@
 ---
 sidebar: sidebar 
 permalink: create-file-system.html 
-keywords: create, FSx file system, ONTAP file system, workload factory, storage 
-summary: 'En utilisant l"usine de workloads BlueXP , vous pouvez créer un système de fichiers FSX pour ONTAP afin d"ajouter et de gérer des volumes et des services de données supplémentaires.' 
+keywords: create, FSx file system, ONTAP file system, Workload Factory, storage 
+summary: À l’aide de NetApp Workload Factory, vous pouvez créer un système de fichiers FSx pour ONTAP pour ajouter et gérer des volumes et des services de données supplémentaires. 
 ---
-= Créez un système de fichiers FSX pour ONTAP en usine de workloads BlueXP 
+= Créer un système de fichiers FSx pour ONTAP dans NetApp Workload Factory
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-À l'aide de l'usine de charge de travail BlueXP, vous pouvez créer des systèmes de fichiers FSx pour ONTAP de première et deuxième génération pour ajouter et gérer des volumes et des services de données supplémentaires.
+À l’aide de NetApp Workload Factory, vous pouvez créer des systèmes de fichiers FSx for ONTAP de première et deuxième génération pour ajouter et gérer des volumes et des services de données supplémentaires.
 
 .Description de la tâche
 Une VM de stockage et un groupe de sécurité sont créés dans le cadre de la création du système de fichiers.
@@ -19,7 +19,7 @@ Une VM de stockage et un groupe de sécurité sont créés dans le cadre de la c
 .Avant de commencer
 Avant de créer votre système de fichiers FSX pour ONTAP, vous aurez besoin des éléments suivants :
 
-* ARN d'un rôle IAM qui donne à Workload Factory les autorisations nécessaires pour créer un système de fichiers FSX pour ONTAP. link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Découvrez comment accorder des autorisations à un compte AWS"^].
+* L'ARN d'un rôle IAM qui donne à Workload Factory les autorisations nécessaires pour créer un système de fichiers FSx pour ONTAP . link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Découvrez comment accorder des autorisations à un compte AWS"^] .
 * La région et les informations VPC pour lesquelles vous allez créer l'instance FSX pour ONTAP.
 
 
@@ -42,14 +42,14 @@ Les systèmes de fichiers FSx de deuxième génération pour ONTAP sont le type 
 
 .Étapes
 . Connectez-vous à l'aide de l'un des link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].
-. Dans stockage, sélectionnez *Créer FSX pour ONTAP*.
+. Dans la mosaïque Stockage, sélectionnez *Créer FSx pour ONTAP*.
 . Sur la page Créer FSX pour ONTAP, sélectionnez *création rapide*.
 +
 Vous pouvez également charger une configuration enregistrée.
 
 . Sous Configuration générale du système de fichiers, fournissez les informations suivantes :
 +
-.. *Informations d'identification AWS* : sélectionnez cette option pour ajouter des informations d'identification AWS en usine de la charge de travail ou continuer sans informations d'identification.
+.. *Informations d'identification AWS* : sélectionnez cette option pour ajouter des informations d'identification AWS dans Workload Factory ou continuez sans informations d'identification.
 .. *Nom du système de fichiers* : entrez un nom pour le système de fichiers.
 .. *Région et VPC* : sélectionnez la région et VPC pour le système de fichiers.
 .. *Type de déploiement* : sélectionnez un type de déploiement.
@@ -114,14 +114,14 @@ La création avancée vous permet de définir toutes les options de configuratio
 
 .Étapes
 . Connectez-vous à l'aide de l'un des link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].
-. Dans stockage, sélectionnez *Créer FSX pour ONTAP*.
+. Dans la mosaïque Stockage, sélectionnez *Créer FSx pour ONTAP*.
 . Sur la page Créer FSX pour ONTAP, sélectionnez *création avancée*.
 +
 Vous pouvez également charger une configuration enregistrée.
 
 . Sous Configuration générale du système de fichiers, fournissez les informations suivantes :
 +
-.. *Informations d'identification AWS* : sélectionnez cette option pour ajouter des informations d'identification AWS en usine de la charge de travail ou continuer sans informations d'identification.
+.. *Informations d'identification AWS* : sélectionnez cette option pour ajouter des informations d'identification AWS dans Workload Factory ou continuez sans informations d'identification.
 .. *Nom du système de fichiers* : entrez un nom pour le système de fichiers.
 .. *Région et VPC* : sélectionnez la région et VPC pour le système de fichiers.
 .. *Type de déploiement* : sélectionnez un type de déploiement et une génération de système de fichiers. La disponibilité d’un système de fichiers de deuxième génération dépend de la région sélectionnée. Si la région sélectionnée ne prend pas en charge les systèmes de fichiers FSx for ONTAP de deuxième génération, le type de déploiement bascule vers la première génération.

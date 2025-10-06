@@ -2,16 +2,16 @@
 sidebar: sidebar 
 permalink: add-ha-pairs.html 
 keywords: add high-availability pairs, add HA pairs, add HA pair, add high-availability pair, scale out, file system, fsx for ontap 
-summary: Ajoutez des paires haute disponibilité à un système de fichiers en usine de workloads BlueXP  pour faire évoluer horizontalement le système de fichiers. 
+summary: Ajoutez des paires haute disponibilité à un système de fichiers dans NetApp Workload Factory pour faire évoluer le système de fichiers. 
 ---
-= Ajoutez des paires haute disponibilité à un système de fichiers d'usine de workloads BlueXP 
+= Ajouter des paires HA à un système de fichiers dans NetApp Workload Factory
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-Ajoutez des paires haute disponibilité pour faire évoluer horizontalement un système de fichiers FSX pour ONTAP de deuxième génération dans l'usine de workloads BlueXP  afin d'améliorer les performances et la capacité. Cette extension améliore l'évolutivité des performances et la flexibilité par rapport aux systèmes de fichiers de première génération.
+Ajoutez des paires haute disponibilité (HA) pour faire évoluer un système de fichiers Single-AZ de deuxième génération FSx pour ONTAP dans NetApp Workload Factory afin d'augmenter les performances et la capacité.  Cette extension vous offre davantage d'évolutivité des performances et de flexibilité par rapport aux systèmes de fichiers de première génération.
 
 .Description de la tâche
 Les nouvelles paires haute disponibilité sont ajoutées avec la même référence et la même capacité par paire haute disponibilité.
@@ -43,8 +43,9 @@ Avant d'ajouter des paires haute disponibilité à un système de fichiers, proc
 
 .Étapes
 . Connectez-vous à l'aide de l'un des link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].
-. Dans stockage, sélectionnez *accéder à l'inventaire de stockage*.
-. Dans l'onglet *FSX pour ONTAP*, sous *information*, sélectionnez l'icône en forme de crayon en regard de *paires HA*.
+. Dans la mosaïque Stockage, sélectionnez *Accéder au stockage*.
+. Dans le menu Stockage, sélectionnez *FSx pour ONTAP*.
+. Dans *FSx for ONTAP*, sous *Informations*, sélectionnez l'icône en forme de crayon à côté de *Paires HA*.
 . Dans la boîte de dialogue *Ajouter des paires HA*, sélectionnez le nombre de paires HA à ajouter au système de fichiers.
 . Sélectionnez *Add* pour confirmer l'ajout des paires HA.
 

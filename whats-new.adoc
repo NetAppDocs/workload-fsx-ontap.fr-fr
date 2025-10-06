@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: whats-new.html 
-keywords: 'what"s new, features, new, release notes, enhancements, fixes, new features, workload factory, amazon fsx for netapp ontap, fsx for ontap' 
+keywords: 'what"s new, features, new, release notes, enhancements, fixes, new features, Workload Factory, amazon fsx for netapp ontap, fsx for ontap' 
 summary: 'Découvrez les nouveautés d"Amazon FSX pour NetApp ONTAP.' 
 ---
 = Nouveautés d'Amazon FSX pour NetApp ONTAP
@@ -12,6 +12,72 @@ summary: 'Découvrez les nouveautés d"Amazon FSX pour NetApp ONTAP.'
 
 [role="lead"]
 Découvrez les nouveautés d'Amazon FSX pour NetApp ONTAP.
+
+
+
+== 06 octobre 2025
+
+
+
+=== BlueXP workload factory désormais NetApp Workload Factory
+
+BlueXP a été renommé et repensé pour mieux refléter le rôle qu'il joue dans la gestion de votre infrastructure de données. Par conséquent, BlueXP workload factory a été renommée NetApp Workload Factory.
+
+
+
+== 05 octobre 2025
+
+
+
+=== Optimisez vos économies grâce au calculateur de stockage pour Amazon Elastic Block Store (EBS)
+
+Workload Factory peut analyser votre utilisation des performances EBS, puis suggérer la configuration FSx for ONTAP la meilleure et la plus rentable afin que vous puissiez économiser davantage en passant à FSx for ONTAP.
+
+link:https://docs.netapp.com/us-en/workload-fsx-ontap/explore-savings.html#explore-savings-for-detected-storage-environments["Découvrez les économies réalisées sur les environnements de stockage détectés dans la console Workload Factory"]
+
+
+
+=== Accès rapide à l'écran des ressources à partir de l'inventaire du système de fichiers
+
+Vous pouvez accéder rapidement à un écran de ressources du système de fichiers FSx for ONTAP en sélectionnant le nom du système de fichiers, désormais un lien hypertexte, dans l'inventaire FSx for ONTAP .
+
+
+
+=== Découvrir les relations de cache dans la console Workload Factory
+
+Si vous avez des relations _cache_ entre le système de fichiers FSx for ONTAP et un autre type de stockage ONTAP (système sur site, Cloud Volumes ONTAP et FSx for ONTAP), vous pouvez les découvrir et les afficher à partir de la console Workload Factory.  Cela vous permet de mieux comprendre les flux de données, d’optimiser l’utilisation du cache et d’améliorer l’efficacité dans les environnements distribués.
+
+link:https://docs.netapp.com/us-en/workload-fsx-ontap/discover-cache-volumes.html["Découvrir et afficher les relations de cache dans la console Workload Factory"]
+
+
+
+=== Mise à jour de l'analyse bien architecturée
+
+Workload Factory analyse désormais vos systèmes de fichiers FSx for ONTAP pour la configuration suivante :
+
+Seuil d'utilisation de la capacité du fichier de volume : vérifie si les seuils de capacité du fichier sont définis sur 80 % ou moins.  Cela vous aide à éviter de manquer d’espace sur vos systèmes de fichiers.
+
+link:https://docs.netapp.com/us-en/workload-fsx-ontap/improve-configurations.html["Affichez l'état bien architecturé de vos systèmes de fichiers FSx for ONTAP"]
+
+
+
+==== Améliorations des actions pour les problèmes de configuration
+
+À partir de l'onglet *Analyse bien architecturée* du tableau de bord d'un système de fichiers FSx for ONTAP , au lieu de rejeter une configuration entière pour un système de fichiers, vous pouvez également sélectionner un ou plusieurs volumes dans un système de fichiers à corriger, rejeter ou réactiver.
+
+
+
+=== Notification supplémentaire pour le stockage
+
+Le service de notification NetApp Workload Factory inclut la notification hebdomadaire des problèmes de configuration bien architecturés.
+
+link:https://docs.netapp.com/us-en/workload-setup-admin/configure-notifications.html#notification-types-and-messages["Types de notifications et messages dans la documentation de configuration et d'administration de Workload Factory"]
+
+
+
+=== Les fichiers immuables prennent en charge la suppression privilégiée
+
+Avec cette fonctionnalité, vous pouvez configurer un accès de suppression privilégié pour les fichiers immuables dans vos systèmes de fichiers FSx for ONTAP .  Cela vous permet de protéger les données critiques contre toute suppression accidentelle ou malveillante tout en permettant aux utilisateurs autorisés de contourner le verrouillage et de supprimer ces fichiers si nécessaire.  L'activation de la suppression privilégiée est disponible lors de la création d'un volume ou pour les volumes existants.
 
 
 
@@ -156,7 +222,7 @@ link:https://docs.netapp.com/us-en/workload-setup-admin/configure-notifications.
 
 === Améliorations du tableau de bord de stockage
 
-Le tableau de bord Stockage de la console Workload Factory inclut de nouvelles cartes pour les opportunités d'économies. La carte en haut du tableau de bord affiche le nombre d'opportunités d'économies pour les environnements de stockage exécutés sur Amazon Elastic Block Store (EBS), Amazon FSx for Windows File Server et Amazon Elastic File Systems (EFS). En bas du tableau de bord, trois nouvelles cartes affichent les opportunités d'économies par service de stockage Amazon : EBS, FSx for Windows File Server et EFS. À partir de chaque carte, vous pouvez explorer les opportunités d'économies plus en détail.
+Le tableau de bord Stockage de la console Workload Factory inclut de nouvelles cartes pour les opportunités d'économies.  La carte en haut du tableau de bord affiche le nombre d'opportunités d'économies pour les environnements de stockage exécutés sur Amazon Elastic Block Store (EBS), Amazon FSx for Windows File Server et Amazon Elastic File Systems (EFS).  Au bas du tableau de bord, trois nouvelles cartes affichent les opportunités d'économies par service de stockage Amazon : EBS, FSx pour Windows File Server et EFS.  À partir de toutes les cartes, vous pouvez explorer plus en détail les possibilités d’économies.
 
 À partir de la carte de couverture de protection et de la carte d'intégrité des relations de réplication de FSx for ONTAP, vous pouvez vérifier la présence de volumes partiellement protégés dans vos systèmes de fichiers FSx for ONTAP et identifier les problèmes liés aux relations de réplication. Dans les deux cas, vous pouvez prendre des mesures pour résoudre les problèmes.
 
@@ -164,13 +230,13 @@ Le tableau de bord Stockage de la console Workload Factory inclut de nouvelles c
 
 === Améliorations de l'onglet Volume
 
-L'onglet Volumes de la console Workload Factory a été amélioré pour offrir une vue plus complète de vos systèmes de fichiers FSx for ONTAP. Ces améliorations incluent de nouvelles cartes pour la capacité SSD, le pool de capacité et la protection autonome contre les ransomwares NetApp avec IA (ARP/AI). Ces cartes résument l'utilisation de la capacité et la protection ARP/AI pour tous les volumes du système de fichiers.
+L'onglet Volumes de la console Workload Factory a été amélioré pour fournir une vue plus complète de vos systèmes de fichiers FSx for ONTAP .  Les améliorations incluent de nouvelles cartes pour la capacité SSD, le pool de capacité et la protection autonome contre les ransomwares NetApp avec IA (ARP/AI).  Ces cartes résument l’utilisation de la capacité et la protection ARP/AI pour tous les volumes du système de fichiers.
 
 
 
 === Prise en charge des systèmes de fichiers Amazon FSX pour NetApp ONTAP de deuxième génération
 
-Workload Factory prend désormais en charge les systèmes de fichiers Amazon FSx for NetApp ONTAP de deuxième génération. Vous pouvez créer, gérer et surveiller des systèmes de fichiers de deuxième génération dans la console Workload Factory. Toutes les nouvelles régions commerciales sont prises en charge.
+Workload Factory prend désormais en charge les systèmes de fichiers Amazon FSx for NetApp ONTAP .  Vous pouvez créer, gérer et surveiller des systèmes de fichiers de deuxième génération dans la console Workload Factory.  Toutes les nouvelles régions commerciales sont prises en charge.
 
 link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-file-system.html["Créer un système de fichiers de deuxième génération dans Workload Factory"]
 
@@ -178,7 +244,7 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-file-system.html["C
 
 === Prise en charge du volume FlexVol pour rééquilibrer la capacité du volume
 
-Les volumes FlexVol sont détectables dans la console Workload Factory. Vous pouvez vérifier l'équilibre de vos volumes FlexVol et les rééquilibrer pour redistribuer la capacité lorsque des déséquilibres apparaissent au fil du temps, dus à l'ajout de nouveaux fichiers et à leur croissance.
+Les volumes FlexVol sont détectables dans la console Workload Factory.  Vous pouvez vérifier l'équilibre de vos volumes FlexVol et rééquilibrer les volumes FlexVol pour redistribuer la capacité lorsque des déséquilibres se développent au fil du temps en raison de l'ajout de nouveaux fichiers et de la croissance des fichiers.
 
 link:https://docs.netapp.com/us-en/workload-fsx-ontap/rebalance-volume.html["Rééquilibrer la capacité d'un volume FlexVol"]
 
@@ -186,15 +252,15 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/rebalance-volume.html["Ré
 
 === Mise à jour de la terminologie
 
-Le terme « Autonomous Ransomware Protection » (ARP) a été mis à jour en « NetApp Autonomous Ransomware Protection with AI » (ARP/AI) dans la console de l'usine de charge de travail.
+Le terme « Autonomous Ransomware Protection » (ARP) a été mis à jour en « NetApp Autonomous Ransomware Protection with AI » (ARP/AI) dans la console Workload Factory.
 
 
 
 === ARP/AI activé par défaut pour les nouveaux volumes
 
-Lorsque vous créez un volume dans la console Workload Factory, la protection autonome contre les ransomwares NetApp avec IA (ARP/AI) est activée par défaut si le système de fichiers dispose d'une stratégie ARP/AI. Cela signifie que le volume est automatiquement protégé contre les attaques de ransomware grâce à des fonctionnalités de détection et de réponse basées sur l'IA.
+Lorsque vous créez un nouveau volume dans la console Workload Factory, NetApp Autonomous Ransomware Protection with AI (ARP/AI) est activé par défaut si le système de fichiers dispose d'une stratégie ARP/AI.  Cela signifie que le volume est automatiquement protégé contre les attaques de ransomware grâce à des capacités de détection et de réponse basées sur l'IA.
 
-link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-volume.html["Créer un volume dans la fabrique de charges de travail"]
+link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-volume.html["Créer un volume dans Workload Factory"]
 
 
 
@@ -208,7 +274,7 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-replication.html["A
 
 === Gérer le rôle d'exécution et les autorisations IAM lors de la création du lien
 
-Vous pouvez désormais gérer le rôle d'exécution IAM et la politique d'autorisations associée en créant un lien dans la console Workload Factory. Un lien établit la connectivité entre votre compte Workload Factory et un ou plusieurs systèmes de fichiers FSx for ONTAP. Vous disposez de deux options pour attribuer le rôle d'exécution IAM et les autorisations associées : automatiquement ou par l'utilisateur. La gestion du rôle d'exécution et de la politique d'autorisations associée dans Workload Factory vous évite d'avoir recours à du code tiers.
+Vous pouvez désormais gérer le rôle d’exécution IAM et sa politique d’autorisation associée lorsque vous créez un lien dans la console Workload Factory.  Un lien établit la connectivité entre votre compte Workload Factory et un ou plusieurs systèmes de fichiers FSx for ONTAP .  Vous disposez de deux options pour attribuer le rôle d'exécution IAM et les autorisations de lien : automatiquement ou fournies par l'utilisateur.  La gestion du rôle d'exécution et de la politique d'autorisations qui lui est associée dans Workload Factory signifie que vous n'avez plus besoin d'utiliser de code tiers.
 
 link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["Connectez-vous à un système de fichiers FSX pour ONTAP via un lien Lambda"]
 
@@ -259,13 +325,13 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/improve-configurations.htm
 
 === Améliorations du tableau de bord de stockage
 
-À partir d'aujourd'hui, lorsque vous ouvrez la charge de travail Stockage depuis la console Workload Factory, vous accédez au *Tableau de bord*. Ce nouveau tableau de bord offre une vue d'ensemble de vos systèmes FSx for ONTAP, incluant le nombre de systèmes de fichiers, la capacité totale des SSD, l'état de l'architecture, la protection des données et l'intégrité de la relation de réplication.
+À partir d'aujourd'hui, lorsque vous ouvrez la charge de travail Stockage à partir de la console Workload Factory, vous verrez le *Tableau de bord*.  Le tableau de bord nouvellement conçu fournit une vue globale de vos systèmes FSx for ONTAP , y compris le nombre de systèmes de fichiers, la capacité totale du SSD, l'aperçu de l'état bien architecturé, l'aperçu de la protection des données et l'intégrité de la relation de réplication.
 
 
 
 === Améliorations de l'onglet Volumes
 
-La charge de travail Stockage a apporté des améliorations à l'onglet « Volumes » d'un système de fichiers FSx for ONTAP dans la console Workload Factory. Ces améliorations incluent :
+La charge de travail Stockage a apporté des améliorations à l'onglet Volumes dans un système de fichiers FSx for ONTAP dans la console Workload Factory.  Les améliorations comprennent :
 
 * *Nouvelles cartes* : capacité SSD, pool de capacité et protection autonome contre les ransomwares (ARP)
 * *Nouvelles colonnes* : Répartition de la capacité, Capacité SSD utilisée, Pool de capacité utilisée et Efficacité SSD
@@ -277,7 +343,7 @@ La charge de travail Stockage a apporté des améliorations à l'onglet « Volu
 
 Lors de la création d'un nouveau volume, les fonctions d'efficacité du stockage, notamment le compactage, la compression et la déduplication des données, sont activées par défaut.
 
-link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-volume.html["Créer un nouveau volume dans la fabrique de charges de travail"]
+link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-volume.html["Créer un nouveau volume dans Workload Factory"]
 
 
 
@@ -325,7 +391,7 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-volume.html["Créer
 
 ==== Réplication inverse prise en charge à partir de FSX pour ONTAP vers l'environnement sur site
 
-La réplication inverse est désormais disponible depuis un système de fichiers FSX pour ONTAP vers un cluster ONTAP sur site depuis la console d'usine des workloads.
+La réplication inverse est désormais disponible à partir d'un système de fichiers FSx pour ONTAP vers un cluster ONTAP local à partir de la console Workload Factory.
 
 link:https://docs.netapp.com/us-en/workload-fsx-ontap/reverse-replication.html["Réplication inverse"]
 
@@ -405,7 +471,7 @@ L'usine de workloads prend désormais en charge d'autres ensembles d'identifiant
 
 === Mise à jour de la terminologie des autorisations
 
-L'interface utilisateur et la documentation de l'usine de charge de travail utilisent désormais « lecture seule » pour faire référence aux autorisations de lecture et « lecture/écriture » pour faire référence aux autorisations d'automatisation.
+L'interface utilisateur et la documentation de Workload Factory utilisent désormais « lecture seule » pour faire référence aux autorisations de lecture et « lecture/écriture » pour faire référence aux autorisations d'automatisation.
 
 
 
@@ -507,7 +573,7 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/monitor-operations.html["A
 
 === CloudShell dans la console d'usine de workloads BlueXP 
 
-CloudShell est une fonctionnalité CLI intégrée disponible au sein de l'usine de charges de travail BlueXP  pour le stockage. Vous pouvez utiliser CloudShell pour créer, partager et exécuter des commandes ONTAP ou AWS CLI à partir de plusieurs sessions dans un environnement de type shell à partir de la console d'usine des workloads.
+CloudShell est une fonctionnalité CLI intégrée disponible dans BlueXP workload factory pour le stockage.  Vous pouvez utiliser CloudShell pour créer, partager et exécuter des commandes ONTAP ou AWS CLI à partir de plusieurs sessions dans un environnement de type shell à partir de la console Workload Factory.
 
 link:https://docs.netapp.com/us-en/workload-setup-admin/use-cloudshell.html["En savoir plus sur CloudShell en usine de workloads BlueXP "]
 
@@ -517,7 +583,7 @@ link:https://docs.netapp.com/us-en/workload-setup-admin/use-cloudshell.html["En 
 
 Vous pouvez désormais télécharger les données d'inventaire FSX pour ONTAP dans un fichier Microsoft Excel ou CSV à partir de l'usine de workloads de stockage BlueXP .
 
-image:screenshot-fsx-inventory-download.png["Copie d'écran du stockage en usine de workloads BlueXP  montrant le nouveau bouton de téléchargement pour télécharger les données d'inventaire du système de fichiers FSX pour ONTAP."]
+image:screenshot-fsx-inventory-download.png["Une capture d'écran du stockage dans BlueXP workload factory montrant le nouveau bouton de téléchargement pour télécharger les données d'inventaire du système de fichiers FSx pour ONTAP ."]
 
 
 
@@ -560,7 +626,7 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/monitor-operations.html["A
 
 === Prise en charge des systèmes de fichiers Amazon FSX pour NetApp ONTAP de deuxième génération
 
-Vous pouvez désormais utiliser les systèmes de fichiers de deuxième génération Amazon FSX pour NetApp ONTAP dans l'usine de workloads BlueXP . FSX pour ONTAP les systèmes de fichiers Single-AZ de deuxième génération sont optimisés par jusqu'à 12 paires HA capables d'offrir jusqu'à 72 Gbit/s de débit et 2,400,000 000 IOPS SSD. FSX pour ONTAP les systèmes de fichiers Multi-AZ de deuxième génération sont optimisés par une paire haute disponibilité et offrent une capacité de débit de 6 Gbit/s et 200,000 000 IOPS SSD.
+Vous pouvez désormais utiliser Amazon FSx for NetApp ONTAP de deuxième génération dans NetApp Workload Factory.  Les systèmes de fichiers Single-AZ de deuxième génération FSx pour ONTAP sont alimentés par jusqu'à 12 paires HA qui peuvent fournir jusqu'à 72 Gbit/s de capacité de débit et 2 400 000 IOPS SSD.  Les systèmes de fichiers Multi-AZ de deuxième génération FSx pour ONTAP sont alimentés par une paire HA et offrent une capacité de débit de 6 Gbit/s et 200 000 IOPS SSD.
 
 * link:https://docs.netapp.com/us-en/workload-fsx-ontap/add-ha-pairs.html["Ajoutez des paires haute disponibilité"]
 * link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/limits.html["Quotas et limites pour Amazon FSX pour NetApp ONTAP"^]
@@ -652,8 +718,8 @@ L'inventaire de stockage a été mis à jour avec une vue à deux onglets :
 
 === Mises à jour de la création de liens
 
-* Visionneuse Codebox : Codebox est maintenant intégré au processus de création de lien. Vous pouvez afficher et copier le modèle CloudFormation à partir de Codebox dans l'usine de la charge de travail avant de rediriger vers AWS pour exécuter l'opération.
-* Autorisations requises : les autorisations requises pour exécuter la création de lien dans AWS CloudFormation sont désormais disponibles pour afficher et copier à partir de l'assistant de création de lien dans l'usine de la charge de travail.
+* Visionneuse de codes : Codebox est désormais intégrée au processus de création de liens.  Vous pouvez afficher et copier le modèle CloudFormation depuis Codebox dans Workload Factory avant de le rediriger vers AWS pour exécuter l'opération.
+* Autorisations requises : les autorisations requises pour exécuter la création de lien dans AWS CloudFormation peuvent désormais être affichées et copiées à partir de l'assistant Créer un lien dans Workload Factory.
 * Prise en charge de la création manuelle de liens : cette fonctionnalité permet la création autonome dans AWS CloudFormation avec enregistrement manuel du lien ARN. Cette fonctionnalité est utile lorsqu'une équipe de sécurité ou DevOps participe au processus de création de liens.
 
 
@@ -667,7 +733,7 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["Créer u
 
 === Prise en charge du mode de lecture pour la gestion du stockage
 
-Le mode de lecture est disponible pour la gestion du stockage en usine des charges de travail. Le mode lecture améliore l'expérience du mode de base en ajoutant des autorisations en lecture seule afin que les modèles Infrastructure-as-Code soient remplis avec vos variables spécifiques. Les modèles Infrastructure-as-Code peuvent être exécutés directement depuis votre compte AWS sans permissions de modification pour l'usine des workloads.
+Le mode lecture est disponible pour la gestion du stockage dans Workload Factory.  Le mode lecture améliore l'expérience du mode de base en ajoutant des autorisations en lecture seule afin que les modèles Infrastructure-as-Code soient remplis avec vos variables spécifiques.  Les modèles Infrastructure-as-Code peuvent être exécutés directement à partir de votre compte AWS sans fournir d'autorisations de modification à Workload Factory.
 
 link:https://docs.netapp.com/us-en/workload-setup-admin/operational-modes.html["En savoir plus sur le mode lecture"]
 
@@ -706,6 +772,6 @@ Le calculateur de stockage fait des recommandations de configuration de système
 
 
 
-=== Version initiale de l'usine de workloads pour Amazon FSX pour NetApp ONTAP
+=== Version initiale de Workload Factory pour Amazon FSx for NetApp ONTAP
 
 Amazon FSX pour NetApp ONTAP est désormais disponible en usine pour les workloads BlueXP .

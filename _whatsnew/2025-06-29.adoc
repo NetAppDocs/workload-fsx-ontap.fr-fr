@@ -14,7 +14,7 @@ link:https://docs.netapp.com/us-en/workload-setup-admin/configure-notifications.
 
 === Améliorations du tableau de bord de stockage
 
-Le tableau de bord Stockage de la console Workload Factory inclut de nouvelles cartes pour les opportunités d'économies. La carte en haut du tableau de bord affiche le nombre d'opportunités d'économies pour les environnements de stockage exécutés sur Amazon Elastic Block Store (EBS), Amazon FSx for Windows File Server et Amazon Elastic File Systems (EFS). En bas du tableau de bord, trois nouvelles cartes affichent les opportunités d'économies par service de stockage Amazon : EBS, FSx for Windows File Server et EFS. À partir de chaque carte, vous pouvez explorer les opportunités d'économies plus en détail.
+Le tableau de bord Stockage de la console Workload Factory inclut de nouvelles cartes pour les opportunités d'économies.  La carte en haut du tableau de bord affiche le nombre d'opportunités d'économies pour les environnements de stockage exécutés sur Amazon Elastic Block Store (EBS), Amazon FSx for Windows File Server et Amazon Elastic File Systems (EFS).  Au bas du tableau de bord, trois nouvelles cartes affichent les opportunités d'économies par service de stockage Amazon : EBS, FSx pour Windows File Server et EFS.  À partir de toutes les cartes, vous pouvez explorer plus en détail les possibilités d’économies.
 
 À partir de la carte de couverture de protection et de la carte d'intégrité des relations de réplication de FSx for ONTAP, vous pouvez vérifier la présence de volumes partiellement protégés dans vos systèmes de fichiers FSx for ONTAP et identifier les problèmes liés aux relations de réplication. Dans les deux cas, vous pouvez prendre des mesures pour résoudre les problèmes.
 
@@ -22,13 +22,13 @@ Le tableau de bord Stockage de la console Workload Factory inclut de nouvelles c
 
 === Améliorations de l'onglet Volume
 
-L'onglet Volumes de la console Workload Factory a été amélioré pour offrir une vue plus complète de vos systèmes de fichiers FSx for ONTAP. Ces améliorations incluent de nouvelles cartes pour la capacité SSD, le pool de capacité et la protection autonome contre les ransomwares NetApp avec IA (ARP/AI). Ces cartes résument l'utilisation de la capacité et la protection ARP/AI pour tous les volumes du système de fichiers.
+L'onglet Volumes de la console Workload Factory a été amélioré pour fournir une vue plus complète de vos systèmes de fichiers FSx for ONTAP .  Les améliorations incluent de nouvelles cartes pour la capacité SSD, le pool de capacité et la protection autonome contre les ransomwares NetApp avec IA (ARP/AI).  Ces cartes résument l’utilisation de la capacité et la protection ARP/AI pour tous les volumes du système de fichiers.
 
 
 
 === Prise en charge des systèmes de fichiers Amazon FSX pour NetApp ONTAP de deuxième génération
 
-Workload Factory prend désormais en charge les systèmes de fichiers Amazon FSx for NetApp ONTAP de deuxième génération. Vous pouvez créer, gérer et surveiller des systèmes de fichiers de deuxième génération dans la console Workload Factory. Toutes les nouvelles régions commerciales sont prises en charge.
+Workload Factory prend désormais en charge les systèmes de fichiers Amazon FSx for NetApp ONTAP .  Vous pouvez créer, gérer et surveiller des systèmes de fichiers de deuxième génération dans la console Workload Factory.  Toutes les nouvelles régions commerciales sont prises en charge.
 
 link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-file-system.html["Créer un système de fichiers de deuxième génération dans Workload Factory"]
 
@@ -36,7 +36,7 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-file-system.html["C
 
 === Prise en charge du volume FlexVol pour rééquilibrer la capacité du volume
 
-Les volumes FlexVol sont détectables dans la console Workload Factory. Vous pouvez vérifier l'équilibre de vos volumes FlexVol et les rééquilibrer pour redistribuer la capacité lorsque des déséquilibres apparaissent au fil du temps, dus à l'ajout de nouveaux fichiers et à leur croissance.
+Les volumes FlexVol sont détectables dans la console Workload Factory.  Vous pouvez vérifier l'équilibre de vos volumes FlexVol et rééquilibrer les volumes FlexVol pour redistribuer la capacité lorsque des déséquilibres se développent au fil du temps en raison de l'ajout de nouveaux fichiers et de la croissance des fichiers.
 
 link:https://docs.netapp.com/us-en/workload-fsx-ontap/rebalance-volume.html["Rééquilibrer la capacité d'un volume FlexVol"]
 
@@ -44,15 +44,15 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/rebalance-volume.html["Ré
 
 === Mise à jour de la terminologie
 
-Le terme « Autonomous Ransomware Protection » (ARP) a été mis à jour en « NetApp Autonomous Ransomware Protection with AI » (ARP/AI) dans la console de l'usine de charge de travail.
+Le terme « Autonomous Ransomware Protection » (ARP) a été mis à jour en « NetApp Autonomous Ransomware Protection with AI » (ARP/AI) dans la console Workload Factory.
 
 
 
 === ARP/AI activé par défaut pour les nouveaux volumes
 
-Lorsque vous créez un volume dans la console Workload Factory, la protection autonome contre les ransomwares NetApp avec IA (ARP/AI) est activée par défaut si le système de fichiers dispose d'une stratégie ARP/AI. Cela signifie que le volume est automatiquement protégé contre les attaques de ransomware grâce à des fonctionnalités de détection et de réponse basées sur l'IA.
+Lorsque vous créez un nouveau volume dans la console Workload Factory, NetApp Autonomous Ransomware Protection with AI (ARP/AI) est activé par défaut si le système de fichiers dispose d'une stratégie ARP/AI.  Cela signifie que le volume est automatiquement protégé contre les attaques de ransomware grâce à des capacités de détection et de réponse basées sur l'IA.
 
-link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-volume.html["Créer un volume dans la fabrique de charges de travail"]
+link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-volume.html["Créer un volume dans Workload Factory"]
 
 
 
@@ -66,6 +66,6 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-replication.html["A
 
 === Gérer le rôle d'exécution et les autorisations IAM lors de la création du lien
 
-Vous pouvez désormais gérer le rôle d'exécution IAM et la politique d'autorisations associée en créant un lien dans la console Workload Factory. Un lien établit la connectivité entre votre compte Workload Factory et un ou plusieurs systèmes de fichiers FSx for ONTAP. Vous disposez de deux options pour attribuer le rôle d'exécution IAM et les autorisations associées : automatiquement ou par l'utilisateur. La gestion du rôle d'exécution et de la politique d'autorisations associée dans Workload Factory vous évite d'avoir recours à du code tiers.
+Vous pouvez désormais gérer le rôle d’exécution IAM et sa politique d’autorisation associée lorsque vous créez un lien dans la console Workload Factory.  Un lien établit la connectivité entre votre compte Workload Factory et un ou plusieurs systèmes de fichiers FSx for ONTAP .  Vous disposez de deux options pour attribuer le rôle d'exécution IAM et les autorisations de lien : automatiquement ou fournies par l'utilisateur.  La gestion du rôle d'exécution et de la politique d'autorisations qui lui est associée dans Workload Factory signifie que vous n'avez plus besoin d'utiliser de code tiers.
 
 link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["Connectez-vous à un système de fichiers FSX pour ONTAP via un lien Lambda"]

@@ -2,16 +2,16 @@
 sidebar: sidebar 
 permalink: use-onprem-data.html 
 keywords: use, detect, replicate, remove, on-premises, ONTAP cluster, on-premises cluster, ONTAP 
-summary: 'Découvrez et répliquez les données ONTAP sur site dans l"usine de workloads BlueXP  pour les utiliser dans les bases de connaissances d"IA.' 
+summary: 'Découvrez et répliquez les données ONTAP sur site dans NetApp Workload Factory afin qu"elles puissent être utilisées pour enrichir les bases de connaissances de l"IA.' 
 ---
-= Utilisation des données du cluster ONTAP sur site dans l'usine de workloads BlueXP 
+= Utiliser les données du cluster ONTAP sur site dans NetApp Workload Factory
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-Découvrez et répliquez les données ONTAP sur site dans l'usine de workloads BlueXP  pour les utiliser dans les bases de connaissances d'IA.
+Découvrez et répliquez les données ONTAP sur site dans NetApp Workload Factory afin qu'elles puissent être utilisées pour enrichir les bases de connaissances de l'IA.
 
 .Description de la tâche
 Pour utiliser les données d'un cluster ONTAP sur site, vous devez d'abord détecter le cluster ONTAP sur site. Après avoir détecté un cluster ONTAP sur site, vous pouvez utiliser les données pour l'un des cas d'utilisation suivants.
@@ -31,7 +31,7 @@ Cas d'utilisation:: Notez que le principal cas d'utilisation de la charge de tra
 
 == Découvrez un cluster ONTAP sur site
 
-Découvrez un cluster ONTAP sur site dans une usine de workloads BlueXP  pour répliquer les données dans un système de fichiers Amazon FSX pour NetApp ONTAP.
+Découvrez un cluster ONTAP sur site dans NetApp Workload Factory afin de pouvoir répliquer les données vers un système de fichiers Amazon FSx for NetApp ONTAP .
 
 .Avant de commencer
 Assurez-vous d'avoir les éléments suivants avant de commencer :
@@ -48,13 +48,13 @@ image:screenshot-on-prem-connectivity.png["Capture d'écran montrant comment con
 
 .Étapes
 . Connectez-vous à l'aide de l'un des link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].
-. Dans stockage, sélectionnez *accéder à l'inventaire de stockage*.
+. Dans la mosaïque Stockage, sélectionnez *Accéder au stockage*.
 . Sélectionnez l'onglet *On-prest ONTAP*.
 . Sélectionnez *découvrir*.
 . Passez en revue les conditions préalables et sélectionnez *Suivant*.
 . Sur la page découvrir ONTAP sur site, fournissez les informations suivantes sous *Configuration du cluster* :
 +
-.. *Lien* : sélectionnez un lien. La liaison sera associée au cluster sur site afin de créer une connectivité entre le cluster et l'usine de charges de travail.
+.. *Lien* : Sélectionnez un lien.  Le lien sera associé au cluster sur site pour créer une connectivité entre le cluster et Workload Factory.
 +
 Si vous n'avez pas créé de lien, suivez les instructions, puis revenez à cette opération et sélectionnez le lien.
 
@@ -84,8 +84,8 @@ Répliquez les données de volume d'un cluster ONTAP sur site vers un système d
 
 .Étapes
 . Connectez-vous à l'aide de l'un des link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].
-. Dans stockage, sélectionnez *accéder à l'inventaire de stockage*.
-. Sélectionnez l'onglet *On-prest ONTAP*.
+. Dans la mosaïque Stockage, sélectionnez *Accéder au stockage*.
+. Dans le menu Stockage, sélectionnez *On-premises ONTAP*.
 . Pour rechercher des volumes par VM de stockage, vous pouvez *sélectionner VM de stockage* dans la liste déroulante.
 . Sélectionnez un ou plusieurs volumes à répliquer, puis sélectionnez *répliquer*.
 . Sur la page Créer une réplication, sous cible de réplication, fournissez les informations suivantes :
@@ -95,7 +95,7 @@ Répliquez les données de volume d'un cluster ONTAP sur site vers un système d
 .. *Nom du volume* : le nom du volume cible est généré automatiquement au format suivant `{OriginalVolumeName}_copy`. Vous pouvez utiliser le nom du volume généré automatiquement ou entrer un autre nom de volume.
 .. *Données de hiérarchisation* : sélectionnez la règle de hiérarchisation pour les données stockées dans le volume cible.
 +
-*** *Auto* : règle de hiérarchisation par défaut lors de la création d'un volume à l'aide de l'interface utilisateur FSX for ONTAP de l'usine de workloads. Déplace toutes les données inactives qui incluent les données utilisateur et les snapshots vers le niveau de stockage du pool de capacité pendant une période spécifique.
+*** *Auto* : la stratégie de hiérarchisation par défaut lors de la création d'un volume à l'aide de l'interface utilisateur Workload Factory FSx pour ONTAP .  Classez toutes les données froides qui incluent les données utilisateur et les instantanés dans le niveau de stockage du pool de capacité pour une période spécifique.
 *** *Snapshot uniquement* : hiérarchise uniquement les données de snapshot sur le niveau de stockage du pool de capacité.
 *** *None* : conserve toutes les données de votre volume sur le niveau de stockage primaire.
 *** *Tout* : marque toutes les données utilisateur et les données d'instantané comme inactives et les stocke dans le niveau de stockage du pool de capacité.
@@ -140,20 +140,20 @@ La relation de réplication apparaît dans l'onglet *relations de réplication* 
 
 
 
-== Supprimez un cluster ONTAP sur site de l'usine de workloads BlueXP 
+== Supprimer un cluster ONTAP sur site de NetApp Workload Factory
 
-Si nécessaire, supprimez un cluster ONTAP sur site de l'usine de workloads BlueXP .
+Supprimez un cluster ONTAP sur site de NetApp Workload Factory si nécessaire.
 
 .Avant de commencer
 Vous devez link:delete-replication.html["supprimez toutes les relations de réplication existantes"] gérer tous les volumes du cluster ONTAP sur site avant de supprimer le cluster de sorte qu'aucune relation interrompue ne soit conservée.
 
 .Étapes
 . Connectez-vous à l'aide de l'un des link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].
-. Dans stockage, sélectionnez *accéder à l'inventaire de stockage*.
-. Sélectionnez l'onglet *On-prest ONTAP*.
+. Dans la mosaïque Stockage, sélectionnez *Accéder au stockage*.
+. Dans le menu Stockage, sélectionnez *On-premises ONTAP*.
 . Sélectionnez le cluster ONTAP sur site à supprimer.
-. Sélectionnez le menu à trois points et sélectionnez *Supprimer de Workload Factory*.
+. Sélectionnez le menu Actions et sélectionnez *Supprimer de Workload Factory*.
 
 
 .Résultat
-Le cluster ONTAP sur site a été supprimé de l'usine des workloads BlueXP .
+Le cluster ONTAP sur site est supprimé de NetApp Workload Factory.

@@ -2,18 +2,18 @@
 sidebar: sidebar 
 permalink: increase-volume-capacity.html 
 keywords: increase capacity, volume capacity 
-summary: 'Augmentez manuellement à tout moment la capacité d"un volume en usine de workloads BlueXP .' 
+summary: Augmentez manuellement la capacité de volume d’un volume dans NetApp Workload Factory à tout moment. 
 ---
-= Augmentez la capacité de volume en usine de charges de travail BlueXP 
+= Augmenter la capacité de volume dans NetApp Workload Factory
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-Augmentez manuellement la capacité d'un volume à tout moment en usine de workloads BlueXP .
+Augmentez manuellement la capacité de volume d’un volume à tout moment dans NetApp Workload Factory.
 
-Vous pouvez également link:edit-volume-autogrow.html["activez la fonction de croissance automatique"]laisser l'usine de la charge de travail gérer la capacité du volume pour vous.
+En option, vous pouvezlink:edit-volume-autogrow.html["activez la fonction de croissance automatique"] pour laisser Workload Factory gérer la capacité du volume pour vous.
 
 .Description de la tâche
 Pour une LUN iSCSI, cette opération augmente la taille de la LUN hôte. Une fois la capacité augmentée, suivez la procédure fournie par votre système d'exploitation hôte pour découvrir la nouvelle taille de la LUN et développer le système de fichiers de la LUN.
@@ -23,10 +23,11 @@ Pour augmenter la capacité du volume, vous devez associer un lien. link:https:/
 
 .Étapes
 . Connectez-vous à l'aide de l'un des link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].
-. Dans stockage, sélectionnez *accéder à l'inventaire de stockage*.
-. Dans l'onglet *FSX pour ONTAP*, sélectionnez le menu à trois points du système de fichiers avec le volume à mettre à jour, puis sélectionnez *gérer*.
+. Dans la mosaïque Stockage, sélectionnez *Accéder au stockage*.
+. Dans le menu Stockage, sélectionnez *FSx pour ONTAP*.
+. Depuis *FSx for ONTAP*, sélectionnez le menu d'actions du système de fichiers avec le volume à mettre à jour, puis sélectionnez *Gérer*.
 . Dans la présentation du système de fichiers, sélectionnez l'onglet *volumes*.
-. Dans l'onglet volumes, sélectionnez le menu à trois points du volume pour augmenter la capacité de.
+. Dans l’onglet Volumes, sélectionnez le menu d’actions du volume pour lequel vous souhaitez augmenter la capacité.
 . Sélectionnez *actions de base*, puis *augmenter la capacité du volume*.
 . Dans la boîte de dialogue augmenter la capacité du volume, indiquez les éléments suivants :
 +
@@ -34,5 +35,5 @@ Pour augmenter la capacité du volume, vous devez associer un lien. link:https:/
 .. Remplacez l'unité si nécessaire.
 
 
-. Sélectionnez *augmenter*.
+. Sélectionnez *Augmenter* pour appliquer la modification.
 

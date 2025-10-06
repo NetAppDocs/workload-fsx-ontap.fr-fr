@@ -11,7 +11,7 @@ summary: 'La gestion du partage SMB/CIFS d"un volume dans Workload Factory inclu
 
 
 [role="lead"]
-La gestion du partage SMB/CIFS d'un volume dans Workload Factory inclut la création du partage SMB/CIFS, la détermination des utilisateurs et des groupes auxquels donner accès et le niveau d'autorisations à leur accorder, ainsi que la suppression du partage SMB/CIFS.
+La gestion du partage SMB/CIFS d'un volume dans Workload Factory inclut la création du partage SMB/CIFS, la détermination des utilisateurs et des groupes auxquels accorder l'accès et le niveau d'autorisations à leur accorder, ainsi que la suppression du partage SMB/CIFS.
 
 .Avant de commencer
 Avant de commencer, procédez comme suit :
@@ -28,10 +28,11 @@ Suivez les étapes pour créer un partage SMB/CIFS pour un volume.
 
 .Étapes
 . Connectez-vous à l'aide de l'un des link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].
-. Dans stockage, sélectionnez *accéder à l'inventaire de stockage*.
-. Dans l'onglet *FSX pour ONTAP*, sélectionnez le menu à trois points du système de fichiers avec le volume à mettre à jour, puis sélectionnez *gérer*.
+. Dans la mosaïque Stockage, sélectionnez *Accéder au stockage*.
+. Dans le menu Stockage, sélectionnez *FSx pour ONTAP*.
+. Depuis *FSx for ONTAP*, sélectionnez le menu d'actions du système de fichiers avec le volume à mettre à jour, puis sélectionnez *Gérer*.
 . Dans la présentation du système de fichiers, sélectionnez l'onglet *volumes*.
-. Dans l'onglet volumes, sélectionnez le menu à trois points du volume pour lequel modifier le partage SMB.
+. Dans l’onglet Volumes, sélectionnez le menu d’actions du volume pour lequel modifier le partage SMB.
 . Sélectionnez *Actions avancées*, puis *Gérer les partages SMB/CIFS*.
 . Sur la page Gérer les partages SMB/CIFS, sélectionnez *Créer un partage SMB/CIFS*.
 . Dans la boîte de dialogue Créer un partage SMB/CIFS, fournissez les éléments suivants :
@@ -68,10 +69,10 @@ Suivez les étapes pour modifier les paramètres de partage SMB/CIFS pour un vol
 
 .Étapes
 . Connectez-vous à l'aide de l'un des link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].
-. Dans stockage, sélectionnez *accéder à l'inventaire de stockage*.
-. Dans l'onglet *FSX pour ONTAP*, sélectionnez le menu à trois points du système de fichiers avec le volume à mettre à jour, puis sélectionnez *gérer*.
+. Dans la mosaïque Stockage, sélectionnez *Accéder au stockage*.
+. Dans l'onglet *FSx for ONTAP*, sélectionnez le menu d'actions du système de fichiers avec le volume à mettre à jour, puis sélectionnez *Gérer*.
 . Dans la présentation du système de fichiers, sélectionnez l'onglet *volumes*.
-. Dans l'onglet volumes, sélectionnez le menu à trois points du volume pour lequel modifier le partage SMB.
+. Dans l’onglet Volumes, sélectionnez le menu d’actions du volume pour lequel modifier le partage SMB.
 . Sélectionnez *Actions avancées*, puis *Gérer les partages SMB/CIFS*.
 . Sur la page Gérer les partages SMB/CIFS, sélectionnez *Afficher et modifier*.
 . Modifiez les autorisations d’accès SMB/CIFS, ou les utilisateurs ou groupes auxquels accorder des autorisations.
@@ -89,12 +90,12 @@ Suivez les étapes pour supprimer un partage SMB/CIFS pour un volume.
 
 .Étapes
 . Connectez-vous à l'aide de l'un des link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].
-. Dans stockage, sélectionnez *accéder à l'inventaire de stockage*.
-. Dans l'onglet *FSX pour ONTAP*, sélectionnez le menu à trois points du système de fichiers avec le volume à mettre à jour, puis sélectionnez *gérer*.
+. Dans la mosaïque Stockage, sélectionnez *Accéder au stockage*.
+. Dans l'onglet *FSx for ONTAP*, sélectionnez le menu d'actions du système de fichiers avec le volume à mettre à jour, puis sélectionnez *Gérer*.
 . Dans la présentation du système de fichiers, sélectionnez l'onglet *volumes*.
-. Dans l'onglet volumes, sélectionnez le menu à trois points du volume pour lequel modifier le partage SMB.
+. Dans l’onglet Volumes, sélectionnez le menu d’actions du volume pour lequel modifier le partage SMB.
 . Sélectionnez *Actions avancées*, puis *Gérer les partages SMB/CIFS*.
-. Sur la page Gérer les partages SMB/CIFS, sélectionnez le menu à trois points du partage SMB/CIFS, puis sélectionnez *Supprimer*.
+. Sur la page Gérer les partages SMB/CIFS, sélectionnez le menu d'actions du partage SMB/CIFS, puis sélectionnez *Supprimer*.
 +
 La suppression du partage SMB/CIFS le rend indisponible et inaccessible à tout utilisateur souhaitant le monter.
 

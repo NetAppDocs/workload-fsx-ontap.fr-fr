@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: update-throughput-capacity.html 
 keywords: update throughput, change throughput, throughput capacity 
-summary: 'Mettez à jour la capacité de débit d"un système de fichiers FSX pour ONTAP en usine de workloads BlueXP  en fonction de vos besoins.' 
+summary: 'Mettez à jour la capacité de débit d"un système de fichiers FSx pour ONTAP dans NetApp Workload Factory selon les besoins.' 
 ---
 = Mettre à jour la capacité de débit d'un système de fichiers
 :allow-uri-read: 
@@ -11,14 +11,15 @@ summary: 'Mettez à jour la capacité de débit d"un système de fichiers FSX po
 
 
 [role="lead"]
-Mettez à jour la capacité de débit d'un système de fichiers FSX pour ONTAP en usine de workloads BlueXP  en fonction de vos besoins.
+Mettez à jour la capacité de débit d'un système de fichiers FSx pour ONTAP dans NetApp Workload Factory selon les besoins.
 
 Pour connaître les limites de capacité de débit, reportez-vous à link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/limits.html["Quotas"^] dans la documentation AWS FSX pour NetApp ONTAP.
 
 .Étapes
 . Connectez-vous à l'aide de l'un des link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].
-. Dans stockage, sélectionnez *aller à stock de stockage*.
-. Dans l'onglet *FSX pour ONTAP*, sélectionnez le menu à trois points du système de fichiers pour mettre à jour la capacité de débit, puis sélectionnez *gérer*.
+. Dans la mosaïque Stockage, sélectionnez *Accéder au stockage*.
+. Dans le menu Stockage, sélectionnez *FSx pour ONTAP*.
+. Depuis *FSx for ONTAP*, sélectionnez le menu d'actions du système de fichiers pour mettre à jour la capacité de débit, puis sélectionnez *Gérer*.
 . Sous informations, sélectionnez l'icône en forme de crayon en regard de *capacité de débit*. L'icône en forme de crayon apparaît à côté de la flèche de la liste déroulante lorsque la souris survole la ligne *capacité de débit*.
 . Dans la boîte de dialogue capacité de débit, sélectionnez la capacité de débit dont vous avez besoin.
 . Sélectionnez *appliquer* pour enregistrer les modifications.

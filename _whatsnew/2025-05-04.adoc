@@ -44,7 +44,7 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-volume.html["Créer
 
 ==== Réplication inverse prise en charge à partir de FSX pour ONTAP vers l'environnement sur site
 
-La réplication inverse est désormais disponible depuis un système de fichiers FSX pour ONTAP vers un cluster ONTAP sur site depuis la console d'usine des workloads.
+La réplication inverse est désormais disponible à partir d'un système de fichiers FSx pour ONTAP vers un cluster ONTAP local à partir de la console Workload Factory.
 
 link:https://docs.netapp.com/us-en/workload-fsx-ontap/reverse-replication.html["Réplication inverse"]
 
@@ -124,4 +124,4 @@ L'usine de workloads prend désormais en charge d'autres ensembles d'identifiant
 
 === Mise à jour de la terminologie des autorisations
 
-L'interface utilisateur et la documentation de l'usine de charge de travail utilisent désormais « lecture seule » pour faire référence aux autorisations de lecture et « lecture/écriture » pour faire référence aux autorisations d'automatisation.
+L'interface utilisateur et la documentation de Workload Factory utilisent désormais « lecture seule » pour faire référence aux autorisations de lecture et « lecture/écriture » pour faire référence aux autorisations d'automatisation.

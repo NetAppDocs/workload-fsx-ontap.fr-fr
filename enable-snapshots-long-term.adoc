@@ -11,7 +11,7 @@ summary: 'Activez les snapshots pour la conservation à long terme, ce qui vous 
 
 
 [role="lead"]
-En usine de workloads BlueXP , vous pouvez activer les snapshots pour la conservation à long terme, ce qui vous permet de répliquer des snapshots spécifiques pour une reprise d'activité à long terme.
+Dans NetApp Workload Factory, vous pouvez activer les snapshots pour la conservation à long terme, ce qui vous permet de répliquer des snapshots spécifiques pour la reprise après sinistre à long terme.
 
 La conservation à long terme permet aux services de l'entreprise de continuer à fonctionner même en cas de défaillance de l'ensemble du site, avec prise en charge du basculement transparent des applications via une copie secondaire.
 
@@ -21,10 +21,11 @@ Lorsqu'un cluster ONTAP sur site est la cible de la relation de réplication, la
 
 .Étapes
 . Connectez-vous à l'aide de l'un des link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].
-. Dans stockage, sélectionnez *accéder à l'inventaire de stockage*.
-. Dans l'onglet *FSX pour ONTAP*, sélectionnez le menu à trois points du système de fichiers à mettre à jour, puis sélectionnez *gérer*.
+. Dans la mosaïque Stockage, sélectionnez *Accéder au stockage*.
+. Dans le menu Stockage, sélectionnez *FSx pour ONTAP*.
+. Depuis *FSx for ONTAP*, sélectionnez le nom d'action du système de fichiers à mettre à jour, puis sélectionnez *Gérer*.
 . Dans la présentation du système de fichiers, sélectionnez l'onglet *relations de réplication*.
-. Dans l'onglet relations de réplication, sélectionnez le menu à trois points de la planification des relations de réplication à modifier.
+. Dans l’onglet Relations de réplication, sélectionnez le menu d’actions de la planification de relation de réplication à modifier.
 . Sélectionnez *Modifier la rétention à long terme*.
 . Dans la boîte de dialogue Modifier la rétention à long terme, activez ou désactivez les instantanés pour la conservation à long terme.
 . Si vous choisissez de désactiver les instantanés pour la conservation à long terme, sélectionnez *appliquer* pour terminer cette opération.

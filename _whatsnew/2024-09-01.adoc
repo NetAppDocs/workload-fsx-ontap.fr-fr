@@ -6,7 +6,7 @@
 
 === Prise en charge du mode de lecture pour la gestion du stockage
 
-Le mode de lecture est disponible pour la gestion du stockage en usine des charges de travail. Le mode lecture améliore l'expérience du mode de base en ajoutant des autorisations en lecture seule afin que les modèles Infrastructure-as-Code soient remplis avec vos variables spécifiques. Les modèles Infrastructure-as-Code peuvent être exécutés directement depuis votre compte AWS sans permissions de modification pour l'usine des workloads.
+Le mode lecture est disponible pour la gestion du stockage dans Workload Factory.  Le mode lecture améliore l'expérience du mode de base en ajoutant des autorisations en lecture seule afin que les modèles Infrastructure-as-Code soient remplis avec vos variables spécifiques.  Les modèles Infrastructure-as-Code peuvent être exécutés directement à partir de votre compte AWS sans fournir d'autorisations de modification à Workload Factory.
 
 link:https://docs.netapp.com/us-en/workload-setup-admin/operational-modes.html["En savoir plus sur le mode lecture"]
 

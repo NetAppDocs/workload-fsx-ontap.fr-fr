@@ -21,12 +21,13 @@ Modifiez le nom, l’étiquette et la période de conservation d’un instantan�
 
 .Étapes
 . Connectez-vous à l'aide de l'un des link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].
-. Dans *stockage*, sélectionnez *aller à l'inventaire de stockage*.
-. Dans l'onglet *FSX pour ONTAP*, sélectionnez le menu à trois points du système de fichiers avec le volume, puis sélectionnez *gérer*.
+. Dans *Stockage*, sélectionnez *Accéder au stockage*.
+. Dans le menu Stockage, sélectionnez *FSx pour ONTAP*.
+. Depuis *FSx for ONTAP*, sélectionnez le menu d'actions du système de fichiers avec le volume, puis sélectionnez *Gérer*.
 . Dans la présentation du système de fichiers, sélectionnez l'onglet *volumes*.
-. Dans l’onglet *Volumes*, sélectionnez le menu à trois points correspondant au volume contenant l’instantané à modifier.
+. Dans l’onglet *Volumes*, sélectionnez le menu d’actions pour le volume avec l’instantané à modifier.
 . Sélectionnez *Actions de protection des données* puis *Gérer les instantanés*.
-. Depuis la page Gérer les instantanés, sélectionnez le menu à trois points correspondant à l'instantané à modifier, puis sélectionnez *Modifier*.
+. Depuis la page Gérer les instantanés, sélectionnez le menu d'actions pour l'instantané à modifier, puis sélectionnez *Modifier*.
 . Dans la boîte de dialogue Modifier un instantané, vous pouvez modifier les éléments suivants :
 +
 .. Changer le nom.
@@ -52,12 +53,13 @@ Activez l'accès au répertoire des instantanés pour donner aux utilisateurs la
 
 .Étapes
 . Connectez-vous à l'aide de l'un des link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].
-. Dans *stockage*, sélectionnez *aller à l'inventaire de stockage*.
-. Dans l'onglet *FSX pour ONTAP*, sélectionnez le menu à trois points du système de fichiers avec le volume, puis sélectionnez *gérer*.
+. Dans *Stockage*, sélectionnez *Accéder au stockage*.
+. Dans le menu Stockage, sélectionnez *FSx pour ONTAP*.
+. Depuis *FSx for ONTAP*, sélectionnez le menu d'actions du système de fichiers avec le volume, puis sélectionnez *Gérer*.
 . Dans la présentation du système de fichiers, sélectionnez l'onglet *volumes*.
-. Dans l'onglet *Volumes*, sélectionnez le menu à trois points correspondant au volume auquel vous souhaitez accéder.
+. Dans l’onglet *Volumes*, sélectionnez le menu d’actions du volume avec l’instantané auquel accéder.
 . Sélectionnez *Actions de protection des données* puis *Gérer les instantanés*.
-. Depuis la page Gérer les instantanés, sélectionnez le menu à trois points pour l'instantané auquel accéder, puis sélectionnez *Accès*.
+. Depuis la page Gérer les instantanés, sélectionnez le menu d'actions pour l'instantané auquel accéder, puis sélectionnez *Accès*.
 . Dans la boîte de dialogue Accéder à l'instantané, sélectionnez *Activer l'accès au répertoire d'instantanés* pour accéder à cet instantané de volume et à tous les instantanés du volume.
 +
 ** Pour les volumes NFS : sélectionnez *Chemin d’accès NFS* pour afficher le chemin NFS de l’instantané.
@@ -86,12 +88,13 @@ Les instantanés immuables ne peuvent pas être supprimés avant la fin de la p�
 
 .Étapes
 . Connectez-vous à l'aide de l'un des link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].
-. Dans *stockage*, sélectionnez *aller à l'inventaire de stockage*.
-. Dans l'onglet *FSX pour ONTAP*, sélectionnez le menu à trois points du système de fichiers avec le volume, puis sélectionnez *gérer*.
+. Dans *Stockage*, sélectionnez *Accéder au stockage*.
+. Dans le menu Stockage, sélectionnez *FSx pour ONTAP*.
+. Depuis *FSx for ONTAP*, sélectionnez le menu d'actions du système de fichiers avec le volume, puis sélectionnez *Gérer*.
 . Dans la présentation du système de fichiers, sélectionnez l'onglet *volumes*.
-. Dans l’onglet *Volumes*, sélectionnez le menu à trois points correspondant au volume contenant l’instantané à supprimer.
+. Dans l’onglet *Volumes*, sélectionnez le menu d’actions pour le volume contenant l’instantané à supprimer.
 . Sélectionnez *Actions de protection des données* puis *Gérer les instantanés*.
-. Depuis la page Gérer les instantanés, sélectionnez le menu à trois points correspondant à l'instantané à supprimer, puis sélectionnez *Supprimer*.
+. Depuis la page Gérer les instantanés, sélectionnez le menu d’actions pour l’instantané à supprimer, puis sélectionnez *Supprimer*.
 . Dans la boîte de dialogue Supprimer l'instantané, saisissez « supprimer ».
 . Sélectionnez *Supprimer* pour confirmer la suppression.
 

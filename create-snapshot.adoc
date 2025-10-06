@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: create-snapshot.html 
 keywords: create snapshot, snapshot 
-summary: 'Créez un snapshot manuel d"un volume FSX pour ONTAP en usine de workloads BlueXP . Les snapshots sont des versions instantanées du contenu de votre volume.' 
+summary: Créez un instantané manuel d’un volume FSx pour ONTAP dans NetApp Workload Factory.  Les instantanés sont des versions ponctuelles du contenu de votre volume. 
 ---
 = Créez un snapshot manuel d'un volume FSX pour ONTAP
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: 'Créez un snapshot manuel d"un volume FSX pour ONTAP en usine de workl
 
 
 [role="lead"]
-Créez un snapshot manuel d'un volume FSX pour ONTAP en usine de workloads BlueXP . Les snapshots sont des versions instantanées du contenu de votre volume.
+Créez un instantané manuel d’un volume FSx pour ONTAP dans NetApp Workload Factory.  Les instantanés sont des versions ponctuelles du contenu de votre volume.
 
 Les snapshots sont des ressources de volumes qui sont des captures instantanées de vos données qui ne consomment de l'espace que pour les données modifiées. Comme les données évoluent, les snapshots consomment généralement plus d'espace lorsqu'ils sont plus anciens.
 
@@ -25,10 +25,11 @@ Vous devez associer un lien pour créer un instantané manuel d'un volume. link:
 
 .Étapes
 . Connectez-vous à l'aide de l'un des link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].
-. Dans *stockage*, sélectionnez *aller à l'inventaire de stockage*.
-. Dans l'onglet *FSX pour ONTAP*, sélectionnez le menu à trois points du système de fichiers contenant le volume pour lequel créer un snapshot, puis sélectionnez *gérer*.
+. Dans la mosaïque Stockage, sélectionnez *Accéder au stockage*.
+. Dans le menu Stockage, sélectionnez *FSx pour ONTAP*.
+. Depuis *FSx for ONTAP*, sélectionnez le menu d'actions du système de fichiers qui contient le volume pour lequel créer un instantané, puis sélectionnez *Gérer*.
 . Dans la présentation du système de fichiers, sélectionnez l'onglet *volumes*.
-. Dans l'onglet *volumes*, sélectionnez le menu à trois points du volume à protéger avec des instantanés.
+. Dans l’onglet *Volumes*, sélectionnez le menu d’actions du volume à protéger avec des instantanés.
 . Sélectionnez *Actions de protection des données* puis *Gérer les instantanés*.
 . Depuis la page Gérer les instantanés, sélectionnez *Créer un instantané*.
 . Dans la boîte de dialogue Créer un instantané, procédez comme suit :

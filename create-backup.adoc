@@ -2,16 +2,16 @@
 sidebar: sidebar 
 permalink: create-backup.html 
 keywords: create backup, volume backup, back up a volume 
-summary: 'Créez une sauvegarde manuelle d"un volume dans l"usine de charges de travail BlueXP  en dehors des sauvegardes planifiées régulièrement.' 
+summary: Créez une sauvegarde manuelle d’un volume dans NetApp Workload Factory en dehors des sauvegardes planifiées régulièrement. 
 ---
-= Créez une sauvegarde manuelle d'un volume en usine de workloads BlueXP 
+= Créer une sauvegarde manuelle d'un volume dans NetApp Workload Factory
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-Créez une sauvegarde manuelle d'un volume en dehors des sauvegardes planifiées régulièrement dans l'usine de charges de travail BlueXP .
+Créez une sauvegarde manuelle d'un volume en dehors des sauvegardes planifiées régulièrement dans NetApp Workload Factory.
 
 .Description de la tâche
 Les sauvegardes FSX pour ONTAP sont effectuées par volume ; chaque sauvegarde contient donc uniquement les données d'un volume spécifique.
@@ -23,10 +23,11 @@ Pour effectuer des sauvegardes de vos volumes, votre volume et votre système de
 
 .Étapes
 . Connectez-vous à l'aide de l'un des link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].
-. Dans stockage, sélectionnez *accéder à l'inventaire de stockage*.
-. Dans l'onglet *FSX pour ONTAP*, sélectionnez le menu à trois points du système de fichiers avec le volume, puis sélectionnez *gérer*.
+. Dans la mosaïque Stockage, sélectionnez *Accéder au stockage*.
+. Dans le menu Stockage, sélectionnez *FSx pour ONTAP*.
+. Depuis *FSx for ONTAP*, sélectionnez le menu d'actions du système de fichiers avec le volume, puis sélectionnez *Gérer*.
 . Dans la présentation du système de fichiers, sélectionnez l'onglet *volumes*.
-. Dans l'onglet *volumes*, sélectionnez le menu à trois points du volume à sauvegarder.
+. Dans l’onglet *Volumes*, sélectionnez le menu d’actions du volume à sauvegarder.
 . Sélectionnez *actions de protection des données*, *FSX pour sauvegarde ONTAP*, puis *sauvegarde manuelle*.
 . Dans la boîte de dialogue sauvegarde manuelle, entrez un nom pour la sauvegarde.
 . Sélectionnez *Sauvegarder*.

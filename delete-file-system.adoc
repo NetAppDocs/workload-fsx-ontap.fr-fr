@@ -2,24 +2,24 @@
 sidebar: sidebar 
 permalink: delete-file-system.html 
 keywords: file system, delete file system, file system deletion 
-summary: 'Pour supprimer un système de fichiers en usine de workloads BlueXP , vous devez d"abord supprimer tous les volumes, machines virtuelles de stockage ou relations de réplication associés au système de fichiers.' 
+summary: 'Pour supprimer un système de fichiers dans NetApp Workload Factory, vous devez d"abord supprimer tous les volumes, machines virtuelles de stockage ou relations de réplication associés au système de fichiers.' 
 ---
-= Supprimez un système de fichiers en usine avec les workloads BlueXP 
+= Supprimer un système de fichiers dans NetApp Workload Factory
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-Pour supprimer un système de fichiers en usine de workloads BlueXP , vous devez d'abord supprimer tous les volumes, machines virtuelles de stockage ou relations de réplication associés au système de fichiers.
+Pour supprimer un système de fichiers dans NetApp Workload Factory, vous devez d'abord supprimer tous les volumes, machines virtuelles de stockage ou relations de réplication associés au système de fichiers.
 
 .Étapes
 . Connectez-vous à l'aide de l'un des link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].
-. Dans stockage, sélectionnez *accéder à l'inventaire de stockage*.
-. Dans l'onglet *FSX pour ONTAP*, sélectionnez le menu à trois points du système de fichiers FSX pour ONTAP que vous souhaitez supprimer.
+. Dans le menu Stockage, sélectionnez *FSx pour ONTAP*.
+. Depuis *FSx for ONTAP*, sélectionnez le menu d'actions du système de fichiers FSx for ONTAP que vous souhaitez supprimer.
 . Sélectionnez *gérer*.
-. Dans l'onglet *vue d'ensemble*, sélectionnez le menu à trois points.
+. Dans l’onglet *Aperçu*, sélectionnez le menu actions.
 . Sélectionnez *Supprimer*.
 . Dans la boîte de dialogue Supprimer le système de fichiers FSX pour ONTAP, entrez le nom du système de fichiers FSX pour ONTAP à supprimer.
-. Sélectionnez *Supprimer*.
+. Sélectionnez *Supprimer* pour confirmer.
 

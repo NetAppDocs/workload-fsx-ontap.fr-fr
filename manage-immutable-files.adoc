@@ -4,7 +4,7 @@ permalink: manage-immutable-files.html
 keywords: enable immutable files, disable immutable files, lock files, unlock files 
 summary: Vous pouvez mettre à jour certains paramètres de fichiers immuables lorsque la fonctionnalité est activée. 
 ---
-= Gérez les fichiers immuables pour un volume d'une usine de workloads BlueXP 
+= Gérer les fichiers immuables pour un volume dans NetApp Workload Factory
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
@@ -17,9 +17,10 @@ Notez que l'activation des fichiers immuables n'est possible que pendant link:cr
 
 .Étapes
 . Connectez-vous à l'aide de l'un des link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].
-. Dans stockage, sélectionnez *accéder à l'inventaire de stockage*.
-. Sélectionnez l'onglet *volumes*.
-. Dans l'onglet volumes, sélectionnez le menu des trois points du volume à cloner.
+. Dans la mosaïque Stockage, sélectionnez *Accéder au stockage*.
+. Dans le menu Stockage, sélectionnez *FSx pour ONTAP*.
+. Depuis *FSx for ONTAP*, sélectionnez le menu d'actions du système de fichiers avec le volume à mettre à jour, puis sélectionnez *Gérer*.
+. Dans l’onglet Volumes, sélectionnez le menu d’actions du volume à cloner.
 . Sélectionnez *actions de protection des données*, puis *gérer les fichiers immuables*.
 . Sur la page gérer les fichiers immuables, vous pouvez mettre à jour les éléments suivants :
 +
@@ -35,6 +36,7 @@ Notez que l'activation des fichiers immuables n'est possible que pendant link:cr
 
 
 ** *Autocommit* : permet d'activer ou de désactiver la fonction pour valider automatiquement les fichiers en mode WORM qui n'ont pas été modifiés pendant la période d'autovalidation.
+** *Suppression privilégiée* : Activer ou désactiver la fonctionnalité.  L'activation de la fonctionnalité permet à un administrateur SnapLock de supprimer un volume WORM non expiré.  Cette fonctionnalité est uniquement prise en charge en mode de rétention Entreprise.
 ** *Mode d'ajout de volume* : permet d'activer ou de désactiver la fonction. L'activation du mode d'ajout de volumes vous permet d'ajouter du contenu aux fichiers WORM.
 
 

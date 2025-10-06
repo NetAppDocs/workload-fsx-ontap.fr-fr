@@ -4,7 +4,7 @@ permalink: view-volume-details.html
 keywords: volume details, volume information 
 summary: 'Affichez les détails sur les volumes, la distribution, la consommation, l"accès et la protection.' 
 ---
-= Afficher les détails des volumes en usine de charges de travail BlueXP 
+= Afficher les détails du volume dans NetApp Workload Factory
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
@@ -17,8 +17,8 @@ Les détails du volume apparaissent uniquement après la création d'un volume d
 
 .Étapes
 . Connectez-vous à l'aide de l'un des link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].
-. Dans stockage, sélectionnez *accéder à l'inventaire de stockage*.
-. Dans l'onglet volumes, sélectionnez le menu à trois points du volume que vous souhaitez modifier.
+. Dans la mosaïque Stockage, sélectionnez *Accéder au stockage*.
+. Dans l’onglet Volumes, sélectionnez le menu d’actions pour le volume que vous souhaitez modifier.
 . Sélectionnez *actions de base* puis *Afficher les détails du volume*.
 . Dans *Détails du volume*, sélectionnez les onglets pour afficher les détails de volume suivants :
 +

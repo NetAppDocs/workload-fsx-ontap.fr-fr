@@ -11,7 +11,7 @@ summary: Créez une stratégie de snapshot personnalisée pour une machine virtu
 
 
 [role="lead"]
-Créez une stratégie de snapshot personnalisée pour les machines virtuelles de stockage dans Workload Factory afin de gérer la création et la conservation des snapshots.  Une politique de snapshot définit la manière dont le système crée des snapshots pour une machine virtuelle de stockage.  Vous pouvez créer une stratégie de snapshot pour une machine virtuelle de stockage dans un système de fichiers FSx for ONTAP .  Vous pouvez également partager la politique sur plusieurs machines virtuelles de stockage.
+Créez une stratégie de snapshot personnalisée pour les machines virtuelles de stockage dans Workload Factory afin de gérer la création et la conservation des snapshots. Une politique de snapshot définit la manière dont le système crée des snapshots pour une machine virtuelle de stockage. Vous pouvez créer une stratégie de snapshot pour une machine virtuelle de stockage dans un système de fichiers FSx for ONTAP . Vous pouvez également partager la politique sur plusieurs machines virtuelles de stockage.
 
 .Description de la tâche
 Vous pouvez créer une règle de snapshot personnalisée différente de celle des trois règles de snapshot intégrées pour FSX for ONTAP :
@@ -38,10 +38,11 @@ La personnalisation d'une stratégie vous permet de spécifier quand créer des 
 
 .Étapes
 . Connectez-vous à l'aide de l'un des link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].
-. Dans *stockage*, sélectionnez *aller à l'inventaire de stockage*.
-. Dans l'onglet *FSX pour ONTAP*, sélectionnez le menu à trois points du système de fichiers avec le volume, puis sélectionnez *gérer*.
+. Dans la mosaïque Stockage, sélectionnez *Accéder au stockage*.
+. Dans le menu Stockage, sélectionnez *FSx pour ONTAP*.
+. Depuis *FSx for ONTAP*, sélectionnez le menu d'actions du système de fichiers avec le volume, puis sélectionnez *Gérer*.
 . Dans la présentation du système de fichiers, sélectionnez l'onglet *Storage VMS*.
-. Dans l'onglet *Storage VMS*, sélectionnez le menu à trois points du volume à protéger avec les snapshots planifiés, puis cliquez sur *Advanced actions*, puis sur *Manage snapshot policies*.
+. Dans l'onglet *VM de stockage*, sélectionnez le menu d'actions du volume à protéger avec des snapshots planifiés, puis *Actions avancées*, puis *Gérer les stratégies de snapshot*.
 . Sur la page gestion des règles Snapshot, sélectionnez *Créer une stratégie d'instantanés*.
 . Dans le champ *Nom de la stratégie de snapshot*, entrez un nom pour la stratégie de snapshot.
 . Si vous le souhaitez, entrez une description de la règle de snapshot.

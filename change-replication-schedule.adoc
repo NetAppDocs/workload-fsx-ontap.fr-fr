@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: change-replication-schedule.html 
 keywords: change replication schedule, update replication schedule, edit replication schedule 
-summary: Modifiez la planification de réplication du volume source dans une relation de réplication en usine de workloads BlueXP . 
+summary: Modifiez la planification de réplication du volume source dans une relation de réplication dans NetApp Workload Factory. 
 ---
 = Modifier la planification de réplication d'un volume source
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: Modifiez la planification de réplication du volume source dans une rel
 
 
 [role="lead"]
-Modifiez la planification de réplication du volume source dans une relation de réplication en usine de workloads BlueXP .
+Modifiez la planification de réplication du volume source dans une relation de réplication dans NetApp Workload Factory.
 
 Indiquez la fréquence de transfert des snapshots du volume source vers le volume répliqué pour répondre aux objectifs de point de récupération (RPO) requis.
 
@@ -19,10 +19,11 @@ Lorsqu'un cluster ONTAP sur site est la cible de la relation de réplication, la
 
 .Étapes
 . Connectez-vous à l'aide de l'un des link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].
-. Dans stockage, sélectionnez *accéder à l'inventaire de stockage*.
-. Dans l'onglet *FSX pour ONTAP*, sélectionnez le menu à trois points du système de fichiers à mettre à jour, puis sélectionnez *gérer*.
+. Dans la mosaïque Stockage, sélectionnez *Accéder au stockage*.
+. Dans le menu Stockage, sélectionnez *FSx pour ONTAP*.
+. Depuis *FSx for ONTAP*, sélectionnez le menu d'actions du système de fichiers à mettre à jour, puis sélectionnez *Gérer*.
 . Dans la présentation du système de fichiers, sélectionnez l'onglet *relations de réplication*.
-. Dans l'onglet relations de réplication, sélectionnez le menu à trois points de la planification des relations de réplication à modifier.
+. Dans l’onglet Relations de réplication, sélectionnez le nom d’action de la planification de relation de réplication à modifier.
 . Sélectionnez *Modifier l'intervalle de réplication*.
 . Dans la boîte de dialogue Modifier l'intervalle de réplication, sélectionnez la fréquence du transfert d'instantané à partir du volume source. Vous pouvez choisir entre les fréquences suivantes :
 +

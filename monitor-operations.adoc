@@ -2,16 +2,16 @@
 sidebar: sidebar 
 permalink: monitor-operations.html 
 keywords: monitor databases, monitor jobs, track storage jobs, track jobs 
-summary: 'Suivez FSX pour ONTAP, les informations d"identification et les opérations de liaison et surveillez l"avancement des tâches avec le système de suivi de l"usine de workloads BlueXP  pour le stockage.' 
+summary: 'Suivez FSx pour ONTAP, les informations d"identification et les opérations de liaison et surveillez la progression des tâches avec Tracker dans NetApp Workload Factory for Storage.' 
 ---
-= Surveillez les opérations de stockage avec l'outil de suivi en usine de charges de travail BlueXP 
+= Surveillez les opérations de stockage avec Tracker dans NetApp Workload Factory
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-Surveillez et suivez l'exécution de FSX for ONTAP, les informations d'identification et les opérations de liaison, et surveillez la progression des tâches avec le système de suivi en usine de workloads BlueXP .
+Surveillez et suivez l'exécution de FSx pour ONTAP, les informations d'identification et les opérations de liaison et surveillez la progression des tâches avec Tracker dans NetApp Workload Factory.
 
 .Description de la tâche
 Workload Factory fournit le Tracker, une fonction de surveillance, qui vous permet de surveiller et de suivre la progression et l'état de FSX pour ONTAP, les informations d'identification et les opérations de liaison, de vérifier les détails des tâches et sous-tâches d'opération, et de diagnostiquer les problèmes ou les défaillances.
@@ -42,12 +42,12 @@ Conservation des événements:: Les événements sont conservés dans l'interfac
 
 == Suivez et surveillez les opérations
 
-Suivi et surveillance des opérations dans BlueXP  avec Tracker.
+Suivez et surveillez les opérations dans la console NetApp avec Tracker.
 
 .Étapes
 . Connectez-vous à l'aide de l'un des link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].
-. Dans stockage, sélectionnez *aller à stock de stockage*.
-. Dans l'inventaire de stockage, sélectionnez le menu des paramètres du compte, puis sélectionnez *Tracker*.
+. Dans la mosaïque Stockage, sélectionnez *Accéder au stockage*.
+. Dans le menu Stockage, sélectionnez *Administration* puis *Liens*.
 +
 image:screenshot-menu-tracker-option.png["Capture d'écran du menu des paramètres du compte avec l'option Tracker mise en surbrillance."]
 
@@ -62,7 +62,7 @@ Affichez la demande API dans la zone de code pour une tâche dans Tracker.
 
 .Étapes
 . Dans Tracker, sélectionnez une tâche.
-. Sélectionnez le menu à trois points, puis sélectionnez *Afficher demande API*.
+. Sélectionnez le menu Actions, puis sélectionnez *Afficher la demande API*.
 
 
 
@@ -76,7 +76,7 @@ NOTE: Seul x nombre de tentatives sont autorisées pour une opération ayant éc
 
 .Étapes
 . Dans Tracker, sélectionnez une opération ayant échoué.
-. Sélectionnez le menu à trois points, puis sélectionnez *Réessayer*.
+. Sélectionnez le menu Actions, puis sélectionnez *Réessayer*.
 
 
 .Résultat
@@ -90,7 +90,7 @@ Modifiez les paramètres de l'opération ayant échoué et relancez l'opération
 
 .Étapes
 . Dans Tracker, sélectionnez une opération ayant échoué.
-. Sélectionnez le menu à trois points, puis sélectionnez *Modifier et réessayer*.
+. Sélectionnez le menu Actions, puis sélectionnez *Modifier et réessayer*.
 +
 Vous êtes redirigé vers la page d'opération où vous pouvez modifier les paramètres et réessayer l'opération.
 

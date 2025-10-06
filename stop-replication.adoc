@@ -2,23 +2,24 @@
 sidebar: sidebar 
 permalink: stop-replication.html 
 keywords: stop replication, break replication 
-summary: Arrête une relation de réplication entre les volumes source et cible en usine de workloads BlueXP . 
+summary: Arrêtez une relation de réplication entre les volumes source et cible dans NetApp Workload Factory. 
 ---
-= Arrêtez une relation de réplication dans l'usine de workloads BlueXP 
+= Arrêter une relation de réplication dans NetApp Workload Factory
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-Arrêtez une relation de réplication dans l'usine de workloads BlueXP . Lorsque vous arrêtez une relation de réplication, la réplication planifiée est mise à jour du volume source vers le volume cible. Le volume cible passe de lecture seule à lecture/écriture.
+Arrêtez une relation de réplication dans NetApp Workload Factory.  Lorsque vous arrêtez une relation de réplication, les mises à jour de réplication planifiées du volume source vers le volume cible sont suspendues.  Le volume cible passe du mode lecture seule au mode lecture/écriture.
 
 .Étapes
 . Connectez-vous à l'aide de l'un des link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].
-. Dans stockage, sélectionnez *accéder à l'inventaire de stockage*.
-. Dans l'onglet *FSX pour ONTAP*, sélectionnez le menu à trois points du système de fichiers à mettre à jour, puis sélectionnez *gérer*.
+. Dans la mosaïque Stockage, sélectionnez *Accéder au stockage*.
+. Dans le menu Stockage, sélectionnez *FSx pour ONTAP*.
+. Depuis *FSx for ONTAP*, sélectionnez le menu d'actions du système de fichiers à mettre à jour, puis sélectionnez *Gérer*.
 . Dans la présentation du système de fichiers, sélectionnez l'onglet *relations de réplication*.
-. Dans l'onglet Replication relations (relations de réplication), sélectionnez le menu à trois points de la relation de réplication à arrêter.
+. Dans l’onglet Relations de réplication, sélectionnez le menu d’actions de la relation de réplication à arrêter.
 . Sélectionnez *Pause*.
 . Dans la boîte de dialogue interrompre la réplication, sélectionnez *rompre*.
 

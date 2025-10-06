@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: data-protection-overview.html 
 keywords: overview 
-summary: FSx for ONTAP prend en charge les snapshots, NetApp Autonomous Ransomware avec IA, la réplication de volume et les sauvegardes dans BlueXP workload factory. 
+summary: FSx for ONTAP prend en charge les snapshots, NetApp Autonomous Ransomware avec IA, la réplication de volume et les sauvegardes dans NetApp Workload Factory. 
 ---
-= Types de protection des données dans BlueXP  Workload Factory
+= Types de protection des données dans NetApp Workload Factory
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
@@ -75,6 +75,7 @@ Les sauvegardes de volume fournissent des copies instantanées indépendantes de
 
 Réfléchissez aux recommandations suivantes pour protéger les données de vos workloads.
 
+* Utilisez la réplication de volume pour la reprise après sinistre : si votre application nécessite un RTO faible, envisagez d’utiliser la réplication de volume pour répliquer vos données vers une autre région.
 * Utiliser des sauvegardes de volume en conjonction avec des snapshots : l'utilisation conjointe des deux fonctionnalités permet de restaurer vos fichiers à partir de snapshots et d'effectuer des restaurations complètes en cas de perte de volume à l'aide de sauvegardes.
 * Définissez une stratégie de sauvegarde de volume : assurez-vous que la stratégie de sauvegarde répond aux exigences de votre entreprise en termes d'âge et de fréquence des sauvegardes. Nous vous recommandons de conserver au moins deux sauvegardes quotidiennes pour chaque volume.
 * Définir un planning de snapshots : les snapshots plus anciens sont moins susceptibles d'être utilisés pour restaurer des données. Nous vous recommandons de définir une planification de snapshot qui prend en compte la diminution du retour sur investissement lié à la conservation d'anciens snapshots par rapport au coût lié à une capacité de snapshots supplémentaire.

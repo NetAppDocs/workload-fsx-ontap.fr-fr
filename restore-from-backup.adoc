@@ -4,23 +4,24 @@ permalink: restore-from-backup.html
 keywords: restore backup, new volume, volume restoration, backup 
 summary: 'Restaurez un volume à partir d"une sauvegarde sur n"importe quel système de fichiers FSX pour ONTAP de votre compte AWS.' 
 ---
-= Restaurez un volume à partir d'une sauvegarde en usine de charges de travail BlueXP 
+= Restaurer un volume à partir d'une sauvegarde dans NetApp Workload Factory
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-En usine de workloads BlueXP , vous pouvez restaurer un volume à partir d'une sauvegarde vers n'importe quel système de fichiers FSX pour ONTAP de votre compte AWS.
+Dans NetApp Workload Factory, vous pouvez restaurer un volume à partir d'une sauvegarde vers n'importe quel système de fichiers FSx for ONTAP de votre compte AWS.
 
 L'usine de workloads détermine si vous disposez de suffisamment de capacité pour la restauration et peut ajouter automatiquement de la capacité de Tier de stockage SSD si ce n'est pas le cas.
 
 .Étapes
 . Connectez-vous à l'aide de l'un des link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].
-. Dans stockage, sélectionnez *accéder à l'inventaire de stockage*.
-. Dans l'onglet *FSX pour ONTAP*, sélectionnez le menu à trois points du système de fichiers avec le volume, puis sélectionnez *gérer*.
+. Dans la mosaïque Stockage, sélectionnez *Accéder au stockage*.
+. Dans le menu Stockage, sélectionnez *FSx pour ONTAP*.
+. Depuis *FSx for ONTAP*, sélectionnez le menu d'actions du système de fichiers avec le volume, puis sélectionnez *Gérer*.
 . Dans la présentation du système de fichiers, sélectionnez l'onglet *volumes*.
-. Dans l'onglet *volumes*, sélectionnez le menu à trois points du volume à restaurer à partir d'une sauvegarde.
+. Dans l’onglet *Volumes*, sélectionnez le menu d’actions du volume à restaurer à partir d’une sauvegarde.
 . Sélectionnez *actions de protection des données*, *FSX pour sauvegarde ONTAP*, puis *Restaurer à partir d'une sauvegarde*.
 . Dans la boîte de dialogue Restaurer à partir d'une sauvegarde, indiquez les éléments suivants :
 +
@@ -35,8 +36,8 @@ L'usine de workloads détermine si vous disposez de suffisamment de capacité po
 Lorsque la capacité du système de fichiers est limitée, les situations suivantes peuvent se produire :
 
 +
-** La restauration peut pousser la capacité utilisée au-delà du seuil spécifié. Vous pouvez terminer l'opération de restauration. Envisagez link:increase-file-system-capacity.html["Ajout manuel de capacité de hiérarchisation du stockage SSD"]d'ajouter automatiquement de la capacité SSD au niveau de stockage en usine des charges de travail ou sélectionnez-la.
-** La restauration nécessite une capacité SSD supplémentaire. Vous devez sélectionner pour l'usine de workloads pour ajouter automatiquement de la capacité de niveau de stockage SSD pour continuer.
+** La restauration peut pousser la capacité utilisée au-delà du seuil que vous avez spécifié.  Vous pouvez terminer l'opération de restauration.  Considérerlink:increase-file-system-capacity.html["Ajout manuel de capacité de hiérarchisation du stockage SSD"] ou en sélectionnant Workload Factory pour ajouter automatiquement la capacité de stockage SSD.
+** La restauration nécessite une capacité SSD supplémentaire.  Vous devez sélectionner Workload Factory pour ajouter automatiquement la capacité de stockage SSD pour continuer.
 
 
 . Sélectionnez *Restaurer*.

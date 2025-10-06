@@ -2,16 +2,16 @@
 sidebar: sidebar 
 permalink: manage-nfs-export-policy.html 
 keywords: NFS, nfs, export policy, change export policy, update export policy, modify export policy 
-summary: 'Gérez la export policy NFS pour un volume qui utilise les types de protocole NFSv3 ou NFSv4.1 dans l"usine de charges de travail BlueXP .' 
+summary: Gérez la stratégie d’exportation NFS pour un volume qui utilise les types de protocole NFSv3 ou NFSv4.1 dans NetApp Workload Factory. 
 ---
-= Gérez la export policy NFS pour un volume en usine de workloads BlueXP 
+= Gérer la politique d'exportation NFS pour un volume dans NetApp Workload Factory
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-Gérez la export policy NFS pour un volume qui utilise les types de protocole NFSv3 ou NFSv4.1 dans l'usine de charges de travail BlueXP .
+Gérez la stratégie d’exportation NFS pour un volume qui utilise les types de protocole NFSv3 ou NFSv4.1 dans NetApp Workload Factory.
 
 .Description de la tâche
 La gestion des règles d'export d'un volume implique l'ajout de règles d'export détaillant les spécifications client, le contrôle d'accès, l'accès super-utilisateur et la version NFS. Vous pouvez ajouter plusieurs export-policy et les hiérarchisez.
@@ -29,10 +29,11 @@ Déterminez les spécifications client pour les règles d'export-policy. Les val
 
 .Étapes
 . Connectez-vous à l'aide de l'un des link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].
-. Dans stockage, sélectionnez *accéder à l'inventaire de stockage*.
-. Dans l'onglet *FSX pour ONTAP*, sélectionnez le menu à trois points du système de fichiers avec le volume à mettre à jour, puis sélectionnez *gérer*.
+. Dans la mosaïque Stockage, sélectionnez *Accéder au stockage*.
+. Dans le menu Stockage, sélectionnez *FSx pour ONTAP*.
+. Depuis *FSx for ONTAP*, sélectionnez le menu d'actions du système de fichiers avec le volume à mettre à jour, puis sélectionnez *Gérer*.
 . Dans la présentation du système de fichiers, sélectionnez l'onglet *volumes*.
-. Dans l'onglet volumes, sélectionnez le menu à trois points du volume pour lequel vous souhaitez modifier la règle d'export NFS.
+. Dans l’onglet Volumes, sélectionnez le menu d’actions du volume pour lequel vous souhaitez modifier la stratégie d’exportation NFS.
 . Sélectionnez *actions avancées*, puis *Modifier la règle d'export NFS*.
 . Sur la page Modifier les règles d'export NFS, fournissez les informations suivantes :
 +

@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: configure-active-directory.html 
 keywords: configure AD, configure active directory, update ad, edit active directory 
-summary: Configurez et mettez à jour Active Directory pour une VM de stockage dans un système de fichiers FSX pour ONTAP en usine de workloads BlueXP . 
+summary: Configurez et mettez à jour Active Directory pour une machine virtuelle de stockage dans un système de fichiers FSx for ONTAP dans NetApp Workload Factory. 
 ---
 = Configurer et mettre à jour Active Directory pour une VM de stockage
 :allow-uri-read: 
@@ -11,17 +11,18 @@ summary: Configurez et mettez à jour Active Directory pour une VM de stockage d
 
 
 [role="lead"]
-Configurez et mettez à jour Active Directory pour une VM de stockage dans un système de fichiers FSX pour ONTAP en usine de workloads BlueXP .
+Configurez et mettez à jour Active Directory pour une machine virtuelle de stockage dans un système de fichiers FSx for ONTAP dans NetApp Workload Factory.
 
 .Description de la tâche
 Les mêmes étapes s'appliquent à la configuration et à la mise à jour d'Active Directory pour une machine virtuelle de stockage.
 
 .Étapes
 . Connectez-vous à l'aide de l'un des link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].
-. Dans stockage, sélectionnez *accéder à l'inventaire de stockage*.
-. Dans l'onglet *FSX pour ONTAP*, sélectionnez le menu à trois points du système de fichiers avec la VM de stockage à mettre à jour, puis sélectionnez *gérer*.
+. Dans la mosaïque Stockage, sélectionnez *Accéder au stockage*.
+. Dans le menu Stockage, sélectionnez *FSx pour ONTAP*.
+. Depuis *FSx for ONTAP*, sélectionnez le menu d'actions du système de fichiers avec la machine virtuelle de stockage à mettre à jour, puis sélectionnez *Gérer*.
 . Dans la présentation du système de fichiers, sélectionnez l'onglet *Storage VMS*.
-. Dans l'onglet Storage VMs, sélectionnez le menu à trois points de la VM de stockage pour lequel configurer Active Directory.
+. Dans l’onglet Machines virtuelles de stockage, sélectionnez le menu d’actions de la machine virtuelle de stockage pour laquelle configurer Active Directory.
 . Sélectionnez *gérer la configuration AD*.
 . Sur la page gérer la configuration AD, fournissez les informations suivantes :
 +

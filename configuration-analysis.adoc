@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: configuration-analysis.html 
 keywords: configuration issues, issues, improve, analyze, storage configuration, Amazon FSx for NetApp ONTAP, FSx for ONTAP, recommendation, recommendations 
-summary: 'La fabrique de workloads BlueXP  analyse régulièrement les configurations du système de fichiers Amazon FSX pour NetApp ONTAP pour déterminer s"il y a des problèmes.' 
+summary: 'NetApp Workload Factory analyse régulièrement les configurations du système de fichiers Amazon FSx for NetApp ONTAP afin de déterminer s"il existe des problèmes.' 
 ---
 = Analyse de la configuration des systèmes de fichiers FSX pour ONTAP
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: 'La fabrique de workloads BlueXP  analyse régulièrement les configur
 
 
 [role="lead"]
-La fabrique de workloads BlueXP  analyse régulièrement les configurations du système de fichiers Amazon FSX pour NetApp ONTAP pour déterminer s'il y a des problèmes. Lorsque des problèmes sont détectés, l'usine de workloads vous montre ce que sont les problèmes et décrit les éléments à modifier pour assurer le stockage de votre système de fichiers avec les meilleures pratiques.
+NetApp Workload Factory analyse régulièrement les configurations du système de fichiers Amazon FSx for NetApp ONTAP afin de déterminer s'il existe des problèmes.  Lorsque des problèmes sont détectés, Workload Factory vous montre quels sont les problèmes et explique ce qui doit être modifié pour garantir que le stockage de votre système de fichiers atteigne des performances optimales, une rentabilité optimale et la conformité aux meilleures pratiques.
 
 Les fonctionnalités principales comprennent :
 
@@ -26,7 +26,7 @@ Les fonctionnalités principales comprennent :
 
 == État bien conçu
 
-Dans la console d'usine des workloads au niveau du système de fichiers, un état bien conçu est indiqué pour tous les systèmes de fichiers FSX pour ONTAP. Les États bien conçus sont classés comme « problèmes », « non analysés » ou « bien conçus ». La sélection de l'état bien conçu vous redirige vers l'onglet d'état bien conçu du système de fichiers, où vous pouvez trouver le score bien conçu, les catégories de configuration, toutes les configurations du système de fichiers.
+Dans la console Workload Factory, au niveau du système de fichiers, l'état « bien architecturé » est répertorié pour tous les systèmes de fichiers FSx for ONTAP .  Les statuts bien architecturés sont classés comme « problèmes », « non analysés » ou « bien architecturés ».  La sélection du statut bien architecturé vous redirige vers l'onglet du statut bien architecturé dans le système de fichiers où vous pouvez trouver le score bien architecturé, les catégories de configuration et toutes les configurations du système de fichiers.
 
 Score bien conçu:: Le score inclut toutes les configurations actuellement analysées et apparaît sous forme de pourcentage. Un score de 25 % signifie que 25 % des configurations de système de fichiers sont bien conçues.
 Catégories de configuration:: Les configurations de système de fichiers sont organisées par catégories, en accord avec les cinq piliers du framework Well-Architected AWS.
@@ -46,7 +46,7 @@ Catégories de configuration:: Les configurations de système de fichiers sont o
 
 == Exigences d'analyse
 
-Pour une analyse complète du système de fichiers, vous devez associer un lien. La connectivité de liaison permet à l'usine de workloads d'analyser toutes les configurations de systèmes de fichiers, telles que la protection des données et les performances.
+Pour une analyse complète du système de fichiers, vous devez associer un lien.  La connectivité des liens permet à Workload Factory d'analyser toutes les configurations du système de fichiers, comme la protection des données et les performances.
 
 link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["Apprenez à associer un lien existant ou à créer et associer un nouveau lien"].
 

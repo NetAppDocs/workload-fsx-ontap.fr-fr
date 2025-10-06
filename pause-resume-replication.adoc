@@ -4,7 +4,7 @@ permalink: pause-resume-replication.html
 keywords: pause replication, quiesce replication, resume replication 
 summary: Mettre en pause et reprendre une relation de réplication de sorte que le volume cible devienne le volume source. 
 ---
-= Mettre en pause et reprendre une relation de réplication dans l'usine de charges de travail BlueXP 
+= Suspendre et reprendre une relation de réplication dans NetApp Workload Factory
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
@@ -16,7 +16,7 @@ Mettre en pause une relation de réplication pour arrêter les mises à jour de 
 .Description de la tâche
 En pause, la relation de réplication entre le volume source et le volume cible continue d'exister. Les transferts de données s'interrompe et les volumes deviennent indépendants. Pour réactiver le transfert des modifications du volume source vers le volume de destination, reprenez la réplication.
 
-Lorsque vous reprenez une réplication, toutes les modifications apportées au volume cible sont annulées et l'usine de la charge de travail BlueXP  réactive la réplication. Le volume cible passe de la lecture/écriture à la lecture seule et reçoit à nouveau les mises à jour du volume source à l'intervalle de réplication planifié. Lorsque vous reprenez une relation de réplication, le volume cible revient au dernier snapshot de réplication initial, à ce moment-là, le processus de réplication du volume recommence.
+Lorsque vous reprenez une réplication, toutes les modifications apportées au volume cible sont annulées et NetApp Workload Factory réactive la réplication.  Le volume cible passe du mode lecture/écriture au mode lecture seule et reçoit à nouveau les mises à jour du volume source à l'intervalle de réplication planifié.  Lorsque vous reprenez une relation de réplication, le volume cible revient au dernier instantané de réplication initial, auquel cas le processus de réplication du volume recommence.
 
 .Avant de commencer
 Si vous interrompez un transfert en cours, le transfert n'est pas affecté et la relation devient « suspendue » jusqu'à ce que le transfert soit terminé. Si le transfert en cours est interrompu, il s'agit maintenant d'un transfert ultérieur et ne redémarrera pas.
@@ -27,10 +27,11 @@ Si vous interrompez un transfert en cours, le transfert n'est pas affecté et la
 
 .Étapes
 . Connectez-vous à l'aide de l'un des link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].
-. Dans stockage, sélectionnez *accéder à l'inventaire de stockage*.
-. Dans l'onglet *FSX pour ONTAP*, sélectionnez le menu à trois points du système de fichiers à mettre à jour, puis sélectionnez *gérer*.
+. Dans la mosaïque Stockage, sélectionnez *Accéder au stockage*.
+. Dans le menu Stockage, sélectionnez *FSx pour ONTAP*.
+. Depuis *FSx for ONTAP*, sélectionnez le menu d'actions du système de fichiers à mettre à jour, puis sélectionnez *Gérer*.
 . Dans la présentation du système de fichiers, sélectionnez l'onglet *relations de réplication*.
-. Dans l'onglet Replication relations (relations de réplication), sélectionnez le menu à trois points de la relation de réplication à mettre en pause.
+. Dans l’onglet Relations de réplication, sélectionnez le menu d’actions de la relation de réplication à suspendre.
 . Sélectionnez *Pause (Quiesce)*.
 . Dans la boîte de dialogue *Quiesce Relationship*, sélectionnez *Quiesce*.
 
@@ -49,10 +50,11 @@ NOTE: Toutes les données écrites sur le volume source d'origine entre la derni
 
 .Étapes
 . Connectez-vous à l'aide de l'un des link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].
-. Dans stockage, sélectionnez *accéder à l'inventaire de stockage*.
-. Dans l'onglet *FSX pour ONTAP*, sélectionnez le menu à trois points du système de fichiers à mettre à jour, puis sélectionnez *gérer*.
+. Dans la mosaïque Stockage, sélectionnez *Accéder au stockage*.
+. Dans le menu Stockage, sélectionnez *FSx pour ONTAP*.
+. Depuis *FSx for ONTAP*, sélectionnez le menu d'actions du système de fichiers à mettre à jour, puis sélectionnez *Gérer*.
 . Dans la présentation du système de fichiers, sélectionnez l'onglet *relations de réplication*.
-. Dans l'onglet relations de réplication, sélectionnez le menu à trois points de la relation de réplication à reprendre.
+. Dans l’onglet Relations de réplication, sélectionnez le menu d’actions de la relation de réplication à reprendre.
 . Sélectionnez *reprendre*.
 . Dans la boîte de dialogue reprendre la relation, sélectionnez *reprendre*.
 

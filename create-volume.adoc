@@ -2,18 +2,21 @@
 sidebar: sidebar 
 permalink: create-volume.html 
 keywords: create volume, FSx for ONTAP volume 
-summary: Après avoir configuré votre système de fichiers FSx pour ONTAP, créez des volumes FSx pour ONTAP dans la fabrique de charges de travail. 
+summary: Après avoir configuré votre système de fichiers FSx for ONTAP , créez des volumes FSx for ONTAP dans Workload Factory. 
 ---
-= Créer un volume FSx pour ONTAP dans la fabrique de charges de travail
+= Créer un volume FSx pour ONTAP dans Workload Factory
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-Après avoir configuré votre système de fichiers FSx for ONTAP, créez des volumes FSx for ONTAP dans Workload Factory en tant que ressources virtuelles pour regrouper vos données.
+Après avoir configuré votre système de fichiers FSx for ONTAP , créez des volumes FSx for ONTAP dans Workload Factory en tant que ressources virtuelles pour regrouper vos données.
 
-.Description de la tâche
+
+
+== Description de la tâche
+
 Les volumes FSx for ONTAP regroupent les données virtuellement, déterminent la manière dont les données sont stockées et déterminent le type d'accès à vos données. Les volumes ne consomment pas de capacité de stockage du système de fichiers. Les données stockées dans un volume se concentrent principalement sur le stockage SSD. Selon la règle de hiérarchisation du volume, les données peuvent également consommer le stockage du pool de capacité. Vous définissez la taille d'un volume lors de sa création, et vous pouvez en modifier la taille ultérieurement.
 
 Vos volumes peuvent utiliser les protocoles suivants :
@@ -23,10 +26,36 @@ Vos volumes peuvent utiliser les protocoles suivants :
 * ISCSI : protocole de stockage en mode bloc
 
 
-.Avant de commencer
+
+
+=== Détails des paramètres de volume
+
+.Fichiers immuables
+Cette fonctionnalité, également connue sous le nom de SnapLock, est désactivée par défaut.  L'activation des fichiers immuables empêche la suppression ou l'écrasement des données pendant une période définie.  L'activation de cette fonctionnalité n'est possible que lors de la création du volume.  Une fois la fonctionnalité activée, elle ne peut pas être désactivée.  Il s'agit d'une fonctionnalité premium pour FSx pour ONTAP qui entraîne des frais supplémentaires.  Pour plus d'informations, reportez-vous àlink:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/how-snaplock-works.html["Fonctionnement de SnapLock"^] dans la documentation Amazon FSx for NetApp ONTAP .
+
+* *Modes de conservation* : Vous pouvez choisir entre deux modes de conservation : _Entreprise_ ou _Conformité_.
++
+** En mode _Enterprise_, un fichier immuable, ou SnapLock, l'administrateur peut supprimer un fichier pendant sa période de conservation.
+** En mode _Compliance_, un fichier WORM ne peut pas être supprimé avant l'expiration de sa période de conservation. De même, le volume immuable ne peut pas être supprimé tant que les périodes de conservation de tous les fichiers du volume n'ont pas expiré.
+
+
+* *Période de conservation* : La période de conservation comporte deux paramètres : _politique de conservation_ et _périodes de conservation_.  La _politique de rétention_ définit la durée de conservation des fichiers dans un état WORM immuable.  Vous pouvez spécifier votre propre politique de conservation ou utiliser la politique de conservation par défaut (non spécifiée), qui est de 30 ans.  Les périodes de conservation minimales et maximales définissent la plage de temps autorisée pour le verrouillage des fichiers.
++
+
+NOTE: Même après expiration de la période de conservation, vous ne pouvez pas modifier un fichier WORM. Vous pouvez uniquement la supprimer ou définir une nouvelle période de conservation pour réactiver la protection WORM.
+
+* *Autocommit* : Vous aurez la possibilité d'activer la fonctionnalité d'autocommit.  La fonction de validation automatique valide un fichier dans l'état WORM sur un volume SnapLock si le fichier n'a pas changé pendant la durée de la période de validation automatique.  La fonctionnalité de validation automatique est désactivée par défaut.  Vous devez vous assurer que les fichiers que vous souhaitez valider automatiquement résident sur un volume SnapLock .
+* *Suppression privilégiée* : un administrateur SnapLock peut activer la suppression privilégiée sur un volume SnapLock Enterprise pour permettre la suppression d'un fichier avant l'expiration de la période de conservation du fichier.  Cette fonctionnalité est désactivée par défaut.
+* *Mode d'ajout de volume* : vous ne pouvez pas modifier les données existantes dans un fichier protégé par WORM.  Cependant, les fichiers immuables vous permettent de maintenir la protection des données existantes à l'aide de fichiers pouvant être ajoutés par WORM.  Par exemple, vous pouvez générer des fichiers journaux ou conserver des données de streaming audio ou vidéo tout en y écrivant des données de manière incrémentielle. link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/worm-state.html#worm-state-append["En savoir plus sur le mode d'ajout de volumes"^] dans la documentation Amazon FSx for NetApp ONTAP .
+
+
+
+
+== Avant de commencer
+
 Avant de créer un volume, vérifiez les conditions préalables suivantes :
 
-* Vous devez disposer d'un système de fichiers FSx pour ONTAP dans la console de l'usine de charge de travail.
+* Vous devez disposer d'un système de fichiers FSx pour ONTAP dans la console Workload Factory.
 * Vous devez disposer d'une VM de stockage.
 * Pour l'accès au protocole, procédez comme suit :
 +
@@ -47,8 +76,9 @@ NOTE: Lorsque vous utilisez Terraform à partir de Codebox, le code que vous cop
 
 .Étapes
 . Connectez-vous à l'aide de l'un des link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].
-. Dans stockage, sélectionnez *accéder à l'inventaire de stockage*.
-. Dans l'onglet *FSX pour ONTAP*, sélectionnez le menu à trois points du système de fichiers dans lequel vous souhaitez créer un volume, puis sélectionnez *Créer un volume*.
+. Dans la mosaïque Stockage, sélectionnez *Accéder au stockage*.
+. Dans le menu Stockage, sélectionnez *FSx pour ONTAP*.
+. Depuis *FSx for ONTAP*, sélectionnez le menu d'actions du système de fichiers dans lequel vous souhaitez créer un volume, puis sélectionnez *Créer un volume*.
 . Sur la page Créer un volume, sous Détails généraux, fournissez les détails suivants :
 +
 .. *Nom du volume* : entrez un nom pour le volume.
@@ -79,46 +109,29 @@ Spécifiez la taille et l'unité de croissance maximales du volume. Vous ne pouv
 +
 Renseignez les champs suivants pour configurer l'accès aux fichiers du volume.
 
+
+
+.. *Politique d'exportation NFS* : fournissez les détails suivants pour fournir un accès NFS :
 +
-.... *Politique d'exportation NFS* : fournissez les détails suivants pour fournir un accès NFS :
-+
-..... *Contrôle d'accès* : sélectionnez une *règle d'export personnalisée*, une *règle d'export existante* ou un *pas d'accès au volume* dans le menu déroulant.
-..... *Nom de la politique d'exportation* :
+... *Contrôle d'accès* : sélectionnez une *règle d'export personnalisée*, une *règle d'export existante* ou un *pas d'accès au volume* dans le menu déroulant.
+... *Nom de la politique d'exportation* :
 +
 Si vous avez sélectionné une export policy personnalisée, sélectionnez un nom de policy existante dans le menu déroulant.
 
 +
 Si vous avez sélectionné une export-policy existante, entrez un nouveau nom de policy.
 
-..... *Ajouter une règle de stratégie d'exportation* : pour une règle d'export personnalisée, vous pouvez ajouter des règles de stratégie d'exportation à la règle.
+... *Ajouter une règle de stratégie d'exportation* : pour une règle d'export personnalisée, vous pouvez ajouter des règles de stratégie d'exportation à la règle.
 
 
-.... *Partage SMB/CIFS* : Fournissez les éléments suivants :
+.. *Partage SMB/CIFS* : Fournissez les éléments suivants :
 +
-..... *Nom* : saisissez le nom du partage SMB/CIFS pour fournir l'accès.
-..... *Chemin* : définissez le chemin en utilisant le nom de volume par défaut ou fournissez un partage vers un répertoire interne.
+... *Nom* : saisissez le nom du partage SMB/CIFS pour fournir l'accès.
+... *Autorisations* : sélectionnez contrôle total, lecture/écriture, lecture ou aucun accès, puis entrez les utilisateurs ou les groupes séparés par un point-virgule ( ; ). Les utilisateurs ou les groupes sont sensibles à la casse et le domaine de l'utilisateur doit être inclus au format « domaine\nom d'utilisateur ».
+
+
+.. *Security style* : pour les volumes à double protocole, sélectionnez le style de sécurité UNIX ou NTFS. UNIX est le style de sécurité par défaut pour les volumes à double protocole. Pour obtenir des conseils détaillés sur le mappage des utilisateurs dans ce contexte, reportez-vous à l'article du blog AWS link:https://aws.amazon.com/blogs/storage/enabling-multiprotocol-workloads-with-amazon-fsx-for-netapp-ontap["Prise en charge de workloads multiprotocoles avec Amazon FSX pour NetApp ONTAP"^].
 +
-Les entrées de chemin valides pour le nom du volume, par exemple « avocat », sont les suivantes :
-
-+
-****** /avocat
-****** /avocat/dossier
-****** /avocat/dossier/sous-dossier
-****** /avocat/nom-de-fichier
-+
-Les entrées de chemin valides pour le nom de partage, par exemple « Serveur », sont les suivantes :
-
-****** \\Serveur
-****** \\Serveur\Projets
-****** \\Serveur\Projets\Ressources partagées
-
-
-..... *Autorisations* : sélectionnez contrôle total, lecture/écriture, lecture ou aucun accès, puis entrez les utilisateurs ou les groupes séparés par un point-virgule ( ; ). Les utilisateurs ou les groupes sont sensibles à la casse et le domaine de l'utilisateur doit être inclus au format « domaine\nom d'utilisateur ».
-
-
-.... *Security style* : pour les volumes à double protocole, sélectionnez le style de sécurité UNIX ou NTFS. UNIX est le style de sécurité par défaut pour les volumes à double protocole. Pour obtenir des conseils détaillés sur le mappage des utilisateurs dans ce contexte, reportez-vous à l'article du blog AWS link:https://aws.amazon.com/blogs/storage/enabling-multiprotocol-workloads-with-amazon-fsx-for-netapp-ontap["Prise en charge de workloads multiprotocoles avec Amazon FSX pour NetApp ONTAP"^].
-
-
 *** *Accès en bloc* : permet aux hôtes exécutant des applications métier critiques d'accéder au volume à l'aide du protocole iSCSI. L'accès aux blocs n'est disponible que lorsque le déploiement scale-out du système de fichiers compte six paires haute disponibilité ou moins.
 +
 Renseignez les champs suivants pour configurer l'accès en bloc au volume.
@@ -134,6 +147,13 @@ Renseignez les champs suivants pour configurer l'accès en bloc au volume.
 
 
 
+
+
+.. *Point de terminaison S3* : en option, attachez un point de terminaison S3 pour accéder aux données du système de fichiers FSx for ONTAP résidant sur des volumes NFS ou SMB/CIFS via les API AWS S3.  Seul le type d'accès aux fichiers est pris en charge.  En fournissant les détails suivants :
++
+*** *Nom du point de terminaison S3* : saisissez le nom du point de terminaison S3.
+*** *Utilisateur* : sélectionnez un utilisateur existant avec accès au volume ou créez un nouvel utilisateur.
+*** *Type d'utilisateur* : sélectionnez *UNIX* ou *Windows* comme type d'utilisateur.
 
 
 
@@ -168,33 +188,10 @@ NOTE: Les heures des snapshots sont basées sur le fuseau horaire du système de
 
 .. *Règle de hiérarchisation* : sélectionnez la règle de hiérarchisation pour les données stockées dans le volume.
 +
-_Balanced (Auto)_ est la règle de hiérarchisation par défaut lors de la création d'un volume à l'aide de la console d'usine de la charge de travail. Pour plus d'informations sur les règles de Tiering de volume, reportez-vous à la section link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/volume-storage-capacity.html#data-tiering-policy["Capacité de stockage du volume"^] dans la documentation d'AWS FSX pour NetApp ONTAP. Notez que Workload Factory utilise des noms basés sur des cas d'utilisation dans la console d'usine de workloads pour les règles de Tiering et inclut les noms des règles de Tiering FSX pour ONTAP entre parenthèses.
+_Balanced (Auto)_ est la stratégie de hiérarchisation par défaut lors de la création d'un volume à l'aide de la console Workload Factory.  Pour plus d'informations sur les politiques de hiérarchisation des volumes, reportez-vous àlink:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/volume-storage-capacity.html#data-tiering-policy["Capacité de stockage du volume"^] dans la documentation AWS FSx pour NetApp ONTAP .  Notez que Workload Factory utilise des noms basés sur des cas d'utilisation dans la console Workload Factory pour les stratégies de hiérarchisation et inclut les noms de stratégie de hiérarchisation FSx pour ONTAP entre parenthèses.
 
-.. *Fichiers immuables* : cette fonction, également appelée SnapLock, est désactivée par défaut. L'activation des fichiers immuables empêche la suppression ou l'écrasement des données pendant une période définie. L'activation de cette fonction n'est possible qu'au cours de la création du volume. Une fois la fonction activée, elle ne peut pas être désactivée. Il s'agit d'une fonctionnalité premium de FSX pour ONTAP qui implique des frais supplémentaires. Pour plus d'informations, reportez-vous link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/how-snaplock-works.html["Fonctionnement de SnapLock"^] à dans la documentation d'Amazon FSX pour NetApp ONTAP.
+.. *Fichiers immuables* : l'activation de la fonctionnalité de fichiers immuables valide de manière permanente les fichiers de ce volume dans un état WORM (écriture unique, lecture multiple) immuable.  Fournissez les détails suivants :
 +
-L'activation de la fonctionnalité de fichiers immuables valide de manière permanente les fichiers de ce volume dans un état WORM immuable (Write-once-read-many).
-
-+
-Modes de rétention:: Vous pouvez choisir entre deux modes de rétention : _Enterprise_ ou _Compliance_.
-+
---
-*** En mode _Enterprise_, un fichier immuable, ou SnapLock, l'administrateur peut supprimer un fichier pendant sa période de conservation.
-*** En mode _Compliance_, un fichier WORM ne peut pas être supprimé avant l'expiration de sa période de conservation. De même, le volume immuable ne peut pas être supprimé tant que les périodes de conservation de tous les fichiers du volume n'ont pas expiré.
-
-
---
-Durée de conservation:: La période de conservation comporte deux paramètres : _politique de rétention_ et _périodes de rétention_. La _politique de conservation_ définit la durée de conservation des fichiers dans un état WORM immuable. Vous pouvez spécifier votre propre stratégie de conservation ou utiliser la stratégie de conservation par défaut (non spécifiée), qui est de 30 ans. Les _périodes de rétention minimale et maximale_ définissent la plage de temps autorisée pour le verrouillage des fichiers.
-+
---
-REMARQUE:: Même après expiration de la période de conservation, vous ne pouvez pas modifier un fichier WORM. Vous pouvez uniquement la supprimer ou définir une nouvelle période de conservation pour réactiver la protection WORM.
-
-
---
-Validation automatique:: Vous aurez la possibilité d'activer la fonction de validation automatique. La fonction autocommit valide un fichier à l'état WORM sur un volume SnapLock si le fichier n'a pas été modifié pendant la période de validation automatique. La fonction de validation automatique est désactivée par défaut. Vous devez vous assurer que les fichiers que vous souhaitez valider automatiquement résident sur un volume SnapLock.
-Mode d'ajout de volumes:: Vous ne pouvez pas modifier les données existantes dans un fichier protégé WORM. Cependant, les fichiers immuables vous permettent de conserver la protection des données existantes à l'aide de fichiers WORM. Par exemple, vous pouvez générer des fichiers journaux ou préserver les données de diffusion audio ou vidéo tout en les écrivant de façon incrémentielle. link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/worm-state.html#worm-state-append["En savoir plus sur le mode d'ajout de volumes"^] Dans la documentation Amazon FSX pour NetApp ONTAP.
-+
---
-.Étapes pour les fichiers immuables
 ... Sélectionnez pour activer *les fichiers immuables alimentés par SnapLock*.
 ... Cochez la case pour accepter et continuer.
 ... Sélectionnez *Activer*.
@@ -216,10 +213,8 @@ Mode d'ajout de volumes:: Vous ne pouvez pas modifier les données existantes da
 
 
 ... *Autocommit* : désactive ou active la validation automatique. Si vous activez la validation automatique, définissez la période de validation automatique.
+... *Suppression privilégiée* : Désactiver ou activer.  Si vous activez la suppression privilégiée, un administrateur SnapLock peut supprimer un fichier avant l’expiration de sa période de conservation.
 ... *Mode d'ajout de volume* : désactiver ou activer. Vous permet d'ajouter du nouveau contenu aux fichiers WORM.
-
-
---
 
 
 .. *ARP/AI* : NetApp Autonomous Ransomware Protection with AI (ARP/AI) est activé par défaut lorsqu'un lien est associé au système de fichiers. link:https://docs.netapp.com/us-en/workload-fsx-ontap/ransomware-protection.html["En savoir plus sur ARP/AI"]. Acceptez la déclaration pour continuer.
