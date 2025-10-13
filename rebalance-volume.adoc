@@ -124,7 +124,7 @@ Les données sont reréparties entre les volumes de membres pour rééquilibrer 
 
 .Étapes
 . Connectez-vous à l'aide de l'un des link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].
-. Dans *Stockage*, sélectionnez *Accéder au stockage
+. Dans *Stockage*, sélectionnez *Accéder au stockage*
 . Dans le menu Stockage, sélectionnez *FSx pour ONTAP*.
 . Depuis *FSx for ONTAP*, sélectionnez le menu d'actions du système de fichiers qui contient le volume à rééquilibrer, puis sélectionnez *Gérer*.
 . Dans la présentation du système de fichiers, sélectionnez l'onglet *volumes*.
