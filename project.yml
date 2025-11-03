@@ -81,6 +81,8 @@ sidebar:
         url: "/clone-volume.html"
       - title: Utilisation des données ONTAP sur site
         url: "/use-onprem-data.html"
+      - title: Créer un coffre-fort numérique pour protéger les données
+        url: "/create-cyber-vault.html"
   - title: Administration et contrôle
     entries:
     - title: Surveiller les opérations avec Tracker
@@ -95,14 +97,16 @@ sidebar:
       entries:
       - title: Modifier la croissance automatique du volume
         url: "/edit-volume-autogrow.html"
-      - title: Augmentez la capacité du volume
-        url: "/increase-volume-capacity.html"
+      - title: Ajuster la capacité du volume
+        url: "/adjust-volume-capacity.html"
+      - title: Rééquilibrer la capacité du volume
+        url: "/rebalance-volume.html"
       - title: Gérer les fichiers immuables
         url: "/manage-immutable-files.html"
       - title: Gérer les balises de volume
         url: "/manage-volume-tags.html"
-      - title: Rééquilibrer la capacité du volume
-        url: "/rebalance-volume.html"
+      - title: Gérer les volumes de cache
+        url: "/manage-cache-volumes.html"
       - title: Modifier une règle de hiérarchisation
         url: "/change-tiering-policy.html"
       - title: Mise à jour de l'efficacité du stockage
@@ -119,7 +123,7 @@ sidebar:
       entries:
       - title: Ajuster la capacité du système de fichiers
         url: "/increase-file-system-capacity.html"
-      - title: Activez la gestion automatique de la capacité
+      - title: Activer la gestion automatique de la capacité et des inodes
         url: "/enable-auto-capacity-management.html"
       - title: Réinitialisez le mot de passe fsxadmin
         url: "/reset-fsxadmin-password.html"

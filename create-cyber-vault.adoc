@@ -1,0 +1,32 @@
+---
+sidebar: sidebar 
+permalink: create-cyber-vault.html 
+keywords: create cyber vault, volume cyber vault, protect data cyber vault, cyber vault setup 
+summary: Découvrez les coffres-forts numériques NetApp et comment mettre en œuvre une architecture de coffre-fort numérique pour protéger vos données contre les ransomwares et les cybermenaces. 
+---
+= Protégez vos données avec un coffre-fort numérique.
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Un volume de coffre-fort numérique est un emplacement de stockage isolé et sécurisé utilisé pour stocker des copies de sauvegarde de vos données, les protégeant ainsi des attaques de ransomware et autres cybermenaces.  Dans le cadre de la création du coffre-fort, vous créerez un volume de coffre-fort cybernétique, désactiverez tous les protocoles clients, établirez une relation de réplication entre le volume source et le volume de coffre-fort cybernétique, et créerez des instantanés immuables sur le volume de coffre-fort cybernétique.
+
+.Qu'est-ce qu'un coffre-fort informatique ?
+Un coffre-fort informatique est une technique spécifique de protection des données qui consiste à stocker des données critiques dans un environnement isolé, séparé de l'infrastructure informatique principale.
+
+Le coffre-fort numérique est un référentiel de données « isolé du réseau », immuable et indélébile, immunisé contre les menaces affectant le réseau principal, telles que les logiciels malveillants, les rançongiciels ou même les menaces internes.  Un coffre-fort numérique peut être réalisé grâce à des instantanés immuables et indélébiles.
+
+Les sauvegardes par espacement d'air qui utilisent des méthodes traditionnelles impliquent la création d'espace et la séparation physique des supports primaire et secondaire. En déplaçant les médias hors site et/ou en coupant la connectivité, les mauvais acteurs n’ont pas accès aux données. Cela protège les données mais peut entraîner des temps de récupération plus lents.
+
+.Coffres-forts numériques FSx pour ONTAP
+Amazon FSx for NetApp ONTAP est pris en charge en tant que source et cible de coffre-fort numérique.
+
+.Mise en œuvre
+Workload Factory propose une assistance pour la création d'une architecture de coffre-fort numérique.  Après avoir contacté NetApp pour exprimer votre intérêt pour la mise en place d'un coffre-fort numérique, un spécialiste NetApp vous contactera pour discuter de vos besoins.
+
+Envoyez un e-mail à ng-FSx-CyberVault@netapp.com pour commencer.
+
+.Informations connexes
+Pour plus d'informations sur les coffres-forts numériques et leur mise en place, veuillez consulter la documentation.link:https://docs.netapp.com/us-en/netapp-solutions-dataops/cyber-vault/ontap-cyber-vault-overview.html["Documentation du coffre-fort numérique ONTAP"^] .

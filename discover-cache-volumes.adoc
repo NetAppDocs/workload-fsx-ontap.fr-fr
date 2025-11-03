@@ -48,3 +48,6 @@ Tenez compte des éléments suivants avant de commencer.
 
 
 
+
+.Informations connexes
+link:https://docs.netapp.com/us-en/workload-fsx-ontap/manage-cache-volumes.html["Gérer les volumes de cache"]

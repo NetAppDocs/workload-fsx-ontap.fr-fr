@@ -23,13 +23,13 @@ Vous aurez besoin delink:https://docs.netapp.com/us-en/workload-setup-admin/sign
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["Deux"] Ajoutez des informations d'identification et des autorisations
 [role="quick-margin-para"]
-Choisissez entre _basic_, _lecture seule_ et _lecture/écriture_ link:https://docs.netapp.com/us-en/workload-setup-admin/operational-modes.html["modes de fonctionnement"^]
+Choisissez lelink:https://docs.netapp.com/us-en/workload-setup-admin/operational-modes.html["Politiques d'autorisation"^] pour répondre à vos besoins.
 
 [role="quick-margin-para"]
-Si vous choisissez de fonctionner en mode _basique_, vous n'avez pas besoin d'aller plus loin.  Vous pouvez commencer à utiliser Workload Factory pour FSx for ONTAP pour copier des exemples de code partiellement terminés.
+Si vous choisissez de ne pas accorder d'autorisations, vous pouvez commencer à utiliser Workload Factory pour FSx for ONTAP afin de copier des exemples de code partiellement complétés.
 
 [role="quick-margin-para"]
-Si vous travaillez en mode _lecture seule_ ou _lecture/écriture_, vous devrez link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["ajoutez manuellement des informations d'identification à un compte"^] cela inclut la sélection des capacités de charge de travail, telles que les bases de données et l'IA, et la création des politiques IAM pour garantir que vous disposez des autorisations appropriées pour fonctionner en mode _lecture seule_ ou _lecture/écriture_.
+Si vous choisissez d'accorder des autorisations, vous devrezlink:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["ajoutez manuellement des informations d'identification à un compte"^] Cela comprend la sélection des capacités de charge de travail, telles que les bases de données et l'IA, et la création des politiques IAM pour les autorisations requises.
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["Trois"] Créez un système de fichiers
 [role="quick-margin-para"]

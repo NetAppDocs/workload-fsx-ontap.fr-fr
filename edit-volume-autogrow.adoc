@@ -13,7 +13,7 @@ summary: Activez la croissance automatique du volume pour permettre à Workload 
 [role="lead"]
 Activez la croissance automatique du volume pour permettre à Workload Factory de gérer la capacité du volume pour vous.  Vous pouvez le désactiver à tout moment.
 
-Vous pouvez éventuellement augmenter manuellement la capacité d'un volume à tout moment à l'aide de la link:increase-volume-capacity.html["augmentez la capacité du volume"].
+Vous pouvez également augmenter manuellement la capacité de volume d'un volume à tout moment en utilisant lalink:adjust-volume-capacity.html["fonction de réglage du volume"] .
 
 
 NOTE: La croissance automatique du volume n'est pas prise en charge pour les volumes iSCSI.

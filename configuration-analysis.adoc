@@ -46,9 +46,17 @@ Catégories de configuration:: Les configurations de système de fichiers sont o
 
 == Exigences d'analyse
 
-Pour une analyse complète du système de fichiers, vous devez associer un lien.  La connectivité des liens permet à Workload Factory d'analyser toutes les configurations du système de fichiers, comme la protection des données et les performances.
+Pour une analyse complète du système de fichiers, vous devez procéder comme suit :
 
+* Associer un lien.  La connectivité des liens permet à Workload Factory d'analyser toutes les configurations du système de fichiers, telles que la protection des données et les performances.
++
 link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["Apprenez à associer un lien existant ou à créer et associer un nouveau lien"].
+
+* Accordez les autorisations de _visualisation, de planification et d'analyse_ dans votre compte AWS.
++
+link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Découvrez comment accorder des autorisations à un compte AWS"^]
+
+
 
 .Et la suite
 link:improve-configurations.html["Implémenter des configurations de système de fichiers bien architecturées"]

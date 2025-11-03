@@ -30,8 +30,8 @@ Vous disposez d'options pour consulter les recommandations concernant les probl�
 Workload Factory analyse l'état bien conçu des configurations suivantes pour les systèmes de fichiers FSX pour ONTAP :
 
 * Fiabilité : seuil de capacité SSD, snapshots locaux planifiés, FSx pour les sauvegardes ONTAP , réplication des données à distance et fiabilité des données pour une conservation à long terme
-* Sécurité : Protection autonome contre les ransomwares NetApp avec IA (ARP/AI)
-* Excellence opérationnelle : efficacité du stockage, gestion automatique de la capacité et seuil d'utilisation de la capacité des fichiers de volume
+* Sécurité : Protection autonome contre les ransomwares NetApp avec IA (ARP/AI) et accès non autorisé aux volumes
+* Excellence opérationnelle : gestion automatique de la capacité, seuil d’utilisation de la capacité des fichiers de volume et taux d’utilisation du volume proche de la saturation
 * Optimisation des coûts : efficacité du stockage et hiérarchisation des données
 
 
@@ -42,7 +42,7 @@ Workload Factory analyse l'état bien conçu des configurations suivantes pour l
 Vous pouvez résoudre les problèmes de configuration d'un système de fichiers FSx for ONTAP ou de volumes sélectionnés dans un système de fichiers.  Vous pouvez sélectionner une ou plusieurs configurations à corriger.
 
 .Avant de commencer
-* Vous devez disposer d'informations d'identification avec des autorisations de _lecture seule_ ou de _lecture/écriture_. link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Découvrez comment octroyer des autorisations sur votre compte AWS"^].
+* Vous devezlink:link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["accorder les autorisations d'_opérations et de correction_"^] dans votre compte AWS.
 * Le processus de correction peut entraîner des temps d’arrêt ou des interruptions de service. Assurez-vous de lire attentivement chaque recommandation avant de choisir de résoudre un problème de configuration.
 * link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["Se connecter à un système de fichiers FSx for ONTAP à l'aide d'un lien"]pour l'analyse la plus complète des ressources de votre système de fichiers.
 
