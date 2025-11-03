@@ -29,4 +29,4 @@ Workload Factory propose une assistance pour la création d'une architecture de 
 Envoyez un e-mail à ng-FSx-CyberVault@netapp.com pour commencer.
 
 .Informations connexes
-Pour plus d'informations sur les coffres-forts numériques et leur mise en place, veuillez consulter la documentation.link:https://docs.netapp.com/us-en/netapp-solutions-dataops/cyber-vault/ontap-cyber-vault-overview.html["Documentation du coffre-fort numérique ONTAP"^] .
+Pour plus d'informations sur les coffres-forts numériques et leur mise en place, veuillez consulter la documentation. link:https://docs.netapp.com/us-en/netapp-solutions-dataops/cyber-vault/ontap-cyber-vault-overview.html["Documentation du coffre-fort numérique ONTAP"^].
