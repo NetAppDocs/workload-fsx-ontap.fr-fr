@@ -1,0 +1,26 @@
+---
+sidebar: sidebar 
+permalink: manage-fsx-tags.html 
+keywords: create fsx tags, create tags, edit fsx tags, fsx tags 
+summary: 'Ajoutez, mettez à jour ou supprimez à tout moment les balises de système de fichiers FSx pour ONTAP d"un système de fichiers.' 
+---
+= Gérer les balises du système de fichiers FSx pour ONTAP dans NetApp Workload Factory
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Les étiquettes peuvent vous aider à catégoriser vos ressources.  Vous pouvez ajouter, modifier et supprimer des balises pour un système de fichiers à tout moment dans NetApp Workload Factory.
+
+.Étapes
+. Connectez-vous à l'aide de l'un des link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].
+. Dans la mosaïque Stockage, sélectionnez *Accéder au stockage*.
+. Dans le menu Stockage, sélectionnez *FSx pour ONTAP*.
+. Dans *FSx for ONTAP*, sélectionnez le menu des actions du système de fichiers à mettre à jour, puis sélectionnez *Gérer les balises du système de fichiers*.
+. Dans la boîte de dialogue *Gérer les balises du système de fichiers*, ajoutez, modifiez ou supprimez des balises selon vos besoins.
++
+Le nombre maximal d'étiquettes que vous pouvez appliquer à un système de fichiers est de 50.
+
+. Sélectionnez *appliquer*.
+

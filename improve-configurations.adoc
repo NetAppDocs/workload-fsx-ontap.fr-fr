@@ -32,7 +32,8 @@ Workload Factory analyse l'état bien conçu des configurations suivantes pour l
 * Fiabilité : seuil de capacité SSD, snapshots locaux planifiés, FSx pour les sauvegardes ONTAP , réplication des données à distance et fiabilité des données pour une conservation à long terme
 * Sécurité : Protection autonome contre les ransomwares NetApp avec IA (ARP/AI) et accès non autorisé aux volumes
 * Excellence opérationnelle : gestion automatique de la capacité, seuil d’utilisation de la capacité des fichiers de volume et taux d’utilisation du volume proche de la saturation
-* Optimisation des coûts : efficacité du stockage et hiérarchisation des données
+* Optimisation des coûts : gains d’efficacité en matière de stockage, hiérarchisation des données et suppression inutile des instantanés
+* Optimisation des performances : rééquilibrage des volumes FlexGroup
 
 
 

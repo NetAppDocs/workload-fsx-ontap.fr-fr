@@ -1,0 +1,39 @@
+---
+sidebar: sidebar 
+permalink: track-costs.html 
+keywords: cost, consumption, Cost Explorer 
+summary: Suivez les coûts de vos ressources système de fichiers FSx pour ONTAP dans NetApp Workload Factory. 
+---
+= Suivez les coûts de vos ressources dans NetApp Workload Factory
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Utilisez NetApp Workload Factory pour suivre les coûts et l'utilisation du système de fichiers FSx pour ONTAP dans une vue consolidée.  Les données relatives aux coûts vous aident à gérer les budgets et à optimiser efficacement les ressources.  AWS Cost Explorer fournit les données de coûts.
+
+.Description de la tâche
+Les données relatives aux coûts et à l'utilisation de vos ressources système de fichiers FSx for ONTAP sont extraites d'AWS Cost Explorer à l'aide des autorisations suivantes :
+
+* `ce:GetCostAndUsage`
+* `ce:GetTags`
+
+
+.Avant de commencer
+link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Accorder des identifiants avec la politique d'autorisation _consultation, planification et analyse_"^]dans Workload Factory pour suivre les coûts FSx pour ONTAP .
+
+.Étapes
+. Connectez-vous à l'aide de l'un des link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].
+. Dans la mosaïque Stockage, sélectionnez *Accéder au stockage*.
+. Dans le menu Stockage, sélectionnez *Coût*.
+. Sur la page Coût, filtrez les données de coût et de capacité de vos ressources FSx for ONTAP en fournissant les informations suivantes :
++
+.. *Comptes AWS* : Sélectionnez les comptes pour lesquels vous souhaitez consulter les données de coûts.
+.. *Identifiants* : Sélectionnez les identifiants disposant des autorisations de _visualisation, de planification et d’analyse_.
+.. *Régions* : Sélectionnez les régions AWS pour lesquelles vous souhaitez afficher les données de coûts.
+.. *Période de données de coûts* : Sélectionnez la période pour laquelle vous souhaitez afficher les données de coûts.
+
+
+. Consultez les *détails des coûts* de vos ressources FSx pour ONTAP .
+

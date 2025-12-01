@@ -1,0 +1,60 @@
+---
+sidebar: sidebar 
+permalink: manage-block-devices.html 
+keywords: block devices, manage luns, manage iscsi 
+summary: Gérer les périphériques de stockage par blocs pour un système de fichiers FSx for ONTAP dans NetApp Workload Factory. 
+---
+= Gérer les périphériques de stockage par blocs d'un système de fichiers FSx pour ONTAP
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Depuis la console NetApp Workload Factory , vous pouvez gérer les périphériques de stockage par blocs de vos systèmes de fichiers FSx pour ONTAP .  Les tâches de gestion comprennent la consultation des détails des périphériques de stockage et l'augmentation de leur capacité.
+
+.Description de la tâche
+Les périphériques de stockage par blocs, ou LUN (numéros d'unité logique), sont des volumes qui contiennent des systèmes de fichiers dans un environnement SAN et qui peuvent être accessibles par les hôtes via un réseau.
+
+Vous pouvez gérer les périphériques de stockage par blocs pour les systèmes de fichiers FSx for ONTAP qui utilisent le protocole iSCSI.
+
+.Avant de commencer
+* Vous devez associer un lien pour gérer les périphériques de stockage. link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["Apprenez à associer un lien existant ou à créer et associer un nouveau lien"].  Une fois le lien établi, revenez à cette opération.
+* Vous devez disposer d'un périphérique de blocage existant pour visualiser et gérer.
+
+
+
+
+== Afficher les détails du périphérique de blocage
+
+Consultez à tout moment les détails d'un périphérique de blocage existant.
+
+.Étapes
+. Connectez-vous à l'aide de l'un des link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].
+. Dans la mosaïque Stockage, sélectionnez *Accéder au stockage*.
+. Dans le menu Stockage, sélectionnez *FSx pour ONTAP*.
+. Dans *FSx pour ONTAP*, sélectionnez l'onglet *Bloquer les périphériques*.
+. Accédez au menu des actions pour bloquer le périphérique, puis sélectionnez *Afficher les détails*.
++
+Les informations générales, de consommation, d'accès et de protection du dispositif de blocage sont affichées.
+
+
+
+
+
+== Augmenter la capacité d'un bloc de stockage
+
+Augmentez à tout moment la capacité d'un périphérique de stockage existant.
+
+.Étapes
+. Connectez-vous à l'aide de l'un des link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].
+. Dans la mosaïque Stockage, sélectionnez *Accéder au stockage*.
+. Dans le menu Stockage, sélectionnez *FSx pour ONTAP*.
+. Dans *FSx pour ONTAP*, sélectionnez l'onglet *Bloquer les périphériques*.
+. Accédez au menu des actions du périphérique de stockage, puis sélectionnez *Augmenter la capacité*.
+. Saisissez la nouvelle capacité du périphérique de stockage et sélectionnez l'unité.
+. Sélectionnez *Augmenter* pour appliquer les modifications.
+
+
+
+NOTE: Après avoir augmenté la taille du périphérique de stockage par blocs, suivez la procédure fournie par votre système d'exploitation hôte pour connaître la nouvelle taille du périphérique et étendre le système de fichiers qui s'y trouve.
