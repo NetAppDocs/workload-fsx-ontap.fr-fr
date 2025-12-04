@@ -241,5 +241,8 @@ Si la fonctionnalité n'est pas disponible, c'est pour l'une des raisons suivant
 . Sélectionnez *Créer*.
 
 
-.Résultat
-Workload Factory lance la création du volume. Une fois créé, le système affiche le nouveau volume dans l'onglet « Volumes ».
+.Informations connexes
+* link:adjust-volume-capacity.html["Ajuster la capacité de volume dans Workload Factory"]
+* link:change-tiering-policy.html["Modifier la stratégie de hiérarchisation des volumes dans Workload Factory"]
+* link:manage-s3-access-points.html["Gérez les points d'accès S3 dans Workload Factory"]
+

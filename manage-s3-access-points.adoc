@@ -1,0 +1,52 @@
+---
+sidebar: sidebar 
+permalink: manage-s3-access-points.html 
+keywords: S3, s3, access points, manage access points, change access points, update access points, modify access points 
+summary: 'Gérez les points d"accès S3 pour un volume dans NetApp Workload Factory.' 
+---
+= Gérez les points d'accès S3 pour un volume dans NetApp Workload Factory
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Gérez les points d'accès S3 pour un volume dans NetApp Workload Factory. Vous pouvez utiliser la console Workload Factory pour attribuer des points d'accès S3 à des volumes existants ou supprimer des points d'accès S3.
+
+.Avant de commencer
+Vous devez disposer d'un volume existant avec un point d'accès S3.
+
+.Étapes
+. Connectez-vous à l'aide de l'un des link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].
+. Dans la mosaïque Stockage, sélectionnez *Accéder au stockage*.
+. Dans le menu Stockage, sélectionnez *FSx pour ONTAP*.
+. Dans *FSx for ONTAP*, sélectionnez le menu actions du système de fichiers contenant le volume à mettre à jour, puis sélectionnez *Gérer*.
+. Dans la présentation du système de fichiers, sélectionnez l'onglet *volumes*.
+. Dans l'onglet Volumes, sélectionnez le menu actions du volume pour lequel vous souhaitez gérer les points d'accès S3, puis sélectionnez *Actions avancées*, puis *Gérer les points d'accès S3*.
+. Sur la page Gérer les points d'accès S3, vous pouvez créer et associer des points d'accès ou supprimer des points d'accès existants.
++
+[role="tabbed-block"]
+====
+.Créer et attacher des points d'accès S3 à un volume existant
+--
+.. Sélectionnez *Créer et connecter un point d'accès S3*.
+.. Dans la boîte de dialogue *Créer et connecter un point d'accès S3*, fournissez les informations suivantes :
++
+*** *Nom du point d'accès S3* : Saisissez le nom du point d'accès S3.
+*** *Utilisateur* : sélectionnez un utilisateur existant avec accès au volume ou créez un nouvel utilisateur.
+*** *Type d'utilisateur* : sélectionnez *UNIX* ou *Windows* comme type d'utilisateur.
+
+
+.. Sélectionnez *Créer et joindre*.
+
+
+--
+.Supprimer les points d'accès S3 existants d'un volume
+--
+.. Sélectionnez le menu des actions du point d'accès S3 à supprimer, puis sélectionnez *Détacher*.
+.. Dans la boîte de dialogue *Détacher et supprimer un point d'accès S3*, sélectionnez *Détacher et supprimer* pour supprimer le point d'accès S3 du volume.
+
+
+--
+====
+
