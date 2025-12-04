@@ -120,6 +120,12 @@ System Manager ne prend pas en charge les liens pour la connectivité ONTAP avec
 
 AWS Secrets Manager n'est pas pris en charge lors de l'utilisation d'un agent de console.
 
+
+
+== Limitation des points d'accès Amazon S3
+
+La limite du nombre de points d'accès S3 par machine virtuelle de stockage est de 4 000.
+
 Remarque :
 
 . S'applique à Amazon FSX pour NetApp ONTAP

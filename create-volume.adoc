@@ -26,6 +26,8 @@ Vos volumes peuvent utiliser les protocoles suivants :
 * ISCSI : protocole de stockage en mode bloc
 
 
+Les points de terminaison S3 peuvent être associés à un volume FSx pour ONTAP . En utilisant un point d'accès S3, vous pouvez accéder aux données de fichiers résidant sur des volumes SMB/CIFS ou NFS via les API AWS S3. Cela vous permet d'intégrer vos données existantes avec GenAI, ML et les analyses des services AWS qui prennent en charge les points d'accès S3.
+
 
 
 === Détails des paramètres de volume
@@ -149,9 +151,9 @@ Renseignez les champs suivants pour configurer l'accès en bloc au volume.
 
 
 
-.. *Point de terminaison S3* : en option, attachez un point de terminaison S3 pour accéder aux données du système de fichiers FSx for ONTAP résidant sur des volumes NFS ou SMB/CIFS via les API AWS S3.  Seul le type d'accès aux fichiers est pris en charge.  En fournissant les détails suivants :
+.. *Point d'accès S3* : Vous pouvez, en option, connecter un point d'accès S3 pour accéder aux données du système de fichiers FSx pour ONTAP résidant sur des volumes NFS ou SMB/CIFS via les API AWS S3. Seul le type d'accès aux fichiers est pris en charge. Veuillez fournir les détails suivants :
 +
-*** *Nom du point de terminaison S3* : saisissez le nom du point de terminaison S3.
+*** *Nom du point d'accès S3* : Saisissez le nom du point d'accès S3.
 *** *Utilisateur* : sélectionnez un utilisateur existant avec accès au volume ou créez un nouvel utilisateur.
 *** *Type d'utilisateur* : sélectionnez *UNIX* ou *Windows* comme type d'utilisateur.
 
