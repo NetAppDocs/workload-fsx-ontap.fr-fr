@@ -1,0 +1,110 @@
+= 
+:allow-uri-read: 
+
+
+. Sur la page Créer FSX pour ONTAP, sélectionnez *création avancée*.
++
+Vous pouvez également charger une configuration enregistrée.
+
+. Sous Configuration générale du système de fichiers, fournissez les informations suivantes :
++
+.. *Informations d'identification AWS* : sélectionnez cette option pour ajouter des informations d'identification AWS dans Workload Factory ou continuez sans informations d'identification.
+.. *Nom du système de fichiers* : entrez un nom pour le système de fichiers.
+.. *Région et VPC* : sélectionnez la région et VPC pour le système de fichiers.
+.. *Type de déploiement* : sélectionnez un type de déploiement et une génération de système de fichiers. La disponibilité d’un système de fichiers de deuxième génération dépend de la région sélectionnée. Si la région sélectionnée ne prend pas en charge les systèmes de fichiers FSx for ONTAP de deuxième génération, le type de déploiement bascule vers la première génération.
++
+*** Déploiement dans une zone de disponibilité unique (zone de disponibilité unique) : assure la disponibilité en surveillant les défaillances matérielles et en remplaçant automatiquement les composants d'infrastructure en cas de défaillance. Assure une durabilité élevée en répliquant automatiquement les données dans une zone de disponibilité afin de les protéger contre les défaillances de composants.
++
+*Génération du système de fichiers* : Sélectionnez l'une des options suivantes :
+
++
+**** *Deuxième génération* : cette configuration est recommandée pour les charges de travail hautes performances ou lorsque les charges de travail commencent petites et évoluent progressivement jusqu'à 72 Go/s de débit et 2,4 millions d'IOPS.
+**** *Première génération* : Cette configuration est idéale pour les charges de travail nécessitant jusqu'à 4 Go/s ou 160 000 IOPS. Les systèmes de fichiers de première génération ne peuvent qu'augmenter la capacité.
+
+
+*** Déploiement dans plusieurs zones de disponibilité (plusieurs zones de disponibilité) : assure la disponibilité continue des données même en cas d'indisponibilité d'une zone de disponibilité. Un système de fichiers multi-AZ est conçu pour les workloads de production stratégiques qui requièrent une haute disponibilité pour les données de fichiers ONTAP partagées et du stockage avec réplication intégrée dans les zones de disponibilité.
++
+*Génération du système de fichiers* : Sélectionnez l'une des options suivantes :
+
++
+**** *Deuxième génération* : Cette configuration à paire HA unique est recommandée pour les charges de travail nécessitant jusqu'à 6 Go/s de débit ou 200 000 IOPS. Dans un système de fichiers multi-AZ de deuxième génération, la capacité peut être augmentée ou diminuée pour répondre aux exigences de la charge de travail.
+**** *Première génération* : Cette configuration est idéale pour les charges de travail nécessitant jusqu'à 4 Go/s ou 160 000 IOPS. Les systèmes de fichiers de première génération ne peuvent qu'augmenter la capacité.
+
+
+
+
+.. *Tags*: Vous pouvez éventuellement ajouter jusqu'à 50 tags.
+
+
+. Sous Détails du système de fichiers, fournissez les informations suivantes :
++
+.. *Capacité de stockage SSD* : entrez la capacité de stockage et sélectionnez l'unité de capacité de stockage.
++
+*** Pour les déploiements de première génération, vous ne pouvez pas diminuer la capacité après la création du système de fichiers.
+*** Pour les déploiements de deuxième génération, vous pouvez ajuster la capacité.
+
+
+.. *Capacité de débit par paire HA* : sélectionnez la capacité de débit par nombre de paires HA. Les systèmes de fichiers de première génération ne prennent en charge qu'une seule paire HA.
+.. *IOPS provisionnés* : sélectionnez l’une des options suivantes :
++
+*** *Automatique* : Pour automatique, pour chaque Gio créé, 3 IOPS sont ajoutés.
+*** *Provisionné par l'utilisateur* : pour le provisionnement par l'utilisateur, saisissez la valeur IOPS.
+
+
+.. *Informations d'identification ONTAP* : facultatives. Entrez votre nom d'utilisateur et votre mot de passe ONTAP. Le mot de passe peut être défini maintenant ou ultérieurement.
++
+Si l'utilisateur que vous indiquez n'est pas l'utilisateur fsxadmin, et que vous devez ensuite réinitialiser le mot de passe fsxadmin, vous pourrez le faire à partir de la console AWS.
+
+.. *Informations d'identification de la VM de stockage* : facultatif. Entrez votre nom d'utilisateur. Le mot de passe peut être spécifique à ce système de fichiers ou vous pouvez utiliser le même mot de passe que celui saisi pour les informations d'identification ONTAP. Le mot de passe peut être défini maintenant ou ultérieurement.
+.. *SMB/CIFS setup*: Facultatif. Si vous prévoyez d'utiliser le protocole SMB/CIFS pour accéder aux volumes, vous devez configurer Active Directory pour la machine virtuelle de stockage lors de la création du système de fichiers. Fournissez les détails suivants pour la VM de stockage créée pour ce système de fichiers.
++
+... *Domaine Active Directory à rejoindre* : entrez le nom de domaine complet (FQDN) pour Active Directory.
+... *Adresses IP DNS* : saisissez jusqu'à trois adresses IP DNS séparées par des virgules.
+... *Nom NetBIOS du serveur SMB* : entrez le nom NetBIOS du serveur SMB de l'objet ordinateur Active Directory à créer pour votre machine virtuelle de stockage. Il s'agit du nom de cette VM de stockage dans Active Directory.
+... *Nom d'utilisateur* : saisissez le nom d'utilisateur du compte de service dans votre Active Directory existant.
++
+N'incluez pas de préfixe ou de suffixe de domaine. Pour `EXAMPLE\ADMIN`, utilisez `ADMIN`.
+
+... *Mot de passe* : saisissez le mot de passe du compte de service.
+... *Unité d'organisation* : si vous le souhaitez, entrez le nom de l'unité d'organisation où vous souhaitez créer le compte d'ordinateur pour FSX for ONTAP. L'UO est le nom de chemin distinctif de l'unité organisationnelle à laquelle vous souhaitez joindre le système de fichiers.
+... *Groupe d'administrateurs délégués* : vous pouvez éventuellement saisir le nom du groupe dans votre Active Directory qui peut administrer votre système de fichiers.
++
+Si vous utilisez AWS Managed Microsoft AD, vous devez spécifier un groupe, par exemple les administrateurs FSX délégués d'AWS, les administrateurs délégués d'AWS ou un groupe personnalisé avec des autorisations déléguées à l'UO.
+
++
+Si vous vous joignez à un AD autogéré, utilisez le nom du groupe dans votre AD. Le groupe par défaut est `Domain Admins`.
+
+
+
+
+
+. Sous réseau et sécurité, fournissez les éléments suivants :
++
+.. *Groupe de sécurité* : créez ou utilisez un groupe de sécurité existant.
++
+Pour un nouveau groupe de sécurité, reportez-vous à  la section <<Détails du groupe de sécurité,détails du groupe de sécurité>> pour obtenir une description des protocoles, ports et rôles du groupe de sécurité.
+
+.. *Zones de disponibilité* : sélectionnez les zones de disponibilité et les sous-réseaux.
++
+*** Pour le nœud de configuration de cluster 1 : sélectionnez une zone de disponibilité et un sous-réseau.
+*** Pour le nœud de configuration de cluster 2 : sélectionnez une zone de disponibilité et un sous-réseau.
+
+
+.. *Tables de routage VPC* : sélectionnez la table de routage VPC pour activer l'accès client aux volumes.
+.. *Plage d'adresses IP de point final* : sélectionnez *Plage d'adresses IP flottantes en dehors de votre VPC* ou *Entrez une plage d'adresses IP* et entrez une plage d'adresses IP.
+.. *Cryptage* : sélectionnez le nom de la clé de cryptage dans la liste déroulante.
+
+
+. Sous sauvegarde et maintenance, fournissez les éléments suivants :
++
+.. *FSX pour la sauvegarde ONTAP* : les sauvegardes automatiques quotidiennes sont activées par défaut. Désactivez-le si vous le souhaitez.
++
+... *Période de conservation automatique des sauvegardes* : entrez le nombre de jours de conservation des sauvegardes automatiques.
+... *Fenêtre de sauvegarde automatique quotidienne* : sélectionnez *pas de préférence* (une heure de début de sauvegarde quotidienne est sélectionnée pour vous) ou *sélectionnez l'heure de début pour les sauvegardes quotidiennes* et spécifiez une heure de début.
+
+
+.. *Fenêtre de maintenance hebdomadaire* : sélectionnez *pas de préférence* (une heure de début de la fenêtre de maintenance hebdomadaire est sélectionnée pour vous) ou *sélectionnez l'heure de début de la fenêtre de maintenance hebdomadaire de 30 minutes* et spécifiez une heure de début.
+
+
+. Enregistrez ou créez le système de fichiers.
+
