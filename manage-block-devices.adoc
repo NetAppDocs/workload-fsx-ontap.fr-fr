@@ -58,3 +58,9 @@ Augmentez à tout moment la capacité d'un périphérique de stockage existant.
 
 
 NOTE: Après avoir augmenté la taille du périphérique de stockage par blocs, suivez la procédure fournie par votre système d'exploitation hôte pour connaître la nouvelle taille du périphérique et étendre le système de fichiers qui s'y trouve.
+
+
+
+== Informations connexes
+
+link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-block-device.html["Créer un périphérique de stockage par blocs pour un système de fichiers FSx pour ONTAP"]

@@ -25,8 +25,8 @@ Vérifiez les points suivants avant de supprimer une machine virtuelle de stocka
 . Dans la mosaïque Stockage, sélectionnez *Accéder au stockage*.
 . Dans le menu Stockage, sélectionnez *FSx pour ONTAP*.
 . Depuis *FSx for ONTAP*, sélectionnez le menu d'actions du système de fichiers à mettre à jour, puis sélectionnez *Gérer*.
-. Dans la présentation du système de fichiers, sélectionnez l'onglet *Storage VMS*.
-. Dans l’onglet Machines virtuelles de stockage, sélectionnez le menu d’actions de la machine virtuelle de stockage pour laquelle configurer Active Directory.
+. Dans la vue d'ensemble du système de fichiers sous Machines virtuelles de stockage, sélectionnez *Gérer*.
+. Sur l'écran Gérer les machines virtuelles de stockage, sélectionnez le menu Actions de la machine virtuelle de stockage à supprimer.
 . Sélectionnez *Supprimer la VM de stockage*.
 . Dans la boîte de dialogue Supprimer la VM de stockage, tapez « delete » pour supprimer la VM de stockage.
 . Sélectionnez *Supprimer* pour confirmer.

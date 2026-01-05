@@ -1,0 +1,110 @@
+---
+sidebar: sidebar 
+permalink: create-block-device.html 
+keywords: create block device, create lun, iscsi protocol 
+summary: 'Créez des périphériques de bloc pour répondre aux exigences de votre application métier (LOB).' 
+---
+= Créez un périphérique de stockage par blocs pour un système de fichiers dans NetApp Workload Factory.
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Créez des périphériques de bloc pour répondre aux exigences de votre application métier (LOB).
+
+.Description de la tâche
+Seuls les volumes FlexVol sont pris en charge pour les périphériques de stockage par blocs dans NetApp Workload Factory. Vous pouvez créer des périphériques de stockage par blocs en utilisant le protocole iSCSI.
+
+La taille du bloc doit être inférieure à la taille du FlexVol volume disponible.
+
+.Avant de commencer
+* Vous devez associer un lien pour créer des périphériques de blocage. link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["Apprenez à associer un lien existant ou à créer et associer un nouveau lien"]. Une fois le lien établi, revenez à cette opération.
+
+
+.Étapes
+. Connectez-vous à l'aide de l'un des link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].
+. Dans la mosaïque Stockage, sélectionnez *Accéder au stockage*.
+. Dans le menu Stockage, sélectionnez *FSx pour ONTAP*.
+. Dans *FSx pour ONTAP*, sélectionnez l'onglet *Bloquer les périphériques*.
+. Sélectionnez *Créer un périphérique de bloc*.
+. Sous *Détails du volume*, procédez comme suit :
++
+.. *Nom du volume* : Sélectionnez l’une des options suivantes.
++
+*** Créez un nouveau volume et saisissez son nom.
+*** Sélectionnez un volume existant.
+
+
+.. *VM de stockage* : Sélectionnez une VM de stockage.
+.. *Style de volume* : Le style de volume par défaut est * FlexVol*.
+.. *Volume* : Saisissez le volume et sélectionnez l’unité. La taille maximale par FlexVol volume est de 100 Tio.
+.. *Augmentation automatique du volume* : Activez éventuellement l’augmentation automatique du volume pour permettre à ce dernier d’augmenter automatiquement sa taille lorsqu’il atteint sa capacité maximale. La taille maximale de croissance est de 300 Tio.
+.. *Étiquettes* : Vous pouvez ajouter des étiquettes pour organiser et catégoriser votre dispositif de blocage.
+
+
+. Sous *Détails du périphérique de blocage*, procédez comme suit :
++
+.. *Nom du périphérique de blocage* : Saisissez un nom pour le périphérique de blocage.
+.. *Taille du périphérique de stockage* : Saisissez la taille du périphérique de stockage et sélectionnez l’unité. La taille du périphérique de stockage doit être inférieure à la taille du volume disponible.
+
+
+. Sous *Accès*, procédez comme suit :
++
+.. *Configuration iSCSI* : Sélectionnez l’une des options suivantes.
++
+*** *Créer un nouveau groupe d'initiateurs* : Indiquez le système d'exploitation hôte, le nom du groupe d'initiateurs et ajoutez un ou plusieurs initiateurs hôtes de nom qualifié iSCSI (IQN).
+*** *Associer un groupe d'initiateurs existant* : Sélectionnez un groupe d'initiateurs existant, indiquez le système d'exploitation hôte et sélectionnez un ou plusieurs initiateurs hôtes de nom qualifié iSCSI (IQN).
+
+
+
+
+. Sous la rubrique *Efficacité et protection*, procédez comme suit :
++
+.. *Efficacité de stockage* : activée par défaut. Sélectionnez pour désactiver cette fonctionnalité.
++
+ONTAP atteint une efficacité de stockage grâce aux fonctionnalités de déduplication et de compression. La déduplication permet d'éliminer les blocs de données dupliqués. La compression des données compresse les blocs de données afin de réduire la quantité d'espace de stockage physique nécessaire.
+
+.. *Politique d'instantanés* : sélectionnez la stratégie d'instantanés pour spécifier la fréquence et la rétention des instantanés.
++
+Voici les politiques par défaut d'AWS. Pour afficher les stratégies d'instantané existantes, vous devez link:link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["associer un lien"].
+
++
+`default`:: Cette règle crée automatiquement des snapshots selon le planning suivant, avec les plus anciennes copies supprimées pour faire de la place pour les nouvelles copies :
++
+--
+*** Six snapshots par heure au maximum ont pris cinq minutes au-delà de l'heure.
+*** Un maximum de deux clichés quotidiens pris du lundi au samedi à 10 minutes après minuit.
+*** Un maximum de deux instantanés hebdomadaires pris chaque dimanche à 15 minutes après minuit.
++
+
+NOTE: Les heures des snapshots sont basées sur le fuseau horaire du système de fichiers, qui est par défaut UTC (temps universel coordonné). Pour plus d'informations sur la modification du fuseau horaire, reportez-vous à la section link:https://library.netapp.com/ecmdocs/ECMP1155684/html/GUID-E26E4C94-DF74-4E31-A6E8-1D2D2287A9A1.html["Affichage et réglage du fuseau horaire du système"^] de la documentation du support NetApp.
+
+
+
+--
+`default-1weekly`:: Cette règle fonctionne de la même manière que la `default` règle, sauf qu'elle ne conserve qu'un seul snapshot de la planification hebdomadaire.
+`none`:: Cette règle ne prend pas de snapshots. Vous pouvez affecter cette règle aux volumes pour empêcher la création automatique de snapshots.
+
+
+.. *Règle de hiérarchisation* : sélectionnez la règle de hiérarchisation pour les données stockées dans le volume.
++
+_Équilibré (Auto)_ est la politique de hiérarchisation par défaut lors de la création d'un volume à l'aide de la console Workload Factory. Pour plus d'informations sur les politiques de hiérarchisation des volumes, veuillez consulter link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/volume-storage-capacity.html#data-tiering-policy["Capacité de stockage du volume"^] dans la documentation AWS FSx pour NetApp ONTAP . Notez que Workload Factory utilise des noms basés sur les cas d'utilisation dans la console Workload Factory pour les politiques de hiérarchisation et inclut les noms de politique de hiérarchisation FSx pour ONTAP entre parenthèses.
+
+.. *ARP/AI* : NetApp Autonomous Ransomware Protection with AI (ARP/AI) est activé par défaut lorsqu'un lien est associé au système de fichiers. link:https://docs.netapp.com/us-en/workload-fsx-ontap/ransomware-protection.html["En savoir plus sur ARP/AI"]. Acceptez la déclaration pour continuer.
++
+Si la fonctionnalité n'est pas disponible, c'est pour l'une des raisons suivantes :
+
++
+*** Un lien n'est pas associé au système de fichiers. link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["Apprenez à associer un lien existant ou à créer et associer un nouveau lien"]. Une fois le lien associé, revenez à cette opération.
+*** Les volumes contenant des fichiers immuables et les volumes utilisant le protocole NVMe ne sont pas pris en charge pour ARP/AI.
+*** Le système de fichiers dispose déjà d’une politique ARP/AI.
+
+
+
+
+. Sélectionnez *Créer*.
+
+
+.Informations connexes
+link:https://docs.netapp.com/us-en/workload-fsx-ontap/manage-block-devices.html["Gérer les périphériques de stockage par blocs d'un système de fichiers FSx pour ONTAP"]

@@ -21,10 +21,9 @@ Pour répliquer une machine virtuelle de stockage vers un autre système de fich
 . Dans la mosaïque Stockage, sélectionnez *Accéder au stockage*.
 . Dans le menu Stockage, sélectionnez *FSx pour ONTAP*.
 . Depuis *FSx for ONTAP*, sélectionnez le menu d'actions du système de fichiers avec la machine virtuelle de stockage à répliquer, puis sélectionnez *Gérer*.
-. Dans la présentation du système de fichiers, sélectionnez l'onglet *Storage VMS*.
-. Dans l’onglet Machines virtuelles de stockage, sélectionnez le menu d’actions de la machine virtuelle de stockage pour laquelle répliquer une SVM.
-. Sélectionnez *répliquer VM de stockage*.
-. Sur la page Créer une réplication, sous cible de réplication, fournissez les informations suivantes :
+. Dans la vue d'ensemble du système de fichiers sous Machines virtuelles de stockage, sélectionnez *Gérer*.
+. Sur l'écran Gérer les machines virtuelles de stockage, sélectionnez le menu actions de la machine virtuelle de stockage pour laquelle vous souhaitez répliquer une SVM, puis sélectionnez *Actions avancées* > *Répliquer la machine virtuelle de stockage*.
+. Sur la page de données répliquées, sous cible de réplication, indiquez les informations suivantes :
 +
 .. *FSX pour système de fichiers ONTAP* : sélectionnez les informations d'identification, la région et le nom du système de fichiers FSX pour ONTAP pour le système de fichiers cible FSX pour ONTAP.
 .. *Nom de la VM de stockage* : sélectionnez la VM de stockage dans le menu déroulant.

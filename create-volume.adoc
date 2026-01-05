@@ -168,7 +168,7 @@ ONTAP atteint une efficacité de stockage grâce aux fonctionnalités de dédupl
 
 .. *Politique d'instantanés* : sélectionnez la stratégie d'instantanés pour spécifier la fréquence et la rétention des instantanés.
 +
-Voici les règles par défaut d'AWS. Pour les stratégies d'instantanés personnalisées, vous devez link:link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["associer un lien"] .
+Voici les politiques par défaut d'AWS. Pour afficher les stratégies d'instantané existantes, vous devez link:link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["associer un lien"].
 
 +
 `default`:: Cette règle crée automatiquement des snapshots selon le planning suivant, avec les plus anciennes copies supprimées pour faire de la place pour les nouvelles copies :
@@ -190,7 +190,7 @@ NOTE: Les heures des snapshots sont basées sur le fuseau horaire du système de
 
 .. *Règle de hiérarchisation* : sélectionnez la règle de hiérarchisation pour les données stockées dans le volume.
 +
-_Balanced (Auto)_ est la stratégie de hiérarchisation par défaut lors de la création d'un volume à l'aide de la console Workload Factory.  Pour plus d'informations sur les politiques de hiérarchisation des volumes, reportez-vous àlink:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/volume-storage-capacity.html#data-tiering-policy["Capacité de stockage du volume"^] dans la documentation AWS FSx pour NetApp ONTAP .  Notez que Workload Factory utilise des noms basés sur des cas d'utilisation dans la console Workload Factory pour les stratégies de hiérarchisation et inclut les noms de stratégie de hiérarchisation FSx pour ONTAP entre parenthèses.
+_Équilibré (Auto)_ est la politique de hiérarchisation par défaut lors de la création d'un volume à l'aide de la console Workload Factory. Pour plus d'informations sur les politiques de hiérarchisation des volumes, veuillez consulter link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/volume-storage-capacity.html#data-tiering-policy["Capacité de stockage du volume"^] dans la documentation AWS FSx pour NetApp ONTAP . Notez que Workload Factory utilise des noms basés sur les cas d'utilisation dans la console Workload Factory pour les politiques de hiérarchisation et inclut les noms de politique de hiérarchisation FSx pour ONTAP entre parenthèses.
 
 .. *Fichiers immuables* : l'activation de la fonctionnalité de fichiers immuables valide de manière permanente les fichiers de ce volume dans un état WORM (écriture unique, lecture multiple) immuable.  Fournissez les détails suivants :
 +

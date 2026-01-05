@@ -18,9 +18,8 @@ Les balises peuvent vous aider à catégoriser vos ressources.  Vous pouvez ajou
 . Dans la mosaïque Stockage, sélectionnez *Accéder au stockage*.
 . Dans le menu Stockage, sélectionnez *FSx pour ONTAP*.
 . Depuis *FSx for ONTAP*, sélectionnez le menu d'actions du système de fichiers avec la machine virtuelle de stockage à mettre à jour, puis sélectionnez *Gérer*.
-. Dans la présentation du système de fichiers, sélectionnez l'onglet *Storage VMS*.
-. Dans l’onglet Machines virtuelles de stockage, sélectionnez le menu d’actions de la machine virtuelle de stockage pour laquelle modifier les balises.
-. Sélectionnez *Modifier les balises de VM de stockage*.
+. Dans la vue d'ensemble du système de fichiers sous Machines virtuelles de stockage, sélectionnez *Gérer*.
+. Depuis l'écran Gérer les machines virtuelles de stockage, sélectionnez le menu Actions de la machine virtuelle de stockage pour laquelle vous souhaitez modifier les balises, puis sélectionnez *Actions de base* > *Modifier les balises de la machine virtuelle de stockage*.
 . Sur la page Modifier les balises de VM de stockage, ajoutez, modifiez ou supprimez des balises.
 +
 Le nombre maximum de balises pouvant être appliquées à une VM de stockage est de 50.

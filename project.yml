@@ -51,6 +51,8 @@ sidebar:
         url: "/create-volume.html"
       - title: Accès à vos données
         url: "/access-data.html"
+    - title: Créer un périphérique de bloc
+      url: "/create-block-device.html"
     - title: Créez une machine virtuelle de stockage
       url: "/create-storage-vm.html"
     - title: Protégez vos données

@@ -34,8 +34,9 @@ NOTE: Lorsque vous utilisez Terraform à partir de Codebox, le code que vous cop
 . Connectez-vous à l'aide de l'un des link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].
 . Dans la mosaïque Stockage, sélectionnez *Accéder au stockage*.
 . Dans le menu Stockage, sélectionnez *FSx pour ONTAP*.
-. Depuis *FSx for ONTAP*, sélectionnez le menu d'actions du système de fichiers pour lequel créer une machine virtuelle de stockage et sélectionnez *Créer une machine virtuelle de stockage*.
-. Sur la page Storage VM, sous Storage VM configuration, fournissez les éléments suivants :
+. Dans *FSx for ONTAP*, sélectionnez le menu actions du système de fichiers, puis sélectionnez *Gérer*.
+. Dans la vue d'ensemble du système de fichiers, sous Machines virtuelles de stockage, sélectionnez *Créer une machine virtuelle de stockage*.
+. Sur la page Créer une machine virtuelle de stockage, sous Configuration de la machine virtuelle de stockage, indiquez les informations suivantes :
 +
 .. *Nom* : entrez un nom pour la machine virtuelle de stockage.
 .. *Informations d'identification de la machine virtuelle de stockage* : saisissez un mot de passe pour l'utilisateur de cette machine virtuelle de stockage `vsadmin` ou utilisez les informations d'identification de l'utilisateur du système de fichiers `fsxadmin` .

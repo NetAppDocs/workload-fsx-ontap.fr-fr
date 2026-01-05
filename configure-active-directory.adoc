@@ -21,9 +21,8 @@ Les mêmes étapes s'appliquent à la configuration et à la mise à jour d'Acti
 . Dans la mosaïque Stockage, sélectionnez *Accéder au stockage*.
 . Dans le menu Stockage, sélectionnez *FSx pour ONTAP*.
 . Depuis *FSx for ONTAP*, sélectionnez le menu d'actions du système de fichiers avec la machine virtuelle de stockage à mettre à jour, puis sélectionnez *Gérer*.
-. Dans la présentation du système de fichiers, sélectionnez l'onglet *Storage VMS*.
-. Dans l’onglet Machines virtuelles de stockage, sélectionnez le menu d’actions de la machine virtuelle de stockage pour laquelle configurer Active Directory.
-. Sélectionnez *gérer la configuration AD*.
+. Dans la vue d'ensemble du système de fichiers sous Machines virtuelles de stockage, sélectionnez *Gérer*.
+. À partir de l'écran Gérer les machines virtuelles de stockage, sélectionnez le menu actions de la machine virtuelle de stockage pour laquelle vous souhaitez configurer Active Directory, puis sélectionnez *Actions de base* > *Gérer la configuration AD*.
 . Sur la page gérer la configuration AD, fournissez les informations suivantes :
 +
 .. *Domaine Active Directory à rejoindre* : entrez le nom de domaine complet (FQDN) de votre Active Directory.
