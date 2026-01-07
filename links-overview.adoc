@@ -56,6 +56,7 @@ Workload Factory nécessite un lien pour afficher certaines informations et effe
 Les fonctions qui nécessitent un lien sont les suivantes :
 
 * Statut bien architecturé des configurations du système de fichiers FSx pour ONTAP pour une maintenance proactive, une fiabilité et une optimisation des coûts et des performances
+* Surveillance et alerte des événements ONTAP EMS
 * Protection autonome contre les ransomwares NetApp (ARP/AI)
 * Observabilité holistique améliorée des capacités sur les systèmes de fichiers FSx pour ONTAP
 * Réplication, gestion et surveillance des données de machines virtuelles de volume et de stockage

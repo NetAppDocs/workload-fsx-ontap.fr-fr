@@ -52,12 +52,17 @@ Les données clients ne sont pas utilisées pour entraîner ou améliorer les mo
 Pour utiliser l'analyseur d'événements, vous devez remplir les conditions préalables suivantes :
 
 * Vous devezlink:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["accorder les autorisations d'_opérations et de correction_"^] dans votre compte AWS pour consulter les événements relatifs aux systèmes de fichiers FSx pour ONTAP .
+* Le port suivant doit être ouvert dans le groupe de sécurité associé au système de fichiers FSx pour ONTAP pour l'analyse des événements EMS.
++
+** Port 22 (SSH)
+
+
 * Vous devezlink:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["se connecter à un système de fichiers FSx pour ONTAP à l'aide d'un lien"] utiliser l'analyseur d'événements EMS.
 * Vous devez également satisfaire aux exigences suivantes.  Le système vous invite à effectuer ces étapes lorsque vous analysez les erreurs de journalisation.
 +
 ** *Modèle Amazon Bedrock*
 +
-L'analyseur d'événements utilise vos API Amazon Bedrock pour fournir des informations basées sur l'IA pour les événements FSx for ONTAP .
+L'analyseur d'événements utilise les API Amazon Bedrock pour fournir des informations basées sur l'IA pour les événements FSx for ONTAP . Configurez Amazon Bedrock séparément pour chaque compte AWS.
 
 +
 Modèle recommandé : Amazon Bedrock Model (anthropic.claude-sonnet-4-20250514-v1:0).  Vous devez fournir l'ARN du profil d'inférence pour ce modèle dans la région sélectionnée.

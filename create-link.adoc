@@ -43,7 +43,7 @@ Vous disposez de deux options pour créer des liens dans ce flux de travail : au
 * Les ports suivants doivent être ouverts dans le groupe de sécurité associé au système de fichiers FSx for ONTAP pour la connectivité de liaison.
 +
 ** Pour la console Workload Factory : port 443 (HTTPS)
-** Pour CloudShell : port 22 (SSH)
+** Pour l'analyse des événements du système de gestion des urgences (EMS) CloudShell et FSx pour ONTAP : port 22 (SSH)
 
 
 * Lorsque vous ajoutez un lien à l'aide d'une pile CloudFormation, vous devez disposer des autorisations suivantes dans votre compte AWS :
