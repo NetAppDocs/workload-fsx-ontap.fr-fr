@@ -94,7 +94,7 @@ Utilisez CloudFormation pour créer et enregistrer automatiquement le lien dans 
 
 .Étapes
 . Connectez-vous à l'aide de l'un des link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].
-. Dans la mosaïque Stockage, sélectionnez *Accéder au stockage*.
+. Sélectionnez le menu image:workloads-menu-icon.png["L'icône du menu hamburger permet d'accéder aux charges de travail telles que le stockage, l'analyse de données d'entreprise (EDA), l'intelligence artificielle (IA), les bases de données, VMware et l'administration."] puis sélectionnez *Stockage*.
 . Dans le menu Stockage, sélectionnez *FSx pour ONTAP*.
 . Depuis *FSx for ONTAP*, sélectionnez le menu d'actions du système de fichiers auquel associer un lien, puis sélectionnez *Associer un lien*.
 . Dans la boîte de dialogue associer un lien, sélectionnez *Créer un nouveau lien* et sélectionnez *Continuer*.
@@ -166,7 +166,7 @@ Vous pouvez créer un lien à l'aide de deux outils Infrastructure-as-Code (IaC)
 
 .Étapes
 . Connectez-vous à l'aide de l'un des link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].
-. Dans la mosaïque Stockage, sélectionnez *Accéder au stockage*.
+. Sélectionnez le menu image:workloads-menu-icon.png["L'icône du menu hamburger permet d'accéder aux charges de travail telles que le stockage, l'analyse de données d'entreprise (EDA), l'intelligence artificielle (IA), les bases de données, VMware et l'administration."] puis sélectionnez *Stockage*.
 . Dans le menu Stockage, sélectionnez *FSx pour ONTAP*.
 . Depuis *FSx for ONTAP*, sélectionnez le nom d'action du système de fichiers auquel associer un lien, puis sélectionnez *Associer un lien*.
 . Dans la boîte de dialogue associer un lien, sélectionnez *Créer un nouveau lien* et sélectionnez *Continuer*.
@@ -240,7 +240,7 @@ Après avoir créé un lien, associez-le à un ou plusieurs systèmes de fichier
 
 .Étapes
 . Connectez-vous à l'aide de l'un des link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].
-. Dans la mosaïque Stockage, sélectionnez *Accéder au stockage*.
+. Sélectionnez le menu image:workloads-menu-icon.png["L'icône du menu hamburger permet d'accéder aux charges de travail telles que le stockage, l'analyse de données d'entreprise (EDA), l'intelligence artificielle (IA), les bases de données, VMware et l'administration."] puis sélectionnez *Stockage*.
 . Dans le menu Stockage, sélectionnez *FSx pour ONTAP*.
 . Depuis *FSx for ONTAP*, sélectionnez le menu d'actions du système de fichiers auquel associer un lien, puis sélectionnez *Associer un lien*.
 . Dans la page de lien associer, sélectionnez *associer un lien existant*, sélectionnez le lien et sélectionnez *Continuer*.

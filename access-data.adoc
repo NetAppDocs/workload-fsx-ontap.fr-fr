@@ -25,8 +25,7 @@ Obtenez le point de montage d'un volume pour monter un partage sur un partage CI
 
 .Étapes
 . Connectez-vous à l'aide de l'un des link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].
-. Dans la mosaïque Stockage, sélectionnez *Accéder au stockage*.
-. Dans le menu Stockage, sélectionnez *FSx pour ONTAP*.
+. Sélectionnez le menu image:workloads-menu-icon.png["L'icône du menu hamburger permet d'accéder aux charges de travail telles que le stockage, l'analyse de données d'entreprise (EDA), l'intelligence artificielle (IA), les bases de données, VMware et l'administration."] puis sélectionnez *Stockage*.
 . Depuis *FSx for ONTAP*, sélectionnez le menu d'actions du système de fichiers avec le volume, puis sélectionnez *Gérer*.
 . Dans la présentation du système de fichiers, sélectionnez l'onglet *volumes*.
 . Dans l'onglet Volumes, sélectionnez le menu d'actions du volume, puis *Actions de base*, puis *Afficher la commande de montage*.

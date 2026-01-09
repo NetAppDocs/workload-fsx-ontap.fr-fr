@@ -4,14 +4,14 @@ permalink: manage-block-devices.html
 keywords: block devices, manage luns, manage iscsi 
 summary: Gérer les périphériques de stockage par blocs pour un système de fichiers FSx for ONTAP dans NetApp Workload Factory. 
 ---
-= Gérer les périphériques de stockage par blocs d'un système de fichiers FSx pour ONTAP
+= Gérez les périphériques de stockage par blocs d'un système de fichiers dans NetApp Workload Factory
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-Depuis la console NetApp Workload Factory , vous pouvez gérer les périphériques de stockage par blocs de vos systèmes de fichiers FSx pour ONTAP .  Les tâches de gestion comprennent la consultation des détails des périphériques de stockage et l'augmentation de leur capacité.
+Depuis la console NetApp Workload Factory , vous pouvez gérer les périphériques de stockage par blocs de vos systèmes de fichiers FSx pour ONTAP . Les tâches de gestion comprennent la consultation des détails des périphériques de stockage par blocs, l'augmentation de leur capacité, la gestion des accès clients, l'archivage des données des périphériques de stockage par blocs et la suppression de ces périphériques.
 
 .Description de la tâche
 Les périphériques de stockage par blocs, ou LUN (numéros d'unité logique), sont des volumes qui contiennent des systèmes de fichiers dans un environnement SAN et qui peuvent être accessibles par les hôtes via un réseau.
@@ -31,7 +31,7 @@ Consultez à tout moment les détails d'un périphérique de blocage existant.
 
 .Étapes
 . Connectez-vous à l'aide de l'un des link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].
-. Dans la mosaïque Stockage, sélectionnez *Accéder au stockage*.
+. Sélectionnez le menu image:workloads-menu-icon.png["L'icône du menu hamburger permet d'accéder aux charges de travail telles que le stockage, l'analyse de données d'entreprise (EDA), l'intelligence artificielle (IA), les bases de données, VMware et l'administration."] puis sélectionnez *Stockage*.
 . Dans le menu Stockage, sélectionnez *FSx pour ONTAP*.
 . Dans *FSx pour ONTAP*, sélectionnez l'onglet *Bloquer les périphériques*.
 . Accédez au menu des actions pour bloquer le périphérique, puis sélectionnez *Afficher les détails*.
@@ -48,7 +48,7 @@ Augmentez à tout moment la capacité d'un périphérique de stockage existant.
 
 .Étapes
 . Connectez-vous à l'aide de l'un des link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].
-. Dans la mosaïque Stockage, sélectionnez *Accéder au stockage*.
+. Sélectionnez le menu image:workloads-menu-icon.png["L'icône du menu hamburger permet d'accéder aux charges de travail telles que le stockage, l'analyse de données d'entreprise (EDA), l'intelligence artificielle (IA), les bases de données, VMware et l'administration."] puis sélectionnez *Stockage*.
 . Dans le menu Stockage, sélectionnez *FSx pour ONTAP*.
 . Dans *FSx pour ONTAP*, sélectionnez l'onglet *Bloquer les périphériques*.
 . Accédez au menu des actions du périphérique de stockage, puis sélectionnez *Augmenter la capacité*.
@@ -58,6 +58,63 @@ Augmentez à tout moment la capacité d'un périphérique de stockage existant.
 
 
 NOTE: Après avoir augmenté la taille du périphérique de stockage par blocs, suivez la procédure fournie par votre système d'exploitation hôte pour connaître la nouvelle taille du périphérique et étendre le système de fichiers qui s'y trouve.
+
+
+
+== Gérer l'accès client à un périphérique de blocage
+
+Vous pouvez gérer l'accès client à un périphérique de stockage par blocs existant à tout moment en créant des igroups et en ajoutant ou en supprimant des périphériques de stockage par blocs et des initiateurs hôtes.
+
+.Étapes
+. Connectez-vous à l'aide de l'un des link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].
+. Sélectionnez le menu image:workloads-menu-icon.png["L'icône du menu hamburger permet d'accéder aux charges de travail telles que le stockage, l'analyse de données d'entreprise (EDA), l'intelligence artificielle (IA), les bases de données, VMware et l'administration."] puis sélectionnez *Stockage*.
+. Dans le menu Stockage, sélectionnez *FSx pour ONTAP*.
+. Dans *FSx pour ONTAP*, sélectionnez l'onglet *Bloquer les périphériques*.
+. Accédez au menu des actions du périphérique de blocage, puis sélectionnez *Gérer l'accès client*.
+. S'il n'existe aucun igroup, créez-en un nouveau en sélectionnant *Créer un igroup*, puis procédez comme suit :
++
+.. *Nom du périphérique de bloc* : Saisissez un nom de périphérique de bloc. Vous pouvez sélectionner plusieurs périphériques de bloc à associer à l'igroup.
+.. *Type de système d'exploitation* : Sélectionnez le type de système d'exploitation.
+.. *Nom du groupe d'interconnexion* : Saisissez un nom de groupe d'interconnexion.
+.. *Description de l'igroup* : Vous pouvez saisir une description de l'igroup.
+.. *Initiateurs hôtes* : Veuillez saisir un ou plusieurs initiateurs hôtes. Ces initiateurs doivent respecter le format iSCSI qualifié (IQN).
+.. Sélectionnez *Créer*.
+
+
+. Si un igroup existe déjà, sélectionnez *Modifier l'accès client* pour ajouter ou supprimer des périphériques de blocage et des initiateurs hôtes de l'igroup, puis sélectionnez *Appliquer*.
+
+
+
+
+== Archiver les données d'un périphérique de stockage orphelin
+
+Les périphériques de stockage par blocs qui ne sont plus associés à un client ou qui sont inutilisés pendant sept jours consécutifs sont classés comme périphériques de stockage par blocs orphelins. Vous pouvez archiver les données d'un périphérique de stockage orphelin dans le pool de capacité afin de récupérer de la capacité SSD.
+
+.Étapes
+. Connectez-vous à l'aide de l'un des link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].
+. Sélectionnez le menu image:workloads-menu-icon.png["L'icône du menu hamburger permet d'accéder aux charges de travail telles que le stockage, l'analyse de données d'entreprise (EDA), l'intelligence artificielle (IA), les bases de données, VMware et l'administration."] puis sélectionnez *Stockage*.
+. Dans le menu Stockage, sélectionnez *FSx pour ONTAP*.
+. Dans *FSx pour ONTAP*, sélectionnez l'onglet *Bloquer les périphériques*.
+. Sous Périphériques orphelins, sélectionnez *Afficher et récupérer la capacité*.
+. Sur l'écran « Récupérer l'espace des périphériques de stockage par blocs inutilisés », sélectionnez un ou plusieurs périphériques de stockage par blocs pour archiver les données et récupérer la capacité.
+. Sélectionnez *Archive*.
+
+
+
+
+== Supprimer un périphérique de blocage
+
+Les périphériques de stockage par blocs qui ne sont plus associés à un client ou qui sont inutilisés pendant sept jours consécutifs sont classés comme périphériques de stockage par blocs orphelins. Cette opération supprime et démappe le périphérique de stockage sélectionné. Si le FlexVol volume hôte ne contient aucun périphérique de stockage par blocs, Workload Factory le supprime également.
+
+.Étapes
+. Connectez-vous à l'aide de l'un des link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].
+. Sélectionnez le menu image:workloads-menu-icon.png["L'icône du menu hamburger permet d'accéder aux charges de travail telles que le stockage, l'analyse de données d'entreprise (EDA), l'intelligence artificielle (IA), les bases de données, VMware et l'administration."] puis sélectionnez *Stockage*.
+. Dans le menu Stockage, sélectionnez *FSx pour ONTAP*.
+. Dans *FSx pour ONTAP*, sélectionnez l'onglet *Bloquer les périphériques*.
+. Sous Périphériques orphelins, sélectionnez *Afficher et récupérer la capacité*.
+. Sur l'écran « Récupérer l'espace des périphériques de stockage par blocs inutilisés », sélectionnez un ou plusieurs périphériques de stockage par blocs pour archiver les données et récupérer la capacité.
+. Sélectionnez *Supprimer*.
+
 
 
 

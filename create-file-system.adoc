@@ -42,8 +42,9 @@ Les systèmes de fichiers FSx de deuxième génération pour ONTAP sont le type 
 
 .Étapes
 . Connectez-vous à l'aide de l'un des link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].
-. Dans la mosaïque Stockage, sélectionnez *Créer FSx pour ONTAP*.
-. Sur la page Créer FSX pour ONTAP, sélectionnez *création rapide*.
+. Sélectionnez le menu image:workloads-menu-icon.png["L'icône du menu hamburger permet d'accéder aux charges de travail telles que le stockage, l'analyse de données d'entreprise (EDA), l'intelligence artificielle (IA), les bases de données, VMware et l'administration."] puis sélectionnez *Stockage*.
+. Depuis le tableau de bord Stockage, sélectionnez *Créer un système de fichiers*.
+. Sur la page Créer un système de fichiers FSx pour ONTAP , sélectionnez *Création rapide*.
 +
 Vous pouvez également charger une configuration enregistrée.
 
@@ -115,7 +116,7 @@ La création avancée vous permet de définir toutes les options de configuratio
 .Étapes
 . Connectez-vous à l'aide de l'un des link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].
 . Dans la mosaïque Stockage, sélectionnez *Créer FSx pour ONTAP*.
-. Sur la page Créer FSX pour ONTAP, sélectionnez *création avancée*.
+. Sur la page Créer un système de fichiers FSx pour ONTAP , sélectionnez *Création avancée*.
 +
 Vous pouvez également charger une configuration enregistrée.
 

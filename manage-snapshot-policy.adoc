@@ -31,7 +31,7 @@ Pour afficher les stratégies d’instantané existantes, vous devez associer un
 
 .Étapes
 . Connectez-vous à l'aide de l'un des link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].
-. Dans *Stockage*, sélectionnez *Accéder au stockage*.
+. Sélectionnez le menu image:workloads-menu-icon.png["L'icône du menu hamburger permet d'accéder aux charges de travail telles que le stockage, l'analyse de données d'entreprise (EDA), l'intelligence artificielle (IA), les bases de données, VMware et l'administration."] puis sélectionnez *Stockage*.
 . Dans l'onglet *FSx for ONTAP*, sélectionnez le menu actions du système de fichiers, puis sélectionnez *Gérer*.
 . Dans la présentation du système de fichiers, sélectionnez l'onglet *Storage VMS*.
 . Dans l'onglet *VM de stockage*, sélectionnez le menu d'actions pour la machine virtuelle de stockage contenant le volume à protéger avec des snapshots planifiés, puis *Actions avancées*, puis *Gérer les stratégies de snapshot*.
@@ -54,7 +54,7 @@ Vous devez associer un lien pour activer les instantanés immuables. link:https:
 
 .Étapes
 . Connectez-vous à l'aide de l'un des link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].
-. Dans *Stockage*, sélectionnez *Accéder au stockage*.
+. Sélectionnez le menu image:workloads-menu-icon.png["L'icône du menu hamburger permet d'accéder aux charges de travail telles que le stockage, l'analyse de données d'entreprise (EDA), l'intelligence artificielle (IA), les bases de données, VMware et l'administration."] puis sélectionnez *Stockage*.
 . Dans l'onglet *FSx pour ONTAP*, sélectionnez le menu d'actions du système de fichiers qui contient le volume pour lequel verrouiller les instantanés, puis sélectionnez *Gérer*.
 . Dans la présentation du système de fichiers, sélectionnez l'onglet *volumes*.
 . Dans l’onglet *Volumes*, sélectionnez le menu d’actions du volume à protéger.
@@ -83,7 +83,7 @@ Vous devez associer un lien pour attribuer une politique de snapshot. link:https
 
 .Étapes
 . Connectez-vous à l'aide de l'un des link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].
-. Dans *Stockage*, sélectionnez *Accéder au stockage*.
+. Sélectionnez le menu image:workloads-menu-icon.png["L'icône du menu hamburger permet d'accéder aux charges de travail telles que le stockage, l'analyse de données d'entreprise (EDA), l'intelligence artificielle (IA), les bases de données, VMware et l'administration."] puis sélectionnez *Stockage*.
 . Dans l'onglet *FSx pour ONTAP*, sélectionnez le menu d'actions du système de fichiers contenant le volume auquel attribuer une stratégie de snapshot, puis sélectionnez *Gérer*.
 . Dans la présentation du système de fichiers, sélectionnez l'onglet *Storage VMS*.
 . Dans l'onglet *VM de stockage*, sélectionnez le menu d'actions pour la machine virtuelle de stockage contenant le volume à protéger avec des snapshots planifiés, puis *Actions avancées*, puis *Gérer les stratégies de snapshot*.
@@ -109,7 +109,7 @@ Vous devez associer un lien pour supprimer une politique de snapshot. link:https
 
 .Étapes
 . Connectez-vous à l'aide de l'un des link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].
-. Dans *Stockage*, sélectionnez *Accéder au stockage*.
+. Sélectionnez le menu image:workloads-menu-icon.png["L'icône du menu hamburger permet d'accéder aux charges de travail telles que le stockage, l'analyse de données d'entreprise (EDA), l'intelligence artificielle (IA), les bases de données, VMware et l'administration."] puis sélectionnez *Stockage*.
 . Dans l'onglet *FSx pour ONTAP*, sélectionnez le menu d'actions du système de fichiers contenant le volume auquel attribuer une stratégie de snapshot, puis sélectionnez *Gérer*.
 . Dans la présentation du système de fichiers, sélectionnez l'onglet *Storage VMS*.
 . Dans l'onglet *VM de stockage*, sélectionnez le menu d'actions pour la machine virtuelle de stockage contenant le volume à protéger avec des snapshots planifiés, puis *Actions avancées*, puis *Gérer les stratégies de snapshot*.
@@ -131,7 +131,7 @@ Lorsqu'une règle de snapshot est attribuée à plusieurs volumes, vous devez la
 
 .Étapes
 . Connectez-vous à l'aide de l'un des link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].
-. Dans *Stockage*, sélectionnez *Accéder au stockage*.
+. Sélectionnez le menu image:workloads-menu-icon.png["L'icône du menu hamburger permet d'accéder aux charges de travail telles que le stockage, l'analyse de données d'entreprise (EDA), l'intelligence artificielle (IA), les bases de données, VMware et l'administration."] puis sélectionnez *Stockage*.
 . Dans le menu Stockage, sélectionnez *FSx pour ONTAP*.
 . Depuis *FSx for ONTAP*, sélectionnez le menu d'actions du système de fichiers avec le volume, puis sélectionnez *Gérer*.
 . Dans la présentation du système de fichiers, sélectionnez l'onglet *Storage VMS*.

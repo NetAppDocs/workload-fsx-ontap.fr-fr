@@ -101,11 +101,13 @@ Utilisez la console Workload Factory pour visualiser et analyser les événement
 
 .Étapes
 . Connectez-vous à l'aide de l'un des link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].
-. Dans la mosaïque Stockage, sélectionnez *Accéder au stockage*.
-. Dans le menu Stockage, sélectionnez *FSx pour ONTAP*.
-. Sélectionnez le système de fichiers FSx pour ONTAP à analyser, puis sélectionnez *Gérer*.
-. Sélectionnez l'onglet *Analyse*.
-. Si nécessaire, complétez les *exigences de configuration de l'analyse IA* en suivant les instructions à l'écran pour satisfaire aux prérequis manquants.
-. Sélectionnez *Analyser*.
+. Sélectionnez le menu image:workloads-menu-icon.png["L'icône du menu hamburger permet d'accéder aux charges de travail telles que le stockage, l'analyse de données d'entreprise (EDA), l'intelligence artificielle (IA), les bases de données, VMware et l'administration."] puis sélectionnez *Stockage*.
+. Dans le menu Stockage, sélectionnez *Analyse*.
+. À partir de l'écran d'analyse, sélectionnez les comptes AWS, les informations d'identification et les régions contenant les systèmes de fichiers FSx pour ONTAP que vous souhaitez analyser.
++
+Seuls les systèmes de fichiers FSx pour ONTAP avec affichage des événements à l'écran.
+
+. Si nécessaire, complétez la configuration de l'analyse IA en suivant les instructions à l'écran pour satisfaire aux prérequis manquants.
+. Trouvez le système de fichiers FSx pour ONTAP que vous souhaitez analyser, puis sélectionnez *Afficher les événements*.
 . Consultez les informations détaillées sur l'événement.
 

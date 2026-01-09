@@ -43,7 +43,7 @@ Avant d'ajouter des paires haute disponibilité à un système de fichiers, proc
 
 .Étapes
 . Connectez-vous à l'aide de l'un des link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].
-. Dans la mosaïque Stockage, sélectionnez *Accéder au stockage*.
+. Sélectionnez le menu image:workloads-menu-icon.png["L'icône du menu hamburger permet d'accéder aux charges de travail telles que le stockage, l'analyse de données d'entreprise (EDA), l'intelligence artificielle (IA), les bases de données, VMware et l'administration."] puis sélectionnez *Stockage*.
 . Dans le menu Stockage, sélectionnez *FSx pour ONTAP*.
 . Dans *FSx for ONTAP*, sous *Informations*, sélectionnez l'icône en forme de crayon à côté de *Paires HA*.
 . Dans la boîte de dialogue *Ajouter des paires HA*, sélectionnez le nombre de paires HA à ajouter au système de fichiers.

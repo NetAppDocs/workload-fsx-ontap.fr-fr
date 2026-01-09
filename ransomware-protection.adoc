@@ -38,13 +38,15 @@ Modes d'apprentissage et actifs:: ARP/AI fonctionne d'abord en _mode d'apprentis
 +
 En mode actif, si une extension de fichier est marquée comme anormale, vous devez évaluer l'alerte. Vous pouvez agir sur l'alerte pour protéger vos données ou marquer l'alerte comme un faux positif. Le fait de marquer une alerte comme un faux positif met à jour le profil d'alerte. Par exemple, si l'alerte est déclenchée par une nouvelle extension de fichier et que vous marquez l'alerte comme un faux positif, vous ne recevrez pas d'alerte la prochaine fois que l'extension de fichier sera observée.
 
++
+Les volumes FlexVol contenant un périphérique de stockage par blocs démarrent ARP/AI en mode actif.
+
 
 
 --
 Configurations non prises en charge:: Les configurations suivantes ne prennent pas en charge l’utilisation d’ARP/AI.
 +
 --
-* Volumes SAN/Bloc
 * Volumes iSCSI
 * Volumes NVMe
 
@@ -69,7 +71,7 @@ Pour activer ARP/AI pour un système de fichiers ou un volume, vous devez associ
 --
 .Étapes
 . Connectez-vous à l'aide de l'un des link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].
-. Dans la mosaïque Stockage, sélectionnez *Accéder au stockage*.
+. Sélectionnez le menu image:workloads-menu-icon.png["L'icône du menu hamburger permet d'accéder aux charges de travail telles que le stockage, l'analyse de données d'entreprise (EDA), l'intelligence artificielle (IA), les bases de données, VMware et l'administration."] puis sélectionnez *Stockage*.
 . Dans le menu Stockage, sélectionnez *FSx pour ONTAP*.
 . Depuis *FSx for ONTAP*, sélectionnez le menu d'actions du système de fichiers pour activer ARP/AI, puis sélectionnez *Gérer*.
 . Sous Informations, sélectionnez l’icône en forme de crayon à côté de *Protection autonome contre les ransomwares*.  L'icône en forme de crayon apparaît à côté de la flèche lorsque la souris survole la ligne *Protection autonome contre les ransomwares*.
@@ -90,7 +92,7 @@ Pour activer ARP/AI pour un système de fichiers ou un volume, vous devez associ
 --
 .Étapes
 . Connectez-vous à l'aide de l'un des link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].
-. Dans la mosaïque Stockage, sélectionnez *Accéder au stockage*.
+. Sélectionnez le menu image:workloads-menu-icon.png["L'icône du menu hamburger permet d'accéder aux charges de travail telles que le stockage, l'analyse de données d'entreprise (EDA), l'intelligence artificielle (IA), les bases de données, VMware et l'administration."] puis sélectionnez *Stockage*.
 . Dans le menu Stockage, sélectionnez *FSx pour ONTAP*.
 . Depuis *FSx for ONTAP*, sélectionnez le menu d'actions du système de fichiers pour activer ARP/AI, puis sélectionnez *Gérer*.
 . Dans l'onglet Volumes, sélectionnez le menu d'actions du volume pour activer ARP/AI, puis *Actions de protection des données*, puis *Gérer ARP/AI*.
@@ -114,7 +116,7 @@ Déterminez si une attaque est une fausse alarme ou un incident lié à un ranso
 
 .Étapes
 . Connectez-vous à l'aide de l'un des link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].
-. Dans la mosaïque Stockage, sélectionnez *Accéder au stockage*.
+. Sélectionnez le menu image:workloads-menu-icon.png["L'icône du menu hamburger permet d'accéder aux charges de travail telles que le stockage, l'analyse de données d'entreprise (EDA), l'intelligence artificielle (IA), les bases de données, VMware et l'administration."] puis sélectionnez *Stockage*.
 . Dans le menu Stockage, sélectionnez *FSx pour ONTAP*.
 . Depuis *FSx for ONTAP*, sélectionnez le système de fichiers pour lequel valider les attaques de ransomware.
 . Dans la présentation du système de fichiers, sélectionnez l'onglet *volumes*.
@@ -136,7 +138,7 @@ En connaissant les fichiers affectés et l'heure de l'attaque, il est possible d
 
 .Étapes
 . Connectez-vous à l'aide de l'un des link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].
-. Dans la mosaïque Stockage, sélectionnez *Accéder au stockage*.
+. Sélectionnez le menu image:workloads-menu-icon.png["L'icône du menu hamburger permet d'accéder aux charges de travail telles que le stockage, l'analyse de données d'entreprise (EDA), l'intelligence artificielle (IA), les bases de données, VMware et l'administration."] puis sélectionnez *Stockage*.
 . Dans le menu Stockage, sélectionnez *FSx pour ONTAP*.
 . Depuis *FSx for ONTAP*, sélectionnez le système de fichiers pour lequel récupérer les données.
 . Dans la présentation du système de fichiers, sélectionnez l'onglet *volumes*.

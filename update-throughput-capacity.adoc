@@ -17,7 +17,7 @@ Pour connaître les limites de capacité de débit, reportez-vous à link:https:
 
 .Étapes
 . Connectez-vous à l'aide de l'un des link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].
-. Dans la mosaïque Stockage, sélectionnez *Accéder au stockage*.
+. Sélectionnez le menu image:workloads-menu-icon.png["L'icône du menu hamburger permet d'accéder aux charges de travail telles que le stockage, l'analyse de données d'entreprise (EDA), l'intelligence artificielle (IA), les bases de données, VMware et l'administration."] puis sélectionnez *Stockage*.
 . Dans le menu Stockage, sélectionnez *FSx pour ONTAP*.
 . Depuis *FSx for ONTAP*, sélectionnez le menu d'actions du système de fichiers pour mettre à jour la capacité de débit, puis sélectionnez *Gérer*.
 . Sous informations, sélectionnez l'icône en forme de crayon en regard de *capacité de débit*. L'icône en forme de crayon apparaît à côté de la flèche de la liste déroulante lorsque la souris survole la ligne *capacité de débit*.

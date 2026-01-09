@@ -30,10 +30,9 @@ Vous disposez d'options pour consulter les recommandations concernant les probl�
 Workload Factory analyse l'état bien conçu des configurations suivantes pour les systèmes de fichiers FSX pour ONTAP :
 
 * Fiabilité : seuil de capacité SSD, snapshots locaux planifiés, FSx pour les sauvegardes ONTAP , réplication des données à distance et fiabilité des données pour une conservation à long terme
-* Sécurité : Protection autonome contre les ransomwares NetApp avec IA (ARP/AI) et accès non autorisé aux volumes
-* Excellence opérationnelle : gestion automatique de la capacité, seuil d’utilisation de la capacité des fichiers de volume et taux d’utilisation du volume proche de la saturation
-* Optimisation des coûts : gains d’efficacité en matière de stockage, hiérarchisation des données et suppression inutile des instantanés
-* Optimisation des performances : rééquilibrage des volumes FlexGroup
+* Sécurité : Protection autonome contre les ransomwares NetApp avec IA (ARP/AI) désactivée et accès non autorisé aux volumes
+* Excellence opérationnelle : gestion automatique de la capacité, seuil d’utilisation de la capacité des fichiers de volume, utilisation du volume proche de la saturation et mode d’écriture basé sur la relation du cache
+* Optimisation des coûts : efficacité du stockage, hiérarchisation des données, suppression des instantanés et des sauvegardes inutiles
 
 
 
@@ -50,7 +49,7 @@ Vous pouvez résoudre les problèmes de configuration d'un système de fichiers 
 
 .Étapes
 . Connectez-vous à l'aide de l'un des link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].
-. Dans la mosaïque Stockage, sélectionnez *Accéder au stockage*.
+. Sélectionnez le menu image:workloads-menu-icon.png["L'icône du menu hamburger permet d'accéder aux charges de travail telles que le stockage, l'analyse de données d'entreprise (EDA), l'intelligence artificielle (IA), les bases de données, VMware et l'administration."] puis sélectionnez *Stockage*.
 . Dans le menu Stockage, sélectionnez *FSx pour ONTAP*.
 . Depuis *FSx for ONTAP*, sélectionnez le menu d'actions du système de fichiers à mettre à jour, puis sélectionnez *Gérer*.
 . Accédez à l'aperçu du système de fichiers FSx for ONTAP jusqu'à l'onglet *État bien architecturé*.
@@ -84,7 +83,7 @@ Fermer pour arrêter indéfiniment une analyse de configuration pour un système
 
 .Étapes
 . Connectez-vous à l'aide de l'un des link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].
-. Dans la mosaïque Stockage, sélectionnez *Accéder au stockage*.
+. Sélectionnez le menu image:workloads-menu-icon.png["L'icône du menu hamburger permet d'accéder aux charges de travail telles que le stockage, l'analyse de données d'entreprise (EDA), l'intelligence artificielle (IA), les bases de données, VMware et l'administration."] puis sélectionnez *Stockage*.
 . Dans le menu Stockage, sélectionnez *FSx pour ONTAP*.
 . Depuis *FSx for ONTAP*, sélectionnez le menu actions du système de fichiers puis *Gérer*.
 . Accédez à l'aperçu du système de fichiers FSx for ONTAP jusqu'à l'onglet *État bien architecturé*.
@@ -97,7 +96,7 @@ Fermer pour arrêter indéfiniment une analyse de configuration pour un système
 --
 .Étapes
 . Connectez-vous à l'aide de l'un des link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].
-. Dans la mosaïque Stockage, sélectionnez *Accéder au stockage*.
+. Sélectionnez le menu image:workloads-menu-icon.png["L'icône du menu hamburger permet d'accéder aux charges de travail telles que le stockage, l'analyse de données d'entreprise (EDA), l'intelligence artificielle (IA), les bases de données, VMware et l'administration."] puis sélectionnez *Stockage*.
 . Dans le menu Stockage, sélectionnez *FSx pour ONTAP*.
 . Depuis *FSx for ONTAP*, sélectionnez le menu actions du système de fichiers puis *Gérer*.
 . Accédez à l'aperçu du système de fichiers FSx for ONTAP jusqu'à l'onglet *État bien architecturé*.
@@ -131,7 +130,7 @@ Réactivez une analyse de configuration rejetée à tout moment.  Vous pouvez s�
 --
 .Étapes
 . Connectez-vous à l'aide de l'un des link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].
-. Dans la mosaïque Stockage, sélectionnez *Accéder au stockage*.
+. Sélectionnez le menu image:workloads-menu-icon.png["L'icône du menu hamburger permet d'accéder aux charges de travail telles que le stockage, l'analyse de données d'entreprise (EDA), l'intelligence artificielle (IA), les bases de données, VMware et l'administration."] puis sélectionnez *Stockage*.
 . Dans le menu Stockage, sélectionnez *FSx pour ONTAP*.
 . Depuis *FSx for ONTAP*, sélectionnez le nom d'action du système de fichiers, puis *Gérer*.
 . Accédez à l'aperçu du système de fichiers FSx for ONTAP jusqu'à l'onglet *État bien architecturé*.
@@ -144,7 +143,7 @@ Réactivez une analyse de configuration rejetée à tout moment.  Vous pouvez s�
 --
 .Étapes
 . Connectez-vous à l'aide de l'un des link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].
-. Dans la mosaïque Stockage, sélectionnez *Accéder au stockage*.
+. Sélectionnez le menu image:workloads-menu-icon.png["L'icône du menu hamburger permet d'accéder aux charges de travail telles que le stockage, l'analyse de données d'entreprise (EDA), l'intelligence artificielle (IA), les bases de données, VMware et l'administration."] puis sélectionnez *Stockage*.
 . Dans le menu Stockage, sélectionnez *FSx pour ONTAP*.
 . Depuis *FSx for ONTAP*, sélectionnez le menu actions du système de fichiers puis *Gérer*.
 . Accédez à l'aperçu du système de fichiers FSx for ONTAP jusqu'à l'onglet *État bien architecturé*.

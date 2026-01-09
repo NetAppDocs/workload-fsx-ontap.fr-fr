@@ -48,7 +48,7 @@ image:screenshot-on-prem-connectivity.png["Capture d'écran montrant comment con
 
 .Étapes
 . Connectez-vous à l'aide de l'un des link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].
-. Dans la mosaïque Stockage, sélectionnez *Accéder au stockage*.
+. Sélectionnez le menu image:workloads-menu-icon.png["L'icône du menu hamburger permet d'accéder aux charges de travail telles que le stockage, l'analyse de données d'entreprise (EDA), l'intelligence artificielle (IA), les bases de données, VMware et l'administration."] puis sélectionnez *Stockage*.
 . Sélectionnez l'onglet *On-prest ONTAP*.
 . Sélectionnez *découvrir*.
 . Passez en revue les conditions préalables et sélectionnez *Suivant*.
@@ -84,7 +84,7 @@ Répliquez les données de volume d'un cluster ONTAP sur site vers un système d
 
 .Étapes
 . Connectez-vous à l'aide de l'un des link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].
-. Dans la mosaïque Stockage, sélectionnez *Accéder au stockage*.
+. Sélectionnez le menu image:workloads-menu-icon.png["L'icône du menu hamburger permet d'accéder aux charges de travail telles que le stockage, l'analyse de données d'entreprise (EDA), l'intelligence artificielle (IA), les bases de données, VMware et l'administration."] puis sélectionnez *Stockage*.
 . Dans le menu Stockage, sélectionnez *On-premises ONTAP*.
 . Pour rechercher des volumes par VM de stockage, vous pouvez *sélectionner VM de stockage* dans la liste déroulante.
 . Sélectionnez un ou plusieurs volumes à répliquer, puis sélectionnez *répliquer*.
@@ -149,7 +149,7 @@ Vous devez link:delete-replication.html["supprimez toutes les relations de répl
 
 .Étapes
 . Connectez-vous à l'aide de l'un des link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].
-. Dans la mosaïque Stockage, sélectionnez *Accéder au stockage*.
+. Sélectionnez le menu image:workloads-menu-icon.png["L'icône du menu hamburger permet d'accéder aux charges de travail telles que le stockage, l'analyse de données d'entreprise (EDA), l'intelligence artificielle (IA), les bases de données, VMware et l'administration."] puis sélectionnez *Stockage*.
 . Dans le menu Stockage, sélectionnez *On-premises ONTAP*.
 . Sélectionnez le cluster ONTAP sur site à supprimer.
 . Sélectionnez le menu Actions et sélectionnez *Supprimer de Workload Factory*.
