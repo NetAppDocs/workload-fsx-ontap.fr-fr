@@ -1240,7 +1240,6 @@
   <block id="824994853534784eb4495b892e13b1c6" category="paragraph">Si l'utilisateur que vous indiquez n'est pas l'utilisateur fsxadmin, et que vous devez ensuite réinitialiser le mot de passe fsxadmin, vous pourrez le faire à partir de la console AWS.</block>
   <block id="dd34b811cd079417f985f8f56a4f1dca" category="list-text">*Informations d'identification de la VM de stockage* : facultatif. Entrez votre nom d'utilisateur. Le mot de passe peut être spécifique à ce système de fichiers ou vous pouvez utiliser le même mot de passe que celui saisi pour les informations d'identification ONTAP. Le mot de passe peut être défini maintenant ou ultérieurement.</block>
   <block id="37b002845528ac0296b86d28bb71e5a5" category="doc">Connectez-vous à un système de fichiers FSX pour ONTAP via un lien Lambda</block>
-  <block id="3909315ab3cc8353eec0cd02ce0845da" category="admonition">AWS secrets Manager n'est pas pris en charge lors de l'utilisation d'un connecteur.</block>
   <block id="2c1b9e7969c6e96f38bd871fc9f26ae1" category="section-title">Associer un nouveau lien</block>
   <block id="05a2e668e80fd3ace12e9585ebc06578" category="paragraph">L'association d'un nouveau lien inclut la création et l'association de liens.</block>
   <block id="de786693aed7955f1cb538f51e25f7d6" category="paragraph">Vous pouvez créer des secrets en alignement avec les autorisations par défaut ou affecter vos autorisations personnalisées pour la stratégie de liens.</block>
@@ -2560,4 +2559,5 @@
   <block id="2c77adf5fa1de4ed37a6e14d2212f074" category="list-text">Sélectionnez *Archive*.</block>
   <block id="b06e53572a17ccf08cb282ac59af4b93" category="paragraph">Les périphériques de stockage par blocs qui ne sont plus associés à un client ou qui sont inutilisés pendant sept jours consécutifs sont classés comme périphériques de stockage par blocs orphelins. Cette opération supprime et démappe le périphérique de stockage sélectionné. Si le FlexVol volume hôte ne contient aucun périphérique de stockage par blocs, Workload Factory le supprime également.</block>
   <block id="33e155c9d3cab85dd1499ba63bd9d34d" category="paragraph">Les volumes FlexVol contenant un périphérique de stockage par blocs démarrent ARP/AI en mode actif.</block>
+  <block id="aca2e051b8b58a53ee4cf20a78bdde8a" category="list-text">Le lien doit pouvoir se connecter au point de terminaison suivant : \ https://api.workloads.netapp.com. La console Web contacte ce point de terminaison pour interagir avec les API Workload Factory afin de gérer et d'exploiter les charges de travail FSx pour ONTAP .</block>
 </blocks>

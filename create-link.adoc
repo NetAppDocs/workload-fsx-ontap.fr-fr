@@ -23,7 +23,7 @@ Vous pouvez créer un lien dans votre compte lors de la définition d'un systèm
 Les liens nécessitent une authentification. Vous pouvez authentifier les liens à l'aide des informations d'identification stockées dans le service d'informations d'identification Workload Factory ou avec vos informations d'identification stockées dans AWS Secrets Manager. Une seule méthode d’authentification est prise en charge par lien. Par exemple, si vous sélectionnez l’authentification par lien avec AWS Secrets Manager, vous ne pourrez pas modifier la méthode d’authentification ultérieurement.
 
 
-NOTE: AWS secrets Manager n'est pas pris en charge lors de l'utilisation d'un connecteur.
+NOTE: AWS Secrets Manager n'est pas pris en charge lors de l'utilisation d'un agent de console.
 
 
 
@@ -46,6 +46,7 @@ Vous disposez de deux options pour créer des liens dans ce flux de travail : au
 ** Pour l'analyse des événements du système de gestion des urgences (EMS) CloudShell et FSx pour ONTAP : port 22 (SSH)
 
 
+* Le lien doit pouvoir se connecter au point de terminaison suivant : \ https://api.workloads.netapp.com. La console Web contacte ce point de terminaison pour interagir avec les API Workload Factory afin de gérer et d'exploiter les charges de travail FSx pour ONTAP .
 * Lorsque vous ajoutez un lien à l'aide d'une pile CloudFormation, vous devez disposer des autorisations suivantes dans votre compte AWS :
 +
 [%collapsible]
