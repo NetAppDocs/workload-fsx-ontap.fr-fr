@@ -1,0 +1,69 @@
+---
+sidebar: sidebar 
+permalink: manage-igroups.html 
+keywords: igroup, manage igroups, manage client access, delete igroup 
+summary: Gérez les igroups pour un système de fichiers FSx for ONTAP dans NetApp Workload Factory. 
+---
+= Gérez les igroups d'un système de fichiers dans NetApp Workload Factory
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Utilisez la console NetApp Workload Factory pour gérer les igroups et contrôler l'accès client pour les périphériques de stockage bloc FSx for ONTAP. Vous pouvez consulter les détails des igroups, gérer l'accès client et supprimer des igroups.
+
+.Avant de commencer
+* Vous devez associer un lien pour gérer les igroups. link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["Apprenez à associer un lien existant ou à créer et associer un nouveau lien"]. Une fois le lien associé, revenez à cette opération.
+* Vous devez disposer d'un igroup existant pour consulter et gérer.
+
+
+
+
+== Gérer l'accès client pour un igroup
+
+Vous pouvez gérer l'accès client à un igroup existant à tout moment.
+
+.Étapes
+. Connectez-vous à l'aide de l'un des link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].
+. Sélectionnez le menu image:workloads-menu-icon.png["L'icône du menu hamburger permet d'accéder aux charges de travail telles que le stockage, l'analyse de données d'entreprise (EDA), l'intelligence artificielle (IA), les bases de données, VMware et l'administration."] puis sélectionnez *Stockage*.
+. Dans le menu Stockage, sélectionnez *FSx pour ONTAP*.
+. Dans *FSx pour ONTAP*, sélectionnez l'onglet *Bloquer les périphériques*.
+. Sélectionnez le type de ressource *Initiator groups (igroups)* pour afficher les igroups existants.
+. Accédez au menu actions du périphérique de bloc et sélectionnez *Gérer l'accès client*.
+. Vérifiez les détails d'accès client affichés pour l'igroup.
+. Pour modifier l'accès client, sélectionnez *Modifier l'accès client*.
+. Dans la boîte de dialogue *Modifier l'accès client*, vous pouvez modifier les éléments suivants :
++
+** *nom igroup*
+** *Description igroup*
+** *Nom de la machine virtuelle de stockage*
+** *Nom du périphérique bloc*
+** *Type de système d'exploitation*
+** *Initiateurs hôtes*
+
+
+. Sélectionnez *appliquer*.
+
+
+
+
+== Supprimer un igroup
+
+Vous pouvez supprimer un igroup existant lorsqu'il n'est plus nécessaire.
+
+.Étapes
+. Connectez-vous à l'aide de l'un des link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].
+. Sélectionnez le menu image:workloads-menu-icon.png["L'icône du menu hamburger permet d'accéder aux charges de travail telles que le stockage, l'analyse de données d'entreprise (EDA), l'intelligence artificielle (IA), les bases de données, VMware et l'administration."] puis sélectionnez *Stockage*.
+. Dans le menu Stockage, sélectionnez *FSx pour ONTAP*.
+. Dans *FSx pour ONTAP*, sélectionnez l'onglet *Bloquer les périphériques*.
+. Sélectionnez le type de ressource *Initiator groups (igroups)* pour afficher les igroups existants.
+. Accédez au menu des actions du block device, puis sélectionnez *Supprimer le groupe d'initiateurs*.
+. Dans la boîte de dialogue Supprimer le groupe d'initiateurs (igroup), tapez "delete" pour confirmer que vous souhaitez supprimer l'igroup, puis sélectionnez *Supprimer*.
+
+
+
+
+== Informations connexes
+
+link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-igroup.html["Créer un igroup pour un système de fichiers FSx for ONTAP"]

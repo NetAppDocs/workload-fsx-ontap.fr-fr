@@ -51,8 +51,12 @@ sidebar:
         url: "/create-volume.html"
       - title: Accès à vos données
         url: "/access-data.html"
-    - title: Créer un périphérique de bloc
-      url: "/create-block-device.html"
+    - title: Créer des ressources de stockage bloc
+      entries:
+      - title: Créer un igroup
+        url: "/create-igroup.html"
+      - title: Créer un périphérique de bloc
+        url: "/create-block-device.html"
     - title: Créez une machine virtuelle de stockage
       url: "/create-storage-vm.html"
     - title: Protégez vos données
@@ -127,8 +131,10 @@ sidebar:
         url: "/split-cloned-volume.html"
       - title: Supprimer un volume
         url: "/delete-volume.html"
-    - title: Administration des périphériques de blocage
+    - title: Administration du stockage bloc
       entries:
+      - title: Gérer les igroups
+        url: "/manage-igroups.html"
       - title: Gérer les périphériques de blocage
         url: "/manage-block-devices.html"
     - title: Administration du système de fichiers

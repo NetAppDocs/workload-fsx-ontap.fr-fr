@@ -1,0 +1,44 @@
+---
+sidebar: sidebar 
+permalink: create-igroup.html 
+keywords: create initiator group, create igroup, iscsi protocol 
+summary: 'Créez des groupes d"initiateurs pour gérer l"accès des hôtes aux périphériques de stockage bloc dans NetApp Workload Factory.' 
+---
+= Créez un groupe d'initiateurs pour un système de fichiers dans NetApp Workload Factory
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Utilisez NetApp Workload Factory pour créer des groupes d'initiateurs et gérer l'accès des hôtes aux périphériques de stockage bloc SAN.
+
+.Description de la tâche
+Les groupes d'initiateurs, ou igroups, connectent les périphériques bloc (LUN) aux ressources de calcul autorisées à y accéder. Contrairement à NFS ou CIFS, où un volume est largement accessible et où les autorisations des utilisateurs contrôlent l'accès, les permissions de stockage bloc opèrent au niveau de la machine. En règle générale, un seul système peut accéder à un périphérique bloc à la fois.
+
+Un igroup sert de couche d'autorisation pour le stockage bloc. Lorsqu'un serveur se connecte au système de stockage, il s'identifie à l'aide de son initiateur hôte iSCSI qualifié (IQN). Si cet IQN appartient à un ou plusieurs igroups, alors le serveur obtient l'accès à tous les LUN associés à ces igroups. Un igroup et une connexion hôte iSCSI sont tous deux nécessaires pour qu'iSCSI fonctionne correctement.
+
+.Avant de commencer
+Vous devez associer un lien pour créer des igroups. link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["Apprenez à associer un lien existant ou à créer et associer un nouveau lien"]. Une fois le lien associé, revenez à cette opération.
+
+.Étapes
+. Connectez-vous à l'aide de l'un des link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].
+. Dans la mosaïque Stockage, sélectionnez *Accéder au stockage*.
+. Dans le menu Stockage, sélectionnez *FSx pour ONTAP*.
+. Dans *FSx pour ONTAP*, sélectionnez l'onglet *Bloquer les périphériques*.
+. Sélectionnez le type de ressource *Create initiator group* puis sélectionnez *Create igroup*.
+. Dans la boîte de dialogue *Créer un groupe d'initiateurs*, procédez comme suit :
++
+** *igroup name* : Saisissez un nom pour le groupe d'initiateurs.
+** *Description du igroup* : (Facultatif) Saisissez une description pour le igroup.
+** *Nom de la machine virtuelle de stockage* : Sélectionnez la machine virtuelle de stockage pour le groupe d'initiateurs.
+** *Nom du block device* : Sélectionnez un ou plusieurs block devices à associer au groupe d’initiateurs. Les block devices listés sont ceux qui n’ont pas encore été associés à un initiateur hôte.
+** *Type de système d'exploitation* : Sélectionnez Linux, VMware ou Windows pour le type de système d'exploitation.
+** *Initiateurs hôtes* : Ajoutez un ou plusieurs initiateurs hôtes qualifiés iSCSI (IQN) au groupe d'initiateurs.
+
+
+. Sélectionnez *Créer*.
+
+
+.Informations connexes
+link:https://docs.netapp.com/us-en/workload-fsx-ontap/manage-igroups.html["Gérer les igroups pour un système de fichiers FSx for ONTAP"]

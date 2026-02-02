@@ -2,8 +2,6 @@
 :allow-uri-read: 
 
 
-. *Nom de la VM de stockage* : sélectionnez la VM de stockage dans le menu déroulant. La machine virtuelle de stockage que vous sélectionnez est la cible de tous les volumes sélectionnés dans cette relation de réplication.
-. *Nom du volume* : le nom du volume cible est généré automatiquement au format suivant `{OriginalVolumeName}_copy`. Vous pouvez utiliser le nom du volume généré automatiquement ou entrer un autre nom de volume.
 . *Cas d’utilisation* : sélectionnez l’un des cas d’utilisation suivants pour la réplication.  En fonction du cas d'utilisation sélectionné, Workload Factory remplit le formulaire avec les valeurs recommandées conformément aux meilleures pratiques.  Vous pouvez accepter les valeurs recommandées ou apporter des modifications au fur et à mesure que vous remplissez le formulaire.
 +
 ** Migration : transfère vos données vers le système de fichiers cible FSX pour ONTAP
@@ -28,6 +26,9 @@ Pour tous les cas d'utilisation, si vous activez les snapshots pour la conservat
 
 
 
+. *FSX pour système de fichiers ONTAP* : sélectionnez les informations d'identification, la région et le nom du système de fichiers FSX pour ONTAP pour le système de fichiers cible FSX pour ONTAP.
+. *Nom de la VM de stockage* : sélectionnez la VM de stockage dans le menu déroulant. La machine virtuelle de stockage que vous sélectionnez est la cible de tous les volumes sélectionnés dans cette relation de réplication.
+. *Nom du volume* : le nom du volume cible est généré automatiquement au format suivant `{OriginalVolumeName}_copy`. Vous pouvez utiliser le nom du volume généré automatiquement ou entrer un autre nom de volume.
 . *Règle de hiérarchisation* : sélectionnez la règle de hiérarchisation pour les données stockées dans le volume cible. La règle de Tiering est définie par défaut sur la règle de hiérarchisation recommandée pour le cas d'utilisation que vous avez sélectionné.
 +
 _Balanced (Auto)_ est la stratégie de hiérarchisation par défaut lors de la création d'un volume à l'aide de la console Workload Factory.  Pour plus d'informations sur les politiques de hiérarchisation des volumes, reportez-vous àlink:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/volume-storage-capacity.html#data-tiering-policy["Capacité de stockage du volume"^] dans la documentation AWS FSx pour NetApp ONTAP .  Notez que Workload Factory utilise des noms basés sur des cas d'utilisation dans la console Workload Factory pour les stratégies de hiérarchisation et inclut les noms de stratégie de hiérarchisation FSx pour ONTAP entre parenthèses.
@@ -62,4 +63,14 @@ NOTE: Les étiquettes de source et de cible correspondantes sont requises pour l
 ** *Stratégies Snapshot* : dans le tableau, sélectionnez la fréquence de la règle de snapshot et le nombre de copies à conserver. Vous pouvez sélectionner plusieurs règles de snapshot.
 
 
+. *Point d'accès S3* : Vous pouvez, en option, connecter un point d'accès S3 pour accéder aux données du système de fichiers FSx pour ONTAP résidant sur des volumes NFS ou SMB/CIFS via les API AWS S3. Seul le type d'accès aux fichiers est pris en charge. Veuillez fournir les détails suivants :
++
+** *Nom du point d'accès S3* : Saisissez le nom du point d'accès S3.
+** *Utilisateur* : sélectionnez un utilisateur existant avec accès au volume ou créez un nouvel utilisateur.
+** *Type d'utilisateur* : sélectionnez *UNIX* ou *Windows* comme type d'utilisateur.
+** *Configuration réseau* : Sélectionnez *Internet* ou *Virtual private cloud (VPC)*. Le type de réseau que vous choisissez détermine si le point d'accès est accessible depuis Internet ou limité à un VPC spécifique.
+** *Activer les métadonnées* : L’activation des métadonnées crée une table S3 contenant tous les objets accessibles par le point d'accès S3, que vous pouvez utiliser pour l’audit, la gouvernance, l’automatisation, l’analyse et l’optimisation. L’activation des métadonnées engendre des coûts AWS supplémentaires. Consultez link:https://aws.amazon.com/s3/pricing/["Documentation tarifaire Amazon S3"^] pour plus d’informations.
+
+
+. *Étiquettes de point d'accès S3* : Vous pouvez éventuellement ajouter jusqu'à 50 étiquettes.
 
