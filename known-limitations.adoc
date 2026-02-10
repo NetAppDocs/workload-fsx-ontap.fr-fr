@@ -72,7 +72,6 @@ Pour connaître le nombre maximal de SVM par système de fichiers, reportez-vous
 == Prise en charge du protocole iSCSI
 
 * Le protocole iSCSI n'est disponible que pour les volumes FlexVol. ^1^
-* Une seule LUN peut être configurée par volume.
 * La réduction de la taille des volumes n'est pas prise en charge pour les volumes iSCSI.
 
 
@@ -107,12 +106,6 @@ Le calculateur d'économies de stockage ne calcule pas les économies pour les c
 * EBS (Elastic Block Store) : types de volume st1, sc1 et standard
 * Système de fichiers élastique (EFS) : mode de débit maximal
 
-
-
-
-== System Manager
-
-System Manager ne prend pas en charge les liens pour la connectivité ONTAP avec FSX.
 
 
 
