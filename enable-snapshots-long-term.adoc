@@ -19,11 +19,14 @@ Les mêmes étapes s'appliquent à l'activation et à la modification de snapsho
 
 Lorsqu'un cluster ONTAP sur site est la cible de la relation de réplication, la modification des snapshots pour une conservation à long terme n'est pas prise en charge.
 
+
+NOTE: La modification de la conservation à long terme n'est pas disponible lors de la réplication des données et des paramètres de configuration des storage VM.
+
 .Étapes
 . Connectez-vous à l'aide de l'un des link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].
 . Sélectionnez le menu image:workloads-menu-icon.png["L'icône du menu hamburger permet d'accéder aux charges de travail telles que le stockage, l'analyse de données d'entreprise (EDA), l'intelligence artificielle (IA), les bases de données, VMware et l'administration."] puis sélectionnez *Stockage*.
 . Dans le menu Stockage, sélectionnez *FSx pour ONTAP*.
-. Depuis *FSx for ONTAP*, sélectionnez le nom d'action du système de fichiers à mettre à jour, puis sélectionnez *Gérer*.
+. Depuis *FSx for ONTAP*, sélectionnez le menu d'actions du système de fichiers à mettre à jour, puis sélectionnez *Gérer*.
 . Dans la présentation du système de fichiers, sélectionnez l'onglet *relations de réplication*.
 . Dans l’onglet Relations de réplication, sélectionnez le menu d’actions de la planification de relation de réplication à modifier.
 . Sélectionnez *Modifier la rétention à long terme*.

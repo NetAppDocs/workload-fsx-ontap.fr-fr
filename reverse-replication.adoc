@@ -16,7 +16,7 @@ Inversez une relation de réplication dans NetApp Workload Factory afin que le v
 Les opérations inversées sont prises en charge pour les éléments suivants :
 
 * Deux systèmes de fichiers FSX pour ONTAP
-* Un système de fichiers FSX pour ONTAP et un cluster ONTAP sur site
+* Un système de fichiers FSx for ONTAP et un système ONTAP sur site
 
 
 Après avoir arrêté la réplication et modifié le volume cible, vous pouvez répliquer ces modifications sur le volume source. Ce processus est courant dans un scénario de reprise d'activité dans lequel vous travaillez sur le volume cible pendant un certain temps et souhaitez changer de rôle pour les volumes.
@@ -24,9 +24,15 @@ Après avoir arrêté la réplication et modifié le volume cible, vous pouvez r
 .Description de la tâche
 Lorsque vous inversez et reprenez une réplication, elle change les rôles source et cible de vos volumes ; le volume cible devient le nouveau volume source et le volume source devient le nouveau volume cible. L'opération inverse écrase également le contenu du nouveau volume cible avec le contenu du nouveau volume source. Si vous inversez deux fois une réplication, le sens de réplication d'origine se rétablit.
 
+[]
+====
+REMARQUE :
 
-NOTE: Toutes les données écrites sur le volume source d'origine entre la dernière réplication de données et l'heure à laquelle le volume source est désactivé ne sont pas conservées.
+* Toutes les données écrites sur le volume source d'origine entre la dernière réplication de données et l'heure à laquelle le volume source est désactivé ne sont pas conservées.
+* La réplication inverse n'est pas disponible lors de la réplication des données et des paramètres de configuration des storage VM.
 
+
+====
 .Avant de commencer
 Assurez-vous de connaître les rôles actuels et futurs de vos volumes source et cible car les modifications du nouveau volume cible sont remplacées par le nouveau volume source. Une mauvaise utilisation peut entraîner des pertes de données imprévues.
 

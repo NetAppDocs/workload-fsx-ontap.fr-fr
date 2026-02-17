@@ -5,6 +5,9 @@
 . *Cas d’utilisation* : sélectionnez l’un des cas d’utilisation suivants pour la réplication.  En fonction du cas d'utilisation sélectionné, Workload Factory remplit le formulaire avec les valeurs recommandées conformément aux meilleures pratiques.  Vous pouvez accepter les valeurs recommandées ou apporter des modifications au fur et à mesure que vous remplissez le formulaire.
 +
 ** Migration : transfère vos données vers le système de fichiers cible FSX pour ONTAP
++
+*Réplication de la configuration de la machine virtuelle de stockage* : Vous pouvez, en option, sélectionner la réplication des données et des paramètres de configuration d'une seule machine virtuelle de stockage. Lorsque vous migrez simultanément des données et des paramètres de configuration, assurez-vous que la dernière réplication du volume a été effectuée au cours des dernières 24 heures. Tous les volumes de la même machine virtuelle de stockage doivent être sélectionnés pour utiliser cette fonctionnalité. La stratégie de hiérarchisation de tous les volumes est, par défaut, celle du volume source, ce qui est recommandé pour les cas d'utilisation de migration.
+
 ** Reprise après incident à chaud : assure une haute disponibilité et une reprise après incident rapide pour les workloads stratégiques
 ** Reprise après incident des données inactives ou d'archivage :
 +
