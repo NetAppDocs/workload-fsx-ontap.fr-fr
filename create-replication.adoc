@@ -54,7 +54,7 @@ Workload Factory prend en charge la réplication de migration entre les système
 Pour migrer les données et les paramètres de configuration du VM de stockage, vous devez effectuer deux opérations.
 
 . <<Créer une relation de réplication,Créer une relation de réplication>>, sélectionnez *Migration* comme cas d'utilisation et sélectionnez *Replicate storage VM configuration*.
-. <<Cut over replication,basculement de la réplication>> pour migrer définitivement les données et les paramètres de configuration du système de fichiers source vers le système de fichiers cible FSx for ONTAP.
+. <<Réplication de basculement pour les cas d'utilisation de migration,Réplication de basculement pour les cas d'utilisation de migration>> pour migrer définitivement les données et les paramètres de configuration du système de fichiers source vers le système de fichiers cible FSx for ONTAP.
 
 
 
