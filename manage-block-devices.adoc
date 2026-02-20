@@ -86,9 +86,9 @@ Vous pouvez gérer l'accès client à un périphérique de stockage par blocs ex
 
 
 
-== Archiver les données d'un périphérique de stockage orphelin
+== Archiver les données d’un périphérique de bloc inactif
 
-Les périphériques de stockage par blocs qui ne sont plus associés à un client ou qui sont inutilisés pendant sept jours consécutifs sont classés comme périphériques de stockage par blocs orphelins. Vous pouvez archiver les données d'un périphérique de stockage orphelin dans le pool de capacité afin de récupérer de la capacité SSD.
+Les périphériques de blocs qui ne sont plus associés à un client ou inutilisés pendant sept jours consécutifs sont classés comme périphériques de blocs inactifs. Vous pouvez archiver les données d'un périphérique de blocs inactif dans le niveau de pool de capacité pour récupérer de la capacité SSD.
 
 .Étapes
 . Connectez-vous à l'aide de l'un des link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].
@@ -104,7 +104,7 @@ Les périphériques de stockage par blocs qui ne sont plus associés à un clien
 
 == Supprimer un périphérique de blocage
 
-Les périphériques de stockage par blocs qui ne sont plus associés à un client ou qui sont inutilisés pendant sept jours consécutifs sont classés comme périphériques de stockage par blocs orphelins. Cette opération supprime et démappe le périphérique de stockage sélectionné. Si le FlexVol volume hôte ne contient aucun périphérique de stockage par blocs, Workload Factory le supprime également.
+Les périphériques de stockage par blocs qui ne sont plus associés à un client ou qui sont inutilisés pendant sept jours consécutifs sont classés comme périphériques de stockage par blocs inactifs. Cette opération dissocie et supprime le périphérique de stockage par blocs sélectionné. Si le volume FlexVol hôte ne contient aucun périphérique de stockage par blocs, Workload Factory le supprime également.
 
 .Étapes
 . Connectez-vous à l'aide de l'un des link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].

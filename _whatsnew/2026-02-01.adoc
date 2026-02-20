@@ -45,7 +45,7 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/manage-s3-access-points.ht
 Workload Factory analyse vos systèmes de fichiers FSx pour ONTAP pour les configurations suivantes :
 
 * Optimiser la taille du volume de cache : vérifie si le dimensionnement automatique et le nettoyage sont activés sur les volumes de cache afin de maintenir une taille optimale et de concentrer le cache sur les données chaudes pour une efficacité maximale.
-* Périphériques de stockage bloc orphelins : il est recommandé d’archiver les données du périphérique de stockage bloc ou de supprimer un périphérique de stockage bloc s’il n’a pas été utilisé pendant sept jours consécutifs.
+* Périphériques de stockage inactifs : recommande d’archiver les données du périphérique de stockage ou de supprimer un périphérique de stockage s’il n’a pas été utilisé pendant sept jours consécutifs.
 * Rapports logiques de la VM de stockage : vérifie si le paramètre de rapport par défaut d’une VM de stockage est défini sur logique, ce qui offre une meilleure visibilité sur l’utilisation du stockage au niveau du volume.
 
 
@@ -57,7 +57,7 @@ Trois nouvelles cartes ont été ajoutées à l'onglet Block devices dans la cha
 
 * Efficacités du stockage : affiche la capacité de stockage utilisée et disponible ; la capacité utilisée est ventilée par niveaux de stockage SSD et pool de capacité.
 * Appareils protégés : affiche le pourcentage d’appareils de stockage bloc disposant d’instantanés, de réplication à distance, de protection autonome contre les ransomwares (ARP/AI) NetApp et de sauvegardes.
-* Périphériques orphelins : cette section indique si des périphériques de stockage bloc n’ont pas été utilisés pendant sept jours consécutifs, ce qui vous permet d’identifier et de gérer efficacement les ressources inutilisées. À partir de là, vous pouvez link:https://docs.netapp.com/us-en/workload-fsx-ontap/manage-block-devices.html#archive-the-data-of-an-orphaned-block-device["récupérer de l'espace pour les périphériques bloc inutilisés"].
+* Périphériques orphelins : cette section indique si des périphériques de stockage bloc n’ont pas été utilisés pendant sept jours consécutifs, ce qui vous permet d’identifier et de gérer efficacement les ressources inutilisées. À partir de là, vous pouvez link:https://docs.netapp.com/us-en/workload-fsx-ontap/manage-block-devices.html#archive-the-data-of-an-inactive-block-device["récupérer de l'espace pour les périphériques bloc inutilisés"].
 
 
 
