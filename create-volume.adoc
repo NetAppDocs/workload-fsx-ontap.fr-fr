@@ -157,7 +157,7 @@ Renseignez les champs suivants pour configurer l'accès en bloc au volume.
 *** *Utilisateur* : sélectionnez un utilisateur existant avec accès au volume ou créez un nouvel utilisateur.
 *** *Type d'utilisateur* : sélectionnez *UNIX* ou *Windows* comme type d'utilisateur.
 *** *Configuration réseau* : Sélectionnez *Internet* ou *Virtual private cloud (VPC)*. Le type de réseau que vous choisissez détermine si le point d'accès est accessible depuis Internet ou limité à un VPC spécifique.
-*** *Activer les métadonnées* : L’activation des métadonnées crée une table S3 contenant tous les objets accessibles par le point d'accès S3, que vous pouvez utiliser pour l’audit, la gouvernance, l’automatisation, l’analyse et l’optimisation. L’activation des métadonnées engendre des coûts AWS supplémentaires. Consultez link:https://aws.amazon.com/s3/pricing/["Documentation tarifaire Amazon S3"^] pour plus d’informations.
+*** *Activer la table d'inventaire* : Lorsque vous activez la table d'inventaire sur le volume, le système génère des métadonnées pour tous les objets accessibles au point d'accès S3 et engendre des coûts de requête AWS S3. Reportez-vous à link:https://aws.amazon.com/s3/pricing/["Documentation tarifaire Amazon S3"^] pour plus d'informations.
 
 
 .. *Étiquettes de point d'accès S3* : Vous pouvez éventuellement ajouter jusqu'à 50 étiquettes ou en supprimer.

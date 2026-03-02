@@ -8,7 +8,7 @@
 
 Gérez plus efficacement vos périphériques de stockage par blocs grâce à la nouvelle prise en charge des périphériques de stockage par blocs dans NetApp Workload Factory.  Cette fonctionnalité vous permet de consulter les détails et d'augmenter la capacité des LUN iSCSI, offrant ainsi une flexibilité accrue pour vos besoins de stockage.
 
-link:https://docs.netapp.com/us-en/workload-fsx-ontap/manage-block-devices.html["Gérer les périphériques de stockage par blocs dans Workload Factory"]
+link:https://docs.netapp.com/us-en/workload-fsx-ontap/manage-block-storage.html["Gérer les périphériques de stockage par blocs dans Workload Factory"]
 
 
 

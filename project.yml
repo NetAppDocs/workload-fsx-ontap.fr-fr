@@ -133,16 +133,14 @@ sidebar:
         url: "/delete-volume.html"
     - title: Administration du stockage bloc
       entries:
-      - title: Gérer les igroups
-        url: "/manage-igroups.html"
-      - title: Gérer les périphériques de blocage
-        url: "/manage-block-devices.html"
+      - title: Gérer le stockage bloc
+        url: "/manage-block-storage.html"
     - title: Administration du système de fichiers
       entries:
-      - title: Ajuster la capacité du système de fichiers
+      - title: Ajuster manuellement la capacité du système de fichiers
         url: "/increase-file-system-capacity.html"
-      - title: Activer la gestion automatique de la capacité et des inodes
-        url: "/enable-auto-capacity-management.html"
+      - title: Gérer automatiquement la capacité du système de fichiers
+        url: "/manage-capacity-automatically.html"
       - title: Gérer les balises du système de fichiers
         url: "/manage-fsx-tags.html"
       - title: Réinitialisez le mot de passe fsxadmin

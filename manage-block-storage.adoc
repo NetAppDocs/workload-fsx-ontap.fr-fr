@@ -1,31 +1,95 @@
 ---
 sidebar: sidebar 
-permalink: manage-block-devices.html 
-keywords: block devices, manage luns, manage iscsi 
-summary: Gérer les périphériques de stockage par blocs pour un système de fichiers FSx for ONTAP dans NetApp Workload Factory. 
+permalink: manage-block-storage.html 
+keywords: block storage, manage block storage, igroups, block devices, client access, delete block device 
+summary: Gérer le stockage bloc pour un système de fichiers FSx for ONTAP dans NetApp Workload Factory. 
 ---
-= Gérez les périphériques de stockage par blocs d'un système de fichiers dans NetApp Workload Factory
+= Gérer le stockage bloc pour un système de fichiers dans NetApp Workload Factory
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-Depuis la console NetApp Workload Factory , vous pouvez gérer les périphériques de stockage par blocs de vos systèmes de fichiers FSx pour ONTAP . Les tâches de gestion comprennent la consultation des détails des périphériques de stockage par blocs, l'augmentation de leur capacité, la gestion des accès clients, l'archivage des données des périphériques de stockage par blocs et la suppression de ces périphériques.
+Utilisez NetApp Workload Factory pour simplifier la gestion de vos ressources de stockage bloc, y compris les igroups et les périphériques de bloc, et contrôler l'accès client pour les périphériques de bloc FSx for ONTAP afin d'offrir des performances optimales et de minimiser les coûts.
 
 .Description de la tâche
-Les périphériques de stockage par blocs, ou LUN (numéros d'unité logique), sont des volumes qui contiennent des systèmes de fichiers dans un environnement SAN et qui peuvent être accessibles par les hôtes via un réseau.
+Depuis la console Workload Factory, vous pouvez gérer les groupes d'initiateurs (igroups) afin de contrôler l'accès des clients aux block devices. Vous pouvez également consulter les détails des block devices, augmenter leur capacité, gérer l'accès des clients, archiver les données pour les block devices inactifs et supprimer des block devices.
+
+Consultez le schéma du stockage bloc pour vérifier les points suivants :
+
+* Connexions client
+* État du périphérique bloc
+* Relation nœud-client
+* Connexions client potentiellement incorrectes
+
+
+.Avant de commencer
+* Vous devez associer un lien pour gérer les igroups. link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["Apprenez à associer un lien existant ou à créer et associer un nouveau lien"]. Une fois le lien associé, revenez à cette opération.
+* Vous devez disposer d'un igroup ou d'un périphérique bloc existant pour les afficher et les gérer.
+
+
+
+
+== Gérer les igroups
+
+Vous pouvez consulter les détails des igroups, gérer l'accès client et supprimer des igroups.
+
+
+
+=== Gérer l'accès client pour un igroup
+
+Gérez à tout moment l'accès client pour un igroup existant.
+
+.Étapes
+. Connectez-vous à l'aide de l'un des link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].
+. Sélectionnez le menu image:workloads-menu-icon.png["L'icône du menu hamburger permet d'accéder aux charges de travail telles que le stockage, l'analyse de données d'entreprise (EDA), l'intelligence artificielle (IA), les bases de données, VMware et l'administration."] puis sélectionnez *Stockage*.
+. Dans le menu Stockage, sélectionnez *FSx pour ONTAP*.
+. Dans *FSx pour ONTAP*, sélectionnez l'onglet *Bloquer les périphériques*.
+. Sélectionnez le type de ressource *Initiator groups (igroups)* pour afficher les igroups existants.
+. Accédez au menu actions du périphérique de bloc et sélectionnez *Gérer l'accès client*.
+. Vérifiez les détails d'accès client affichés pour l'igroup.
+. Pour modifier l'accès client, sélectionnez *Modifier l'accès client*.
+. Dans la boîte de dialogue *Modifier l'accès client*, vous pouvez modifier les éléments suivants :
++
+** *nom igroup*
+** *Description igroup*
+** *Nom de la machine virtuelle de stockage*
+** *Nom du périphérique bloc*
+** *Type de système d'exploitation*
+** *Initiateurs hôtes*
+
+
+. Sélectionnez *appliquer*.
+
+
+
+
+=== Supprimer un igroup
+
+Supprimez un igroup lorsqu'il n'est plus nécessaire.
+
+.Étapes
+. Connectez-vous à l'aide de l'un des link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].
+. Sélectionnez le menu image:workloads-menu-icon.png["L'icône du menu hamburger permet d'accéder aux charges de travail telles que le stockage, l'analyse de données d'entreprise (EDA), l'intelligence artificielle (IA), les bases de données, VMware et l'administration."] puis sélectionnez *Stockage*.
+. Dans le menu Stockage, sélectionnez *FSx pour ONTAP*.
+. Dans *FSx pour ONTAP*, sélectionnez l'onglet *Bloquer les périphériques*.
+. Sélectionnez le type de ressource *Initiator groups (igroups)* pour afficher les igroups existants.
+. Accédez au menu actions du block device, puis sélectionnez *Supprimer le groupe d'initiateurs*.
+. Dans la boîte de dialogue Supprimer le groupe d'initiateurs (igroup), tapez "delete" pour confirmer que vous souhaitez supprimer l'igroup, puis sélectionnez *Supprimer*.
+
+
+
+
+== Gérer les périphériques bloc pour un igroup
+
+Les périphériques de stockage par blocs, ou LUN (logical unit numbers), sont des volumes dotés de systèmes de fichiers dans un environnement SAN, accessibles aux hôtes via un réseau.
 
 Vous pouvez gérer les périphériques de stockage par blocs pour les systèmes de fichiers FSx for ONTAP qui utilisent le protocole iSCSI.
 
-.Avant de commencer
-* Vous devez associer un lien pour gérer les périphériques de stockage. link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["Apprenez à associer un lien existant ou à créer et associer un nouveau lien"].  Une fois le lien établi, revenez à cette opération.
-* Vous devez disposer d'un périphérique de blocage existant pour visualiser et gérer.
 
 
-
-
-== Afficher les détails du périphérique de blocage
+=== Afficher les détails du périphérique de blocage
 
 Consultez à tout moment les détails d'un périphérique de blocage existant.
 
@@ -42,7 +106,7 @@ Les informations générales, de consommation, d'accès et de protection du disp
 
 
 
-== Augmenter la capacité d'un bloc de stockage
+=== Augmenter la capacité d'un bloc de stockage
 
 Augmentez à tout moment la capacité d'un périphérique de stockage existant.
 
@@ -57,11 +121,11 @@ Augmentez à tout moment la capacité d'un périphérique de stockage existant.
 
 
 
-NOTE: Après avoir augmenté la taille du périphérique de stockage par blocs, suivez la procédure fournie par votre système d'exploitation hôte pour connaître la nouvelle taille du périphérique et étendre le système de fichiers qui s'y trouve.
+NOTE: Après avoir augmenté la taille du périphérique de stockage bloc, suivez la procédure fournie par votre système d'exploitation hôte pour découvrir la nouvelle taille et étendre le système de fichiers.
 
 
 
-== Gérer l'accès client à un périphérique de blocage
+=== Gérer l'accès client à un périphérique de blocage
 
 Vous pouvez gérer l'accès client à un périphérique de stockage par blocs existant à tout moment en créant des igroups et en ajoutant ou en supprimant des périphériques de stockage par blocs et des initiateurs hôtes.
 
@@ -86,7 +150,7 @@ Vous pouvez gérer l'accès client à un périphérique de stockage par blocs ex
 
 
 
-== Archiver les données d’un périphérique de bloc inactif
+=== Archiver les données d’un périphérique de bloc inactif
 
 Les périphériques de blocs qui ne sont plus associés à un client ou inutilisés pendant sept jours consécutifs sont classés comme périphériques de blocs inactifs. Vous pouvez archiver les données d'un périphérique de blocs inactif dans le niveau de pool de capacité pour récupérer de la capacité SSD.
 
@@ -102,9 +166,9 @@ Les périphériques de blocs qui ne sont plus associés à un client ou inutilis
 
 
 
-== Supprimer un périphérique de blocage
+=== Supprimer un périphérique de blocage
 
-Les périphériques de stockage par blocs qui ne sont plus associés à un client ou qui sont inutilisés pendant sept jours consécutifs sont classés comme périphériques de stockage par blocs inactifs. Cette opération dissocie et supprime le périphérique de stockage par blocs sélectionné. Si le volume FlexVol hôte ne contient aucun périphérique de stockage par blocs, Workload Factory le supprime également.
+Les périphériques de stockage bloc qui ne sont pas associés à un client ou qui sont inutilisés depuis sept jours sont des périphériques de stockage bloc inactifs. Cette opération dissocie et supprime le périphérique de stockage bloc sélectionné. Si le volume FlexVol hôte ne contient aucun périphérique de stockage bloc, Workload Factory le supprime.
 
 .Étapes
 . Connectez-vous à l'aide de l'un des link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].
@@ -120,4 +184,6 @@ Les périphériques de stockage par blocs qui ne sont plus associés à un clien
 
 == Informations connexes
 
-link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-block-device.html["Créer un périphérique de stockage par blocs pour un système de fichiers FSx pour ONTAP"]
+* link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-igroup.html["Créer un igroup pour un système de fichiers FSx for ONTAP"]
+* link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-block-device.html["Créer un périphérique de stockage par blocs pour un système de fichiers FSx pour ONTAP"]
+

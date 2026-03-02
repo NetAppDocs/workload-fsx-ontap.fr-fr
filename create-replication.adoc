@@ -91,6 +91,7 @@ Dans le tableau volumes, sélectionnez un ou plusieurs volumes, puis sélectionn
 +
 .. *Cas d’utilisation* : sélectionnez l’un des cas d’utilisation suivants pour la réplication.  En fonction du cas d'utilisation sélectionné, Workload Factory remplit le formulaire avec les valeurs recommandées conformément aux meilleures pratiques.  Vous pouvez accepter les valeurs recommandées ou apporter des modifications au fur et à mesure que vous remplissez le formulaire.
 +
+*** Intelligence artificielle (IA) et apprentissage automatique (ML) : répliquez vos données ONTAP sur site vers FSx for ONTAP et créez des points d'accès S3 pour prendre en charge l'entraînement de l'IA et du ML dans le cloud
 *** Migration : transfère vos données vers le système de fichiers cible FSX pour ONTAP
 +
 *Réplication de la configuration de la machine virtuelle de stockage* : Vous pouvez, en option, sélectionner la réplication des données et des paramètres de configuration d'une seule machine virtuelle de stockage. Lorsque vous migrez simultanément des données et des paramètres de configuration, assurez-vous que la dernière réplication du volume a été effectuée au cours des dernières 24 heures. Tous les volumes de la même machine virtuelle de stockage doivent être sélectionnés pour utiliser cette fonctionnalité. La stratégie de hiérarchisation de tous les volumes est, par défaut, celle du volume source, ce qui est recommandé pour les cas d'utilisation de migration.
@@ -163,7 +164,7 @@ NOTE: Les étiquettes de source et de cible correspondantes sont requises pour l
 *** *Utilisateur* : sélectionnez un utilisateur existant avec accès au volume ou créez un nouvel utilisateur.
 *** *Type d'utilisateur* : sélectionnez *UNIX* ou *Windows* comme type d'utilisateur.
 *** *Configuration réseau* : Sélectionnez *Internet* ou *Virtual private cloud (VPC)*. Le type de réseau que vous choisissez détermine si le point d'accès est accessible depuis Internet ou limité à un VPC spécifique.
-*** *Activer les métadonnées* : L’activation des métadonnées crée une table S3 contenant tous les objets accessibles par le point d'accès S3, que vous pouvez utiliser pour l’audit, la gouvernance, l’automatisation, l’analyse et l’optimisation. L’activation des métadonnées engendre des coûts AWS supplémentaires. Consultez link:https://aws.amazon.com/s3/pricing/["Documentation tarifaire Amazon S3"^] pour plus d’informations.
+*** *Activer la table d'inventaire* : Lorsque vous activez la table d'inventaire sur le volume, le système génère des métadonnées pour tous les objets accessibles au point d'accès S3 et engendre des coûts de requête AWS S3. Reportez-vous à link:https://aws.amazon.com/s3/pricing/["Documentation tarifaire Amazon S3"^] pour plus d'informations.
 
 
 .. *Étiquettes de point d'accès S3* : Vous pouvez éventuellement ajouter jusqu'à 50 étiquettes.
