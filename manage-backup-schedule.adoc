@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: manage-backup-schedule.html 
-keywords: backup schedule, backup policy, update backups, update backup schedule, FSx for ONTAP backup 
+keywords: backup schedule, backup policy, update backups, update backup schedule, volume backups, FSx for ONTAP backups 
 summary: 'Gérez la planification de sauvegarde d"un système de fichiers FSx for ONTAP dans NetApp Workload Factory lorsque cela est nécessaire.' 
 ---
 = Gérez le planning de sauvegarde d'un système de fichiers FSX pour ONTAP
@@ -18,8 +18,8 @@ Gérez la planification de sauvegarde d'un système de fichiers FSx for ONTAP da
 . Sélectionnez le menu image:workloads-menu-icon.png["L'icône du menu hamburger permet d'accéder aux charges de travail telles que le stockage, l'analyse de données d'entreprise (EDA), l'intelligence artificielle (IA), les bases de données, VMware et l'administration."] puis sélectionnez *Stockage*.
 . Dans le menu Stockage, sélectionnez *FSx pour ONTAP*.
 . Depuis *FSx for ONTAP*, sélectionnez le menu d'actions du système de fichiers pour lequel mettre à jour la planification de sauvegarde, puis sélectionnez *Gérer*.
-. Sous informations, sélectionnez l'icône en forme de crayon en regard de *FSX pour la sauvegarde ONTAP*. L'icône en forme de crayon apparaît à côté de la flèche déroulante lorsque la souris survole la ligne *FSX pour sauvegarde ONTAP*.
-. Dans la boîte de dialogue *FSX for ONTAP backup*, indiquez les éléments suivants :
+. Sous Informations, sélectionnez l'icône en forme de crayon à côté de *Sauvegardes de volume*. L'icône en forme de crayon apparaît à côté de la flèche déroulante lorsque la souris survole la ligne *Sauvegardes de volume*.
+. Dans la boîte de dialogue *Sauvegardes de volume*, fournissez les éléments suivants :
 +
 .. *Sauvegardes automatiques quotidiennes* : activez ou désactivez la fonction. Si vous désactivez la fonction, sélectionnez *appliquer*. Si vous activez la fonction, procédez comme suit.
 .. *Période de conservation automatique des sauvegardes* : entrez le nombre de jours de conservation des sauvegardes automatiques.

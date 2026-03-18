@@ -97,7 +97,7 @@ Pour un nouveau groupe de sécurité, reportez-vous à  la section <<Détails du
 
 . Sous sauvegarde et maintenance, fournissez les éléments suivants :
 +
-.. *FSX pour la sauvegarde ONTAP* : les sauvegardes automatiques quotidiennes sont activées par défaut. Désactivez-le si vous le souhaitez.
+.. *Sauvegardes de volume* : Les sauvegardes automatiques quotidiennes sont activées par défaut. Désactivez si désiré.
 +
 ... *Période de conservation automatique des sauvegardes* : entrez le nombre de jours de conservation des sauvegardes automatiques.
 ... *Fenêtre de sauvegarde automatique quotidienne* : sélectionnez *pas de préférence* (une heure de début de sauvegarde quotidienne est sélectionnée pour vous) ou *sélectionnez l'heure de début pour les sauvegardes quotidiennes* et spécifiez une heure de début.

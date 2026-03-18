@@ -22,7 +22,7 @@ L'usine de workloads détermine si vous disposez de suffisamment de capacité po
 . Depuis *FSx for ONTAP*, sélectionnez le menu d'actions du système de fichiers avec le volume, puis sélectionnez *Gérer*.
 . Dans la présentation du système de fichiers, sélectionnez l'onglet *volumes*.
 . Dans l’onglet *Volumes*, sélectionnez le menu d’actions du volume à restaurer à partir d’une sauvegarde.
-. Sélectionnez *actions de protection des données*, *FSX pour sauvegarde ONTAP*, puis *Restaurer à partir d'une sauvegarde*.
+. Sélectionnez *Actions de protection des données*, *Sauvegardes de volume*, puis *Restaurer à partir d'une sauvegarde*.
 . Dans la boîte de dialogue Restaurer à partir d'une sauvegarde, indiquez les éléments suivants :
 +
 .. *Système de fichiers cible* : sélectionnez le système de fichiers cible dans le menu déroulant.

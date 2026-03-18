@@ -18,7 +18,7 @@ Avant de supprimer un volume, tenez compte des points suivants :
 
 * Relations de réplication : vous devez link:delete-replication.html["supprimez toutes les relations de réplication existantes"] pour ce volume avant de supprimer le volume afin qu'aucune relation rompue ne soit conservée.
 * Snapshots locaux : tous les snapshots associés à ce système de fichiers FSX pour ONTAP seront définitivement supprimés.
-* FSX pour ONTAP : les copies de sauvegarde FSX pour ONTAP resteront et vous pouvez les utiliser.
+* Sauvegardes de volumes : Les copies de sauvegarde de volumes seront conservées et vous pouvez toujours les utiliser.
 * Fichiers et snapshots immuables : les volumes contenant des fichiers et des snapshots immuables ne peuvent pas être supprimés avant la fin de la période de conservation.
 
 
