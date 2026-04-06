@@ -35,7 +35,7 @@ Workload Factory analyse l'état bien conçu des configurations suivantes pour l
 * Fiabilité : seuil de capacité SSD, instantanés locaux planifiés, sauvegardes de volumes planifiées, réplication des données à distance et fiabilité des données pour la conservation à long terme
 * Sécurité : Protection autonome contre les ransomwares NetApp avec IA (ARP/AI) désactivée et accès non autorisé aux volumes
 * Excellence opérationnelle : gestion automatique de la capacité, seuil d’utilisation de la capacité des fichiers de volume, volume proche de la saturation, mode d’écriture des relations de cache, optimisation de la taille du volume de cache et rapports sur la capacité logique des volumes
-* Optimisation des coûts : efficacités de stockage, hiérarchisation des données, suppression des snapshots et des sauvegardes inutiles, périphériques bloc inactifs et capacité SSD sous-utilisée
+* Optimisation des coûts : efficacité du stockage, hiérarchisation des données, suppression inutile des snapshots et des sauvegardes, périphériques de stockage par blocs inactifs, capacité SSD sous-utilisée et volumes NAS inactifs
 
 
 

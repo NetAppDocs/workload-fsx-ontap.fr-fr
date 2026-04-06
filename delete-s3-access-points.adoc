@@ -1,0 +1,28 @@
+---
+sidebar: sidebar 
+permalink: delete-s3-access-points.html 
+keywords: S3, s3, access points, delete access points, remove access points 
+summary: 'Supprimez les points d"accès S3 pour un volume dans NetApp Workload Factory.' 
+---
+= Supprimez les points d'accès S3 pour un volume dans NetApp Workload Factory
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Supprimez les points d'accès S3 existants d'un volume dans NetApp Workload Factory.
+
+.Étapes
+. Connectez-vous à l'aide de l'un des link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].
+. Sélectionnez le menu image:workloads-menu-icon.png["L'icône du menu hamburger permet d'accéder aux charges de travail telles que le stockage, l'analyse de données d'entreprise (EDA), l'intelligence artificielle (IA), les bases de données, VMware et l'administration."] puis sélectionnez *Stockage*.
+. Dans le menu Stockage, sélectionnez *FSx pour ONTAP*.
+. Dans *FSx for ONTAP*, sélectionnez le menu actions du système de fichiers contenant le volume à mettre à jour, puis sélectionnez *Gérer*.
+. Dans la présentation du système de fichiers, sélectionnez l'onglet *volumes*.
+. Dans l'onglet Volumes, sélectionnez le menu actions du volume pour lequel vous souhaitez gérer les points d'accès S3, puis sélectionnez *Advanced actions*, puis *Manage S3 access points*.
+. Sélectionnez le menu des actions pour le point d'accès S3 à supprimer, puis sélectionnez *Supprimer*.
+. Dans la boîte de dialogue *Supprimer un point d'accès S3*, sélectionnez *Supprimer* pour supprimer le point d'accès S3 du volume.
++
+Workload Factory ne supprime pas la table d'inventaire ni la table de journal, mais vous pouvez les supprimer manuellement depuis la console de gestion AWS.
+
+

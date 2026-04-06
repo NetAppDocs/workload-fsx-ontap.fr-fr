@@ -135,7 +135,7 @@ Vous pouvez gérer l'accès client à un périphérique de stockage par blocs ex
 . Dans le menu Stockage, sélectionnez *FSx pour ONTAP*.
 . Dans *FSx pour ONTAP*, sélectionnez l'onglet *Bloquer les périphériques*.
 . Accédez au menu des actions du périphérique de blocage, puis sélectionnez *Gérer l'accès client*.
-. S'il n'existe aucun igroup, créez-en un nouveau en sélectionnant *Créer un igroup*, puis procédez comme suit :
+. S'il n'existe aucun igroup, créez-en un nouveau en sélectionnant *Map igroup > Create igroup*, puis procédez comme suit :
 +
 .. *Nom du périphérique de bloc* : Saisissez un nom de périphérique de bloc. Vous pouvez sélectionner plusieurs périphériques de bloc à associer à l'igroup.
 .. *Type de système d'exploitation* : Sélectionnez le type de système d'exploitation.
@@ -145,7 +145,7 @@ Vous pouvez gérer l'accès client à un périphérique de stockage par blocs ex
 .. Sélectionnez *Créer*.
 
 
-. Si un igroup existe déjà, sélectionnez *Modifier l'accès client* pour ajouter ou supprimer des périphériques de blocage et des initiateurs hôtes de l'igroup, puis sélectionnez *Appliquer*.
+. Si un igroup existe déjà, sélectionnez *Mapper igroup > Mapper igroup existant* pour ajouter ou supprimer des périphériques de bloc et des initiateurs hôtes de l'igroup, puis sélectionnez *Mapper*.
 
 
 

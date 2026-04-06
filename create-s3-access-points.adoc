@@ -1,0 +1,60 @@
+---
+sidebar: sidebar 
+permalink: create-s3-access-points.html 
+keywords: S3, s3, access points, manage access points, change access points, update access points, modify access points 
+summary: 'Créez des points d"accès S3 pour un volume dans NetApp Workload Factory.' 
+---
+= Créez des points d'accès S3 pour un volume dans NetApp Workload Factory
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Créez et associez des points d'accès S3 à un volume dans NetApp Workload Factory.
+
+.Description de la tâche
+Amazon FSx for NetApp ONTAP permet aux systèmes de fichiers NFS et SMB d'accéder aux données S3 et de se connecter aux services AWS comme Amazon Bedrock, SageMaker, Athena, AWS Glue, et plus encore. Vous pouvez connecter les services AWS à toutes vos données de stockage d'objets.
+
+Associez des points d'accès S3 aux volumes NFS et SMB dans un système de fichiers FSx for ONTAP afin que les services AWS accèdent aux fichiers comme s'ils se trouvaient dans un compartiment S3. Lors de l'association du point d'accès, définissez un ID unique, sélectionnez le type d'accès aux fichiers (UNIX ou Windows) et ajoutez un nom d'utilisateur pour l'autorisation d'accès.
+
+Après avoir attaché le point d'accès S3, il apparaît dans la console de gestion AWS avec un alias unique. Utilisez cet alias comme nom de compartiment S3 pour les services AWS, tels qu'Amazon Bedrock, afin d'accéder aux fichiers dans le volume FSx for ONTAP.
+
+Vous pouvez attacher plusieurs points d'accès S3 à un seul volume FSx for ONTAP, chacun avec un niveau d'accès unique, pour vous connecter à plusieurs services AWS.
+
+.Avant de commencer
+Veuillez remplir les conditions suivantes avant de commencer.
+
+* Vous devez disposer d'un volume existant avec un point d'accès link:create-volume.html["Créer un volume avec un point d'accès S3"]
+* Vous devez link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["accorder des identifiants avec la politique d'autorisation _operations and remediation_"^] dans Workload Factory pour accomplir cette tâche.
+
+
+.Étapes
+. Connectez-vous à l'aide de l'un des link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].
+. Sélectionnez le menu image:workloads-menu-icon.png["L'icône du menu hamburger permet d'accéder aux charges de travail telles que le stockage, l'analyse de données d'entreprise (EDA), l'intelligence artificielle (IA), les bases de données, VMware et l'administration."] puis sélectionnez *Stockage*.
+. Dans le menu Stockage, sélectionnez *FSx pour ONTAP*.
+. Dans *FSx for ONTAP*, sélectionnez le système de fichiers contenant le volume à mettre à jour.
+. Dans la présentation du système de fichiers, sélectionnez l'onglet *volumes*.
+. Dans l'onglet Volumes, sélectionnez le menu actions du volume que vous souhaitez utiliser, puis sélectionnez *Actions avancées*, puis *Gérer les points d'accès S3*.
+. Sur la page Gérer les points d'accès S3, sélectionnez *Créer et associer point d'accès S3*.
+. Sur la page *Créer et connecter un point d'accès S3*, fournissez les informations suivantes :
++
+** *Nom du point d'accès S3* : Saisissez le nom du point d'accès S3.
+** *Utilisateur* : sélectionnez un utilisateur existant avec accès au volume ou créez un nouvel utilisateur.
+** *Type d'utilisateur* : sélectionnez *UNIX* ou *Windows* comme type d'utilisateur.
+** *Configuration réseau* : Sélectionnez *Internet* ou *Virtual private cloud (VPC)*. Le type de réseau choisi détermine si le point d'accès est accessible depuis Internet ou s’il est limité à un VPC spécifique. Pour utiliser la fonction Journal table, vous devez sélectionner *Internet* comme configuration réseau.
+** *Tableau d'inventaire* : Facultatif. Nécessite la  `getObject` autorisation. Activez le tableau d'inventaire sur le volume pour générer des métadonnées pour tous les objets accessibles au point d'accès S3 et des frais de requête AWS S3 s'appliquent. Consultez link:https://aws.amazon.com/s3/pricing/["Documentation tarifaire Amazon S3"^] pour plus d'informations. Le tableau est mis à jour toutes les 24 heures.
+** *Étiquettes de point d'accès S3* : Vous pouvez éventuellement ajouter jusqu'à 50 étiquettes ou en supprimer.
+
+
+. Sélectionnez *Créer*.
+
+
+.Informations connexes
+Vous pouvez, en option, utiliser la fonctionnalité de table de journal avec les points d'accès S3 dans Workload Factory. L'infrastructure de la table de journal capture et stocke les journaux d'audit des événements d'accès utilisateur et des opérations sur les objets via les points d'accès de volume Amazon FSx for ONTAP. Pour activer la fonctionnalité de table de journal, vous devez configurer l'infrastructure AWS nécessaire, y compris AWS CloudTrail, AWS CloudWatch, les compartiments AWS S3, les groupes de journaux AWS CloudWatch et les rôles et politiques AWS Identity and Access Management (IAM). link:setup-journal-table.adoc["Configurez l'infrastructure de la table de journalisation pour NetApp Workload Factory"^].
+
+Autres sujets connexes :
+
+* link:edit-s3-access-points.html["Modifier les points d'accès S3 pour un volume dans NetApp Workload Factory"]
+* link:delete-s3-access-points.html["Supprimer les points d'accès S3 pour un volume dans NetApp Workload Factory"]
+

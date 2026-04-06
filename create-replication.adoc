@@ -209,4 +209,7 @@ Examinez ces exigences avant de commencer.
 
 
 .Résultat
-Après la bascule, les volumes sources sont supprimés et les volumes cibles deviennent accessibles en lecture/écriture. Vous pouvez link:change-tiering-policy.html["modifier la politique de hiérarchisation"] pour les volumes cibles après la bascule.
+Après la bascule, la machine virtuelle de stockage source passe hors ligne.
+
+.Informations connexes
+link:change-tiering-policy.html["Modifier la politique de hiérarchisation"] pour le(s) volume(s) cible(s) après la mise en service.

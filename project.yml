@@ -126,7 +126,17 @@ sidebar:
       - title: Gérer les partages SMB/CIFS
         url: "/manage-cifs-share.html"
       - title: Gérer les points d'accès S3
-        url: "/manage-s3-access-points.html"
+        entries:
+        - title: Créer et connecter des points d'accès S3
+          url: "/create-s3-access-points.html"
+        - title: Modifier les points d'accès S3
+          url: "/edit-s3-access-points.html"
+        - title: Configurer l'infrastructure de la table de journalisation
+          url: "/setup-journal-table.html"
+        - title: Afficher les détails concernant les points d'accès S3
+          url: "/view-s3-details.html"
+        - title: Supprimer les points d'accès S3
+          url: "/delete-s3-access-points.html"
       - title: Diviser un volume cloné
         url: "/split-cloned-volume.html"
       - title: Supprimer un volume
@@ -210,8 +220,6 @@ sidebar:
       url: "/support-registration.html"
     - title: Obtenez de l'aide
       url: "/get-help.html"
-    - title: Dépannage
-      url: "/troubleshooting.html"
   - title: Mentions légales
     url: "/legal-notices.html"
 product-family:

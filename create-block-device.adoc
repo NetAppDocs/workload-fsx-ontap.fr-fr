@@ -36,6 +36,7 @@ La taille du bloc doit être inférieure à la taille du FlexVol volume disponib
 *** Sélectionnez un volume existant.
 
 
+.. *Nom de l'agrégat* : Sélectionnez l'agrégat qui hébergera le nouveau volume.
 .. *VM de stockage* : Sélectionnez une VM de stockage.
 .. *Style de volume* : Le style de volume par défaut est * FlexVol*.
 .. *Volume* : Saisissez le volume et sélectionnez l’unité. La taille maximale par FlexVol volume est de 100 Tio.

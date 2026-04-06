@@ -87,14 +87,16 @@ NOTE: Lorsque vous utilisez Terraform à partir de Codebox, le code que vous cop
 .. *Nom de la VM de stockage* : vous pouvez éventuellement entrer un nom de VM de stockage.
 .. *Volume style* : sélectionnez *FlexVol* ou *FlexGroup* volume.
 +
-Le style de volume FlexVol est sélectionné par défaut.
+*** Un volume FlexVol est un type de stockage logique dans ONTAP permettant de gérer les données. Les volumes FlexVol peuvent être déplacés entre agrégats ou nœuds au sein d'une même machine virtuelle de stockage (SVM) sans interrompre l'accès client. Le style de volume FlexVol est sélectionné par défaut.
+*** Un volume _FlexGroup_ est un conteneur NAS à extension horizontale offrant des performances élevées, une répartition automatique de la charge et une grande évolutivité. Il se compose de plusieurs volumes membres (constituants), qui sont des volumes FlexVol sous-jacents partageant le trafic de manière transparente.
 
-+
-La taille du volume FlexGroup dépend du nombre de constituants, nécessitant 100 Gio par constituant.
 
 .. *Taille du volume* : entrez la taille du volume et l'unité.
 +
 Vous pouvez également activer la croissance automatique du volume. Cette option est disponible lorsque vous sélectionnez *File Access* comme type d'accès au volume.
+
++
++ La taille du volume FlexGroup dépend du nombre de constituants, nécessitant 100 Gio par constituant.
 
 .. *Augmentation automatique du volume* : vous pouvez activer l'augmentation automatique du volume pour augmenter automatiquement sa capacité jusqu'à ce qu'il atteigne sa taille maximale. Cette fonctionnalité s'adapte à l'augmentation de la consommation de données et garantit un fonctionnement ininterrompu.
 +
@@ -234,9 +236,10 @@ Si la fonctionnalité n'est pas disponible, c'est pour l'une des raisons suivant
 
 
 
-. Dans la configuration avancée, fournissez les informations suivantes :
+. Dans la section Configuration avancée, saisissez les informations suivantes. Les champs de cette section varient selon le style de volume que vous sélectionnez.
 +
 .. *Junction path* : entrez l'emplacement dans l'espace de nom de la machine virtuelle de stockage où le volume est monté. Le chemin de jonction par défaut est `/<volume-name>`.
+.. *Nom de l'agrégat* : Uniquement pour les volumes FlexVol. Sélectionnez l'agrégat qui hébergera le nouveau volume.
 .. *Aggregates list* : uniquement pour les volumes FlexGroup. Ajout ou suppression d'agrégats Le nombre minimal d'agrégats est de un.
 .. *Nombre de composants* : uniquement pour les volumes FlexGroup. Entrez le nombre de composants par agrégat. 100 Gio est requis par composant.
 

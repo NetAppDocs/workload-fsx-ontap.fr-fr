@@ -172,6 +172,10 @@ Après qu’un périphérique de stockage par blocs n’est pas utilisé pendant
 +
 Une capacité SSD sous-utilisée peut engendrer des coûts inutiles. Workload Factory recommande de réduire la capacité de la couche SSD tout en maintenant une marge de 20 % d'espace libre au-dessus de la capacité actuellement utilisée. Une opération de diminution peut prendre de plusieurs heures à plusieurs jours, et les autres opérations du système de fichiers ne sont pas prises en charge pendant cette période.
 
+* *Volumes NAS inactifs*
++
+L'analyse de configuration identifie les volumes NAS qui ne sont pas utilisés activement et recommande de les supprimer ou de les archiver afin de réduire les coûts.
+
 
 
 .Et la suite
