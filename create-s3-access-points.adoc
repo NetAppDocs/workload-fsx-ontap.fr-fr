@@ -51,7 +51,7 @@ Veuillez remplir les conditions suivantes avant de commencer.
 
 
 .Informations connexes
-Vous pouvez, en option, utiliser la fonctionnalité de table de journal avec les points d'accès S3 dans Workload Factory. L'infrastructure de la table de journal capture et stocke les journaux d'audit des événements d'accès utilisateur et des opérations sur les objets via les points d'accès de volume Amazon FSx for ONTAP. Pour activer la fonctionnalité de table de journal, vous devez configurer l'infrastructure AWS nécessaire, y compris AWS CloudTrail, AWS CloudWatch, les compartiments AWS S3, les groupes de journaux AWS CloudWatch et les rôles et politiques AWS Identity and Access Management (IAM). link:setup-journal-table.adoc["Configurez l'infrastructure de la table de journalisation pour NetApp Workload Factory"^].
+Vous pouvez, en option, utiliser la fonctionnalité de table de journal avec les points d'accès S3 dans Workload Factory. L'infrastructure de la table de journal capture et stocke les journaux d'audit des événements d'accès utilisateur et des opérations sur les objets via les points d'accès de volume Amazon FSx for ONTAP. Pour activer la fonctionnalité de table de journal, vous devez configurer l'infrastructure AWS nécessaire, y compris AWS CloudTrail, AWS CloudWatch, les compartiments AWS S3, les groupes de journaux AWS CloudWatch et les rôles et politiques AWS Identity and Access Management (IAM). link:setup-journal-table.html["Configurez l'infrastructure de la table de journalisation pour NetApp Workload Factory"^].
 
 Autres sujets connexes :
 

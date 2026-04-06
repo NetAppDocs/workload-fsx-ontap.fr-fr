@@ -35,5 +35,5 @@ Les détails apparaissent sous quatre onglets : *Point d'accès*, *Tableau d’
 
 
 .Informations connexes
-* link:setup-journal-table.html["Configurez l'infrastructure de la table de journalisation et résolvez les problèmes de configuration de la table de journalisation dans NetApp Workload Factory."]
+* link:setup-journal-table.html["Configurer l'infrastructure de la table de journalisation"]
 

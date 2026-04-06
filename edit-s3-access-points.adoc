@@ -25,6 +25,6 @@ Vous pouvez également activer ou désactiver la *table d'inventaire* pour le po
 . Depuis l'écran *Gérer les points d'accès S3*, sélectionnez le menu actions, puis sélectionnez *Modifier point d'accès*.
 . Apportez les mises à jour, puis sélectionnez *Appliquer*.
 +
-Pour configurer l'infrastructure de la fonctionnalité de table de journal, vous devez sélectionner *Internet* comme configuration réseau pour le point d'accès S3. link:setup-journal-table.adoc["Découvrez comment configurer l'infrastructure de la table Journal pour NetApp Workload Factory"].
+Pour configurer l'infrastructure de la fonctionnalité de table de journal, vous devez sélectionner *Internet* comme configuration réseau pour le point d'accès S3. link:setup-journal-table.html["Découvrez comment configurer l'infrastructure de la table Journal pour NetApp Workload Factory"].
 
 
