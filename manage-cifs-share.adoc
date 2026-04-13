@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: manage-cifs-share.html 
 keywords: cifs, smb, SMB/CIFS, cifs share, change, update, modify, delete, create 
-summary: 'La gestion du partage SMB/CIFS d"un volume dans Workload Factory inclut la création, la détermination de l"accès des utilisateurs et des groupes, ainsi que la suppression.' 
+summary: 'La gestion du partage SMB ou CIFS d"un volume dans Workload Factory comprend la création, la détermination des accès des utilisateurs et des groupes, et la suppression.' 
 ---
 = Gérer le partage SMB/CIFS pour un volume dans Workload Factory
 :allow-uri-read: 
