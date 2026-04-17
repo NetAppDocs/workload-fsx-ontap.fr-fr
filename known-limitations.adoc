@@ -119,6 +119,14 @@ AWS Secrets Manager n'est pas pris en charge lors de l'utilisation d'un agent de
 
 La limite du nombre de points d'accès S3 par machine virtuelle de stockage est de 4 000.
 
+
+
+== Limitations de la réplication de la migration des machines virtuelles de stockage
+
+* NetApp Workload Factory ne prend pas en charge la réplication de migration pour les machines virtuelles de stockage entre les systèmes de fichiers FSx for ONTAP de première et de deuxième génération.
+* La réplication par basculement n'est pas prise en charge pour les volumes avec des points d'accès S3 ou des configurations ONTAP S3 incluant object-store-server, buckets, users, groups ou policies sur le vserver.
+
+
 Remarque :
 
 . S'applique à Amazon FSX pour NetApp ONTAP

@@ -11,9 +11,9 @@ summary: 'Créez une relation de réplication pour un système de fichiers FSX p
 
 
 [role="lead"]
-Créez une relation de réplication pour un système de fichiers FSx for ONTAP dans NetApp Workload Factory afin d'éviter une perte de données en cas de sinistre imprévu. Vous pouvez répliquer des données entre deux systèmes de fichiers FSx for ONTAP, ou entre un système ONTAP sur site et un système de fichiers FSx for ONTAP.
+Créez une relation de réplication pour un système de fichiers FSx for ONTAP dans NetApp Workload Factory afin d’éviter une perte de données en cas de sinistre imprévu. Vous pouvez répliquer des données entre deux systèmes de fichiers FSx for ONTAP, ou entre un système ONTAP local et un système de fichiers FSx for ONTAP.
 
-Pour la migration de storage VM, vous devez effectuer l'opération de basculement immédiatement après avoir créé une relation de réplication.
+Pour la migration de machines virtuelles de stockage, effectuez l'opération de basculement immédiatement après avoir créé une relation de réplication.
 
 
 
@@ -36,16 +36,15 @@ Si vous répliquez un volume source contenant des fichiers immuables, le volume 
 
 === Cas d'utilisation de la migration
 
-Lorsque vous sélectionnez le cas d'utilisation de migration, vous pouvez choisir de répliquer les données et les paramètres de configuration d'une seule machine virtuelle de stockage. Lorsque vous migrez simultanément des données et des paramètres de configuration, assurez-vous que la dernière réplication du volume a été effectuée au cours des dernières 24 heures. Tous les volumes de la même machine virtuelle de stockage doivent être sélectionnés pour utiliser cette fonctionnalité. La stratégie de hiérarchisation de tous les volumes est, par défaut, celle du volume source, ce qui est recommandé pour les cas d'utilisation de migration.
+Pour la migration, vous pouvez choisir de répliquer les données et les paramètres de configuration d'une machine virtuelle de stockage. Si vous migrez les données et les paramètres de configuration ensemble, assurez-vous que la dernière réplication du volume a été effectuée au cours des dernières 24 heures. Vous devez sélectionner tous les volumes dans la même machine virtuelle de stockage pour utiliser cette fonctionnalité. La stratégie de hiérarchisation de tous les volumes est par défaut celle du volume source, ce qui est recommandé pour les cas d'utilisation de migration.
 
-Workload Factory prend en charge la réplication de migration entre les systèmes de stockage suivants.
+NetApp Workload Factory prend en charge la réplication de migration pour les machines virtuelles de stockage entre les systèmes de stockage suivants.
 
 * Systèmes ONTAP sur site et systèmes de fichiers FSx pour ONTAP
 * Cloud Volumes ONTAP et systèmes de fichiers FSx for ONTAP
 * FSx pour ONTAP et systèmes de fichiers FSx pour ONTAP
 +
 ** Première à première génération
-** Première à deuxième génération
 ** Seconde à seconde génération
 
 
@@ -66,7 +65,7 @@ Répliquez des données entre deux systèmes de fichiers FSx pour ONTAP, ou entr
 .Avant de commencer
 Examinez ces exigences avant de commencer.
 
-* Vous devez disposer d'un système de fichiers FSx for ONTAP à utiliser comme cible dans la relation de réplication.
+* Assurez-vous qu'un système de fichiers FSx for ONTAP soit disponible pour la cible dans la relation de réplication.
 * Le système de fichiers FSx for ONTAP que vous utilisez pour la relation de réplication doit être associé à un lien. link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["Apprenez à associer un lien existant ou à créer et associer un nouveau lien"]. Une fois le lien associé, revenez à cette opération.
 * Pour la réplication d'un système ONTAP sur site vers un système de fichiers FSx for ONTAP, assurez-vous d'avoir découvert le système ONTAP sur site.
 * La réplication n'est pas prise en charge pour les volumes dans un état autre que disponible, créé ou mal configuré, et lorsque la version d'ONTAP n'est pas compatible.
@@ -184,7 +183,21 @@ Si vous avez créé une relation de réplication à des fins de migration, vous 
 
 == Réplication de basculement pour les cas d'utilisation de migration
 
-Après avoir créé une relation de réplication pour un cas d'utilisation de migration, vous devez effectuer un basculement de la réplication afin de finaliser la migration des données et des paramètres de configuration de la machine virtuelle de stockage vers un système de fichiers FSx for ONTAP cible. Le basculement de la réplication migre définitivement les données et les paramètres de configuration de la machine virtuelle de stockage du système de fichiers source vers le système de fichiers FSx for ONTAP cible. Lors du basculement, les données sont répliquées une dernière fois. Le système supprime le ou les volumes sources après la fin du basculement. Vous ne pouvez pas annuler cette action.
+Après avoir créé une relation de réplication pour un cas d'utilisation de migration, vous devez effectuer un basculement de la réplication afin de finaliser la migration des données et des paramètres de configuration de la machine virtuelle de stockage vers le système de fichiers FSx for ONTAP. Le basculement de la réplication migre définitivement les données et les paramètres de configuration de la machine virtuelle de stockage du système de fichiers source vers le système de fichiers FSx for ONTAP. Lors du basculement, les données sont répliquées une dernière fois. La machine virtuelle de stockage source est mise hors ligne au début du basculement.
+
+
+
+=== Planifiez l'opération de basculement
+
+Tenez compte des éléments suivants lors de la planification de l'opération de basculement pour les cas d'utilisation de migration.
+
+* *Paramètres de configuration de la machine virtuelle de stockage* : L’opération de basculement ne transfère pas tous les paramètres de configuration de la machine virtuelle de stockage vers la machine virtuelle cible. Par exemple, les paramètres iSCSI, MTU du domaine de diffusion et DNS ne sont pas transférés. Mettez à jour ces paramètres manuellement sur la machine virtuelle de stockage cible après le basculement. Pour plus de détails, consultez la section <<Mise à jour des paramètres de configuration après la bascule,Mise à jour des paramètres de configuration après la bascule>>.
+* *Clones* : Les clones sont migrés en tant que volumes individuels et consomment donc plus d’espace sur le système de fichiers FSx for ONTAP. Il est recommandé de supprimer les clones avant la migration afin d’éviter une augmentation de la capacité sur la cible.
+* *Volumes de cache* : Pour ONTAP FlexCache 9.17.x ou version antérieure. Les machines virtuelles de stockage source contenant des volumes de cache ne sont pas prises en charge pour le basculement. Supprimez la relation ONTAP FlexCache avant le basculement afin d'éviter les échecs de migration.
+* *Points d'accès AWS S3* : La réplication par basculement pour les cas d'utilisation de migration n'est pas prise en charge pour les volumes comportant des points d'accès S3. Supprimez les points d'accès S3 du volume source pour éviter les échecs de migration.
+* *Configurations ONTAP S3* : La réplication par basculement pour les cas d'utilisation de migration n'est pas prise en charge pour les vservers avec des configurations ONTAP S3. Supprimez les configurations ONTAP S3, y compris object-store-server, les compartiments (buckets), les utilisateurs, les groupes ou les stratégies sur le vserver, afin d'éviter les échecs de migration.
+* *Numéros de série LUN et IQN cible iSCSI* : Les numéros de série LUN et l’IQN cible iSCSI changent lors de la bascule.
+
 
 .Avant de commencer
 Examinez ces exigences avant de commencer.
@@ -193,6 +206,10 @@ Examinez ces exigences avant de commencer.
 * Assurez-vous qu'aucun volume source ne sert de données avant de basculer la réplication.
 * Assurez-vous que les données sont synchronisées entre les volumes source et cible avant de procéder à la bascule de la réplication.
 * Le système de fichiers FSx for ONTAP que vous utilisez pour la relation de réplication doit être associé à un lien. link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["Apprenez à associer un lien existant ou à créer et associer un nouveau lien"]. Une fois le lien associé, revenez à cette opération.
++
+** Les ports suivants doivent être ouverts dans le groupe de sécurité associé au système de fichiers FSx for ONTAP pour la connectivité de liaison : port 443 (HTTPS) et port 22 (SSH).
+
+
 
 
 .Étapes
@@ -209,7 +226,30 @@ Examinez ces exigences avant de commencer.
 
 
 .Résultat
-Après la bascule, la machine virtuelle de stockage source passe hors ligne.
+Après le lancement de la bascule, la machine virtuelle de stockage source passe hors ligne.
 
-.Informations connexes
-link:change-tiering-policy.html["Modifier la politique de hiérarchisation"] pour le(s) volume(s) cible(s) après la mise en service.
+
+
+=== Mise à jour des paramètres de configuration après la bascule
+
+Après avoir désactivé la réplication pour les cas d'utilisation de migration, mettez à jour les paramètres de configuration suivants sur la machine virtuelle de stockage cible.
+
+* Pour iSCSI :
++
+** Recréez le igroup
+** Mise à jour du mappage LUN
+** Connectez-vous à chaque client SAN et mettez à jour les paramètres iSCSI/MPIO pour la nouvelle cible et supprimez les anciennes adresses IP de la cible vserver
+
+
+* Vérifiez que les paramètres MTU du domaine de diffusion sont conformes aux attentes
+* Vérifiez que les paramètres DNS sont conformes aux attentes
+* Recréez les relations de cache (relations ONTAP FlexCache®) s'il y avait des volumes de cache dans la VM de stockage source.
+
+
+
+
+== Informations connexes
+
+* link:initialize-replication.html["Initialiser la réplication"] pour une nouvelle relation de réplication.
+* link:change-tiering-policy.html["Modifier la politique de hiérarchisation"] pour le(s) volume(s) cible(s) après la mise en service.
+
