@@ -11,7 +11,7 @@ summary: 'Créez une relation de réplication pour un système de fichiers FSX p
 
 
 [role="lead"]
-Créez une relation de réplication pour un système de fichiers FSx for ONTAP dans NetApp Workload Factory afin d’éviter une perte de données en cas de sinistre imprévu. Vous pouvez répliquer des données entre deux systèmes de fichiers FSx for ONTAP, ou entre un système ONTAP local et un système de fichiers FSx for ONTAP.
+Répliquez les données dans NetApp Workload Factory pour vous protéger contre la perte de données si la région où vos données résident subit une catastrophe. La réplication des données est prise en charge entre les systèmes de fichiers FSx for ONTAP et les systèmes ONTAP sur site ou Cloud Volumes ONTAP.
 
 Lors de la réplication des données et des paramètres de configuration d'une machine virtuelle de stockage, vous devez d'abord créer et initialiser la relation de réplication, puis attendre que les données se synchronisent au moins une fois avant de terminer l'opération de basculement.
 
@@ -61,7 +61,7 @@ Pour migrer les données et les paramètres de configuration de la machine virtu
 
 == Étape 1 : Créer la relation de réplication
 
-Répliquez des données entre deux systèmes de fichiers FSx pour ONTAP, ou entre un système ONTAP sur site et un système de fichiers FSx pour ONTAP.
+Répliquez des données entre deux systèmes de fichiers FSx for ONTAP, entre un système ONTAP sur site et un système de fichiers FSx for ONTAP, ou entre Cloud Volumes ONTAP et un système de fichiers FSx for ONTAP.
 
 .Avant de commencer
 Examinez ces exigences avant de commencer.
