@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: manage-block-storage.html 
-keywords: block storage, manage block storage, igroups, block devices, client access, delete block device 
+keywords: block storage, manage block storage, igroups, block devices, view details, clone, client access, delete block device 
 summary: Gérer le stockage bloc pour un système de fichiers FSx for ONTAP dans NetApp Workload Factory. 
 ---
 = Gérer le stockage bloc pour un système de fichiers dans NetApp Workload Factory
@@ -14,7 +14,7 @@ summary: Gérer le stockage bloc pour un système de fichiers FSx for ONTAP dans
 Utilisez NetApp Workload Factory pour simplifier la gestion de vos ressources de stockage bloc, y compris les igroups et les périphériques de bloc, et contrôler l'accès client pour les périphériques de bloc FSx for ONTAP afin d'offrir des performances optimales et de minimiser les coûts.
 
 .Description de la tâche
-Depuis la console Workload Factory, vous pouvez gérer les groupes d'initiateurs (igroups) afin de contrôler l'accès des clients aux block devices. Vous pouvez également consulter les détails des block devices, augmenter leur capacité, gérer l'accès des clients, archiver les données pour les block devices inactifs et supprimer des block devices.
+Depuis la console NetApp Workload Factory, vous pouvez gérer les groupes d'initiateurs (igroups) afin de contrôler l'accès des clients aux périphériques de stockage bloc. Vous pouvez également consulter les détails des périphériques de stockage bloc, augmenter leur capacité, créer des clones, gérer l'accès des clients, archiver les données pour les périphériques de stockage bloc inactifs et supprimer des périphériques de stockage bloc.
 
 Consultez le schéma du stockage bloc pour vérifier les points suivants :
 
@@ -106,25 +106,6 @@ Les informations générales, de consommation, d'accès et de protection du disp
 
 
 
-=== Augmenter la capacité d'un bloc de stockage
-
-Augmentez à tout moment la capacité d'un périphérique de stockage existant.
-
-.Étapes
-. Connectez-vous à l'aide de l'un des link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].
-. Sélectionnez le menu image:workloads-menu-icon.png["L'icône du menu hamburger permet d'accéder aux charges de travail telles que le stockage, l'analyse de données d'entreprise (EDA), l'intelligence artificielle (IA), les bases de données, VMware et l'administration."] puis sélectionnez *Stockage*.
-. Dans le menu Stockage, sélectionnez *FSx pour ONTAP*.
-. Dans *FSx pour ONTAP*, sélectionnez l'onglet *Bloquer les périphériques*.
-. Accédez au menu des actions du périphérique de stockage, puis sélectionnez *Augmenter la capacité*.
-. Saisissez la nouvelle capacité du périphérique de stockage et sélectionnez l'unité.
-. Sélectionnez *Augmenter* pour appliquer les modifications.
-
-
-
-NOTE: Après avoir augmenté la taille du périphérique de stockage bloc, suivez la procédure fournie par votre système d'exploitation hôte pour découvrir la nouvelle taille et étendre le système de fichiers.
-
-
-
 === Gérer l'accès client à un périphérique de blocage
 
 Vous pouvez gérer l'accès client à un périphérique de stockage par blocs existant à tout moment en créant des igroups et en ajoutant ou en supprimant des périphériques de stockage par blocs et des initiateurs hôtes.
@@ -146,6 +127,54 @@ Vous pouvez gérer l'accès client à un périphérique de stockage par blocs ex
 
 
 . Si un igroup existe déjà, sélectionnez *Mapper igroup > Mapper igroup existant* pour ajouter ou supprimer des périphériques de bloc et des initiateurs hôtes de l'igroup, puis sélectionnez *Mapper*.
+
+
+
+
+=== Augmenter la capacité d'un bloc de stockage
+
+Augmentez à tout moment la capacité d'un périphérique de stockage existant.
+
+.Étapes
+. Connectez-vous à l'aide de l'un des link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].
+. Sélectionnez le menu image:workloads-menu-icon.png["L'icône du menu hamburger permet d'accéder aux charges de travail telles que le stockage, l'analyse de données d'entreprise (EDA), l'intelligence artificielle (IA), les bases de données, VMware et l'administration."] puis sélectionnez *Stockage*.
+. Dans le menu Stockage, sélectionnez *FSx pour ONTAP*.
+. Dans *FSx pour ONTAP*, sélectionnez l'onglet *Bloquer les périphériques*.
+. Accédez au menu des actions du périphérique de stockage, puis sélectionnez *Augmenter la capacité*.
+. Saisissez la nouvelle capacité du périphérique de stockage et sélectionnez l'unité.
+. Sélectionnez *Augmenter* pour appliquer les modifications.
+
+
+
+NOTE: Après avoir augmenté la taille du périphérique de stockage bloc, suivez la procédure fournie par votre système d'exploitation hôte pour découvrir la nouvelle taille et étendre le système de fichiers.
+
+
+
+=== Cloner un périphérique de stockage bloc
+
+Vous pouvez créer un clone d'un périphérique de stockage bloc existant à tout moment. Un clone de périphérique de stockage bloc est une copie accessible en écriture du périphérique d'origine, partageant les mêmes blocs de données jusqu'à ce que des modifications soient apportées à l'original ou au clone. Cloner un périphérique de stockage bloc est une méthode rapide et efficace pour créer des copies réutilisables de vos données sans consommer de capacité de stockage supplémentaire.
+
+.Étapes
+. Connectez-vous à l'aide de l'un des link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].
+. Sélectionnez le menu image:workloads-menu-icon.png["L'icône du menu hamburger permet d'accéder aux charges de travail telles que le stockage, l'analyse de données d'entreprise (EDA), l'intelligence artificielle (IA), les bases de données, VMware et l'administration."] puis sélectionnez *Stockage*.
+. Dans le menu Stockage, sélectionnez *FSx pour ONTAP*.
+. Dans *FSx pour ONTAP*, sélectionnez l'onglet *Bloquer les périphériques*.
+. Accédez au menu des actions du périphérique de bloc, puis sélectionnez *Cloner le périphérique de bloc*.
+. Dans la boîte de dialogue Cloner le périphérique de bloc, saisissez un nom pour le périphérique de bloc cloné.
+. Vous pouvez activer la suppression automatique pour que le périphérique de bloc cloné soit automatiquement supprimé lorsque l'espace disponible sur le volume est faible.
+. *Configuration iSCSI* : Facultatif. Pour connecter le clone du périphérique de stockage bloc aux initiateurs hôtes, créez un nouveau groupe d’initiateurs ou associez-le à un groupe d’initiateurs existant.
++
+** *Créer un nouveau groupe d'initiateurs* : Sélectionnez cette option pour créer un nouveau groupe d'initiateurs pour le clone du périphérique de stockage bloc. Saisissez les informations suivantes :
++
+... *Système d'exploitation hôte* : Sélectionnez le type de système d'exploitation hôte.
+... *Nom du groupe initiateur* : Saisissez un nom d’igroup.
+... *Initiateurs hôtes* : Veuillez saisir un ou plusieurs initiateurs hôtes. Ces initiateurs doivent respecter le format iSCSI qualifié (IQN).
+
+
+** *Associer à un groupe d'initiateurs existant* : sélectionnez cette option pour associer le clone du périphérique de stockage bloc à un groupe d'initiateurs existant. Sélectionnez un ou plusieurs groupes d'initiateurs auxquels associer le périphérique de stockage bloc.
+
+
+. Sélectionnez *Cloner* pour créer le clone du périphérique de stockage bloc.
 
 
 

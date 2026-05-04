@@ -1,0 +1,40 @@
+---
+sidebar: sidebar 
+permalink: apply-block-device-tags.html 
+keywords: tags, EC2 tags, ONTAP tags, block storage tags, apply tags to block devices 
+summary: Appliquez automatiquement des balises de niveau ONTAP à vos périphériques de stockage bloc pour la gestion des ressources dans NetApp Workload Factory. 
+---
+= Appliquez des balises de niveau ONTAP aux périphériques de bloc dans NetApp Workload Factory
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Utilisez le script de données utilisateur EC2 natif de NetApp Workload Factory pour créer et étiqueter automatiquement les périphériques de stockage bloc lors du déploiement d'une instance AWS EC2. Ajoutez le script de données utilisateur EC2 au modèle de l'assistant de lancement d'instance lors du déploiement d'une instance EC2 depuis la console AWS EC2. Après le déploiement, Workload Factory utilise les métadonnées collectées à partir du script pour appliquer des balises au niveau ONTAP à vos périphériques de stockage bloc. Ces balises vous aident à voir quel hôte consomme chaque périphérique de stockage bloc afin que vous puissiez rapidement corréler l'utilisation à l'hôte responsable lors du dépannage ou de l'audit.
+
+.Description de la tâche
+Le script de données utilisateur EC2 crée des périphériques de stockage bloc et applique des balises EC2 de niveau ONTAP à ces périphériques lors du déploiement de l'instance EC2.
+
+L'étiquette _EC2_ appliquée au périphérique de stockage bloc contient le nom EC2, l'ID EC2 et le chemin de montage du ou des périphériques de stockage bloc au sein de l'instance EC2.
+
+.Étapes
+. Suivez link:https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-launch-instance-wizard.html["les instructions Amazon Elastic Compute Cloud pour lancer une instance EC2"] les instructions de l’assistant de lancement d’instance dans la console AWS EC2.
+. Ajoutez le script de données utilisateur EC2 au modèle de l'assistant de lancement d'instance pour créer et étiqueter automatiquement les périphériques de stockage bloc.
++
+Rendez-vous sur notre dépôt GitHub FSx-ONTAP-sample-scripts pour obtenir le link:https://github.com/NetApp/FSx-ONTAP-samples-scripts/tree/main/Management-Utilities/ec2-user-data-iscsi-create-and-mount["script de données utilisateur EC2"].
+
+. Lancer l'instance.
++
+Le script de données utilisateur EC2 applique automatiquement des balises de niveau ONTAP aux nouveaux périphériques de stockage bloc hébergés sur l'instance EC2.
+
+. Pour les instances EC2 existantes, les scripts de données utilisateur ne prennent effet qu'après un redémarrage.
+
+
+.Résultat
+Les balises EC2 apparaissent dans la table des périphériques de bloc au sein du système de fichiers FSx for ONTAP associé.
+
+.Informations connexes
+* link:create-igroup.html["Créez des groupes d'initiateurs (igroups) pour un système de fichiers dans NetApp Workload Factory"]
+* link:manage-block-storage.html["Gérer le stockage bloc pour un système de fichiers dans NetApp Workload Factory"]
+
