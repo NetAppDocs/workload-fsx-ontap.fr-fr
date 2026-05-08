@@ -67,7 +67,7 @@ Répliquez des données entre deux systèmes de fichiers FSx for ONTAP, entre un
 Examinez ces exigences avant de commencer.
 
 * Assurez-vous qu'un système de fichiers FSx for ONTAP soit disponible pour la cible dans la relation de réplication.
-* Veillez à ouvrir les ports TCP 11104 et 11105 pour permettre le transfert de données sécurisé et la gestion entre les systèmes de stockage.
+* Ouvrez les ports TCP 11104 et 11105 pour le transfert de données sécurisé et la gestion entre les systèmes de stockage. ICMP est optionnel, mais peut aider aux vérifications réseau et au dépannage.
 * Le système de fichiers FSx for ONTAP que vous utilisez pour la relation de réplication doit être associé à un lien. link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["Apprenez à associer un lien existant ou à créer et associer un nouveau lien"]. Une fois le lien associé, revenez à cette opération.
 * Pour la réplication d'un système ONTAP sur site vers un système de fichiers FSx for ONTAP, assurez-vous d'avoir découvert le système ONTAP sur site.
 * La réplication n'est pas prise en charge pour les volumes dans un état autre que disponible, créé ou mal configuré, et lorsque la version d'ONTAP n'est pas compatible.
