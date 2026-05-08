@@ -26,7 +26,7 @@ Avant de commencer, tenez compte des points suivants :
 * Notez que la resynchronisation des volumes faisant partie d'une configuration en cascade peut prendre plus de temps.
 * Si le volume source de la relation est un volume de protection des données et qu'il est la cible d'une autre relation, l'inversion de la relation de réplication n'est pas prise en charge.
 * Une réplique d'un volume de protection des données (ou un deuxième saut) est prise en charge. Il n'est pas recommandé de créer une seconde réplique d'un volume de protection des données (ou un troisième saut).
-* Veillez à ouvrir les ports TCP 11104 et 11105 pour permettre le transfert de données sécurisé et la gestion entre les systèmes de stockage.
+* Ouvrez les ports TCP 11104 et 11105 pour le transfert de données sécurisé et la gestion entre les systèmes de stockage. ICMP est optionnel, mais peut aider aux vérifications réseau et au dépannage.
 
 
 .Étapes
