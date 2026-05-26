@@ -29,7 +29,7 @@ Si vous répliquez un volume source contenant des fichiers immuables, le volume 
 
 [NOTE]
 ====
-Vous pouvez répliquer un volume source (lecture/écriture) ou un volume de protection des données (DP). La réplication en cascade est prise en charge, mais pas un troisième saut. En savoir plus sur link:https://review.docs.netapp.com/us-en/workload-fsx-ontap_cascade-replication/cascade-replication.html["réplication en cascade"^].
+Vous pouvez répliquer un volume source (lecture/écriture) ou un volume de protection des données (DP). La réplication en cascade est prise en charge, mais un troisième saut ne l'est pas. En savoir plus sur link:https://docs.netapp.com/us-en/workload-fsx-ontap/cascade-replication.html["réplication en cascade"].
 
 ====
 

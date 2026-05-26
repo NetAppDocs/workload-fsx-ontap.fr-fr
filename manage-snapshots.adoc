@@ -76,7 +76,7 @@ Activez l'accès au répertoire des instantanés pour donner aux utilisateurs la
 
 Vous avez la possibilité de restaurer les données d’un instantané vers un volume existant ou vers un nouveau volume.
 
-link:https://review.docs.netapp.com/us-en/workload-fsx-ontap_snapshot-mgmt/restore-volume-from-snapshot.html["Restaurer un volume à partir d'un snapshot"]
+link:https://docs.netapp.com/us-en/workload-fsx-ontap/restore-volume-from-snapshot.html["Restaurer un volume à partir d'un snapshot"]
 
 
 

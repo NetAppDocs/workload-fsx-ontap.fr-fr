@@ -647,7 +647,7 @@ Vous pouvez désormais créer des partages SMB/CIFS qui pointent vers des réper
 
 Pour les volumes de protection des données, le flux de création d'un partage SMB/CIFS inclut désormais la création d'un chemin de jonction vers le volume à des fins de montage.
 
-link:https://review.docs.netapp.com/us-en/workload-fsx-ontap_grogu-5684-wa-dismiss/manage-cifs-share.html#create-a-cifs-share-for-a-volume["Créez un partage CIFS pour un volume"]
+link:https://docs.netapp.com/us-en/workload-fsx-ontap/manage-cifs-share.html#create-a-cifs-share-for-a-volume["Créez un partage CIFS pour un volume"]
 
 
 

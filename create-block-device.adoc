@@ -68,7 +68,7 @@ ONTAP atteint une efficacité de stockage grâce aux fonctionnalités de dédupl
 
 .. *Politique d'instantanés* : sélectionnez la stratégie d'instantanés pour spécifier la fréquence et la rétention des instantanés.
 +
-Voici les politiques par défaut d'AWS. Pour afficher les stratégies d'instantané existantes, vous devez link:link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["associer un lien"].
+Voici les politiques par défaut d'AWS. Pour afficher les stratégies d'instantané existantes, vous devez link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["associer un lien"].
 
 +
 `default`:: Cette règle crée automatiquement des snapshots selon le planning suivant, avec les plus anciennes copies supprimées pour faire de la place pour les nouvelles copies :
