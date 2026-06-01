@@ -95,7 +95,13 @@ Dans le tableau volumes, sélectionnez un ou plusieurs volumes, puis sélectionn
 *** Intelligence artificielle (IA) et apprentissage automatique (ML) : répliquez vos données ONTAP sur site vers FSx for ONTAP et créez des points d'accès S3 pour prendre en charge l'entraînement de l'IA et du ML dans le cloud
 *** Migration : transfère vos données vers le système de fichiers cible FSX pour ONTAP
 +
-*Réplication de la configuration de la machine virtuelle de stockage* : Vous pouvez, en option, sélectionner la réplication des données et des paramètres de configuration d'une seule machine virtuelle de stockage. Lorsque vous migrez simultanément des données et des paramètres de configuration, assurez-vous que la dernière réplication du volume a été effectuée au cours des dernières 24 heures. Tous les volumes de la même machine virtuelle de stockage doivent être sélectionnés pour utiliser cette fonctionnalité. La stratégie de hiérarchisation de tous les volumes est, par défaut, celle du volume source, ce qui est recommandé pour les cas d'utilisation de migration.
+*Réplication de la configuration de la machine virtuelle de stockage* : Vous pouvez choisir de répliquer les données et les paramètres de configuration d'une seule machine virtuelle de stockage. Lors de la migration des données et des paramètres, tous les volumes doivent terminer la réplication au cours des dernières 24 heures, puis la bascule doit être effectuée simultanément.
+
++
+La stratégie de hiérarchisation de tous les volumes est par défaut celle du volume source, ce qui est recommandé pour les cas d'utilisation de migration.
+
++
+Pendant la migration, les clients accèdent aux données depuis le système de fichiers ONTAP source. Après la bascule, les volumes sont disponibles via les adresses IP du système de fichiers FSx for ONTAP cible. Mettez à jour tous les clients ou ressources qui utilisent encore l'ancienne adresse IP.
 
 *** Reprise après incident à chaud : assure une haute disponibilité et une reprise après incident rapide pour les workloads stratégiques
 *** Reprise après incident des données inactives ou d'archivage :
@@ -119,7 +125,10 @@ Pour tous les cas d'utilisation, si vous activez les snapshots pour la conservat
 
 
 .. *FSX pour système de fichiers ONTAP* : sélectionnez les informations d'identification, la région et le nom du système de fichiers FSX pour ONTAP pour le système de fichiers cible FSX pour ONTAP.
-.. *Nom de la VM de stockage* : sélectionnez la VM de stockage dans le menu déroulant. La machine virtuelle de stockage que vous sélectionnez est la cible de tous les volumes sélectionnés dans cette relation de réplication.
+.. *Nom de la machine virtuelle de stockage* : Sélectionnez la machine virtuelle de stockage. La machine virtuelle de stockage que vous sélectionnez est la cible de tous les volumes sélectionnés dans cette relation de réplication.
++
+Lorsque les noms des machines virtuelles de stockage source et cible sont identiques, nous créons un alias de système de fichiers pour les noms des machines virtuelles de stockage cible afin d’éviter les conflits de peering.
+
 .. *Nom du volume* : le nom du volume cible est généré automatiquement au format suivant `{OriginalVolumeName}_copy`. Vous pouvez utiliser le nom du volume généré automatiquement ou entrer un autre nom de volume.
 .. *Règle de hiérarchisation* : sélectionnez la règle de hiérarchisation pour les données stockées dans le volume cible. La règle de Tiering est définie par défaut sur la règle de hiérarchisation recommandée pour le cas d'utilisation que vous avez sélectionné.
 +
@@ -136,6 +145,10 @@ Sans limite, les performances du réseau et des applications peuvent diminuer. N
 
 . Sous Paramètres de réplication, fournissez les informations suivantes :
 +
+.. *Initialiser la relation de réplication* : Choisissez d’initialiser la relation de réplication immédiatement après la création de la relation de réplication ou ultérieurement. Notez que l’initialisation peut prendre du temps et que vous pourriez vouloir effectuer le transfert de base en dehors des heures de pointe.
++
+Pour initialiser manuellement ultérieurement, reportez-vous aux instructions dans <<Étape 2 : Initialiser la relation de réplication,Étape 2 : Initialiser la relation de réplication>>.
+
 .. *Intervalle de réplication* : sélectionnez la fréquence à laquelle les instantanés sont transférés du volume source vers le volume cible.
 .. *Conservation à long terme* : éventuellement, activez les instantanés pour la conservation à long terme. La conservation à long terme permet aux services de l'entreprise de continuer de fonctionner même en cas de défaillance complète d'un site, ce qui permet aux applications de basculer en toute transparence grâce à une copie secondaire.
 +
@@ -146,10 +159,10 @@ Si vous activez la conservation à long terme, sélectionnez une règle existant
 
 +
 
-NOTE: Les étiquettes de source et de cible correspondantes sont requises pour la conservation à long terme. Si vous le souhaitez, Workload Factory peut créer des étiquettes manquantes pour vous.
+NOTE: Des étiquettes source et cible correspondantes sont requises pour la conservation à long terme. Si vous le souhaitez, Workload Factory peut créer les étiquettes manquantes pour vous.
 
 +
-*** *Choisissez une stratégie existante* : sélectionnez une stratégie existante dans le menu déroulant.
+*** *Choisissez une politique existante* : sélectionnez une politique existante.
 *** *Créer une nouvelle politique* : saisissez un *nom de politique*.
 
 

@@ -1,0 +1,31 @@
+---
+sidebar: sidebar 
+permalink: track-replication-delays.html 
+keywords: replication, track replication, replication lag, replication delay, delay, monitor replication, replication threshold, lag notification 
+summary: Activez le suivi pour surveiller les délais de toutes les relations de réplication de votre compte. 
+---
+= Suivi des délais de réplication
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Activez le suivi pour surveiller les délais de réplication pour toutes les relations de réplication dans votre compte. Workload Factory surveille le délai de réplication à l'aide de seuils. Par défaut, nous définissons un seuil de 150 % de l'intervalle de réplication afin de permettre un temps de transfert normal et d'éviter les fausses alertes positives. Vous pouvez personnaliser le seuil en fonction de votre RPO. Vous pouvez recevoir des notifications lorsque le délai dépasse le seuil.
+
+.Étapes
+. Connectez-vous à l'aide de l'un des link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].
+. Sélectionnez le menu image:workloads-menu-icon.png["L'icône du menu hamburger permet d'accéder aux charges de travail telles que le stockage, l'analyse de données d'entreprise (EDA), l'intelligence artificielle (IA), les bases de données, VMware et l'administration."] puis sélectionnez *Stockage*.
+. Dans le menu Stockage, sélectionnez *FSx pour ONTAP*.
+. Depuis *FSx for ONTAP*, sélectionnez le menu d'actions du système de fichiers à mettre à jour, puis sélectionnez *Gérer*.
+. Dans la présentation du système de fichiers, sélectionnez l'onglet *relations de réplication*.
+. Sélectionnez *Activer le suivi*.
+. Dans la boîte de dialogue Activer l'historique du délai de réplication, sélectionnez *Activer*.
+. De retour dans la vignette Historique du délai de réplication, sélectionnez *Personnaliser le seuil* pour définir votre seuil préféré.
+. Dans la boîte de dialogue Personnaliser le seuil de délai de latence, saisissez le seuil en heures et en minutes.
+. Vous pouvez également sélectionner *Activer les notifications de délai* pour recevoir des notifications lorsque les délais de réplication dépassent le seuil.
+. Sélectionnez *appliquer*.
+
+
+.Informations connexes
+link:manage-replication.html["Gérer les relations de réplication"^]

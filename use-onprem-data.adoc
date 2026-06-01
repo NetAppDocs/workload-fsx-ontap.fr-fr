@@ -59,7 +59,12 @@ image:screenshot-on-prem-connectivity.png["Capture d'écran montrant comment con
 Si vous n'avez pas créé de lien, suivez les instructions, puis revenez à cette opération et sélectionnez le lien.
 
 .. *Adresse IP du cluster* : indiquez l'adresse IP du cluster ONTAP sur site à répliquer.
-.. *Informations d'identification ONTAP* : entrez les informations d'identification ONTAP pour le cluster ONTAP sur site. Assurez-vous que l'utilisateur dispose des autorisations requises.
+.. *Identifiants ONTAP* : Fournissez les éléments suivants :
++
+*** GovCloud accounts : Saisissez l’ARN avec les informations d’identification ONTAP.
+*** Tous les autres comptes : saisissez les identifiants ONTAP pour le cluster ONTAP sur site. Assurez-vous que l’utilisateur dispose des autorisations requises.
+
+
 
 
 . Sélectionnez *découvrir* pour démarrer le processus de découverte.

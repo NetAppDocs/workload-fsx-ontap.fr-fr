@@ -77,7 +77,6 @@ Workload Factory est pris en charge dans toutes les régions commerciales où FS
 Les régions AWS suivantes ne sont pas prises en charge :
 
 * régions de Chine
-* Régions GovCloud (États-Unis)
 * Nuage secret
 * Nuage top secret
 

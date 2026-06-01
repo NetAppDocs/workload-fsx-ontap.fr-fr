@@ -75,10 +75,8 @@ sidebar:
           url: "/create-backup.html"
         - title: Restaurer un volume à partir d'une sauvegarde
           url: "/restore-from-backup.html"
-      - title: Utiliser la réplication
-        entries:
-        - title: Réplication des données
-          url: "/create-replication.html"
+      - title: Réplication des données
+        url: "/create-replication.html"
       - title: Protégez vos données avec la protection anti-ransomware autonome
         url: "/ransomware-protection.html"
       - title: Clonez un volume
@@ -105,6 +103,8 @@ sidebar:
         url: "/edit-volume-autogrow.html"
       - title: Ajuster la capacité du volume
         url: "/adjust-volume-capacity.html"
+      - title: Définir les seuils de latence du volume
+        url: "/set-volume-latency-thresholds.html"
       - title: Rééquilibrer la capacité du volume
         url: "/rebalance-volume.html"
       - title: Gérer les fichiers immuables
@@ -185,21 +185,10 @@ sidebar:
         entries:
         - title: Réplication d'un volume de protection des données
           url: "/cascade-replication.html"
-        - title: Inverser une relation de réplication
-          url: "/reverse-replication.html"
-        - title: Modifier la planification de réplication d'un volume source
-          url: "/change-replication-schedule.html"
-        - title: Limitez le taux de transfert maximal d'une relation de réplication
-          url: "/limit-transfer-rate.html"
-        - title: Mise à jour manuelle des données de snapshot dans une relation de
-            réplication
-          url: "/update-snapshot-replication.html"
-        - title: Mettre en pause et reprendre une relation de réplication
-          url: "/pause-resume-replication.html"
-        - title: Arrête une relation de réplication
-          url: "/stop-replication.html"
-        - title: Supprimer une relation de réplication
-          url: "/delete-replication.html"
+        - title: Suivi des délais de réplication
+          url: "/track-replication-delays.html"
+        - title: Gérer les relations de réplication
+          url: "/manage-replication.html"
     - title: Administration des performances
       entries:
       - title: Provisionnez les IOPS pour un système de fichiers

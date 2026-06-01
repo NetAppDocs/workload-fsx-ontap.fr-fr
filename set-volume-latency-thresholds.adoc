@@ -1,0 +1,59 @@
+---
+sidebar: sidebar 
+permalink: set-volume-latency-thresholds.html 
+keywords: latency, latency thresholds, alerts, volume latency, read latency, write latency 
+summary: 'Définissez des seuils de latence pour les volumes afin de recevoir des alertes lorsque la latence de lecture ou d"écriture dépasse les valeurs spécifiées.' 
+---
+= Définissez les seuils de latence des volumes dans NetApp Workload Factory
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Définissez des seuils de latence pour les volumes afin de recevoir des alertes lorsque la latence de lecture ou d'écriture dépasse les valeurs spécifiées.
+
+.Description de la tâche
+Vous pouvez configurer des seuils de latence pour chaque volume afin de surveiller les performances et de recevoir des alertes lorsque les valeurs de latence dépassent vos limites définies. Workload Factory surveille la latence de lecture et d'écriture et génère des alertes lorsque l'un ou l'autre des seuils est dépassé.
+
+Lorsque vous définissez des seuils de latence, Workload Factory surveille les éléments suivants :
+
+* *Latence de lecture* : Déclenche une alerte lorsque les opérations de lecture dépassent le seuil spécifié en millisecondes.
+* *Latence d'écriture* : Déclenche une alerte lorsque les opérations d'écriture dépassent le seuil spécifié en millisecondes.
+
+
+La surveillance de la latence utilise les paramètres par défaut suivants :
+
+* *Seuil d'IOPS* : 100 IOPS (lecture et écriture)
+* *Plage de temps* : 10 minutes
+
+
+Une alerte est générée lorsque le seuil de latence est dépassé et que le seuil d'IOPS est atteint sur la plage horaire spécifiée.
+
+
+NOTE: Vous pouvez consulter les événements de latence et recevoir des alertes sans connexion. Cependant, pour analyser les événements et recevoir des informations et des recommandations basées sur l'IA, vous devez link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["se connecter au système de fichiers à l'aide d'un lien"].
+
+.Étapes
+. Connectez-vous à l'aide de l'un des link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].
+. Sélectionnez le menu image:workloads-menu-icon.png["L'icône du menu hamburger permet d'accéder aux charges de travail telles que le stockage, l'analyse de données d'entreprise (EDA), l'intelligence artificielle (IA), les bases de données, VMware et l'administration."] puis sélectionnez *Stockage*.
+. Dans le menu Stockage, sélectionnez *FSx pour ONTAP*.
+. Dans *FSx for ONTAP*, sélectionnez le menu actions du système de fichiers contenant le volume à configurer, puis sélectionnez *Gérer*.
+. Dans la présentation du système de fichiers, sélectionnez l'onglet *volumes*.
+. Dans l'onglet Volumes, sélectionnez le menu Actions du volume pour lequel vous souhaitez définir les seuils de latence.
+. Sélectionnez *Actions d'alerte*, puis *Définir le seuil de latence*.
+. Dans la boîte de dialogue Définir le seuil de latence, configurez les éléments suivants :
++
+.. *Latence de lecture* : Entrez la valeur seuil en millisecondes (ms) pour les opérations de lecture.
+.. *Latence d'écriture* : Entrez la valeur seuil en millisecondes (ms) pour les opérations d'écriture.
+
+
+. Sélectionnez *Enregistrer* pour appliquer les seuils de latence.
+
+
+.Résultat
+Workload Factory surveille le volume et génère des alertes lorsque la latence de lecture ou d'écriture dépasse les seuils configurés. Vous pouvez consulter les événements de latence depuis le link:analyze-events.html["Écran d'analyse"].
+
+.Informations connexes
+* link:analyze-events.html["Analyser les événements FSx pour ONTAP dans NetApp Workload Factory"]
+* link:adjust-volume-capacity.html["Ajuster la capacité de volume dans Workload Factory"]
+

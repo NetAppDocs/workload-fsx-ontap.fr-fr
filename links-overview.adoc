@@ -39,6 +39,8 @@ Vous créez et associez des liens à partir de la charge de travail de stockage 
 
 Vous pouvez authentifier les liens à l'aide des informations d'identification stockées dans le service d'informations d'identification Workload Factory ou avec vos informations d'identification stockées dans AWS Secrets Manager.  Workload Factory ne prend pas en charge la modification des modes d'authentification.
 
+La connectivité de lien pour les comptes GovCloud est prise en charge. NetApp Workload Factory utilise des clés d’authentification GovCloud, permettant un accès sécurisé et sans agent à FSx for ONTAP via des mécanismes approuvés GovCloud.
+
 
 
 == Coûts
@@ -67,6 +69,7 @@ Les fonctions qui nécessitent un lien sont les suivantes :
 * Croissance automatique du volume pour une mise à l'échelle élastique
 * Création et gestion de clones, pour un clonage instantané et sur place des données
 * Affichage de métriques supplémentaires directement depuis ONTAP , telles que la version ONTAP
+* Affichage des détails des machines virtuelles de stockage et des LIF de cluster, notamment les rôles, les points de terminaison, les nœuds, les adresses IP et l’état
 
 
 Découvrez comment link:create-link.html["connecter un lien à un système de fichiers FSx pour ONTAP"].

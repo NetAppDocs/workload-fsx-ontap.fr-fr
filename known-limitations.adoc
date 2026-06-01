@@ -20,7 +20,6 @@ Les limitations connues désignent les plateformes, les périphériques ou les f
 Les régions AWS suivantes ne sont pas prises en charge :
 
 * régions de Chine
-* Régions GovCloud (États-Unis)
 * Nuage secret
 * Nuage top secret
 
