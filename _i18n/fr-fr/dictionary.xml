@@ -2549,7 +2549,6 @@
   <block id="df84e5c661ad9c55d4921f236021aac2" category="paragraph"><block ref="df84e5c661ad9c55d4921f236021aac2" category="inline-link-macro-rx"></block></block>
   <block id="3b40a61896ac7bb071b70913553072f1" category="inline-link-macro">Gérer le stockage bloc pour un système de fichiers FSx for ONTAP</block>
   <block id="72a58cc21323626d7784d44077612a4a" category="paragraph"><block ref="72a58cc21323626d7784d44077612a4a" category="inline-link-macro-rx"></block></block>
-  <block id="16f2ae5a8a2de6f12ddc298127a4ddb7" category="list-text">Fiabilité : seuil de capacité SSD, instantanés locaux planifiés, sauvegardes de volumes planifiées, réplication des données à distance et fiabilité des données pour la conservation à long terme</block>
   <block id="cfcff7e4ca0a4496f029a99d812c3cb3" category="doc">Ajustez manuellement la capacité du système de fichiers dans Workload Factory</block>
   <block id="59f5126fcebfa1b4b592a46994a99827" category="paragraph">Augmentez la capacité de stockage SSD lorsque l'utilisation dépasse votre seuil spécifié. Réduisez la capacité de stockage SSD lorsque vous n'utilisez pas les ensembles de travail afin de réaliser des économies.</block>
   <block id="eb6c620cfb7e9a2b2d272cbd7de4add5" category="inline-link-macro">activer la gestion de la capacité</block>
@@ -3169,16 +3168,53 @@
   <block id="9eedf15c88882820c71be2457a0407b4" category="paragraph">Un rapport PDF est généré et peut être téléchargé.</block>
   <block id="753f0ef1207693ec3d5a5341ae8e6a92" category="summary">Activez le suivi pour surveiller les délais de toutes les relations de réplication de votre compte.</block>
   <block id="2b3d29c88190bdb57da25e1848b65b7d" category="doc">Suivi des délais de réplication</block>
-  <block id="65efc637257623044166bb5814f4cbef" category="paragraph">Activez le suivi pour surveiller les délais de réplication pour toutes les relations de réplication dans votre compte. Workload Factory surveille le délai de réplication à l'aide de seuils. Par défaut, nous définissons un seuil de 150 % de l'intervalle de réplication afin de permettre un temps de transfert normal et d'éviter les fausses alertes positives. Vous pouvez personnaliser le seuil en fonction de votre RPO. Vous pouvez recevoir des notifications lorsque le délai dépasse le seuil.</block>
   <block id="93dea0fbfb3d3bc0e6e540f6de60aaf4" category="list-text">Sélectionnez *Activer le suivi*.</block>
   <block id="a3c265cc9e14e487d93cfcb8cd19ba63" category="list-text">Dans la boîte de dialogue Activer l'historique du délai de réplication, sélectionnez *Activer*.</block>
   <block id="785e95d007ac530ca81623e89d020254" category="list-text">De retour dans la vignette Historique du délai de réplication, sélectionnez *Personnaliser le seuil* pour définir votre seuil préféré.</block>
   <block id="6a755178543e687ff1dabcfef51a7658" category="list-text">Dans la boîte de dialogue Personnaliser le seuil de délai de latence, saisissez le seuil en heures et en minutes.</block>
-  <block id="7c7fac083dc1051f417aaabb24de6860" category="list-text">Vous pouvez également sélectionner *Activer les notifications de délai* pour recevoir des notifications lorsque les délais de réplication dépassent le seuil.</block>
   <block id="90f7372e4d5f7acc9a7ad384567a8fb1" category="inline-link-macro">Gérer les relations de réplication</block>
   <block id="40784ca0165ca1ea0dd19de018ca873d" category="paragraph"><block ref="40784ca0165ca1ea0dd19de018ca873d" category="inline-link-macro-rx"></block></block>
   <block id="3a73b982b2965919c12c85d4ba9df2b4" category="list-text">*Identifiants ONTAP* : Fournissez les éléments suivants :</block>
   <block id="7bc557e938a1319fa6e07bd448576cd2" category="list-text">GovCloud accounts : Saisissez l’ARN avec les informations d’identification ONTAP.</block>
   <block id="73a2a12878b0731214258fd091d03336" category="list-text">Tous les autres comptes : saisissez les identifiants ONTAP pour le cluster ONTAP sur site. Assurez-vous que l’utilisateur dispose des autorisations requises.</block>
   <block id="92ee6e4d72d15689a675017ce0db2fa1" category="section-title">31 mai 2026</block>
+  <block id="da6f5bf8aee08ef83468ad38ab52796b" category="doc">Nouveau tableau de bord bien conçu disponible pour tous les systèmes FSx for ONTAP</block>
+  <block id="7fca025a8bf1b5d72a149731d5c88125" category="paragraph">L'analyse bien architecturée est désormais disponible pour les systèmes de fichiers FSx for ONTAP depuis le nouveau tableau de bord bien architecturé dans NetApp Workload Factory. Le nouveau tableau de bord offre une vue centralisée de tous vos systèmes de fichiers, tous comptes et régions confondus, ainsi que de leurs configurations en un seul endroit. Une notification contextuelle apparaît lorsque vous consultez l’onglet *Well-architected* depuis un système de fichiers. Accédez au nouveau tableau de bord en sélectionnant *Well-architected* dans le menu de navigation de gauche de Workload Factory.</block>
+  <block id="b09ad8a2ad81c470093e9c74313ea0c2" category="paragraph">Vous pouvez toujours accéder à l'analyse bien architecturée pour un système de fichiers spécifique et à partir de l'option de menu *Well-architected* dans Storage.</block>
+  <block id="9864fa88fc3747e67b6fc38c9b938677" category="section-title">Nouvelles recommandations dans l'analyse bien architecturée</block>
+  <block id="a38b9a0af0de5e85c5e64a158079deb5" category="paragraph">Workload Factory inclut désormais les configurations suivantes dans l'analyse bien architecturée pour les systèmes de fichiers FSx for ONTAP :</block>
+  <block id="fd2d46026cdd19577962231303a46abd" category="list-text">Connecter l’hôte au nœud de basculement : vérifie si les hôtes sont connectés au nœud de basculement dans un système de fichiers FSx for ONTAP en mode actif-passif et suggère de connecter les hôtes au nœud de basculement pour plus de fiabilité.</block>
+  <block id="0e7d4cc90eb78377a1315bafe07799dd" category="list-text">Connecter l'hôte au nœud préféré : vérifie si les hôtes sont connectés à leurs périphériques de blocs via le nœud préféré et suggère de connecter les hôtes au nœud préféré pour une efficacité des performances.</block>
+  <block id="efbeddc0347a679a438120189b77f860" category="section-title">Explorateur de volumes</block>
+  <block id="3e1cc7f8632eafd5f69d910c06db3aa4" category="paragraph">Volumes Explorer vous offre une vue simple et consultable de tous vos volumes dans NetApp Workload Factory. Identifiez rapidement les volumes dédiés aux charges de travail par blocs ou par fichiers. Consultez la taille logique, la capacité physique utilisée et l’utilisation des fonctionnalités d’efficacité du stockage (compression, déduplication et compactage) de chaque volume. Filtrez et triez les volumes par nom, état (disponible/défaillant), latence, taille, capacité utilisée et fonctionnalités de protection.</block>
+  <block id="2731bbeb58ccf58c8e631528a8e3fc94" category="section-title">Améliorations du délai de réplication</block>
+  <block id="3a410df7dfc102007ea8a7569fdb1810" category="section-title">Notifications par e-mail améliorées en cas de retards de réplication</block>
+  <block id="bd78ae8d1a9aed4500716acc31d179d8" category="paragraph">Les notifications par e-mail concernant les retards de réplication contiennent désormais plus de détails sur la relation concernée. Cette notification vous permet d'identifier rapidement la relation concernée et de l'examiner dans la console Workload Factory.</block>
+  <block id="4dc5c4a9c4b845746295cce1108ec278" category="inline-link-macro">Activer les notifications en cas de retard de réplication</block>
+  <block id="7f27417270cfb269527e679a64b5a19a" category="paragraph"><block ref="7f27417270cfb269527e679a64b5a19a" category="inline-link-macro-rx"></block></block>
+  <block id="347a810d994926c5e31d1bd690b34fcf" category="section-title">Exporter les données de délai de réplication au format CSV</block>
+  <block id="45cbeaeb98d1d075d560a8e62269fbbb" category="paragraph">Vous pouvez désormais exporter les données de délai de réplication vers un fichier CSV afin de les analyser dans une feuille de calcul et de les partager avec d'autres.</block>
+  <block id="7aab1e1b0e0fcc4720b15dcc5848034e" category="paragraph"><block ref="7aab1e1b0e0fcc4720b15dcc5848034e" category="inline-link-macro-rx"></block></block>
+  <block id="5312d8ea7e9ef079aeac882dbcd64d0a" category="section-title">Amélioration de la création de périphériques de bloc</block>
+  <block id="85fb39d6f3bb52679cb9ce3bd27ffd1c" category="paragraph">Workload Factory prend en charge la création de périphériques de blocs à partir d'un instantané de volume.</block>
+  <block id="a439412a0228682fa1054f4bc1a96815" category="inline-link-macro">Créez un périphérique de stockage par blocs à partir d'un instantané de volume dans Workload Factory</block>
+  <block id="40a9299c5fdf8c1e8242dcb670c6b1cd" category="paragraph"><block ref="40a9299c5fdf8c1e8242dcb670c6b1cd" category="inline-link-macro-rx"></block></block>
+  <block id="6347309ad07af7266241819bb2af76d1" category="list-text">*Connecter l'hôte au nœud de basculement*</block>
+  <block id="e89cb70f69260bd0359dad1d58cb94de" category="paragraph">Workload Factory recommande de connecter les hôtes au nœud de basculement afin de maintenir la connectivité et d’éviter les interruptions lors des basculements.</block>
+  <block id="8722112d28d6eea0aff9478fb61c5de7" category="section-title">Efficacité des performances</block>
+  <block id="8b1271dadb19678250cdc4bb1a083452" category="paragraph">L'efficacité des performances se concentre sur l'utilisation efficace des ressources informatiques et informatiques.</block>
+  <block id="bb7eaffc45b0ebd2357f86e392d3d75e" category="list-text">*Connecter l'hôte au nœud préféré*</block>
+  <block id="e72d694d5291c64bcb1eda2ecaff634a" category="paragraph">Dans un modèle de déploiement FSx for ONTAP à haute disponibilité, les hôtes doivent être connectés directement au nœud qui sert le périphérique de bloc afin de garantir un accès direct et des performances optimales.</block>
+  <block id="6149c2ac82c846d8c0c66beff37f271d" category="paragraph">Créez des périphériques de stockage par blocs pour répondre aux exigences des applications de votre ligne de métier (LOB). Vous pouvez créer des périphériques de stockage par blocs dans un volume existant, créer un nouveau volume pour le nouveau périphérique de stockage par blocs, ou créer un nouveau volume à partir d'un instantané pour le nouveau périphérique de stockage par blocs.</block>
+  <block id="7d890770a60d61d9610602416316dd0c" category="list-text">Créer à partir d'un instantané de volume. Sélectionnez le nom du volume source et le nom de l'instantané. Seuls les volumes sans périphériques de blocs sont disponibles.</block>
+  <block id="7e1ccbf5b074e2396f26b030d7e1231f" category="list-text">Fiabilité : seuil de capacité SSD, instantanés locaux planifiés, sauvegardes de volumes planifiées, réplication des données à distance, fiabilité des données pour la conservation à long terme et connexion des hôtes au nœud de basculement</block>
+  <block id="383b20892354fe24b77f00c1d9e28776" category="list-text">Efficacité des performances : connectez les hôtes au nœud préféré</block>
+  <block id="4fd22cd0c1b62f84962ef1e8ffd9c966" category="paragraph">Activez le suivi pour surveiller les délais de réplication sur votre compte. Workload Factory vous alerte lorsque les délais dépassent un seuil défini. Par défaut, le seuil est de 150 % de l’intervalle de réplication afin de permettre un temps de transfert normal et de réduire les fausses alertes. Vous pouvez ajuster le seuil pour qu’il corresponde à votre RPO et recevoir des notifications lorsque les délais le dépassent. Vous pouvez également exporter les données dans un fichier CSV pour une analyse plus approfondie.</block>
+  <block id="748b89fa24d3c9751520ee29acfcb298" category="list-text">Vous pouvez également sélectionner *Activer les notifications de délai* pour recevoir des notifications lorsque les délais de réplication dépassent le seuil.</block>
+  <block id="ba86cf7b33d47e93634da88ec7f05bbe" category="paragraph">Les notifications sont envoyées par e-mail et comprennent :</block>
+  <block id="a1565efa58a4379112baa6f6c81b89b5" category="list-text">Volume source</block>
+  <block id="70906679659b9e5913d66957f3f5946c" category="list-text">Volume cible</block>
+  <block id="71a7ff5ebf9156a251d799ca9d4801be" category="list-text">Seuil de temps de latence dépassé</block>
+  <block id="7295e460f10eab584940e13ed73f1a7c" category="list-text">Lien vers la relation de réplication</block>
+  <block id="1cdbc8bcb26cc8d5e894a97b9e7f269f" category="section-title">05 juillet 2026</block>
 </blocks>

@@ -96,6 +96,10 @@ Les étiquettes de la stratégie d'instantané du volume source et les étiquett
 +
 Il convient d'augmenter le seuil de capacité des fichiers afin d'éviter d'atteindre la limite de capacité du volume. Une capacité de fichiers insuffisante (en inodes) empêche l'écriture de données supplémentaires sur le volume. Workload Factory recommande de maintenir l'utilisation de la capacité de fichiers disponible en dessous de 80 % de façon continue. La capacité de fichiers disponible est nécessaire pour créer de nouveaux fichiers sur le volume.
 
+* *Connecter l'hôte au nœud de basculement*
++
+Workload Factory recommande de connecter les hôtes au nœud de basculement afin de maintenir la connectivité et d’éviter les interruptions lors des basculements.
+
 
 
 
@@ -175,6 +179,18 @@ Une capacité SSD sous-utilisée peut engendrer des coûts inutiles. Workload Fa
 * *Volumes NAS inactifs*
 +
 L'analyse de configuration identifie les volumes NAS qui ne sont pas utilisés activement et recommande de les supprimer ou de les archiver afin de réduire les coûts.
+
+
+
+
+
+=== Efficacité des performances
+
+L'efficacité des performances se concentre sur l'utilisation efficace des ressources informatiques et informatiques.
+
+* *Connecter l'hôte au nœud préféré*
++
+Dans un modèle de déploiement FSx for ONTAP à haute disponibilité, les hôtes doivent être connectés directement au nœud qui sert le périphérique de bloc afin de garantir un accès direct et des performances optimales.
 
 
 

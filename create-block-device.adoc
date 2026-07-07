@@ -11,7 +11,7 @@ summary: 'Créez des périphériques de bloc pour répondre aux exigences de vot
 
 
 [role="lead"]
-Créez des périphériques de bloc pour répondre aux exigences de votre application métier (LOB).
+Créez des périphériques de stockage par blocs pour répondre aux exigences des applications de votre ligne de métier (LOB). Vous pouvez créer des périphériques de stockage par blocs dans un volume existant, créer un nouveau volume pour le nouveau périphérique de stockage par blocs, ou créer un nouveau volume à partir d'un instantané pour le nouveau périphérique de stockage par blocs.
 
 .Description de la tâche
 Seuls les volumes FlexVol sont pris en charge pour les périphériques de stockage par blocs dans NetApp Workload Factory. Vous pouvez créer des périphériques de stockage par blocs en utilisant le protocole iSCSI.
@@ -34,6 +34,7 @@ La taille du bloc doit être inférieure à la taille du FlexVol volume disponib
 +
 *** Créez un nouveau volume et saisissez son nom.
 *** Sélectionnez un volume existant.
+*** Créer à partir d'un instantané de volume. Sélectionnez le nom du volume source et le nom de l'instantané. Seuls les volumes sans périphériques de blocs sont disponibles.
 
 
 .. *Nom de l'agrégat* : Sélectionnez l'agrégat qui hébergera le nouveau volume.
