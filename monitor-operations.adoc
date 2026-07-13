@@ -40,6 +40,7 @@ Conservation des événements:: Les événements sont conservés dans l'interfac
 
 
 
+[[track-and-monitor-operations]]
 == Suivez et surveillez les opérations
 
 Suivez et surveillez les opérations dans la console NetApp avec Tracker.
@@ -56,6 +57,7 @@ image:screenshot-menu-tracker-option.png["Capture d'écran du menu des paramètr
 
 
 
+[[view-api-request]]
 == Afficher une demande d'API
 
 Affichez la demande API dans la zone de code pour une tâche dans Tracker.
@@ -67,6 +69,7 @@ Affichez la demande API dans la zone de code pour une tâche dans Tracker.
 
 
 
+[[retry-a-failed-operation]]
 == Réessayez une opération ayant échoué
 
 Réessayez une opération ayant échoué dans le Tracker. Vous pouvez également copier le message d'erreur d'une opération ayant échoué.
@@ -84,6 +87,7 @@ L'opération est lancée à nouveau.
 
 
 
+[[edit-and-retry-a-failed-operation]]
 == Modifiez et réessayez une opération ayant échoué
 
 Modifiez les paramètres de l'opération ayant échoué et relancez l'opération en dehors du Tracker.

@@ -15,6 +15,7 @@ Après avoir configuré votre système de fichiers FSx for ONTAP , créez des vo
 
 
 
+[[about-this-task]]
 == Description de la tâche
 
 Les volumes FSx for ONTAP regroupent les données virtuellement, déterminent la manière dont les données sont stockées et déterminent le type d'accès à vos données. Les volumes ne consomment pas de capacité de stockage du système de fichiers. Les données stockées dans un volume se concentrent principalement sur le stockage SSD. Selon la règle de hiérarchisation du volume, les données peuvent également consommer le stockage du pool de capacité. Vous définissez la taille d'un volume lors de sa création, et vous pouvez en modifier la taille ultérieurement.
@@ -30,6 +31,7 @@ Les points de terminaison S3 peuvent être associés à un volume FSx pour ONTAP
 
 
 
+[[details-for-volume-settings]]
 === Détails des paramètres de volume
 
 .Fichiers immuables
@@ -53,6 +55,7 @@ NOTE: Même après expiration de la période de conservation, vous ne pouvez pas
 
 
 
+[[before-you-begin]]
 == Avant de commencer
 
 Avant de créer un volume, vérifiez les conditions préalables suivantes :
@@ -69,6 +72,7 @@ Avant de créer un volume, vérifiez les conditions préalables suivantes :
 
 
 
+[[create-a-volume]]
 == Créer un volume
 
 Vous pouvez créer un volume à l'aide des outils suivants disponibles dans la Codebox : API REST, CloudFormation et Terraform. link:https://docs.netapp.com/us-en/workload-setup-admin/use-codebox.html#how-to-use-codebox["Découvrez comment utiliser Codebox pour l'automatisation"^].

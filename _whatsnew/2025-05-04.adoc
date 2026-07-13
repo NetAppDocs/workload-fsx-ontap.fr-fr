@@ -4,6 +4,7 @@
 
 
 
+[[autonomous-ransomware-protection-for-fsx-for-ontap-file-systems]]
 === Protection anti-ransomware autonome pour les systèmes de fichiers FSX pour ONTAP
 
 Protégez vos données avec la protection anti-ransomware autonome (ARP), une fonctionnalité qui utilise l'analyse des workloads dans les environnements NAS (NFS/SMB) pour détecter et signaler les activités anormales qui pourraient être une attaque par ransomware. Lorsqu'une attaque est suspectée, ARP crée également de nouveaux snapshots immuables à partir desquels vous pouvez restaurer vos données.
@@ -12,6 +13,7 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/ransomware-protection.html
 
 
 
+[[flexgroup-volume-rebalance-enhancement]]
 === Amélioration du rééquilibrage des volumes FlexGroup
 
 BlueXP  Workload Factory lance l'assistant de rééquilibrage des volumes FlexGroup avec plusieurs options de disposition pour le rééquilibrage des données dans un volume FlexGroup. Le rééquilibrage redistribue les données de façon homogène vers les volumes de membres FlexGroup.
@@ -20,6 +22,7 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/rebalance-volume.html["Ré
 
 
 
+[[implement-best-practices-for-an-fsx-for-ontap-file-system]]
 === Implémentez les bonnes pratiques pour un système de fichiers FSX pour ONTAP
 
 La fabrique de charges de travail BlueXP  fournit un tableau de bord dans lequel vous pouvez consulter l'état de l'architecture de vos configurations de système de fichiers. Cette analyse vous permet d'implémenter les bonnes pratiques pour vos systèmes de fichiers FSX pour ONTAP. L'analyse de la configuration du système de fichiers comprend les configurations suivantes : seuil de capacité SSD, snapshots locaux programmés, sauvegardes FSX pour ONTAP, Tiering des données et réplication des données à distance.
@@ -30,6 +33,7 @@ La fabrique de charges de travail BlueXP  fournit un tableau de bord dans leque
 
 
 
+[[dual-protocol-volume-security-style-options]]
 === Options de type de sécurité des volumes à double protocole
 
 Vous avez la possibilité de choisir NTFS ou UNIX comme style de sécurité pour un volume afin de déterminer la méthode d'accès des utilisateurs et des autorisations à un volume.
@@ -38,6 +42,7 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-volume.html["Créer
 
 
 
+[[replication-enhancements]]
 === Amélioration de la réplication
 
 
@@ -74,18 +79,21 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-replication.html["C
 
 
 
+[[fsx-for-ontap-file-name-visible-in-volume-creation]]
 === Nom de fichier FSX pour ONTAP visible lors de la création du volume
 
 Nous avons amélioré la visibilité des systèmes de fichiers FSX pour ONTAP lors de la création des volumes. Lorsque vous créez un volume, le système de fichiers FSX pour ONTAP s'affiche. Vous savez ainsi exactement où le volume est créé.
 
 
 
+[[aws-account-visible-across-the-storage-workload]]
 === Compte AWS visible dans l'ensemble de la charge de travail stockage
 
 Nous avons amélioré la visibilité des comptes sur la charge de travail de stockage. Le compte AWS s'affiche lorsque vous accédez aux onglets *volumes*, *Storage VM* et *Replication*.
 
 
 
+[[link-association-enhancements]]
 === Améliorations de l'association de liens
 
 * Vous pouvez rapidement associer un lien à partir d'un système de fichiers FSX pour ONTAP dans l'onglet Inventaire.
@@ -94,12 +102,14 @@ Nous avons amélioré la visibilité des comptes sur la charge de travail de sto
 
 
 
+[[link-authentication-support-for-aws-secrets-manager]]
 === Prise en charge de l'authentification de liens pour AWS secrets Manager
 
 Vous avez désormais la possibilité d'utiliser les secrets d'AWS secrets Manager pour authentifier les liens afin de ne pas avoir à utiliser les informations d'identification stockées dans l'usine de workloads BlueXP .
 
 
 
+[[tracker-response-support]]
 === Assistance de suivi
 
 Tracker fournit désormais des réponses API pour que vous puissiez voir la sortie de l'API REST associée à la tâche.
@@ -108,6 +118,7 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/monitor-operations.html["S
 
 
 
+[[capacity-validation-when-restoring-a-volume-from-a-backup]]
 === Validation de la capacité lors de la restauration d'un volume à partir d'une sauvegarde
 
 Lors de la restauration d'un volume à partir d'une sauvegarde, l'usine de workloads BlueXP  détermine si vous disposez de suffisamment de capacité pour la restauration et peut ajouter automatiquement de la capacité de Tier de stockage SSD si ce n'est pas le cas.
@@ -116,12 +127,14 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/restore-from-backup.html["
 
 
 
+[[support-for-alternative-ontap-user-credentials]]
 === Prise en charge d'autres informations d'identification utilisateur ONTAP
 
 L'usine de workloads prend désormais en charge d'autres ensembles d'identifiants ONTAP pour la création de systèmes de fichiers afin de minimiser les risques liés à la sécurité. Au lieu d'utiliser uniquement l'utilisateur fsxadmin, vous pouvez sélectionner un autre ensemble d'informations d'identification ONTAP ou choisir de ne pas fournir de mot de passe aux utilisateurs fsxadmin et vsaadmin.
 
 
 
+[[updated-permissions-terminology]]
 === Mise à jour de la terminologie des autorisations
 
 L'interface utilisateur et la documentation de Workload Factory utilisent désormais « lecture seule » pour faire référence aux autorisations de lecture et « lecture/écriture » pour faire référence aux autorisations d'automatisation.

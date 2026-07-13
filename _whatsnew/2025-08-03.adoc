@@ -4,6 +4,7 @@
 
 
 
+[[enhancements-to-replication-relationships-tab]]
 === Améliorations apportées à l'onglet Relations de réplication
 
 Nous avons ajouté plusieurs nouvelles colonnes au tableau des relations de réplication pour vous donner plus d'informations sur vos relations de réplication dans l'onglet *Relations de réplication*.  Le tableau comprend désormais les colonnes suivantes :
@@ -17,6 +18,7 @@ Nous avons ajouté plusieurs nouvelles colonnes au tableau des relations de rép
 
 
 
+[[enhancements-to-netapp-autonomous-ransomware-protection-with-ai-arpai]]
 === Améliorations de la protection autonome contre les ransomwares de NetApp avec IA (ARP/AI)
 
 Cette version introduit le terme mis à jour « NetApp Autonomous Ransomware Protection with AI (ARP/AI) » pour mieux refléter l'intégration de l'intelligence artificielle dans nos capacités de protection contre les ransomwares.
@@ -33,6 +35,7 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/ransomware-protection.html
 
 
 
+[[well-architected-analysis-updates]]
 === Mises à jour d'analyse bien conçues
 
 Workload Factory analyse désormais vos systèmes de fichiers FSx for ONTAP pour les configurations suivantes :
@@ -45,6 +48,7 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/improve-configurations.htm
 
 
 
+[[dismiss-a-configuration-from-the-well-architected-analysis]]
 === Supprimer une configuration de l'analyse bien architecturée
 
 Vous pouvez désormais ignorer une ou plusieurs configurations de l’analyse bien architecturée.  Cela vous permet d'ignorer les configurations spécifiques que vous ne souhaitez pas aborder pour le moment.
@@ -53,6 +57,7 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/improve-configurations.htm
 
 
 
+[[terraform-support-for-link-creation]]
 === Prise en charge de Terraform pour la création de liens
 
 Vous pouvez désormais utiliser Terraform depuis Codebox pour créer un lien d'association avec un système de fichiers FSx pour ONTAP .  Cette fonctionnalité est destinée aux utilisateurs qui créent des liens manuellement.
@@ -61,6 +66,7 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["Connecte
 
 
 
+[[new-region-support-for-exploring-savings-in-storage]]
 === Nouvelle prise en charge régionale pour explorer les économies de stockage
 
 Les nouvelles régions suivantes sont désormais prises en charge pour explorer les économies pour Amazon Elastic Block Store (EBS), FSx pour Windows File Server et Elastic File Systems (EFS) :
@@ -71,6 +77,7 @@ Les nouvelles régions suivantes sont désormais prises en charge pour explorer 
 
 
 
+[[enhancements-to-smbcifs-shares-creation-and-management]]
 === Améliorations apportées à la création et à la gestion des partages SMB/CIFS
 
 Vous pouvez désormais créer des partages SMB/CIFS qui pointent vers des répertoires au sein d’un volume.  Dans le volume, vous pourrez voir quels partages existent, vers où pointent les partages et les autorisations accordées à des utilisateurs et groupes spécifiques.

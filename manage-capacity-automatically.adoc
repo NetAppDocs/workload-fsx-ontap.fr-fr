@@ -15,6 +15,7 @@ L'activation de la gestion de la capacité permet à NetApp Workload Factory d'a
 
 
 
+[[about-this-task]]
 == Description de la tâche
 
 Le système analyse le système de fichiers FSx for ONTAP toutes les 30 minutes. Il vérifie si un stockage incrémentiel doit être ajouté et contrôle le nombre d'inodes de volume disponibles. Le nombre augmente en fonction des seuils de gestion automatique de la capacité.
@@ -27,6 +28,7 @@ La capacité de stockage SSD maximale pour tous les systèmes de fichiers FSX fo
 
 
 
+[[enable-automatic-capacity-management-and-capacity-notifications]]
 == Activer la gestion automatique de la capacité et les notifications de capacité
 
 Activez la gestion de la capacité automatique pour ajouter automatiquement du stockage incrémentiel jusqu'à la limite de taille maximale d'un système de fichiers FSx for ONTAP. Configurez les notifications pour recevoir des alertes lorsque le système de fichiers atteint un certain seuil de capacité.
@@ -83,6 +85,7 @@ Une analyse du système de fichiers est effectuée toutes les 30 minutes afin de
 
 
 
+[[enable-inode-management-for-a-file-system]]
 == Activer la gestion des inodes pour un système de fichiers
 
 Activez la gestion automatique des inodes pour augmenter le nombre d'inodes (fichiers) par volume jusqu'à la limite autorisée.

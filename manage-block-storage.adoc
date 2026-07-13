@@ -31,12 +31,14 @@ Consultez le schéma du stockage bloc pour vérifier les points suivants :
 
 
 
+[[manage-igroups]]
 == Gérer les igroups
 
 Vous pouvez consulter les détails des igroups, gérer l'accès client et supprimer des igroups.
 
 
 
+[[manage-client-access-for-an-igroup]]
 === Gérer l'accès client pour un igroup
 
 Gérez à tout moment l'accès client pour un igroup existant.
@@ -65,6 +67,7 @@ Gérez à tout moment l'accès client pour un igroup existant.
 
 
 
+[[delete-an-igroup]]
 === Supprimer un igroup
 
 Supprimez un igroup lorsqu'il n'est plus nécessaire.
@@ -81,6 +84,7 @@ Supprimez un igroup lorsqu'il n'est plus nécessaire.
 
 
 
+[[manage-block-devices-for-an-igroup]]
 == Gérer les périphériques bloc pour un igroup
 
 Les périphériques de stockage par blocs, ou LUN (logical unit numbers), sont des volumes dotés de systèmes de fichiers dans un environnement SAN, accessibles aux hôtes via un réseau.
@@ -89,6 +93,7 @@ Vous pouvez gérer les périphériques de stockage par blocs pour les systèmes 
 
 
 
+[[view-block-device-details]]
 === Afficher les détails du périphérique de blocage
 
 Consultez à tout moment les détails d'un périphérique de blocage existant.
@@ -106,6 +111,7 @@ Les informations générales, de consommation, d'accès et de protection du disp
 
 
 
+[[manage-client-access-for-a-block-device]]
 === Gérer l'accès client à un périphérique de blocage
 
 Vous pouvez gérer l'accès client à un périphérique de stockage par blocs existant à tout moment en créant des igroups et en ajoutant ou en supprimant des périphériques de stockage par blocs et des initiateurs hôtes.
@@ -131,6 +137,7 @@ Vous pouvez gérer l'accès client à un périphérique de stockage par blocs ex
 
 
 
+[[increase-the-capacity-of-a-block-device]]
 === Augmenter la capacité d'un bloc de stockage
 
 Augmentez à tout moment la capacité d'un périphérique de stockage existant.
@@ -150,6 +157,7 @@ NOTE: Après avoir augmenté la taille du périphérique de stockage bloc, suive
 
 
 
+[[clone-a-block-device]]
 === Cloner un périphérique de stockage bloc
 
 Vous pouvez créer un clone d'un périphérique de stockage bloc existant à tout moment. Un clone de périphérique de stockage bloc est une copie accessible en écriture du périphérique d'origine, partageant les mêmes blocs de données jusqu'à ce que des modifications soient apportées à l'original ou au clone. Cloner un périphérique de stockage bloc est une méthode rapide et efficace pour créer des copies réutilisables de vos données sans consommer de capacité de stockage supplémentaire.
@@ -179,6 +187,7 @@ Vous pouvez créer un clone d'un périphérique de stockage bloc existant à tou
 
 
 
+[[archive-the-data-of-an-inactive-block-device]]
 === Archiver les données d’un périphérique de bloc inactif
 
 Les périphériques de blocs qui ne sont plus associés à un client ou inutilisés pendant sept jours consécutifs sont classés comme périphériques de blocs inactifs. Vous pouvez archiver les données d'un périphérique de blocs inactif dans le niveau de pool de capacité pour récupérer de la capacité SSD.
@@ -195,6 +204,7 @@ Les périphériques de blocs qui ne sont plus associés à un client ou inutilis
 
 
 
+[[delete-a-block-device]]
 === Supprimer un périphérique de blocage
 
 Les périphériques de stockage bloc qui ne sont pas associés à un client ou qui sont inutilisés depuis sept jours sont des périphériques de stockage bloc inactifs. Cette opération dissocie et supprime le périphérique de stockage bloc sélectionné. Si le volume FlexVol hôte ne contient aucun périphérique de stockage bloc, Workload Factory le supprime.
@@ -211,6 +221,7 @@ Les périphériques de stockage bloc qui ne sont pas associés à un client ou q
 
 
 
+[[related-information]]
 == Informations connexes
 
 * link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-igroup.html["Créer un igroup pour un système de fichiers FSx for ONTAP"]

@@ -19,6 +19,7 @@ link:configuration-analysis.html["Découvrez l’analyse de configuration et l�
 
 
 
+[[about-this-task]]
 == Description de la tâche
 
 Workload Factory analyse quotidiennement les configurations de déploiement du système de fichiers Amazon FSx for NetApp ONTAP . Cette analyse quotidienne fournit un état d'avancement de l'architecture, des informations et des recommandations, ainsi que des options pour corriger automatiquement les problèmes de configuration afin que votre système de fichiers soit conforme aux meilleures pratiques.
@@ -32,15 +33,15 @@ Vous disposez d'options pour consulter les recommandations concernant les probl�
 .Ce qui est analysé
 Workload Factory analyse l'état bien conçu des configurations suivantes pour les systèmes de fichiers FSX pour ONTAP :
 
-* Fiabilité : seuil de capacité SSD, instantanés locaux planifiés, sauvegardes de volumes planifiées, réplication des données à distance, fiabilité des données pour la conservation à long terme et connexion des hôtes au nœud de basculement
+* Fiabilité : seuil de capacité SSD, instantanés locaux planifiés, sauvegardes de volumes planifiées, réplication des données à distance et fiabilité des données pour la conservation à long terme
 * Sécurité : Protection autonome contre les ransomwares NetApp avec IA (ARP/AI) désactivée et accès non autorisé aux volumes
 * Excellence opérationnelle : gestion automatique de la capacité, seuil d’utilisation de la capacité des fichiers de volume, volume proche de la saturation, mode d’écriture des relations de cache, optimisation de la taille du volume de cache et rapports sur la capacité logique des volumes
 * Optimisation des coûts : efficacité du stockage, hiérarchisation des données, suppression inutile des snapshots et des sauvegardes, périphériques de stockage par blocs inactifs, capacité SSD sous-utilisée et volumes NAS inactifs
-* Efficacité des performances : connectez les hôtes au nœud préféré
 
 
 
 
+[[before-you-begin]]
 == Avant de commencer
 
 * Vous devez link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["accorder les autorisations d'_opérations et de correction_"^] dans votre compte AWS.
@@ -50,6 +51,7 @@ Workload Factory analyse l'état bien conçu des configurations suivantes pour l
 
 
 
+[[fix-a-configuration-issue]]
 == Résoudre un problème de configuration
 
 Vous pouvez résoudre les problèmes de configuration d'un système de fichiers FSx for ONTAP ou de volumes sélectionnés dans un système de fichiers.  Vous pouvez sélectionner une ou plusieurs configurations à corriger.
@@ -75,6 +77,7 @@ Le processus de résolution du problème démarre. Sélectionnez le menu des par
 
 
 
+[[dismiss-a-configuration-analysis]]
 == Supprimer une analyse de configuration
 
 Ignorer pour arrêter indéfiniment une analyse de configuration pour un système de fichiers FSx for ONTAP ou pour des volumes sélectionnés dans un système de fichiers.  Vous pouvez redémarrer l'analyse lorsque cela est nécessaire.
@@ -122,6 +125,7 @@ Vous pouvez réactiver l'analyse à tout moment.  La configuration n'est plus in
 
 
 
+[[reactivate-a-dismissed-configuration-analysis]]
 == Réactiver une analyse de configuration rejetée
 
 Réactivez une analyse de configuration rejetée à tout moment.  Vous pouvez sélectionner une ou plusieurs configurations à réactiver.

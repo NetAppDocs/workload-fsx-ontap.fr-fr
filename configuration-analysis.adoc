@@ -24,6 +24,7 @@ Les fonctionnalités principales comprennent :
 
 
 
+[[how-it-works]]
 == Comment ça marche
 
 Workload Factory analyse vos charges de travail exécutées sur les déploiements de systèmes de fichiers Amazon FSx for NetApp ONTAP quotidiennement. L'analyse fournit un état bien architecturé, des informations et des recommandations.
@@ -34,12 +35,14 @@ Vous pouvez ignorer l'analyse des configurations qui ne s'appliquent pas à vos 
 
 
 
+[[why-it-matters]]
 == Pourquoi c'est important
 
 Workload Factory applique les meilleures pratiques aux environnements de stockage, de base de données et VMware de grande envergure en combinant une évaluation continue avec des recommandations et des corrections. Les correctifs automatisés appliqués dans la console Workload Factory réduisent les erreurs humaines, garantissent une gestion uniforme et préservent les performances et la fiabilité de vos infrastructures de charges de travail.
 
 
 
+[[analysis-requirements]]
 == Exigences d'analyse
 
 Pour une analyse complète du système de fichiers, vous devez procéder comme suit :
@@ -56,6 +59,7 @@ link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["D�
 
 
 
+[[best-practices-and-recommendations-for-storage-workloads]]
 == Meilleures pratiques et recommandations pour les charges de travail de stockage
 
 Workload Factory évalue les configurations de stockage afin de fournir une vue détaillée des meilleures pratiques de configuration ONTAP et de la conformité au AWS Well-Architected Framework. L'évaluation recommande également des améliorations et des correctifs.
@@ -64,6 +68,7 @@ L'analyse bien conçue catégorise les configurations selon les piliers suivants
 
 
 
+[[reliability]]
 === Fiabilité
 
 La fiabilité garantit que les charges de travail exécutent leurs fonctions prévues correctement et de manière constante, même en cas de perturbations.
@@ -96,14 +101,11 @@ Les étiquettes de la stratégie d'instantané du volume source et les étiquett
 +
 Il convient d'augmenter le seuil de capacité des fichiers afin d'éviter d'atteindre la limite de capacité du volume. Une capacité de fichiers insuffisante (en inodes) empêche l'écriture de données supplémentaires sur le volume. Workload Factory recommande de maintenir l'utilisation de la capacité de fichiers disponible en dessous de 80 % de façon continue. La capacité de fichiers disponible est nécessaire pour créer de nouveaux fichiers sur le volume.
 
-* *Connecter l'hôte au nœud de basculement*
-+
-Workload Factory recommande de connecter les hôtes au nœud de basculement afin de maintenir la connectivité et d’éviter les interruptions lors des basculements.
 
 
 
 
-
+[[security]]
 === Sécurité
 
 La sécurité met l'accent sur la protection des données, des systèmes et des actifs grâce à des évaluations des risques et des stratégies d'atténuation.
@@ -120,6 +122,7 @@ Les volumes hébergeant des données applicatives via iSCSI ne doivent pas autor
 
 
 
+[[operational-excellence]]
 === Excellence opérationnelle
 
 L'excellence opérationnelle vise à fournir l'architecture la plus optimale et la valeur commerciale.
@@ -152,6 +155,7 @@ Workload Factory recommande que le paramètre de rapport par défaut soit défin
 
 
 
+[[cost-optimization]]
 === Optimisation des coûts
 
 L'optimisation des coûts vous aide à obtenir la plus grande valeur pour votre entreprise tout en maintenant les coûts bas.
@@ -179,18 +183,6 @@ Une capacité SSD sous-utilisée peut engendrer des coûts inutiles. Workload Fa
 * *Volumes NAS inactifs*
 +
 L'analyse de configuration identifie les volumes NAS qui ne sont pas utilisés activement et recommande de les supprimer ou de les archiver afin de réduire les coûts.
-
-
-
-
-
-=== Efficacité des performances
-
-L'efficacité des performances se concentre sur l'utilisation efficace des ressources informatiques et informatiques.
-
-* *Connecter l'hôte au nœud préféré*
-+
-Dans un modèle de déploiement FSx for ONTAP à haute disponibilité, les hôtes doivent être connectés directement au nœud qui sert le périphérique de bloc afin de garantir un accès direct et des performances optimales.
 
 
 

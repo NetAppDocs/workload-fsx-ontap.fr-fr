@@ -15,6 +15,7 @@ Gérez vos relations de réplication dans NetApp Workload Factory. Vous pouvez s
 
 
 
+[[change-the-replication-schedule-of-a-source-volume]]
 == Modifier la planification de réplication d'un volume source
 
 Modifiez la planification de réplication du volume source dans une relation de réplication dans NetApp Workload Factory.
@@ -45,6 +46,7 @@ Lorsqu'un cluster ONTAP sur site est la cible de la relation de réplication, la
 
 
 
+[[limit-the-max-transfer-rate-of-a-replication-relationship]]
 == Limitez le taux de transfert maximal d'une relation de réplication
 
 La limitation du taux de transfert maximal est facultative, mais recommandée. Sans limite, les performances du réseau et des applications peuvent diminuer.
@@ -71,6 +73,7 @@ Vous pouvez également sélectionner *Illimité*.
 
 
 
+[[manually-update-snapshot-data-in-a-replication-relationship]]
 == Mettre à jour manuellement les données d'instantané dans une relation de réplication
 
 Une relation de réplication possède une planification de réplication définie, mais vous pouvez mettre à jour manuellement les données de snapshot transférées entre les volumes source et cible dans NetApp Workload Factory à tout moment.
@@ -88,6 +91,7 @@ Une relation de réplication possède une planification de réplication définie
 
 
 
+[[pause-a-replication-relationship]]
 == Interrompre une relation de réplication
 
 Mettre en pause une relation de réplication pour arrêter les mises à jour de réplication planifiées du volume source vers le volume cible. Le volume cible passe de lecture seule à lecture/écriture. Les deux volumes continuent de partager le dernier snapshot de réplication en tant que nouvelle base pour une resynchronisation ultérieure.
@@ -111,6 +115,7 @@ La relation s'interrompt et son état s'affiche en pause.
 
 
 
+[[resume-a-paused-replication-relationship]]
 == Reprendre une relation de réplication interrompue
 
 Lorsque vous reprenez une relation de réplication, toutes les modifications apportées au volume de destination pendant l'interruption de la réplication sont supprimées. Le volume cible passe du mode lecture/écriture au mode lecture seule et reçoit à nouveau les mises à jour du volume source à l'intervalle de réplication planifié.
@@ -134,6 +139,7 @@ La relation reprend et son état s'affiche comme « répliqué ».
 
 
 
+[[reverse-a-replication-relationship]]
 == Inverser une relation de réplication
 
 Inversez une relation de réplication de sorte que le volume cible devienne le volume source.
@@ -173,6 +179,7 @@ Assurez-vous de connaître les rôles actuels et futurs de vos volumes source et
 
 
 
+[[stop-a-replication-relationship]]
 == Arrête une relation de réplication
 
 Arrêtez une relation de réplication dans NetApp Workload Factory.  Lorsque vous arrêtez une relation de réplication, les mises à jour de réplication planifiées du volume source vers le volume cible sont suspendues.  Le volume cible passe du mode lecture seule au mode lecture/écriture.
@@ -193,6 +200,7 @@ L'état de réplication du volume passe à *Broken*. Le volume cible devient ins
 
 
 
+[[delete-a-replication-relationship]]
 == Supprimer une relation de réplication
 
 Supprimer une relation de réplication dans NetApp Workload Factory.  Lorsque vous supprimez une relation de réplication, cela supprime la relation de réplication entre le volume source et le volume cible.  Une fois la relation de réplication supprimée, les deux volumes continuent d’exister indépendamment avec les données actuelles qu’ils contiennent.

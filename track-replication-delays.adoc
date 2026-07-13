@@ -11,7 +11,7 @@ summary: Activez le suivi pour surveiller les délais de toutes les relations de
 
 
 [role="lead"]
-Activez le suivi pour surveiller les délais de réplication sur votre compte. Workload Factory vous alerte lorsque les délais dépassent un seuil défini. Par défaut, le seuil est de 150 % de l’intervalle de réplication afin de permettre un temps de transfert normal et de réduire les fausses alertes. Vous pouvez ajuster le seuil pour qu’il corresponde à votre RPO et recevoir des notifications lorsque les délais le dépassent. Vous pouvez également exporter les données dans un fichier CSV pour une analyse plus approfondie.
+Activez le suivi pour surveiller les délais de réplication sur votre compte. Workload Factory vous alerte lorsque les délais dépassent un seuil défini. Par défaut, le seuil est de 150 % de l’intervalle de réplication afin de permettre un temps de transfert normal et de réduire les fausses alertes. Vous pouvez ajuster le seuil pour qu’il corresponde à votre RPO et recevoir des notifications lorsque les délais le dépassent.
 
 .Étapes
 . Connectez-vous à l'aide de l'un des link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].

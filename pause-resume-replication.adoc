@@ -23,6 +23,7 @@ Si vous interrompez un transfert en cours, le transfert n'est pas affecté et la
 
 
 
+[[pause-a-replication-relationship]]
 == Interrompre une relation de réplication
 
 .Étapes
@@ -41,6 +42,7 @@ La relation s'interrompt et son état s'affiche en pause.
 
 
 
+[[resume-a-paused-replication-relationship]]
 == Reprendre une relation de réplication interrompue
 
 Lorsque vous reprenez une relation de réplication, toutes les modifications apportées au volume de destination pendant l'arrêt de la réplication sont supprimées.

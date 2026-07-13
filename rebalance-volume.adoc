@@ -15,6 +15,7 @@ Vérifiez l'équilibre de la capacité du volume FlexVol ou FlexGroup et rééqu
 
 
 
+[[about-this-task]]
 == Description de la tâche
 
 La capacité de rééquilibrage du volume est prise en charge pour les volumes FlexVol et les volumes FlexGroup. Le rééquilibrage d'un volume redistribue la capacité lorsque les déséquilibres se développent suite à l'ajout de nouveaux fichiers et à la croissance des fichiers. Une fois que vous avez démarré l'opération de rééquilibrage manuellement, nous sélectionnons les fichiers et les déplaçons automatiquement et sans interruption. Les opérations de transfert de volumes consomment des ressources du système de fichiers.
@@ -40,6 +41,7 @@ NOTE: Le rééquilibrage n'est pas pris en charge pour les volumes SAN tels que 
 
 
 
+[[check-the-balance-of-your-volumes]]
 == Vérifiez l'équilibre de vos volumes
 
 Vérifiez l'équilibre des volumes FlexVol ou FlexGroup dans un système de fichiers FSx pour ONTAP.
@@ -69,6 +71,7 @@ Lorsqu'un volume est déséquilibré, pensez à <<Rééquilibrer la capacité du
 
 
 
+[[rebalance-volume-capacity]]
 == Rééquilibrer la capacité du volume
 
 Rééquilibrer un ou plusieurs volumes non équilibrés.
@@ -158,6 +161,7 @@ Les volumes des membres FlexGroup sont déplacés un par un lors du rééquilibr
 ====
 
 
+[[stop-a-volume-rebalance-operation]]
 == Arrêter une opération de rééquilibrage du volume
 
 Arrêtez une opération de rééquilibrage à tout moment ; cela n'entraîne aucune perturbation. L'arrêt de l'opération annule les mouvements de volume actifs.

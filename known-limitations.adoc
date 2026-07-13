@@ -15,6 +15,7 @@ Les limitations connues désignent les plateformes, les périphériques ou les f
 
 
 
+[[region-support]]
 == Soutien régional
 
 Les régions AWS suivantes ne sont pas prises en charge :
@@ -26,6 +27,7 @@ Les régions AWS suivantes ne sont pas prises en charge :
 
 
 
+[[adding-ha-pairs-limitations]]
 == Limites de l'ajout de paires haute disponibilité
 
 * Cette opération peut prendre environ 30 minutes.
@@ -34,22 +36,26 @@ Les régions AWS suivantes ne sont pas prises en charge :
 
 
 
+[[throughput-capacity-region-support]]
 == Capacité de débit prise en charge par région
 
 
 
+[[scale-up-deployments]]
 === Déploiements scale-up
 
 Les configurations à évolutivité verticale sont prises en charge jusqu'à 2 Gbit/s dans toutes les régions. Les régions suivantes prennent en charge une capacité de débit maximale de 4 Gbit/s pour les déploiements à évolutivité verticale : région des ÉTATS-UNIS de l'est (Ohio), région de l'est (Virginie-Occidentale), région de l'Oregon (États-Unis) et Europe (Irlande).
 
 
 
+[[scale-out-deployments]]
 === Déploiements scale-out
 
 Les régions suivantes prennent en charge une capacité de débit maximale allant jusqu'à 6 Go/s pour les déploiements évolutifs : États-Unis Est (Virginie du Nord et Ohio), États-Unis Ouest (Californie du Nord et Oregon), Europe (Francfort, Irlande et Stockholm) et Asie-Pacifique (Singapour et Sydney).
 
 
 
+[[capacity-management]]
 == Gestion de la capacité
 
 * La fonction de croissance automatique du volume n'est pas prise en charge pour le protocole iSCSI.
@@ -60,6 +66,7 @@ Les régions suivantes prennent en charge une capacité de débit maximale allan
 
 
 
+[[storage-vms]]
 == Machines virtuelles de stockage
 
 Le nombre de machines virtuelles de stockage est limité par SKU.  La création de machines virtuelles de stockage au-delà de la limitation n'est pas prise en charge dans Workload Factory.^1^
@@ -68,6 +75,7 @@ Pour connaître le nombre maximal de SVM par système de fichiers, reportez-vous
 
 
 
+[[iscsi-protocol-support]]
 == Prise en charge du protocole iSCSI
 
 * Le protocole iSCSI n'est disponible que pour les volumes FlexVol. ^1^
@@ -76,6 +84,7 @@ Pour connaître le nombre maximal de SVM par système de fichiers, reportez-vous
 
 
 
+[[data-protection]]
 == Protection des données
 
 * Les snapshots ne peuvent pas être supprimés.
@@ -97,6 +106,7 @@ Pour connaître le nombre maximal de SVM par système de fichiers, reportez-vous
 
 
 
+[[storage-savings-calculator]]
 == Calculateur d'économies de stockage
 
 Le calculateur d'économies de stockage ne calcule pas les économies pour les configurations suivantes :
@@ -108,18 +118,21 @@ Le calculateur d'économies de stockage ne calcule pas les économies pour les c
 
 
 
+[[aws-secrets-manager-support]]
 == Prise en charge d'AWS secrets Manager
 
 AWS Secrets Manager n'est pas pris en charge lors de l'utilisation d'un agent de console.
 
 
 
+[[amazon-s3-access-points-limitation]]
 == Limitation des points d'accès Amazon S3
 
 La limite du nombre de points d'accès S3 par machine virtuelle de stockage est de 4 000.
 
 
 
+[[limitations-for-storage-vm-migration-replication]]
 == Limitations de la réplication de la migration des machines virtuelles de stockage
 
 * NetApp Workload Factory ne prend pas en charge la réplication de migration pour les machines virtuelles de stockage entre les systèmes de fichiers FSx for ONTAP de première et de deuxième génération.

@@ -4,6 +4,7 @@
 
 
 
+[[automatic-capacity-management-for-scale-out-systems]]
 === Gestion automatique de la capacité pour les systèmes scale-out
 
 L'usine de charges de travail recherche désormais les inodes disponibles dans les volumes et augmente leur nombre en fonction des seuils configurés de gestion automatique de la capacité. Cette fonctionnalité prend en charge la gestion automatique de la capacité pour les systèmes scale-out. Vous pouvez activer la gestion des inodes dans le cadre de la gestion automatique de la capacité.
@@ -12,6 +13,7 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/enable-auto-capacity-manag
 
 
 
+[[flexgroup-rebalance-api]]
 === API de rééquilibrage FlexGroup
 
 L'usine de charges de travail BlueXP  lance l'API de rééquilibrage FlexGroup qui vous permet d'exécuter un plan de rééquilibrage des données dans une FlexGroup. Le rééquilibrage redistribue les données uniformément aux volumes membres.
@@ -20,6 +22,7 @@ link:https://console.workloads.netapp.com/api-doc["Documentation de l'API BlueXP
 
 
 
+[[replicate-data-form-includes-use-cases]]
 === Le formulaire de réplication de données inclut des cas d'utilisation
 
 Le formulaire de données répliquées comprend désormais des cas d'utilisation qui vous permettent de remplir plus facilement le formulaire. Sélectionnez l'un des cas d'utilisation suivants pour la réplication des données : migration, reprise après incident à chaud, reprise après incident à froid, archivage ou autre. Après avoir sélectionné un cas d'utilisation, Workload Factory recommande des valeurs conformément aux meilleures pratiques. Vous pouvez accepter les valeurs présélectionnées ou les personnaliser dans le formulaire.
@@ -28,6 +31,7 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-replication.html["R
 
 
 
+[[data-tiering-policy-terminology-changes]]
 === Modifications de la terminologie des règles de Tiering des données
 
 Lorsque vous sélectionnez une règle de Tiering lors de la création de volumes, de la réplication de données ou des mises à jour de règles de Tiering existantes, vous trouverez de nouveaux termes qui décrivent les règles de Tiering.
@@ -39,6 +43,7 @@ Lorsque vous sélectionnez une règle de Tiering lors de la création de volumes
 
 
 
+[[security-group-details-for-file-system-creation]]
 === Détails du groupe de sécurité pour la création du système de fichiers
 
 Un groupe de sécurité est créé dans le cadre du processus de création du système de fichiers FSX pour ONTAP. Les détails des groupes de sécurité, notamment les protocoles, les ports et les rôles, sont désormais disponibles.

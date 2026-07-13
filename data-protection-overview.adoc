@@ -15,6 +15,7 @@ FSx for ONTAP prend en charge les snapshots, la protection autonome contre les r
 
 
 
+[[types-of-data-protection]]
 == Types de protection des données
 
 La protection des données de vos workloads vous permet d'assurer la reprise après toute perte de données à tout moment. Découvrez les types de protection des données avant de sélectionner les fonctionnalités que vous utiliserez.
@@ -39,6 +40,7 @@ image:diagram-fsx-data-protection.png["La capture d'écran montre la protection 
 
 
 
+[[best-practices-for-protecting-your-workload-data]]
 == Bonnes pratiques de protection des données de vos workloads
 
 FSX pour ONTAP offre plusieurs options de protection des données qui peuvent être combinées pour atteindre les objectifs de point et de temps de restauration que vous avez sélectionnés. Pour une protection optimale, nous vous recommandons d'utiliser à la fois des snapshots de volume et des sauvegardes de volume.
@@ -47,30 +49,35 @@ L'objectif de point de restauration (RPO) décrit la date à laquelle la derniè
 
 
 
+[[protect-your-workload-data-with-snapshots]]
 == Protégez les données de vos workloads avec des copies Snapshot
 
 Les snapshots sont des versions virtuelles instantanées d'un volume effectuées de manière planifiée. Vous pouvez accéder aux snapshots à l'aide des commandes standard du système de fichiers. Les snapshots fournissent un RPO d'une heure seulement. L'objectif RTO dépend de la quantité de données à restaurer et sa capacité est principalement limitée par la limite de débit du volume. Les copies Snapshot permettent également aux utilisateurs de restaurer des fichiers et des répertoires spécifiques, ce qui réduit encore davantage le RTO. Les snapshots ne consomment de l'espace de volume supplémentaire que pour les modifications apportées au volume.
 
 
 
+[[protect-your-workload-data-with-netapp-autonomous-ransomware-protection-with-ai]]
 == Protégez vos données de charge de travail avec NetApp Autonomous Ransomware Protection avec IA
 
 NetApp Autonomous Ransomware Protection with AI (ARP/AI) agit comme une couche de défense supplémentaire importante si le logiciel antivirus n'a pas réussi à détecter une intrusion.  La définition d’une stratégie ARP/AI l’active pour toutes les machines virtuelles de stockage et tous les volumes existants et nouvellement créés.  Une fois activé, ARP/AI détecte et protège tous les volumes et machines virtuelles de stockage.  Si une extension de fichier est signalée comme anormale, vous devez évaluer l'alerte.
 
 
 
+[[protect-your-workload-data-with-volume-replication]]
 == Protégez les données de vos workloads avec la réplication de volume
 
 La réplication de volume crée une copie des dernières données d'un volume, y compris tous ses snapshots dans une région différente. Si vous ne pouvez pas vous permettre des RTO de plusieurs heures lors d'une restauration de volume complet à partir d'une sauvegarde de volume, envisagez d'effectuer une réplication de volume. Alors que la réplication de volume s'assure que les données récentes sont disponibles dans une autre région que vous pouvez utiliser, vous devez ajuster vos clients pour qu'ils utilisent le volume dans l'autre région.
 
 
 
+[[protect-your-workload-data-with-backups]]
 == Protégez les données de vos workloads à l'aide de sauvegardes
 
 Les sauvegardes de volume fournissent des copies instantanées indépendantes de votre volume. Elles permettent de stocker d'anciennes sauvegardes et de fournir la deuxième copie nécessaire de vos données. Les plannings de sauvegarde quotidiens, hebdomadaires et mensuels permettent d'atteindre des objectifs de point de récupération à partir d'une journée. Les sauvegardes de volume ne peuvent être restaurées que dans leur intégralité. La création d'un volume à partir d'une sauvegarde (RTO) peut prendre plusieurs heures à plusieurs jours, selon la taille de la sauvegarde.
 
 
 
+[[recommendations-for-protecting-your-workload-data]]
 == Recommandations pour la protection des données de vos workloads
 
 Réfléchissez aux recommandations suivantes pour protéger les données de vos workloads.

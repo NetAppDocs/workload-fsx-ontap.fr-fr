@@ -4,6 +4,7 @@
 
 
 
+[[well-architected-analysis-updates]]
 === Mises à jour d'analyse bien conçues
 
 Workload Factory analyse vos systèmes de fichiers FSx pour ONTAP pour les configurations suivantes :
@@ -14,6 +15,7 @@ Workload Factory analyse vos systèmes de fichiers FSx pour ONTAP pour les confi
 
 
 
+[[workload-factory-supports-ai-ml-use-case-for-replication]]
 === NetApp Workload Factory prend en charge les cas d'utilisation de l'IA et du ML pour la réplication
 
 Workload Factory prend en charge la réplication des données ONTAP sur site vers Amazon FSx for NetApp ONTAP et la création de points d'accès S3 pour les services AWS Artificial Intelligence (AI) et machine learning (ML) afin d'accélérer les flux de travail AI/ML.
@@ -22,6 +24,7 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-replication.html["R
 
 
 
+[[editing-existing-s3-access-points]]
 === Modification des points d'accès S3 existants
 
 Vous pouvez modifier l'utilisateur et le type d'utilisateur d'un point d'accès S3 associé à un volume. Vous pouvez également activer ou désactiver les métadonnées pour le point d'accès.
@@ -30,6 +33,7 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/edit-s3-access-points.html
 
 
 
+[[added-block-storage-diagram]]
 === Ajout d'un schéma de stockage bloc
 
 Si vous utilisez le stockage bloc, vous pouvez consulter le schéma de stockage bloc pour visualiser comment les périphériques de stockage bloc se connectent aux nœuds et aux igroups. Le schéma vous aide à comprendre et à gérer votre stockage bloc.
@@ -38,6 +42,7 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/manage-block-storage.html[
 
 
 
+[[update-to-automatic-capacity-management-feature]]
 === Mise à jour de la fonction de gestion automatique de la capacité
 
 Cette mise à jour divise la fonctionnalité en deux fonctionnalités distinctes : gestion automatique de la capacité et notifications de capacité.
@@ -50,6 +55,7 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/enable-auto-capacity-manag
 
 
 
+[[new-ask-me-bookmark-available-in-workload-factory]]
 === Nouveau signet Ask Me disponible dans Workload Factory
 
 Nous avons ajouté un nouveau raccourci Ask Me sur chaque écran de la console Workload Factory. Cette amélioration vous permet d'accéder plus facilement et plus rapidement à Ask Me dès que vous avez besoin d'aide. Ask Me est notre assistant IA. Vous pouvez poser des questions sur vos environnements de charge de travail, obtenir des informations personnalisées et consulter les conversations précédentes.

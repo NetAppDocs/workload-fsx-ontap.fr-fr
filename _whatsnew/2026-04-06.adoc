@@ -4,6 +4,7 @@
 
 
 
+[[well-architected-analysis-updates]]
 === Mises à jour d'analyse bien conçues
 
 Workload Factory analyse vos systèmes de fichiers Amazon FSx for ONTAP pour les *volumes NAS inactifs*. L'analyse de configuration identifie les volumes NAS qui ne sont pas activement utilisés et recommande des actions pour optimiser l'utilisation du stockage et réduire les coûts.
@@ -12,6 +13,7 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/improve-configurations.htm
 
 
 
+[[journal-table-feature-for-s3-access-points]]
 === Fonctionnalité de table de journal pour les points d'accès S3
 
 La fonctionnalité Journal table permet de gérer le stockage d'objets S3 de FSx ONTAP à grande échelle, facilitant ainsi l'audit des événements d'accès utilisateur et des opérations sur les objets dans vos compartiments. Avec Workload Factory, vous pouvez configurer des analyses automatiques de vos compartiments et tables S3 afin de conserver un historique des événements, affichant tous les objets, leurs détails et les actions des utilisateurs.
@@ -20,6 +22,7 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/setup-journal-table.html["
 
 
 
+[[support-for-managing-existing-igroups]]
 === Prise en charge de la gestion des igroups existants
 
 Workload Factory prend en charge la gestion des igroups existants. Vous pouvez ajouter ou supprimer des périphériques de blocs et des initiateurs hôtes afin de garantir la livraison de votre charge de travail déployée dans les délais impartis.
@@ -28,6 +31,7 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/manage-block-storage.html[
 
 
 
+[[support-for-specifying-the-aggregate-for-flexvol-volumes]]
 === Prise en charge de la spécification de l'agrégat pour les volumes FlexVol
 
 Workload Factory permet de créer des volumes FlexVol sur un agrégat choisi. Cela vous permet de répartir la charge de capacité et de performance sur l'ensemble des ressources du système de fichiers.
@@ -36,6 +40,7 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-volume.html["Créez
 
 
 
+[[last-access-time-for-block-devices]]
 === Dernier temps d'accès pour les périphériques de blocs
 
 Workload Factory indique le temps d'accès aux périphériques de stockage par blocs. Le temps est basé sur votre dernier accès à l'igroup dans Workload Factory. Savoir quand chaque périphérique de stockage par blocs a été utilisé pour la dernière fois vous permet d'optimiser vos ressources.

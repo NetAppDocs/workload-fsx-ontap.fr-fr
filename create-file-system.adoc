@@ -25,6 +25,7 @@ Avant de créer votre système de fichiers FSX pour ONTAP, vous aurez besoin des
 
 
 
+[[create-an-fsx-for-ontap-file-system]]
 == Créez un système de fichiers FSX pour ONTAP
 
 Vous pouvez créer un système de fichiers FSX for ONTAP à l'aide de _création rapide_ ou de _création avancée_. Vous pouvez également utiliser les outils suivants disponibles dans la Codebox : API REST, CloudFormation et Terraform. link:https://docs.netapp.com/us-en/workload-setup-admin/use-codebox.html#how-to-use-codebox["Découvrez comment utiliser Codebox pour l'automatisation"^].
@@ -229,6 +230,7 @@ Si vous avez créé le système de fichiers, vous pouvez maintenant afficher le 
 ====
 
 
+[[security-group-details]]
 == Détails du groupe de sécurité
 
 Le tableau suivant fournit des détails sur les groupes de sécurité, notamment les protocoles, les ports et les rôles.

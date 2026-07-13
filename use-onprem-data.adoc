@@ -29,6 +29,7 @@ Cas d'utilisation:: Notez que le principal cas d'utilisation de la charge de tra
 
 
 
+[[discover-an-on-premises-ontap-cluster]]
 == Découvrez un cluster ONTAP sur site
 
 Découvrez un cluster ONTAP sur site dans NetApp Workload Factory afin de pouvoir répliquer les données vers un système de fichiers Amazon FSx for NetApp ONTAP .
@@ -77,6 +78,7 @@ Vous pouvez maintenant afficher les données de votre cluster ONTAP sur site et 
 
 
 
+[[replicate-volume-data-from-an-on-premises-ontap-cluster]]
 == Répliquez les données de volume à partir d'un cluster ONTAP sur site
 
 Répliquez les données de volume d'un cluster ONTAP sur site vers un système de fichiers FSX pour ONTAP. Après la réplication, les données peuvent être utilisées pour enrichir les bases de connaissances d'IA.
@@ -145,6 +147,7 @@ La relation de réplication apparaît dans l'onglet *relations de réplication* 
 
 
 
+[[remove-an-on-premises-ontap-cluster-from-netapp-workload-factory]]
 == Supprimer un cluster ONTAP sur site de NetApp Workload Factory
 
 Supprimez un cluster ONTAP sur site de NetApp Workload Factory si nécessaire.

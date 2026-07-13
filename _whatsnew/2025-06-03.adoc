@@ -4,6 +4,7 @@
 
 
 
+[[volume-autogrow-enhancement]]
 === Amélioration de la croissance automatique du volume
 
 Vous pouvez désormais définir la taille de croissance automatique de vos volumes afin que la taille du volume puisse croître au-delà de la taille provisionnée pour les besoins de l'entreprise et les exigences des applications.
@@ -12,6 +13,7 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/edit-volume-autogrow.html[
 
 
 
+[[well-architected-analysis-update]]
 === Mise à jour de l'analyse bien architecturée
 
 Workload Factory analyse désormais vos systèmes de fichiers FSx for ONTAP afin de vérifier l'efficacité du stockage, notamment en termes de compactage, de compression et de déduplication des données. L'efficacité du stockage mesure l'efficacité avec laquelle les systèmes de fichiers utilisent l'espace disponible.
@@ -20,12 +22,14 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/improve-configurations.htm
 
 
 
+[[storage-dashboard-enhancements]]
 === Améliorations du tableau de bord de stockage
 
 À partir d'aujourd'hui, lorsque vous ouvrez la charge de travail Stockage à partir de la console Workload Factory, vous verrez le *Tableau de bord*.  Le tableau de bord nouvellement conçu fournit une vue globale de vos systèmes FSx for ONTAP , y compris le nombre de systèmes de fichiers, la capacité totale du SSD, l'aperçu de l'état bien architecturé, l'aperçu de la protection des données et l'intégrité de la relation de réplication.
 
 
 
+[[volumes-tab-enhancements]]
 === Améliorations de l'onglet Volumes
 
 La charge de travail Stockage a apporté des améliorations à l'onglet Volumes dans un système de fichiers FSx for ONTAP dans la console Workload Factory.  Les améliorations comprennent :
@@ -36,6 +40,7 @@ La charge de travail Stockage a apporté des améliorations à l'onglet Volumes 
 
 
 
+[[storage-efficiencies-update-for-volume-creation]]
 === Mise à jour de l'efficacité du stockage pour la création de volumes
 
 Lors de la création d'un nouveau volume, les fonctions d'efficacité du stockage, notamment le compactage, la compression et la déduplication des données, sont activées par défaut.

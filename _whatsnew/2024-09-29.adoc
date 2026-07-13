@@ -4,6 +4,7 @@
 
 
 
+[[link-creation-updates]]
 === Mises à jour de la création de liens
 
 * Visionneuse de codes : Codebox est désormais intégrée au processus de création de liens.  Vous pouvez afficher et copier le modèle CloudFormation depuis Codebox dans Workload Factory avant de le rediriger vers AWS pour exécuter l'opération.

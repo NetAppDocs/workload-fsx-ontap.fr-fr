@@ -4,6 +4,7 @@
 
 
 
+[[block-storage-for-scale-out-fsx-for-ontap-file-systems]]
 === Stockage bloc pour systèmes de fichiers scale-out FSX pour ONTAP
 
 Vous pouvez désormais provisionner le stockage bloc sur FSX pour ONTAP lors d'un déploiement de système de fichiers scale-out comptant jusqu'à 6 paires haute disponibilité.
@@ -12,6 +13,7 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-file-system.html["C
 
 
 
+[[mount-command-available]]
 === Commande de montage disponible
 
 Les commandes de montage sont désormais disponibles pour l'accès NFS et CIFS à un volume. Vous pouvez obtenir le point de montage d'un volume dans un système de fichiers FSX for ONTAP en sélectionnant *actions de base* puis *commande Afficher montage*.
@@ -22,6 +24,7 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/access-data.html["Commande
 
 
 
+[[update-storage-efficiency-after-volume-creation]]
 === Efficacité du stockage mise à jour après la création du volume
 
 Après la création du volume, vous pouvez désormais activer ou désactiver l'efficacité du stockage pour les volumes FlexVol. L'efficacité du stockage inclut la déduplication, la compression et la compaction des données. L'optimisation de l'efficacité du stockage vous permet de réaliser des économies d'espace optimales sur un FlexVol volume.
@@ -30,6 +33,7 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/update-storage-efficiency.
 
 
 
+[[on-premises-ontap-cluster-discovery-and-replication]]
 === Détection et réplication des clusters ONTAP sur site
 
 Détectez et répliquez les données des clusters ONTAP sur site dans un système de fichiers FSX pour ONTAP afin de les utiliser pour enrichir les bases de connaissances d'IA. Tous les workflows de découverte et de réplication sur site sont possibles à partir du nouvel onglet *On-prlocale ONTAP* de l'inventaire du stockage.
@@ -38,6 +42,7 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/use-onprem-data.html["Déc
 
 
 
+[[aws-credentials-improve-savings-calculator-analysis]]
 === Les informations d'identification AWS améliorent l'analyse du calculateur d'économies
 
 Vous avez désormais la possibilité d'ajouter des informations d'identification AWS à partir du calculateur d'économies. L'ajout de identifiants améliore la précision de l'analyse du calculateur d'économies de vos environnements de stockage Amazon Elastic Block Store, Elastic File Systems et FSX for Windows File Server par rapport à FSX for ONTAP.

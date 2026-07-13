@@ -23,6 +23,7 @@ Vérifiez le nombre de machines virtuelles de stockage prises en charge par syst
 
 
 
+[[create-a-storage-vm]]
 == Créez une machine virtuelle de stockage
 
 Vous pouvez créer une machine virtuelle de stockage à partir de la console Workload Factory.  Vous pouvez également utiliser les outils suivants disponibles dans Codebox : API REST, CloudFormation et Terraform. link:https://docs.netapp.com/us-en/workload-setup-admin/use-codebox.html#how-to-use-codebox["Découvrez comment utiliser Codebox pour l'automatisation"^] .

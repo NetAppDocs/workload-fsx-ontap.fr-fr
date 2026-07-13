@@ -23,6 +23,7 @@ Vous pouvez gérer les volumes de cache associés aux relations de cache dans la
 
 
 
+[[edit-the-cache-volume-name]]
 == Modifier le nom du volume cache
 
 Vous pouvez modifier à tout moment le nom d'un volume de cache existant.
@@ -39,6 +40,7 @@ Vous pouvez modifier à tout moment le nom d'un volume de cache existant.
 
 
 
+[[adjust-the-capacity-of-a-cache-volume]]
 == Ajuster la capacité d'un volume de cache
 
 Vous pouvez ajuster à tout moment la capacité d'un volume de cache existant.
@@ -55,6 +57,7 @@ Vous pouvez ajuster à tout moment la capacité d'un volume de cache existant.
 
 
 
+[[edit-the-cache-volume-export-policy]]
 == Modifier la politique d'exportation du volume du cache
 
 Modifiez le chemin de montage ou la stratégie d'exportation attribuée à un volume de cache existant.
@@ -72,6 +75,7 @@ Modifiez le chemin de montage ou la stratégie d'exportation attribuée à un vo
 
 
 
+[[change-the-caching-method-for-a-cache-volume]]
 == Modifier la méthode de mise en cache pour un volume de cache
 
 Vous pouvez modifier le fonctionnement du cache pour un volume de cache existant afin de choisir entre écriture différée et écriture différée.
@@ -90,6 +94,7 @@ En savoir plus surlink:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/using-f
 
 
 
+[[prepopulate-a-cache-volume]]
 == Préremplir un volume de cache
 
 Remplissez le volume cache avec les données du volume d'origine avant de l'utiliser afin de rendre les données mises en cache disponibles plus rapidement.
@@ -106,6 +111,7 @@ Remplissez le volume cache avec les données du volume d'origine avant de l'util
 
 
 
+[[delete-a-cache-volume]]
 == Supprimer un volume de cache
 
 Lorsque vous supprimez un volume de cache, vous supprimez également sa relation de cache.  Les données mises en cache ne sont plus disponibles.

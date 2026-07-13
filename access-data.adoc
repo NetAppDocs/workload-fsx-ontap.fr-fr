@@ -19,6 +19,7 @@ Vous pouvez également obtenir le point de montage des volumes dans NetApp Workl
 
 
 
+[[get-mount-point-for-volumes-in-netapp-workload-factory]]
 == Obtenir le point de montage des volumes dans NetApp Workload Factory
 
 Obtenez le point de montage d'un volume pour monter un partage sur un partage CIFS ou un client NFS.
@@ -35,6 +36,7 @@ Obtenez le point de montage d'un volume pour monter un partage sur un partage CI
 
 
 
+[[connect-to-nas-clients]]
 == Se connecter aux clients NAS
 
 * link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/attach-linux-client.html["Montez un volume sur des clients Linux"^]
@@ -44,6 +46,7 @@ Obtenez le point de montage d'un volume pour monter un partage sur un partage CI
 
 
 
+[[connect-to-san-clients]]
 == Se connecter aux clients SAN
 
 * link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/mount-iscsi-luns-linux.html["Montez une LUN iSCSI sur des clients Linux"^]

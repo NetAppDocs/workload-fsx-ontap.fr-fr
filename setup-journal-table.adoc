@@ -15,6 +15,7 @@ Configurez l'infrastructure de la table Journal pour capturer et stocker les jou
 
 
 
+[[about-this-task]]
 == Description de la tâche
 
 La fonctionnalité de table Journal enregistre les événements du plan de données S3 (PutObject, GetObject, DeleteObject, etc.) pour les points d'accès S3 FSx for ONTAP surveillés. Elle utilise une chaîne de services AWS déployée dans votre compte AWS. Lorsque vous configurez correctement l'infrastructure, elle se connecte au point d'accès du volume FSx for ONTAP et établit le pipeline qui capture les événements d'audit d'accès utilisateur et d'opérations sur les objets dans la table Journal.
@@ -54,6 +55,7 @@ Le {uuid} est un identifiant aléatoire de 8 caractères généré lors de la cr
 
 
 
+[[before-you-begin]]
 == Avant de commencer
 
 Pour activer la fonctionnalité de tableau de journal, procédez comme suit :
@@ -172,6 +174,7 @@ Pour activer la fonctionnalité de tableau de journal, procédez comme suit :
 
 
 
+[[set-up-the-journal-table-infrastructure]]
 == Configurer l'infrastructure de la table de journalisation
 
 Configurez l'infrastructure pour capturer les événements du service AWS à partir du point d'accès S3 dans la table de journal.
@@ -205,6 +208,7 @@ Si l'une des étapes échoue, <<Dépannage de la configuration de l'infrastructu
 
 
 
+[[troubleshoot-the-infrastructure-setup-for-the-journal-table]]
 == Dépannage de la configuration de l'infrastructure pour la table de journal
 
 Vous pouvez utiliser la console de gestion AWS ou l'AWS CLI pour résoudre les problèmes survenant lors du déploiement de la pile CloudFormation et des ressources qu'elle crée.
@@ -213,6 +217,7 @@ Après avoir résolu le problème, soumettez à nouveau l'ARN CloudTrail pour re
 
 
 
+[[common-cloudformation-deployment-failures]]
 === Échecs de déploiement courants CloudFormation
 
 
@@ -278,6 +283,7 @@ aws iam delete-role \
 ----
 
 
+[[failures-after-journal-table-enablement]]
 === Échecs après l'activation de la table Journal
 
 Après la soumission de l'CloudTrail ARN, Workload Factory valide l'ensemble du pipeline de ressources en envoyant automatiquement un _seed_, ou événement de test. En cas de succès, l'événement seed arrive dans la table S3 Tables. Le test prend environ 10 minutes.
@@ -348,12 +354,14 @@ Une fois le problème résolu, retournez à la console Workload Factory. Réessa
 
 
 
+[[permissions-reference-for-the-journal-table-setup]]
 == Référence des autorisations pour la configuration de la table du journal
 
 Le rôle IAM qui déploie la pile CloudFormation pour activer la fonctionnalité de table Journal nécessite les autorisations suivantes. Consultez <<Avant de commencer,Avant de commencer>> pour une politique JSON copiable avec les autorisations requises.
 
 
 
+[[stack-operations]]
 === Opérations de pile
 
 [cols="1,1,1"]
@@ -371,6 +379,7 @@ Le rôle IAM qui déploie la pile CloudFormation pour activer la fonctionnalité
 |===
 
 
+[[cloudtrail]]
 === CloudTrail
 
 [cols="1,1,1"]
@@ -394,6 +403,7 @@ Le rôle IAM qui déploie la pile CloudFormation pour activer la fonctionnalité
 |===
 
 
+[[s3]]
 === S3
 
 [cols="1,1,1"]
@@ -411,6 +421,7 @@ Le rôle IAM qui déploie la pile CloudFormation pour activer la fonctionnalité
 |===
 
 
+[[iam]]
 === IAM
 
 [cols="1,1,1"]
@@ -434,6 +445,7 @@ Le rôle IAM qui déploie la pile CloudFormation pour activer la fonctionnalité
 |===
 
 
+[[cloudwatch-logs]]
 === Journaux CloudWatch
 
 [cols="1,1,1"]
@@ -463,6 +475,7 @@ Le rôle IAM qui déploie la pile CloudFormation pour activer la fonctionnalité
 |===
 
 
+[[observabilityadmin]]
 === ObservabilityAdmin
 
 [cols="1,1,1"]
@@ -483,6 +496,7 @@ Le rôle IAM qui déploie la pile CloudFormation pour activer la fonctionnalité
 |===
 
 
+[[s3-tables]]
 === Tables S3
 
 [cols="1,1,1"]

@@ -15,6 +15,7 @@ Modifiez les paramètres des instantanés, activez l'accès aux répertoires et 
 
 
 
+[[edit-a-snapshot]]
 == Modifier un instantané
 
 Modifiez le nom, l’étiquette et la période de conservation d’un instantané.  Si l'instantané n'est pas déjà immuable, vous pouvez le rendre immuable.
@@ -47,6 +48,7 @@ Acceptez la déclaration concernant les snapshots immuables.
 
 
 
+[[access-a-snapshot]]
 == Accéder à un instantané
 
 Activez l'accès au répertoire des instantanés pour donner aux utilisateurs la possibilité d'accéder aux instantanés de manière autonome.
@@ -72,6 +74,7 @@ Activez l'accès au répertoire des instantanés pour donner aux utilisateurs la
 
 
 
+[[restore-data-from-a-snapshot]]
 == Restaurer les données à partir d'un instantané
 
 Vous avez la possibilité de restaurer les données d’un instantané vers un volume existant ou vers un nouveau volume.
@@ -80,6 +83,7 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/restore-volume-from-snapsh
 
 
 
+[[delete-a-snapshot]]
 == Supprimer un instantané
 
 Supprimez un instantané pour libérer de l'espace.

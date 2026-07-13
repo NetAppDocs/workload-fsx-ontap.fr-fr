@@ -4,6 +4,7 @@
 
 
 
+[[tab-views-in-storage-inventory]]
 === Onglets dans l'inventaire de stockage
 
 L'inventaire de stockage a été mis à jour avec une vue à deux onglets :

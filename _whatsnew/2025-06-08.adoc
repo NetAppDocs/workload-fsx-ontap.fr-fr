@@ -4,6 +4,7 @@
 
 
 
+[[new-well-architected-analysis-and-support-for-fixing-issues]]
 === Nouvelle analyse et assistance bien conçues pour résoudre les problèmes
 
 La gestion automatique de la capacité des systèmes de fichiers FSx for ONTAP est désormais incluse en tant qu'analyse de configuration dans le tableau de bord d'état bien architecturé.

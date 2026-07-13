@@ -4,6 +4,7 @@
 
 
 
+[[optimize-savings-in-the-storage-calculator-for-amazon-elastic-block-store-ebs]]
 === Optimisez vos économies grâce au calculateur de stockage pour Amazon Elastic Block Store (EBS)
 
 Workload Factory peut analyser votre utilisation des performances EBS, puis suggérer la configuration FSx for ONTAP la meilleure et la plus rentable afin que vous puissiez économiser davantage en passant à FSx for ONTAP.
@@ -12,12 +13,14 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/explore-savings.html#explo
 
 
 
+[[quick-access-to-resource-screen-from-file-system-inventory]]
 === Accès rapide à l'écran des ressources à partir de l'inventaire du système de fichiers
 
 Vous pouvez accéder rapidement à un écran de ressources du système de fichiers FSx for ONTAP en sélectionnant le nom du système de fichiers, désormais un lien hypertexte, dans l'inventaire FSx for ONTAP .
 
 
 
+[[discover-cache-relationships-in-the-workload-factory-console]]
 === Découvrir les relations de cache dans la console Workload Factory
 
 Si vous avez des relations _cache_ entre le système de fichiers FSx for ONTAP et un autre type de stockage ONTAP (système sur site, Cloud Volumes ONTAP et FSx for ONTAP), vous pouvez les découvrir et les afficher à partir de la console Workload Factory.  Cela vous permet de mieux comprendre les flux de données, d’optimiser l’utilisation du cache et d’améliorer l’efficacité dans les environnements distribués.
@@ -26,6 +29,7 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/discover-cache-volumes.htm
 
 
 
+[[well-architected-analysis-update]]
 === Mise à jour de l'analyse bien architecturée
 
 Workload Factory analyse désormais vos systèmes de fichiers FSx for ONTAP pour la configuration suivante :
@@ -42,6 +46,7 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/improve-configurations.htm
 
 
 
+[[additional-notification-for-storage]]
 === Notification supplémentaire pour le stockage
 
 Le service de notification NetApp Workload Factory inclut la notification hebdomadaire des problèmes de configuration bien architecturés.
@@ -50,6 +55,7 @@ link:https://docs.netapp.com/us-en/workload-setup-admin/configure-notifications.
 
 
 
+[[immutable-files-support-privileged-delete]]
 === Les fichiers immuables prennent en charge la suppression privilégiée
 
 Avec cette fonctionnalité, vous pouvez configurer un accès de suppression privilégié pour les fichiers immuables dans vos systèmes de fichiers FSx for ONTAP .  Cela vous permet de protéger les données critiques contre toute suppression accidentelle ou malveillante tout en permettant aux utilisateurs autorisés de contourner le verrouillage et de supprimer ces fichiers si nécessaire.  L'activation de la suppression privilégiée est disponible lors de la création d'un volume ou pour les volumes existants.

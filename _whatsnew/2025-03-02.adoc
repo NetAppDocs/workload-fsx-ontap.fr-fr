@@ -4,6 +4,7 @@
 
 
 
+[[automatic-capacity-management-improvements]]
 === Amélioration de la gestion automatique de la capacité
 
 Lorsque la gestion automatique de la capacité est activée, l'usine de workloads BlueXP  vérifie à présent si un système de fichiers a atteint son seuil de capacité toutes les 30 minutes au lieu de toutes les 2 heures.
@@ -12,12 +13,14 @@ Le paramètre IOPS provisionnées n'est plus affecté lorsque le seuil de capaci
 
 
 
+[[immutable-snapshots]]
 === Snapshots immuables
 
 Vous pouvez désormais verrouiller les snapshots, les rendant immuables, pour une période de conservation spécifique. Le verrouillage empêche les accès non autorisés et les suppressions malveillantes des snapshots. Vous pouvez activer des snapshots immuables lors de la création de règles relatives aux snapshots, lors de la création manuelle de snapshots et après la création de snapshots.
 
 
 
+[[immutable-files-update]]
 === Mise à jour des fichiers immuables
 
 Vous pouvez maintenant apporter les modifications suivantes à votre configuration de fichiers immuables : règle de conservation, période de conservation, période de validation automatique et mode d'ajout des volumes.
@@ -26,6 +29,7 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/manage-immutable-files.htm
 
 
 
+[[data-replication-enhancements]]
 === Amélioration de la réplication des données
 
 * Réplication entre comptes : la réplication entre deux comptes AWS est prise en charge dans la console d'usine des workloads BlueXP  ainsi que la gestion de la réplication.
@@ -37,6 +41,7 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/pause-resume-replication.h
 
 
 
+[[cloudshell-events-in-tracker]]
 === Événements CloudShell dans Tracker
 
 Vous pouvez désormais suivre les événements CloudShell dans Tracker.

@@ -22,6 +22,7 @@ Par défaut, chaque volume est associé à la règle de snapshot du système de 
 
 
 
+[[change-a-snapshot-policy]]
 == Modifier une règle de snapshot
 
 Vous pouvez modifier le nom de la stratégie de snapshots, la planification et le nombre de copies à conserver, et activer ou désactiver les snapshots immuables. Il n'est pas possible d'activer ou de désactiver le partage de règles entre les machines virtuelles de stockage. Cette option n'est disponible que lors de la création de la règle de snapshots.
@@ -45,6 +46,7 @@ La politique Snapshot est mise à jour.
 
 
 
+[[enable-immutable-snapshots]]
 == Assurez la mise en œuvre de snapshots immuables
 
 Verrouiller les snapshots pour les empêcher d'être supprimés pendant la période de conservation.
@@ -74,6 +76,7 @@ L'instantané du volume est maintenant verrouillé.
 
 
 
+[[assign-a-snapshot-policy-to-a-volume]]
 == Affecter une politique de snapshots à un volume
 
 Vous pouvez affecter une politique de snapshots à un seul volume pour créer des snapshots planifiés pour ce volume.
@@ -100,6 +103,7 @@ La politique de snapshots est attribuée au volume.
 
 
 
+[[remove-a-snapshot-policy-from-a-volume]]
 == Supprimer une politique de snapshots d'un volume
 
 Supprimez une règle de snapshot d'un volume car vous ne souhaitez plus de snapshots du volume ou parce que vous souhaitez supprimer une règle de snapshot attribuée à plusieurs volumes. À <<Supprimer une règle de snapshot,supprimer une règle de snapshot>> qui est attribué plusieurs volumes, vous devez le supprimer manuellement de tous les volumes.
@@ -123,6 +127,7 @@ La règle de snapshot est supprimée du volume.
 
 
 
+[[delete-a-snapshot-policy]]
 == Supprimer une règle de snapshot
 
 Supprimez une règle de snapshot lorsque vous n'en avez plus besoin.
