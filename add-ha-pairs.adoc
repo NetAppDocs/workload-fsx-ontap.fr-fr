@@ -51,4 +51,4 @@ Avant d'ajouter des paires haute disponibilité à un système de fichiers, proc
 
 
 .Résultat
-L'usine de workloads lance le processus d'ajout des paires haute disponibilité au système de fichiers. Le système de fichiers n'est pas disponible pour d'autres opérations, telles que la création de volumes, tant que les paires haute disponibilité ne sont pas ajoutées. Vous pouvez surveiller la progression de l'opération dans l'onglet *Tracker*.
+Workload Factory lance le processus d'ajout des paires haute disponibilité au système de fichiers. Le système de fichiers n'est pas disponible pour d'autres opérations, comme la création de volumes, tant que les paires haute disponibilité n'ont pas été ajoutées. Vous pouvez suivre la progression de l'opération dans l'onglet *Tracker*.

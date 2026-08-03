@@ -137,7 +137,7 @@ Saisissez l’ARN du rôle d’exécution Lambda dans la zone de texte.
 
 .. *Tags*: Facultatif, ajoutez les balises que vous voulez associer à ce lien pour pouvoir catégoriser plus facilement vos ressources. Par exemple, vous pouvez ajouter une balise qui identifie ce lien comme étant utilisé par FSX pour les systèmes de fichiers ONTAP.
 +
-Workload Factory récupère automatiquement le compte AWS, l'emplacement et le groupe de sécurité en fonction du système de fichiers FSx for ONTAP .
+Workload Factory récupère automatiquement le compte AWS, l'emplacement et le groupe de sécurité en fonction du système de fichiers FSx for ONTAP.
 
 
 
@@ -148,7 +148,7 @@ La boîte de dialogue Redirection vers CloudFormation s'affiche et explique comm
 . Sélectionnez *Continuer* pour ouvrir la console de gestion AWS, puis connectez-vous au compte AWS de ce système de fichiers FSX pour ONTAP.
 . Sur la page pile de création rapide, sous fonctionnalités, sélectionnez *Je reconnais que AWS CloudFormation peut créer des ressources IAM*.
 +
-Notez que trois autorisations sont accordées à Lambda lorsque vous lancez le modèle CloudFormation. L'usine de workloads utilise ces autorisations lors de l'utilisation de liens.
+Notez que trois autorisations sont accordées à Lambda lors du lancement du modèle CloudFormation. Workload Factory utilise ces autorisations lors de l'utilisation de liens.
 
 +
 [source, json]
@@ -167,7 +167,7 @@ Vous pouvez surveiller l’état de création du lien sur la page Événements. 
 --
 .Créer manuellement
 --
-Vous pouvez créer un lien à l'aide de deux outils Infrastructure-as-Code (IaC) de Codebox : CloudFormation ou Terraform.  Avec cette option, vous extrayez l'ARN du lien depuis AWS CloudFormation et le signalez ici.  Workload Factory enregistre manuellement le lien pour vous.
+Vous pouvez créer un lien à l'aide de deux outils d'infrastructure en tant que code (IaC) depuis le Codebox : CloudFormation ou Terraform. Avec cette option, vous extrayez l'ARN du lien depuis AWS CloudFormation et le renseignez ici. Workload Factory enregistre manuellement le lien pour vous.
 
 .Étapes
 . Connectez-vous à l'aide de l'un des link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].

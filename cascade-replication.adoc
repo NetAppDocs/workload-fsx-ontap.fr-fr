@@ -79,7 +79,7 @@ Si vous activez la conservation à long terme, sélectionnez une règle existant
 
 +
 
-NOTE: Les étiquettes de source et de cible correspondantes sont requises pour la conservation à long terme. Si vous le souhaitez, Workload Factory peut créer des étiquettes manquantes pour vous.
+NOTE: Des étiquettes source et cible correspondantes sont requises pour la conservation à long terme. Si vous le souhaitez, Workload Factory peut créer les étiquettes manquantes pour vous.
 
 +
 *** *Choisissez une stratégie existante* : sélectionnez une stratégie existante dans le menu déroulant.

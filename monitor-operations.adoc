@@ -14,7 +14,7 @@ summary: 'Suivez FSx pour ONTAP, les informations d"identification et les opéra
 Surveillez et suivez l'exécution de FSx pour ONTAP, les informations d'identification et les opérations de liaison et surveillez la progression des tâches avec Tracker dans NetApp Workload Factory.
 
 .Description de la tâche
-Workload Factory fournit le Tracker, une fonction de surveillance, qui vous permet de surveiller et de suivre la progression et l'état de FSX pour ONTAP, les informations d'identification et les opérations de liaison, de vérifier les détails des tâches et sous-tâches d'opération, et de diagnostiquer les problèmes ou les défaillances.
+Workload Factory propose Tracker, une fonctionnalité de surveillance, qui vous permet de surveiller et de suivre la progression et l'état de FSx for ONTAP, des informations d'identification et des opérations de lien, d'examiner les détails des tâches et sous-tâches d'opération, et de diagnostiquer tout problème ou échec.
 
 Plusieurs actions sont disponibles dans Tracker. Vous pouvez filtrer les travaux par période (24 heures, 7 jours, 14 jours ou 30 jours), charge de travail, état et utilisateur, rechercher des travaux à l'aide de la fonction de recherche et télécharger la table des travaux sous forme de fichier CSV. Vous pouvez actualiser Tracker à tout moment. Vous pouvez également réessayer rapidement une opération ayant échoué ou modifier les paramètres d'une opération ayant échoué et réessayer l'opération.
 

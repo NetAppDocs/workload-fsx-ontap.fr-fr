@@ -57,7 +57,7 @@ link:https://aws.amazon.com/lambda/pricing/["Découvrez les coûts liés à l'ut
 [[when-a-link-is-required]]
 == Lorsqu'un lien est requis
 
-Workload Factory nécessite un lien pour afficher certaines informations et effectuer certaines tâches.  Si vous tentez d'effectuer une opération qui nécessite un lien et que vous n'avez pas associé de lien au système de fichiers FSx for ONTAP , Workload Factory vous avertit que l'opération nécessite un lien.
+Workload Factory nécessite une liaison pour afficher certaines informations et effectuer certaines tâches. Si vous tentez d'effectuer une opération nécessitant une liaison et que vous n'avez associé aucune liaison au système de fichiers FSx for ONTAP, Workload Factory vous avertit que l'opération requiert une liaison.
 
 Les fonctions qui nécessitent un lien sont les suivantes :
 

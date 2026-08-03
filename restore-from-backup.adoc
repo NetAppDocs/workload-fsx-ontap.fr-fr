@@ -13,7 +13,7 @@ summary: 'Restaurez un volume à partir d"une sauvegarde sur n"importe quel syst
 [role="lead"]
 Dans NetApp Workload Factory, vous pouvez restaurer un volume à partir d'une sauvegarde vers n'importe quel système de fichiers FSx for ONTAP de votre compte AWS.
 
-L'usine de workloads détermine si vous disposez de suffisamment de capacité pour la restauration et peut ajouter automatiquement de la capacité de Tier de stockage SSD si ce n'est pas le cas.
+Workload Factory détermine si vous disposez d'une capacité suffisante pour la restauration et peut ajouter automatiquement de la capacité de stockage SSD si vous n'en avez pas.
 
 .Étapes
 . Connectez-vous à l'aide de l'un des link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].
