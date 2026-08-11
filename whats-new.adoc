@@ -88,6 +88,13 @@ Pour configurer les notifications pour les événements S3, link:https://docs.ne
 
 
 
+[[ontap-features-displayed-in-volumes-explorer]]
+=== Fonctionnalités ONTAP affichées dans l'explorateur de volumes
+
+L'explorateur de volumes intègre désormais les fonctionnalités ONTAP dans le tableau des volumes. Ces fonctionnalités offrent une visibilité plus détaillée sur la configuration et l'état de vos volumes, notamment la couverture de protection, l'état de la protection autonome contre les ransomwares (ARP/AI), l'efficacité du stockage, la stratégie de hiérarchisation et l'extension automatique des volumes.
+
+
+
 [[05-july-2026]]
 == 05 juillet 2026
 

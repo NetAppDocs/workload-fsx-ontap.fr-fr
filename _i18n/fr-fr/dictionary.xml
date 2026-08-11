@@ -755,8 +755,6 @@
   <block id="b755b7c9e5db773b9578d24d7b40b61d" category="list-text">Sélectionnez *appliquer* pour enregistrer la modification.</block>
   <block id="124cb3fd3d0a35a1abf1c0f90f37e8a9" category="paragraph">Pour utiliser les données d'un cluster ONTAP sur site, vous devez d'abord détecter le cluster ONTAP sur site. Après avoir détecté un cluster ONTAP sur site, vous pouvez utiliser les données pour l'un des cas d'utilisation suivants.</block>
   <block id="2a3b399798aa16ecfbc1425cc560bfad" category="list-text">Cas d'utilisation</block>
-  <block id="ef63a3d009f11deff50f4dc327b32173" category="list-text">Notez que le principal cas d'utilisation de la charge de travail GenAI fait l'objet de cette série de tâches.</block>
-  <block id="809c357d304bbfa1cd4446574b270af8" category="inline-link-macro">Enrichir les bases de connaissances sur l'IA</block>
   <block id="f15192f8afdcf438f7b1ccf0cda2b436" category="list-text">*Sauvegarde et migration vers le cloud* : les données de volume ONTAP sur site répliquées vers un système de fichiers FSX pour ONTAP peuvent être utilisées comme sauvegarde dans le cloud.</block>
   <block id="5b5a84720ff8905504e8a45fbc52fb73" category="list-text">*Tiering des données* : après la réplication, les données des volumes ONTAP sur site rarement consultées peuvent être hiérarchisées du niveau de stockage SSD vers le niveau de stockage du pool de capacité.</block>
   <block id="4185f116d64b1130e6f9ba4250b147fa" category="paragraph">Assurez-vous d'avoir les éléments suivants avant de commencer :</block>
@@ -1289,7 +1287,6 @@
   <block id="897bea1a5ca479178427004f773ee72e" category="list-text">Vous pouvez également télécharger la liste des déplacements de volumes avant le rééquilibrage.</block>
   <block id="703547df715082455f8920d78fe90a30" category="list-text">Sélectionnez *rééquilibrer*.</block>
   <block id="eaaaf380859de755a58a543fbffc3d8a" category="paragraph"><block ref="eaaaf380859de755a58a543fbffc3d8a" category="inline-link-macro-rx"></block></block>
-  <block id="1418bddde60a7d4a1fbd71041ef29d36" category="list-text">*Charge de travail GenAI* : réplique les données de volume ONTAP sur site vers un système de fichiers FSX pour ONTAP afin que les données puissent être utilisées à <block ref="8b94b70e10f0f6c7944c9419ec9922bc" category="inline-link-macro-rx"></block>.</block>
   <block id="7583f12b4559f6687c67d8588da1e2f7" category="doc">Amélioration de la croissance automatique du volume</block>
   <block id="b57fe4f5ee65a0e01f61993297811ebf" category="paragraph">Vous pouvez désormais définir la taille de croissance automatique de vos volumes afin que la taille du volume puisse croître au-delà de la taille provisionnée pour les besoins de l'entreprise et les exigences des applications.</block>
   <block id="9f1effd9ace68ca00fe9e9e3c024b362" category="inline-link-macro">Activer la croissance automatique de volumes</block>
@@ -1997,7 +1994,6 @@
   <block id="0b81b68aa4b4da3fc81b7541c9557525" category="summary">Dans NetApp Workload Factory, vous pouvez mettre à jour le paramètre d’efficacité du stockage après la création du volume.</block>
   <block id="0254d70b292c2efb3924bc70f603207a" category="summary">Mettez à jour la capacité de débit d'un système de fichiers FSx pour ONTAP dans NetApp Workload Factory selon les besoins.</block>
   <block id="5b7dc0f0cef1ddf767dff9731a57d8a4" category="list-text">Depuis *FSx for ONTAP*, sélectionnez le menu d'actions du système de fichiers pour mettre à jour la capacité de débit, puis sélectionnez *Gérer*.</block>
-  <block id="be31b62eb26bc544ed1c2919a1a354d8" category="summary">Découvrez et répliquez les données ONTAP sur site dans NetApp Workload Factory afin qu'elles puissent être utilisées pour enrichir les bases de connaissances de l'IA.</block>
   <block id="5811115476eeb3b923e56f3b218e8861" category="doc">Utiliser les données du cluster ONTAP sur site dans NetApp Workload Factory</block>
   <block id="5433703774e7ff1a361e7a705d25ba42" category="paragraph">Découvrez un cluster ONTAP sur site dans NetApp Workload Factory afin de pouvoir répliquer les données vers un système de fichiers Amazon FSx for NetApp ONTAP .</block>
   <block id="cab5c35909125289d94f24cfb933bb6d" category="list-text">*Lien* : Sélectionnez un lien.  Le lien sera associé au cluster sur site pour créer une connectivité entre le cluster et Workload Factory.</block>
@@ -3152,8 +3148,6 @@
   <block id="8215457eb88ef1fb110b79579b908e3d" category="paragraph">Vous pouvez ignorer l'analyse des configurations qui ne s'appliquent pas à vos environnements. Cela évite les alertes inutiles et des résultats d'optimisation inexacts.</block>
   <block id="8817b0c6f0795c52cab62044416eee8a" category="inline-link-macro">En savoir plus sur les règles personnalisées</block>
   <block id="821af7226458ea25572e88e8ab2026e4" category="paragraph">Vous pouvez également créer des règles personnalisées en langage clair pour valider vos environnements par rapport aux normes de votre organisation et aux bonnes pratiques NetApp. Testez les règles à blanc, puis planifiez leur exécution dans vos environnements. <block ref="ce039b478eb432b675a03c04866f31ab" category="inline-link-macro-rx"></block>.</block>
-  <block id="8be08850265c9930c26a8e5b28183a2e" category="paragraph">Vous pouvez également créer des règles personnalisées en langage clair pour valider vos environnements par rapport aux normes de votre organisation et aux bonnes pratiques NetApp. Testez les règles à blanc, puis planifiez leur exécution dans vos environnements.</block>
-  <block id="7c24f3892a999a3e8d688cabe068b17a" category="paragraph"><block ref="ce039b478eb432b675a03c04866f31ab" category="inline-link-macro-rx"></block>.</block>
   <block id="782a430d789ff1db80e40fbe9c0be819" category="paragraph">Le tableau de bord bien architecturé évalue les configurations de stockage par rapport aux bonnes pratiques ONTAP et au cadre AWS Well-Architected. L’évaluation recommande également des améliorations et des corrections.</block>
   <block id="790f31a1565b039a710f1ff6cd60e24a" category="list-text">*Sauvegardes de volumes*</block>
   <block id="ca512a483bb26b1b253abc6b2cc463bd" category="list-text">*Politique d'instantané*</block>
@@ -3249,4 +3243,7 @@
   <block id="4fd22cd0c1b62f84962ef1e8ffd9c966" category="paragraph">Activez le suivi pour surveiller les délais de réplication sur votre compte. Workload Factory vous alerte lorsque les délais dépassent un seuil défini. Par défaut, le seuil est de 150 % de l’intervalle de réplication afin de permettre un temps de transfert normal et de réduire les fausses alertes. Vous pouvez ajuster le seuil pour qu’il corresponde à votre RPO et recevoir des notifications lorsque les délais le dépassent. Vous pouvez également exporter les données dans un fichier CSV pour une analyse plus approfondie.</block>
   <block id="adf6bc23c10d536eed25c42f34ba48e8" category="section-title">02 août 2026</block>
   <block id="bb971caaebe9e5940267caf457500810" category="paragraph"><block ref="247b746a5e5f871115d636673a8fd3a7" category="inline-link-macro-rx"></block>.</block>
+  <block id="935b1e26eff078e94b224d92e0db898a" category="section-title">Fonctionnalités ONTAP affichées dans l'explorateur de volumes</block>
+  <block id="2d4406cf931edb2fbd5ab72e7eb07c66" category="paragraph">L'explorateur de volumes intègre désormais les fonctionnalités ONTAP dans le tableau des volumes. Ces fonctionnalités offrent une visibilité plus détaillée sur la configuration et l'état de vos volumes, notamment la couverture de protection, l'état de la protection autonome contre les ransomwares (ARP/AI), l'efficacité du stockage, la stratégie de hiérarchisation et l'extension automatique des volumes.</block>
+  <block id="5800d9f6c1560d9eaf8bc5fbacb4698b" category="summary">Découvrez et répliquez les données ONTAP locales dans NetApp Workload Factory afin qu'elles puissent être utilisées comme sauvegarde dans le cloud.</block>
 </blocks>
