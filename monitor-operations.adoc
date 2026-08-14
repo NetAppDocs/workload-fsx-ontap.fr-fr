@@ -1,10 +1,10 @@
 ---
 sidebar: sidebar 
 permalink: monitor-operations.html 
-keywords: monitor databases, monitor jobs, track storage jobs, track jobs 
-summary: 'Suivez FSx pour ONTAP, les informations d"identification et les opérations de liaison et surveillez la progression des tâches avec Tracker dans NetApp Workload Factory for Storage.' 
+keywords: monitor fsx for ontap, monitor jobs, track jobs, tracker 
+summary: Suivez les opérations de charge de travail et surveillez la progression des tâches avec Tracker dans NetApp Workload Factory pour FSx for ONTAP. 
 ---
-= Surveillez les opérations de stockage avec Tracker dans NetApp Workload Factory
+= Surveillez les opérations FSx for ONTAP avec Tracker
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
@@ -47,12 +47,9 @@ Suivez et surveillez les opérations dans la console NetApp avec Tracker.
 
 .Étapes
 . Connectez-vous à l'aide de l'un des link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].
-. Sélectionnez le menu image:workloads-menu-icon.png["L'icône du menu hamburger permet d'accéder aux charges de travail telles que le stockage, l'analyse de données d'entreprise (EDA), l'intelligence artificielle (IA), les bases de données, VMware et l'administration."] puis sélectionnez *Stockage*.
-. Dans le menu Stockage, sélectionnez *Administration* puis *Liens*.
-+
-image:screenshot-menu-tracker-option.png["Capture d'écran du menu des paramètres du compte avec l'option Tracker mise en surbrillance."]
-
-. Dans l'onglet Tracker, utilisez les filtres ou la recherche pour affiner les résultats du travail. Vous pouvez également télécharger un rapport de travaux.
+. Sélectionnez le menu image:workloads-menu-icon.png["L'icône du menu hamburger permet d'accéder aux charges de travail telles que le stockage, l'analyse de données d'entreprise (EDA), l'intelligence artificielle (IA), les bases de données, VMware et l'administration."] puis sélectionnez *Administration*.
+. Dans le menu Administration, sélectionnez *Tracker*.
+. Dans Tracker, utilisez les filtres ou la recherche pour affiner les résultats d'emploi. Vous pouvez également télécharger un rapport sur les emplois.
 
 
 

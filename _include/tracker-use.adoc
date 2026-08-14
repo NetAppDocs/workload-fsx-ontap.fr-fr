@@ -1,0 +1,54 @@
+= Afficher une demande d'API
+:allow-uri-read: 
+
+
+. Dans Tracker, utilisez les filtres ou la recherche pour affiner les résultats d'emploi. Vous pouvez également télécharger un rapport sur les emplois.
+
+
+
+
+[[view-api-request]]
+== Afficher une demande d'API
+
+Affichez la demande API dans la zone de code pour une tâche dans Tracker.
+
+.Étapes
+. Dans Tracker, sélectionnez une tâche.
+. Sélectionnez le menu Actions, puis sélectionnez *Afficher la demande API*.
+
+
+
+
+[[retry-a-failed-operation]]
+== Réessayez une opération ayant échoué
+
+Réessayez une opération ayant échoué dans le Tracker. Vous pouvez également copier le message d'erreur d'une opération ayant échoué.
+
+
+NOTE: Vous pouvez réessayer une opération ayant échoué jusqu'à 10 fois.
+
+.Étapes
+. Dans Tracker, sélectionnez une opération ayant échoué.
+. Sélectionnez le menu Actions, puis sélectionnez *Réessayer*.
+
+
+.Résultat
+L'opération est lancée à nouveau.
+
+
+
+[[edit-and-retry-a-failed-operation]]
+== Modifiez et réessayez une opération ayant échoué
+
+Modifiez les paramètres de l'opération ayant échoué et relancez l'opération en dehors du Tracker.
+
+.Étapes
+. Dans Tracker, sélectionnez une opération ayant échoué.
+. Sélectionnez le menu Actions, puis sélectionnez *Modifier et réessayer*.
++
+Vous êtes redirigé vers la page d'opération où vous pouvez modifier les paramètres et réessayer l'opération.
+
+
+
+.Résultat
+L'opération est lancée à nouveau. Accédez à Tracker pour afficher l'état de l'opération.
