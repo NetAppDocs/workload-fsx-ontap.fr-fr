@@ -23,10 +23,8 @@ Modifiez le nom, l’étiquette et la période de conservation d’un instantan�
 .Étapes
 . Connectez-vous à l'aide de l'un des link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].
 . Sélectionnez le menu image:workloads-menu-icon.png["L'icône du menu hamburger permet d'accéder aux charges de travail telles que le stockage, l'analyse de données d'entreprise (EDA), l'intelligence artificielle (IA), les bases de données, VMware et l'administration."] puis sélectionnez *Stockage*.
-. Dans le menu Stockage, sélectionnez *FSx pour ONTAP*.
-. Depuis *FSx for ONTAP*, sélectionnez le menu d'actions du système de fichiers avec le volume, puis sélectionnez *Gérer*.
-. Dans la présentation du système de fichiers, sélectionnez l'onglet *volumes*.
-. Dans l’onglet *Volumes*, sélectionnez le menu d’actions pour le volume avec l’instantané à modifier.
+. Dans le menu Stockage, sélectionnez *Volumes explorer*.
+. Sélectionnez le menu Actions du volume contenant l'instantané à modifier.
 . Sélectionnez *Actions de protection des données* puis *Gérer les instantanés*.
 . Depuis la page Gérer les instantanés, sélectionnez le menu d'actions pour l'instantané à modifier, puis sélectionnez *Modifier*.
 . Dans la boîte de dialogue Modifier un instantané, vous pouvez modifier les éléments suivants :
@@ -56,10 +54,8 @@ Activez l'accès au répertoire des instantanés pour donner aux utilisateurs la
 .Étapes
 . Connectez-vous à l'aide de l'un des link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].
 . Sélectionnez le menu image:workloads-menu-icon.png["L'icône du menu hamburger permet d'accéder aux charges de travail telles que le stockage, l'analyse de données d'entreprise (EDA), l'intelligence artificielle (IA), les bases de données, VMware et l'administration."] puis sélectionnez *Stockage*.
-. Dans le menu Stockage, sélectionnez *FSx pour ONTAP*.
-. Depuis *FSx for ONTAP*, sélectionnez le menu d'actions du système de fichiers avec le volume, puis sélectionnez *Gérer*.
-. Dans la présentation du système de fichiers, sélectionnez l'onglet *volumes*.
-. Dans l’onglet *Volumes*, sélectionnez le menu d’actions du volume avec l’instantané auquel accéder.
+. Dans le menu Stockage, sélectionnez *Volumes explorer*.
+. Sélectionnez le menu Actions du volume avec l'instantané auquel vous souhaitez accéder.
 . Sélectionnez *Actions de protection des données* puis *Gérer les instantanés*.
 . Depuis la page Gérer les instantanés, sélectionnez le menu d'actions pour l'instantané auquel accéder, puis sélectionnez *Accès*.
 . Dans la boîte de dialogue Accéder à l'instantané, sélectionnez *Activer l'accès au répertoire d'instantanés* pour accéder à cet instantané de volume et à tous les instantanés du volume.
@@ -93,10 +89,8 @@ Les instantanés immuables ne peuvent pas être supprimés avant la fin de la p�
 .Étapes
 . Connectez-vous à l'aide de l'un des link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].
 . Sélectionnez le menu image:workloads-menu-icon.png["L'icône du menu hamburger permet d'accéder aux charges de travail telles que le stockage, l'analyse de données d'entreprise (EDA), l'intelligence artificielle (IA), les bases de données, VMware et l'administration."] puis sélectionnez *Stockage*.
-. Dans le menu Stockage, sélectionnez *FSx pour ONTAP*.
-. Depuis *FSx for ONTAP*, sélectionnez le menu d'actions du système de fichiers avec le volume, puis sélectionnez *Gérer*.
-. Dans la présentation du système de fichiers, sélectionnez l'onglet *volumes*.
-. Dans l’onglet *Volumes*, sélectionnez le menu d’actions pour le volume contenant l’instantané à supprimer.
+. Dans le menu Stockage, sélectionnez *Volumes explorer*.
+. Sélectionnez le menu Actions du volume contenant l'instantané à supprimer.
 . Sélectionnez *Actions de protection des données* puis *Gérer les instantanés*.
 . Depuis la page Gérer les instantanés, sélectionnez le menu d’actions pour l’instantané à supprimer, puis sélectionnez *Supprimer*.
 . Dans la boîte de dialogue Supprimer l'instantané, saisissez « supprimer ».

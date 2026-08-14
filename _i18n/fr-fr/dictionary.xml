@@ -665,7 +665,6 @@
   <block id="d4aa654cea4681dd5ca03650594006c6" category="paragraph">L'inventaire de stockage a été mis à jour avec une vue à deux onglets :</block>
   <block id="71083868a2ec5abfee9a2647a74612c0" category="list-text">Onglet FSX pour ONTAP : affiche les systèmes de fichiers FSX pour ONTAP dont vous disposez actuellement.</block>
   <block id="1113c9108b3e58789456954d1c2ea9c2" category="list-text">Onglet économies : affiche les systèmes de stockage Elastic Block Store, FSX for Windows File Server et Elastic File Systems. À partir de là, vous pouvez comparer les économies réalisées avec FSX pour ONTAP pour ces systèmes.</block>
-  <block id="fa8dc6e67f45bcde58853510e56ce6a1" category="list-text">Dans l'onglet vue d'ensemble du système de fichiers, sélectionnez l'onglet *volumes*.</block>
   <block id="d9f5899ddcae7952c9df69e075c822e2" category="section-title">3 novembre 2024</block>
   <block id="ddeb24aeadcd9bd34930d38c34152c03" category="paragraph">Amazon FSX pour NetApp ONTAP est désormais disponible en usine pour les workloads BlueXP .</block>
   <block id="03b2cfc949418819e16b1dc5fa3660ae" category="list-text"><block ref="03b2cfc949418819e16b1dc5fa3660ae" category="inline-link-macro-rx"></block></block>
@@ -1687,7 +1686,6 @@
   <block id="996e4fdffc6efd7771fa6411f0940007" category="list-text">Dans la mosaïque Stockage, sélectionnez *Accéder au stockage*.</block>
   <block id="c9183e42d9edf5bc557a95d0fcd830f8" category="list-text">Dans le menu Stockage, sélectionnez *FSx pour ONTAP*.</block>
   <block id="cc36383b6d55299948c19a38634c0ed7" category="list-text">Depuis *FSx for ONTAP*, sélectionnez le menu d'actions du système de fichiers avec le volume, puis sélectionnez *Gérer*.</block>
-  <block id="1aaa150ea3c3e20cd941880ef4ca9ee7" category="list-text">Dans l'onglet Volumes, sélectionnez le menu d'actions du volume, puis *Actions de base*, puis *Afficher la commande de montage*.</block>
   <block id="0c3eb461868f40b32a844e766aa447f2" category="summary">Ajoutez des paires haute disponibilité à un système de fichiers dans NetApp Workload Factory pour faire évoluer le système de fichiers.</block>
   <block id="bf79d5699d9edd84404a4a8329ed718d" category="doc">Ajouter des paires HA à un système de fichiers dans NetApp Workload Factory</block>
   <block id="24d80cd4a2c4c1ee117632b920ca71fb" category="paragraph">Ajoutez des paires haute disponibilité (HA) pour faire évoluer un système de fichiers Single-AZ de deuxième génération FSx pour ONTAP dans NetApp Workload Factory afin d'augmenter les performances et la capacité.  Cette extension vous offre davantage d'évolutivité des performances et de flexibilité par rapport aux systèmes de fichiers de première génération.</block>
@@ -1701,12 +1699,8 @@
   <block id="2ff7a46726c966e01bbcc4052737dbbe" category="summary">Modifiez la stratégie de hiérarchisation dans NetApp Workload Factory pour réaffecter les données du niveau de stockage principal hautes performances au niveau de stockage du pool de capacité secondaire.</block>
   <block id="3d5c60784595da751938bc111888efbd" category="doc">Modifier la politique de hiérarchisation d'un volume dans NetApp Workload Factory</block>
   <block id="610d9c48d80785e2e96de1cf9e9d1b50" category="paragraph">Dans NetApp Workload Factory, vous pouvez modifier la stratégie de hiérarchisation pour réaffecter automatiquement les données du niveau de stockage principal hautes performances au niveau de stockage du pool de capacité secondaire.</block>
-  <block id="f6f4b65cef81ea21c7e8a40a545e0c13" category="list-text">Depuis *FSx for ONTAP*, sélectionnez le menu d'actions du système de fichiers avec le volume à mettre à jour, puis sélectionnez *Gérer*.</block>
-  <block id="1b26a7c821c2d1ec34316ae8d20caf22" category="list-text">Dans l’onglet Volumes, sélectionnez le menu d’actions du volume pour lequel vous souhaitez modifier la stratégie de hiérarchisation.</block>
   <block id="e17c10e87203de595282b8a183261cb8" category="summary">Clonez un volume dans NetApp Workload Factory pour créer un volume de lecture/écriture du volume d'origine à des fins de test.</block>
   <block id="21c979f4327cd67644d8ab5b64a762c7" category="doc">Cloner un volume dans NetApp Workload Factory</block>
-  <block id="6681a3fb664c63dc897bbc8182969165" category="list-text">Depuis *FSx for ONTAP*, sélectionnez le menu d'actions du système de fichiers FSx for ONTAP qui contient le volume à cloner puis sélectionnez *Gérer*.</block>
-  <block id="6b74b1eeb944b58dcf027766f050311f" category="list-text">Dans l’onglet Volumes, sélectionnez le menu d’actions du volume à cloner.</block>
   <block id="93482e0e05af93f1f57953ff700f65af" category="summary">Configurez et mettez à jour Active Directory pour une machine virtuelle de stockage dans un système de fichiers FSx for ONTAP dans NetApp Workload Factory.</block>
   <block id="b517cd494437c46f189031b81fe054d1" category="list-text">Depuis *FSx for ONTAP*, sélectionnez le menu d'actions du système de fichiers avec la machine virtuelle de stockage à mettre à jour, puis sélectionnez *Gérer*.</block>
   <block id="e2978ebf10a51b553f9a074316b27b79" category="summary">Créez une sauvegarde manuelle d’un volume dans NetApp Workload Factory en dehors des sauvegardes planifiées régulièrement.</block>
@@ -1768,8 +1762,6 @@
   <block id="06a91edaa8e77e04dfd0ccc1dee5a6c7" category="list-text">Dans l’onglet Relations de réplication, sélectionnez le menu d’actions de la relation de réplication à supprimer.</block>
   <block id="ce1de3f28d8568be87cdce779516de02" category="doc">Supprimer une machine virtuelle de stockage dans NetApp Workload Factory</block>
   <block id="d287f4840c4e2956b3e030d276822021" category="doc">Supprimer un volume dans NetApp Workload Factory</block>
-  <block id="5d2b2d216923f677893f0a068bc1b92f" category="list-text">Depuis *FSx for ONTAP*, sélectionnez le menu d'actions du système de fichiers avec le volume à supprimer, puis sélectionnez *Gérer*.</block>
-  <block id="1235950c75ed0fc0a7588ccae6518e39" category="list-text">Dans l’onglet Volumes, sélectionnez le menu d’actions du volume à supprimer.</block>
   <block id="d3642378f76a85654ded51afcb1ef1e1" category="summary">Découvrez et affichez les volumes de cache associés aux relations de cache sans quitter la console NetApp Workload Factory.</block>
   <block id="6941de74744e8105d82d9020761bcfab" category="doc">Découvrir les volumes de cache dans Workload Factory</block>
   <block id="48a0f6fd350fab8343613dcbe8a68778" category="paragraph">Découvrez et affichez les volumes _cache_ associés aux relations de cache sans quitter la console NetApp Workload Factory.  Les relations de cache sont également appelées relations ONTAP FlexCache .  Workload Factory découvre les relations de cache existantes à l'aide de la technologie FlexCache , qui est la capacité de mise en cache à distance de NetApp ONTAP qui accélère l'accès aux données, réduit la latence WAN, la bande passante et les coûts des charges de travail à lecture intensive, en particulier lorsque les clients doivent accéder aux mêmes données de manière répétée.</block>
@@ -1795,7 +1787,6 @@
   <block id="3b231d6cca54e9d09e25b1461d3caafb" category="list-text">*Politique d'exportation* : La politique d'exportation du volume de cache.</block>
   <block id="c39b3cbd986af96ef05b9724f0b92e6b" category="summary">Activez la croissance automatique du volume pour permettre à Workload Factory de gérer la capacité du volume pour vous.  Vous pouvez le désactiver à tout moment.</block>
   <block id="467fbaad5c04b9212fefde208c6fce39" category="doc">Activer la croissance automatique du volume dans Workload Factory</block>
-  <block id="c7cb41d0ae0beeca525b094df6834ee5" category="list-text">Dans l’onglet Volumes, sélectionnez le menu d’actions pour le volume que vous souhaitez modifier.</block>
   <block id="a2f3bd55649066a9bad9a42a8df63f08" category="paragraph">Dans NetApp Workload Factory, vous pouvez activer les snapshots pour la conservation à long terme, ce qui vous permet de répliquer des snapshots spécifiques pour la reprise après sinistre à long terme.</block>
   <block id="116537ad3a8e9d253ab6c2cf9b1375c4" category="list-text">Depuis *FSx for ONTAP*, sélectionnez le nom d'action du système de fichiers à mettre à jour, puis sélectionnez *Gérer*.</block>
   <block id="92f16ef088dcbde798778ff8c71b147a" category="list-text">Dans l’onglet Relations de réplication, sélectionnez le menu d’actions de la planification de relation de réplication à modifier.</block>
@@ -1884,7 +1875,6 @@
   <block id="8d0a9b10b0feb1fbeb54874e4db30c45" category="paragraph"><block ref="8d0a9b10b0feb1fbeb54874e4db30c45" category="inline-image-macro-rx" type="image"></block></block>
   <block id="3f84e7918b5436d562b6058d69a5e22b" category="summary">Gérez la stratégie d’exportation NFS pour un volume qui utilise les types de protocole NFSv3 ou NFSv4.1 dans NetApp Workload Factory.</block>
   <block id="be75a4ee41ef1c041e10be17f5ab5d8f" category="doc">Gérer la politique d'exportation NFS pour un volume dans NetApp Workload Factory</block>
-  <block id="993ea00ff886b5116c867dbdd8d75b42" category="list-text">Dans l’onglet Volumes, sélectionnez le menu d’actions du volume pour lequel vous souhaitez modifier la stratégie d’exportation NFS.</block>
   <block id="45bad92c0320862bb24bd94703db0a08" category="summary">Gérez les stratégies de snapshot pour les volumes FSx for ONTAP dans Workload Factory.  Une politique de snapshot définit la manière dont le système crée des snapshots pour un volume.</block>
   <block id="e792f4d27d1dc64295baf4344c9aca49" category="inline-link-macro">En savoir plus sur les liens Workload Factory</block>
   <block id="144a013b1a947d3417ed511a6b60a2e1" category="paragraph">Certaines tâches de gestion nécessitent d’associer un lien au système de fichiers FSx for ONTAP . <block ref="0a8e0c490635c3084d9a0f334be1cdcd" category="inline-link-macro-rx"></block> .</block>
@@ -1898,17 +1888,13 @@
   <block id="47fec2ccab1a87c8590bba0a1eac637f" category="list-text">Dans l'onglet *VM de stockage*, sélectionnez le menu d'actions de la machine virtuelle de stockage avec la stratégie de snapshot à supprimer, puis *Actions avancées*, puis *Gérer les stratégies de snapshot*.</block>
   <block id="5ce0c735c2fdff568cde0fe04cd352dd" category="list-text">Sur la page de gestion des stratégies d'instantané, sélectionnez le menu d'actions pour la stratégie d'instantané à supprimer, puis sélectionnez *Supprimer*.</block>
   <block id="91a579a09ed9e4ecf83528c827e70a4c" category="summary">Modifiez les paramètres des instantanés, activez l'accès aux répertoires et supprimez les instantanés pour gérer vos instantanés et la protection des données dans Workload Factory.</block>
-  <block id="1e5f7a56c856392667c0c36867dc8619" category="list-text">Dans l’onglet *Volumes*, sélectionnez le menu d’actions pour le volume avec l’instantané à modifier.</block>
   <block id="f94d144be400675ae807174184acbf5f" category="list-text">Depuis la page Gérer les instantanés, sélectionnez le menu d'actions pour l'instantané à modifier, puis sélectionnez *Modifier*.</block>
-  <block id="e40ca92ee889685f3160fdbac6cfd9da" category="list-text">Dans l’onglet *Volumes*, sélectionnez le menu d’actions du volume avec l’instantané auquel accéder.</block>
   <block id="59bcba28fd08adb2991cdf5d82670fe0" category="list-text">Depuis la page Gérer les instantanés, sélectionnez le menu d'actions pour l'instantané auquel accéder, puis sélectionnez *Accès*.</block>
-  <block id="1853be3bc9ba64143d905bf1b187d07e" category="list-text">Dans l’onglet *Volumes*, sélectionnez le menu d’actions pour le volume contenant l’instantané à supprimer.</block>
   <block id="f1275ed085039c3832dda6dfba0ad9f2" category="list-text">Depuis la page Gérer les instantanés, sélectionnez le menu d’actions pour l’instantané à supprimer, puis sélectionnez *Supprimer*.</block>
   <block id="b8b31b5d8488dcb7ebd8c2bb9ba38f50" category="doc">Gérer les balises de VM de stockage dans NetApp Workload Factory</block>
   <block id="0c950433d94be139f73fb59247d857a5" category="paragraph">Les balises peuvent vous aider à catégoriser vos ressources.  Vous pouvez ajouter, modifier et supprimer des balises pour une machine virtuelle de stockage à tout moment dans NetApp Workload Factory.</block>
   <block id="558281a06321bc8c7b90d170a463683f" category="doc">Gérer les balises de volume dans NetApp Workload Factory</block>
   <block id="693a8f663c39ae53134101e5d974fda8" category="paragraph">Les balises peuvent vous aider à catégoriser vos ressources.  Vous pouvez ajouter, modifier et supprimer des balises de volume à tout moment pour les volumes FSx for ONTAP dans NetApp Workload Factory.</block>
-  <block id="ff53601e946713a2f9385573998c76d7" category="list-text">Dans l’onglet Volumes, sélectionnez le menu d’actions du volume pour lequel modifier les balises.</block>
   <block id="674b84367e7a585d7eb4cb69538ab5be" category="paragraph">Surveillez et suivez l'exécution de FSx pour ONTAP, les informations d'identification et les opérations de liaison et surveillez la progression des tâches avec Tracker dans NetApp Workload Factory.</block>
   <block id="e80eb219e8472681a001172074028f46" category="paragraph">Suivez et surveillez les opérations dans la console NetApp avec Tracker.</block>
   <block id="bd56fc255ce900fc195c9bc0d7ed20c0" category="list-text">Sélectionnez le menu Actions, puis sélectionnez *Afficher la demande API*.</block>
@@ -1932,7 +1918,6 @@
   <block id="8fd935558171bd50056871ef9ee7bd05" category="inline-link-macro">Console Workload Factory</block>
   <block id="42417c07633018b12e0946c06afcf181" category="paragraph">Vous allez créer un système de fichiers FSx pour commencer à gérer votre stockage et vos ressources FSx pour ONTAP dans Workload Factory.  Dans le<block ref="ed002915dbbbf90a20b3d8fdf4cc2390" category="inline-link-macro-rx"></block> , dans Stockage, sélectionnez *Créer un système de fichiers*. <block ref="1f3b8beb11bf530a33922b2af302faf4" category="inline-link-macro-rx"></block> .</block>
   <block id="dfb50a8875f6e98586f1d46423ec7e59" category="list-text">Depuis *FSx for ONTAP*, sélectionnez le menu d'actions du système de fichiers pour activer ARP/AI, puis sélectionnez *Gérer*.</block>
-  <block id="ac3784491c023b93e68ef3c4bd387b65" category="list-text">Dans l'onglet Volumes, sélectionnez le menu d'actions du volume pour activer ARP/AI, puis *Actions de protection des données*, puis *Gérer ARP/AI*.</block>
   <block id="6ff824e5b33a50750960455d60fe1f8b" category="list-text">Depuis *FSx for ONTAP*, sélectionnez le système de fichiers pour lequel valider les attaques de ransomware.</block>
   <block id="11e2850db68a18789eeda1447d049dcb" category="list-text">Depuis *FSx for ONTAP*, sélectionnez le système de fichiers pour lequel récupérer les données.</block>
   <block id="9a16d80af35e46e7a29a2afaa0ce9a2f" category="paragraph">La vérification de l'équilibre de la capacité volumique de FlexGroup comprend l'évaluation de la disposition actuelle des constituants.  Lorsque vous rééquilibrez la capacité du volume, NetApp Workload Factory conçoit une nouvelle disposition des composants avec un nombre pair de composants pour répartir les données uniformément sur toutes les paires HA.  Le service exécute le plan de rééquilibrage qui, à son tour, améliore les opérations de lecture et d’écriture.</block>
@@ -1952,7 +1937,6 @@
   <block id="3c483a45ab5fea02162be0b6c6004287" category="doc">Réinitialiser le mot de passe de la machine virtuelle de stockage dans NetApp Workload Factory</block>
   <block id="398b64d3ae2c039c62637d684fcbe30d" category="doc">Restaurer un volume à partir d'une sauvegarde dans NetApp Workload Factory</block>
   <block id="19002cddfac8e15ce79f8ccad53b74e6" category="paragraph">Dans NetApp Workload Factory, vous pouvez restaurer un volume à partir d'une sauvegarde vers n'importe quel système de fichiers FSx for ONTAP de votre compte AWS.</block>
-  <block id="de32db8377dafaed047e32a0f5c78af1" category="list-text">Dans l’onglet *Volumes*, sélectionnez le menu d’actions du volume à restaurer à partir d’une sauvegarde.</block>
   <block id="e8c0bed13dff2e82ae3fd20a79157041" category="list-text">La restauration peut pousser la capacité utilisée au-delà du seuil que vous avez spécifié.  Vous pouvez terminer l'opération de restauration.  Considérer<block ref="e41647392a26a0e6b166f921fc9cbdef" category="inline-link-macro-rx"></block> ou en sélectionnant Workload Factory pour ajouter automatiquement la capacité de stockage SSD.</block>
   <block id="2235d115064fc8246f43d55ab62b045c" category="list-text">La restauration nécessite une capacité SSD supplémentaire.  Vous devez sélectionner Workload Factory pour ajouter automatiquement la capacité de stockage SSD pour continuer.</block>
   <block id="fa6f999947ca23d9e3e71b237b583528" category="doc">Restaurer un volume à partir d'un snapshot dans Workload Factory</block>
@@ -1965,8 +1949,6 @@
   <block id="117ff5e4baddbf50b3b38a288594d39b" category="doc">Sécurité pour FSx pour ONTAP dans NetApp Workload Factory</block>
   <block id="258917ec2ee16288f0cdb1fe8af0633f" category="doc">Diviser un volume cloné dans NetApp Workload Factory</block>
   <block id="0ce9d462b15862a3d7f4258b37af2df3" category="paragraph">Divisez un FlexVol volume cloné de son volume parent pour faire du clone un FlexVol volume en lecture/écriture normal dans NetApp Workload Factory.</block>
-  <block id="e1fc729a6319223f80f6d7f88934e179" category="list-text">Depuis *FSx for ONTAP*, sélectionnez le menu d'actions du système de fichiers avec le volume cloné à diviser, puis sélectionnez *Gérer*.</block>
-  <block id="906eee5e28e72698e56c531975e986b8" category="list-text">Dans l’onglet Volumes, sélectionnez le menu d’actions du volume avec le volume cloné à diviser.</block>
   <block id="0afeadc4bedc444ef9fe962788f3cabc" category="summary">Arrêtez une relation de réplication entre les volumes source et cible dans NetApp Workload Factory.</block>
   <block id="695c1eee16df28fb12cc40895f214b89" category="doc">Arrêter une relation de réplication dans NetApp Workload Factory</block>
   <block id="6ac52b356e1de0ea8172c07c761b9a77" category="paragraph">Arrêtez une relation de réplication dans NetApp Workload Factory.  Lorsque vous arrêtez une relation de réplication, les mises à jour de réplication planifiées du volume source vers le volume cible sont suspendues.  Le volume cible passe du mode lecture seule au mode lecture/écriture.</block>
@@ -2057,7 +2039,6 @@
   <block id="08842901b516656f4ce72eb7f4f5c0d1" category="paragraph">Pour un LUN iSCSI, augmenter la taille du volume augmente également la taille du LUN hôte.  Après avoir augmenté la capacité du volume, suivez la procédure fournie par votre système d'exploitation hôte pour connaître la nouvelle taille du LUN et étendre le système de fichiers du LUN.</block>
   <block id="f4d84340dd6fee1664a29cabc2ba8c39" category="paragraph">La réduction de la taille des volumes n'est prise en charge que pour les volumes NFS et SMB/CIFS.</block>
   <block id="2880a60b72532c629f0cc885860ca8e5" category="paragraph">Pour ajuster la capacité du volume, vous devez associer un lien. <block ref="d247bd89ba7282a8d4fed90c00e6cb68" category="inline-link-macro-rx"></block>. Une fois le lien associé, revenez à cette opération.</block>
-  <block id="57730f251586648892ae3bf2485f043e" category="list-text">Dans l'onglet Volumes, sélectionnez le menu Actions du volume dont vous souhaitez ajuster la capacité.</block>
   <block id="4e54161de298fea40a1792b1351b1789" category="list-text">Sélectionnez *Actions de base*, puis *Ajuster la capacité du volume*.</block>
   <block id="4fbd17d05637f9e5fed62de5f827a895" category="list-text">Dans la boîte de dialogue Ajuster la capacité du volume, définissez la *capacité provisionnée* et l'unité.</block>
   <block id="6a6abbaa1bbd0c301b070b7a1615b31d" category="list-text">Sélectionnez *Ajuster* pour appliquer les modifications.</block>
@@ -2401,7 +2382,6 @@
   <block id="34fc9e9b0a58447e45d29d99c376a3ec" category="paragraph"><block ref="34fc9e9b0a58447e45d29d99c376a3ec" category="inline-link-macro-rx"></block></block>
   <block id="69b8b9524d643674b889fa70c17e1cc8" category="inline-link-macro">accorder des identifiants avec la politique d'autorisation _operations and remediation_</block>
   <block id="8c378042ad1ba655fb1f5cd941dc98b6" category="list-text">Vous devez <block ref="c6ffb720e530188ab1b1bff284837062" category="inline-link-macro-rx"></block> dans Workload Factory pour accomplir cette tâche.</block>
-  <block id="0a76b0d6a11006d8a1c5f62db933ddb6" category="list-text">Dans *FSx for ONTAP*, sélectionnez le système de fichiers contenant le volume à mettre à jour.</block>
   <block id="37068c532170e23c2a91d4d23699dd31" category="list-text">Depuis l'écran *Gérer les points d'accès S3*, sélectionnez le menu actions, puis sélectionnez *Modifier point d'accès*.</block>
   <block id="076804dea9fcf3467cf7c699f9811498" category="list-text">Apportez les mises à jour, puis sélectionnez *Appliquer*.</block>
   <block id="f6e1df464413e09857979a0ca8b75a4b" category="paragraph">Supprimez les points d'accès S3 existants d'un volume dans NetApp Workload Factory.</block>
@@ -2549,7 +2529,6 @@
   <block id="934ae55c0ac8033312b0dd4fc00ad677" category="paragraph">Après qu’un périphérique de stockage par blocs n’est pas utilisé pendant sept jours, Workload Factory recommande d’archiver les données du périphérique de stockage par blocs ou de supprimer le périphérique inutilisé afin de réduire les coûts.</block>
   <block id="3224742265d3111d23b216e2a1d3036c" category="paragraph">Les sauvegardes de volume sont effectuées volume par volume, donc chaque sauvegarde contient uniquement les données d'un volume particulier.</block>
   <block id="9b1c40247bbd6b430d06045ce9149bf4" category="paragraph">Les sauvegardes de volume sont incrémentales, ce qui signifie que seules les données du volume qui ont changé depuis votre sauvegarde la plus récente sont enregistrées. Cela minimise le temps nécessaire pour créer la sauvegarde et l'espace de stockage requis pour la sauvegarde, ce qui permet d'économiser sur les coûts de stockage en ne dupliquant pas les données.</block>
-  <block id="40e95cbe82fc979afaca404d45ab88c7" category="list-text">Dans l'onglet *Volumes*, sélectionnez le menu Actions pour le volume à sauvegarder.</block>
   <block id="0b3a2f729072cb80e423288abd69fa27" category="list-text">Sélectionnez *Data protection actions*, *Volume backups*, puis *Manual backup*.</block>
   <block id="108be83f8740c01bf49fb6d51d4b134e" category="admonition">Les instantanés ne sont pas des copies de vos données. Si vous souhaitez créer des copies de vos données, envisagez d'utiliser les fonctionnalités de sauvegarde de volumes ou de réplication de volumes.</block>
   <block id="d6a7c6eb08e4e62d76793fd3d8b368d4" category="list-text">Sauvegardes de volumes : Les copies de sauvegarde de volumes seront conservées et vous pouvez toujours les utiliser.</block>
@@ -2587,7 +2566,6 @@
   <block id="9dcfa34c623752899d0cd665d6921df4" category="paragraph">Veuillez remplir les conditions suivantes avant de commencer.</block>
   <block id="a3e0a4d34abe4cb6242fd1657cb155d4" category="inline-link-macro">Créer un volume avec un point d'accès S3</block>
   <block id="6f6ccfdfe231ae2138827786254112c2" category="list-text">Vous devez disposer d'un volume existant avec un point d'accès <block ref="c7b581e6d0e133046496fe0baeb0e257" category="inline-link-macro-rx"></block></block>
-  <block id="450d84b08c6958224dd89ed70bc5e196" category="list-text">Dans l'onglet Volumes, sélectionnez le menu actions du volume que vous souhaitez utiliser, puis sélectionnez *Actions avancées*, puis *Gérer les points d'accès S3*.</block>
   <block id="1ab0f92903be1ffc4bfffd2b16c9822b" category="list-text">Sur la page Gérer les points d'accès S3, sélectionnez *Créer et associer point d'accès S3*.</block>
   <block id="d4e1585a083abcd993be7dae0c424273" category="list-text">Sur la page *Créer et connecter un point d'accès S3*, fournissez les informations suivantes :</block>
   <block id="8f3e222b23e17bc1bb1082500f8b04e5" category="list-text">*Configuration réseau* : Sélectionnez *Internet* ou *Virtual private cloud (VPC)*. Le type de réseau choisi détermine si le point d'accès est accessible depuis Internet ou s’il est limité à un VPC spécifique. Pour utiliser la fonction Journal table, vous devez sélectionner *Internet* comme configuration réseau.</block>
@@ -2609,7 +2587,6 @@
   <block id="d2352112ab40045cec0375e016ea4229" category="doc">Modifiez les points d'accès S3 pour un volume dans NetApp Workload Factory</block>
   <block id="4f2481bead84c7e45263bffec42a080f" category="paragraph">Mettez à jour les détails du point d'accès S3 et gérez les balises d'un volume dans NetApp Workload Factory.</block>
   <block id="a2872fa19a103aff070420e355911099" category="paragraph">Vous pouvez également activer ou désactiver la *table d'inventaire* pour le point d'accès. La table d'inventaire génère des métadonnées pour tous les objets accessibles au point d'accès S3 et engendre des coûts de requête AWS S3. Reportez-vous à <block ref="af9c8757ba81fcc825b028513d05dce7" category="inline-link-macro-rx"></block> pour plus d'informations.</block>
-  <block id="fdc1e49b1bc817c660403950b89e1054" category="list-text">Dans l'onglet Volumes, sélectionnez le menu actions du volume pour lequel vous souhaitez modifier les points d'accès S3, puis sélectionnez *Actions avancées*, puis *Gérer les points d'accès S3*.</block>
   <block id="c0945892db5abb8e13b1125b34afb488" category="inline-link-macro">Découvrez comment configurer l'infrastructure de la table Journal pour NetApp Workload Factory</block>
   <block id="e5eaf9094fc3ae9a063c974472917f15" category="list-text">S'il n'existe aucun igroup, créez-en un nouveau en sélectionnant *Map igroup &gt; Create igroup*, puis procédez comme suit :</block>
   <block id="cd7bfadfb1480ea2e4e23f8c5b8ec668" category="list-text">Si un igroup existe déjà, sélectionnez *Mapper igroup &gt; Mapper igroup existant* pour ajouter ou supprimer des périphériques de bloc et des initiateurs hôtes de l'igroup, puis sélectionnez *Mapper*.</block>
@@ -3020,8 +2997,6 @@
   <block id="037ea7d94a5a2563d24d4aab128c2f74" category="list-text">*Plage de temps* : 10 minutes</block>
   <block id="fc30acb77198b9a113675211028eeb7f" category="paragraph">Une alerte est générée lorsque le seuil de latence est dépassé et que le seuil d'IOPS est atteint sur la plage horaire spécifiée.</block>
   <block id="d663edf15a1c9b9cce32f438ee09111b" category="admonition">Vous pouvez consulter les événements de latence et recevoir des alertes sans connexion. Cependant, pour analyser les événements et recevoir des informations et des recommandations basées sur l'IA, vous devez <block ref="e3e5092d2d9ecf941f8ffdff56f5837a" category="inline-link-macro-rx"></block>.</block>
-  <block id="c860af979551dbcf8788e767b74ef2f4" category="list-text">Dans *FSx for ONTAP*, sélectionnez le menu actions du système de fichiers contenant le volume à configurer, puis sélectionnez *Gérer*.</block>
-  <block id="ecfd19bbe3c2c4e92ff25fd22f2d17fe" category="list-text">Dans l'onglet Volumes, sélectionnez le menu Actions du volume pour lequel vous souhaitez définir les seuils de latence.</block>
   <block id="ee43009d0c790146325573e838a42f39" category="list-text">Sélectionnez *Actions d'alerte*, puis *Définir le seuil de latence*.</block>
   <block id="e7199990279785fb0027f522b7518c23" category="list-text">Dans la boîte de dialogue Définir le seuil de latence, configurez les éléments suivants :</block>
   <block id="18a1f4ac498e878706a9bea4c3f7d8d2" category="list-text">*Latence de lecture* : Entrez la valeur seuil en millisecondes (ms) pour les opérations de lecture.</block>
@@ -3068,7 +3043,6 @@
   <block id="73a2a12878b0731214258fd091d03336" category="list-text">Tous les autres comptes : saisissez les identifiants ONTAP pour le cluster ONTAP sur site. Assurez-vous que l’utilisateur dispose des autorisations requises.</block>
   <block id="92ee6e4d72d15689a675017ce0db2fa1" category="section-title">31 mai 2026</block>
   <block id="efbeddc0347a679a438120189b77f860" category="section-title">Explorateur de volumes</block>
-  <block id="3e1cc7f8632eafd5f69d910c06db3aa4" category="paragraph">Volumes Explorer vous offre une vue simple et consultable de tous vos volumes dans NetApp Workload Factory. Identifiez rapidement les volumes dédiés aux charges de travail par blocs ou par fichiers. Consultez la taille logique, la capacité physique utilisée et l’utilisation des fonctionnalités d’efficacité du stockage (compression, déduplication et compactage) de chaque volume. Filtrez et triez les volumes par nom, état (disponible/défaillant), latence, taille, capacité utilisée et fonctionnalités de protection.</block>
   <block id="3a410df7dfc102007ea8a7569fdb1810" category="section-title">Notifications par e-mail améliorées en cas de retards de réplication</block>
   <block id="bd78ae8d1a9aed4500716acc31d179d8" category="paragraph">Les notifications par e-mail concernant les retards de réplication contiennent désormais plus de détails sur la relation concernée. Cette notification vous permet d'identifier rapidement la relation concernée et de l'examiner dans la console Workload Factory.</block>
   <block id="4dc5c4a9c4b845746295cce1108ec278" category="inline-link-macro">Activer les notifications en cas de retard de réplication</block>
@@ -3086,8 +3060,6 @@
   <block id="71a7ff5ebf9156a251d799ca9d4801be" category="list-text">Seuil de temps de latence dépassé</block>
   <block id="7295e460f10eab584940e13ed73f1a7c" category="list-text">Lien vers la relation de réplication</block>
   <block id="1cdbc8bcb26cc8d5e894a97b9e7f269f" category="section-title">05 juillet 2026</block>
-  <block id="c78fe199ccaa5a2c357a3d2c45be14ef" category="list-text">Dans le menu Stockage, sélectionnez *Volume explorer*.</block>
-  <block id="6ff324bc406694300a857d2e2fe3a576" category="list-text">Dans *Volume explorer*, sélectionnez *Créer un volume*.</block>
   <block id="f4258ab9dce223a884192f1b0d9eadb2" category="list-text">Les volumes contenant des fichiers immuables et les volumes utilisant le protocole NVMe ne sont pas pris en charge pour ARP/AI. Les volumes iSCSI sont pris en charge à partir d'ONTAP 9.17.1.</block>
   <block id="36aa278c460567c053811bf14b7377ad" category="summary">NetApp Autonomous Ransomware Protection avec IA (ARP/AI) utilise l'analyse de la charge de travail dans les environnements NAS et SAN pour détecter et signaler toute activité anormale pouvant indiquer une attaque de ransomware.</block>
   <block id="7cfa8a15930cf4747377549a5e84a0d1" category="paragraph">Protégez vos données avec NetApp Autonomous Ransomware Protection with AI (ARP/AI). Il surveille l’activité dans les environnements NAS (NFS/SMB) et SAN afin de détecter tout comportement inhabituel pouvant signaler une attaque par ransomware. Si une menace est détectée, ARP/AI crée automatiquement de nouveaux instantanés immuables afin que vous puissiez restaurer vos données.</block>
@@ -3250,4 +3222,28 @@
   <block id="8d4d423646d154ba5a24cc06f37ea486" category="doc">Surveillez les opérations FSx for ONTAP avec Tracker</block>
   <block id="90f9c44ed80c8f4c833d62a795593434" category="list-text">Sélectionnez le menu <block ref="d1917ed039a7bd34b3d1373e5ffc5ece" category="inline-image-macro-rx" type="image"></block> puis sélectionnez *Administration*.</block>
   <block id="31793001124176cff5a1e8aea00621a1" category="list-text">Dans le menu Administration, sélectionnez *Tracker*.</block>
+  <block id="2b2db21e376d227839b25c1e6fcb7638" category="paragraph">L'explorateur de volumes vous offre une vue simple et consultable de tous vos volumes dans NetApp Workload Factory. Identifiez rapidement les volumes dédiés aux charges de travail par blocs ou par fichiers. Consultez la taille logique, la capacité physique utilisée et l'utilisation des fonctionnalités d'efficacité du stockage (compression, déduplication et compactage) pour chaque volume. Filtrez et triez par nom, état (disponible/en panne), latence, taille, capacité utilisée et fonctionnalités de protection.</block>
+  <block id="48392de7f44d75a05d38a8c1a399d8ac" category="list-text">Dans le menu Stockage, sélectionnez *Volumes explorer*.</block>
+  <block id="0f45cf7b6cca473d9d7e8de2825980ea" category="list-text">Sélectionnez le menu actions du volume, puis *Actions de base*, puis *Afficher la commande de montage*.</block>
+  <block id="734e7d02ba8f04ee206b66664464af76" category="list-text">Sélectionnez le menu des actions pour le volume que vous souhaitez modifier.</block>
+  <block id="b758bc36dbea04469939f374e5c90d45" category="list-text">Sélectionnez le menu Actions du volume pour lequel vous souhaitez modifier la politique de hiérarchisation.</block>
+  <block id="104cd121230c4d839097d0ce6dfcf7e9" category="list-text">Sélectionnez le menu Actions du volume à cloner.</block>
+  <block id="fa635f0dee1aabee3d594cd262946445" category="list-text">Sélectionnez le menu Actions pour sauvegarder le volume.</block>
+  <block id="ff500adfe9db74a3a57f9dfa8f256e44" category="list-text">Sélectionnez le menu des actions du volume que vous souhaitez utiliser, puis sélectionnez *Actions avancées*, puis *Gérer les points d'accès S3*.</block>
+  <block id="e911c00e07738289481f8c4e644342da" category="list-text">Sélectionnez *Créer un volume*.</block>
+  <block id="5a5c6a5d9f3043f2bbe386d59bc1f1c9" category="list-text">Sélectionnez le menu actions du volume pour lequel vous souhaitez gérer les points d'accès S3, puis sélectionnez *Actions avancées*, puis *Gérer les points d'accès S3*.</block>
+  <block id="0cbc3801897f687d38c6030184ae285b" category="list-text">Sélectionnez le menu Actions du volume à supprimer.</block>
+  <block id="c1500b3abf886fa0128152eeb4411eb5" category="list-text">Sélectionnez le menu actions du volume pour lequel vous souhaitez modifier les points d'accès S3, puis sélectionnez *Actions avancées*, puis *Gérer les points d'accès S3*.</block>
+  <block id="4d161e90828a4e8cc4c156f673784c44" category="list-text">Sélectionnez le menu Actions du volume pour lequel vous souhaitez modifier le partage SMB.</block>
+  <block id="0178234ce599b2e6182625dc7a986f96" category="list-text">Sélectionnez le menu Actions du volume à mettre à jour.</block>
+  <block id="0d10acf0182a3826080273730ac7748c" category="list-text">Sélectionnez le menu Actions du volume pour lequel vous souhaitez modifier les règles d'export NFS.</block>
+  <block id="f61349941fe80b5d2b82070f03d835d5" category="list-text">Sélectionnez le menu Actions du volume contenant l'instantané à modifier.</block>
+  <block id="ba48ebebc07247b7c74acb00034bc5fc" category="list-text">Sélectionnez le menu Actions du volume avec l'instantané auquel vous souhaitez accéder.</block>
+  <block id="0b2788e26ea861364476d32ffb3b8c19" category="list-text">Sélectionnez le menu Actions du volume contenant l'instantané à supprimer.</block>
+  <block id="1111cc43d23839eef53ada84488c133d" category="list-text">Sélectionnez le menu Actions du volume pour modifier les balises.</block>
+  <block id="f70b2d7118eadcfe14856f585bfd1225" category="list-text">Sélectionnez le menu actions du volume pour activer ARP/AI, puis *Actions de protection des données*, puis *Gérer ARP/AI*.</block>
+  <block id="58c200f393f91f86cb4951a046175681" category="list-text">Sélectionnez le menu Actions du volume à restaurer à partir d'une sauvegarde.</block>
+  <block id="12a6e2d4c91a43e9ac81b18d2fd28a4a" category="list-text">Sélectionnez le menu Actions du volume pour lequel vous souhaitez définir les seuils de latence.</block>
+  <block id="388a60e15f099855100226e2026dc1cd" category="list-text">Sélectionnez le menu Actions du volume avec le volume cloné à diviser.</block>
+  <block id="3b4ba83afa209df4541afdb1c96a15f9" category="list-text">Sélectionnez le menu Actions du volume pour lequel vous souhaitez mettre à jour le paramètre d'efficacité du stockage.</block>
 </blocks>

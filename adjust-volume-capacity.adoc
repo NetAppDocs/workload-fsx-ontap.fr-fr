@@ -38,10 +38,8 @@ Pour ajuster la capacité du volume, vous devez associer un lien. link:https://d
 .Étapes
 . Connectez-vous à l'aide de l'un des link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].
 . Sélectionnez le menu image:workloads-menu-icon.png["L'icône du menu hamburger permet d'accéder aux charges de travail telles que le stockage, l'analyse de données d'entreprise (EDA), l'intelligence artificielle (IA), les bases de données, VMware et l'administration."] puis sélectionnez *Stockage*.
-. Dans le menu Stockage, sélectionnez *FSx pour ONTAP*.
-. Depuis *FSx for ONTAP*, sélectionnez le menu d'actions du système de fichiers avec le volume à mettre à jour, puis sélectionnez *Gérer*.
-. Dans la présentation du système de fichiers, sélectionnez l'onglet *volumes*.
-. Dans l'onglet Volumes, sélectionnez le menu Actions du volume dont vous souhaitez ajuster la capacité.
+. Dans le menu Stockage, sélectionnez *Volumes explorer*.
+. Sélectionnez le menu des actions pour le volume que vous souhaitez modifier.
 . Sélectionnez *Actions de base*, puis *Ajuster la capacité du volume*.
 . Dans la boîte de dialogue Ajuster la capacité du volume, définissez la *capacité provisionnée* et l'unité.
 . Sélectionnez *Ajuster* pour appliquer les modifications.

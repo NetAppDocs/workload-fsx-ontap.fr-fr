@@ -16,10 +16,8 @@ Supprimez les points d'accès S3 existants d'un volume dans NetApp Workload Fact
 .Étapes
 . Connectez-vous à l'aide de l'un des link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].
 . Sélectionnez le menu image:workloads-menu-icon.png["L'icône du menu hamburger permet d'accéder aux charges de travail telles que le stockage, l'analyse de données d'entreprise (EDA), l'intelligence artificielle (IA), les bases de données, VMware et l'administration."] puis sélectionnez *Stockage*.
-. Dans le menu Stockage, sélectionnez *FSx pour ONTAP*.
-. Dans *FSx for ONTAP*, sélectionnez le menu actions du système de fichiers contenant le volume à mettre à jour, puis sélectionnez *Gérer*.
-. Dans la présentation du système de fichiers, sélectionnez l'onglet *volumes*.
-. Dans l'onglet Volumes, sélectionnez le menu actions du volume pour lequel vous souhaitez gérer les points d'accès S3, puis sélectionnez *Advanced actions*, puis *Manage S3 access points*.
+. Dans le menu Stockage, sélectionnez *Volumes explorer*.
+. Sélectionnez le menu actions du volume pour lequel vous souhaitez gérer les points d'accès S3, puis sélectionnez *Actions avancées*, puis *Gérer les points d'accès S3*.
 . Sélectionnez le menu des actions pour le point d'accès S3 à supprimer, puis sélectionnez *Supprimer*.
 . Dans la boîte de dialogue *Supprimer un point d'accès S3*, sélectionnez *Supprimer* pour supprimer le point d'accès S3 du volume.
 +

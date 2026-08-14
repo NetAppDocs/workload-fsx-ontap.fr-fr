@@ -40,10 +40,8 @@ Notez que certaines règles de hiérarchisation ont une période de refroidissem
 .Étapes
 . Connectez-vous à l'aide de l'un des link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].
 . Sélectionnez le menu image:workloads-menu-icon.png["L'icône du menu hamburger permet d'accéder aux charges de travail telles que le stockage, l'analyse de données d'entreprise (EDA), l'intelligence artificielle (IA), les bases de données, VMware et l'administration."] puis sélectionnez *Stockage*.
-. Dans le menu Stockage, sélectionnez *FSx pour ONTAP*.
-. Depuis *FSx for ONTAP*, sélectionnez le menu d'actions du système de fichiers avec le volume à mettre à jour, puis sélectionnez *Gérer*.
-. Dans la présentation du système de fichiers, sélectionnez l'onglet *volumes*.
-. Dans l’onglet Volumes, sélectionnez le menu d’actions du volume pour lequel vous souhaitez modifier la stratégie de hiérarchisation.
+. Dans le menu Stockage, sélectionnez *Volumes explorer*.
+. Sélectionnez le menu Actions du volume pour lequel vous souhaitez modifier la politique de hiérarchisation.
 . Sélectionnez *actions avancées*, puis *Modifier la stratégie de hiérarchisation*.
 . Sur la page Modifier la règle de hiérarchisation, sélectionnez pour copier la règle de hiérarchisation du volume source ou sélectionnez l'une des règles de hiérarchisation suivantes :
 +
