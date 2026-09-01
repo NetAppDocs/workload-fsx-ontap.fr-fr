@@ -4,7 +4,7 @@ permalink: update-throughput-capacity.html
 keywords: update throughput, change throughput, throughput capacity 
 summary: 'Mettez à jour la capacité de débit d"un système de fichiers FSx pour ONTAP dans NetApp Workload Factory selon les besoins.' 
 ---
-= Mettre à jour la capacité de débit d'un système de fichiers
+= Mettre à jour la capacité de débit d'un système de fichiers dans NetApp Workload Factory
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/

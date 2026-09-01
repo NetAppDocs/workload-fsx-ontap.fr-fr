@@ -4,7 +4,7 @@ permalink: update-snapshot-replication.html
 keywords: update snapshot data, replication 
 summary: Mettez à jour manuellement à tout moment les données de snapshot transférées entre les volumes source et cible dans une relation de réplication. 
 ---
-= Mettre à jour les données d'instantané dans une relation de réplication
+= Mettre à jour les données d'instantané de réplication dans NetApp Workload Factory
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/

@@ -4,7 +4,7 @@ permalink: track-replication-delays.html
 keywords: replication, track replication, replication lag, replication delay, delay, monitor replication, replication threshold, lag notification 
 summary: Activez le suivi pour surveiller les délais de toutes les relations de réplication de votre compte. 
 ---
-= Suivi des délais de réplication
+= Suivez les délais de réplication dans NetApp Workload Factory
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/

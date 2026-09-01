@@ -4,7 +4,7 @@ permalink: update-storage-efficiency.html
 keywords: storage efficiency change, update storage efficiency 
 summary: Dans NetApp Workload Factory, vous pouvez mettre à jour le paramètre d’efficacité du stockage après la création du volume. 
 ---
-= Mettre à jour le paramètre d'efficacité du stockage d'un volume
+= Mettez à jour l'efficacité du stockage des volumes dans NetApp Workload Factory
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/

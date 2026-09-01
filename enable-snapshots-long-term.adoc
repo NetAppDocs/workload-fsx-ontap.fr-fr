@@ -4,7 +4,7 @@ permalink: enable-snapshots-long-term.html
 keywords: snapshot long-term retention, enable long-term retention 
 summary: 'Activez les snapshots pour la conservation à long terme, ce qui vous permet de répliquer des snapshots spécifiques pour la reprise d"activité à long terme.' 
 ---
-= Activez et modifiez les snapshots pour une conservation à long terme
+= Activez la conservation à long terme des instantanés dans NetApp Workload Factory
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/

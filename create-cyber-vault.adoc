@@ -4,7 +4,7 @@ permalink: create-cyber-vault.html
 keywords: create cyber vault, volume cyber vault, protect data cyber vault, cyber vault setup 
 summary: Découvrez les coffres-forts numériques NetApp et comment mettre en œuvre une architecture de coffre-fort numérique pour protéger vos données contre les ransomwares et les cybermenaces. 
 ---
-= Protégez vos données avec un coffre-fort numérique.
+= Protégez vos données FSx for ONTAP avec un coffre-fort numérique
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/

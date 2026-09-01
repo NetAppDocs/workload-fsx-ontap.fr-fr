@@ -4,7 +4,7 @@ permalink: change-replication-schedule.html
 keywords: change replication schedule, update replication schedule, edit replication schedule 
 summary: Modifiez la planification de réplication du volume source dans une relation de réplication dans NetApp Workload Factory. 
 ---
-= Modifier la planification de réplication d'un volume source
+= Modifiez la planification de réplication d'un volume dans NetApp Workload Factory
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/

@@ -4,7 +4,7 @@ permalink: create-snapshot-policy.html
 keywords: create 
 summary: Créez une stratégie de snapshot personnalisée pour une machine virtuelle de stockage dans Workload Factory. 
 ---
-= Créer une politique de snapshot pour les machines virtuelles de stockage dans Workload Factory
+= Créez une stratégie de snapshot pour les machines virtuelles de stockage dans NetApp Workload Factory
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
