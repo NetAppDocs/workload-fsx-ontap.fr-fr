@@ -25,7 +25,7 @@ Consultez le schéma du stockage bloc pour vérifier les points suivants :
 
 
 .Avant de commencer
-* Vous devez associer un lien pour gérer les igroups. link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["Apprenez à associer un lien existant ou à créer et associer un nouveau lien"]. Une fois le lien associé, revenez à cette opération.
+* Vous devez associer un lien pour gérer les igroups. link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html["Apprenez à associer un lien existant ou à créer et associer un nouveau lien"^]. Une fois le lien associé, revenez à cette opération.
 * Vous devez disposer d'un igroup ou d'un périphérique bloc existant pour les afficher et les gérer.
 
 

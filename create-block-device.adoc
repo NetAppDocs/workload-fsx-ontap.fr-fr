@@ -19,7 +19,7 @@ Seuls les volumes FlexVol sont pris en charge pour les périphériques de stocka
 La taille du bloc doit être inférieure à la taille du FlexVol volume disponible.
 
 .Avant de commencer
-* Vous devez associer un lien pour créer des périphériques de blocage. link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["Apprenez à associer un lien existant ou à créer et associer un nouveau lien"]. Une fois le lien établi, revenez à cette opération.
+* Vous devez associer un lien pour créer des périphériques de blocs. link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html["Apprenez à associer un lien existant ou à créer et associer un nouveau lien"^]. Une fois le lien associé, revenez à cette opération.
 
 
 .Étapes
@@ -69,7 +69,7 @@ ONTAP atteint une efficacité de stockage grâce aux fonctionnalités de dédupl
 
 .. *Politique d'instantanés* : sélectionnez la stratégie d'instantanés pour spécifier la fréquence et la rétention des instantanés.
 +
-Voici les politiques par défaut d'AWS. Pour afficher les stratégies d'instantané existantes, vous devez link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["associer un lien"].
+Voici les politiques par défaut d'AWS. Pour afficher les politiques d'instantané existantes, vous devez link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html["associer un lien"^].
 
 +
 `default`:: Cette règle crée automatiquement des snapshots selon le planning suivant, avec les plus anciennes copies supprimées pour faire de la place pour les nouvelles copies :
@@ -98,7 +98,7 @@ _Équilibré (Auto)_ est la politique de hiérarchisation par défaut lors de la
 Si la fonctionnalité n'est pas disponible, c'est pour l'une des raisons suivantes :
 
 +
-*** Un lien n'est pas associé au système de fichiers. link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["Apprenez à associer un lien existant ou à créer et associer un nouveau lien"]. Une fois le lien associé, revenez à cette opération.
+*** Aucun lien n'est associé au système de fichiers. link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html["Apprenez à associer un lien existant ou à créer et associer un nouveau lien"^]. Une fois le lien associé, revenez à cette opération.
 *** Les volumes contenant des fichiers immuables et les volumes utilisant le protocole NVMe ne sont pas pris en charge pour ARP/AI.
 *** Le système de fichiers dispose déjà d’une politique ARP/AI.
 

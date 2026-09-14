@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: manage-snapshot-policy.html 
-keywords: manage snapshot policy, change snapshot policy, snapshot policies, snapshot schedule, update 
+keywords: manage snapshot policy, change snapshot policy, assign snapshot policy, remove snapshot policy, snapshot policies, snapshot schedule, update, snapshot long-term retention, enable long-term retention 
 summary: Gérez les stratégies de snapshot pour les volumes FSx for ONTAP dans Workload Factory.  Une politique de snapshot définit la manière dont le système crée des snapshots pour un volume. 
 ---
 = Gérer les stratégies de snapshot pour les volumes dans NetApp Workload Factory
@@ -13,12 +13,38 @@ summary: Gérez les stratégies de snapshot pour les volumes FSx for ONTAP dans 
 [role="lead"]
 Gérez les stratégies de snapshot pour les volumes FSx for ONTAP dans Workload Factory.  Une politique de snapshot définit la manière dont le système crée des snapshots pour un volume.
 
-.Description de la tâche
 Les opérations de gestion des snapshots, telles que l'attribution, la modification et la suppression de règles de snapshots pour les volumes d'un système de fichiers FSX pour ONTAP, sont gérées au niveau des machines virtuelles de stockage. Les règles Snapshot peuvent être partagées avec une seule VM de stockage ou avec toutes les VM de stockage.
 
-Certaines tâches de gestion nécessitent d’associer un lien au système de fichiers FSx for ONTAP . link:https://docs.netapp.com/us-en/workload-fsx-ontap/links-overview.html["En savoir plus sur les liens Workload Factory"] .
+Certaines tâches de gestion nécessitent que vous associiez un lien avec le système de fichiers FSx for ONTAP. link:https://docs.netapp.com/us-en/workload-setup-admin/links-overview.html["En savoir plus sur les liens Workload Factory"^].
 
 Par défaut, chaque volume est associé à la règle de snapshot du système de fichiers `default` . Il est recommandé d'utiliser cette règle pour la plupart des workloads.
+
+
+
+[[assign-a-snapshot-policy-to-a-volume]]
+== Affecter une politique de snapshots à un volume
+
+Vous pouvez affecter une politique de snapshots à un seul volume pour créer des snapshots planifiés pour ce volume.
+
+.Avant de commencer
+Vous devez associer un lien pour attribuer une stratégie d'instantané. link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html["Apprenez à associer un lien existant ou à créer et associer un nouveau lien"^]. Une fois le lien associé, revenez à cette opération.
+
+.Étapes
+. Connectez-vous à l'aide de l'un des link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].
+. Sélectionnez le menu image:workloads-menu-icon.png["L'icône du menu hamburger permet d'accéder aux charges de travail telles que le stockage, l'analyse de données d'entreprise (EDA), l'intelligence artificielle (IA), les bases de données, VMware et l'administration."] puis sélectionnez *Stockage*.
+. Dans l'onglet *FSx pour ONTAP*, sélectionnez le menu d'actions du système de fichiers contenant le volume auquel attribuer une stratégie de snapshot, puis sélectionnez *Gérer*.
+. Dans la présentation du système de fichiers, sélectionnez l'onglet *Storage VMS*.
+. Dans l'onglet *VM de stockage*, sélectionnez le menu d'actions pour la machine virtuelle de stockage contenant le volume à protéger avec des snapshots planifiés, puis *Actions avancées*, puis *Gérer les stratégies de snapshot*.
+. Sur la page de gestion des stratégies d'instantanés, sélectionnez le menu d'actions de la stratégie d'instantanés, puis sélectionnez *Attribuer une stratégie au volume*.
+. Dans la boîte de dialogue attribuer une stratégie de snapshot, sélectionnez une stratégie de snapshot à affecter au volume et vérifiez la planification de la règle.
++
+Si la règle contient des snapshots immuables et que vous souhaitez l'utiliser, acceptez l'instruction.
+
+. Sélectionnez *affecter*.
+
+
+.Résultat
+La politique de snapshots est attribuée au volume.
 
 
 
@@ -28,7 +54,7 @@ Par défaut, chaque volume est associé à la règle de snapshot du système de 
 Vous pouvez modifier le nom de la stratégie de snapshots, la planification et le nombre de copies à conserver, et activer ou désactiver les snapshots immuables. Il n'est pas possible d'activer ou de désactiver le partage de règles entre les machines virtuelles de stockage. Cette option n'est disponible que lors de la création de la règle de snapshots.
 
 .Avant de commencer
-Pour afficher les stratégies d’instantané existantes, vous devez associer un lien. link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["Apprenez à associer un lien existant ou à créer et associer un nouveau lien"]. Une fois le lien associé, revenez à cette opération.
+Pour afficher les stratégies d'instantané existantes, vous devez associer un lien. link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html["Apprenez à associer un lien existant ou à créer et associer un nouveau lien"^]. Une fois le lien associé, revenez à cette opération.
 
 .Étapes
 . Connectez-vous à l'aide de l'un des link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].
@@ -52,7 +78,7 @@ La politique Snapshot est mise à jour.
 Verrouiller les snapshots pour les empêcher d'être supprimés pendant la période de conservation.
 
 .Avant de commencer
-Vous devez associer un lien pour activer les instantanés immuables. link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["Apprenez à associer un lien existant ou à créer et associer un nouveau lien"]. Une fois le lien associé, revenez à cette opération.
+Vous devez associer un lien pour activer les instantanés immuables. link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html["Apprenez à associer un lien existant ou à créer et associer un nouveau lien"^]. Une fois le lien associé, revenez à cette opération.
 
 .Étapes
 . Connectez-vous à l'aide de l'un des link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].
@@ -76,30 +102,44 @@ L'instantané du volume est maintenant verrouillé.
 
 
 
-[[assign-a-snapshot-policy-to-a-volume]]
-== Affecter une politique de snapshots à un volume
+[[enable-long-term-snapshot-retention-in-netapp-workload-factory]]
+== Activez la conservation à long terme des instantanés dans NetApp Workload Factory
 
-Vous pouvez affecter une politique de snapshots à un seul volume pour créer des snapshots planifiés pour ce volume.
+Dans NetApp Workload Factory, vous pouvez activer les snapshots pour la conservation à long terme, ce qui vous permet de répliquer des snapshots spécifiques pour la reprise après sinistre à long terme.
 
-.Avant de commencer
-Vous devez associer un lien pour attribuer une politique de snapshot. link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["Apprenez à associer un lien existant ou à créer et associer un nouveau lien"]. Une fois le lien associé, revenez à cette opération.
+La conservation à long terme permet aux services de l'entreprise de continuer à fonctionner même en cas de défaillance de l'ensemble du site, avec prise en charge du basculement transparent des applications via une copie secondaire.
+
+Les mêmes étapes s'appliquent à l'activation et à la modification de snapshots pour une conservation à long terme.
+
+Lorsqu'un cluster ONTAP sur site est la cible de la relation de réplication, la modification des snapshots pour une conservation à long terme n'est pas prise en charge.
+
+
+NOTE: La modification de la conservation à long terme n'est pas disponible lors de la réplication des données et des paramètres de configuration des storage VM.
 
 .Étapes
 . Connectez-vous à l'aide de l'un des link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].
 . Sélectionnez le menu image:workloads-menu-icon.png["L'icône du menu hamburger permet d'accéder aux charges de travail telles que le stockage, l'analyse de données d'entreprise (EDA), l'intelligence artificielle (IA), les bases de données, VMware et l'administration."] puis sélectionnez *Stockage*.
-. Dans l'onglet *FSx pour ONTAP*, sélectionnez le menu d'actions du système de fichiers contenant le volume auquel attribuer une stratégie de snapshot, puis sélectionnez *Gérer*.
-. Dans la présentation du système de fichiers, sélectionnez l'onglet *Storage VMS*.
-. Dans l'onglet *VM de stockage*, sélectionnez le menu d'actions pour la machine virtuelle de stockage contenant le volume à protéger avec des snapshots planifiés, puis *Actions avancées*, puis *Gérer les stratégies de snapshot*.
-. Sur la page de gestion des stratégies d'instantanés, sélectionnez le menu d'actions de la stratégie d'instantanés, puis sélectionnez *Attribuer une stratégie au volume*.
-. Dans la boîte de dialogue attribuer une stratégie de snapshot, sélectionnez une stratégie de snapshot à affecter au volume et vérifiez la planification de la règle.
+. Dans le menu Stockage, sélectionnez *FSx pour ONTAP*.
+. Depuis *FSx for ONTAP*, sélectionnez le menu d'actions du système de fichiers à mettre à jour, puis sélectionnez *Gérer*.
+. Dans la présentation du système de fichiers, sélectionnez l'onglet *relations de réplication*.
+. Dans l’onglet Relations de réplication, sélectionnez le menu d’actions de la planification de relation de réplication à modifier.
+. Sélectionnez *Modifier la rétention à long terme*.
+. Dans la boîte de dialogue Modifier la rétention à long terme, activez ou désactivez les instantanés pour la conservation à long terme.
+. Si vous choisissez de désactiver les instantanés pour la conservation à long terme, sélectionnez *appliquer* pour terminer cette opération.
+. Si vous choisissez d'activer les snapshots pour la conservation à long terme, choisissez entre sélectionner une règle existante ou créer une nouvelle règle.
 +
-Si la règle contient des snapshots immuables et que vous souhaitez l'utiliser, acceptez l'instruction.
+.. Pour utiliser une stratégie existante, sélectionnez-la dans le menu déroulant.
+.. Pour créer une nouvelle règle, procédez comme suit :
++
+... *Nom de la stratégie* : entrez un nom de stratégie.
+... *Stratégies Snapshot* : sélectionnez une ou plusieurs stratégies de snapshot.
+... *Copies à conserver* : entrez le nombre de copies snapshot à conserver sur le système de fichiers cible.
 
-. Sélectionnez *affecter*.
 
 
-.Résultat
-La politique de snapshots est attribuée au volume.
+
+. Sélectionnez *appliquer*.
+
 
 
 
@@ -109,7 +149,7 @@ La politique de snapshots est attribuée au volume.
 Supprimez une règle de snapshot d'un volume car vous ne souhaitez plus de snapshots du volume ou parce que vous souhaitez supprimer une règle de snapshot attribuée à plusieurs volumes. À <<Supprimer une règle de snapshot,supprimer une règle de snapshot>> qui est attribué plusieurs volumes, vous devez le supprimer manuellement de tous les volumes.
 
 .Avant de commencer
-Vous devez associer un lien pour supprimer une politique de snapshot. link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["Apprenez à associer un lien existant ou à créer et associer un nouveau lien"]. Une fois le lien associé, revenez à cette opération.
+Vous devez associer un lien pour supprimer une stratégie d'instantané. link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html["Apprenez à associer un lien existant ou à créer et associer un nouveau lien"^]. Une fois le lien associé, revenez à cette opération.
 
 .Étapes
 . Connectez-vous à l'aide de l'un des link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].

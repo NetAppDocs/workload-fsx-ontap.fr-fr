@@ -12,4 +12,4 @@
 * Prise en charge de la création manuelle de liens : cette fonctionnalité permet la création autonome dans AWS CloudFormation avec enregistrement manuel du lien ARN. Cette fonctionnalité est utile lorsqu'une équipe de sécurité ou DevOps participe au processus de création de liens.
 
 
-link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["Créer un lien"]
+link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html["Créer un lien"^]

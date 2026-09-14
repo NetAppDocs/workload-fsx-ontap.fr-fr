@@ -41,7 +41,7 @@ Workload Factory identifie les hôtes qui consomment du stockage et les types de
 
 Nous affichons tous les points de terminaison du système de fichiers et des machines virtuelles de stockage directement dans l'onglet Vue d'ensemble d'un système de fichiers. La visibilité directe des points de terminaison dans la console Workload Factory facilite la surveillance de l'accès réseau, des points de terminaison et de l'état de basculement sans utiliser l'interface de ligne de commande ou CloudShell. Pour afficher les détails des LIF, notamment les rôles, les points de terminaison, les nœuds, les adresses IP et l'état, vous devez associer un lien au système de fichiers.
 
-link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["Découvrez comment associer un lien à votre système de fichiers dans NetApp Workload Factory"].
+link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html["Découvrez comment associer un lien à votre système de fichiers dans NetApp Workload Factory"^].
 
 
 

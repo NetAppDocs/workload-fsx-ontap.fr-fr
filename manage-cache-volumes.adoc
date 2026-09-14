@@ -17,7 +17,7 @@ Utilisez la console NetApp Workload Factory pour gérer les volumes de cache des
 Vous pouvez gérer les volumes de cache associés aux relations de cache dans la console NetApp Workload Factory .
 
 .Avant de commencer
-* Vous devez associer un lien pour gérer les volumes de cache et leurs relations. link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["Apprenez à associer un lien existant ou à créer et associer un nouveau lien"]. Une fois le lien établi, revenez à cette opération.
+* Vous devez associer un lien pour gérer les volumes de cache et leurs relations. link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html["Apprenez à associer un lien existant ou à créer et associer un nouveau lien"^]. Après avoir associé le lien, revenez à cette opération.
 * Vous devez disposer d'un volume de cache existant pour le modifier.
 
 

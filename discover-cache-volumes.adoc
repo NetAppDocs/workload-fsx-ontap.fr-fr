@@ -23,7 +23,7 @@ Une relation de cache peut exister entre des volumes sur deux systèmes ONTAP te
 .Avant de commencer
 Tenez compte des éléments suivants avant de commencer.
 
-* Vous devez associer un lien pour découvrir les relations de cache sur un système de fichiers. link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["Apprenez à associer un lien existant ou à créer et associer un nouveau lien"] . Une fois le lien associé, revenez à cette opération.
+* Vous devez associer un lien pour découvrir les relations de cache sur un système de fichiers. link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html["Apprenez à associer un lien existant ou à créer et associer un nouveau lien"^]. Une fois le lien associé, revenez à cette opération.
 * Vous devez avoir une relation de cache existante.
 
 

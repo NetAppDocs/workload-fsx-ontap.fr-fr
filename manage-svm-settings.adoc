@@ -1,0 +1,102 @@
+---
+sidebar: sidebar 
+permalink: manage-svm-settings.html 
+keywords: edit storage vm settings, vm tags, svm tags, storage vm settings, storage vm password, svm password 
+summary: Ajoutez, mettez à jour ou supprimez à tout moment les balises de VM de stockage pour une VM de stockage. 
+---
+= Gérez les paramètres de la machine virtuelle de stockage dans NetApp Workload Factory
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Gérez les paramètres d'une machine virtuelle de stockage dans NetApp Workload Factory. Vous configurez et mettez à jour Active Directory pour une machine virtuelle de stockage, pouvez mettre à jour le mot de passe de la machine virtuelle de stockage et gérer les étiquettes de la machine virtuelle de stockage.
+
+
+
+[[configure-and-update-ad-for-a-storage-vm-in-netapp-workload-factory]]
+== Configurez et mettez à jour Active Directory pour une machine virtuelle de stockage dans NetApp Workload Factory
+
+Configurez et mettez à jour Active Directory pour une machine virtuelle de stockage dans un système de fichiers FSx for ONTAP dans NetApp Workload Factory.
+
+Les mêmes étapes s'appliquent à la configuration et à la mise à jour d'Active Directory pour une machine virtuelle de stockage.
+
+.Étapes
+. Connectez-vous à l'aide de l'un des link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].
+. Sélectionnez le menu image:workloads-menu-icon.png["L'icône du menu hamburger permet d'accéder aux charges de travail telles que le stockage, l'analyse de données d'entreprise (EDA), l'intelligence artificielle (IA), les bases de données, VMware et l'administration."] puis sélectionnez *Stockage*.
+. Dans le menu Stockage, sélectionnez *FSx pour ONTAP*.
+. Depuis *FSx for ONTAP*, sélectionnez le menu d'actions du système de fichiers avec la machine virtuelle de stockage à mettre à jour, puis sélectionnez *Gérer*.
+. Dans la vue d'ensemble du système de fichiers sous Machines virtuelles de stockage, sélectionnez *Gérer*.
+. À partir de l'écran Gérer les machines virtuelles de stockage, sélectionnez le menu actions de la machine virtuelle de stockage pour laquelle vous souhaitez configurer Active Directory, puis sélectionnez *Actions de base* > *Gérer la configuration AD*.
+. Sur la page gérer la configuration AD, fournissez les informations suivantes :
++
+.. *Domaine Active Directory à rejoindre* : entrez le nom de domaine complet (FQDN) de votre Active Directory.
+.. *Adresses IP DNS* : saisissez jusqu'à trois adresses IP séparées par des virgules.
+.. *Nom NetBIOS du serveur SMB* : entrez le nom NetBIOS du serveur SMB de l'objet ordinateur Active Directory à créer pour votre machine virtuelle de stockage. Ceci est le nom de ce SVM dans Active Directory.
+.. *Nom d'utilisateur* : saisissez le nom d'utilisateur du compte de service dans votre Active Directory existant.
++
+N'incluez pas de préfixe ou de suffixe de domaine. Pour `EXAMPLE\ADMIN`, utilisez `ADMIN`.
+
+.. *Mot de passe* : saisissez le mot de passe du compte de service.
+.. *Unité d'organisation (ou)* : entrez l'unité d'organisation.
++
+L'UO est le nom de chemin distinctif de l'unité organisationnelle à laquelle vous souhaitez joindre votre système de fichiers.
+
+.. *Groupe d'administrateurs délégués* : si vous le souhaitez, entrez le groupe d'administrateurs de systèmes de fichiers délégués.
++
+Le groupe administrateurs délégués est le nom du groupe dans votre Active Directory qui peut administrer votre système de fichiers.
+
++
+Si vous utilisez AWS Managed Microsoft AD, vous devez spécifier un groupe, par exemple les administrateurs FSX délégués d'AWS, les administrateurs délégués d'AWS ou un groupe personnalisé avec des autorisations déléguées à l'UO.
+
++
+Si vous vous connectez à un AD autogéré, utilisez le nom du groupe dans votre AD. Le groupe par défaut est `Domain Admins`.
+
+
+
+. Sélectionnez *appliquer*.
+
+
+
+
+[[manage-storage-vm-tags]]
+== Gestion des balises des VM de stockage
+
+Les balises peuvent vous aider à catégoriser vos ressources.  Vous pouvez ajouter, modifier et supprimer des balises pour une machine virtuelle de stockage à tout moment dans NetApp Workload Factory.
+
+.Étapes
+. Connectez-vous à l'aide de l'un des link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].
+. Sélectionnez le menu image:workloads-menu-icon.png["L'icône du menu hamburger permet d'accéder aux charges de travail telles que le stockage, l'analyse de données d'entreprise (EDA), l'intelligence artificielle (IA), les bases de données, VMware et l'administration."] puis sélectionnez *Stockage*.
+. Dans le menu Stockage, sélectionnez *FSx pour ONTAP*.
+. Depuis *FSx for ONTAP*, sélectionnez le menu d'actions du système de fichiers avec la machine virtuelle de stockage à mettre à jour, puis sélectionnez *Gérer*.
+. Dans la vue d'ensemble du système de fichiers sous Machines virtuelles de stockage, sélectionnez *Gérer*.
+. Depuis l'écran Gérer les machines virtuelles de stockage, sélectionnez le menu Actions de la machine virtuelle de stockage pour laquelle vous souhaitez modifier les balises, puis sélectionnez *Actions de base* > *Modifier les balises de la machine virtuelle de stockage*.
+. Sur la page Modifier les balises de VM de stockage, ajoutez, modifiez ou supprimez des balises.
++
+Le nombre maximum de balises pouvant être appliquées à une VM de stockage est de 50.
+
+. Sélectionnez *appliquer*.
+
+
+
+
+[[reset-the-storage-vm-password-in-netapp-workload-factory]]
+== Réinitialiser le mot de passe de la machine virtuelle de stockage dans NetApp Workload Factory
+
+Réinitialisez le mot de passe d'une machine virtuelle de stockage dans NetApp Workload Factory si nécessaire.
+
+.Étapes
+. Connectez-vous à l'aide de l'un des link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].
+. Sélectionnez le menu image:workloads-menu-icon.png["L'icône du menu hamburger permet d'accéder aux charges de travail telles que le stockage, l'analyse de données d'entreprise (EDA), l'intelligence artificielle (IA), les bases de données, VMware et l'administration."] puis sélectionnez *Stockage*.
+. Dans le menu Stockage, sélectionnez *FSx pour ONTAP*.
+. Dans *FSx for ONTAP*, sélectionnez le menu actions du système de fichiers contenant le mot de passe de la machine virtuelle de stockage à réinitialiser, puis sélectionnez *Gérer*.
+. Dans la vue d'ensemble du système de fichiers sous Machines virtuelles de stockage, sélectionnez *Gérer*.
+. Depuis l'écran Gérer les machines virtuelles de stockage, sélectionnez le menu Actions de la machine virtuelle de stockage dont vous souhaitez réinitialiser le mot de passe, puis sélectionnez *Actions de base* > *Réinitialiser le mot de passe*.
+. Dans la boîte de dialogue Réinitialiser le mot de passe, entrez les informations suivantes :
++
+.. *Nouveau mot de passe* : saisissez un nouveau mot de passe pour la machine virtuelle de stockage.
+.. *Confirmer le mot de passe* : saisissez à nouveau le nouveau mot de passe pour confirmer.
+
+
+

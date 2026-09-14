@@ -16,7 +16,7 @@ La gestion du partage SMB/CIFS d'un volume dans Workload Factory inclut la créa
 .Avant de commencer
 Avant de commencer, procédez comme suit :
 
-* Pour gérer les partages SMB/CIFS, vous devez associer un lien. link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["Apprenez à associer un lien existant ou à créer et associer un nouveau lien"] .  Une fois le lien associé, revenez à cette opération.
+* Pour gérer les partages SMB/CIFS, vous devez associer un lien. link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html["Apprenez à associer un lien existant ou à créer et associer un nouveau lien"^]. Une fois le lien associé, revenez à cette opération.
 * Déterminez les utilisateurs ou les groupes auxquels accorder l'accès et le niveau d'autorisation à leur accorder.
 
 

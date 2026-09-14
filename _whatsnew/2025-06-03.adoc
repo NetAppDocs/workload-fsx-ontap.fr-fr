@@ -9,7 +9,7 @@
 
 Vous pouvez désormais définir la taille de croissance automatique de vos volumes afin que la taille du volume puisse croître au-delà de la taille provisionnée pour les besoins de l'entreprise et les exigences des applications.
 
-link:https://docs.netapp.com/us-en/workload-fsx-ontap/edit-volume-autogrow.html["Activer la croissance automatique de volumes"]
+link:https://docs.netapp.com/us-en/workload-fsx-ontap/manage-volume-capacity.html["Activer la croissance automatique de volumes"]
 
 
 

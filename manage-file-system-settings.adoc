@@ -1,0 +1,75 @@
+---
+sidebar: sidebar 
+permalink: manage-file-system-settings.html 
+keywords: create fsx tags, create tags, edit fsx tags, fsx tags, reset fsx admin password 
+summary: 'Ajoutez, mettez à jour ou supprimez à tout moment les balises de système de fichiers FSx pour ONTAP d"un système de fichiers.' 
+---
+= Gérez les paramètres du système de fichiers FSx for ONTAP dans NetApp Workload Factory
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Gérez les paramètres d'un système de fichiers FSx for ONTAP dans NetApp Workload Factory. Vous pouvez gérer les balises du système de fichiers, réinitialiser le mot de passe fsxadmin si nécessaire et mettre à jour la capacité de débit selon les besoins.
+
+
+
+[[manage-fsx-for-ontap-file-system-tags]]
+== Gérez les balises du système de fichiers FSx for NetApp ONTAP
+
+Les étiquettes peuvent vous aider à catégoriser vos ressources.  Vous pouvez ajouter, modifier et supprimer des balises pour un système de fichiers à tout moment dans NetApp Workload Factory.
+
+.Étapes
+. Connectez-vous à l'aide de l'un des link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].
+. Sélectionnez le menu image:workloads-menu-icon.png["L'icône du menu hamburger permet d'accéder aux charges de travail telles que le stockage, l'analyse de données d'entreprise (EDA), l'intelligence artificielle (IA), les bases de données, VMware et l'administration."] puis sélectionnez *Stockage*.
+. Dans le menu Stockage, sélectionnez *FSx pour ONTAP*.
+. Dans *FSx for ONTAP*, sélectionnez le menu des actions du système de fichiers à mettre à jour, puis sélectionnez *Gérer les balises du système de fichiers*.
+. Dans la boîte de dialogue *Gérer les balises du système de fichiers*, ajoutez, modifiez ou supprimez des balises selon vos besoins.
++
+Le nombre maximal d'étiquettes que vous pouvez appliquer à un système de fichiers est de 50.
+
+. Sélectionnez *appliquer*.
+
+
+
+
+[[reset-the-fsxadmin-password-of-an-fsx-for-ontap-file-system]]
+== Réinitialiser le mot de passe fsxadmin d'un système de fichiers FSx for ONTAP
+
+Réinitialisez le mot de passe fsxadmin dans NetApp Workload Factory si nécessaire.
+
+Si vous avez indiqué un autre utilisateur lors de la création du système de fichiers, vous ne pouvez réinitialiser le mot de passe fsxadmin que dans la console AWS.
+
+.Étapes
+. Connectez-vous à l'aide de l'un des link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].
+. Sélectionnez le menu image:workloads-menu-icon.png["L'icône du menu hamburger permet d'accéder aux charges de travail telles que le stockage, l'analyse de données d'entreprise (EDA), l'intelligence artificielle (IA), les bases de données, VMware et l'administration."] puis sélectionnez *Stockage*.
+. Dans le menu Stockage, sélectionnez *FSx pour ONTAP*.
+. Depuis *FSx for ONTAP*, sélectionnez le menu d'actions du système de fichiers pour réinitialiser le mot de passe fsxadmin, puis sélectionnez *Gérer*.
+. Dans la vue d’ensemble du système de fichiers, sélectionnez le menu actions.
++
+image:screenshot-reset-fsxadmin-password.png["Une capture d’écran du menu d’actions dans l’onglet Aperçu d’un système de fichiers."]
+
+. Sélectionnez *Réinitialiser le mot de passe fsxadmin*.
+. Dans la boîte de dialogue Réinitialiser le mot de passe fsxadmin, entrez un nouveau mot de passe fsxadmin et entrez-le à nouveau pour confirmer.
+. Sélectionnez *appliquer*.
+
+
+
+
+[[update-throughput-capacity-for-an-fsx-for-ontap-file-system]]
+== Mettez à jour la capacité de débit d'un système de fichiers FSx for ONTAP
+
+Mettez à jour la capacité de débit d'un système de fichiers FSx pour ONTAP dans NetApp Workload Factory selon les besoins.
+
+Pour connaître les limites de capacité de débit, reportez-vous à link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/limits.html["Quotas"^] dans la documentation AWS FSX pour NetApp ONTAP.
+
+.Étapes
+. Connectez-vous à l'aide de l'un des link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].
+. Sélectionnez le menu image:workloads-menu-icon.png["L'icône du menu hamburger permet d'accéder aux charges de travail telles que le stockage, l'analyse de données d'entreprise (EDA), l'intelligence artificielle (IA), les bases de données, VMware et l'administration."] puis sélectionnez *Stockage*.
+. Dans le menu Stockage, sélectionnez *FSx pour ONTAP*.
+. Depuis *FSx for ONTAP*, sélectionnez le menu d'actions du système de fichiers pour mettre à jour la capacité de débit, puis sélectionnez *Gérer*.
+. Sous informations, sélectionnez l'icône en forme de crayon en regard de *capacité de débit*. L'icône en forme de crayon apparaît à côté de la flèche de la liste déroulante lorsque la souris survole la ligne *capacité de débit*.
+. Dans la boîte de dialogue capacité de débit, sélectionnez la capacité de débit dont vous avez besoin.
+. Sélectionnez *Appliquer* pour enregistrer les modifications
+

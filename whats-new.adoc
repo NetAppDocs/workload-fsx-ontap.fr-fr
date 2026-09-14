@@ -25,7 +25,7 @@ Découvrez les nouveautés d'Amazon FSX pour NetApp ONTAP.
 
 Vous pouvez désormais créer des liens directement depuis la page Liens du menu Administration, en plus de la page d'inventaire FSx for ONTAP et de la page de présentation du système de fichiers.
 
-link:create-link.html["En savoir plus sur la création de liens"].
+link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html["En savoir plus sur la création de liens"^].
 
 
 
@@ -209,7 +209,7 @@ Workload Factory identifie les hôtes qui consomment du stockage et les types de
 
 Nous affichons tous les points de terminaison du système de fichiers et des machines virtuelles de stockage directement dans l'onglet Vue d'ensemble d'un système de fichiers. La visibilité directe des points de terminaison dans la console Workload Factory facilite la surveillance de l'accès réseau, des points de terminaison et de l'état de basculement sans utiliser l'interface de ligne de commande ou CloudShell. Pour afficher les détails des LIF, notamment les rôles, les points de terminaison, les nœuds, les adresses IP et l'état, vous devez associer un lien au système de fichiers.
 
-link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["Découvrez comment associer un lien à votre système de fichiers dans NetApp Workload Factory"].
+link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html["Découvrez comment associer un lien à votre système de fichiers dans NetApp Workload Factory"^].
 
 
 
@@ -943,7 +943,7 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/improve-configurations.htm
 
 Vous pouvez désormais utiliser Terraform depuis Codebox pour créer un lien d'association avec un système de fichiers FSx pour ONTAP .  Cette fonctionnalité est destinée aux utilisateurs qui créent des liens manuellement.
 
-link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["Connectez-vous à un système de fichiers FSX pour ONTAP via un lien Lambda"]
+link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html["Connectez-vous à un système de fichiers FSX pour ONTAP via un lien Lambda"^]
 
 
 
@@ -1047,7 +1047,7 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-replication.html["A
 
 Vous pouvez désormais gérer le rôle d’exécution IAM et sa politique d’autorisation associée lorsque vous créez un lien dans la console Workload Factory.  Un lien établit la connectivité entre votre compte Workload Factory et un ou plusieurs systèmes de fichiers FSx for ONTAP .  Vous disposez de deux options pour attribuer le rôle d'exécution IAM et les autorisations de lien : automatiquement ou fournies par l'utilisateur.  La gestion du rôle d'exécution et de la politique d'autorisations qui lui est associée dans Workload Factory signifie que vous n'avez plus besoin d'utiliser de code tiers.
 
-link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["Connectez-vous à un système de fichiers FSX pour ONTAP via un lien Lambda"]
+link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html["Connectez-vous à un système de fichiers FSX pour ONTAP via un lien Lambda"^]
 
 
 
@@ -1086,7 +1086,7 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/improve-configurations.htm
 
 Vous pouvez désormais définir la taille de croissance automatique de vos volumes afin que la taille du volume puisse croître au-delà de la taille provisionnée pour les besoins de l'entreprise et les exigences des applications.
 
-link:https://docs.netapp.com/us-en/workload-fsx-ontap/edit-volume-autogrow.html["Activer la croissance automatique de volumes"]
+link:https://docs.netapp.com/us-en/workload-fsx-ontap/manage-volume-capacity.html["Activer la croissance automatique de volumes"]
 
 
 
@@ -1548,7 +1548,7 @@ L'inventaire de stockage a été mis à jour avec une vue à deux onglets :
 * Prise en charge de la création manuelle de liens : cette fonctionnalité permet la création autonome dans AWS CloudFormation avec enregistrement manuel du lien ARN. Cette fonctionnalité est utile lorsqu'une équipe de sécurité ou DevOps participe au processus de création de liens.
 
 
-link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["Créer un lien"]
+link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html["Créer un lien"^]
 
 
 
