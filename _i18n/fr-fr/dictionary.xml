@@ -1634,7 +1634,6 @@
   <block id="65c95ed5c9f895be6dfa81e8583c86af" category="list-text">*CloudShell CLI* : Workload Factory inclut une CLI CloudShell pour gérer et exploiter les environnements AWS et NetApp sur plusieurs comptes à partir d'une seule CLI basée sur un navigateur. Accédez à CloudShell depuis la barre supérieure de la console Workload Factory.</block>
   <block id="34904d30d825a389b588efb76a1ceb16" category="list-text">*API REST* : utilisez les API REST de Workload Factory pour déployer et gérer vos systèmes de fichiers FSx for ONTAP et d'autres ressources AWS.</block>
   <block id="3995165ba76339d9d4d08edf5a17c07c" category="list-text">*CloudFormation* : utilisez le code AWS CloudFormation pour effectuer les actions que vous avez définies dans la console Workload Factory afin de modéliser, provisionner et gérer les ressources AWS et tierces de la pile CloudFormation dans votre compte AWS.</block>
-  <block id="a1b1209dad1b58c4e66fd68ee5bc0148" category="list-text">*Fournisseur Terraform NetApp Workload Factory* : utilisez Terraform pour créer et gérer les workflows d'infrastructure générés dans la console Workload Factory.</block>
   <block id="f779a02b6ead6147136f74bc7ce29eaa" category="paragraph">AWS gère votre compte FSx pour ONTAP , pas Workload Factory. <block ref="d466c04e3dc9277f23f307f5afe7df62" category="inline-link-macro-rx"></block> .</block>
   <block id="b49c47706d393689e68481f76e8388d7" category="paragraph">Pour des questions générales sur Workload Factory ou les applications et services Workload Factory, reportez-vous à<block ref="212087c74fdb398dac1262c0d5f1734c" category="inline-link-macro-rx"></block> .</block>
   <block id="3a84cef0233ac32a841f51da8d052f65" category="doc">Mentions légales pour NetApp Workload Factory</block>
@@ -3107,4 +3106,5 @@
   <block id="f54caf9bcfff2cb7aa30ba073518e7db" category="list-text"><block ref="f54caf9bcfff2cb7aa30ba073518e7db" category="inline-link-macro-rx"></block></block>
   <block id="fa1a08e2a749c9f330c9a8e60cac9cc3" category="inline-link-macro">Gérer les liens</block>
   <block id="364f26fd39f55f2137b4749b01da3565" category="list-text"><block ref="364f26fd39f55f2137b4749b01da3565" category="inline-link-macro-rx"></block></block>
+  <block id="06e2f75907573850abfa673fd6e8572a" category="list-text">*NetApp Terraform provider* : Utilisez Terraform pour créer et gérer les flux de travail d’infrastructure générés dans la console Workload Factory.</block>
 </blocks>
