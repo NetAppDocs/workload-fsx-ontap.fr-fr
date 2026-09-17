@@ -20,6 +20,8 @@ indexpage:
     links:
     - title: Découvrez les économies
       url: "/explore-savings.html"
+    - title: En savoir plus sur les liens
+      url: "/links-overview.html"
     - title: Connectez-vous à un système de fichiers avec un lien
       url: https://docs.netapp.com/us-en/workload-setup-admin/create-link.html
     - title: Créez une machine virtuelle de stockage
