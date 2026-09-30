@@ -11,7 +11,24 @@ summary: Les balises peuvent vous aider à classer vos ressources. Vous pouvez a
 
 
 [role="lead"]
-Personnalisez les paramètres de volume FSx for ONTAP dans NetApp Workload Factory afin de les adapter aux besoins de votre organisation. Vous pouvez gérer les balises de volume pour catégoriser les ressources, mettre à jour les paramètres d'efficacité du stockage pour optimiser l'espace et les économies, et gérer les paramètres des fichiers immuables pour contrôler la conservation des données et les protéger contre les modifications non autorisées.
+Personnalisez les paramètres de volume FSx for ONTAP dans NetApp Workload Factory afin de les adapter aux besoins de votre organisation. Vous pouvez gérer les balises de volume pour catégoriser les ressources, comme la définition des charges de travail des volumes, mettre à jour les paramètres d’efficacité du stockage pour optimiser l’espace et réaliser des économies, et gérer les paramètres des fichiers immuables pour contrôler la conservation des données et vous protéger contre les modifications non autorisées.
+
+
+
+[[change-volume-workload]]
+== Modifier la charge de travail du volume
+
+Mettez à jour les charges de travail d'un volume pour qu'elles correspondent à ses cas d'utilisation prévus.
+
+.Étapes
+. Connectez-vous à l'aide de l'un des link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].
+. Sélectionnez le menu image:workloads-menu-icon.png["L'icône du menu hamburger permet d'accéder aux charges de travail telles que le stockage, l'analyse de données d'entreprise (EDA), l'intelligence artificielle (IA), les bases de données, VMware et l'administration."] puis sélectionnez *Stockage*.
+. Dans le menu Stockage, sélectionnez *Volumes explorer*.
+. Sélectionnez le menu Actions du volume pour lequel vous souhaitez mettre à jour la charge de travail.
+. Sélectionnez *Actions avancées*, puis *Modifier les charges de travail*.
+. Dans la boîte de dialogue Modifier les charges de travail, sélectionnez les charges de travail appropriées pour le volume.
+. Sélectionnez *appliquer* pour enregistrer les modifications.
+
 
 
 

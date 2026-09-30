@@ -11,7 +11,7 @@ summary: Suivez les coûts et générez des rapports pour vos ressources systèm
 
 
 [role="lead"]
-Suivez les coûts et l’utilisation du système de fichiers FSx for ONTAP dans une vue consolidée de la console NetApp Workload Factory. Les données de coûts vous aident à gérer vos budgets et à optimiser efficacement les ressources. Workload Factory génère également des rapports de coûts pour vos ressources système de fichiers FSx for ONTAP, que vous pouvez partager avec les parties prenantes.
+NetApp Workload Factory offre une vue consolidée des coûts et de l'utilisation de votre système de fichiers FSx for ONTAP, vous aidant ainsi à gérer vos budgets et à optimiser efficacement vos ressources. Vous pouvez également générer des rapports de coûts pour les ressources de votre système de fichiers FSx for ONTAP afin de les partager avec les parties prenantes.
 
 
 
@@ -20,15 +20,13 @@ Suivez les coûts et l’utilisation du système de fichiers FSx for ONTAP dans 
 
 Workload Factory assure le suivi des coûts et de l'utilisation du système de fichiers FSx pour ONTAP en récupérant les données de coûts auprès d'AWS Cost Explorer. Les informations suivantes sont suivies : type d'utilisation, SKU d'utilisation, type de déploiement, utilisation et coût total.
 
-Pour les ressources uniques, Workload Factory calcule les coûts en combinant l'utilisation réelle du niveau de performance, une part proportionnelle des coûts du niveau de performance allouée à l'espace provisionné mais inutilisé, les allocations de performance réparties par capacité et l'utilisation du pool de capacité. Chaque composant est multiplié par son prix unitaire pour cette dimension, et les résultats sont additionnés pour déterminer le coût total de chaque ressource.
+Pour les ressources uniques, Workload Factory calcule les coûts en combinant l'utilisation réelle du niveau de performance, une part proportionnelle des coûts du niveau de performance allouée à l'espace provisionné mais inutilisé, les allocations de performance réparties par capacité et l'utilisation du pool de capacité. Workload Factory multiplie chaque composant par son prix unitaire pour cette dimension et additionne les résultats pour déterminer le coût total de chaque ressource.
 
-Dans le tableau de bord Coûts, vous pouvez filtrer les données de coûts et d'utilisation par comptes AWS, identifiants, une ou plusieurs régions et plages de temps afin de comprendre votre consommation du système de fichiers FSx for ONTAP. Les données sont toujours affichées à un taux mensuel.
+Dans le tableau de bord Coûts, vous pouvez filtrer les données de coûts et d'utilisation par comptes AWS, identifiants, une ou plusieurs régions et plages horaires afin de comprendre la consommation de votre système de fichiers FSx for ONTAP. Workload Factory affiche toujours les données à un tarif mensuel. Vous pouvez également filtrer par un ou plusieurs systèmes de fichiers et un ou plusieurs volumes au sein d'un système de fichiers. Les clés de balise d'allocation des coûts AWS et les valeurs de clé de balise ajoutent un niveau de filtrage supplémentaire pour identifier des coûts spécifiques. Une balise se compose d'une clé et d'une valeur. Pour filtrer par clés de balise et valeurs de clé de balise, attribuez des balises à vos systèmes de fichiers FSx for ONTAP. link:https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/cost-alloc-tags.html["Apprenez-en davantage sur les balises d'allocation des coûts AWS."^]
 
-Nous obtenons les données de coût et d'utilisation de vos ressources de système de fichiers FSx for ONTAP à partir d'AWS Cost Explorer en utilisant les autorisations suivantes : `ce:GetCostAndUsage`and `ce:GetTags`. Nous calculons le coût total à l'aide de l'API de coût AWS et de nos estimations. `
+Workload Factory récupère les données de coût et d'utilisation de vos ressources de système de fichiers FSx for ONTAP depuis AWS Cost Explorer à l'aide des autorisations suivantes `ce:GetCostAndUsage` et `ce:GetTags`. Nous calculons le coût total à l'aide de l'API de coût AWS et de nos propres estimations.
 
-Les clés de balise d'allocation AWS et les valeurs de clé de balise ajoutent une couche supplémentaire de filtrage pour identifier des coûts spécifiques. Une _balise_ consiste en une clé et une valeur. Pour filtrer par clés de balise et valeurs de clé de balise, attribuez des balises à vos systèmes de fichiers FSx for ONTAP. link:https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/cost-alloc-tags.html["Apprenez-en davantage sur les balises d'allocation des coûts AWS."^]
-
-Outre les données de coûts affichées dans le tableau de bord Coûts, vous pouvez générer des rapports de coûts pour vos ressources de système de fichiers FSx for ONTAP. Les données du rapport de coûts présentent des informations relatives à des systèmes de fichiers et des volumes spécifiques. Le rapport est un fichier PDF téléchargeable que vous pouvez partager avec les parties prenantes.
+Outre les données de coûts du tableau de bord des coûts, le résumé exécutif des coûts présente les coûts de votre système de fichiers FSx for ONTAP ainsi que les habitudes de dépenses de votre organisation. Vous pouvez également générer des rapports de coûts pour les ressources de votre système de fichiers FSx for ONTAP. Le rapport est un fichier CSV téléchargeable que vous pouvez partager avec les parties prenantes.
 
 
 
@@ -38,10 +36,10 @@ Outre les données de coûts affichées dans le tableau de bord Coûts, vous pou
 Les coûts affichés dans la console Workload Factory, dans le tableau de bord des coûts, sont basés sur les données d'AWS Cost Explorer, qui est mis à jour toutes les 24 heures.
 
 .Avant de commencer
-Assurez-vous de respecter les exigences suivantes :
+Vérifiez que vous remplissez les conditions suivantes :
 
 * Vous devez link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["accorder des identifiants avec la politique d'autorisation _consultation, planification et analyse_"^] dans Workload Factory pour suivre les coûts FSx pour ONTAP.
-* Pour filtrer par balises d'allocation AWS, assurez-vous que vos systèmes de fichiers FSx for ONTAP ont des balises qui leur sont attribuées.
+* Pour filtrer par balises d’allocation AWS, vérifiez que des balises sont attribuées à vos systèmes de fichiers FSx for ONTAP.
 
 
 .Étapes
@@ -79,4 +77,4 @@ Générez des rapports de coûts pour des ressources spécifiques du système de
 
 
 .Résultat
-Un rapport PDF est généré et peut être téléchargé.
+Un rapport CSV est généré et peut être téléchargé.

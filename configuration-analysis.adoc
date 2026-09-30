@@ -11,7 +11,7 @@ summary: 'NetApp Workload Factory analyse régulièrement les configurations du 
 
 
 [role="lead"]
-NetApp Workload Factory analyse régulièrement les configurations du système de fichiers Amazon FSx for NetApp ONTAP afin de déterminer s'il existe des problèmes de configuration. Lorsque des problèmes sont détectés, Workload Factory vous montre quels sont les problèmes et explique ce qui doit être modifié pour garantir que le stockage de votre système de fichiers atteigne des performances optimales, une efficacité des coûts et la conformité aux meilleures pratiques.
+NetApp Workload Factory analyse régulièrement les configurations des systèmes de fichiers Amazon FSx for NetApp ONTAP afin de déterminer s'il existe des problèmes de configuration. Lorsque des problèmes sont détectés, Workload Factory vous indique de quels problèmes il s'agit et explique ce qu'il faut modifier afin que le stockage de votre système de fichiers atteigne des performances optimales, une efficacité des coûts et la conformité aux bonnes pratiques.
 
 Les fonctionnalités principales comprennent :
 
@@ -27,9 +27,9 @@ Les fonctionnalités principales comprennent :
 [[how-it-works]]
 == Comment ça marche
 
-Workload Factory analyse quotidiennement vos charges de travail exécutées sur les systèmes de stockage cloud compatibles. L’analyse fournit un état bien architecturé, des informations et des recommandations.
+Workload Factory analyse chaque jour vos charges de travail sur les déploiements de stockage cloud pris en charge. L’analyse fournit l’état de l’architecture bien conçue, des informations et des recommandations.
 
-Une fois l'analyse quotidienne terminée, les configurations apparaissent comme « optimisées » ou « non optimisées » dans le tableau de bord Well-architected du déploiement. Vous y trouverez les problèmes de configuration classés par catégorie et une liste de problèmes de configuration et de recommandations. Vous pouvez consulter les recommandations pour les problèmes de configuration. Workload Factory peut corriger automatiquement certains problèmes ; d'autres nécessitent une intervention manuelle. Dans ce cas, Workload Factory fournit des instructions détaillées pour vous aider à mettre en œuvre les modifications recommandées.
+Une fois l'analyse quotidienne terminée, les configurations apparaissent comme « optimisées » ou « non optimisées » dans le tableau de bord Well-architected du déploiement. Vous y trouverez les problèmes de configuration classés par catégorie, ainsi que des recommandations. Workload Factory peut corriger automatiquement certains problèmes ; pour ceux qui nécessitent une intervention manuelle, Workload Factory fournit des instructions détaillées pour vous aider à mettre en œuvre les modifications recommandées.
 
 Vous pouvez ignorer l'analyse des configurations qui ne s'appliquent pas à vos environnements. Cela évite les alertes inutiles et des résultats d'optimisation inexacts.
 
@@ -69,6 +69,9 @@ Le tableau de bord bien architecturé évalue les configurations de stockage par
 L'analyse bien conçue catégorise les configurations selon les piliers suivants du cadre : _fiabilité_, _sécurité_, _excellence opérationnelle_, _optimisation des coûts_ et _efficacité des performances_.
 
 
+NOTE: Actuellement, Workload Factory ne fournit pas de recommandations spécifiques à chaque charge de travail pour toutes les configurations. Adaptez vos configurations aux besoins spécifiques de chaque charge de travail.
+
+
 
 [[reliability]]
 === Fiabilité
@@ -85,7 +88,7 @@ Planifiez des instantanés locaux pour une sauvegarde efficace et une restaurati
 
 * *Instantanés cohérents au niveau des applications*
 +
-Pour les environnements de base de données, utilisez des instantanés cohérents au niveau des applications avec NetApp SnapCenter pour prendre des instantanés précis et fiables de vos données de volume à un moment précis. Cela permet à vos applications de fonctionner de manière fluide et à vos données de rester en sécurité. SnapCenter simplifie les sauvegardes et vous aide à restaurer les données rapidement et correctement, réduisant l'interruption et protégeant vos charges de travail les plus importantes.
+Pour les environnements de base de données, utilisez des snapshots cohérents au niveau des applications avec NetApp SnapCenter pour prendre des snapshots précis et fiables de vos données de volume à un moment précis. Cela contribue à assurer le bon fonctionnement de vos applications et la protection de vos données. SnapCenter facilite les sauvegardes et vous aide à restaurer les données rapidement et correctement, réduisant ainsi les interruptions et protégeant vos charges de travail les plus importantes.
 
 * *Réplication interrégionale*
 +
@@ -161,6 +164,10 @@ Configurez les paramètres d'espace des périphériques de stockage par blocs po
 +
 Configurez le provisionnement fin pour les volumes FSx for ONTAP hébergeant des instances de base de données. Cette approche permet de stocker davantage de données logiques que de données physiquement disponibles.
 
+* *Configuration pour AWS MGN*
++
+Configurez les systèmes de fichiers FSx for ONTAP avec les paramètres de connectivité et d’authentification d’API AWS Transform MGN (MGN) requis avant de les utiliser avec AWS MGN.
+
 
 
 
@@ -192,7 +199,7 @@ Après qu'un périphérique de stockage n'est pas utilisé pendant sept jours, a
 
 * *Capacité SSD surdimensionnée*
 +
-Une capacité SSD excédentaire engendre des coûts inutiles. Réduisez la couche SSD tout en maintenant une réserve de 20 % d'espace libre. L'opération peut prendre de quelques heures à plusieurs jours, et aucune autre opération du système de fichiers n'est prise en charge pendant cette période.
+Une capacité SSD excédentaire engendre des coûts inutiles. Réduisez le niveau SSD tout en conservant une réserve d'espace libre de 20 %. L'opération peut prendre de quelques heures à plusieurs jours, et aucune autre opération sur le système de fichiers n'est prise en charge pendant ce temps.
 
 * *Volumes NAS inactifs*
 +
@@ -214,6 +221,10 @@ Rééquilibrez vos FlexGroup volumes pour améliorer l'efficacité. Après une m
 * *FlexVol rééquilibrage des volumes*
 +
 Rééquilibrez vos volumes FlexVol pour améliorer l'efficacité. Après une mise à l'échelle horizontale, la capacité et l'activité de charge de travail peuvent devenir inégales au sein du volume.
+
+* *Gestion de l'espace du volume*
++
+Activez la gestion coordonnée de l'espace des volumes pour réduire le risque qu'un volume manque d'espace. Sans cela, une augmentation inattendue des données ou des snapshots peut remplir un volume, entraînant des échecs d'écriture et un impact sur les applications.
 
 
 

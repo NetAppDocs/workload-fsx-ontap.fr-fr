@@ -11,7 +11,9 @@ summary: 'Ajoutez, mettez à jour ou supprimez à tout moment les balises de sys
 
 
 [role="lead"]
-Gérez les paramètres d'un système de fichiers FSx for ONTAP dans NetApp Workload Factory. Vous pouvez gérer les balises du système de fichiers, réinitialiser le mot de passe fsxadmin si nécessaire et mettre à jour la capacité de débit selon les besoins.
+Gérez les paramètres d’un système de fichiers FSx for ONTAP dans NetApp Workload Factory afin de conserver votre système de fichiers organisé, sécurisé et correctement dimensionné pour votre charge de travail. Vous pouvez ajouter ou modifier des balises, gérer les identifiants ONTAP, réinitialiser le mot de passe fsxadmin et mettre à jour la capacité de débit à tout moment.
+
+L’aperçu du système de fichiers affiche les tendances d’utilisation de la capacité et du débit des SSD, des résumés générés par l’IA des principales charges de travail, ainsi que des détails extensibles sur la configuration du système de fichiers.
 
 
 
@@ -29,6 +31,44 @@ Les étiquettes peuvent vous aider à catégoriser vos ressources.  Vous pouvez 
 +
 Le nombre maximal d'étiquettes que vous pouvez appliquer à un système de fichiers est de 50.
 
+. Sélectionnez *appliquer*.
+
+
+
+
+[[manage-ontap-credentials]]
+== Gérer les identifiants ONTAP
+
+Gérez les identifiants ONTAP d’un système de fichiers FSx for ONTAP dans NetApp Workload Factory. Workload Factory propose deux types d’identifiants : principaux et restreints. Par défaut, le système de fichiers utilise les identifiants ONTAP principaux. Les identifiants restreints sont utilisés uniquement pour les opérations d’IA (AIOps) comme Ask Me, Rule builder et Custom dashboards. Vous pouvez éventuellement ajouter un ensemble d’identifiants restreints, et vous pouvez mettre à jour l’un ou l’autre ensemble d’identifiants à tout moment.
+
+Vous pouvez effectuer les tâches suivantes :
+
+* Choisissez d’ajouter un ensemble d’identifiants restreints, en utilisant soit un nom d’utilisateur et un mot de passe, soit un ARN secret.
+* Modifier les identifiants existants, notamment le nom d'utilisateur et le mot de passe, le mot de passe uniquement ou l'ARN du secret.
+
+
+NetApp Workload Factory prend en charge la transition entre le service d’identifiants NetApp Workload Factory (nom d’utilisateur et mot de passe) et AWS Secrets Manager.
+
+NetApp Workload Factory gère les identifiants restreints comme suit :
+
+* Si vous n'avez pas fourni d'identifiant restreint pour un système de fichiers et que vous créez ensuite des règles ou des tableaux de bord personnalisés, ou que vous posez des questions via Ask Me, Workload Factory crée des identifiants ONTAP en lecture seule à utiliser comme ensemble d'identifiants restreints.
+* Si vous avez déjà fourni des identifiants restreints pour un système de fichiers, ces identifiants sont utilisés pour AIOps.
+
+
+.Avant de commencer
+Vous devez associer un lien pour gérer les identifiants ONTAP. link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html["Apprenez à associer un lien existant ou à créer et associer un nouveau lien"^]. Une fois le lien associé, revenez à cette opération.
+
+.Étapes
+. Connectez-vous à l'aide de l'un des link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].
+. Sélectionnez le menu image:workloads-menu-icon.png["L'icône du menu hamburger permet d'accéder aux charges de travail telles que le stockage, l'analyse de données d'entreprise (EDA), l'intelligence artificielle (IA), les bases de données, VMware et l'administration."] puis sélectionnez *Stockage*.
+. Dans le menu Stockage, sélectionnez *FSx pour ONTAP*.
+. Depuis *FSx for ONTAP*, sélectionnez le menu d'actions du système de fichiers pour réinitialiser le mot de passe fsxadmin, puis sélectionnez *Gérer*.
+. Dans la vue d’ensemble du système de fichiers, sélectionnez le menu actions.
++
+image:screenshot-manage-ontap-credentials.png["Une capture d’écran du menu d’actions dans l’onglet Aperçu d’un système de fichiers."]
+
+. Sélectionnez *Gérer les identifiants ONTAP*.
+. Mettez à jour les identifiants ONTAP principaux ou restreints.
 . Sélectionnez *appliquer*.
 
 
