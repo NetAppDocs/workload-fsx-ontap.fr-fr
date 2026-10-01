@@ -49,7 +49,7 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/track-costs.html["Suivez l
 
 Gérez facilement vos balises FSx pour un système de fichiers directement depuis la console NetApp Workload Factory .  Cette fonctionnalité vous permet d'ajouter, de modifier ou de supprimer des balises, ce qui permet une meilleure organisation et catégorisation de vos systèmes de fichiers FSx pour ONTAP .
 
-link:https://docs.netapp.com/us-en/workload-fsx-ontap/manage-fsx-tags.html["Gérer les balises FSx dans Workload Factory"]
+link:https://docs.netapp.com/us-en/workload-fsx-ontap/manage-file-system-settings.html["Gérer les balises FSx dans Workload Factory"]
 
 
 

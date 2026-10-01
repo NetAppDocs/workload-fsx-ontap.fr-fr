@@ -90,7 +90,7 @@ Modèle recommandé : `anthropic.claude-sonnet-4-20250514-v1:0`. Veuillez fourn
 Créez et associez un lien à un système de fichiers FSx for ONTAP pour activer l'analyse des événements basée sur l'IA. Un lien établit une relation de confiance entre Workload Factory et un ou plusieurs systèmes de fichiers FSx for ONTAP et exploite AWS Lambda.
 
 +
-link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html^["Apprenez à associer un lien existant ou à créer et associer un nouveau lien"]. Une fois le lien établi, revenez à cette opération.
+link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html["Apprenez à associer un lien existant ou à créer et associer un nouveau lien"^]. Une fois le lien associé, revenez à cette opération.
 
 * *Autorisations AWS IAM*
 +
