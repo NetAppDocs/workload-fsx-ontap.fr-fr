@@ -203,7 +203,7 @@ Une capacité SSD excédentaire engendre des coûts inutiles. Réduisez le nivea
 
 * *Volumes NAS inactifs*
 +
-L'analyse de configuration identifie les volumes NAS qui ne sont pas utilisés activement et suggère de les supprimer ou de les archiver afin de réduire les coûts.
+Après 31 jours sans utilisation d’un volume NAS, archivez-le ou supprimez-le afin de réduire les coûts.
 
 
 
