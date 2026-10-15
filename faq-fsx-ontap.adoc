@@ -1,0 +1,268 @@
+---
+sidebar: sidebar 
+permalink: faq-fsx-ontap.html 
+keywords: faq, frequently asked questions, frequently asked questions about amazon fsx for netapp ontap, fsx for ontap, workload factory, storage, file system, volume, link, snapshot, replication, arp, ai, s3 access point, iscsi, flexcache, configuration analysis 
+summary: Trouvez des réponses aux questions fréquentes sur les systèmes de fichiers FSx for ONTAP, les volumes, la protection des données, la réplication, la protection contre les ransomwares et le stockage bloc dans NetApp Workload Factory. 
+---
+= FAQ pour Amazon FSx for NetApp ONTAP pour NetApp Workload Factory
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Les questions fréquentes concernant Amazon FSx for NetApp ONTAP dans NetApp Workload Factory couvrent les concepts, le comportement et les contraintes qui ont une incidence sur la planification, la protection et la gestion des systèmes de fichiers et du stockage FSx for ONTAP.
+
+
+
+[[links]]
+== Liens
+
+.Qu'est-ce qu'un lien, et quand en ai-je besoin pour FSx for ONTAP?
+Un lien établit une relation de confiance entre Workload Factory et un ou plusieurs systèmes de fichiers FSx for ONTAP, et utilise AWS Lambda. De nombreuses opérations nécessitent un lien associé, notamment :
+
+* Configuration de l'accès au protocole du volume
+* Gestion des instantanés et des politiques d'instantanés
+* Activation de la protection autonome contre les ransomwares avec l’IA (ARP/IA) de NetApp
+* Gestion de l'augmentation automatique des volumes et des modifications manuelles de la capacité
+* Gestion des igroups et des volumes de cache
+* Gestion des identifiants ONTAP
+
+
+link:learn-about-links.html["En savoir plus sur les liens"].
+
+.Que se passe-t-il si je n'associe pas de lien à mon système de fichiers?
+Les fonctionnalités qui dépendent d'un lien peuvent être indisponibles. Par exemple, ARP/AI est indisponible sans lien, vous ne pouvez pas afficher les stratégies de snapshot existantes lors de la création d'un volume et vous ne pouvez pas détecter les relations de cache. Sans lien, l'analyse de configuration ne peut pas analyser les paramètres de protection des données et de performance. L'analyse est donc incomplète. Vous pouvez toujours afficher les événements de latence sans lien, mais un lien est nécessaire pour afficher et analyser les événements EMS, ainsi que pour analyser les événements de latence.
+
+
+
+[[file-systems]]
+== Systèmes de fichiers
+
+.Dois-je utiliser la création rapide ou la création avancée pour un nouveau système de fichiers ?
+La création rapide applique une configuration recommandée conforme aux bonnes pratiques, et vous pouvez modifier la plupart des paramètres ultérieurement. Par défaut, elle utilise un système de fichiers de deuxième génération, sauf si la région ne le prend pas en charge. La création avancée vous permet de configurer toutes les options, y compris la disponibilité, la sécurité, les sauvegardes et la maintenance.
+
+link:create-file-system.html["Créez un système de fichiers"].
+
+.Quelles ressources sont créées automatiquement lorsque je crée un système de fichiers et de quelles autorisations ai-je besoin ?
+La création d'un système de fichiers entraîne également la création d'une machine virtuelle de stockage et d'un groupe de sécurité. Vous avez besoin d'identifiants disposant des autorisations de création et de suppression de systèmes de fichiers, ainsi que des informations relatives à la région et au VPC où vous effectuerez le déploiement.
+
+.Que dois-je faire avant de pouvoir supprimer un système de fichiers, une machine virtuelle de stockage ou un volume ?
+Pour supprimer un système de fichiers, commencez par supprimer ses volumes, ses machines virtuelles de stockage et ses relations de réplication. Pour supprimer une machine virtuelle de stockage, arrêtez l'accès des applications et supprimez tous les volumes non racine. Pour supprimer un volume, supprimez d'abord ses relations de réplication. La suppression d'un volume est irréversible et supprime définitivement ses snapshots, bien que les sauvegardes du volume restent. Les volumes contenant des fichiers immuables et des snapshots ne peuvent pas être supprimés avant la fin de la période de rétention.
+
+link:delete-file-system.html["Supprimer un système de fichiers"].
+
+.Quels éléments dois-je prendre en compte avant d'ajouter des paires HA pour faire évoluer un système de fichiers ?
+L'ajout de paires HA s'applique uniquement aux systèmes de fichiers Single-AZ de deuxième génération, et les paires HA ne peuvent pas être supprimées une fois ajoutées. L'opération dure environ 30 minutes, pendant lesquelles le système de fichiers est indisponible pour d'autres opérations telles que la création de volumes. Vous devez supprimer tous les LUN iSCSI avant de commencer.
+
+link:add-ha-pairs.html["Ajouter des paires HA"].
+
+.Quelle est la différence entre les identifiants ONTAP principaux et restreints ?
+Par défaut, un système de fichiers utilise les identifiants ONTAP principaux, vos principaux identifiants pour gérer le système de fichiers. Les identifiants restreints sont utilisés uniquement pour les opérations d'IA telles que Ask Me, Rule builder et Custom dashboards. Si vous n'avez pas fourni d'identifiants restreints, Workload Factory crée des identifiants ONTAP en lecture seule pour ces opérations. La gestion des identifiants nécessite un lien.
+
+link:manage-file-system-settings.html["Gérer les identifiants ONTAP"]
+
+
+
+[[capacity-and-performance]]
+== Capacité et performances
+
+.Comment fonctionne la gestion automatique de la capacité, et à quoi dois-je faire attention ?
+Workload Factory analyse le système de fichiers toutes les 30 minutes et ajoute de la capacité SSD soit en mode incrémentiel (augmentation fixe à un seuil), soit en mode adaptatif (prévoit les besoins à partir des données historiques). Lorsqu'il est activé, vous devez le désactiver avant de pouvoir augmenter manuellement la capacité. Évitez de l'activer pendant la migration des données, car AWS impose un délai minimum de six heures entre les augmentations de capacité SSD.
+
+link:adjust-file-system-capacity.html["Ajuster la capacité du système de fichiers"].
+
+.Comment la modification de la capacité du SSD affecte-t-elle les IOPS ?
+La modification de la capacité du système de fichiers a un impact sur les IOPS. Avec le provisionnement automatique des IOPS, les IOPS varient de 3 par Gio de capacité SSD ajoutée ou supprimée. Avec le provisionnement manuel, il peut être nécessaire d'augmenter les IOPS avant d'augmenter la capacité. La réduction de la capacité SSD est prise en charge uniquement pour les systèmes de fichiers de deuxième génération.
+
+.Quelle marge de sécurité SSD dois-je conserver, et que se passe-t-il si la capacité est épuisée ?
+Maintenez l'utilisation du niveau SSD en dessous de 80%. Lorsque la capacité est épuisée, les volumes passent en lecture seule et les écritures échouent. L'utilisation des volumes et des fichiers (inodes) doit également rester inférieure à 80%. Les sauvegardes échouent si l'instantané de sauvegarde fait dépasser au volume 98% d'utilisation du SSD. link:adjust-file-system-capacity.html["Augmenter la capacité pour éviter de manquer d'espace"].
+
+
+
+[[volumes-and-tiering]]
+== Volumes et hiérarchisation
+
+.Les volumes consomment-ils de la capacité du système de fichiers, et dois-je choisir FlexVol ou FlexGroup ?
+Les volumes regroupent les données virtuellement et ne consomment pas eux-mêmes de capacité de stockage du système de fichiers. Leurs données consomment principalement du stockage SSD et, selon la stratégie de hiérarchisation, du stockage de pool de capacité. FlexVol est le style par défaut. FlexGroup est un conteneur NAS scale-out pour des performances élevées et une grande capacité, composé de volumes constitutifs qui partagent le trafic. Le dimensionnement diffère : FlexVol va de 20 Mio à 300 Tio, et FlexGroup de 800 Gio à 2 Pio, avec 100 Gio requis par volume constitutif.
+
+.Quel est l'impact du rééquilibrage d'un volume?
+Le rééquilibrage est non perturbateur, mais les transferts de volumes consomment des ressources du système de fichiers. Les snapshots existants sur les volumes rééquilibrés deviennent partiels et ne peuvent pas être utilisés pour restaurer les données du volume, tandis que les snapshots pris par la suite le peuvent. Le rééquilibrage n'est pas pris en charge pour les volumes SAN (iSCSI et NVMe). Le rééquilibrage de FlexGroup peut ajouter des volumes membres et augmenter la taille provisionnée, sauf si vous choisissez la disposition restreinte, qui prend en charge les volumes dans une relation de réplication.
+
+.Quelle politique de hiérarchisation dois-je choisir pour un volume ?
+Le choix de la stratégie influe sur le coût et les performances :
+
+* *Équilibré (Auto)* : par défaut ; recommandé pour les charges de travail primaires d'usage général.
+* *Optimisé en termes de coûts (Tous)*: recommandé pour les cibles secondaires.
+* *Performances optimisées (instantanés uniquement)*: recommandé pour les charges de travail à faible latence telles que les bases de données critiques.
+* *Aucun* : conserve toutes les données sur SSD.
+
+
+La stratégie est définie par volume et vous pouvez la modifier à tout moment.
+
+link:change-tiering-policy.html["Modifier la politique de hiérarchisation"].
+
+.Que devient un volume cloné et son volume parent ?
+Un clone est un volume accessible en écriture. Ses données résident toujours sur le volume parent, et seules les nouvelles écritures résident sur le clone. Vous ne pouvez pas supprimer un volume parent qui a un clone tant que vous ne l'avez pas fractionné. Pour fractionner un clone, vous devez associer un lien au système de fichiers qui contient le clone. Le fractionnement met à jour uniquement les métadonnées et ne peut pas être effectué si le clone est dans une relation de protection des données. Après le fractionnement, les deux volumes ne peuvent pas être réunis à nouveau et chacun nécessite une allocation complète de l'espace.
+
+
+
+[[data-protection]]
+== Protection des données
+
+.Quelles méthodes de protection des données dois-je utiliser ?
+Une combinaison est recommandée. Les instantanés offrent un RPO aussi bas qu'une heure et des restaurations rapides au niveau du fichier. Les sauvegardes offrent des RPO à partir d'un jour et ne peuvent être restaurées que sous la forme d'un volume entier, ce qui peut prendre de quelques heures à plusieurs jours. La réplication conserve une copie dans une autre région pour une reprise après sinistre à faible RTO, mais vous devez adapter les clients pour qu'ils utilisent la réplique. ARP/AI ajoute la détection des ransomwares.
+
+link:data-protection-overview.html["Découvrez les différents types de protection des données"].
+
+.Comment dois-je planifier la capacité pour les snapshots, et les snapshots sont-ils un substitut aux copies de mes données ?
+Les instantanés ne sont pas des copies de vos données. Ils n'occupent de l'espace que pour les données modifiées et, par conséquent, leur taille augmente généralement avec le temps. Pour la plupart des ensembles de données, une capacité supplémentaire de 20 % suffit pour conserver les instantanés pendant quatre semaines maximum, mais l'écrasement de toutes les données consomme une capacité importante. Utilisez des sauvegardes ou la réplication si vous avez besoin de copies réelles.
+
+.Quelles sont les conséquences de la restauration d'un volume à partir d'un instantané ?
+La restauration sur un volume existant supprime définitivement toutes les données modifiées après la création de l'instantané. La restauration en tant que nouveau volume crée une copie en quelques secondes, quelle que soit sa taille. Si une restauration change le type de protocole NAS, elle peut également changer le modèle d'autorisations, ce qui peut entraîner des problèmes d'accès aux fichiers que vous ne pouvez corriger manuellement qu'avec des outils client NAS.
+
+.Que dois-je savoir sur les politiques de snapshots ?
+Chaque volume utilise la stratégie de snapshots du système de fichiers `default`, sauf si vous la modifiez. Les stratégies sont gérées au niveau de la machine virtuelle de stockage et peuvent être partagées entre les volumes. Les heures des snapshots suivent le fuseau horaire du système de fichiers, défini par défaut sur UTC.
+
+link:manage-snapshot-policy.html["Gérer les règles relatives aux snapshots"].
+
+.Que font les snapshots immuables et quel est leur impact sur la suppression de snapshots ou de volumes ?
+Lors de la création d'un instantané de volume, vous pouvez activer l'immuabilité afin que l'instantané ne puisse être ni modifié ni supprimé pendant sa période de conservation. L'activation des instantanés immuables dans une stratégie d'instantanés verrouille tous les instantanés de cette stratégie. Les volumes contenant des fichiers et des instantanés immuables ne peuvent être ni modifiés ni supprimés avant la fin de la période de conservation.
+
+.Que dois-je décider avant d'activer les fichiers immuables (SnapLock) sur un volume ?
+Les fichiers immuables ne peuvent être activés qu'à la création du volume et ne peuvent pas être désactivés par la suite. Il s'agit d'une fonctionnalité premium entraînant des frais supplémentaires. Choisissez un mode de conservation : en mode Enterprise, un administrateur SnapLock peut supprimer un fichier pendant sa période de conservation, tandis qu'en mode Compliance, un fichier WORM ne peut pas être supprimé avant l'expiration de sa période de conservation, pas plus que le volume. La réplication d'un volume source avec des fichiers immuables maintient le volume cible et le système de fichiers verrouillés jusqu'à la fin de la période de conservation de la source.
+
+link:create-volume.html["Activez les fichiers immuables lors de la création d'un volume"].
+
+.Comment fonctionnent les sauvegardes de volume, et qu'est-ce qui peut provoquer leur échec ?
+Les sauvegardes sont effectuées par volume et de manière incrémentielle, de sorte que seules les données modifiées depuis la dernière sauvegarde sont enregistrées. Elles peuvent échouer si l'instantané de sauvegarde fait dépasser au volume 98 % d'utilisation du SSD. Vous pouvez restaurer une sauvegarde sur n'importe quel système de fichiers FSx for ONTAP de votre compte AWS, et Workload Factory peut ajouter de la capacité SSD si la restauration en a besoin. Les sauvegardes créées manuellement n'expirent pas automatiquement, alors supprimez les anciennes.
+
+link:use-backups.html["Protégez vos données grâce aux sauvegardes"].
+
+.Qu'est-ce qu'un coffre-fort numérique et comment puis-je en obtenir un ?
+Un cyber vault est un référentiel isolé, hors ligne et immuable pour les copies de sauvegarde qui protège contre les ransomwares et les menaces internes. FSx for ONTAP est pris en charge comme source et cible de cyber vault. NetApp vous aide pour la mise en œuvre : contactez l'équipe cyber vault à l'adresse ng-FSx-CyberVault@netapp.com, et un spécialiste vous recontactera.
+
+link:create-cyber-vault.html["En savoir plus sur le cyber vault"].
+
+
+
+[[ransomware-protection]]
+== Protection contre les ransomwares
+
+.Comment fonctionne l'ARP/AI et de quoi a-t-il besoin ?
+ARP/AI surveille les volumes NAS (NFS/SMB) et SAN (iSCSI). Lorsqu'il détecte une menace, il crée des instantanés immuables. Son activation sur un système de fichiers protège tous les volumes actuels et nouveaux, et nécessite un lien associé. Cette fonctionnalité n'est pas prise en charge sur les volumes NVMe ni sur les volumes iSCSI avec ONTAP antérieur à 9.17.1. La protection NAS démarre immédiatement, tandis que les volumes SAN passent par une période d'apprentissage de deux à quatre semaines, tout en restant surveillés.
+
+link:ransomware-protection.html["Protection contre les ransomwares avec ARP/AI"].
+
+.Que se passe-t-il lorsqu'ARP/AI signale une attaque, et comment les fausses alertes sont-elles gérées ?
+ARP/AI crée un instantané verrouillé au moment où il détecte une menace. Par défaut, ARP/AI crée jusqu'à six instantanés toutes les quatre heures, chacun étant verrouillé pendant deux à cinq jours. Si vous confirmez une attaque réelle, vous pouvez restaurer les fichiers affectés ou l'ensemble du volume. Si vous la classez comme une fausse alerte, l'instantané verrouillé est supprimé et le système met à jour ses paramètres d'alerte, afin que la même extension de fichier ne déclenche pas d'alerte la fois suivante.
+
+
+
+[[replication-and-migration]]
+== Réplication et migration
+
+.De quoi ai-je besoin avant de créer une relation de réplication ?
+Vous avez besoin de :
+
+* Un système de fichiers FSx for ONTAP cible avec un lien associé.
+* Les ports TCP 11104 et 11105 sont ouverts entre les systèmes de stockage.
+* Un système ONTAP sur site détecté, s'il s'agit de votre source.
+
+
+La réplication fonctionne entre les systèmes de fichiers FSx for ONTAP, les systèmes ONTAP sur site et Cloud Volumes ONTAP. Les volumes répliqués sont des volumes de protection des données nommés `\{OriginalVolumeName}_copy`.
+
+link:create-replication.html["Réplication des données"].
+
+.Que deviennent les données lorsque vous mettez en pause, arrêtez, reprenez, inversez ou supprimez une relation de réplication ?
+La mise en pause ou l'arrêt de la réplication rend le volume cible accessible en écriture. La reprise supprime toutes les modifications apportées à la destination pendant qu'elle était accessible en écriture et la remet en lecture seule. L'inversion échange les rôles de la source et de la cible et remplace le contenu de la nouvelle cible par celui de la nouvelle source. La suppression de la relation laisse les deux volumes indépendants, mais supprime leurs instantanés de réplication communs. Les données écrites sur la source après la dernière réplication ne sont pas conservées lors de l'inversion ou de la reprise.
+
+link:manage-replication.html["Gérer la réplication"].
+
+.Combien de sauts la réplication en cascade prend-elle en charge, et quels sont les compromis ?
+La réplication en cascade prend en charge une réplique d'un volume de protection des données (deuxième saut : source vers secondaire vers tertiaire). Un troisième saut n'est pas pris en charge et n'est pas considéré comme une bonne pratique. La réplication en cascade vous permet de resynchroniser les volumes primaire et tertiaire sans nouveau transfert de base si le volume secondaire devient indisponible. Les volumes en cascade peuvent prendre plus de temps à se resynchroniser, et vous ne pouvez pas inverser une relation dont la source est elle-même un volume de protection des données cible d'une autre relation.
+
+link:create-replication.html["Réplication en cascade pour les volumes de protection des données"].
+
+.Dois-je limiter le débit de transfert d'une relation de réplication ?
+Limiter le débit de transfert maximal est facultatif, mais recommandé, car sans limite, les performances du réseau et de l'application pourraient diminuer. Pour les charges de travail critiques, telles que les systèmes de fichiers utilisés principalement pour la reprise après sinistre, un débit de transfert illimité est recommandé.
+
+link:manage-replication.html["Limitez le taux de transfert maximal d'une relation de réplication"].
+
+.Que dois-je prévoir lors de la migration d'une machine virtuelle de stockage et du basculement de la réplication ?
+La migration nécessite trois opérations : créer la relation (sélectionnez *Migration* comme cas d'utilisation et *Replicate storage VM configuration*), l'initialiser et effectuer le basculement. Avant le basculement, interrompez l'accès client et assurez-vous que les données sont synchronisées. La source et la cible doivent exécuter la même version majeure d'ONTAP. Après le basculement, la VM de stockage source passe hors ligne, les numéros de série des LUN et l'IQN cible iSCSI changent, et vous devez mettre à jour manuellement les paramètres iSCSI, MTU et DNS.
+
+link:create-replication.html["Réplication des données"].
+
+
+
+[[s3-access-points-block-storage-and-cache-volumes]]
+== Points d'accès S3, stockage bloc et volumes de cache
+
+.Que sont les points d'accès S3 et que devez-vous savoir avant d'activer des fonctionnalités comme la table d'inventaire ou la table de journal ?
+Les points d'accès S3 sont associés à des volumes NFS et SMB afin que des services AWS tels qu'Amazon Bedrock puissent lire les données de fichiers comme si elles se trouvaient dans un bucket S3. Vous pouvez associer plusieurs points d'accès à un seul volume. La table d'inventaire génère des métadonnées d'objet et entraîne des coûts de requête AWS S3. La journalisation d'audit de la table de journal nécessite une infrastructure AWS (CloudTrail, CloudWatch, S3, IAM) et exige que la configuration réseau du point d'accès soit *Internet*.
+
+link:create-s3-access-points.html["Créer des points d'accès S3"].
+
+.De quoi ai-je besoin pour configurer le stockage bloc (iSCSI) ?
+Vous avez besoin d'un lien, d'un volume FlexVol et d'un igroup. L'accès bloc est disponible uniquement sur les déploiements scale-out avec six paires HA ou moins. Un igroup accorde aux hôtes un accès via IQN, et vous avez besoin à la fois d'un igroup et d'une connexion d'hôte iSCSI pour qu'iSCSI fonctionne. L'analyse de la configuration recommande que les volumes iSCSI n'autorisent pas l'accès NAS en même temps.
+
+* link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html["Créer un lien"^].
+* link:create-volume.html["Créer un volume FlexVol"].
+* link:create-igroup.html["Créer un igroup"].
+* link:create-block-device.html["Créer un périphérique de bloc"].
+
+
+.Que deviennent les périphériques bloc inactifs ?
+Un périphérique bloc qui n'est pas mappé à un client ou qui est inutilisé pendant sept jours consécutifs est classé comme inactif. Vous pouvez archiver ses données vers le niveau de pool de capacité pour récupérer de la capacité SSD, ou le supprimer. L'analyse de configuration signale les périphériques bloc inactifs comme un élément d'optimisation des coûts.
+
+.Comment choisir un mode d'écriture du cache et que faut-il pour gérer les volumes de cache ?
+Le mode write-around offre de meilleures performances pour les charges de travail à forte intensité de lecture avec des fichiers de petite taille, tandis que le mode write-back offre de meilleures performances pour les charges de travail à forte intensité d'écriture avec des fichiers volumineux. Workload Factory détecte les relations de cache (FlexCache) existantes, et vous devez associer un lien pour découvrir ou gérer les volumes de cache.
+
+link:manage-cache-volumes.html["Gérer les volumes de cache"].
+
+
+
+[[configuration-analysis-and-monitoring]]
+== Analyse et surveillance de la configuration
+
+.Comment fonctionne l'analyse de configuration, et est-il sûr d'appliquer les correctifs automatiquement ?
+Workload Factory analyse quotidiennement les configurations par rapport aux bonnes pratiques ONTAP et aux piliers du cadre AWS Well-Architected (fiabilité, sécurité, excellence opérationnelle, optimisation des coûts et efficacité des performances). Il peut corriger automatiquement certains problèmes et fournir des étapes manuelles pour d'autres. Les opérations de correction peuvent entraîner une interruption ou des interruptions de service ; examinez donc d'abord chaque recommandation. Vous pouvez ignorer les vérifications qui ne s'appliquent pas à votre environnement.
+
+Vous devez link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["accorder les autorisations d'_opérations et de correction_"^] dans votre compte AWS pour permettre à Workload Factory d'analyser vos configurations.
+
+link:improve-configurations.html["Évaluez vos configurations"].
+
+.De quoi a-t-on besoin pour utiliser l'analyse d'événements basée sur l'IA ?
+Vous avez besoin de :
+
+* link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Autorisations _Opérations et remédiation_."^].
+* Un lien.
+* Port 22 ouvert dans le groupe de sécurité du système de fichiers.
+* Amazon Bedrock activé pour le compte, avec les autorisations IAM Bedrock requises.
+
+
+Les événements sont affichés pendant 72 heures avant d'être supprimés. Les données restent sur votre compte AWS et les données des clients ne sont pas utilisées pour l'entraînement des modèles. Si l'administrateur de votre compte a désactivé les fonctionnalités d'IA, l'analyse n'est pas disponible.
+
+link:analyze-events.html["Analyser les événements"].
+
+
+
+[[costs-and-support]]
+== Coûts et assistance
+
+.Comment fonctionne le calculateur d'économies, et de quelles autorisations a-t-il besoin ?
+Ce calculateur compare les coûts d'Amazon Elastic Block Store (EBS), d'Elastic File System (EFS) et de FSx for Windows File Server avec ceux de FSx for ONTAP. Vous pouvez saisir les détails manuellement ou laisser Workload Factory détecter automatiquement vos environnements, ce qui nécessite les autorisations *view, planning, and analysis* pour les détecter. La détection automatique ne prend pas en charge les snapshots EBS ni les shadow copies de FSx for Windows File Server.
+
+link:explore-savings.html["Apprenez à utiliser le calculateur d’économies"].
+
+.D’où proviennent les données de suivi des coûts, et sont-elles à jour ?
+Les données de coûts proviennent d'AWS Cost Explorer, via les  `ce:GetCostAndUsage` et  `ce:GetTags` autorisations, et sont actualisées toutes les 24 heures. Workload Factory calcule également les coûts par ressource à l'aide de ses propres estimations. Pour filtrer par balises d'allocation des coûts AWS, vous devez attribuer des balises à vos systèmes de fichiers.
+
+link:track-costs.html["Suivre les coûts"].
+
+.Qui gère le compte FSx for ONTAP, et qui assure l’assistance pour les problèmes liés au système de fichiers ?
+AWS gère votre compte FSx for ONTAP, et non Workload Factory. Pour tout problème d’assistance lié à votre système de fichiers ou à votre infrastructure, utilisez le Support Center dans votre AWS Management Console pour ouvrir un dossier de support AWS et sélectionnez le service FSx for ONTAP. Pour toute question d’ordre général concernant Workload Factory, veuillez consulter la link:get-help.html["Page d'aide"].
