@@ -192,6 +192,12 @@ Vous pouvez créer un clone d'un périphérique de stockage bloc existant à tou
 
 Les périphériques de blocs qui ne sont plus associés à un client ou inutilisés pendant sept jours consécutifs sont classés comme périphériques de blocs inactifs. Vous pouvez archiver les données d'un périphérique de blocs inactif dans le niveau de pool de capacité pour récupérer de la capacité SSD.
 
+
+NOTE: Un volume comportant des clones enfants ne peut pas être supprimé tant que tous les clones enfants n'ont pas été soit supprimés, soit séparés en volumes indépendants.
+
+.Avant de commencer
+Assurez-vous que tous les périphériques de stockage par blocs (LUN) sont inactifs sur le même volume avant d’archiver les données.
+
 .Étapes
 . Connectez-vous à l'aide de l'un des link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].
 . Sélectionnez le menu image:workloads-menu-icon.png["L'icône du menu hamburger permet d'accéder aux charges de travail telles que le stockage, l'analyse de données d'entreprise (EDA), l'intelligence artificielle (IA), les bases de données, VMware et l'administration."] puis sélectionnez *Stockage*.
@@ -215,7 +221,7 @@ Les périphériques de stockage bloc qui ne sont pas associés à un client ou q
 . Dans le menu Stockage, sélectionnez *FSx pour ONTAP*.
 . Dans *FSx pour ONTAP*, sélectionnez l'onglet *Bloquer les périphériques*.
 . Sous Périphériques orphelins, sélectionnez *Afficher et récupérer la capacité*.
-. Sur l'écran « Récupérer l'espace des périphériques de stockage par blocs inutilisés », sélectionnez un ou plusieurs périphériques de stockage par blocs pour archiver les données et récupérer la capacité.
+. Sur l’écran « Récupérer de l’espace pour les périphériques bloc inutilisés », sélectionnez un ou plusieurs périphériques bloc pour récupérer de la capacité.
 . Sélectionnez *Supprimer*.
 
 
