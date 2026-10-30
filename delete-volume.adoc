@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: delete-volume.html 
 keywords: delete volume, volume deletion 
-summary: 'Supprimez un volume de votre système de fichiers FSX pour ONTAP qui n"est plus nécessaire et libérez de l"espace. Cette opération est irréversible.' 
+summary: 'Supprimez un volume dont vous n"avez plus besoin d"un système de fichiers FSx for ONTAP afin de libérer de l"espace. Cette opération est irréversible.' 
 ---
 = Supprimer un volume dans NetApp Workload Factory
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: 'Supprimez un volume de votre système de fichiers FSX pour ONTAP qui n
 
 
 [role="lead"]
-Supprimez un volume de votre système de fichiers FSX pour ONTAP qui n'est plus nécessaire et libérez de l'espace. Cette opération est irréversible.
+Supprimez un volume dont vous n'avez plus besoin d'un système de fichiers FSx for ONTAP afin de libérer de l'espace. Cette opération est irréversible.
 
 .Avant de commencer
 Avant de supprimer un volume, tenez compte des points suivants :

@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: create-block-device.html 
 keywords: create block device, create lun, iscsi protocol 
-summary: 'Créez des périphériques de bloc pour répondre aux exigences de votre application métier (LOB).' 
+summary: 'Créez des périphériques de stockage bloc iSCSI dans un volume existant ou nouveau, configurez l"accès au groupe d"initiateurs et définissez les options d"efficacité et de protection du stockage pour FSx for ONTAP.' 
 ---
 = Créez un périphérique de stockage par blocs pour un système de fichiers dans NetApp Workload Factory.
 :allow-uri-read: 
@@ -91,7 +91,7 @@ NOTE: Les heures des snapshots sont basées sur le fuseau horaire du système de
 
 .. *Règle de hiérarchisation* : sélectionnez la règle de hiérarchisation pour les données stockées dans le volume.
 +
-_Équilibré (Auto)_ est la politique de hiérarchisation par défaut lors de la création d'un volume à l'aide de la console Workload Factory. Pour plus d'informations sur les politiques de hiérarchisation des volumes, veuillez consulter link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/volume-storage-capacity.html#data-tiering-policy["Capacité de stockage du volume"^] dans la documentation AWS FSx pour NetApp ONTAP . Notez que Workload Factory utilise des noms basés sur les cas d'utilisation dans la console Workload Factory pour les politiques de hiérarchisation et inclut les noms de politique de hiérarchisation FSx pour ONTAP entre parenthèses.
+_Balanced (Auto)_ est la stratégie de hiérarchisation par défaut lors de la création d'un volume à l'aide de la console Workload Factory. Pour plus d'informations sur les stratégies de hiérarchisation des volumes, consultez link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/volume-storage-capacity.html#data-tiering-policy["Capacité de stockage du volume"^] dans la documentation AWS FSx for NetApp ONTAP. Workload Factory utilise dans la console Workload Factory des noms basés sur les cas d'utilisation pour les stratégies de hiérarchisation et inclut entre parenthèses les noms des stratégies de hiérarchisation FSx for ONTAP.
 
 .. *ARP/AI* : NetApp Autonomous Ransomware Protection with AI (ARP/AI) est activé par défaut lorsqu'un lien est associé au système de fichiers. link:https://docs.netapp.com/us-en/workload-fsx-ontap/ransomware-protection.html["En savoir plus sur ARP/AI"]. Acceptez la déclaration pour continuer.
 +

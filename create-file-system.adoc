@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: create-file-system.html 
 keywords: create, FSx file system, ONTAP file system, Workload Factory, storage 
-summary: À l’aide de NetApp Workload Factory, vous pouvez créer un système de fichiers FSx pour ONTAP pour ajouter et gérer des volumes et des services de données supplémentaires. 
+summary: Créez un système de fichiers FSx for ONTAP dans NetApp Workload Factory pour ajouter et gérer des volumes et des services de données supplémentaires. 
 ---
 = Créer un système de fichiers FSx pour ONTAP dans NetApp Workload Factory
 :allow-uri-read: 
@@ -11,13 +11,13 @@ summary: À l’aide de NetApp Workload Factory, vous pouvez créer un système 
 
 
 [role="lead"]
-À l’aide de NetApp Workload Factory, vous pouvez créer des systèmes de fichiers FSx for ONTAP de première et deuxième génération pour ajouter et gérer des volumes et des services de données supplémentaires.
+Créez des systèmes de fichiers FSx for ONTAP de première et de deuxième génération dans NetApp Workload Factory afin d'ajouter et de gérer des volumes et des services de données supplémentaires.
 
 .Description de la tâche
 Une VM de stockage et un groupe de sécurité sont créés dans le cadre de la création du système de fichiers.
 
 .Avant de commencer
-Avant de créer votre système de fichiers FSX pour ONTAP, vous aurez besoin des éléments suivants :
+Avant de créer votre système de fichiers FSx for ONTAP, vous devez disposer des éléments suivants :
 
 * Identifiants disposant des autorisations de _création et de suppression de système de fichiers_ pour créer un système de fichiers FSx pour ONTAP . link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Découvrez comment accorder des autorisations à un compte AWS"^].
 * La région et les informations VPC pour lesquelles vous allez créer l'instance FSX pour ONTAP.
@@ -66,7 +66,7 @@ Cette configuration à paire HA unique est recommandée pour les charges de trav
 
 
 
-.. *Tags*: Vous pouvez éventuellement ajouter jusqu'à 50 tags.
+.. *Étiquettes* : si vous le souhaitez, ajoutez jusqu’à 50 étiquettes.
 
 
 . Sous *Détails du système de fichiers*, fournissez les informations suivantes :
@@ -88,7 +88,7 @@ Si l'utilisateur que vous indiquez n'est pas l'utilisateur fsxadmin, et que vous
 ... *Nom NetBIOS du serveur SMB* : entrez le nom NetBIOS du serveur SMB de l'objet ordinateur Active Directory à créer pour votre machine virtuelle de stockage. Il s'agit du nom de cette VM de stockage dans Active Directory.
 ... *Nom d'utilisateur* : saisissez le nom d'utilisateur du compte de service dans votre Active Directory existant.
 +
-N'incluez pas de préfixe ou de suffixe de domaine. Pour `EXAMPLE\ADMIN`, utilisez `ADMIN`.
+N'incluez pas de préfixe ni de suffixe de domaine. Pour `EXAMPLE\ADMIN`, utilisez `ADMIN`.
 
 ... *Mot de passe* : saisissez le mot de passe du compte de service.
 ... *Unité d'organisation* : si vous le souhaitez, entrez le nom de l'unité d'organisation où vous souhaitez créer le compte d'ordinateur pour FSX for ONTAP. L'UO est le nom de chemin distinctif de l'unité organisationnelle à laquelle vous souhaitez joindre le système de fichiers.
@@ -107,7 +107,7 @@ Si vous vous joignez à un AD autogéré, utilisez le nom du groupe dans votre A
 . Enregistrez ou créez le système de fichiers.
 
 
-Si vous avez créé le système de fichiers, vous pouvez maintenant afficher le système de fichiers FSX pour ONTAP dans la page *Inventaire*.
+Après avoir créé le système de fichiers, vous pouvez le consulter sur la page *Inventory*.
 
 --
 .Création avancée
@@ -148,7 +148,7 @@ Vous pouvez également charger une configuration enregistrée.
 
 
 
-.. *Tags*: Vous pouvez éventuellement ajouter jusqu'à 50 tags.
+.. *Étiquettes* : si vous le souhaitez, ajoutez jusqu’à 50 étiquettes.
 
 
 . Sous Détails du système de fichiers, fournissez les informations suivantes :
@@ -162,8 +162,8 @@ Vous pouvez également charger une configuration enregistrée.
 .. *Capacité de débit par paire HA* : sélectionnez la capacité de débit par nombre de paires HA. Les systèmes de fichiers de première génération ne prennent en charge qu'une seule paire HA.
 .. *IOPS provisionnés* : sélectionnez l’une des options suivantes :
 +
-*** *Automatique* : Pour automatique, pour chaque Gio créé, 3 IOPS sont ajoutés.
-*** *Provisionné par l'utilisateur* : pour le provisionnement par l'utilisateur, saisissez la valeur IOPS.
+*** *Automatique* : ajoute 3 IOPS pour chaque GiB créé.
+*** *Configuré par l'utilisateur* : Saisissez la valeur d'IOPS.
 
 
 .. *Informations d'identification ONTAP* : facultatives. Entrez votre nom d'utilisateur et votre mot de passe ONTAP. Le mot de passe peut être défini maintenant ou ultérieurement.
@@ -178,7 +178,7 @@ Si l'utilisateur que vous indiquez n'est pas l'utilisateur fsxadmin, et que vous
 ... *Nom NetBIOS du serveur SMB* : entrez le nom NetBIOS du serveur SMB de l'objet ordinateur Active Directory à créer pour votre machine virtuelle de stockage. Il s'agit du nom de cette VM de stockage dans Active Directory.
 ... *Nom d'utilisateur* : saisissez le nom d'utilisateur du compte de service dans votre Active Directory existant.
 +
-N'incluez pas de préfixe ou de suffixe de domaine. Pour `EXAMPLE\ADMIN`, utilisez `ADMIN`.
+N'incluez pas de préfixe ni de suffixe de domaine. Pour `EXAMPLE\ADMIN`, utilisez `ADMIN`.
 
 ... *Mot de passe* : saisissez le mot de passe du compte de service.
 ... *Unité d'organisation* : si vous le souhaitez, entrez le nom de l'unité d'organisation où vous souhaitez créer le compte d'ordinateur pour FSX for ONTAP. L'UO est le nom de chemin distinctif de l'unité organisationnelle à laquelle vous souhaitez joindre le système de fichiers.
@@ -224,7 +224,7 @@ Pour un nouveau groupe de sécurité, reportez-vous à  la section <<Détails du
 . Enregistrez ou créez le système de fichiers.
 
 
-Si vous avez créé le système de fichiers, vous pouvez maintenant afficher le système de fichiers FSX pour ONTAP dans la page *Inventaire*.
+Après avoir créé le système de fichiers, vous pouvez le consulter sur la page *Inventory*.
 
 --
 ====
@@ -233,7 +233,7 @@ Si vous avez créé le système de fichiers, vous pouvez maintenant afficher le 
 [[security-group-details]]
 == Détails du groupe de sécurité
 
-Le tableau suivant fournit des détails sur les groupes de sécurité, notamment les protocoles, les ports et les rôles.
+Le tableau répertorie les détails des groupes de sécurité, notamment les protocoles, les ports et les rôles.
 
 []
 ====

@@ -11,7 +11,7 @@ summary: Gérez la stratégie d’exportation NFS pour un volume qui utilise les
 
 
 [role="lead"]
-Gérez la stratégie d’exportation NFS pour un volume qui utilise les types de protocole NFSv3 ou NFSv4.1 dans NetApp Workload Factory.
+Gérez les règles d'export d'un volume utilisant les protocoles NFSv3 ou NFSv4.1 dans NetApp Workload Factory afin de contrôler quels clients peuvent accéder au volume et de quel type d'accès ils disposent.
 
 .Description de la tâche
 La gestion des règles d'export d'un volume implique l'ajout de règles d'export détaillant les spécifications client, le contrôle d'accès, l'accès super-utilisateur et la version NFS. Vous pouvez ajouter plusieurs export-policy et les hiérarchisez.
@@ -31,7 +31,7 @@ Déterminez les spécifications client pour les règles d'export-policy. Les val
 . Connectez-vous à l'aide de l'un des link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].
 . Sélectionnez le menu image:workloads-menu-icon.png["L'icône du menu hamburger permet d'accéder aux charges de travail telles que le stockage, l'analyse de données d'entreprise (EDA), l'intelligence artificielle (IA), les bases de données, VMware et l'administration."] puis sélectionnez *Stockage*.
 . Dans le menu Stockage, sélectionnez *Volumes explorer*.
-. Sélectionnez le menu Actions du volume pour lequel vous souhaitez modifier les règles d'export NFS.
+. Sélectionnez le menu Actions du volume dont vous souhaitez modifier les règles d'export NFS.
 . Sélectionnez *actions avancées*, puis *Modifier la règle d'export NFS*.
 . Sur la page Modifier les règles d'export NFS, fournissez les informations suivantes :
 +

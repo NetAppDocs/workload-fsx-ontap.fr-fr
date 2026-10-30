@@ -11,7 +11,7 @@ summary: 'Consultez les détails des points d"accès S3 pour un volume dans NetA
 
 
 [role="lead"]
-Consultez les détails du point d'accès S3, tels que l'alias, l'ARN et l'URI S3. Avec les tables d'inventaire et de journal activées, vous pouvez consulter les métadonnées et les journaux d'audit des événements d'accès utilisateur et des opérations sur les objets à travers les points d'accès S3.
+Consultez les détails du point d'accès S3, tels que l'alias, l'ARN et l'URI S3. Lorsque les tables d'inventaire et de journalisation sont activées, vous pouvez consulter les métadonnées et les journaux d'audit des événements d'accès utilisateur et des opérations sur les objets via les points d'accès S3.
 
 .Description de la tâche
 Lorsque la table d'inventaire est activée sur le volume, vous pouvez consulter les détails du point d'accès, de la table d'inventaire et du compartiment de table des points d'accès S3 existants associés au volume. Le système fournit également un lien vers la table d'inventaire dans la console de gestion AWS.

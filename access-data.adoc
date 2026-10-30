@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: access-data.html 
 keywords: access data, mount point, mount volumes, mount clients, on-premises 
-summary: Vous pouvez accéder à vos systèmes de fichiers FSX pour ONTAP à partir des environnements sur site en montant des volumes pour les clients NAS et en montant des LUN iSCSI pour les clients SAN. 
+summary: Obtenez le point de montage des volumes FSx for ONTAP dans Workload Factory et trouvez des liens pour monter des volumes et des LUN iSCSI sur des clients NAS et SAN. 
 ---
 = Accédez aux données du système de fichiers FSX pour ONTAP
 :allow-uri-read: 
@@ -13,7 +13,7 @@ summary: Vous pouvez accéder à vos systèmes de fichiers FSX pour ONTAP à par
 [role="lead"]
 Vous pouvez accéder à vos systèmes de fichiers FSX pour ONTAP à partir des environnements sur site en montant des volumes pour les clients NAS et en montant des LUN iSCSI pour les clients SAN.
 
-link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/supported-fsx-clients.html["Accès aux données"^] Dans la documentation d'Amazon FSX pour NetApp ONTAP, vous trouverez des rubriques sur l'accès aux données à des fins de référence.
+link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/supported-fsx-clients.html["Accès aux données"^] dans la documentation Amazon FSx for NetApp ONTAP fournit des informations sur la façon d'accéder aux données.
 
 Vous pouvez également obtenir le point de montage des volumes dans NetApp Workload Factory.
 
@@ -22,7 +22,7 @@ Vous pouvez également obtenir le point de montage des volumes dans NetApp Workl
 [[get-mount-point-for-volumes-in-netapp-workload-factory]]
 == Obtenir le point de montage des volumes dans NetApp Workload Factory
 
-Obtenez le point de montage d'un volume pour monter un partage sur un partage CIFS ou un client NFS.
+Obtenez le point de montage d'un volume pour monter le volume en tant que partage CIFS ou sur un client NFS.
 
 .Étapes
 . Connectez-vous à l'aide de l'un des link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].

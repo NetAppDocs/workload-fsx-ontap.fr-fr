@@ -11,14 +11,14 @@ summary: Découvrez les coffres-forts numériques NetApp et comment mettre en œ
 
 
 [role="lead"]
-Un volume de coffre-fort numérique est un emplacement de stockage isolé et sécurisé utilisé pour stocker des copies de sauvegarde de vos données, les protégeant ainsi des attaques de ransomware et autres cybermenaces.  Dans le cadre de la création du coffre-fort, vous créerez un volume de coffre-fort cybernétique, désactiverez tous les protocoles clients, établirez une relation de réplication entre le volume source et le volume de coffre-fort cybernétique, et créerez des instantanés immuables sur le volume de coffre-fort cybernétique.
+Un volume de coffre-fort numérique est un emplacement de stockage isolé et sécurisé qui conserve des copies de sauvegarde de vos données et les protège contre les attaques de rançongiciels et autres cybermenaces. Pour créer un coffre-fort numérique, vous devez créer un volume de coffre-fort numérique, désactiver tous les protocoles clients, établir une relation de réplication entre le volume source et le volume de coffre-fort numérique, et créer des snapshots immuables sur le volume de coffre-fort numérique.
 
 .Qu'est-ce qu'un coffre-fort informatique ?
 Un coffre-fort informatique est une technique spécifique de protection des données qui consiste à stocker des données critiques dans un environnement isolé, séparé de l'infrastructure informatique principale.
 
 Le coffre-fort numérique est un référentiel de données « isolé du réseau », immuable et indélébile, immunisé contre les menaces affectant le réseau principal, telles que les logiciels malveillants, les rançongiciels ou même les menaces internes.  Un coffre-fort numérique peut être réalisé grâce à des instantanés immuables et indélébiles.
 
-Les sauvegardes par espacement d'air qui utilisent des méthodes traditionnelles impliquent la création d'espace et la séparation physique des supports primaire et secondaire. En déplaçant les médias hors site et/ou en coupant la connectivité, les mauvais acteurs n’ont pas accès aux données. Cela protège les données mais peut entraîner des temps de récupération plus lents.
+Les sauvegardes isolées (ou « air-gapping ») utilisant des méthodes traditionnelles consistent à créer un espace et à séparer physiquement les supports de stockage primaire et secondaire. En déplaçant les supports hors site ou en coupant la connectivité, les personnes malveillantes n'ont pas accès aux données. Cette méthode protège les données, mais peut entraîner des temps de restauration plus longs.
 
 .Coffres-forts numériques FSx pour ONTAP
 Amazon FSx for NetApp ONTAP est pris en charge en tant que source et cible de coffre-fort numérique.

@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: configuration-analysis.html 
 keywords: configuration issues, issues, improve, analyze, storage configuration, Amazon FSx for NetApp ONTAP, FSx for ONTAP, recommendation, recommendations 
-summary: 'NetApp Workload Factory analyse régulièrement les configurations du système de fichiers Amazon FSx for NetApp ONTAP afin de déterminer s"il existe des problèmes de configuration.' 
+summary: 'Analysez les configurations du système de fichiers FSx for ONTAP dans NetApp Workload Factory afin d"identifier les problèmes et d"obtenir des recommandations qui améliorent les performances, les économies et la conformité.' 
 ---
 = Analyse de la configuration des systèmes de fichiers FSX pour ONTAP
 :allow-uri-read: 
@@ -104,7 +104,7 @@ Les étiquettes de la stratégie d'instantané du volume source et les étiquett
 
 * *Capacité des objets de fichier*
 +
-Il convient d'augmenter le seuil de capacité des fichiers afin d'éviter d'atteindre la limite de capacité du volume. Une capacité de fichiers insuffisante (en inodes) empêche l'écriture de données supplémentaires sur le volume. Workload Factory recommande de maintenir l'utilisation de la capacité des fichiers en dessous de 80% pour permettre la création de nouveaux fichiers.
+Augmentez le seuil de capacité des fichiers pour éviter d'atteindre la limite de capacité du volume. Une capacité de fichiers insuffisante (en inodes) empêche l'écriture de données supplémentaires sur le volume. Workload Factory recommande de maintenir l'utilisation de la capacité des fichiers en dessous de 80 % pour permettre la création de nouveaux fichiers.
 
 
 
@@ -134,7 +134,7 @@ L'excellence opérationnelle vise à fournir l'architecture la plus optimale et 
 
 * *gestion de la capacité*
 +
-La gestion de la capacité automatique doit être activée afin de garantir régulièrement que la couche SSD ne dépasse pas le seuil.
+Activez la gestion automatique de la capacité pour vous assurer régulièrement que le niveau SSD ne dépasse pas le seuil.
 
 * *Capacité maximale du volume*
 +

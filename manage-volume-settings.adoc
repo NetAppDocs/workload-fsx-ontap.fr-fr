@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: manage-volume-settings.html 
 keywords: volume tags, edit volume tags, edit tags, enable immutable files, disable immutable files, lock files, unlock files, storage efficiency change, update storage efficiency 
-summary: Les balises peuvent vous aider à classer vos ressources. Vous pouvez ajouter, modifier et supprimer des balises de volume à tout moment pour les volumes FSX for ONTAP. 
+summary: 'Modifiez les workloads de volume, modifiez les étiquettes de volume, mettez à jour l"efficacité du stockage et gérez les paramètres des fichiers immuables pour les volumes FSx for ONTAP dans NetApp Workload Factory.' 
 ---
 = Gérez les paramètres de volume dans NetApp Workload Factory
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: Les balises peuvent vous aider à classer vos ressources. Vous pouvez a
 
 
 [role="lead"]
-Personnalisez les paramètres de volume FSx for ONTAP dans NetApp Workload Factory afin de les adapter aux besoins de votre organisation. Vous pouvez gérer les balises de volume pour catégoriser les ressources, comme la définition des charges de travail des volumes, mettre à jour les paramètres d’efficacité du stockage pour optimiser l’espace et réaliser des économies, et gérer les paramètres des fichiers immuables pour contrôler la conservation des données et vous protéger contre les modifications non autorisées.
+Personnalisez les paramètres de volume FSx for ONTAP dans NetApp Workload Factory afin de les adapter aux besoins de votre organisation. Vous pouvez définir des workloads de volume et des balises pour catégoriser les ressources, mettre à jour les paramètres d'efficacité du stockage afin d'optimiser l'espace et les économies, et gérer les paramètres des fichiers immuables pour contrôler la conservation des données et les protéger contre les modifications non autorisées.
 
 
 
@@ -80,7 +80,7 @@ Que vous activiez ou désactiviez l'efficacité du stockage, les volumes utilise
 
 Vous pouvez mettre à jour certains paramètres de fichiers immuables pour un volume lorsque cette fonctionnalité est activée, tels que la règle et les périodes de conservation, la période de validation automatique et le mode d'ajout de volume.
 
-Notez que l'activation des fichiers immuables n'est possible que pendant link:create-volume.html["création du volume"].
+Vous pouvez activer les fichiers immuables uniquement pendant link:create-volume.html["création du volume"].
 
 .Étapes
 . Connectez-vous à l'aide de l'un des link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].
@@ -92,7 +92,7 @@ Notez que l'activation des fichiers immuables n'est possible que pendant link:cr
 +
 ** *Période de conservation* : sélectionnez *non spécifié* ou *spécifiez la période*.
 +
-*** *Non spécifié* : la période minimale par défaut est "0" ans et la période maximale par défaut est "30 ans".
+*** *Non spécifié* : la période minimale par défaut est de 0 ans et la période maximale par défaut est de 30 ans.
 *** *Specify Period* : option permettant de définir la stratégie de rétention, les périodes minimale et maximale, la fonction autocommit et la fonction de mode d'ajout de volume. Fournissez les informations suivantes :
 +
 **** *Politique de conservation* : cette période doit être supérieure ou égale à la période de conservation minimale et inférieure ou égale à la période de conservation maximale.
@@ -103,10 +103,10 @@ Notez que l'activation des fichiers immuables n'est possible que pendant link:cr
 
 ** *Autocommit* : permet d'activer ou de désactiver la fonction pour valider automatiquement les fichiers en mode WORM qui n'ont pas été modifiés pendant la période d'autovalidation.
 ** *Suppression privilégiée* : Activer ou désactiver la fonctionnalité.  L'activation de la fonctionnalité permet à un administrateur SnapLock de supprimer un volume WORM non expiré.  Cette fonctionnalité est uniquement prise en charge en mode de rétention Entreprise.
-** *Mode d'ajout de volume* : permet d'activer ou de désactiver la fonction. L'activation du mode d'ajout de volumes vous permet d'ajouter du contenu aux fichiers WORM.
+** *Mode d'ajout de volume* : activez ou désactivez cette fonction. L'activation du mode d'ajout de volume vous permet d'ajouter du contenu aux fichiers WORM.
 
 
-. Cliquez sur *appliquer*.
+. Sélectionnez *appliquer*.
 
 
 

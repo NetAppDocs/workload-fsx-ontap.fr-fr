@@ -23,7 +23,7 @@ Cette configuration à paire HA unique est recommandée pour les charges de trav
 
 
 
-.. *Tags*: Vous pouvez éventuellement ajouter jusqu'à 50 tags.
+.. *Étiquettes* : si vous le souhaitez, ajoutez jusqu’à 50 étiquettes.
 
 
 . Sous *Détails du système de fichiers*, fournissez les informations suivantes :
@@ -45,7 +45,7 @@ Si l'utilisateur que vous indiquez n'est pas l'utilisateur fsxadmin, et que vous
 ... *Nom NetBIOS du serveur SMB* : entrez le nom NetBIOS du serveur SMB de l'objet ordinateur Active Directory à créer pour votre machine virtuelle de stockage. Il s'agit du nom de cette VM de stockage dans Active Directory.
 ... *Nom d'utilisateur* : saisissez le nom d'utilisateur du compte de service dans votre Active Directory existant.
 +
-N'incluez pas de préfixe ou de suffixe de domaine. Pour `EXAMPLE\ADMIN`, utilisez `ADMIN`.
+N'incluez pas de préfixe ni de suffixe de domaine. Pour `EXAMPLE\ADMIN`, utilisez `ADMIN`.
 
 ... *Mot de passe* : saisissez le mot de passe du compte de service.
 ... *Unité d'organisation* : si vous le souhaitez, entrez le nom de l'unité d'organisation où vous souhaitez créer le compte d'ordinateur pour FSX for ONTAP. L'UO est le nom de chemin distinctif de l'unité organisationnelle à laquelle vous souhaitez joindre le système de fichiers.

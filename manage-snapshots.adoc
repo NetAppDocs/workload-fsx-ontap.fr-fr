@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: manage-snapshots.html 
 keywords: snapshot, snapshots, manage snapshots, edit snapshots, access snapshots, delete snapshots, remove snapshots 
-summary: 'Modifiez les paramètres des instantanés, activez l"accès aux répertoires et supprimez les instantanés pour gérer vos instantanés et la protection des données dans Workload Factory.' 
+summary: 'Modifiez les noms, les étiquettes et les périodes de rétention des instantanés, rendez les instantanés immuables, activez l"accès au répertoire des instantanés et supprimez les instantanés des volumes FSx for ONTAP.' 
 ---
 = Gérer les instantanés d'un volume FSx for ONTAP
 :allow-uri-read: 
@@ -27,7 +27,7 @@ Modifiez le nom, l’étiquette et la période de conservation d’un instantan�
 . Sélectionnez le menu Actions du volume contenant l'instantané à modifier.
 . Sélectionnez *Actions de protection des données* puis *Gérer les instantanés*.
 . Depuis la page Gérer les instantanés, sélectionnez le menu d'actions pour l'instantané à modifier, puis sélectionnez *Modifier*.
-. Dans la boîte de dialogue Modifier un instantané, vous pouvez modifier les éléments suivants :
+. Dans la boîte de dialogue Modifier un instantané, modifiez les paramètres suivants :
 +
 .. Changer le nom.
 .. Changer l'étiquette.
@@ -49,7 +49,7 @@ Acceptez la déclaration concernant les snapshots immuables.
 [[access-a-snapshot]]
 == Accéder à un instantané
 
-Activez l'accès au répertoire des instantanés pour donner aux utilisateurs la possibilité d'accéder aux instantanés de manière autonome.
+Activez l'accès au répertoire des instantanés afin que les utilisateurs puissent accéder aux snapshots de manière autonome.
 
 .Étapes
 . Connectez-vous à l'aide de l'un des link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].
@@ -58,7 +58,7 @@ Activez l'accès au répertoire des instantanés pour donner aux utilisateurs la
 . Sélectionnez le menu Actions du volume avec l'instantané auquel vous souhaitez accéder.
 . Sélectionnez *Actions de protection des données* puis *Gérer les instantanés*.
 . Depuis la page Gérer les instantanés, sélectionnez le menu d'actions pour l'instantané auquel accéder, puis sélectionnez *Accès*.
-. Dans la boîte de dialogue Accéder à l'instantané, sélectionnez *Activer l'accès au répertoire d'instantanés* pour accéder à cet instantané de volume et à tous les instantanés du volume.
+. Dans la boîte de dialogue Accès à l'instantané, sélectionnez *Activer l'accès au répertoire des instantanés* pour accéder à cet instantané de volume et à tous les instantanés du volume.
 +
 ** Pour les volumes NFS : sélectionnez *Chemin d’accès NFS* pour afficher le chemin NFS de l’instantané.
 ** Pour les volumes SMB/CIFS : sélectionnez *Chemin d’accès SMB* pour afficher le chemin SMB de l’instantané.
@@ -73,7 +73,7 @@ Activez l'accès au répertoire des instantanés pour donner aux utilisateurs la
 [[restore-data-from-a-snapshot]]
 == Restaurer les données à partir d'un instantané
 
-Vous avez la possibilité de restaurer les données d’un instantané vers un volume existant ou vers un nouveau volume.
+Vous pouvez restaurer des données à partir d'un instantané vers un volume existant ou vers un nouveau volume.
 
 link:https://docs.netapp.com/us-en/workload-fsx-ontap/restore-volume-from-snapshot.html["Restaurer un volume à partir d'un snapshot"]
 
@@ -84,7 +84,7 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/restore-volume-from-snapsh
 
 Supprimez un instantané pour libérer de l'espace.
 
-Les instantanés immuables ne peuvent pas être supprimés avant la fin de la période de conservation.
+Vous ne pouvez pas supprimer les instantanés immuables avant la fin de la période de conservation.
 
 .Étapes
 . Connectez-vous à l'aide de l'un des link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].

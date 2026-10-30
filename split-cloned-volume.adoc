@@ -18,17 +18,17 @@ Les données sont accessibles sur le clone et sur le parent lors du fractionneme
 .Description de la tâche
 L'opération de fractionnement du clone implique les opérations suivantes :
 
-* Il est impossible de créer de nouvelles copies Snapshot du volume FlexClone au cours de la division.
-* Un volume FlexClone ne peut pas être séparé du volume parent s'il appartient à une relation de protection des données.
-* Si vous mettez le volume FlexClone hors ligne alors que le fractionnement est en cours, l'opération est suspendue. Lorsque vous remettez le volume FlexClone en ligne, l'opération de fractionnement reprend.
+* Vous ne pouvez pas créer de nouvelles copies instantanées du volume FlexClone pendant l'opération de fractionnement.
+* Vous ne pouvez pas séparer un volume FlexClone de son volume parent s'il appartient à une relation de protection des données.
+* Si vous mettez le volume FlexClone hors ligne pendant le fractionnement, l'opération de fractionnement est suspendue. Lorsque vous remettez le volume FlexClone en ligne, l'opération de fractionnement reprend.
 * Après le fractionnement, le volume FlexVol parent et le clone nécessitent l'allocation d'espace complet déterminée par leurs garanties de volume.
-* Une fois qu'un volume FlexClone est séparé de son parent, il n'est pas possible de le rejoindre à nouveau.
+* Après avoir séparé un volume FlexClone de son parent, vous ne pouvez pas les réunir à nouveau.
 
 
 .Avant de commencer
 Avant de fractionner un volume cloné, tenez compte des points suivants :
 
-* Pour scinder un volume cloné, vous devez associer un lien. link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html["Apprenez à associer un lien existant ou à créer et associer un nouveau lien"^]. Une fois le lien associé, revenez à cette opération.
+* Pour scinder un volume cloné, vous devez associer un lien. link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html["Apprenez à associer un lien existant ou à créer et associer un nouveau lien"^]. Après avoir associé le lien, revenez à cette opération.
 * Le volume FlexClone doit être en ligne au début de l'opération de fractionnement.
 * Le volume parent doit être en ligne pour que le fractionnement réussisse.
 

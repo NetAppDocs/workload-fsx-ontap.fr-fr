@@ -26,7 +26,7 @@ FSX pour ONTAP offre les fonctionnalités suivantes :
 * *Cache in-memory et NVMe cache* : inclut un cache in-memory unique et un cache NVMe qui améliore les performances des données fréquemment utilisées.
 * *Des centaines de milliers d'IOPS* : fournit des centaines de milliers d'IOPS avec des disques SSD, garantissant ainsi des résultats rapides pour votre stockage et vos charges de travail.
 * *Provisionnement fin* : permet le provisionnement de capacité à l'avance, ce qui permet d'économiser des coûts jusqu'à ce que de la capacité supplémentaire soit nécessaire.
-* *La déduplication et la compression des données* : supprime les données dupliquées et compresse les données pour réduire la quantité de stockage physique requise pour les systèmes de fichiers FSX for ONTAP, ce qui permet de réaliser des économies.
+* *Déduplication et compression des données* : supprime les données dupliquées et compresse les données afin de réduire la quantité de stockage physique requise pour les systèmes de fichiers FSx for ONTAP, ce qui se traduit par des économies.
 * *Tiering des données* : permet de réduire les coûts de stockage en déplaçant les données les moins fréquemment utilisées du niveau de stockage SSD haute performance principal vers le niveau de stockage du pool de capacité secondaire.
 
 
@@ -68,7 +68,7 @@ AWS gère votre compte FSx pour ONTAP , pas Workload Factory. link:https://docs.
 [[regions]]
 == Régions
 
-Workload Factory est pris en charge dans toutes les régions commerciales où FSx for ONTAP est pris en charge.link:https://aws.amazon.com/about-aws/global-infrastructure/regional-product-services/["Affichez les régions Amazon prises en charge."^]
+Workload Factory est pris en charge dans toutes les régions commerciales où FSx for ONTAP est pris en charge. link:https://aws.amazon.com/about-aws/global-infrastructure/regional-product-services/["Affichez les régions Amazon prises en charge."^]
 
 Les régions AWS suivantes ne sont pas prises en charge :
 

@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: support-registration.html 
 keywords: support registration, register for support, support, nss account, add nss account 
-summary: 'Avant de pouvoir ouvrir un dossier d"assistance auprès du support technique NetApp , vous devez ajouter un compte de site de support NetApp à Workload Factory, puis vous inscrire pour bénéficier de l"assistance.' 
+summary: 'Ajoutez un compte du site de support NetApp à Workload Factory et enregistrez votre compte pour ouvrir des demandes d"assistance auprès du support technique de NetApp.' 
 ---
 = Enregistrez votre compte Workload Factory pour le support NetApp
 :allow-uri-read: 

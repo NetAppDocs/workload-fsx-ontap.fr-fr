@@ -11,7 +11,7 @@ summary: 'Gérez les volumes de cache d"un système de fichiers FSx for ONTAP da
 
 
 [role="lead"]
-Utilisez la console NetApp Workload Factory pour gérer les volumes de cache des systèmes de fichiers FSx pour ONTAP .  La mise en cache, une méthode de stockage temporaire des données, améliore les performances d'accès aux données en réduisant le temps de récupération.  Vous pouvez modifier le nom du cache, ajuster sa capacité, changer la politique d'exportation, sélectionner une méthode de mise en cache, pré-remplir le cache ou supprimer des volumes de cache.
+Utilisez la console NetApp Workload Factory pour gérer les volumes de cache des systèmes de fichiers FSx for ONTAP. La mise en cache, une méthode de stockage temporaire des données, améliore les performances d'accès aux données en réduisant le temps de récupération. Vous pouvez modifier le nom du cache, ajuster la capacité, changer les règles d'export, sélectionner une méthode de mise en cache, préremplir le cache ou supprimer des volumes de cache.
 
 .Description de la tâche
 Vous pouvez gérer les volumes de cache associés aux relations de cache dans la console NetApp Workload Factory .

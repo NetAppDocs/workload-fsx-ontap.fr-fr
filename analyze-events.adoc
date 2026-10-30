@@ -11,7 +11,7 @@ summary: Analyser les événements dans NetApp Workload Factory pour FSx pour ON
 
 
 [role="lead"]
-Identifiez et résolvez rapidement les problèmes du système de fichiers FSx for ONTAP grâce à l'analyseur d'événements intelligent de NetApp Workload Factory. L'analyseur d'événements extrait et analyse automatiquement les événements EMS (Event Management System) et les événements de latence FSx for ONTAP, en tirant parti de l'IA Agentic avec l'intégration Amazon Bedrock.
+Identifiez et résolvez rapidement les problèmes du système de fichiers FSx for ONTAP grâce à l'analyseur d'événements intelligent de NetApp Workload Factory. L'analyseur d'événements extrait et analyse automatiquement les événements du Event Management System (EMS) et de latence de FSx for ONTAP, grâce à l'IA agentique avec l'intégration Amazon Bedrock.
 
 
 
@@ -53,7 +53,7 @@ NOTE: Si l'administrateur de votre compte a désactivé les fonctionnalités d'I
 Votre confidentialité des données et votre sécurité sont protégées par :
 
 * *Souveraineté des données* : Toutes les données et agrégations restent au sein de votre compte AWS et sont communiquées via un point de terminaison VPC privé (Amazon Bedrock), sans aucune exposition sur Internet public.
-* *Aucun entraînement d'IA* : les données client ne sont pas utilisées pour entraîner ou améliorer les modèles. Amazon Bedrock traite les événements en temps réel mais n'effectue aucun entraînement sur vos données. Les résultats sont stockés uniquement dans votre environnement.
+* *Aucun entraînement d'IA* : les données client ne sont pas utilisées pour entraîner ou améliorer les modèles. Amazon Bedrock traite les événements en temps réel, mais n'effectue aucun entraînement sur vos données. Les résultats sont stockés uniquement dans votre environnement.
 
 
 Pour plus de détails, veuillez vous référer au link:https://docs.aws.amazon.com/bedrock/latest/userguide/data-protection.html["Documentation sur la protection des données d'Amazon Bedrock"^].
@@ -63,13 +63,13 @@ Pour plus de détails, veuillez vous référer au link:https://docs.aws.amazon.c
 [[before-you-begin]]
 == Avant de commencer
 
-Pour visualiser les événements de latence, vous devez procéder comme suit :
+Pour consulter les événements de latence, vous devez procéder comme suit :
 
 * link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["accorder les autorisations de _consultation, de planification et d'analyse_"^] dans votre compte AWS.
 * link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html["Connectez-vous au système de fichiers à l'aide d'un lien"^].
 
 
-Pour analyser les événements EMS et de latence et recevoir des informations et des recommandations basées sur l'IA, assurez-vous des points suivants :
+Pour analyser les événements EMS et de latence et recevoir des informations et des recommandations basées sur l'IA, veuillez confirmer les éléments suivants :
 
 * Vous avez link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["autorisations _opérations et remédiation_"^] dans votre compte AWS.
 * Vous avez link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html["connecté au système de fichiers via un lien"^].
@@ -87,7 +87,7 @@ Modèle recommandé : `anthropic.claude-sonnet-4-20250514-v1:0`. Veuillez fourn
 
 * *Lien vers Workload Factory*
 +
-Créez et associez un lien à un système de fichiers FSx for ONTAP pour activer l'analyse des événements basée sur l'IA. Un lien établit une relation de confiance entre Workload Factory et un ou plusieurs systèmes de fichiers FSx for ONTAP et exploite AWS Lambda.
+Créez et associez un lien à un système de fichiers FSx for ONTAP pour activer l'analyse des événements basée sur l'IA. Un lien établit une relation de confiance entre Workload Factory et un ou plusieurs systèmes de fichiers FSx for ONTAP, et utilise AWS Lambda.
 
 +
 link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html["Apprenez à associer un lien existant ou à créer et associer un nouveau lien"^]. Une fois le lien associé, revenez à cette opération.

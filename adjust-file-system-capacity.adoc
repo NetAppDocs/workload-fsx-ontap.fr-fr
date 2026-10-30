@@ -50,7 +50,7 @@ Pour ajuster la capacité d'un système de fichiers, vous devez d'abord link:man
 [[enable-automatic-capacity-and-inode-management]]
 == Activer la gestion automatique de la capacité et des inodes
 
-Activez la gestion de la capacité et des inodes pour permettre à NetApp Workload Factory d’ajouter automatiquement du stockage incrémentiel et des inodes (fichiers) à un système de fichiers Amazon FSx for ONTAP dans un volume, à mesure que les besoins en capacité évoluent au fil du temps. Ces fonctionnalités éliminent la nécessité de surveiller manuellement la capacité et les inodes.
+Activez la gestion de la capacité et des inodes pour permettre à NetApp Workload Factory d'ajouter automatiquement du stockage incrémentiel à un système de fichiers FSx for ONTAP et des inodes (fichiers) à un volume à mesure que les besoins en capacité évoluent au fil du temps. Ces fonctionnalités éliminent la nécessité de surveiller manuellement la capacité et les inodes.
 
 Un seul compte peut gérer ces fonctionnalités.
 
@@ -143,7 +143,7 @@ Avant de commencer, tenez compte des points suivants :
 . Dans le menu Stockage, sélectionnez *FSx pour ONTAP*.
 . Dans *FSx pour ONTAP*, sélectionnez le menu actions du système de fichiers pour activer la gestion automatique des inodes.
 . Sélectionnez *gérer*.
-. Sous Informations, sélectionnez l'icône en forme de crayon à côté de *Gestion automatique des inodes*.  L'icône en forme de crayon apparaît à côté de la flèche déroulante lorsque la souris survole la ligne *Gestion automatique des inodes*.
+. Dans la section Informations, sélectionnez l'icône en forme de crayon à côté de *Gestion automatique des inodes*. Cette icône apparaît à côté de la flèche déroulante lorsque vous survolez la ligne *Gestion automatique des inodes* avec la souris.
 . Dans la boîte de dialogue *Gestion automatique des inodes*, indiquez les informations suivantes :
 +
 .. *Informations d'identification* : sélectionnez les informations d'identification avec les autorisations _automate_ dans le menu déroulant.

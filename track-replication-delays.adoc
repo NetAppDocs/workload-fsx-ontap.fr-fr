@@ -23,7 +23,7 @@ Activez le suivi pour surveiller les délais de réplication sur votre compte. W
 . Dans la boîte de dialogue Activer l'historique du délai de réplication, sélectionnez *Activer*.
 . De retour dans la vignette Historique du délai de réplication, sélectionnez *Personnaliser le seuil* pour définir votre seuil préféré.
 . Dans la boîte de dialogue Personnaliser le seuil de délai de latence, saisissez le seuil en heures et en minutes.
-. Vous pouvez également sélectionner *Activer les notifications de délai* pour recevoir des notifications lorsque les délais de réplication dépassent le seuil.
+. Vous pouvez également sélectionner *Activer les notifications de délai de décalage* pour recevoir des notifications lorsque le décalage de réplication dépasse le seuil.
 +
 Les notifications sont envoyées par e-mail et comprennent :
 

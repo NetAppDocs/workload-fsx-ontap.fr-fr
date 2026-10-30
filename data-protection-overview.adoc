@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: data-protection-overview.html 
 keywords: overview 
-summary: FSx for ONTAP prend en charge les snapshots, NetApp Autonomous Ransomware avec IA, la réplication de volume et les sauvegardes dans NetApp Workload Factory. 
+summary: FSx for ONTAP prend en charge les instantanés, la protection autonome contre les ransomwares avec IA de NetApp, la réplication de volumes et les sauvegardes dans NetApp Workload Factory. 
 ---
 = Types de protection des données dans NetApp Workload Factory
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: FSx for ONTAP prend en charge les snapshots, NetApp Autonomous Ransomwa
 
 
 [role="lead"]
-FSx for ONTAP prend en charge les snapshots, la protection autonome contre les ransomwares NetApp avec IA, la réplication et les sauvegardes pour la protection des données.  Nous vous recommandons d'utiliser une combinaison de types de protection des données pour vous préparer à l'inévitable et protéger vos données.
+FSx for ONTAP prend en charge les snapshots, NetApp Autonomous Ransomware Protection with AI, la réplication et les sauvegardes pour la protection des données. Nous vous recommandons d'utiliser une combinaison de types de protection des données pour protéger vos données.
 
 
 
@@ -24,17 +24,17 @@ La protection des données de vos workloads vous permet d'assurer la reprise apr
 Un snapshot crée une image en lecture seule et instantanée d'un volume au sein du volume source en tant que copie Snapshot. Vous pouvez utiliser la copie Snapshot pour restaurer des fichiers individuels ou pour restaurer l'intégralité du contenu d'un volume. Les snapshots constituent la base de toutes les méthodes de sauvegarde. La copie Snapshot créée sur votre volume permet de maintenir le volume répliqué et le fichier de sauvegarde synchronisés avec les modifications apportées au volume source.
 
 .Protection autonome contre les ransomwares NetApp avec IA
-NetApp Autonomous Ransomware Protection with AI (ARP/AI) utilise l'analyse de la charge de travail dans les environnements NAS (NFS/SMB) pour détecter et avertir d'une activité anormale pouvant être une attaque de ransomware.  Lorsqu'une attaque est suspectée, ARP/AI crée également de nouveaux instantanés immuables en plus de la protection existante fournie par les instantanés planifiés.
+NetApp Autonomous Ransomware Protection with AI (ARP/AI) utilise l'analyse des workloads dans les environnements NAS (NFS/SMB) pour détecter et signaler toute activité anormale susceptible d'être une attaque par ransomware. Lorsqu'une attaque est soupçonnée, ARP/AI crée de nouveaux instantanés immuables, en plus de la protection existante assurée par les instantanés planifiés.
 
 .La réplication
 La réplication crée une copie secondaire de vos données sur un autre système de fichiers FSX pour ONTAP et met continuellement à jour les données secondaires. Vous disposez de données actualisées et accessibles dès que vous en avez besoin, par exemple pour la reprise d'activité.
 
-Vous pouvez choisir de créer à la fois des volumes répliqués sur un autre système de fichiers FSX pour ONTAP et des fichiers de sauvegarde dans le cloud. Ou vous pouvez simplement créer des volumes répliqués ou des fichiers de sauvegarde. C'est votre choix.
+Vous pouvez créer à la fois des volumes répliqués sur un autre système de fichiers FSx for ONTAP et des fichiers de sauvegarde dans le cloud, ou créer uniquement des volumes répliqués ou uniquement des fichiers de sauvegarde.
 
 .Sauvegardes
 Vous pouvez créer des sauvegardes de vos données dans le cloud à des fins de protection et de conservation à long terme. Si nécessaire, vous pouvez restaurer un volume, un dossier ou des fichiers individuels de la sauvegarde vers le même système de fichiers de travail, ou un système différent.
 
-Le diagramme suivant présente une représentation visuelle de la protection des données pour le stockage FSX for ONTAP à l'aide de snapshots, de la réplication dans l'ensemble des régions et de la sauvegarde dans le stockage objet.
+Le schéma illustre la protection des données du stockage FSx for ONTAP à l'aide de snapshots, de la réplication entre les régions et de la sauvegarde vers le stockage objet.
 
 image:diagram-fsx-data-protection.png["La capture d'écran montre la protection des données pour le stockage FSX pour ONTAP à l'aide de snapshots, la réplication dans l'ensemble des régions et la sauvegarde dans le stockage objet."]
 
@@ -43,7 +43,7 @@ image:diagram-fsx-data-protection.png["La capture d'écran montre la protection 
 [[best-practices-for-protecting-your-workload-data]]
 == Bonnes pratiques de protection des données de vos workloads
 
-FSX pour ONTAP offre plusieurs options de protection des données qui peuvent être combinées pour atteindre les objectifs de point et de temps de restauration que vous avez sélectionnés. Pour une protection optimale, nous vous recommandons d'utiliser à la fois des snapshots de volume et des sauvegardes de volume.
+FSx for ONTAP offre plusieurs options de protection des données que vous pouvez combiner pour atteindre vos objectifs de point de récupération et de délai de récupération. Pour une protection optimale, nous vous recommandons d'utiliser à la fois les snapshots de volume et les sauvegardes de volume.
 
 L'objectif de point de restauration (RPO) décrit la date à laquelle la dernière copie de vos données est garantie, ce qui dépend de la fréquence à laquelle ces copies sont effectuées. L'objectif de délai de restauration (RTO) définit le temps nécessaire à la restauration de vos données.
 
@@ -59,14 +59,14 @@ Les snapshots sont des versions virtuelles instantanées d'un volume effectuées
 [[protect-your-workload-data-with-netapp-autonomous-ransomware-protection-with-ai]]
 == Protégez vos données de charge de travail avec NetApp Autonomous Ransomware Protection avec IA
 
-NetApp Autonomous Ransomware Protection with AI (ARP/AI) agit comme une couche de défense supplémentaire importante si le logiciel antivirus n'a pas réussi à détecter une intrusion.  La définition d’une stratégie ARP/AI l’active pour toutes les machines virtuelles de stockage et tous les volumes existants et nouvellement créés.  Une fois activé, ARP/AI détecte et protège tous les volumes et machines virtuelles de stockage.  Si une extension de fichier est signalée comme anormale, vous devez évaluer l'alerte.
+NetApp Autonomous Ransomware Protection with AI (ARP/AI) agit comme une importante couche de défense supplémentaire si le logiciel antivirus n'a pas détecté d'intrusion. La définition d'une stratégie ARP/AI l'active pour toutes les machines virtuelles de stockage et tous les volumes existants et nouvellement créés. Après son activation, ARP/AI détecte et protège tous les volumes et toutes les machines virtuelles de stockage. Si une extension de fichier est signalée comme anormale, vous devez évaluer l'alerte.
 
 
 
 [[protect-your-workload-data-with-volume-replication]]
 == Protégez les données de vos workloads avec la réplication de volume
 
-La réplication de volume crée une copie des dernières données d'un volume, y compris tous ses snapshots dans une région différente. Si vous ne pouvez pas vous permettre des RTO de plusieurs heures lors d'une restauration de volume complet à partir d'une sauvegarde de volume, envisagez d'effectuer une réplication de volume. Alors que la réplication de volume s'assure que les données récentes sont disponibles dans une autre région que vous pouvez utiliser, vous devez ajuster vos clients pour qu'ils utilisent le volume dans l'autre région.
+La réplication de volumes crée une copie des données les plus récentes d'un volume, y compris tous ses instantanés, dans une autre région. Si vous ne pouvez pas vous permettre des délais de restauration (RTO) de plusieurs heures pour une restauration complète d'un volume à partir d'une sauvegarde, envisagez d'effectuer une réplication de volumes. Bien que la réplication de volumes garantisse la disponibilité des données récentes dans une autre région, vous devez configurer vos clients pour qu'ils utilisent le volume dans l'autre région.
 
 
 
@@ -80,11 +80,11 @@ Les sauvegardes de volume fournissent des copies instantanées indépendantes de
 [[recommendations-for-protecting-your-workload-data]]
 == Recommandations pour la protection des données de vos workloads
 
-Réfléchissez aux recommandations suivantes pour protéger les données de vos workloads.
+Tenez compte de ces recommandations pour protéger les données de votre workload.
 
 * Utilisez la réplication de volume pour la reprise après sinistre : si votre application nécessite un RTO faible, envisagez d’utiliser la réplication de volume pour répliquer vos données vers une autre région.
-* Utiliser des sauvegardes de volume en conjonction avec des snapshots : l'utilisation conjointe des deux fonctionnalités permet de restaurer vos fichiers à partir de snapshots et d'effectuer des restaurations complètes en cas de perte de volume à l'aide de sauvegardes.
+* Utilisez les sauvegardes de volume conjointement avec les instantanés : l’utilisation conjointe de ces deux fonctionnalités vous permet de restaurer vos fichiers à partir d’instantanés et d’effectuer des restaurations complètes à partir de sauvegardes en cas de perte d’un volume.
 * Définissez une stratégie de sauvegarde de volume : assurez-vous que la stratégie de sauvegarde répond aux exigences de votre entreprise en termes d'âge et de fréquence des sauvegardes. Nous vous recommandons de conserver au moins deux sauvegardes quotidiennes pour chaque volume.
 * Définir un planning de snapshots : les snapshots plus anciens sont moins susceptibles d'être utilisés pour restaurer des données. Nous vous recommandons de définir une planification de snapshot qui prend en compte la diminution du retour sur investissement lié à la conservation d'anciens snapshots par rapport au coût lié à une capacité de snapshots supplémentaire.
-* Activez une politique ARP/AI pour votre système de fichiers ou vos volumes individuels afin d’ajouter une couche de protection supplémentaire pour protéger vos données contre les attaques de ransomware.
+* Activez une stratégie ARP/AI pour votre système de fichiers ou vos volumes individuels afin d'ajouter une couche de protection contre les attaques par rançongiciel.
 

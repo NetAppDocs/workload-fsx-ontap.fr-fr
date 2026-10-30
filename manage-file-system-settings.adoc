@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: manage-file-system-settings.html 
 keywords: create fsx tags, create tags, edit fsx tags, fsx tags, reset fsx admin password 
-summary: 'Ajoutez, mettez à jour ou supprimez à tout moment les balises de système de fichiers FSx pour ONTAP d"un système de fichiers.' 
+summary: Gérez les paramètres du système de fichiers FSx for ONTAP dans NetApp Workload Factory, notamment les balises, les identifiants ONTAP, le mot de passe fsxadmin et la capacité de débit. 
 ---
 = Gérez les paramètres du système de fichiers FSx for ONTAP dans NetApp Workload Factory
 :allow-uri-read: 
@@ -51,7 +51,7 @@ NetApp Workload Factory prend en charge la transition entre le service d’ident
 
 NetApp Workload Factory gère les identifiants restreints comme suit :
 
-* Si vous n'avez pas fourni d'identifiant restreint pour un système de fichiers et que vous créez ensuite des règles ou des tableaux de bord personnalisés, ou que vous posez des questions via Ask Me, Workload Factory crée des identifiants ONTAP en lecture seule à utiliser comme ensemble d'identifiants restreints.
+* Si vous n'avez pas fourni d'identifiants restreints pour un système de fichiers, puis que vous créez des règles ou des tableaux de bord personnalisés, ou que vous soumettez des questions à Ask Me, Workload Factory crée des identifiants ONTAP en lecture seule à utiliser comme ensemble d'identifiants restreints.
 * Si vous avez déjà fourni des identifiants restreints pour un système de fichiers, ces identifiants sont utilisés pour AIOps.
 
 

@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: performance-reference.html 
 keywords: performance, FSx for ONTAP performance 
-summary: Une référence de performances est fournie pour FSx pour ONTAP dans NetApp Workload Factory. 
+summary: Consultez les informations de référence sur les performances des systèmes de fichiers FSx for ONTAP dans NetApp Workload Factory, y compris les liens vers la documentation AWS sur les performances. 
 ---
 = Performances de FSx pour ONTAP dans NetApp Workload Factory
 :allow-uri-read: 
@@ -11,4 +11,4 @@ summary: Une référence de performances est fournie pour FSx pour ONTAP dans Ne
 
 
 [role="lead"]
-Pour une vue d'ensemble des performances, reportez-vous link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/performance.html["Performances d'Amazon FSX pour NetApp ONTAP"^] à la documentation.
+Consultez la link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/performance.html["Performances d'Amazon FSX pour NetApp ONTAP"^]documentation pour comprendre les performances des systèmes de fichiers FSx for ONTAP.

@@ -187,7 +187,7 @@ Configurez l'infrastructure pour capturer les événements du service AWS à par
 . Dans la présentation du système de fichiers, sélectionnez l'onglet *volumes*.
 . Dans l'onglet Volumes, sélectionnez le menu actions du volume pour lequel vous souhaitez gérer les points d'accès S3, puis sélectionnez *Advanced actions*, puis *Manage S3 access points*.
 . Depuis l'écran *Gérer les points d'accès S3*, sélectionnez le menu actions, puis sélectionnez *Modifier point d'accès*.
-. Dans la boîte de dialogue *Modifier le point d'accès S3*, assurez-vous que la configuration réseau est définie sur *Internet*.
+. Dans la boîte de dialogue *Modifier le point d'accès S3*, vérifiez que la configuration réseau est définie sur *Internet*.
 . Suivez les instructions de la boîte de dialogue pour configurer l'infrastructure de la fonctionnalité de table de journal.
 . Téléchargez le modèle CloudFormation.
 . Déployez la pile CloudFormation dans votre compte AWS.
@@ -232,7 +232,7 @@ Si la pile échoue avec une  `AccessDenied` ou  `InsufficientPermission` erreur,
 
 ==== Limite CloudTrail
 
-AWS impose une limite par défaut de 5 trails par région. Si le compte a déjà 5 trails, `the FsxDataEventTrail` la ressource échouera avec : Maximum number of trails (5) exceeded. Vous pouvez vérifier le nombre de trails au niveau régional avec la commande suivante :
+AWS impose une limite par défaut de cinq trails par région. Si le compte comporte déjà cinq trails, la `FsxDataEventTrail` ressource échouera avec le message suivant : Maximum number of trails (5) exceeded. Vous pouvez vérifier le nombre de Trails au niveau régional avec la commande suivante :
 
 [source, cli]
 ----
@@ -335,7 +335,7 @@ L'intégration S3TableIntegration crée automatiquement un compartiment de table
 +
 ** Si le compartiment de table aws-cloudwatch n'existe pas, alors il manque des autorisations pour  `S3TableIntegrationRole`. Il a besoin de  `s3tables:CreateTableBucket`,  `s3tables:PutTableBucketEncryption` et  `s3tables:PutTableBucketPolicy` — toutes limitées à  `arn:aws:s3tables:*:*:bucket/aws-cloudwatch`.
 ** Si le compartiment de table existe mais  `logs.aws_cloudtrail__data` n'existe pas, alors l'intégration ne route pas les événements. L'intégration doit afficher  `Status: ACTIVE` et inclure  `aws_cloudtrail` comme source de journal.
-** Si la table existe mais que l'événement initial n'y figure pas, il est possible que ce dernier soit encore en transit. L'ingestion des tables S3 présente une certaine latence. Attendez encore quelques minutes. Si cela n'apparaît toujours pas après 15 à 20 minutes, l'intégration est peut-être interrompue.
+** Si la table existe mais que l'événement initial n'y figure pas, il est possible que ce dernier soit encore en transit. L'ingestion des tables S3 peut prendre un certain temps. Veuillez patienter quelques minutes de plus. Si l'événement n'apparaît toujours pas après 15 à 20 minutes, l'intégration est peut-être interrompue.
 
 
 . Interrogez directement l'événement initial.
