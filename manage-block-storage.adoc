@@ -11,13 +11,14 @@ summary: Gérer le stockage bloc pour un système de fichiers FSx for ONTAP dans
 
 
 [role="lead"]
-Utilisez NetApp Workload Factory pour simplifier la gestion de vos ressources de stockage bloc, y compris les igroups et les périphériques de bloc, et contrôler l'accès client pour les périphériques de bloc FSx for ONTAP afin d'offrir des performances optimales et de minimiser les coûts.
+Utilisez NetApp Workload Factory pour simplifier la gestion de vos ressources de stockage bloc, y compris les igroups et les périphériques bloc, et contrôler l'accès des clients aux périphériques bloc FSx for ONTAP afin d'offrir des performances optimales et de minimiser les coûts. Consultez le diagramme des igroups de périphériques bloc pour optimiser les connexions client et résoudre rapidement les problèmes.
 
 .Description de la tâche
 Depuis la console NetApp Workload Factory, vous pouvez gérer les groupes d'initiateurs (igroups) afin de contrôler l'accès des clients aux périphériques de stockage bloc. Vous pouvez également consulter les détails des périphériques de stockage bloc, augmenter leur capacité, créer des clones, gérer l'accès des clients, archiver les données pour les périphériques de stockage bloc inactifs et supprimer des périphériques de stockage bloc.
 
 Utilisez le schéma du stockage bloc pour vérifier les points suivants :
 
+* Détails de l'hôte, y compris le nom de l'hôte, l'ID de l'instance, le type de workload, la région et le nom qualifié iSCSI (IQN)
 * Connexions client
 * État du périphérique bloc
 * Relation nœud-client

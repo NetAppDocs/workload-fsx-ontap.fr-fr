@@ -32,7 +32,7 @@ Un lien établit une relation de confiance entre Workload Factory et un ou plusi
 * Gestion des identifiants ONTAP
 
 
-link:learn-about-links.html["En savoir plus sur les liens"].
+link:links-overview.html["En savoir plus sur les liens"].
 
 .Que se passe-t-il si je n'associe pas de lien à mon système de fichiers?
 Les fonctionnalités qui dépendent d'un lien peuvent être indisponibles. Par exemple, ARP/AI est indisponible sans lien, vous ne pouvez pas afficher les stratégies de snapshot existantes lors de la création d'un volume et vous ne pouvez pas détecter les relations de cache. Sans lien, l'analyse de configuration ne peut pas analyser les paramètres de protection des données et de performance. L'analyse est donc incomplète. Vous pouvez toujours afficher les événements de latence sans lien, mais un lien est nécessaire pour afficher et analyser les événements EMS, ainsi que pour analyser les événements de latence.

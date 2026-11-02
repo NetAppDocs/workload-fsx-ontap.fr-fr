@@ -30,7 +30,7 @@ Si vous répliquez un volume source contenant des fichiers immuables, le volume 
 
 [NOTE]
 ====
-Vous pouvez répliquer un volume source (lecture/écriture) ou un volume de protection des données (DP). La réplication en cascade est prise en charge, mais un troisième saut ne l'est pas. En savoir plus sur link:https://docs.netapp.com/us-en/workload-fsx-ontap/cascade-replication.html["réplication en cascade"].
+Vous pouvez répliquer un volume source (lecture/écriture) ou un volume de protection des données (DP). La réplication en cascade est prise en charge, mais un troisième saut ne l'est pas. En savoir plus sur <<cascade-replication,réplication en cascade>>.
 
 ====
 
@@ -54,14 +54,15 @@ NetApp Workload Factory prend en charge la réplication de migration pour les ma
 
 Pour migrer les données et les paramètres de configuration de la machine virtuelle de stockage, vous devez effectuer trois opérations.
 
-. <<Étape 1 : Créer la relation de réplication,Créer la relation de réplication>>, sélectionnez *Migration* comme cas d'utilisation et sélectionnez *Replicate storage VM configuration*.
-. <<Étape 2 : Initialiser la relation de réplication,Initialiser la relation de réplication>> transférer les données de la source vers le système de stockage cible.
-. <<Étape 3 : Basculer la réplication pour les cas d’utilisation de migration,Réplication de basculement pour les cas d'utilisation de migration>> pour migrer définitivement les données et les paramètres de configuration du système de fichiers source vers le système de fichiers cible FSx for ONTAP.
+. <<step-1-create-replication-relationship,Étape 1 : Créer la relation de réplication>>, sélectionnez *Migration* comme cas d'utilisation et sélectionnez *Replicate storage VM configuration*.
+. <<step-2-initialize-replication-relationship,Étape 2 : Initialiser la relation de réplication>> transférer les données de la source vers le système de stockage cible.
+. <<step-3-cutover-replication,Étape 3 : Basculer la réplication pour les cas d’utilisation de migration>> pour tester la migration, puis migrer définitivement les données et les paramètres de configuration du système de fichiers source vers le système de fichiers FSx for ONTAP cible.
 
 
 
 
 [[step-1-create-the-replication-relationship]]
+[[step-1-create-replication-relationship]]
 == Étape 1 : Créer la relation de réplication
 
 Répliquez des données entre deux systèmes de fichiers FSx for ONTAP, entre un système ONTAP sur site et un système de fichiers FSx for ONTAP, ou entre Cloud Volumes ONTAP et un système de fichiers FSx for ONTAP.
@@ -200,6 +201,7 @@ Si vous avez créé une relation de réplication à des fins de migration, vous 
 
 
 [[step-2-initialize-the-replication-relationship]]
+[[step-2-initialize-replication-relationship]]
 == Étape 2 : Initialiser la relation de réplication
 
 Initialisez une relation de réplication entre les volumes source et cible pour transférer le snapshot et tous les blocs de données dans NetApp Workload Factory.
@@ -226,6 +228,7 @@ Lorsque l'état de la réplication affiche *Idle*, le transfert de données est 
 
 
 [[step-3-cut-over-replication-for-migration-use-cases]]
+[[step-3-cutover-replication]]
 == Étape 3 : Basculer la réplication pour les cas d’utilisation de migration
 
 Après avoir créé la relation de réplication pour une utilisation de migration, vous devez effectuer le basculement de la réplication afin de finaliser la migration des données et des paramètres de configuration de la machine virtuelle de stockage vers le système de fichiers FSx for ONTAP cible. Le basculement de la réplication migre définitivement les données et les paramètres de configuration de la machine virtuelle de stockage du système de fichiers source vers le système de fichiers FSx for ONTAP cible. Lors du basculement, Workload Factory réplique les données une dernière fois. La machine virtuelle de stockage source passe hors ligne au début du basculement.
@@ -235,25 +238,26 @@ Après avoir créé la relation de réplication pour une utilisation de migratio
 [[plan-for-the-cutover-operation]]
 === Planifiez l'opération de basculement
 
-Tenez compte des éléments suivants lors de la planification de l'opération de basculement pour les cas d'utilisation de migration.
+Tenez compte des points suivants avant de procéder au test et au basculement.
 
 * *Prise en charge des versions de réplication* : les systèmes de stockage source et cible doivent utiliser la même version majeure d’ONTAP. Par exemple, si le système source exécute ONTAP version 9.18.1, le système cible doit également exécuter ONTAP version 9.18.1.
 * *Paramètres de configuration de la machine virtuelle de stockage* :
 +
-** L'opération de basculement ne migre pas tous les paramètres de configuration de la machine virtuelle de stockage vers la machine virtuelle de stockage cible. Par exemple, les paramètres iSCSI, MTU du domaine de diffusion et DNS ne sont pas migrés. Mettez à jour ces paramètres manuellement sur la machine virtuelle de stockage cible après le basculement. Pour plus de détails, consultez la section <<Mise à jour des paramètres de configuration après la bascule,Mise à jour des paramètres de configuration après la bascule>>.
+** L'opération de basculement ne transfère pas l'intégralité des paramètres de configuration de la machine virtuelle de stockage vers la machine virtuelle de stockage cible. Par exemple, les paramètres iSCSI, MTU du domaine de diffusion et DNS ne sont pas transférés. <<update-configuration-settings-after-cutover,Mettez à jour ces paramètres manuellement>> sur la machine virtuelle de stockage cible après le basculement.
 ** Si votre machine virtuelle de stockage utilise l'authentification par tunnel de domaine, configurez et activez un tunnel de domaine sur le système de fichiers avant de commencer la migration.
 
 
 * *Clones* : l’opération de basculement migre les clones en tant que volumes individuels, ce qui consomme davantage d’espace sur le système de fichiers FSx for ONTAP cible. Envisagez de supprimer les clones avant le basculement afin d’éviter une augmentation de la capacité sur la cible.
 * *Volumes de cache* : les machines virtuelles de stockage (storage VM) sources qui contiennent des volumes de cache ne sont pas prises en charge pour le basculement. Supprimez la relation ONTAP FlexCache® avant le basculement afin d'éviter les échecs de migration.
 * *Points d'accès AWS S3* : La réplication par basculement pour les cas d'utilisation de migration n'est pas prise en charge pour les volumes comportant des points d'accès S3. Supprimez les points d'accès S3 du volume source pour éviter les échecs de migration.
-* *Configurations ONTAP S3* : La réplication par basculement pour les cas d'utilisation de migration n'est pas prise en charge pour les vservers avec des configurations ONTAP S3. Supprimez les configurations ONTAP S3, y compris object-store-server, les compartiments (buckets), les utilisateurs, les groupes ou les stratégies sur le vserver, afin d'éviter les échecs de migration.
+* *Configurations ONTAP S3* : la réplication de basculement pour les cas d'utilisation de migration n'est pas prise en charge pour les VM de stockage avec des configurations ONTAP S3. Supprimez les configurations ONTAP S3, notamment object-store-server, les buckets, les utilisateurs, les groupes ou les stratégies, sur la VM de stockage, afin d'éviter les échecs de migration.
 * *Numéros de série LUN et IQN cible iSCSI* : Les numéros de série LUN et l’IQN cible iSCSI changent lors de la bascule.
 
 
 .Avant de commencer
 Examinez ces exigences avant de commencer.
 
+* Vérifiez que l'état de la *migration SVM* est *Activé | Prêt pour le test de basculement* dans le tableau des relations de réplication du système de fichiers de Workload Factory.
 * Empêchez tout accès client à votre machine virtuelle de stockage avant de basculer la réplication.
 * Vérifiez qu'aucun volume source ne fournit de données avant de basculer la réplication.
 * Vérifiez que les données sont synchronisées entre les volumes source et cible avant de basculer la réplication.
@@ -264,6 +268,17 @@ Examinez ces exigences avant de commencer.
 
 
 
+
+
+[[cut-over-replication]]
+=== Basculement de la réplication
+
+Workload Factory vous aide à gérer le processus de basculement pour la réplication dans les cas d'utilisation de migration. Tout d'abord, il teste votre environnement pour confirmer que le basculement peut se dérouler sans problème. Ensuite, il effectue le basculement proprement dit vers le système de fichiers cible.
+
+Avant de terminer le test de migration, assurez-vous de pouvoir accéder à toutes les données sur la machine virtuelle de stockage cible.
+
+Suivez les instructions pour effectuer le basculement de la réplication dans le cadre de cas d'utilisation de migration. L'interface utilisateur vous guide pas à pas tout au long du processus de basculement.
+
 .Étapes
 . Connectez-vous à l'aide de l'un des link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].
 . Sélectionnez le menu image:workloads-menu-icon.png["L'icône du menu hamburger permet d'accéder aux charges de travail telles que le stockage, l'analyse de données d'entreprise (EDA), l'intelligence artificielle (IA), les bases de données, VMware et l'administration."] puis sélectionnez *Stockage*.
@@ -271,7 +286,11 @@ Examinez ces exigences avant de commencer.
 . Dans *FSx for ONTAP*, sélectionnez le système de fichiers qui contient le(s) volume(s) à répliquer.
 . Sélectionnez l’onglet *Replication relationships*.
 . Dans le tableau des relations de réplication, sélectionnez la relation de réplication à basculer, puis sélectionnez *Cut over replication*.
-. Vérifiez les informations dans la boîte de dialogue Cut over replication, puis tapez _cut over_ pour confirmer.
+. Suivez les étapes pour tester le basculement, puis effectuez le basculement proprement dit.
++
+Si vous fermez la boîte de dialogue pendant le processus, vous pouvez vérifier l'état de la migration SVM dans l'onglet *Relations de réplication* et poursuivre l'opération de basculement lorsque vous serez prêt.
+
+. Vérifiez les informations dans la boîte de dialogue de basculement de la réplication, puis tapez _cut over_ pour terminer le processus.
 
 
 . Sélectionnez *Cut over*.
@@ -291,7 +310,7 @@ Après avoir désactivé la réplication pour les cas d'utilisation de migration
 +
 ** Recréez le igroup
 ** Mise à jour du mappage LUN
-** Connectez-vous à chaque client SAN et mettez à jour les paramètres iSCSI/MPIO pour la nouvelle cible et supprimez les anciennes adresses IP de la cible vserver
+** Connectez-vous à chaque client SAN et mettez à jour les paramètres iSCSI/MPIO pour la nouvelle cible, puis supprimez les anciennes adresses IP cibles de la VM de stockage.
 
 
 * Vérifiez que les paramètres MTU du domaine de diffusion sont conformes aux attentes
@@ -304,6 +323,7 @@ Si nécessaire, link:change-tiering-policy.html["modifier la politique de hiéra
 
 
 [[cascade-replication-for-data-protection-volumes]]
+[[cascade-replication]]
 == Réplication en cascade pour les volumes de protection des données
 
 NetApp Workload Factory prend en charge la réplication des volumes de protection des données, également appelés _déploiements en cascade_.  Un _déploiement en cascade_ consiste en une chaîne de relations dans laquelle un volume source est mis en miroir sur un volume secondaire (premier saut) et le volume secondaire est mis en miroir sur un volume tertiaire (deuxième saut).  Si le volume secondaire devient indisponible, vous pouvez synchroniser la relation entre les volumes principal et tertiaire sans effectuer un nouveau transfert de base.

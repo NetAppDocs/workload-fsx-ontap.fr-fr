@@ -6,5 +6,9 @@
 . Dans *FSx for ONTAP*, sélectionnez le système de fichiers qui contient le(s) volume(s) à répliquer.
 . Sélectionnez l’onglet *Replication relationships*.
 . Dans le tableau des relations de réplication, sélectionnez la relation de réplication à basculer, puis sélectionnez *Cut over replication*.
-. Vérifiez les informations dans la boîte de dialogue Cut over replication, puis tapez _cut over_ pour confirmer.
+. Suivez les étapes pour tester le basculement, puis effectuez le basculement proprement dit.
++
+Si vous fermez la boîte de dialogue pendant le processus, vous pouvez vérifier l'état de la migration SVM dans l'onglet *Relations de réplication* et poursuivre l'opération de basculement lorsque vous serez prêt.
+
+. Vérifiez les informations dans la boîte de dialogue de basculement de la réplication, puis tapez _cut over_ pour terminer le processus.
 
