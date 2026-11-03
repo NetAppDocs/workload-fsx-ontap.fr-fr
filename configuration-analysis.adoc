@@ -106,6 +106,22 @@ Les étiquettes de la stratégie d'instantané du volume source et les étiquett
 +
 Augmentez le seuil de capacité des fichiers pour éviter d'atteindre la limite de capacité du volume. Une capacité de fichiers insuffisante (en inodes) empêche l'écriture de données supplémentaires sur le volume. Workload Factory recommande de maintenir l'utilisation de la capacité des fichiers en dessous de 80 % pour permettre la création de nouveaux fichiers.
 
+* *Connecter l'hôte au nœud de basculement*
++
+Workload Factory recommande de connecter les hôtes au nœud de basculement afin de maintenir la connectivité et d’éviter les interruptions lors des basculements.
+
+* *Politique de snapshot SAP HANA*
++
+Configurez la stratégie de snapshot sur « Aucun » pour les volumes SAP HANA afin de réduire les coûts de stockage et d’améliorer les performances des données de base de données actives.
+
+* *Politique de gestion des instantanés MySQL*
++
+Configurez la stratégie de snapshot sur « Aucun » pour les volumes MySQL afin de réduire les coûts de stockage et d'améliorer les performances des données actives de la base de données.
+
+* *Politique de snapshot PostgreSQL*
++
+Définissez la stratégie de snapshot sur « Aucun » pour les volumes PostgreSQL afin de réduire les coûts de stockage et d'améliorer les performances des données de la base de données active.
+
 
 
 
@@ -122,6 +138,18 @@ NetApp Autonomous Ransomware Protection avec intelligence artificielle (ARP/AI) 
 * *Accès non autorisé au volume iSCSI*
 +
 Les volumes hébergeant des données applicatives via iSCSI ne doivent pas autoriser simultanément l'accès NAS. Workload Factory recommande de restreindre l'utilisation d'autres protocoles sur les volumes iSCSI.
+
+* *Lacune concernant la détection multi-appareils ARP/AI*
++
+ARP/AI offre une couverture de protection complète lorsqu'un volume ne comporte qu'un seul périphérique de bloc qui lui est attaché. Si un volume comporte plusieurs périphériques de bloc qui lui sont attachés, Workload Factory les déplace vers de nouveaux volumes afin que chaque volume n'ait qu'un seul périphérique de bloc.
+
+* *CHAP bidirectionnel pour les backends iSCSI de Kubernetes*
++
+Utilisez l'authentification CHAP bidirectionnelle pour les backends iSCSI de Trident afin de garantir l'authentification mutuelle de l'initiateur et de la cible iSCSI. Cela empêche les hôtes non autorisés d'établir des sessions iSCSI avec la machine virtuelle de stockage.
+
+* *Désactivez `showmount` sur la machine virtuelle de stockage de l’application*
++
+Désactivez `showmount` sur la machine virtuelle de stockage d'application pour empêcher les clients de répertorier les exportations auxquelles ils ne peuvent pas accéder.
 
 
 
@@ -168,6 +196,14 @@ Configurez le provisionnement fin pour les volumes FSx for ONTAP hébergeant des
 +
 Configurez les systèmes de fichiers FSx for ONTAP avec les paramètres de connectivité et d’authentification d’API AWS Transform MGN (MGN) requis avant de les utiliser avec AWS MGN.
 
+* *VM de stockage Kubernetes dédiée*
++
+Utilisez une machine virtuelle de stockage dédiée pour les charges de travail Kubernetes. Séparer le stockage Kubernetes facilite sa gestion, simplifie la configuration des politiques et contribue à garantir des paramètres de stockage cohérents.
+
+* *Faire correspondre l’OS de l’igroup à l’hôte*
++
+Faites correspondre le système d'exploitation du groupe d'initiateurs (igroup) au système d'exploitation de l'hôte pour éviter les problèmes d'E/S ou de performances.
+
 
 
 
@@ -204,6 +240,10 @@ Une capacité SSD excédentaire engendre des coûts inutiles. Réduisez le nivea
 * *Volumes NAS inactifs*
 +
 Après 31 jours sans utilisation d’un volume NAS, archivez-le ou supprimez-le afin de réduire les coûts.
+
+* *Nettoyage des clones*
++
+Supprimez les clones de volume datant de plus de 30 jours afin d'optimiser l'utilisation du stockage et de réduire les coûts.
 
 
 
