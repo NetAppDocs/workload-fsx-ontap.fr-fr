@@ -1,0 +1,133 @@
+---
+sidebar: sidebar 
+permalink: create-custom-rule.html 
+keywords: create custom rule, byor, custom rules, fsx, ontap, well architected, rule builder 
+summary: Créez une règle architecturale personnalisée à l’aide du langage naturel pour appliquer les normes de votre organisation à FSx for ONTAP dans NetApp Workload Factory. 
+---
+= Créez une règle personnalisée dans NetApp Workload Factory
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Créez des règles personnalisées pour vérifier vos ressources FSx for ONTAP dans Workload Factory par rapport aux normes de votre organisation. Décrivez chaque règle en langage clair, et le générateur de règles d’IA transformera votre demande en une règle validée.
+
+.Description de la tâche
+Le processus de configuration des règles vous guide à chaque étape : création de la règle, vérification de son interprétation par l’IA et contrôle des résultats avant de planifier des révisions régulières. Vous gardez le contrôle tout au long du processus. Le système suggère une règle en fonction de votre prompt, mais rien ne se produit tant que vous ne l’avez pas approuvée.
+
+
+NOTE: Si l'administrateur de votre compte a désactivé les fonctionnalités d'IA, un message s'affichera et vous ne pourrez ni créer ni modifier de règles personnalisées. Contactez votre administrateur ou link:https://docs.netapp.com/us-en/workload-setup-admin/manage-genai-features.html["Découvrez l'administration de l'IA"^].
+
+.Avant de commencer
+* Vous avez configuré les identifiants AWS avec un accès en lecture seule.
+* Vous disposez d'identifiants ONTAP avec des autorisations de visionneuse.
+* Vous disposez d'un lien ou d'un agent configuré pour la connectivité FSx for ONTAP.
+* Vous comprenez que la création de règles personnalisées utilise le service d'IA Bedrock de NetApp.
+
+
+
+
+[[create-a-rule]]
+== Créer une règle
+
+.Étapes
+. Connectez-vous à l'aide de l'un des link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].
+. Sélectionnez le menu image:workloads-menu-icon.png["L'icône du menu hamburger permet d'accéder aux charges de travail telles que le stockage, l'analyse de données d'entreprise (EDA), l'intelligence artificielle (IA), les bases de données, VMware et l'administration."] puis sélectionnez *Well-architected* > *Rule builder*.
++
+Lorsque vous ouvrez l'éditeur de règles, des exemples d'invites s'affichent pour vous aider à rédiger votre règle personnalisée. Vous pouvez sélectionner *Copier l'invite* pour copier un exemple d'invite dans la zone de texte de la boîte de dialogue AI.
+
+. Dans le champ *Créer une règle*, saisissez la description de votre règle en langage naturel. Soyez aussi précis que possible concernant :
++
+** Quel type de ressource vous vérifiez (système de fichiers, volume ou cache).
+** Quelle condition vous validez.
+** Quel seuil définit la conformité.
+** Pourquoi cette règle est importante (optionnel mais recommandé).
+
+
+. Sélectionnez image:arrow.png["L'icône de menu sert à lancer la génération des règles., width=18"].
++
+L'IA analyse votre requête et génère une définition de règle.
+
+
+
+
+
+[[review-the-ai-interpretation]]
+== Examiner l'interprétation de l'IA
+
+Le générateur de règles affiche :
+
+Interprétation analysée:: Comment l'IA a compris votre consigne en langage clair.
+Définition de la règle:: La règle structurée comprenant le type de ressource, la logique de condition et les critères d'évaluation.
+Raisonnement:: Pourquoi l'IA a interprété votre requête de cette manière.
+Indicateur de confiance:: Le degré de confiance du système dans cette interprétation.
+
+
+.Étapes
+. Vérifiez l'interprétation pour vous assurer qu'elle correspond à ce que vous aviez l'intention de faire.
+. Vérifiez que la définition de la règle est correcte. Si l'interprétation est imprécise ou erronée, le système peut poser des questions telles que :
++
+** Quelle ressource faut-il vérifier?
+** Quelle valeur ou limite définit la conformité?
+** À quelle fréquence la règle doit-elle être exécutée ?
+
+
+. Répondez aux questions de clarification de l'IA.
++
+L'IA pourrait vous proposer plusieurs options pour mieux comprendre vos besoins. Répondez à chaque question et sélectionnez *Continuer*, ou sélectionnez *Passer* pour ignorer les questions facultatives.
+
+. Après avoir répondu à toutes les questions, sélectionnez *Continuer* pour créer votre règle.
+
+
+
+
+[[test-the-rule]]
+== Tester la règle
+
+Avant d'enregistrer ou de programmer la règle, effectuez un test pour voir quelles ressources elle affecte.
+
+.Étapes
+. Sélectionnez *Valider la règle*.
++
+Le système évalue toutes les ressources concernées par rapport à votre logique de règles.
+
+. Examinez les résultats de la validation :
++
+** Ressources évaluées : nombre total de ressources vérifiées
+** Conforme : Ressources qui répondent aux critères de la règle
+** Non conformes : ressources qui ne répondent pas aux critères
+** Évaluations ayant échoué : ressources qui n’ont pas pu être évaluées (avec détails d’erreur)
+
+
+
+
+
+
+[[save-or-schedule-the-rule]]
+== Enregistrer ou planifier la règle
+
+Une fois votre règle validée, vous pouvez l'enregistrer comme brouillon ou la configurer pour qu'elle s'exécute régulièrement.
+
+.Étapes
+. Effectuez l'une des opérations suivantes :
++
+** Pour programmer une évaluation régulière, définissez la fréquence d'évaluation et sélectionnez *Schedule*. La règle est activée et s'exécute selon la planification définie.
+** Pour enregistrer après validation sans planification, sélectionnez *Enregistrer comme brouillon*. La règle est enregistrée mais n’est pas évaluée tant que vous ne la planifiez pas.
+** Pour supprimer la règle, sélectionnez *Supprimer*.
+
+
+
+
+.Résultat
+Votre règle personnalisée est créée et répertoriée dans le catalogue de règles. Si vous définissez une planification, la règle vérifie vos ressources FSx for ONTAP à la fréquence spécifiée. Si vous modifiez la règle ultérieurement, le système vous guide à travers les mêmes étapes — discussion, vérification, approbation et validation — avant d’enregistrer la version mise à jour.
+
+
+
+[[whats-next]]
+== Et la suite
+
+link:manage-custom-rules.html["Gérer les règles personnalisées"]

@@ -1,0 +1,113 @@
+---
+sidebar: sidebar 
+permalink: learn-custom-rules.html 
+keywords: custom rules, byor, bring your own rules, fsx, ontap, well architected, organizational standards 
+summary: Découvrez comment définir et gérer vos propres règles architecturales pour appliquer les normes organisationnelles ainsi que les meilleures pratiques de NetApp dans NetApp Workload Factory. 
+---
+= Découvrez les règles personnalisées dans NetApp Workload Factory
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Les règles personnalisées vous permettent de définir, de vérifier et d'appliquer vos propres normes d'architecture, ainsi que les meilleures pratiques de NetApp, dans le catalogue de règles de NetApp Workload Factory.
+
+
+
+[[overview]]
+== Aperçu
+
+Le générateur de règles vous permet de créer des règles personnalisées en langage simple. Ces règles sont vérifiées sur l’ensemble de vos ressources. Les règles personnalisées vous aident à faire respecter les normes, les limites de risque et les exigences opérationnelles de votre organisation, que les règles par défaut ne couvrent pas nécessairement.
+
+
+NOTE: Si l'administrateur de votre compte a désactivé les fonctionnalités d'IA, vous ne pouvez ni créer de nouvelles règles ni modifier les règles existantes. Les règles déjà planifiées continuent de s'exécuter. link:https://docs.netapp.com/us-en/workload-setup-admin/manage-genai-features.html["Découvrez comment gérer les fonctionnalités d'IA"^].
+
+
+
+[[how-custom-rules-work]]
+== Comment fonctionnent les règles personnalisées
+
+Les règles personnalisées utilisent l’IA pour transformer des instructions en langage naturel en règles claires et structurées. L’IA traduit votre requête, suggère une règle, explique comment elle a interprété vos instructions et demande votre approbation avant d’enregistrer ou de planifier la règle. Ce processus permet de garantir que :
+
+* La règle est clairement définie et vérifiée pour détecter les erreurs
+* Aucun code personnalisé n'est exécuté
+* Vous pouvez consulter précisément les éléments qui seront évalués avant d'approuver la règle
+* Chaque règle personnalisée comprend le type de ressource à évaluer, la logique de condition, la gravité, le calendrier d'évaluation et les recommandations de correction.
+
+
+
+
+[[before-you-begin]]
+== Avant de commencer
+
+Avant de pouvoir créer et exécuter des règles personnalisées, assurez-vous de disposer des éléments suivants :
+
+Identifiants AWS:: Accès en lecture seule à votre environnement AWS. Les règles personnalisées nécessitent des autorisations en lecture seule comme limite de sécurité. link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Ajouter les informations d'identification AWS à Workload Factory"].
+Identifiants ONTAP:: Utilisateur de visualisation FSx avec des autorisations en lecture seule. Workload Factory crée un utilisateur en lecture seule sur chaque système de fichiers FSx for ONTAP s'il n'en existe pas déjà un, afin que Workload Factory puisse effectuer des évaluations.
+Lien ou agent:: Requis uniquement pour les règles qui doivent se connecter directement à ONTAP pour vérifier les paramètres auxquels les API AWS ne peuvent pas accéder. link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html["Connectez-vous à un système de fichiers FSx for ONTAP à l'aide d'un lien"^].
+
+
+
+
+[[limitations]]
+== Limitations
+
+* Les règles ne peuvent pas corriger les problèmes automatiquement. Vous devez corriger vous-même les ressources non conformes en suivant les instructions fournies.
+* Chaque règle vérifie un seul type de ressource, mais peut s'appliquer à un large éventail de ressources. Par exemple, une règle peut évaluer les volumes dans plusieurs régions, dans toutes les régions ou sur plusieurs comptes. Pour évaluer différents types de ressources, créez des règles distinctes.
+* Les règles sont exécutées au maximum une fois par heure afin d'éviter les analyses excessives.
+* Les règles peuvent uniquement lire votre environnement et ne peuvent pas le modifier.
+* Vous pourrez modifier ces paramètres ultérieurement à partir du catalogue des règles.
+
+
+
+
+[[rule-lifecycle]]
+== Cycle de vie des règles
+
+Les règles personnalisées progressent à travers les états suivants :
+
+En cours:: Création ou vérification des règles.
+Échec de la création:: Impossible de créer la règle. Vous pouvez rouvrir la règle et continuer à la modifier dans le chat.
+Brouillon:: Enregistré, mais pas encore planifié.
+Projet validé:: La validation a réussi et peut être enregistrée ou programmée.
+Édition:: Mise à jour d'une version préliminaire d'une règle existante. La règle planifiée actuelle continuera de s'exécuter jusqu'à ce que vous enregistriez les modifications.
+Programmé:: Actif et s'exécute selon le calendrier défini.
+Désactivées:: En pause, mais non supprimée. Peut être réactivée.
+Supprimé:: Supprimé définitivement.
+
+
+
+
+[[custom-rule-examples]]
+== Exemples de règles personnalisées
+
+Protection du volume de production:: « Tous les volumes portant l’étiquette ‘Prod’ doivent avoir une stratégie de snapshot installée »
++
+--
+Cette règle vérifie que les volumes de production disposent d'une stratégie de snapshots afin de les protéger conformément aux exigences de l'entreprise.
+
+--
+Hiérarchisation des volumes d’archive:: "Tous les volumes portant l'étiquette 'Archive' doivent avoir une politique de hiérarchisation définie sur 'All'"
++
+--
+Cette règle permet de réduire les coûts en déplaçant automatiquement les données archivées vers un stockage moins coûteux.
+
+--
+Normes de dénomination des systèmes de fichiers:: "Tous les systèmes de fichiers doivent respecter la convention d'appellation 'fsx-{environment}-{application}'"
++
+--
+Cette règle garantit que les systèmes de fichiers respectent les conventions d'appellation de l'organisation pour faciliter la gestion et la répartition des coûts.
+
+--
+
+
+
+
+[[what-to-do-next]]
+== Que faire ensuite
+
+link:create-custom-rule.html["Créer une règle personnalisée"] link:manage-custom-rules.html["Gérer les règles personnalisées"]

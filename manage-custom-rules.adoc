@@ -1,0 +1,142 @@
+---
+sidebar: sidebar 
+permalink: manage-custom-rules.html 
+keywords: manage rules, edit rules, disable rules, delete rules, rule catalog, byor 
+summary: Consultez, modifiez, mettez en pause, reprenez, testez et supprimez les règles architecturales personnalisées du catalogue de règles dans NetApp Workload Factory. 
+---
+= Gérez les règles personnalisées dans NetApp Workload Factory
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Le catalogue de règles dans NetApp Workload Factory vous offre un emplacement unique pour gérer toutes vos règles d'architecture personnalisées. Vous pouvez consulter les détails et les résultats des règles, les modifier, exécuter des tests rapides, suspendre ou reprendre les évaluations planifiées, et supprimer celles dont vous n'avez plus besoin.
+
+
+
+[[view-the-rules-catalog]]
+== Consultez le catalogue des règles
+
+Le catalogue des règles affiche toutes les règles que vous avez créées, leur statut, leur planification et leurs derniers résultats.
+
+.Étapes
+. Connectez-vous à l'aide de l'un des link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].
+. Sélectionnez le menu image:workloads-menu-icon.png["L'icône du menu hamburger permet d'accéder aux charges de travail telles que le stockage, l'analyse de données d'entreprise (EDA), l'intelligence artificielle (IA), les bases de données, VMware et l'administration."] puis sélectionnez *Well-architected* > *Rule builder*.
+. Sélectionnez *Afficher vos règles* pour ouvrir le catalogue des règles.
+
+
+
+
+[[view-rule-results]]
+== Afficher les résultats de la règle
+
+Les résultats indiquent quelles ressources respectent votre règle et lesquelles ne la respectent pas.
+
+.Étapes
+. Dans le catalogue des règles, sélectionnez la règle que vous souhaitez consulter.
+. Sélectionnez l’onglet *Résultats de toutes les exécutions*.
+. Sélectionnez **Afficher les détails** pour voir les résultats de chaque exécution.
+
+
+Si la vérification a échoué pour certains éléments, consultez le message d'erreur pour en connaître la raison. Les causes fréquentes sont des problèmes de connexion, des autorisations manquantes ou un lien non configuré.
+
+
+
+[[edit-a-custom-rule]]
+== Modifier une règle personnalisée
+
+Vous pouvez renommer une règle à tout moment. Vous pouvez également modifier sa description, son type de ressource, sa planification, sa gravité, sa logique conditionnelle, son périmètre d'évaluation et ses recommandations de correction.
+
+Vous pouvez renommer une règle depuis le catalogue des règles ou depuis sa fiche détaillée. Pour modifier tout autre paramètre de règle, commencez par le catalogue des règles.
+
+.Étapes
+. Dans le catalogue des règles, sélectionnez la règle que vous souhaitez modifier.
+. Effectuez l'une des opérations suivantes :
++
+** Pour renommer la règle, mettez à jour son nom dans le catalogue ou dans la fiche de détails de la règle.
+** Pour modifier d'autres paramètres de règle, sélectionnez *Modifier*.
++
+La règle s'ouvre en mode chat avec son historique complet.
+
+
+
+. Demandez les modifications que vous souhaitez apporter, ou mettez à jour votre demande dans le chat.
++
+Si la création de la règle a échoué précédemment, vous pouvez continuer à partir de cette règle et mettre à jour votre demande dans le chat.
+
+. Veuillez consulter l'explication mise à jour et le résumé des modifications.
++
+Le système affiche les modifications apportées à la règle actuelle avant que vous ne l'enregistriez.
+
+. Si la règle est en mode brouillon, sélectionnez *Valider la règle* pour tester la logique mise à jour.
+. Effectuez l'une des opérations suivantes :
++
+** Pour conserver les modifications, sélectionnez *Enregistrer* afin de remplacer la règle actuelle. Si vous avez modifié la planification, enregistrez la planification mise à jour. Si vous n’avez pas modifié la planification, elle reste inchangée.
+** Pour annuler les modifications, sélectionnez *Annuler les modifications*. La règle retrouve sa version précédente et quitte le mode édition.
+
+
+
+
+Pendant que vous modifiez une règle, celle-ci apparaît comme « En cours de modification » pour vous. Les autres utilisateurs voient toujours la règle planifiée actuelle, et les exécutions planifiées se poursuivent normalement jusqu'à ce que vous enregistriez les modifications.
+
+
+
+[[pause-a-rule]]
+== Suspendre une règle
+
+Mettez une règle en pause pour interrompre son évaluation sans la supprimer. Les règles mises en pause restent dans le catalogue et vous pouvez les réactiver à tout moment.
+
+.Étapes
+. Dans le catalogue des règles, sélectionnez la règle que vous souhaitez suspendre.
+. Effectuez l'une des opérations suivantes :
++
+** Pour suspendre une règle planifiée, sélectionnez *Pause*, puis confirmez. La règle cesse alors de s'exécuter selon sa planification.
+** Pour reprendre une règle suspendue, sélectionnez *Reprendre*, puis confirmez. La règle reprend ses évaluations régulières.
+
+
+
+
+
+
+[[delete-a-custom-rule]]
+== Supprimer une règle personnalisée
+
+Supprimez définitivement une règle lorsque vous n'en avez plus besoin. Cette action est irréversible.
+
+.Étapes
+. Dans le catalogue des règles, sélectionnez la règle que vous souhaitez supprimer.
+. Sélectionnez *Supprimer*.
+. Confirmez que vous souhaitez supprimer définitivement la règle.
+
+
+.Résultat
+La règle est retirée du catalogue. Tout l'historique des évaluations est supprimé.
+
+
+
+[[run-a-quick-test]]
+== Effectuez un test rapide
+
+Effectuez un test rapide à tout moment pour vérifier la conformité actuelle sans attendre la prochaine exécution planifiée.
+
+.Étapes
+. Dans le catalogue des règles, sélectionnez la règle que vous souhaitez évaluer.
+. Sélectionnez *Validate*.
++
+Le système évalue toutes les ressources concernées par rapport à la logique de la règle.
+
+. Consultez les résultats pour connaître l'état actuel de la conformité.
+
+
+Les tests sont audités et figurent dans l'historique d'évaluation de la règle.
+
+
+
+[[related-information]]
+== Informations connexes
+
+link:learn-custom-rules.html["En savoir plus sur les règles personnalisées"]

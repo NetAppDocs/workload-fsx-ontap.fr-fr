@@ -3444,4 +3444,166 @@
   <block id="6d24db4e0644546ba5972d86f0474123" category="paragraph">Les clés de balise d'allocation des coûts AWS et les valeurs de clé de balise ajoutent un niveau de filtrage supplémentaire pour identifier des coûts spécifiques. Une _balise_ est composée d'une clé et d'une valeur. Pour filtrer par clés de balise et valeurs de clé de balise, attribuez des balises à vos systèmes de fichiers FSx for ONTAP. <block ref="8ea95efe0fef689337ea8960e5c1861f" category="inline-link-macro-rx"></block></block>
   <block id="00785d0f1296ca2a8d0846890b38a469" category="paragraph">En plus des données de coûts du tableau de bord des coûts, le résumé analytique des coûts généré par l’IA présente les coûts de votre système de fichiers FSx for ONTAP et les habitudes de dépenses de votre organisation. Vous pouvez générer des fichiers CSV des ressources de votre système de fichiers FSx for ONTAP afin de les partager avec votre équipe et vos parties prenantes.</block>
   <block id="1e1ba6e3e89c5c46a8b08f6bb7ca5b1e" category="paragraph">Envoyez un courriel à ng-CyberVault@netapp.com pour commencer.</block>
+  <block id="5a42b43100ba01e0c1d04cf83985f0a6" category="summary">Créez une règle architecturale personnalisée à l’aide du langage naturel pour appliquer les normes de votre organisation à FSx for ONTAP dans NetApp Workload Factory.</block>
+  <block id="4049afdb7ff78ea7ac28f61f9f797fd8" category="doc">Créez une règle personnalisée dans NetApp Workload Factory</block>
+  <block id="5372fe69d86b61601b1f331c4b46a82a" category="paragraph">Créez des règles personnalisées pour vérifier vos ressources FSx for ONTAP dans Workload Factory par rapport aux normes de votre organisation. Décrivez chaque règle en langage clair, et le générateur de règles d’IA transformera votre demande en une règle validée.</block>
+  <block id="4995e76cedbca110dbb7cefe85e61d77" category="paragraph">Le processus de configuration des règles vous guide à chaque étape : création de la règle, vérification de son interprétation par l’IA et contrôle des résultats avant de planifier des révisions régulières. Vous gardez le contrôle tout au long du processus. Le système suggère une règle en fonction de votre prompt, mais rien ne se produit tant que vous ne l’avez pas approuvée.</block>
+  <block id="c6cf187b99e57acdf56ff23a5013546b" category="admonition">Si l'administrateur de votre compte a désactivé les fonctionnalités d'IA, un message s'affichera et vous ne pourrez ni créer ni modifier de règles personnalisées. Contactez votre administrateur ou <block ref="a4efb9d0168cfdc15063741b91ed0040" category="inline-link-macro-rx"></block>.</block>
+  <block id="5d9b02c1296ee6f0b859a2db7ccf523b" category="list-text">Vous avez configuré les identifiants AWS avec un accès en lecture seule.</block>
+  <block id="0876642abf2aedd4eb3ae76dd87f7586" category="list-text">Vous disposez d'identifiants ONTAP avec des autorisations de visionneuse.</block>
+  <block id="0e8e25fe832310f010ce2950b2110974" category="list-text">Vous disposez d'un lien ou d'un agent configuré pour la connectivité FSx for ONTAP.</block>
+  <block id="fadf874162a190084750a51220f07180" category="list-text">Vous comprenez que la création de règles personnalisées utilise le service d'IA Bedrock de NetApp.</block>
+  <block id="536d32f8526dd0faea40f78af4cad034" category="section-title">Créer une règle</block>
+  <block id="d50a7101e42fa60ccc6f625b2ce3048e" category="list-text">Sélectionnez le menu <block ref="d1917ed039a7bd34b3d1373e5ffc5ece" category="inline-image-macro-rx" type="image"></block> puis sélectionnez *Well-architected* &gt; *Rule builder*.</block>
+  <block id="3f87c61ee7c070ec896e14d55b132e25" category="paragraph">Lorsque vous ouvrez l'éditeur de règles, des exemples d'invites s'affichent pour vous aider à rédiger votre règle personnalisée. Vous pouvez sélectionner *Copier l'invite* pour copier un exemple d'invite dans la zone de texte de la boîte de dialogue AI.</block>
+  <block id="ab99baf0da39867076eea6e470865275" category="list-text">Dans le champ *Créer une règle*, saisissez la description de votre règle en langage naturel. Soyez aussi précis que possible concernant :</block>
+  <block id="d8eefaf38d3f8455541df01bc5d6831b" category="list-text">Quel type de ressource vous vérifiez (système de fichiers, volume ou cache).</block>
+  <block id="4e86c5f58eeed68b966c1b5f2cf16853" category="list-text">Quelle condition vous validez.</block>
+  <block id="dfa6d1dd6fe7783b6568e7fea39c0f7a" category="list-text">Quel seuil définit la conformité.</block>
+  <block id="7bceccf61b56c9e997b6748a3219ca2c" category="list-text">Pourquoi cette règle est importante (optionnel mais recommandé).</block>
+  <block id="7950e8546d11cf9aebf1d18723eacb62" category="inline-image-macro">L'icône de menu sert à lancer la génération des règles., width=18</block>
+  <block id="448a77fdd0ab1119d70eda7dfad65fa7" category="list-text">Sélectionnez <block ref="9bf5747e0eee12d0fcc488bd415a8bc3" category="inline-image-macro-rx" type="image"></block>.</block>
+  <block id="15fc6fdd1dd9d66889237c7e8a75d290" category="paragraph">L'IA analyse votre requête et génère une définition de règle.</block>
+  <block id="1c88936123899b4423b51efeb098f008" category="section-title">Examiner l'interprétation de l'IA</block>
+  <block id="28ea3f4811ef4cb7fc2b7f08d6fce5a7" category="paragraph">Le générateur de règles affiche :</block>
+  <block id="0cd216375fd6782b45d9f84efb6f3e84" category="list-text">Interprétation analysée</block>
+  <block id="9d009657b96c5aad9fa21f1828b73bcf" category="list-text">Comment l'IA a compris votre consigne en langage clair.</block>
+  <block id="e35d59c335e26445eed5e3cf4fc88047" category="list-text">Définition de la règle</block>
+  <block id="69dc0eb643b0cd391da1782b1c0156e4" category="list-text">La règle structurée comprenant le type de ressource, la logique de condition et les critères d'évaluation.</block>
+  <block id="87a222577e9c7b7a0739d92337f4fe46" category="list-text">Raisonnement</block>
+  <block id="22e3f2781979bb9f2227381c2a3c30ea" category="list-text">Pourquoi l'IA a interprété votre requête de cette manière.</block>
+  <block id="6e536680660f9f562a1a4ab7cdbba4e1" category="list-text">Indicateur de confiance</block>
+  <block id="0f1a4e7b1fc79efcfb93a1a4b715f3d0" category="list-text">Le degré de confiance du système dans cette interprétation.</block>
+  <block id="f89784f298e9f6255c6acd2f32b4051a" category="list-text">Vérifiez l'interprétation pour vous assurer qu'elle correspond à ce que vous aviez l'intention de faire.</block>
+  <block id="b5d05144afb692d05ca26ecfffcee694" category="list-text">Vérifiez que la définition de la règle est correcte. Si l'interprétation est imprécise ou erronée, le système peut poser des questions telles que :</block>
+  <block id="1f3c02b25897cff55c5d7894bed5c157" category="list-text">Quelle ressource faut-il vérifier?</block>
+  <block id="2d351367dd00ae9228b6503d57500015" category="list-text">Quelle valeur ou limite définit la conformité?</block>
+  <block id="d24a425ef6891cb0134794ec6897a668" category="list-text">À quelle fréquence la règle doit-elle être exécutée ?</block>
+  <block id="32e95e9677f9ef2f50e204cf4b6401d7" category="list-text">Répondez aux questions de clarification de l'IA.</block>
+  <block id="7d84a0d9d14a5f050503a7b9b00b3435" category="paragraph">L'IA pourrait vous proposer plusieurs options pour mieux comprendre vos besoins. Répondez à chaque question et sélectionnez *Continuer*, ou sélectionnez *Passer* pour ignorer les questions facultatives.</block>
+  <block id="f7dd96479a94850934674d003fe54f52" category="list-text">Après avoir répondu à toutes les questions, sélectionnez *Continuer* pour créer votre règle.</block>
+  <block id="66178252f08edeeeeda7bfc5ebf5227b" category="section-title">Tester la règle</block>
+  <block id="12eb9fcd23a3f9a01164b30552a1e02c" category="paragraph">Avant d'enregistrer ou de programmer la règle, effectuez un test pour voir quelles ressources elle affecte.</block>
+  <block id="e0924f9cecf28912d6b59208f0ee9242" category="list-text">Sélectionnez *Valider la règle*.</block>
+  <block id="87d68b4e906936ea67c73d25fddbb199" category="paragraph">Le système évalue toutes les ressources concernées par rapport à votre logique de règles.</block>
+  <block id="6ad0887ee719e958ea66bc1d5ca7ed60" category="list-text">Examinez les résultats de la validation :</block>
+  <block id="31d7cb3d933c56805e03dca75c02893d" category="list-text">Ressources évaluées : nombre total de ressources vérifiées</block>
+  <block id="c3e6edb3feeaf77e1989872831656640" category="list-text">Conforme : Ressources qui répondent aux critères de la règle</block>
+  <block id="00d56e696324ec288953d4f8b2cfec0f" category="list-text">Non conformes : ressources qui ne répondent pas aux critères</block>
+  <block id="bd86697cf08c2fc5775c698f872f3628" category="list-text">Évaluations ayant échoué : ressources qui n’ont pas pu être évaluées (avec détails d’erreur)</block>
+  <block id="24a910eeb4468fa91fa54136e064eb5d" category="section-title">Enregistrer ou planifier la règle</block>
+  <block id="cdac1db1869db85a5ed349854c63c6bf" category="paragraph">Une fois votre règle validée, vous pouvez l'enregistrer comme brouillon ou la configurer pour qu'elle s'exécute régulièrement.</block>
+  <block id="365d382b2d9ecca9b0d40171c69b38ff" category="list-text">Effectuez l'une des opérations suivantes :</block>
+  <block id="39a7241c7fb2f38f3a304dc5a7ddd33e" category="list-text">Pour programmer une évaluation régulière, définissez la fréquence d'évaluation et sélectionnez *Schedule*. La règle est activée et s'exécute selon la planification définie.</block>
+  <block id="9c85906f54c1b8a93d6470f07300ddfa" category="list-text">Pour enregistrer après validation sans planification, sélectionnez *Enregistrer comme brouillon*. La règle est enregistrée mais n’est pas évaluée tant que vous ne la planifiez pas.</block>
+  <block id="4a5aaf656967e8a439bf519ae6b59880" category="list-text">Pour supprimer la règle, sélectionnez *Supprimer*.</block>
+  <block id="a1c63e33653cd43f47951d30d948a4f4" category="paragraph">Votre règle personnalisée est créée et répertoriée dans le catalogue de règles. Si vous définissez une planification, la règle vérifie vos ressources FSx for ONTAP à la fréquence spécifiée. Si vous modifiez la règle ultérieurement, le système vous guide à travers les mêmes étapes — discussion, vérification, approbation et validation — avant d’enregistrer la version mise à jour.</block>
+  <block id="79d32aa7b3e52f3c6db178577378b427" category="inline-link-macro">Gérer les règles personnalisées</block>
+  <block id="f571cd95e32f7c421382198bc0dd0eae" category="paragraph"><block ref="f571cd95e32f7c421382198bc0dd0eae" category="inline-link-macro-rx"></block></block>
+  <block id="ce245aab753e2723bfd040fed4abf11f" category="summary">Découvrez comment définir et gérer vos propres règles architecturales pour appliquer les normes organisationnelles ainsi que les meilleures pratiques de NetApp dans NetApp Workload Factory.</block>
+  <block id="7d242f235430b1bf813d847afa9c75af" category="doc">Découvrez les règles personnalisées dans NetApp Workload Factory</block>
+  <block id="311939b9d3db153a7ced12abaf3717a0" category="paragraph">Les règles personnalisées vous permettent de définir, de vérifier et d'appliquer vos propres normes d'architecture, ainsi que les meilleures pratiques de NetApp, dans le catalogue de règles de NetApp Workload Factory.</block>
+  <block id="3b878279a04dc47d60932cb294d96259" category="section-title">Aperçu</block>
+  <block id="91b90f08c0d07c5aa66b502a1d12c868" category="paragraph">Le générateur de règles vous permet de créer des règles personnalisées en langage simple. Ces règles sont vérifiées sur l’ensemble de vos ressources. Les règles personnalisées vous aident à faire respecter les normes, les limites de risque et les exigences opérationnelles de votre organisation, que les règles par défaut ne couvrent pas nécessairement.</block>
+  <block id="48dc51848c127d267cdd7ab1bcd0fe5e" category="inline-link-macro">Découvrez comment gérer les fonctionnalités d'IA</block>
+  <block id="01b363e0fd4d8a4ccc9789787974b41d" category="admonition">Si l'administrateur de votre compte a désactivé les fonctionnalités d'IA, vous ne pouvez ni créer de nouvelles règles ni modifier les règles existantes. Les règles déjà planifiées continuent de s'exécuter. <block ref="0d265466472513eb45c1ef2960b8028d" category="inline-link-macro-rx"></block>.</block>
+  <block id="2d5a2d8915799663f0b12f296909b0d7" category="section-title">Comment fonctionnent les règles personnalisées</block>
+  <block id="4edc72502b9f9929e41bae938a7490c1" category="paragraph">Les règles personnalisées utilisent l’IA pour transformer des instructions en langage naturel en règles claires et structurées. L’IA traduit votre requête, suggère une règle, explique comment elle a interprété vos instructions et demande votre approbation avant d’enregistrer ou de planifier la règle. Ce processus permet de garantir que :</block>
+  <block id="0465277e228b6cf7f37c1fab3872f9cd" category="list-text">La règle est clairement définie et vérifiée pour détecter les erreurs</block>
+  <block id="f2b92cb195f44b1f57205f66b9c1c992" category="list-text">Aucun code personnalisé n'est exécuté</block>
+  <block id="f6b50ace5a7da2eb893c9a1a1c3971be" category="list-text">Vous pouvez consulter précisément les éléments qui seront évalués avant d'approuver la règle</block>
+  <block id="110a917dc178ad706edce62d767a4196" category="list-text">Chaque règle personnalisée comprend le type de ressource à évaluer, la logique de condition, la gravité, le calendrier d'évaluation et les recommandations de correction.</block>
+  <block id="aa5bf59269969e22f1e91f0116790d69" category="paragraph">Avant de pouvoir créer et exécuter des règles personnalisées, assurez-vous de disposer des éléments suivants :</block>
+  <block id="2c4eed705dd3e0adf6e7194858d8dff7" category="list-text">Identifiants AWS</block>
+  <block id="287ae8bc216279a75c04344894e04b7f" category="inline-link-macro">Ajouter les informations d'identification AWS à Workload Factory</block>
+  <block id="7494074c4fddc030d2901e19b4299fbc" category="list-text">Accès en lecture seule à votre environnement AWS. Les règles personnalisées nécessitent des autorisations en lecture seule comme limite de sécurité. <block ref="3cc095eb9cb9898bd77210cc5e32ef56" category="inline-link-macro-rx"></block>.</block>
+  <block id="823a6e1d7fe661be55dd3af05f972b11" category="list-text">Identifiants ONTAP</block>
+  <block id="2fe1ca0ae9374dba8f39842024c0183d" category="list-text">Utilisateur de visualisation FSx avec des autorisations en lecture seule. Workload Factory crée un utilisateur en lecture seule sur chaque système de fichiers FSx for ONTAP s'il n'en existe pas déjà un, afin que Workload Factory puisse effectuer des évaluations.</block>
+  <block id="04d1424a4b58f665f6537d166f4f9750" category="list-text">Lien ou agent</block>
+  <block id="b68341d527b58582cc7cb537c3230cd8" category="inline-link-macro">Connectez-vous à un système de fichiers FSx for ONTAP à l'aide d'un lien</block>
+  <block id="1a9a7cbcff7e420530f8c372f3d5adee" category="list-text">Requis uniquement pour les règles qui doivent se connecter directement à ONTAP pour vérifier les paramètres auxquels les API AWS ne peuvent pas accéder. <block ref="24b9156f94ab02a475dde64452245780" category="inline-link-macro-rx"></block>.</block>
+  <block id="e646e16bee8b32e6ea29e30d01970a6c" category="section-title">Limitations</block>
+  <block id="97897c725b297f3a24f29e0cb3d12838" category="list-text">Les règles ne peuvent pas corriger les problèmes automatiquement. Vous devez corriger vous-même les ressources non conformes en suivant les instructions fournies.</block>
+  <block id="e0ff3e32dbc4b668a800d5b59c47613b" category="list-text">Chaque règle vérifie un seul type de ressource, mais peut s'appliquer à un large éventail de ressources. Par exemple, une règle peut évaluer les volumes dans plusieurs régions, dans toutes les régions ou sur plusieurs comptes. Pour évaluer différents types de ressources, créez des règles distinctes.</block>
+  <block id="3f84490332db2de49bed3d46ab452bb0" category="list-text">Les règles sont exécutées au maximum une fois par heure afin d'éviter les analyses excessives.</block>
+  <block id="499ed12f9f73ef11f2d3afd859dacba5" category="list-text">Les règles peuvent uniquement lire votre environnement et ne peuvent pas le modifier.</block>
+  <block id="7d178946e8d76597de91865cae420fb6" category="list-text">Vous pourrez modifier ces paramètres ultérieurement à partir du catalogue des règles.</block>
+  <block id="3414a9edc41238183f8bcc3192e49adf" category="section-title">Cycle de vie des règles</block>
+  <block id="990ef24c1b7e8a2bf1d9ad948d75e88c" category="paragraph">Les règles personnalisées progressent à travers les états suivants :</block>
+  <block id="b6e0b0c90cfbddfe767f137f8066d1df" category="list-text">En cours</block>
+  <block id="d4008ffe54f55490997ab0d5940aafb3" category="list-text">Création ou vérification des règles.</block>
+  <block id="b75ff201f3276decaffcefb7b216622f" category="list-text">Échec de la création</block>
+  <block id="db78d463a1f2fbb737aa54f862bd0d4b" category="list-text">Impossible de créer la règle. Vous pouvez rouvrir la règle et continuer à la modifier dans le chat.</block>
+  <block id="f03ab16cd58372c77ba45a3d9a5a1cb9" category="list-text">Brouillon</block>
+  <block id="c4e6fec5ee0f22a348768aa087f15acb" category="list-text">Enregistré, mais pas encore planifié.</block>
+  <block id="7401c14d073cd1188b475ef7f5e0cdc8" category="list-text">Projet validé</block>
+  <block id="de28b803b960b2c037e1abe4d18cf9d7" category="list-text">La validation a réussi et peut être enregistrée ou programmée.</block>
+  <block id="b1caf7f21c1b8899e11165a6aed71af9" category="list-text">Édition</block>
+  <block id="f25dfb15b911ed977033f485330ceadd" category="list-text">Mise à jour d'une version préliminaire d'une règle existante. La règle planifiée actuelle continuera de s'exécuter jusqu'à ce que vous enregistriez les modifications.</block>
+  <block id="2b7dabba0077abe3732e0418b048a56b" category="list-text">Programmé</block>
+  <block id="cf61937578a34d9f00c4f6dd6f175c05" category="list-text">Actif et s'exécute selon le calendrier défini.</block>
+  <block id="b9f5c797ebbf55adccdd8539a65a0241" category="list-text">Désactivées</block>
+  <block id="ca7e0b16936fbee3bd2dd7f992b32b4d" category="list-text">En pause, mais non supprimée. Peut être réactivée.</block>
+  <block id="5fe6005bf6e415c950c011fb65f12b8f" category="list-text">Supprimé</block>
+  <block id="71e78f13c09017bc4b63f46243d379b7" category="list-text">Supprimé définitivement.</block>
+  <block id="2090e30be5c37fb6b5aa40aa26a83dea" category="section-title">Exemples de règles personnalisées</block>
+  <block id="cc36425e424f4c30e5d1dd8b4cf78a69" category="list-text">Protection du volume de production</block>
+  <block id="31ba253c12166670e96f9fc69476b594" category="list-text">« Tous les volumes portant l’étiquette ‘Prod’ doivent avoir une stratégie de snapshot installée »</block>
+  <block id="3243b04cc4c4b7516a144da9c506a9ba" category="paragraph">Cette règle vérifie que les volumes de production disposent d'une stratégie de snapshots afin de les protéger conformément aux exigences de l'entreprise.</block>
+  <block id="9beacae88b6d84f519d92cf003a30d57" category="list-text">Hiérarchisation des volumes d’archive</block>
+  <block id="654b13cdd2897fd4260df3602f80ebbf" category="list-text">"Tous les volumes portant l'étiquette 'Archive' doivent avoir une politique de hiérarchisation définie sur 'All'"</block>
+  <block id="3756e2c2d7cd023d9845fbb763b174a9" category="paragraph">Cette règle permet de réduire les coûts en déplaçant automatiquement les données archivées vers un stockage moins coûteux.</block>
+  <block id="ccf414cfce06645c55d0bcfd5f41608b" category="list-text">Normes de dénomination des systèmes de fichiers</block>
+  <block id="269acf14c942e18c7f92dabf12bccaf5" category="list-text">"Tous les systèmes de fichiers doivent respecter la convention d'appellation 'fsx-{environment}-{application}'"</block>
+  <block id="bf0fa31d0a55270b5b0783d82f5a26b2" category="paragraph">Cette règle garantit que les systèmes de fichiers respectent les conventions d'appellation de l'organisation pour faciliter la gestion et la répartition des coûts.</block>
+  <block id="3f710cadb0123c693533da68aaf5b596" category="section-title">Que faire ensuite</block>
+  <block id="cff2e3f5566a6d8510f1c58ca5513eb3" category="inline-link-macro">Créer une règle personnalisée</block>
+  <block id="ef517711d9a5dee55f2bb56046d3fd70" category="paragraph"><block ref="385442535e80145b437f6d2ceb94114a" category="inline-link-macro-rx"></block> <block ref="f571cd95e32f7c421382198bc0dd0eae" category="inline-link-macro-rx"></block></block>
+  <block id="736345038ae5166988c54000f3a9ef2a" category="summary">Consultez, modifiez, mettez en pause, reprenez, testez et supprimez les règles architecturales personnalisées du catalogue de règles dans NetApp Workload Factory.</block>
+  <block id="f111cb0bc631b06943464ebbce09ef55" category="doc">Gérez les règles personnalisées dans NetApp Workload Factory</block>
+  <block id="5a39a30849e6dba110bd13af7cf930b3" category="paragraph">Le catalogue de règles dans NetApp Workload Factory vous offre un emplacement unique pour gérer toutes vos règles d'architecture personnalisées. Vous pouvez consulter les détails et les résultats des règles, les modifier, exécuter des tests rapides, suspendre ou reprendre les évaluations planifiées, et supprimer celles dont vous n'avez plus besoin.</block>
+  <block id="d8bb2214730133a5475bf68bf933cdeb" category="section-title">Consultez le catalogue des règles</block>
+  <block id="12dc6c12cd959eea202fab9d01a2ef04" category="paragraph">Le catalogue des règles affiche toutes les règles que vous avez créées, leur statut, leur planification et leurs derniers résultats.</block>
+  <block id="642657de37325cdd56a85e86e5effce6" category="list-text">Sélectionnez *Afficher vos règles* pour ouvrir le catalogue des règles.</block>
+  <block id="5890f83979745a0ed0d6d680fbcc1638" category="section-title">Afficher les résultats de la règle</block>
+  <block id="eeed19c5f7da7509abad8a01045710dc" category="paragraph">Les résultats indiquent quelles ressources respectent votre règle et lesquelles ne la respectent pas.</block>
+  <block id="a40467eae61686c6d04705b1341a3476" category="list-text">Dans le catalogue des règles, sélectionnez la règle que vous souhaitez consulter.</block>
+  <block id="2d6751ce25ede21d2492997ddca98b45" category="list-text">Sélectionnez l’onglet *Résultats de toutes les exécutions*.</block>
+  <block id="f4e2484ce7f636995f87d4460bb472cf" category="list-text">Sélectionnez **Afficher les détails** pour voir les résultats de chaque exécution.</block>
+  <block id="13b595cf2341f5678ff3130cc1287485" category="paragraph">Si la vérification a échoué pour certains éléments, consultez le message d'erreur pour en connaître la raison. Les causes fréquentes sont des problèmes de connexion, des autorisations manquantes ou un lien non configuré.</block>
+  <block id="12a0a2265c24db72f6aaae801b9ef08e" category="section-title">Modifier une règle personnalisée</block>
+  <block id="dbea8da43ac90f4152565d880d18e30e" category="paragraph">Vous pouvez renommer une règle à tout moment. Vous pouvez également modifier sa description, son type de ressource, sa planification, sa gravité, sa logique conditionnelle, son périmètre d'évaluation et ses recommandations de correction.</block>
+  <block id="8473633d69dc94d27429c2a37902fe75" category="paragraph">Vous pouvez renommer une règle depuis le catalogue des règles ou depuis sa fiche détaillée. Pour modifier tout autre paramètre de règle, commencez par le catalogue des règles.</block>
+  <block id="a7bcf973f8ab46210fd83a2c927c24de" category="list-text">Dans le catalogue des règles, sélectionnez la règle que vous souhaitez modifier.</block>
+  <block id="2dc19156fac0f6096a2db17a78fe0da8" category="list-text">Pour renommer la règle, mettez à jour son nom dans le catalogue ou dans la fiche de détails de la règle.</block>
+  <block id="b4f3df698e928c6673aa11c0a7e74343" category="list-text">Pour modifier d'autres paramètres de règle, sélectionnez *Modifier*.</block>
+  <block id="01e52dae8e86fc149d714c3cdc94859d" category="paragraph">La règle s'ouvre en mode chat avec son historique complet.</block>
+  <block id="91fa4b053658e4dedadb0d60014d7b3e" category="list-text">Demandez les modifications que vous souhaitez apporter, ou mettez à jour votre demande dans le chat.</block>
+  <block id="f5500860e31d724af72a4be713c2c1e5" category="paragraph">Si la création de la règle a échoué précédemment, vous pouvez continuer à partir de cette règle et mettre à jour votre demande dans le chat.</block>
+  <block id="1f998f331ae48a1cf2b4056c154eff9f" category="list-text">Veuillez consulter l'explication mise à jour et le résumé des modifications.</block>
+  <block id="fc7c0f65a3d8f2f0a1da1c56bd143c30" category="paragraph">Le système affiche les modifications apportées à la règle actuelle avant que vous ne l'enregistriez.</block>
+  <block id="023ad31a6b18fc538747a36ab488e65c" category="list-text">Si la règle est en mode brouillon, sélectionnez *Valider la règle* pour tester la logique mise à jour.</block>
+  <block id="44e90941996b011e8407b152cda355df" category="list-text">Pour conserver les modifications, sélectionnez *Enregistrer* afin de remplacer la règle actuelle. Si vous avez modifié la planification, enregistrez la planification mise à jour. Si vous n’avez pas modifié la planification, elle reste inchangée.</block>
+  <block id="cabf275678b6655f7ec32af7a5e772ec" category="list-text">Pour annuler les modifications, sélectionnez *Annuler les modifications*. La règle retrouve sa version précédente et quitte le mode édition.</block>
+  <block id="053ebf33b65f60110cd8e776b413ed79" category="paragraph">Pendant que vous modifiez une règle, celle-ci apparaît comme « En cours de modification » pour vous. Les autres utilisateurs voient toujours la règle planifiée actuelle, et les exécutions planifiées se poursuivent normalement jusqu'à ce que vous enregistriez les modifications.</block>
+  <block id="8c5fb02c595607ff2d6a7bffe64be464" category="section-title">Suspendre une règle</block>
+  <block id="1e68160fbadf5661e25cda25fd14c709" category="paragraph">Mettez une règle en pause pour interrompre son évaluation sans la supprimer. Les règles mises en pause restent dans le catalogue et vous pouvez les réactiver à tout moment.</block>
+  <block id="ab37000159a2028473bf2d51d2e168df" category="list-text">Dans le catalogue des règles, sélectionnez la règle que vous souhaitez suspendre.</block>
+  <block id="1e9305945880528c5c52639547a0485e" category="list-text">Pour suspendre une règle planifiée, sélectionnez *Pause*, puis confirmez. La règle cesse alors de s'exécuter selon sa planification.</block>
+  <block id="ef31b72311045c72b3594fe1b8294b61" category="list-text">Pour reprendre une règle suspendue, sélectionnez *Reprendre*, puis confirmez. La règle reprend ses évaluations régulières.</block>
+  <block id="505e9a4d5d793341b92e51caeffa198f" category="section-title">Supprimer une règle personnalisée</block>
+  <block id="106aa9d3af8dd9fe811548be7c0ab934" category="paragraph">Supprimez définitivement une règle lorsque vous n'en avez plus besoin. Cette action est irréversible.</block>
+  <block id="cd69578465ffe65a5793f55372a9e2b0" category="list-text">Dans le catalogue des règles, sélectionnez la règle que vous souhaitez supprimer.</block>
+  <block id="a611c28af3d155e736c074bd926dc51b" category="list-text">Confirmez que vous souhaitez supprimer définitivement la règle.</block>
+  <block id="f36dd1b2731552458a4d8983a8bec074" category="paragraph">La règle est retirée du catalogue. Tout l'historique des évaluations est supprimé.</block>
+  <block id="ee46de54fef48d3ea00b2c8fc06cb58b" category="section-title">Effectuez un test rapide</block>
+  <block id="bd472ca28321d77d062059272b456804" category="paragraph">Effectuez un test rapide à tout moment pour vérifier la conformité actuelle sans attendre la prochaine exécution planifiée.</block>
+  <block id="635b91ded7a74d36fda511d533ef4c52" category="list-text">Dans le catalogue des règles, sélectionnez la règle que vous souhaitez évaluer.</block>
+  <block id="e70327eb26e94002df7dad0a96b24a3d" category="list-text">Sélectionnez *Validate*.</block>
+  <block id="b4b7ad5dbb1a5d746e0ac8936e3f4798" category="paragraph">Le système évalue toutes les ressources concernées par rapport à la logique de la règle.</block>
+  <block id="5cb57852939f164731c4f61fcca33dac" category="list-text">Consultez les résultats pour connaître l'état actuel de la conformité.</block>
+  <block id="2cc894218e78a9699920859cc698e5d7" category="paragraph">Les tests sont audités et figurent dans l'historique d'évaluation de la règle.</block>
+  <block id="cc04bd1e4cca8a5b4e87672f588bf490" category="paragraph"><block ref="cc04bd1e4cca8a5b4e87672f588bf490" category="inline-link-macro-rx"></block></block>
+  <block id="2977988f0d0d5b4f141a9dbdc67379ed" category="sidebar">Règles personnalisées</block>
+  <block id="4bd4792ab17b2dfaf1c72610c348727b" category="sidebar">Découvrez les règles personnalisées</block>
 </blocks>
